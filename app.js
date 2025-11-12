@@ -630,8 +630,34 @@ window.FALLBACK_QUESTIONS = [
 
     if (q.type === 'matching') {
       renderMatching(q);
+    } else if (Array.isArray(q.answer)) {
+      // Selección múltiple: el número requerido es el tamaño del array de respuestas
+      const requiredCount = q.answer.length;
+      const selected = new Set();
+
+      q.options.forEach((opt) => {
+        const btn = document.createElement('button');
+        btn.textContent = opt;
+        btn.className = 'w-full text-left px-4 py-2 rounded border bg-white hover:bg-gray-50';
+        btn.dataset.value = opt;
+        btn.addEventListener('click', () => {
+          if (state.answered) return;
+          const v = btn.dataset.value;
+          if (selected.has(v)) {
+            selected.delete(v);
+            btn.className = 'w-full text-left px-4 py-2 rounded border bg-white hover:bg-gray-50';
+          } else {
+            selected.add(v);
+            btn.className = 'w-full text-left px-4 py-2 rounded bg-blue-600 text-white';
+          }
+        });
+        els.options.appendChild(btn);
+      });
+
+      els.checkBtn.classList.remove('hidden');
+      els.checkBtn.onclick = () => checkMultiSelect(selected, q, requiredCount);
     } else {
-      // yes_no y dropdown comparten representación basada en botones
+      // yes_no y dropdown de selección única
       q.options.forEach((opt) => {
         const btn = document.createElement('button');
         btn.textContent = opt;
@@ -695,7 +721,8 @@ window.FALLBACK_QUESTIONS = [
     container.className = 'space-y-2';
 
     const selects = [];
-    const options = [...q.right];
+    // Barajar opciones para evitar que el orden sugiera la respuesta
+    const options = shuffle([...q.right]);
 
     q.left.forEach((leftItem, idx) => {
       const row = document.createElement('div');
@@ -710,6 +737,8 @@ window.FALLBACK_QUESTIONS = [
       const placeholder = document.createElement('option');
       placeholder.value = '';
       placeholder.textContent = 'Selecciona…';
+      placeholder.selected = true;
+      placeholder.disabled = true;
       select.appendChild(placeholder);
 
       options.forEach((opt) => {
@@ -773,6 +802,55 @@ window.FALLBACK_QUESTIONS = [
       const explanationText = q.explanation || getAutoExplanation(q);
       const explanation = explanationText ? `<div class="mt-2 text-gray-700">Motivo: ${linkify(explanationText)}</div>` : '';
       els.feedback.innerHTML = `<div class="text-red-700 whitespace-pre-line">Incorrecto. Respuestas correctas:\n${resumen}</div>${explanation}`;
+      els.feedback.className = 'mt-4 text-sm';
+    }
+
+    els.checkBtn.classList.add('hidden');
+    els.nextBtn.classList.remove('hidden');
+    updateStatus();
+  }
+
+  function checkMultiSelect(selectedSet, q, requiredCount) {
+    if (state.answered) return;
+    if (!selectedSet || selectedSet.size !== requiredCount) {
+      els.feedback.textContent = `Selecciona ${requiredCount} respuestas.`;
+      els.feedback.className = 'mt-4 text-sm text-amber-700';
+      return;
+    }
+
+    state.answered = true;
+    state.answeredCount += 1;
+
+    const correctSet = new Set(Array.isArray(q.answer) ? q.answer : [q.answer]);
+    const buttons = Array.from(els.options.querySelectorAll('button'));
+    let allCorrect = true;
+
+    buttons.forEach((b) => {
+      const v = b.dataset.value;
+      const isSelected = selectedSet.has(v);
+      const isCorrect = correctSet.has(v);
+      b.disabled = true;
+      if (isCorrect) {
+        b.className = 'w-full text-left px-4 py-2 rounded bg-green-600 text-white';
+      } else if (isSelected) {
+        allCorrect = false;
+        b.className = 'w-full text-left px-4 py-2 rounded bg-red-600 text-white';
+      } else {
+        b.className = 'w-full text-left px-4 py-2 rounded border bg-white';
+      }
+    });
+
+    if (allCorrect) {
+      state.score += 1;
+      const explanationText = q.explanation || getAutoExplanation(q);
+      const explanation = explanationText ? `<div class="mt-2 text-gray-700">Motivo: ${linkify(explanationText)}</div>` : '';
+      els.feedback.innerHTML = `<div class="text-green-700">¡Correcto!</div>${explanation}`;
+      els.feedback.className = 'mt-4 text-sm';
+    } else {
+      const correctList = Array.from(correctSet).join('\n');
+      const explanationText = q.explanation || getAutoExplanation(q);
+      const explanation = explanationText ? `<div class="mt-2 text-gray-700">Motivo: ${linkify(explanationText)}</div>` : '';
+      els.feedback.innerHTML = `<div class="text-red-700 whitespace-pre-line">Incorrecto. Respuestas correctas:\n${correctList}</div>${explanation}`;
       els.feedback.className = 'mt-4 text-sm';
     }
 

@@ -1993,8 +1993,11 @@
       "Create a search query to identify when the duration_s exceeds 10.",
       "Configure a period of 10 and a frequency of 10."
     ],
-    "answer": "Create a search query to identify when the requestCharge_s exceeds 40.",
-    "explanation": "La respuesta correcta del examen es A y D (se requiere consulta que detecte requestCharge_s > 40 y configurar periodo=10, frecuencia=10). La app valida selección única, por lo que se marca A como correcta y se documenta que también debe configurarse D. Referencia: https://learn.microsoft.com/azure/cosmos-db/logging"
+    "answer": [
+      "Create a search query to identify when the requestCharge_s exceeds 40.",
+      "Configure a period of 10 and a frequency of 10."
+    ],
+    "explanation": "Se requieren dos acciones: crear una consulta que detecte requestCharge_s > 40 y configurar período=10 y frecuencia=10 para evaluar el umbral repetido. Referencia: https://learn.microsoft.com/azure/cosmos-db/logging"
   },
   {
     "type": "dropdown",
