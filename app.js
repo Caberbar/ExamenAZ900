@@ -397,6 +397,8 @@ window.FALLBACK_QUESTIONS = [
     current: document.getElementById('current'),
     total: document.getElementById('total'),
     points: document.getElementById('points'),
+    answered: document.getElementById('answered'),
+    accuracy: document.getElementById('accuracy'),
     question: document.getElementById('question'),
     options: document.getElementById('options'),
     feedback: document.getElementById('feedback'),
@@ -415,6 +417,7 @@ window.FALLBACK_QUESTIONS = [
     currentIndex: 0,
     score: 0,
     answered: false,
+    answeredCount: 0,
   };
 
   function shuffle(arr) {
@@ -586,6 +589,17 @@ window.FALLBACK_QUESTIONS = [
     els.current.textContent = state.currentIndex + 1;
     els.total.textContent = state.questions.length;
     els.points.textContent = state.score;
+    if (els.answered) els.answered.textContent = state.answeredCount;
+    // Porcentaje de aciertos sobre preguntas respondidas
+    const answeredPct = Math.round(
+      state.answeredCount > 0 ? (state.score / state.answeredCount) * 100 : 0
+    );
+    if (els.accuracy) {
+      els.accuracy.textContent = `${answeredPct}%`;
+      els.accuracy.className = answeredPct >= 70
+        ? 'text-green-700 font-medium'
+        : 'text-amber-700 font-medium';
+    }
     const pct = Math.round(((state.currentIndex) / Math.max(1, state.questions.length)) * 100);
     els.progressBar.style.width = `${pct}%`;
   }
@@ -637,6 +651,7 @@ window.FALLBACK_QUESTIONS = [
   function handleAnswer(clickedBtn, q) {
     if (state.answered) return;
     state.answered = true;
+    state.answeredCount += 1;
 
     const correctAnswer = q.answer;
 
@@ -733,6 +748,7 @@ window.FALLBACK_QUESTIONS = [
     }
 
     state.answered = true;
+    state.answeredCount += 1;
     const correctMap = q.correctMap;
     let allCorrect = true;
     selects.forEach(({ select, leftItem }) => {
@@ -778,6 +794,7 @@ window.FALLBACK_QUESTIONS = [
   function resetQuiz() {
     state.currentIndex = 0;
     state.score = 0;
+    state.answeredCount = 0;
     updateStatus();
     els.final.classList.add('hidden');
     els.card.classList.remove('hidden');
@@ -786,7 +803,9 @@ window.FALLBACK_QUESTIONS = [
   }
 
   function showFinal() {
-    els.finalScore.textContent = `${state.score} / ${state.questions.length}`;
+    const finalPct = Math.round((state.score / Math.max(1, state.questions.length)) * 100);
+    const aprobado = finalPct >= 70 ? 'Aprobado' : 'No aprobado';
+    els.finalScore.textContent = `${state.score} / ${state.questions.length} (${finalPct}%) – ${aprobado}`;
     els.card.classList.add('hidden');
     els.final.classList.remove('hidden');
   }
