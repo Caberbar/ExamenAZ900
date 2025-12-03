@@ -1,0 +1,222 @@
+[
+  {
+    "type": "dropdown",
+    "question": "Which AWS service provides scalable object storage for any type of data?",
+    "options": ["Amazon EBS", "Amazon S3", "Amazon EC2", "Amazon RDS"],
+    "right": "Amazon S3",
+    "explanation": "Amazon S3 es almacenamiento de objetos altamente duradero y escalable para datos de cualquier tipo."
+  },
+  {
+    "type": "dropdown",
+    "question": "Under the AWS shared responsibility model, which statement is true?",
+    "options": [
+      "AWS is responsible for security in the cloud; customers are responsible for security of the cloud",
+      "Customers are responsible for security in the cloud; AWS is responsible for security of the cloud",
+      "Both AWS and customers share identical responsibilities for all layers",
+      "Security responsibilities depend only on the chosen Region"
+    ],
+    "right": "Customers are responsible for security in the cloud; AWS is responsible for security of the cloud",
+    "explanation": "AWS gestiona seguridad de la infraestructura (OF the cloud); el cliente gestiona configuración y datos (IN the cloud)."
+  },
+  {
+    "type": "dropdown",
+    "question": "Which service helps decouple components and buffer requests between microservices?",
+    "options": ["Amazon SQS", "Amazon CloudWatch", "Amazon EC2", "AWS CloudTrail"],
+    "right": "Amazon SQS",
+    "explanation": "Amazon SQS ofrece colas gestionadas para desacoplar y escalar sistemas distribuidos."
+  },
+  {
+    "type": "dropdown",
+    "question": "To meet data residency requirements, where should you deploy resources?",
+    "options": ["Availability Zone", "AWS Region", "Edge location", "Local Zone"],
+    "right": "AWS Region",
+    "explanation": "La residencia de datos se controla eligiendo la Región AWS donde se almacenan y procesan los datos."
+  },
+  {
+    "type": "dropdown",
+    "question": "Which AWS service allows you to run code without provisioning or managing servers?",
+    "options": ["Amazon ECS", "Amazon EC2", "AWS Lambda", "Amazon EKS"],
+    "right": "AWS Lambda",
+    "explanation": "Lambda ejecuta código bajo demanda sin administrar servidores, con cobro por solicitudes y duración."
+  },
+  {
+    "type": "dropdown",
+    "question": "Which service delivers content globally with low latency using a worldwide network of edge locations?",
+    "options": ["Amazon CloudFront", "Amazon Route 53", "Amazon S3", "AWS Global Accelerator"],
+    "right": "Amazon CloudFront",
+    "explanation": "CloudFront es la CDN de AWS para distribuir contenido desde ubicaciones de borde con baja latencia."
+  },
+  {
+    "type": "dropdown",
+    "question": "Which pricing option helps reduce compute costs with a 1 or 3-year commitment?",
+    "options": ["On-Demand Instances", "Savings Plans", "Spot Instances", "Dedicated Hosts"],
+    "right": "Savings Plans",
+    "explanation": "Savings Plans permiten compromiso de consumo por 1 o 3 años para reducir el costo de cómputo."
+  },
+  {
+    "type": "dropdown",
+    "question": "Which AWS support plan provides 24x7 access to Cloud Support Engineers?",
+    "options": ["Basic", "Developer", "Business", "Enterprise"],
+    "right": "Business",
+    "explanation": "El plan Business ofrece soporte técnico 24x7; Basic es solo recursos de soporte, Developer es horario comercial."
+  },
+  {
+    "type": "dropdown",
+    "question": "Which S3 storage class is designed for long-term archiving at the lowest cost?",
+    "options": ["S3 Standard", "S3 Intelligent-Tiering", "S3 Glacier Flexible Retrieval", "S3 Glacier Deep Archive"],
+    "right": "S3 Glacier Deep Archive",
+    "explanation": "Deep Archive ofrece el menor costo para archivado a largo plazo, con tiempos de recuperación más largos."
+  },
+  {
+    "type": "dropdown",
+    "question": "Which AWS service provides a fully managed, relational database with automated backups and patching?",
+    "options": ["Amazon RDS", "Amazon DynamoDB", "Amazon Aurora Serverless", "Amazon Redshift"],
+    "right": "Amazon RDS",
+    "explanation": "RDS gestiona bases de datos relacionales con backups, parches y escalado sin administración de servidores."
+  },
+  {
+    "type": "dropdown",
+    "question": "Which AWS service provides highly available domain name resolution (DNS)?",
+    "options": ["Amazon Route 53", "Amazon CloudFront", "AWS Global Accelerator", "Elastic Load Balancing"],
+    "right": "Amazon Route 53",
+    "explanation": "Route 53 es el servicio DNS de AWS con enrutamiento, health checks y gestión de dominios."
+  },
+  {
+    "type": "dropdown",
+    "question": "Which service records account activity and API calls for auditing across AWS?",
+    "options": ["AWS CloudTrail", "Amazon CloudWatch", "AWS Config", "AWS IAM"],
+    "right": "AWS CloudTrail",
+    "explanation": "CloudTrail registra llamadas API y eventos a nivel de cuenta para auditoría y cumplimiento."
+  },
+  {
+    "type": "dropdown",
+    "question": "Which service collects metrics, logs, and allows alarms for resources?",
+    "options": ["Amazon CloudWatch", "AWS CloudTrail", "AWS Config", "AWS X-Ray"],
+    "right": "Amazon CloudWatch",
+    "explanation": "CloudWatch monitoriza métricas y logs, y permite alarmas y tableros de observabilidad."
+  },
+  {
+    "type": "dropdown",
+    "question": "Which pricing model offers the lowest cost for interruptible compute capacity?",
+    "options": ["On-Demand Instances", "Reserved Instances", "Savings Plans", "Spot Instances"],
+    "right": "Spot Instances",
+    "explanation": "Spot usa capacidad sobrante con grandes descuentos; las instancias pueden ser interrumpidas por AWS."
+  },
+  {
+    "type": "dropdown",
+    "question": "Which AWS service enables creation and management of encryption keys?",
+    "options": ["AWS KMS", "AWS Secrets Manager", "AWS IAM", "AWS Shield"],
+    "right": "AWS KMS",
+    "explanation": "KMS gestiona claves criptográficas y cifrado integrado con servicios como S3, EBS y RDS."
+  },
+  {
+    "type": "dropdown",
+    "question": "Which service is best for storing and rotating application secrets (API keys, DB passwords)?",
+    "options": ["AWS Secrets Manager", "AWS Systems Manager Parameter Store", "AWS KMS", "Amazon Cognito"],
+    "right": "AWS Secrets Manager",
+    "explanation": "Secrets Manager gestiona secretos con rotación automática e integración con servicios y RDS."
+  },
+  {
+    "type": "dropdown",
+    "question": "Which option lets you run containers without managing servers?",
+    "options": ["AWS Fargate", "Amazon EC2", "Amazon EKS", "Amazon ECS"],
+    "right": "AWS Fargate",
+    "explanation": "Fargate ejecuta contenedores serverless para ECS/EKS, eliminando la gestión de hosts EC2."
+  },
+  {
+    "type": "dropdown",
+    "question": "Which service helps migrate databases to AWS with minimal downtime?",
+    "options": ["AWS Database Migration Service (DMS)", "AWS DataSync", "AWS Snowball", "AWS Glue"],
+    "right": "AWS Database Migration Service (DMS)",
+    "explanation": "DMS migra y replica bases de datos desde on‑prem o entre servicios con baja interrupción."
+  },
+  {
+    "type": "dropdown",
+    "question": "Which deployment option improves high availability for Amazon RDS?",
+    "options": ["Read Replicas", "Multi‑AZ", "Single‑AZ", "Cross‑Region Snapshot"],
+    "right": "Multi‑AZ",
+    "explanation": "Multi‑AZ replica sincrónicamente a una instancia en otra AZ para alta disponibilidad y failover."
+  },
+  {
+    "type": "dropdown",
+    "question": "Which statement best describes Security Groups versus Network ACLs?",
+    "options": [
+      "Security Groups are stateful at instance level; NACLs are stateless at subnet level",
+      "Security Groups are stateless; NACLs are stateful",
+      "Both are stateful and applied at VPC level",
+      "Both are stateless and applied at instance level"
+    ],
+    "right": "Security Groups are stateful at instance level; NACLs are stateless at subnet level",
+    "explanation": "SG filtra tráfico por instancia y es stateful; NACL filtra por subred y es stateless."
+  },
+  {
+    "type": "dropdown",
+    "question": "Which service improves performance of TCP/UDP applications globally using Anycast?",
+    "options": ["AWS Global Accelerator", "Amazon CloudFront", "Elastic Load Balancing", "Amazon Route 53"],
+    "right": "AWS Global Accelerator",
+    "explanation": "Global Accelerator usa IPs Anycast y red global de AWS para optimizar rutas de aplicaciones."
+  },
+  {
+    "type": "dropdown",
+    "question": "Which tool estimates monthly costs before launching workloads?",
+    "options": ["AWS Pricing Calculator", "AWS Cost Explorer", "AWS Budgets", "Trusted Advisor"],
+    "right": "AWS Pricing Calculator",
+    "explanation": "El Pricing Calculator permite simular costos según configuración de servicios y uso previsto."
+  },
+  {
+    "type": "dropdown",
+    "question": "Which service lets you set alerts when spend exceeds a threshold?",
+    "options": ["AWS Budgets", "AWS Cost Explorer", "AWS Billing", "AWS Organizations"],
+    "right": "AWS Budgets",
+    "explanation": "Budgets envía alertas por costo o uso, comparando contra límites definidos por el usuario."
+  },
+  {
+    "type": "dropdown",
+    "question": "Which service provides cost optimization and best‑practice recommendations?",
+    "options": ["AWS Trusted Advisor", "AWS Config", "AWS CloudTrail", "AWS Shield"],
+    "right": "AWS Trusted Advisor",
+    "explanation": "Trusted Advisor revisa seguridad, rendimiento, tolerancia a fallos y costos con recomendaciones."
+  },
+  {
+    "type": "dropdown",
+    "question": "Which AWS database service is a managed NoSQL key‑value and document store?",
+    "options": ["Amazon DynamoDB", "Amazon RDS", "Amazon Redshift", "Amazon ElastiCache"],
+    "right": "Amazon DynamoDB",
+    "explanation": "DynamoDB es NoSQL totalmente gestionado, con latencias milisegundo y escalado automático."
+  },
+  {
+    "type": "dropdown",
+    "question": "Which AWS service is recommended for hosting a static website at low cost?",
+    "options": ["Amazon S3", "Amazon EC2", "Amazon EKS", "AWS Lambda"],
+    "right": "Amazon S3",
+    "explanation": "S3 ofrece hosting estático duradero y económico, que puede acelerarse con CloudFront."
+  },
+  {
+    "type": "dropdown",
+    "question": "Which AWS service provides managed Kubernetes control planes?",
+    "options": ["Amazon EKS", "Amazon ECS", "AWS Fargate", "AWS Batch"],
+    "right": "Amazon EKS",
+    "explanation": "EKS proporciona Kubernetes gestionado, integrable con EC2 o Fargate para ejecutar pods."
+  },
+  {
+    "type": "dropdown",
+    "question": "Within AWS Organizations, which feature restricts actions across member accounts?",
+    "options": ["Service Control Policies (SCPs)", "IAM Identity Center assignments", "Resource Access Manager", "AWS Control Tower"],
+    "right": "Service Control Policies (SCPs)",
+    "explanation": "Las SCP definen permisos máximos a nivel de organización para cuentas y OU."
+  },
+  {
+    "type": "dropdown",
+    "question": "Which VPC component allows instances in private subnets to access the internet for updates?",
+    "options": ["NAT Gateway", "Internet Gateway", "VPC Endpoint (S3)", "Transit Gateway"],
+    "right": "NAT Gateway",
+    "explanation": "El NAT Gateway habilita tráfico saliente desde subredes privadas hacia internet manteniendo las instancias no accesibles desde fuera."
+  },
+  {
+    "type": "dropdown",
+    "question": "Which storage is block‑level for EC2 and persists independently of instance lifecycle?",
+    "options": ["Amazon EBS", "Amazon S3", "Amazon EFS", "AWS Backup"],
+    "right": "Amazon EBS",
+    "explanation": "EBS es almacenamiento en bloques para EC2 con snapshots, cifrado y diferente rendimiento según tipo de volumen."
+  }
+]

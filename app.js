@@ -394,6 +394,8 @@ window.FALLBACK_QUESTIONS = [
 
 (function () {
   const els = {
+    examTitle: document.getElementById('examTitle'),
+    apuntesLink: document.getElementById('apuntesLink'),
     current: document.getElementById('current'),
     total: document.getElementById('total'),
     points: document.getElementById('points'),
@@ -411,6 +413,17 @@ window.FALLBACK_QUESTIONS = [
     card: document.getElementById('card'),
     progressBar: document.getElementById('progressBar'),
   };
+
+  const params = new URLSearchParams(location.search);
+
+  function resolveUrl(u) {
+    if (!u) return null;
+    const s = String(u);
+    if (/^https?:\/\//i.test(s) || /^file:\/\//i.test(s)) return s;
+    const root = new URL('../', location.href);
+    const clean = s.replace(/^\//, '');
+    return new URL(clean, root).href;
+  }
 
   const state = {
     questions: [],
@@ -574,15 +587,27 @@ window.FALLBACK_QUESTIONS = [
   }
 
   async function loadQuestions() {
+    const qparam = params.get('preguntas');
+    const url = resolveUrl(qparam) || null;
+    if (url) {
+      try {
+        const res = await fetch(url, { cache: 'no-store' });
+        if (res.ok) {
+          const data = await res.json();
+          const arr = Array.isArray(data) ? data.map(normalizeQuestion) : window.FALLBACK_QUESTIONS.map(normalizeQuestion);
+          return arr;
+        }
+      } catch (e) {}
+    }
     try {
       const res = await fetch('./preguntas_avanzadas.json', { cache: 'no-store' });
-      if (!res.ok) throw new Error('No se pudo cargar preguntas_avanzadas.json');
-      const data = await res.json();
-      const arr = Array.isArray(data) ? data.map(normalizeQuestion) : window.FALLBACK_QUESTIONS.map(normalizeQuestion);
-      return arr;
-    } catch (e) {
-      return window.FALLBACK_QUESTIONS.map(normalizeQuestion);
-    }
+      if (res.ok) {
+        const data = await res.json();
+        const arr = Array.isArray(data) ? data.map(normalizeQuestion) : window.FALLBACK_QUESTIONS.map(normalizeQuestion);
+        return arr;
+      }
+    } catch (e) {}
+    return window.FALLBACK_QUESTIONS.map(normalizeQuestion);
   }
 
   function updateStatus() {
@@ -889,6 +914,10 @@ window.FALLBACK_QUESTIONS = [
   }
 
   async function init() {
+    const title = params.get('title') || params.get('name') || 'Examen';
+    if (els.examTitle) els.examTitle.textContent = title + ' Quiz';
+    const apuntes = resolveUrl(params.get('apuntes'));
+    if (els.apuntesLink && apuntes) els.apuntesLink.href = apuntes;
     state.questions = shuffle(await loadQuestions());
     updateStatus();
     renderQuestion();

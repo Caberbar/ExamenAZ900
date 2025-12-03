@@ -1,0 +1,243 @@
+[
+  {
+    "type": "dropdown",
+    "question": "Which statement BEST describes the primary value proposition of cloud computing for businesses?",
+    "options": [
+      "Cloud computing eliminates all security risks and guarantees 100% uptime for business applications and services",
+      "Cloud computing provides businesses with unlimited storage capacity and the fastest possible computing speeds available in the market",
+      "Cloud computing removes the need for any internal IT staff and completely eliminates maintenance responsibilities",
+      "Cloud computing enables businesses to reduce costs and scale resources on-demand while only paying for usage"
+    ],
+    "right": "Cloud computing enables businesses to reduce costs and scale resources on-demand while only paying for usage",
+    "explanation": "La nube ofrece elasticidad y modelo de pago por uso (OpEx), permitiendo escalar según demanda y optimizar costes sin inversión inicial."
+  },
+  {
+    "type": "dropdown",
+    "question": "Which statement best describes Platform as a Service (PaaS) in cloud computing?",
+    "options": [
+      "A cloud service model where customers access complete software applications through a web browser without managing any underlying components",
+      "A cloud service where providers manage infrastructure and development tools while customers manage applications and data",
+      "A cloud service model where customers purchase and maintain their own hardware but use cloud-based software applications",
+      "A cloud service model where customers have full control over the infrastructure, including servers, storage, and networking components"
+    ],
+    "right": "A cloud service where providers manage infrastructure and development tools while customers manage applications and data",
+    "explanation": "PaaS abstrae sistema operativo, runtime y herramientas; el cliente se centra en su aplicación y datos, no en la infraestructura."
+  },
+  {
+    "type": "dropdown",
+    "question": "Which statement best describes the key characteristic of Software as a Service (SaaS) in cloud computing?",
+    "options": [
+      "A cloud delivery model where customers have complete control over applications and infrastructure but use the provider's data centers",
+      "A cloud delivery model where customers develop and run applications while the provider manages the underlying infrastructure and development tools",
+      "A cloud delivery model where customers install provider-licensed software on their local machines with cloud-based updates",
+      "A cloud model where users access managed applications via web browser while providers handle all backend operations"
+    ],
+    "right": "A cloud model where users access managed applications via web browser while providers handle all backend operations",
+    "explanation": "En SaaS el proveedor gestiona la aplicación y su backend; el usuario accede vía web y configura el servicio sin instalar ni administrar servidores."
+  },
+  {
+    "type": "dropdown",
+    "question": "What is the primary function of a Domain Name System (DNS) in cloud computing?",
+    "options": [
+      "A security protocol that encrypts data transmission between client and server",
+      "A service that assigns unique IP addresses to devices on a network",
+      "A server that hosts website files and distributes them to visitors' browsers",
+      "A system that translates domain names into IP addresses for computer routing"
+    ],
+    "right": "A system that translates domain names into IP addresses for computer routing",
+    "explanation": "DNS resuelve nombres de dominio a direcciones IP para enrutar tráfico correctamente hacia los servicios y recursos."
+  },
+  {
+    "type": "dropdown",
+    "question": "In cloud computing, what is the primary definition of bandwidth?",
+    "options": [
+      "The time it takes for data packets to travel from source to destination",
+      "The number of simultaneous user connections a cloud service can handle",
+      "The actual amount of data currently being transmitted through a network",
+      "The maximum data transfer rate over a network connection in a given time"
+    ],
+    "right": "The maximum data transfer rate over a network connection in a given time",
+    "explanation": "El ancho de banda es la capacidad máxima de transferencia de datos por unidad de tiempo en una conexión de red. Latencia es el tiempo de viaje de los paquetes."
+  },
+  {
+    "type": "dropdown",
+    "question": "Which statement BEST describes the fundamental characteristic of cloud technology?",
+    "options": [
+      "A network of computers delivering computing resources over the internet on-demand",
+      "A system of powerful servers located in secure data centers around the world",
+      "A suite of software applications that can be accessed through web browsers",
+      "A backup storage solution that keeps data in remote locations"
+    ],
+    "right": "A network of computers delivering computing resources over the internet on-demand",
+    "explanation": "La característica fundamental es la entrega bajo demanda de recursos computacionales a través de Internet, con elasticidad y autoservicio."
+  },
+  {
+    "type": "dropdown",
+    "question": "Which statement best describes digital transformation in an organization?",
+    "options": [
+      "The process of moving all company data and applications to cloud-based systems",
+      "The replacement of legacy hardware systems with modern computing equipment",
+      "The integration of digital technology across business areas to change how organizations operate",
+      "The implementation of automation tools to reduce manual workforce requirements"
+    ],
+    "right": "The integration of digital technology across business areas to change how organizations operate",
+    "explanation": "La transformación digital implica integrar tecnologías digitales en áreas del negocio para cambiar procesos, cultura y experiencia del cliente."
+  },
+  {
+    "type": "dropdown",
+    "question": "In cloud computing, what best describes latency and its primary impact on application performance?",
+    "options": [
+      "The maximum amount of data that can be transferred between cloud services within a given timeframe",
+      "The total storage capacity available for cloud applications to process and store data",
+      "The delay between request initiation and response receipt, affecting cloud application speed",
+      "The number of simultaneous users that can access a cloud service without performance degradation"
+    ],
+    "right": "The delay between request initiation and response receipt, affecting cloud application speed",
+    "explanation": "La latencia es la demora entre petición y respuesta, impacta directamente la percepción de velocidad de las aplicaciones."
+  },
+  {
+    "type": "dropdown",
+    "question": "Which statement best describes cloud elasticity in the context of resource management?",
+    "options": [
+      "The automatic scaling of computing resources up and down based on demand",
+      "The manual process of adding more resources to handle increased workload demands",
+      "The maximum amount of computing resources that can be provisioned for an application or workload",
+      "The ability to maintain consistent performance as the workload grows larger over time"
+    ],
+    "right": "The automatic scaling of computing resources up and down based on demand",
+    "explanation": "La elasticidad es el ajuste automático de recursos (escalar arriba/abajo) según la carga, típicamente gobernado por reglas o métricas."
+  },
+  {
+    "type": "dropdown",
+    "question": "Which statement best describes Infrastructure as a Service (IaaS)?",
+    "options": [
+      "A cloud computing model where providers deliver virtualized computing resources including servers, storage, and networking over the internet, while customers manage operating systems, applications, and data",
+      "A cloud computing model where providers manage both hardware and software platforms, including development tools and database management systems, while customers only manage their applications",
+      "A cloud computing model where customers purchase and maintain their own physical hardware while providers only supply internet connectivity and basic security",
+      "A cloud computing model where providers deliver fully managed applications over the internet, requiring no infrastructure or software management from customers"
+    ],
+    "right": "A cloud computing model where providers deliver virtualized computing resources including servers, storage, and networking over the internet, while customers manage operating systems, applications, and data",
+    "explanation": "En IaaS el proveedor ofrece infraestructura virtualizada; el cliente gestiona el sistema operativo, middleware y aplicaciones."
+  },
+  {
+    "type": "dropdown",
+    "question": "What is the primary way cloud computing transforms an organization's capital expenditure (CapEx) into operational expenditure (OpEx)?",
+    "options": [
+      "By requiring annual bulk purchases of cloud resources at discounted rates",
+      "By converting large upfront hardware purchases into pay-as-you-go service fees",
+      "By providing free hardware during the first year of service",
+      "By eliminating all IT infrastructure costs permanently"
+    ],
+    "right": "By converting large upfront hardware purchases into pay-as-you-go service fees",
+    "explanation": "La nube convierte inversiones iniciales en gastos operativos recurrentes (pago por uso), reduciendo CapEx y trasladándolo a OpEx."
+  },
+  {
+    "type": "dropdown",
+    "question": "When an organization moves from on-premises infrastructure to cloud computing, what is the primary impact on their total cost of ownership (TCO)?",
+    "options": [
+      "TCO shifts from capital expenses to operational expenses, typically reducing overall costs",
+      "TCO remains largely unchanged, but costs shift from hardware investments to software licensing and cloud service fees",
+      "TCO increases significantly due to the ongoing subscription costs and the need to maintain both cloud and on-premises systems during transition periods",
+      "TCO is eliminated entirely as all infrastructure costs become the cloud provider's responsibility"
+    ],
+    "right": "TCO shifts from capital expenses to operational expenses, typically reducing overall costs",
+    "explanation": "La migración a la nube reduce costos totales al pasar de CapEx a OpEx y optimizar consumo; depende del diseño y uso responsable."
+  },
+  {
+    "type": "dropdown",
+    "question": "When an organization moves from an IaaS to a SaaS model in cloud computing, what is the primary change in the shared responsibility model?",
+    "options": [
+      "The responsibility distribution remains the same, but the service costs increase",
+      "Both the customer and provider share equal responsibility for all aspects of the service",
+      "The customer takes on more responsibility for application management and infrastructure maintenance",
+      "The cloud provider assumes more responsibility while the customer's responsibility decreases"
+    ],
+    "right": "The cloud provider assumes more responsibility while the customer's responsibility decreases",
+    "explanation": "En SaaS el proveedor gestiona infraestructura, plataforma y aplicación; el cliente se centra en uso/configuración, reduciendo su responsabilidad."
+  },
+  {
+    "type": "dropdown",
+    "question": "What is the primary technical advantage that makes fiber optic cables the preferred choice for connecting cloud data centers compared to traditional copper cables?",
+    "options": [
+      "Fiber optic cables require less maintenance and have a longer physical lifespan than copper cables",
+      "Fiber optic cables transmit more data at higher speeds over longer distances with less signal loss",
+      "Fiber optic cables are completely immune to electromagnetic interference and hacking attempts",
+      "Fiber optic cables are less expensive to manufacture and install than copper cables"
+    ],
+    "right": "Fiber optic cables transmit more data at higher speeds over longer distances with less signal loss",
+    "explanation": "La fibra óptica ofrece mayor ancho de banda y menor atenuación a largas distancias, con inmunidad a interferencias electromagnéticas."
+  },
+  {
+    "type": "dropdown",
+    "question": "What is the primary distinction between Infrastructure as a Service (IaaS) and Platform as a Service (PaaS) in terms of who manages the underlying infrastructure components?",
+    "options": [
+      "In IaaS, the cloud provider manages the network and storage, while in PaaS, customers manage all infrastructure components including networking",
+      "IaaS customers manage OS and applications, while PaaS customers manage only applications and data",
+      "In IaaS, customers manage physical security and power supply, while in PaaS, customers focus on application development only",
+      "In IaaS, customers manage hardware maintenance and data center operations, while in PaaS, the cloud provider handles these tasks"
+    ],
+    "right": "IaaS customers manage OS and applications, while PaaS customers manage only applications and data",
+    "explanation": "En IaaS el cliente gestiona SO y aplicaciones; en PaaS el proveedor gestiona plataforma y SO, el cliente se centra en su aplicación y datos."
+  },
+  {
+    "type": "dropdown",
+    "question": "You are migrating workloads to the cloud. The goal of the migration is to serve customers worldwide as quickly as possible. According to local regulations, certain data is required to be stored in a specific geographic area, and it can be served worldwide. What should you do?",
+    "options": [
+      "Select a public cloud provider that is only active in the required geographic area",
+      "Select a private cloud provider that globally replicates data storage for fast data access",
+      "Select a public cloud provider that guarantees data location in the required geographic area",
+      "Select a private cloud provider that is only active in the required geographic area"
+    ],
+    "right": "Select a public cloud provider that guarantees data location in the required geographic area",
+    "explanation": "Cumplir residencia de datos eligiendo un proveedor público con garantía de ubicación regional; el contenido puede servirse globalmente vía CDN manteniendo el almacenamiento en la región requerida."
+  },
+  {
+    "type": "dropdown",
+    "question": "Your organization needs a large amount of extra computing power within the next two weeks. After those two weeks, the need for the additional resources will end. Which is the most cost-effective approach?",
+    "options": [
+      "Use a committed use discount to reserve a very powerful virtual machine",
+      "Purchase one very powerful physical computer",
+      "Start a very powerful virtual machine without using a committed use discount",
+      "Purchase multiple physical computers and scale workload across them"
+    ],
+    "right": "Start a very powerful virtual machine without using a committed use discount",
+    "explanation": "Los descuentos por compromiso son a 1–3 años. Para un pico de 2 semanas, usar una VM bajo demanda evita compromisos y compras de hardware."
+  },
+  {
+    "type": "dropdown",
+    "question": "Your organization needs to plan its cloud infrastructure expenditures. Which should your organization do?",
+    "options": [
+      "Review cloud resource costs frequently, because costs change often based on use",
+      "Review cloud resource costs annually as part of planning your organization's overall budget",
+      "If your organization uses only cloud resources, infrastructure costs are no longer part of your overall budget",
+      "Involve fewer people in cloud resource planning than your organization did for on-premises resource planning"
+    ],
+    "right": "Review cloud resource costs frequently, because costs change often based on use",
+    "explanation": "En la nube los costes varían con el consumo y pueden cambiar frecuentemente; revisar y optimizar de manera continua es clave."
+  },
+  {
+    "type": "dropdown",
+    "question": "The operating systems of some of your organization's virtual machines may have a security vulnerability. How can your organization most effectively identify all virtual machines that do not have the latest security update?",
+    "options": [
+      "View the Security Command Center to identify virtual machines running vulnerable disk images",
+      "View the Compliance Reports Manager to identify and download a recent PCI audit",
+      "View the Security Command Center to identify virtual machines started more than 2 weeks ago",
+      "View the Compliance Reports Manager to identify and download a recent SOC 1 audit"
+    ],
+    "right": "View the Security Command Center to identify virtual machines running vulnerable disk images",
+    "explanation": "El centro de seguridad permite detectar vulnerabilidades y recursos afectados; los informes de cumplimiento (PCI/SOC) no listan VMs sin parches."
+  },
+  {
+    "type": "dropdown",
+    "question": "You are currently managing workloads running on Windows Server for which your company owns the licenses. Workloads are only needed during working hours, allowing shutdown on weekends. Your Windows Server licenses are up for renewal soon, and you want to optimize license cost. What should you do?",
+    "options": [
+      "Renew your licenses for an additional period of 3 years and negotiate cost reduction with current hosting provider",
+      "Renew your licenses for an additional period of 2 years and commit to automatic renewal",
+      "Migrate the workloads to Compute Engine with a bring-your-own-license (BYOL) model",
+      "Migrate the workloads to Compute Engine with a pay-as-you-go (PAYG) model"
+    ],
+    "right": "Migrate the workloads to Compute Engine with a pay-as-you-go (PAYG) model",
+    "explanation": "Con PAYG de Windows en Compute Engine pagas solo cuando la VM está activa y licencias incluidas, ideal para cargas no continuas y ahorro frente a renovación de licencias."
+  }
+]
+

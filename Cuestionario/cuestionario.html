@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Examen</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="min-h-screen bg-gray-50 text-gray-900">
+    <header class="border-b bg-white">
+      <div class="max-w-3xl mx-auto px-4 py-4">
+        <h1 id="examTitle" class="text-2xl font-semibold">Examen</h1>
+        <p class="text-sm text-gray-600">Selecciona una opción para saber inmediatamente si es correcta.</p>
+        <a id="apuntesLink" href="#" class="mt-2 inline-block text-black">Ver apuntes (resumen para estudiar)</a>
+      </div>
+    </header>
+
+    <main class="max-w-3xl mx-auto px-4 py-6">
+      <section id="status" class="flex items-center justify-between mb-4">
+        <div id="progress" class="text-sm text-gray-700">Pregunta <span id="current">0</span>/<span id="total">0</span></div>
+        <div id="score" class="text-sm font-medium">Puntuación: <span id="points">0</span>/<span id="answered">0</span> (<span id="accuracy">0%</span>)</div>
+      </section>
+
+      <div class="w-full h-2 bg-gray-200 rounded mb-6">
+        <div id="progressBar" class="h-2 bg-blue-600 rounded" style="width:0%"></div>
+      </div>
+
+      <section id="card" class="bg-white shadow-sm rounded-lg border p-5">
+        <h2 id="question" class="text-lg font-medium mb-4">Cargando preguntas…</h2>
+        <div id="options" class="grid gap-3"></div>
+        <div id="feedback" class="mt-4 text-sm"></div>
+        <div class="mt-6 flex flex-wrap gap-3">
+          <button id="checkBtn" class="hidden px-4 py-2 rounded bg-emerald-600 text-white hover:bg-emerald-700">Comprobar</button>
+          <button id="nextBtn" class="hidden px-4 py-2 rounded bg-blue-600 text-white hover:bg-blue-700">Siguiente</button>
+          <button id="resetBtn" class="px-4 py-2 rounded border bg-white hover:bg-gray-50">Reiniciar</button>
+        </div>
+      </section>
+
+      <section id="final" class="hidden mt-6 bg-white shadow-sm rounded-lg border p-5">
+        <h2 class="text-xl font-semibold mb-2">¡Has terminado!</h2>
+        <p class="mb-4">Tu puntuación: <span id="finalScore" class="font-bold"></span></p>
+        <button id="restartBtn" class="px-4 py-2 rounded bg-blue-600 text-white hover:bg-blue-700">Volver a empezar</button>
+      </section>
+    </main>
+
+    <script src="../app.js"></script>
+  </body>
+  </html>

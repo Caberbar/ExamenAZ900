@@ -1,0 +1,23 @@
+[
+  {
+    "name": "az900",
+    "title": "AZ-900 • Fundamentos de Azure",
+    "desc": "Preguntas de verdadero/falso, opción múltiple y emparejamiento.",
+    "pregunta": "Preguntas/preguntasAZ900.json",
+    "apuntes": "Apuntes/apuntesAZ900.html"
+  },
+  {
+    "name": "gcdl",
+    "title": "Google Cloud Digital Leader // EN PROCESO",
+    "desc": "Cuestionario de fundamentos de Google Cloud.",
+    "pregunta": "Preguntas/preguntasGCDL.json",
+    "apuntes": "https://cloud.google.com/certification/cloud-digital-leader"
+  },
+  {
+    "name": "aws-ccp",
+    "title": "AWS Certified Cloud Practitioner // EN PROCESO",
+    "desc": "Fundamentos de AWS: servicios, seguridad, precios y soporte.",
+    "pregunta": "Preguntas/preguntasAWSCCP.json",
+    "apuntes": "https://aws.amazon.com/certification/certified-cloud-practitioner/"
+  }
+]
