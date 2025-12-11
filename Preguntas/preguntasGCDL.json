@@ -238,6 +238,2210 @@
     ],
     "right": "Migrate the workloads to Compute Engine with a pay-as-you-go (PAYG) model",
     "explanation": "Con PAYG de Windows en Compute Engine pagas solo cuando la VM está activa y licencias incluidas, ideal para cargas no continuas y ahorro frente a renovación de licencias."
+  },
+  {
+    "type": "dropdown",
+    "question": "Your organization runs a distributed application in the Compute Engine virtual machines. Your organization needs redundancy, but it also needs extremely fast communication (less than 10 milliseconds) between the parts of the application in different virtual machines. Where should your organization locate this virtual machines?",
+    "options": [
+      "In a single zone within a single region",
+      "In different zones within a single region",
+      "In multiple regions, using one zone per region",
+      "In multiple regions, using multiple zones per region"
+    ],
+    "right": "In different zones within a single region",
+    "explanation": "Para latencias <10 ms entre VMs, permanecer en la misma región minimiza la distancia física y el retardo; distribuir en distintas zonas dentro de la región aporta redundancia frente a fallos de un datacenter sin penalizar latencia como ocurriría entre regiones."
+  },
+  {
+    "type": "dropdown",
+    "question": "An organization decides to migrate their on-premises environment to the cloud. They need to determine which resource components still need to be assigned ownership. Which two functions does a public cloud provider own? (Choose two.)",
+    "options": [
+      "Hardware maintenance",
+      "Infrastructure architecture",
+      "Infrastructure deployment automation",
+      "Hardware capacity management",
+      "Fixing application security issues"
+    ],
+    "right": [
+      "Hardware maintenance",
+      "Hardware capacity management"
+    ],
+    "explanation": "En nube pública el proveedor es responsable de operar y mantener el hardware físico (reemplazos, reparaciones) y de gestionar la capacidad (aprovisionamiento y ampliaciones). La arquitectura y la automatización del despliegue suelen ser responsabilidad del cliente, y los fallos de seguridad de la aplicación corresponden al cliente en el modelo de responsabilidad compartida."
+  },
+  {
+    "type": "dropdown",
+    "question": "You are a program manager within a Software as a Service (SaaS) company that offers rendering software for animation studios. Your team needs the ability to allow scenes to be scheduled at will and to be interrupted at any time to restart later. Any individual scene rendering takes less than 12 hours to complete, and there is no service-level agreement (SLA) for the completion time for all scenes. Results will be stored in a global Cloud Storage bucket. The compute resources are not bound to any single geographical location. This software needs to run on Google Cloud in a cost-optimized way. What should you do?",
+    "options": [
+      "Deploy the application on Compute Engine using preemptible instances",
+      "Develop the application so it can run in an unmanaged instance group",
+      "Create a reservation for the minimum number of Compute Engine instances you will use",
+      "Start more instances with fewer virtual centralized processing units (vCPUs) instead of fewer instances with more vCPUs"
+    ],
+    "right": "Deploy the application on Compute Engine using preemptible instances",
+    "explanation": "Las instancias preemtibles de Compute Engine ofrecen un gran ahorro para cargas batch tolerantes a interrupciones, con tiempos de vida <24 h. Dado que cada escena dura <12 h y puede reanudarse, usar preemtibles maximiza el ahorro sin requerir compromisos ni reservas. El almacenamiento global en Cloud Storage encaja con resultados distribuidos."
+  },
+  {
+    "type": "dropdown",
+    "question": "Your manager wants to restrict communication of all virtual machines with internet access; with resources in another network; or with a resource outside Compute Engine. It is expected that different teams will create new folders and projects in the near future. How would you restrict all virtual machines from having an external IP address?",
+    "options": [
+      "Define an organization policy at the root organization node to restrict virtual machine instances from having an external IP address",
+      "Define an organization policy on all existing folders to define a constraint to restrict virtual machine instances from having an external IP address",
+      "Define an organization policy on all existing projects to restrict virtual machine instances from having an external IP address",
+      "Communicate with the different teams and agree that each time a virtual machine is created, it must be configured without an external IP address"
+    ],
+    "right": "Define an organization policy at the root organization node to restrict virtual machine instances from having an external IP address",
+    "explanation": "Usa Organization Policy a nivel organización con el constraint ‘constraints/compute.vmExternalIpAccess’. La herencia garantiza que carpetas y proyectos nuevos respeten la restricción sin depender de configuraciones manuales."
+  },
+  {
+    "type": "dropdown",
+    "question": "Your multinational organization has servers running mission-critical workloads on its premises around the world. You want to be able to manage these workloads consistently and centrally, and you want to stop managing infrastructure. What should your organization do?",
+    "options": [
+      "Migrate the workloads to a public cloud",
+      "Migrate the workloads to a central office building",
+      "Migrate the workloads to multiple local co-location facilities",
+      "Migrate the workloads to multiple local private clouds"
+    ],
+    "right": "Migrate the workloads to a public cloud",
+    "explanation": "La nube pública ofrece infraestructura gestionada, operaciones estandarizadas y administración centralizada con escalabilidad global, eliminando la necesidad de operar hardware propio."
+  },
+  {
+    "type": "dropdown",
+    "question": "Your organization stores highly sensitive data on-premises that cannot be sent over the public internet. The data must be processed both on-premises and in the cloud. What should your organization do?",
+    "options": [
+      "Configure Identity-Aware Proxy (IAP) in your Google Cloud VPC network",
+      "Create a Cloud VPN tunnel between Google Cloud and your data center",
+      "Order a Partner Interconnect connection with your network provider",
+      "Enable Private Google Access in your Google Cloud VPC network"
+    ],
+    "right": "Order a Partner Interconnect connection with your network provider",
+    "explanation": "Partner Interconnect proporciona conectividad privada (no pública) entre tu red y Google Cloud a través de un proveedor, cumpliendo requisitos de no usar Internet. Cloud VPN usa Internet cifrado; Private Google Access es para VMs sin IP externa hacia APIs de Google; IAP protege accesos web, no datos."
+  },
+  {
+    "type": "dropdown",
+    "question": "Your company's development team is building an application that will be deployed on Cloud Run. You are designing a CI/CD pipeline so that any new version of the application can be deployed in the fewest number of steps possible. You need to select a storage location for the images of the application after the CI part of your pipeline has built them. What should you do?",
+    "options": [
+      "Create a Compute Engine image containing the application",
+      "Store the images in Container Registry",
+      "Store the images in Cloud Storage",
+      "Create a Compute Engine disk containing the application"
+    ],
+    "right": "Store the images in Container Registry",
+    "explanation": "Cloud Run despliega contenedores desde un registro de imágenes. Container Registry (o Artifact Registry, recomendado) almacena las imágenes producidas por CI, habilitando despliegues directos y versionado."
+  },
+  {
+    "type": "dropdown",
+    "question": "Each of the three cloud service models - infrastructure as a service (IaaS), platform as a service (PaaS), and software as a service (SaaS) - offers benefits between flexibility and levels of management by the cloud provider and the customer. Why would SaaS be the right choice of service model?",
+    "options": [
+      "You want a balance between flexibility for the customer and the level of management by the cloud provider",
+      "You want to minimize the level of management by the customer",
+      "You want to maximize flexibility for the customer.",
+      "You want to be able to shift your emphasis between flexibility and management by the cloud provider as business needs change"
+    ],
+    "right": "You want to minimize the level of management by the customer",
+    "explanation": "SaaS reduce al mínimo la gestión por parte del cliente: el proveedor opera la aplicación y la infraestructura; el cliente se centra en uso y configuración."
+  },
+  {
+    "type": "dropdown",
+    "question": "As your organization increases its release velocity, the VM-based application upgrades take a long time to perform rolling updates due to OS boot times. You need to make the application deployments faster. What should your organization do?",
+    "options": [
+      "Migrate your VMs to the cloud, and add more resources to them",
+      "Convert your applications into containers",
+      "Increase the resources of your VMs",
+      "Automate your upgrade rollouts"
+    ],
+    "right": "Convert your applications into containers",
+    "explanation": "Los contenedores eliminan el arranque de SO pesado; se construyen e inician rápido, permitiendo despliegues más ágiles (Cloud Run/GKE) y estrategias de rolling/canary eficientes."
+  },
+  {
+    "type": "dropdown",
+    "question": "Your organization uses Active Directory to authenticate users. Users' Google account access must be removed when their Active Directory account is terminated. How should your organization meet this requirement?",
+    "options": [
+      "Configure two-factor authentication in the Google domain",
+      "Remove the Google account from all IAM policies",
+      "Configure BeyondCorp and Identity-Aware Proxy in the Google domain",
+      "Configure single sign-on in the Google domain"
+    ],
+    "right": "Configure single sign-on in the Google domain",
+    "explanation": "Integra AD con Google (Cloud Identity/Workspace) mediante SSO SAML y, idealmente, aprovisionamiento/desaprovisionamiento (SCIM). Al deshabilitar la cuenta en AD, se revoca el acceso a Google automáticamente."
+  },
+  {
+    "type": "dropdown",
+    "question": "Your company has recently acquired three growing startups in three different countries. You want to reduce overhead in infrastructure management and keep your costs low without sacrificing security and quality of service to your customers. How should you meet these requirements?",
+    "options": [
+      "Host all your subsidiaries' services on-premises together with your existing services.",
+      "Host all your subsidiaries' services together with your existing services on the public cloud.",
+      "Build a homogenous infrastructure at each subsidiary, and invest in training their engineers.",
+      "Build a homogenous infrastructure at each subsidiary, and invest in hiring more engineers."
+    ],
+    "right": "Host all your subsidiaries' services together with your existing services on the public cloud.",
+    "explanation": "Centralizar en nube pública reduce gestión y costos, aplicando seguridad consistente y servicios gestionados para todas las filiales con escalabilidad global."
+  },
+  {
+    "type": "dropdown",
+    "question": "What is the difference between Standard and Coldline storage?",
+    "options": [
+      "Coldline storage is for data for which a slow transfer rate is acceptable.",
+      "Standard and Coldline storage have different durability guarantees.",
+      "Standard and Coldline storage use different APIs.",
+      "Coldline storage is for infrequently accessed data."
+    ],
+    "right": "Coldline storage is for infrequently accessed data.",
+    "explanation": "En Cloud Storage, Standard es para acceso frecuente; Coldline para acceso poco frecuente con menor coste de almacenamiento y mayor coste de acceso/recuperación, manteniendo alta durabilidad."
+  },
+  {
+    "type": "dropdown",
+    "question": "What would provide near-unlimited availability of computing resources without requiring your organization to procure and provision new equipment?",
+    "options": [
+      "Public cloud",
+      "Containers",
+      "Private cloud",
+      "Microservices"
+    ],
+    "right": "Public cloud",
+    "explanation": "La nube pública ofrece capacidad elástica y bajo demanda sin comprar hardware, ampliando recursos prácticamente de forma ilimitada según necesidad."
+  },
+  {
+    "type": "dropdown",
+    "question": "You are a program manager for a team of developers who are building an event-driven application to allow users to follow one another's activities in the app. Each time a user adds himself as a follower of another user, a write occurs in the real-time database. The developers will develop a lightweight piece of code that can respond to database writes and generate a notification. The application requires a platform that automatically manages underlying infrastructure and scales to zero when there is no activity. Which primary compute resource should your developers select?",
+    "options": [
+      "Google Kubernetes Engine",
+      "Cloud Functions",
+      "App Engine flexible environment",
+      "Compute Engine"
+    ],
+    "right": "Cloud Functions",
+    "explanation": "Cloud Functions es serverless y orientado a eventos; se integra con Firebase, Pub/Sub y APIs, escala a cero y gestiona la infraestructura automáticamente."
+  },
+  {
+    "type": "dropdown",
+    "question": "Your organization is developing an application that will capture a large amount of data from millions of different sensor devices spread all around the world. Your organization needs a database suitable for worldwide, high-speed storage of a large amount of unstructured data. Which Google Cloud product should your organization choose?",
+    "options": [
+      "Firestore",
+      "Cloud Data Fusion",
+      "Cloud SQL",
+      "Cloud Bigtable"
+    ],
+    "right": "Cloud Bigtable",
+    "explanation": "Bigtable es una base de datos NoSQL de columna ancha y baja latencia, diseñada para ingestas y lecturas a gran escala (IoT, series temporales)."
+  },
+  {
+    "type": "dropdown",
+    "question": "Your organization needs to build streaming data pipelines. You don't want to manage the individual servers that do the data processing. Instead, you want a managed service that will automatically scale with the amount of data to be processed. Which Google Cloud product or feature should your organization choose?",
+    "options": [
+      "Pub/Sub",
+      "Dataflow",
+      "Data Catalog",
+      "Dataprep by Trifacta"
+    ],
+    "right": "Dataflow",
+    "explanation": "Dataflow es un servicio totalmente gestionado para procesamiento de datos en streaming y batch (Apache Beam), con autoscaling y sin servidores que administrar."
+  },
+  {
+    "type": "dropdown",
+    "question": "Your organization is building an application running in Google Cloud. Currently, software builds, tests, and regular deployments are done manually. Your organization wants to use Google Cloud managed solutions to automate your build, testing, and deployment process. Which product or feature should you use?",
+    "options": [
+      "Cloud Scheduler",
+      "Cloud Code",
+      "Cloud Build",
+      "Cloud Deployment Manager"
+    ],
+    "right": "Cloud Build",
+    "explanation": "Cloud Build automatiza compilaciones, pruebas y empaquetado en pipelines CI; puede integrarse con Cloud Deploy para CD y con repositorios (GitHub, Cloud Source)."
+  },
+  {
+    "type": "dropdown",
+    "question": "Which Google Cloud product can report on and maintain compliance on your entire Google Cloud organization to cover multiple projects?",
+    "options": [
+      "Cloud Logging",
+      "Identity and Access Management",
+      "Google Cloud Armor",
+      "Security Command Center"
+    ],
+    "right": "Security Command Center",
+    "explanation": "Security Command Center centraliza hallazgos de seguridad y cumplimiento a nivel de organización, cubriendo múltiples proyectos con visibilidad y recomendaciones."
+  },
+  {
+    "type": "dropdown",
+    "question": "Your organization needs to establish private network connectivity between its on-premises network and its workloads running in Google Cloud. You need to be able to set up the connection as soon as possible. Which Google Cloud product or feature should you use?",
+    "options": [
+      "Cloud Interconnect",
+      "Direct Peering",
+      "Cloud VPN",
+      "Cloud CDN"
+    ],
+    "right": "Cloud VPN",
+    "explanation": "Cloud VPN establece rápidamente conectividad privada cifrada sobre Internet; Interconnect requiere aprovisionamiento físico o con partners y más tiempo."
+  },
+  {
+    "type": "dropdown",
+    "question": "Your organization is developing a mobile app and wants to select a fully featured cloud-based compute platform for it. Which Google Cloud product or feature should your organization use?",
+    "options": [
+      "Google Kubernetes Engine",
+      "Firebase",
+      "Cloud Functions",
+      "App Engine"
+    ],
+    "right": "Firebase",
+    "explanation": "Firebase es una plataforma integral para apps móviles (Auth, Realtime/Firestore, Hosting, Functions, Analytics) integrada con Google Cloud."
+  },
+  {
+    "type": "dropdown",
+    "question": "Your company has been using a shared facility for data storage and will be migrating to Google Cloud. One of the internal applications uses Linux custom images that need to be migrated. Which Google Cloud product should you use to maintain the custom images?",
+    "options": [
+      "App Engine flexible environment",
+      "Compute Engine",
+      "App Engine standard environment",
+      "Google Kubernetes Engine"
+    ],
+    "right": "Compute Engine",
+    "explanation": "Compute Engine soporta imágenes personalizadas de Linux para instancias de VM, con gestión de discos, snapshots y plantillas."
+  },
+  {
+    "type": "dropdown",
+    "question": "Your organization wants to migrate its data management solutions to Google Cloud because it needs to dynamically scale up or down and to run transactional SQL queries against historical data at scale. Which Google Cloud product or service should your organization use?",
+    "options": [
+      "BigQuery",
+      "Cloud Bigtable",
+      "Pub/Sub",
+      "Cloud Spanner"
+    ],
+    "right": "Cloud Spanner",
+    "explanation": "Cloud Spanner es una base de datos relacional distribuida que escala horizontalmente con consistencia fuerte y transacciones SQL. BigQuery es analítico (no transaccional)."
+  },
+  {
+    "type": "dropdown",
+    "question": "Your organization needs to categorize objects in a large group of static images using machine learning. Which Google Cloud product or service should your organization use?",
+    "options": [
+      "BigQuery ML",
+      "AutoML Video Intelligence",
+      "Cloud Vision API",
+      "AutoML Tables"
+    ],
+    "right": "Cloud Vision API",
+    "explanation": "Vision API ofrece modelos preentrenados para clasificación, detección y etiquetado de imágenes estáticas, sin necesidad de entrenar modelos."
+  },
+  {
+    "type": "dropdown",
+    "question": "Your organization runs all its workloads on Compute Engine virtual machine instances. Security requires no public internet access. The workloads need to access BigQuery and Cloud Storage using their publicly accessible interfaces without violating the requirement. Which Google Cloud feature should your organization use?",
+    "options": [
+      "Identity-Aware Proxy",
+      "Cloud NAT (network address translation)",
+      "VPC internal load balancers",
+      "Private Google Access"
+    ],
+    "right": "Private Google Access",
+    "explanation": "Private Google Access permite a VMs sin IP externa acceder a APIs/servicios de Google (como BigQuery y Cloud Storage) desde redes privadas, sin salir a Internet público."
+  },
+  {
+    "type": "dropdown",
+    "question": "Which Google Cloud product is designed to reduce the risks of handling personally identifiable information (PII)?",
+    "options": [
+      "Cloud Storage",
+      "Google Cloud Armor",
+      "Cloud Data Loss Prevention",
+      "Secret Manager"
+    ],
+    "right": "Cloud Data Loss Prevention",
+    "explanation": "Cloud DLP detecta, clasifica y des-identifica datos sensibles (PII, PHI) mediante máscaras, tokenización y reglas personalizadas."
+  },
+  {
+    "type": "dropdown",
+    "question": "Your organization is migrating to Google Cloud. It needs to move terabytes of data from on-premises file servers to Cloud Storage. You want the migration to be automatizada y gestionada por Google usando vuestra Dedicated Interconnect. ¿Qué servicio?",
+    "options": [
+      "Storage Transfer Service",
+      "Migrate for Anthos",
+      "BigQuery Data Transfer Service",
+      "Transfer Appliance"
+    ],
+    "right": "Storage Transfer Service",
+    "explanation": "Storage Transfer Service orquesta transferencias desde on‑prem a Cloud Storage, con agentes, programación y control; puede aprovechar Interconnect para mayor rendimiento."
+  },
+  {
+    "type": "dropdown",
+    "question": "Your organization needs to analyze data in order to gather insights into its daily operations. You only want to pay for the data you store and the queries you perform. Which Google Cloud product should your organization choose for its data analytics warehouse?",
+    "options": [
+      "Cloud SQL",
+      "Dataproc",
+      "Cloud Spanner",
+      "BigQuery"
+    ],
+    "right": "BigQuery",
+    "explanation": "BigQuery es un almacén de datos serverless con cobro por almacenamiento y por bytes procesados en consultas, ideal para análisis a gran escala."
+  },
+  {
+    "type": "dropdown",
+    "question": "Your organization wants to run a container-based application on Google Cloud. This application is expected to increase in complexity. You need fine‑grained control of traffic between containers and detailed scaling policies. What product should you use?",
+    "options": [
+      "Google Kubernetes Engine cluster",
+      "App Engine",
+      "Cloud Run",
+      "Compute Engine virtual machines"
+    ],
+    "right": "Google Kubernetes Engine cluster",
+    "explanation": "GKE ofrece políticas de red, service mesh e ingresses avanzados, además de HPA/VPA y autoscaling de nodos, proporcionando control fino sobre seguridad y escalado."
+  },
+  {
+    "type": "dropdown",
+    "question": "Which Google Cloud product or feature makes specific recommendations based on security risks and compliance violations?",
+    "options": [
+      "Google Cloud firewalls",
+      "Security Command Center",
+      "Cloud Deployment Manager",
+      "Google Cloud Armor"
+    ],
+    "right": "Security Command Center",
+    "explanation": "SCC agrega hallazgos de riesgo y cumplimiento y proporciona recomendaciones accionables para mejorar la postura de seguridad."
+  },
+  {
+    "type": "dropdown",
+    "question": "Which Google Cloud product provides a consistent platform for multi-cloud application deployments and extends other Google Cloud services to your organization's environment?",
+    "options": [
+      "Google Kubernetes Engine",
+      "Virtual Public Cloud",
+      "Compute Engine",
+      "Anthos"
+    ],
+    "right": "Anthos",
+    "explanation": "Anthos ofrece una plataforma consistente para desplegar y gestionar aplicaciones entre Google Cloud, on‑prem y otras nubes, extendiendo servicios como Config Management, Service Mesh y Policy."
+  },
+  {
+    "type": "dropdown",
+    "question": "Your organization is developing an application that will manage payments and online bank accounts located around the world. The most critical requirement for your database is that each transaction is handled consistently. Your organization anticipates almost unlimited growth in the amount of data stored. Which Google Cloud product should your organization choose?",
+    "options": [
+      "Cloud SQL",
+      "Cloud Storage",
+      "Firestore",
+      "Cloud Spanner"
+    ],
+    "right": "Cloud Spanner",
+    "explanation": "Spanner ofrece consistencia fuerte, transacciones distribuidas y escalado horizontal global para pagos y cuentas con crecimiento masivo."
+  },
+  {
+    "type": "dropdown",
+    "question": "Your organization wants an economical solution to store data such as files, graphical images, and videos and to access and share them securely. Which Google Cloud product or service should your organization use?",
+    "options": [
+      "Cloud Storage",
+      "Cloud SQL",
+      "Cloud Spanner",
+      "BigQuery"
+    ],
+    "right": "Cloud Storage",
+    "explanation": "Cloud Storage es almacenamiento de objetos económico y seguro, ideal para archivos, imágenes y videos con control de acceso."
+  },
+  {
+    "type": "dropdown",
+    "question": "Your organization wants to predict the behavior of visitors to its public website. Your team has database-related skills but only basic machine learning skills. Which Google Cloud product or feature should your organization choose?",
+    "options": [
+      "BigQuery ML",
+      "LookML",
+      "TensorFlow",
+      "Cloud SQL"
+    ],
+    "right": "BigQuery ML",
+    "explanation": "BigQuery ML permite crear modelos ML con SQL aprovechando datos en el data warehouse sin experiencia avanzada en ML."
+  },
+  {
+    "type": "dropdown",
+    "question": "Your organization needs to restrict access to a Cloud Storage bucket. Only employees who are based in Canada should be allowed to view the contents. What is the most effective and efficient way to satisfy this requirement?",
+    "options": [
+      "Deploy the Cloud Storage bucket to a Google Cloud region in Canada",
+      "Configure Google Cloud Armor to allow access to the bucket only from IP addresses based in Canada",
+      "Give each employee who is based in Canada access to the bucket",
+      "Create a group consisting of all Canada-based employees, and give the group access to the bucket"
+    ],
+    "right": "Create a group consisting of all Canada-based employees, and give the group access to the bucket",
+    "explanation": "Gestiona acceso con IAM a nivel de grupo para empleados en Canadá; es escalable y auditable. Ubicación o IP no controlan identidad."
+  },
+  {
+    "type": "dropdown",
+    "question": "Your organization is moving an application to Google Cloud and needs to migrate its MySQL database from another cloud provider to Cloud SQL with minimal user disruption and encrypted transit. Which should your organization use?",
+    "options": [
+      "BigQuery Data Transfer Service",
+      "MySQL batch insert",
+      "Database Migration Service",
+      "Cloud Composer"
+    ],
+    "right": "Database Migration Service",
+    "explanation": "DMS migra y replica bases MySQL hacia Cloud SQL con mínima interrupción y cifrado en tránsito (CDC)."
+  },
+  {
+    "type": "dropdown",
+    "question": "Your organization is developing and deploying an application on Google Cloud. Tracking spending must stay as simple as possible. What should you do to ensure that workloads in the development environment are fully isolated from production workloads?",
+    "options": [
+      "Apply a unique tag to development resources",
+      "Associate the development resources with their own network",
+      "Associate the development resources with their own billing account",
+      "Put the development resources in their own project"
+    ],
+    "right": "Put the development resources in their own project",
+    "explanation": "Usa proyectos separados para aislamiento fuerte de IAM, cuotas, redes y facturación entre dev y prod."
+  },
+  {
+    "type": "dropdown",
+    "question": "Your company runs most workloads in a co-located data center on VMs (Linux/Windows) over a hypervisor. You want to modernize as much as possible adopting cloud-native technologies and migrate to Google Cloud. What should you do?",
+    "options": [
+      "Export VMs to VMDK and import into Compute Engine",
+      "Export VMs to VMDK and import into Google Cloud VMware Engine",
+      "Migrate the workloads using Migrate for Compute Engine",
+      "Migrate the workloads using Migrate for Anthos"
+    ],
+    "right": "Migrate the workloads using Migrate for Anthos",
+    "explanation": "Migrate for Anthos transforma VMs en contenedores, acelerando modernización y adopción de tecnologías cloud‑native (GKE/Cloud Run)."
+  },
+  {
+    "type": "dropdown",
+    "question": "Your organization runs workloads in a private cloud on a hypervisor and wants to move to Google Cloud quickly with minimal changes while leveraging Google's managed services. What should your organization do?",
+    "options": [
+      "Migrate the workloads to Google Cloud VMware Engine",
+      "Migrate the workloads to Compute Engine",
+      "Migrate the workloads to Bare Metal Solution",
+      "Migrate the workloads to Google Kubernetes Engine"
+    ],
+    "right": "Migrate the workloads to Compute Engine",
+    "explanation": "Compute Engine ofrece un camino rápido con cambios mínimos desde VMs on‑prem, aprovechando servicios gestionados de Google Cloud."
+  },
+  {
+    "type": "dropdown",
+    "question": "Your organization is releasing its first publicly available application in Google Cloud. The app is critical and requires a 2‑hour SLA. How should your organization set up support to minimize costs?",
+    "options": [
+      "Enroll in Premium Support",
+      "Enroll in Enhanced Support",
+      "Enroll in Standard Support",
+      "Enroll in Basic Support"
+    ],
+    "right": "Enroll in Enhanced Support",
+    "explanation": "Enhanced Support ofrece tiempos de respuesta más rápidos y cobertura 24/7 a menor costo que Premium, adecuado para SLA estrictos."
+  },
+  {
+    "type": "dropdown",
+    "question": "Your organization offers public mobile apps and websites. You want a Google Cloud solution for checking and maintaining users' usernames/passwords and controlling access based on identity. Which should you choose?",
+    "options": [
+      "VPN tunnels",
+      "Identity Platform",
+      "Compute Engine firewall rules",
+      "Private Google Access"
+    ],
+    "right": "Identity Platform",
+    "explanation": "Identity Platform provee autenticación de usuarios finales (OAuth/OIDC/SAML) y control de acceso con gestión de identidades."
+  },
+  {
+    "type": "dropdown",
+    "question": "Which Google Cloud service or feature lets you build machine learning models using Standard SQL and data in a data warehouse?",
+    "options": [
+      "BigQuery ML",
+      "TensorFlow",
+      "AutoML Tables",
+      "Cloud Bigtable ML"
+    ],
+    "right": "BigQuery ML",
+    "explanation": "Permite entrenar y evaluar modelos directamente en BigQuery con consultas SQL sobre datos del warehouse."
+  },
+  {
+    "type": "dropdown",
+    "question": "Your organization runs an image processing app on VMs. Workload stays at a baseline but spikes regularly. You need to control cost. What should you do?",
+    "options": [
+      "Purchase committed use discounts for the baseline load",
+      "Purchase committed use discounts for the expected spike load",
+      "Leverage sustained use discounts for your virtual machines",
+      "Run the workload on preemptible VM instances"
+    ],
+    "right": "Purchase committed use discounts for the baseline load",
+    "explanation": "Compra CUD para la carga estable y usa demanda/preemtibles para picos, optimizando coste sin sobredimensionar el compromiso."
+  },
+  {
+    "type": "dropdown",
+    "question": "Your organization is planning a Google Cloud migration. What is a best practice when initially configuring your environment?",
+    "options": [
+      "Create a project via Console per department",
+      "Define your resource hierarchy with an organization node on top",
+      "Create projects based on team members' requests",
+      "Make every member of your company the project owner"
+    ],
+    "right": "Define your resource hierarchy with an organization node on top",
+    "explanation": "Configura el nodo de organización y estructura con carpetas/proyectos para gobernanza, políticas e IAM centralizados."
+  },
+  {
+    "type": "dropdown",
+    "question": "Your organization runs many workloads in different projects linked to the same billing account. Combined cost is stable. How should you optimize cost?",
+    "options": [
+      "Purchase a commitment per project for each project's usual minimum",
+      "Create a billing account per project",
+      "Turn on committed use discount sharing, and create a commitment for the combined usage",
+      "Move all workloads into one single consolidated project"
+    ],
+    "right": "Turn on committed use discount sharing, and create a commitment for the combined usage",
+    "explanation": "Activa CUD sharing para aprovechar el compromiso global entre proyectos, maximizando el descuento según uso consolidado."
+  },
+  {
+    "type": "dropdown",
+    "question": "How should a multinational organization consider security and privacy regulations to ensure compliance with global standards?",
+    "options": [
+      "Comply with data security and privacy regulations in each geographical region",
+      "Comply with regional standards because they supersede all international regulations",
+      "Comply with international standards because they supersede all regional regulations",
+      "Comply with regional data security regulations because they're more complex than privacy standards"
+    ],
+    "right": "Comply with data security and privacy regulations in each geographical region",
+    "explanation": "Cumple normativas de cada región donde operas (RGPD, HIPAA, etc.), además de estándares globales aplicables."
+  },
+  {
+    "type": "dropdown",
+    "question": "You plan to use 200 CPUs constantly for the next 3 years, with spikes up to 300 CPUs about 30% of the time. What should you choose to optimize discounts?",
+    "options": [
+      "1-year committed use discount for 200 CPUs",
+      "3-year committed use discount for 300 CPUs",
+      "3-year committed use discount for 200 CPUs",
+      "Regular pay-as-you-go pricing"
+    ],
+    "right": "3-year committed use discount for 200 CPUs",
+    "explanation": "Compromete la carga base por 3 años para máximo descuento y cubre picos con demanda o autoscaling sin sobredimensionar el compromiso."
+  },
+  {
+    "type": "dropdown",
+    "question": "Your organization needs to minimize how much it pays for data traffic from the Google network to the internet. What should you choose?",
+    "options": [
+      "Standard network service tier",
+      "Premium network service tier",
+      "Cloud VPN",
+      "Cloud NAT"
+    ],
+    "right": "Standard network service tier",
+    "explanation": "La capa Standard usa la internet pública y ofrece tarifas de egress más bajas que Premium, reduciendo costos hacia internet."
+  },
+  {
+    "type": "dropdown",
+    "question": "You want to migrate your on-prem environment to Google Cloud. It consists of containers and VM instances. Which Google Cloud products help to migrate the container images and the VM disks?",
+    "options": [
+      "Compute Engine and Filestore",
+      "Artifact Registry and Cloud Storage",
+      "Dataflow and BigQuery",
+      "Pub/Sub and Cloud Storage"
+    ],
+    "right": "Artifact Registry and Cloud Storage",
+    "explanation": "Artifact Registry aloja imágenes de contenedor; Cloud Storage almacena discos/artefactos y datos durante migraciones."
+  },
+  {
+    "type": "dropdown",
+    "question": "Your company security team manages access control to production systems using an LDAP directory group. How is this access control managed in the Google Cloud production project?",
+    "options": [
+      "Assign the proper role to the Service Account in the project's IAM Policy",
+      "Grant each user the roles/iam.serviceAccountUser role on a service account that exists in the Google Group",
+      "Assign the proper role to the Google Group in the project's IAM Policy",
+      "Create the project in a folder with the same name as the LDAP directory group"
+    ],
+    "right": "Assign the proper role to the Google Group in the project's IAM Policy",
+    "explanation": "Sincroniza grupos LDAP a Google Groups y otorga roles a grupos en IAM para control centralizado y mantenible."
+  },
+  {
+    "type": "dropdown",
+    "question": "Which two Google Cloud cost management features help your organization gain greater visibility into its cloud resource costs? (Choose two.)",
+    "options": [
+      "Billing dashboards",
+      "Resource labels",
+      "Sustained use discounts",
+      "Financial governance policies",
+      "Payments profile"
+    ],
+    "right": [
+      "Billing dashboards",
+      "Resource labels"
+    ],
+    "explanation": "Usa paneles de facturación para visibilidad y etiquetas de recursos para atribución y desglose de costos por equipo/proyecto."
+  },
+  {
+    "type": "dropdown",
+    "question": "Your organization needs to process large amounts of data from an online application that operates continuously without provisioning servers. What should your organization choose?",
+    "options": [
+      "Compute Engine with BigQuery",
+      "Dataproc",
+      "Google Kubernetes Engine with Cloud Bigtable",
+      "Dataflow"
+    ],
+    "right": "Dataflow",
+    "explanation": "Dataflow es serverless para pipelines continuos de datos (streaming/batch) con autoscaling y gestión totalmente administrada."
+  },
+  {
+    "type": "dropdown",
+    "question": "Your organization needs to ensure that resources of each department are segregated. Each department has development, testing, and production environments. Which strategy should you choose?",
+    "options": [
+      "Create a project per department, and a folder per environment in each project",
+      "Create a folder per department, and a project per environment in each folder",
+      "Create a Cloud Identity domain per department, and a project per environment in each domain",
+      "Create a Cloud Identity domain per environment, and a project per department in each domain"
+    ],
+    "right": "Create a folder per department, and a project per environment in each folder",
+    "explanation": "Estructura: organización → carpetas por departamento → proyectos por entorno (dev/test/prod) para políticas e IAM coherentes."
+  },
+  {
+    "type": "dropdown",
+    "question": "You need separate development and production environments. Production will be on Compute Engine in two regions. Which resource hierarchy should you choose?",
+    "options": [
+      "Single project for all environments using labels",
+      "Single project for all environments using tags",
+      "One project for development and one project for production",
+      "Two projects for development and two projects for production (one per region)"
+    ],
+    "right": "One project for development and one project for production",
+    "explanation": "Usa proyectos separados por entorno; los recursos multirregión conviven dentro del proyecto prod sin requerir proyectos por región."
+  },
+  {
+    "type": "dropdown",
+    "question": "Your organization purchased a 1‑year Committed Use Discount by mistake instead of 3‑year. What should you do?",
+    "options": [
+      "Contact your financial institution",
+      "Contact Trust and Safety",
+      "Contact Cloud Billing Support",
+      "Contact Technical Support"
+    ],
+    "right": "Contact Cloud Billing Support",
+    "explanation": "Soporte de Cloud Billing gestiona correcciones y cambios relacionados con compromisos y facturación en Google Cloud."
+  },
+  {
+    "type": "dropdown",
+    "question": "A production job on a Compute Engine instance group needs access to a BigQuery dataset. What should be included in the IAM policy on the dataset?",
+    "options": [
+      "The Compute Engine instance group",
+      "The project that owns the Compute Engine instance",
+      "The Compute Engine service account",
+      "The Compute Engine instance"
+    ],
+    "right": "The Compute Engine service account",
+    "explanation": "Otorga permisos a la cuenta de servicio usada por las VMs para acceso a BigQuery, no a instancias/grupos directamente."
+  },
+  {
+    "type": "dropdown",
+    "question": "Your team is publishing research results and needs to make large amounts of data available publicly at minimum cost. How should you host the data?",
+    "options": [
+      "Use a Cloud Storage bucket and enable Requester Pays",
+      "Use a Cloud Storage bucket and provide Signed URLs",
+      "Use a Cloud Storage bucket and set up Cloud Interconnect to allow access",
+      "Host the data on-premises and set up Cloud Interconnect"
+    ],
+    "right": "Use a Cloud Storage bucket and enable Requester Pays",
+    "explanation": "Requester Pays desplaza el costo de egress al consumidor, reduciendo costos del publicador y manteniendo acceso abierto."
+  },
+  {
+    "type": "dropdown",
+    "question": "Your company needs to segment resources used by each team. Efforts change frequently. You need to reduce operational risk and maintain cost visibility. Which approach does Google recommend?",
+    "options": [
+      "One project per team",
+      "One organization per team",
+      "One project that contains all teams' resources",
+      "One top-level folder per team"
+    ],
+    "right": "One top-level folder per team",
+    "explanation": "Agrupa proyectos por equipo en carpetas para aplicar políticas, IAM y vistas de costos sin mezclar recursos entre equipos."
+  },
+  {
+    "type": "dropdown",
+    "question": "How do Migrate for Compute Engine and Migrate for Anthos differ?",
+    "options": [
+      "Migrate for Anthos does not assume VMware vSphere, Migrate for Compute Engine does",
+      "Migrate for Compute Engine charges for ingress, but Migrate for Anthos does not",
+      "Migrate for Compute Engine is closed source, and Migrate for Anthos is open source",
+      "Migrate for Anthos migrates to containers, and Migrate for Compute Engine migrates to virtual machines"
+    ],
+    "right": "Migrate for Anthos migrates to containers, and Migrate for Compute Engine migrates to virtual machines",
+    "explanation": "Compute Engine mantiene VMs; Anthos convierte a contenedores para ejecutarlos en GKE y entornos híbridos."
+  },
+  {
+    "type": "dropdown",
+    "question": "Your organization's user information is stored in an on‑premises LDAP database with passwords and memberships. How should you provision Google accounts and groups to access Google Cloud?",
+    "options": [
+      "Replicate the LDAP infrastructure on Compute Engine",
+      "Use the Firebase Authentication REST API to create users",
+      "Use Google Cloud Directory Sync to create users",
+      "Use the Identity Platform REST API to create users"
+    ],
+    "right": "Use Google Cloud Directory Sync to create users",
+    "explanation": "GCDS sincroniza usuarios y grupos desde LDAP/AD a Cloud Identity/Workspace para gestión de acceso en Google Cloud."
+  },
+  {
+    "type": "dropdown",
+    "question": "You migrated compute workloads to Google Cloud and want private, secure, low‑latency access to large on‑prem datasets. What should you do?",
+    "options": [
+      "Use Storage Transfer Service",
+      "Create a VPC between your on‑premises data center and your Google resources",
+      "Peer your on‑premises data center to Google's Edge Network",
+      "Use Transfer Appliance"
+    ],
+    "right": "Create a VPC between your on‑premises data center and your Google resources",
+    "explanation": "Establece conectividad privada hacia tu VPC mediante Cloud Interconnect o VPN, integrando redes on‑prem y Google Cloud."
+  },
+  {
+    "type": "dropdown",
+    "question": "Your organization has many teams and many projects. You want to simplify management of identity and access policies for these projects. How can you group these projects?",
+    "options": [
+      "Group each team's projects into a separate domain",
+      "Assign labels based on the VMs in each team's projects",
+      "Use folders to group each team's projects",
+      "Group each team's projects into a separate organization node"
+    ],
+    "right": "Use folders to group each team's projects",
+    "explanation": "Las carpetas agrupan proyectos por equipo para aplicar políticas e IAM de forma coherente y centralizada."
+  },
+  {
+    "type": "dropdown",
+    "question": "An organization needs to categorize text‑based customer reviews on their website using a pre‑trained model. Which product should they use?",
+    "options": [
+      "Cloud Natural Language API",
+      "Dialogflow",
+      "Recommendations AI",
+      "TensorFlow"
+    ],
+    "right": "Cloud Natural Language API",
+    "explanation": "Natural Language API analiza texto (sentimiento, entidades, clasificación) con modelos preentrenados sin necesidad de entrenar."
+  },
+  {
+    "type": "dropdown",
+    "question": "An organization is planning its cloud expenditure. What should they do to control costs?",
+    "options": [
+      "Consider cloud resource costs as capital expenditure in annual planning",
+      "Use only cloud resources; they have no infrastructure costs",
+      "Review cloud resource costs frequently because costs depend on usage",
+      "Assess cloud resources costs only when SLO is not met"
+    ],
+    "right": "Review cloud resource costs frequently because costs depend on usage",
+    "explanation": "Los costos en la nube varían con el uso; monitorízalos y ajusta presupuestos/alertas para controlar gasto."
+  },
+  {
+    "type": "dropdown",
+    "question": "An organization seeks an open‑source ML platform to build and deploy custom ML applications using TPUs. Which should they use?",
+    "options": [
+      "TensorFlow",
+      "BigQuery ML",
+      "Vision API",
+      "AutoML Vision"
+    ],
+    "right": "TensorFlow",
+    "explanation": "TensorFlow es open source, soporta aceleradores como TPUs y permite construir y desplegar modelos personalizados."
+  },
+  {
+    "type": "dropdown",
+    "question": "What is an example of unstructured data that organizations can capture from social media?",
+    "options": [
+      "Post comments",
+      "Tagging",
+      "Profile picture",
+      "Location"
+    ],
+    "right": "Post comments",
+    "explanation": "Comentarios de publicaciones son texto libre (no estructurado) útil para análisis de sentimiento/temas."
+  },
+  {
+    "type": "dropdown",
+    "question": "An organization relies on online seasonal sales for most annual revenue. Why use App Engine for their customer app?",
+    "options": [
+      "Automatically adjusts physical inventory in real time",
+      "Autoscales during peaks in demand",
+      "Runs maintenance during seasonal sales",
+      "Recommends the right products to customers"
+    ],
+    "right": "Autoscales during peaks in demand",
+    "explanation": "App Engine escala automáticamente y gestiona la infraestructura, absorbiendo picos sin intervención manual."
+  },
+  {
+    "type": "dropdown",
+    "question": "An organization is using machine learning to make predictions. One dataset mistakenly includes mislabeled data. How will the prediction be impacted?",
+    "options": [
+      "Increased risk of privacy leaks",
+      "Increased risk of inaccuracy",
+      "Decreased model compatibility",
+      "Decreased model training time"
+    ],
+    "right": "Increased risk of inaccuracy",
+    "explanation": "Etiquetas erróneas introducen ruido y sesgo, reducen la precisión del modelo y su capacidad de generalización."
+  },
+  {
+    "type": "dropdown",
+    "question": "A global organization is developing an app to manage payments in multiple regions. Each transaction must be handled consistently and they anticipate unlimited data growth. Which product should they choose?",
+    "options": [
+      "Cloud SQL",
+      "Cloud Spanner",
+      "Cloud Storage",
+      "BigQuery"
+    ],
+    "right": "Cloud Spanner",
+    "explanation": "Base de datos relacional distribuida con consistencia fuerte y escalado global para transacciones críticas."
+  },
+  {
+    "type": "dropdown",
+    "question": "Servers running mission‑critical workloads on‑prem worldwide want to modernize with multi‑cloud. What benefit could they experience?",
+    "options": [
+      "Ability to disable regional network connectivity during cyber attacks",
+      "Ability to keep backups on‑prem in case of failure",
+      "Full management access to regional infrastructure",
+      "Reduced likelihood of system failure during high demand events"
+    ],
+    "right": "Reduced likelihood of system failure during high demand events",
+    "explanation": "Arquitecturas multicloud mejoran disponibilidad y resiliencia distribuyendo carga y mitigando fallos de un único proveedor."
+  },
+  {
+    "type": "dropdown",
+    "question": "An organization needs to run frequent updates for their business app. Why use Google Kubernetes Engine (GKE)?",
+    "options": [
+      "Adjust customer expectations without marketing tools",
+      "Seamless changes can be made without causing any application downtime",
+      "GKE handles version control seamlessly out of the box",
+      "GKE is well suited for all monolithic applications"
+    ],
+    "right": "Seamless changes can be made without causing any application downtime",
+    "explanation": "GKE soporta despliegues rolling y canary, minimizando o eliminando downtime durante actualizaciones."
+  },
+  {
+    "type": "dropdown",
+    "question": "An organization wants to use Apigee to manage all their APIs. What will Apigee enable them to do?",
+    "options": [
+      "Increase application privacy",
+      "Measure and track API performance",
+      "Analyze application development speed",
+      "Market and sell APIs"
+    ],
+    "right": "Measure and track API performance",
+    "explanation": "Apigee proporciona analíticas, monitoreo, políticas, seguridad y gestión de ciclo de vida de APIs."
+  },
+  {
+    "type": "dropdown",
+    "question": "What type of raw data can an e‑commerce org store in a relational database without processing?",
+    "options": [
+      "Product inventory",
+      "Product photographs",
+      "Instructional videos",
+      "Customer chat history"
+    ],
+    "right": "Product inventory",
+    "explanation": "Inventario es datos estructurados relacionales (tablas), aptos para bases SQL sin procesamiento previo."
+  },
+  {
+    "type": "dropdown",
+    "question": "A hotel wants to modernize legacy systems so customers can make reservations via a mobile app. What's the benefit of using an API?",
+    "options": [
+      "They do not have to develop the end‑user application",
+      "They can deprecate their legacy systems",
+      "They can transform their systems to be cloud‑native",
+      "They do not have to rewrite the legacy system"
+    ],
+    "right": "They do not have to rewrite the legacy system",
+    "explanation": "Las APIs encapsulan sistemas legados y exponen funcionalidades sin reescritura, acelerando integración móvil."
+  },
+  {
+    "type": "dropdown",
+    "question": "An organization wants to digitize and share large volumes of historical text and images. Why is public cloud a better option than on‑premises?",
+    "options": [
+      "In‑house hardware management",
+      "Provides physical encryption key",
+      "Cost‑effective at scale",
+      "Optimizes capital expenditure"
+    ],
+    "right": "Cost‑effective at scale",
+    "explanation": "La nube escala almacenamiento y entrega de contenido con costos unitarios decrecientes y CDN sin inversión CAPEX."
+  },
+  {
+    "type": "dropdown",
+    "question": "An organization wants to develop an app personalized a lo largo del año. Why build cloud‑native instead of modernizing on‑prem?",
+    "options": [
+      "Developers can rely on the cloud provider for all source code",
+      "Developers can launch new features in an agile way",
+      "IT managers can migrate architecture without updates",
+      "IT managers can accelerate capital expenditure planning"
+    ],
+    "right": "Developers can launch new features in an agile way",
+    "explanation": "Aplicaciones cloud‑native habilitan despliegues frecuentes, escalado y observabilidad, acelerando iteración y personalización."
+  },
+  {
+    "type": "dropdown",
+    "question": "Which technology allows organizations to run multiple OS on a single piece of physical hardware?",
+    "options": [
+      "Hypervisor",
+      "Containers",
+      "Serverless computing",
+      "Open source"
+    ],
+    "right": "Hypervisor",
+    "explanation": "El hipervisor virtualiza hardware para ejecutar múltiples sistemas operativos en VMs sobre el mismo host físico."
+  },
+  {
+    "type": "dropdown",
+    "question": "An organization is extending helpline hours. Why are they making this change?",
+    "options": [
+      "Users expect professional expertise",
+      "Users require personalization",
+      "Users expect always‑on services",
+      "Users require regional access"
+    ],
+    "right": "Users expect always‑on services",
+    "explanation": "Los usuarios esperan disponibilidad continua; ampliar horarios reduce tiempos de espera y mejora experiencia."
+  },
+  {
+    "type": "dropdown",
+    "question": "Migrating business applications from on‑prem to cloud: how could this impact operations and personnel costs?",
+    "options": [
+      "Reduced on‑premises infrastructure management costs",
+      "Increased on‑premises hardware maintenance costs",
+      "Reduced cloud software licensing costs",
+      "Increased cloud hardware management costs"
+    ],
+    "right": "Reduced on‑premises infrastructure management costs",
+    "explanation": "Servicios gestionados reducen operación de hardware propio y manutención, optimizando costos operativos."
+  },
+  {
+    "type": "dropdown",
+    "question": "Retail inventory often out‑of‑stock in store vs website. How could an API help?",
+    "options": [
+      "Create personalized product recommendations",
+      "Optimize on‑prem legacy system stability",
+      "Manually link each inventory system to the website case‑by‑case",
+      "Programmatically connect the inventory system to their website"
+    ],
+    "right": "Programmatically connect the inventory system to their website",
+    "explanation": "APIs integran inventarios y sincronizan stock en tiempo real con el sitio para evitar discrepancias."
+  },
+  {
+    "type": "dropdown",
+    "question": "Training an ML model to predict extreme weather events: how should they collect data to maximize prediction accuracy?",
+    "options": [
+      "Collect all weather data evenly across all cities",
+      "Collect all weather data primarily from at‑risk cities",
+      "Collect extreme weather data evenly across all cities",
+      "Collect extreme weather data primarily from at‑risk cities"
+    ],
+    "right": "Collect all weather data evenly across all cities",
+    "explanation": "Muestreo balanceado evita sesgos y mejora generalización del modelo a nivel nacional."
+  },
+  {
+    "type": "dropdown",
+    "question": "Need to search an application's source code to identify a potential issue across multiple containers. Which Google Cloud product should the organization use?",
+    "options": [
+      "Google Cloud Console",
+      "Cloud Trace",
+      "Cloud Monitoring",
+      "Cloud Logging"
+    ],
+    "right": "Cloud Logging",
+    "explanation": "Cloud Logging centraliza logs de apps en contenedores, facilitando búsqueda y diagnóstico de problemas."
+  },
+  {
+    "type": "dropdown",
+    "question": "Increasing communication between web developers and operations reduces issues caused by silos. How?",
+    "options": [
+      "Assigning blame for failures",
+      "Combining job role responsibilities for shared access",
+      "Increasing data encryption",
+      "Emphasizing shared ownership of business outcomes"
+    ],
+    "right": "Emphasizing shared ownership of business outcomes",
+    "explanation": "Prácticas DevOps/SRE fomentan responsabilidad compartida y colaboración para objetivos comunes, reduciendo fricciones."
+  },
+  {
+    "type": "dropdown",
+    "question": "How does a large hotel chain benefit from storing customer reservation data in the cloud?",
+    "options": [
+      "On‑prem hardware access to transaction data",
+      "Real‑time data transformation at scale within an on‑prem database",
+      "Real‑time business transaction accuracy at scale",
+      "Physical hardware access during peak demand"
+    ],
+    "right": "Real‑time business transaction accuracy at scale",
+    "explanation": "Servicios gestionados de base de datos y replicación mejoran consistencia y disponibilidad para transacciones a gran escala."
+  },
+  {
+    "type": "dropdown",
+    "question": "Legacy apps each need their own OS. Which infrastructure solution should they choose?",
+    "options": [
+      "Virtual machines",
+      "Open source",
+      "Serverless computing",
+      "Containers"
+    ],
+    "right": "Virtual machines",
+    "explanation": "Cada aplicación puede ejecutarse en su propio SO dentro de una VM aislada cuando el contenedor no es viable."
+  },
+  {
+    "type": "dropdown",
+    "question": "Operating entirely in Google Cloud: how to prepare for data breaches?",
+    "options": [
+      "Reduce reliance on multi‑factor authentication",
+      "Data security is Google's responsibility, so preparation is minimal",
+      "Create an incident plan to mitigate impacts",
+      "Strengthen data center perimeter security"
+    ],
+    "right": "Create an incident plan to mitigate impacts",
+    "explanation": "Diseña y prueba un plan de respuesta a incidentes: detección, contención, recuperación y comunicación."
+  },
+  {
+    "type": "dropdown",
+    "question": "Transform multiple types of structured and unstructured data from various sources; data must be readily accessible for analysis. Which cloud data storage system should the organization use?",
+    "options": [
+      "Relational database",
+      "Private data center",
+      "Data field",
+      "Data warehouse"
+    ],
+    "right": "Data warehouse",
+    "explanation": "Un data warehouse centraliza datos para análisis con SQL y BI, integrando fuentes múltiples para insights."
+  },
+  {
+    "type": "dropdown",
+    "question": "Use all available data to offer predictive suggestions on a website that improve over time. Which method should be used?",
+    "options": [
+      "Data automation",
+      "Trends analysis",
+      "Machine learning",
+      "Multiple regression"
+    ],
+    "right": "Machine learning",
+    "explanation": "ML aprende patrones y mejora recomendaciones con datos históricos y feedback continuo."
+  },
+  {
+    "type": "dropdown",
+    "question": "After rolling out a new update, a minor bug was found. Following SRE principles, what should be done?",
+    "options": [
+      "Accept and learn from the bug because failure is normal",
+      "Accept and ignore the bug because it is only minor",
+      "Hold a postmortem to reprimand the employee responsible",
+      "Document bug correction to eliminate all future bugs"
+    ],
+    "right": "Accept and learn from the bug because failure is normal",
+    "explanation": "SRE promueve postmortems sin culpa para aprendizaje y mejora continua, asumiendo que los fallos ocurren."
+  },
+  {
+    "type": "dropdown",
+    "question": "Why do organizations often struggle to scale on‑premises application infrastructure?",
+    "options": [
+      "Scaling compute instances could breach compliance/regulation",
+      "Increasing compute capacity is time‑consuming and costly",
+      "Serverless compute functions struggle to meet demand",
+      "Multi‑cloud architecture is complex and expensive"
+    ],
+    "right": "Increasing compute capacity is time‑consuming and costly",
+    "explanation": "Aprovisionamiento de hardware propio implica tiempos de compra/instalación y costos altos, limitando escalado."
+  },
+  {
+    "type": "dropdown",
+    "question": "Use BigQuery analytics to understand website performance, but move only some data into the cloud. Which environment should be used?",
+    "options": [
+      "Private cloud",
+      "On‑premises",
+      "Multi‑cloud",
+      "Hybrid cloud"
+    ],
+    "right": "Hybrid cloud",
+    "explanation": "Combina on‑prem y nube; migra y analiza solo parte de los datos, manteniendo otros on‑prem según necesidades."
+  },
+  {
+    "type": "dropdown",
+    "question": "What is logging within the context of cloud technology?",
+    "options": [
+      "Writing application and operating system events as text",
+      "Monitoring network and resource limitations",
+      "Tracking source code across an organization",
+      "Recording infrastructure and hardware expenditure"
+    ],
+    "right": "Writing application and operating system events as text",
+    "explanation": "El logging registra eventos y métricas en entradas de texto para auditoría y diagnóstico."
+  },
+  {
+    "type": "dropdown",
+    "question": "How does Cloud SQL help organizations create business insights?",
+    "options": [
+      "Integrates with business intelligence and analytics platforms",
+      "Generates predictions using machine learning models",
+      "Generates real‑time charts and intelligent analytics",
+      "Transforms business data from unstructured to structured"
+    ],
+    "right": "Integrates with business intelligence and analytics platforms",
+    "explanation": "Cloud SQL se integra con herramientas BI (Looker, Data Studio) y canaliza datos hacia análisis e informes."
+  },
+  {
+    "type": "dropdown",
+    "question": "A virtual customer support agent generates vast text and speech data. Why use a cloud data warehouse to interpret this data?",
+    "options": [
+      "To natively visualize both types of data using a dashboard in real time",
+      "To ingest and analyze structured and unstructured data at scale, in real time",
+      "To secure data transmission between cloud and on‑prem",
+      "To transform data from structured to unstructured"
+    ],
+    "right": "To ingest and analyze structured and unstructured data at scale, in real time",
+    "explanation": "Un warehouse como BigQuery permite ingesta masiva (texto y metadatos de audio) y análisis en tiempo real."
+  },
+  {
+    "type": "dropdown",
+    "question": "Add a new function to an application; write code and let the provider handle infrastructure. Which solution?",
+    "options": [
+      "Virtual machines",
+      "Bare Metal Solution",
+      "Serverless computing",
+      "Container Registry"
+    ],
+    "right": "Serverless computing",
+    "explanation": "Serverless ejecuta funciones sin gestionar servidores, con escalado automático y facturación por uso."
+  },
+  {
+    "type": "dropdown",
+    "question": "Leverage tooling and automation as part of DevOps. Which operational challenge will this resolve?",
+    "options": [
+      "Repetitive manual tasks that hinder workflows",
+      "Time‑consuming supervision of creative tasks",
+      "Distribution and supply‑chain issues",
+      "Defective technical equipment that limits innovation"
+    ],
+    "right": "Repetitive manual tasks that hinder workflows",
+    "explanation": "Automatización (CI/CD, IaC) reduce tareas manuales y errores, acelerando entregas y consistencia operativa."
+  },
+  {
+    "type": "dropdown",
+    "question": "An organization needs to store structured, semi‑structured, and unstructured data in its raw, native format in the same repository. Which solution should be used?",
+    "options": [
+      "Data field",
+      "Data lake",
+      "Database",
+      "Data warehouse"
+    ],
+    "right": "Data lake",
+    "explanation": "Un data lake almacena datos en su formato nativo (CSV, JSON, imágenes, etc.) de forma centralizada."
+  },
+  {
+    "type": "dropdown",
+    "question": "Users need to validate a series of new app features. Why use App Engine?",
+    "options": [
+      "Because the app is containerized and microservices",
+      "Because the updated app will only include new features",
+      "To run different versions of the app for different users",
+      "To run different versions of the app for the same user"
+    ],
+    "right": "To run different versions of the app for different users",
+    "explanation": "App Engine soporta traffic splitting y versiones, permitiendo tests A/B entre distintos usuarios con mínimo esfuerzo."
+  },
+  {
+    "type": "dropdown",
+    "question": "How would an organization benefit from using Looker?",
+    "options": [
+      "Optimal identity and access management",
+      "Leading serverless warehousing technology",
+      "Robust data roll‑back accuracy",
+      "Advanced business intelligence and analytics"
+    ],
+    "right": "Advanced business intelligence and analytics",
+    "explanation": "Looker (Looker Studio) ofrece modelado de datos, dashboards y análisis avanzados integrados con BigQuery."
+  },
+  {
+    "type": "dropdown",
+    "question": "Deliver proactive healthcare service; efficiently and automatically collect patient data. What should patients do?",
+    "options": [
+      "Use at‑home screening devices and upload daily",
+      "Wear IoT devices that upload health data in real time",
+      "Self‑assess and then document/upload in real time",
+      "Visit a nurse who uses IoT devices to collect and upload"
+    ],
+    "right": "Wear IoT devices that upload health data in real time",
+    "explanation": "Dispositivos IoT recogen datos continuos automáticamente, mejorando cobertura y calidad para análisis."
+  },
+  {
+    "type": "dropdown",
+    "question": "How would a global organization benefit from managing data with Cloud Spanner?",
+    "options": [
+      "Optimized for cold storage",
+      "Replicates data across regions in real time",
+      "Optimized to ingest unstructured data",
+      "Visualizes and analyzes data in real time"
+    ],
+    "right": "Replicates data across regions in real time",
+    "explanation": "Spanner replica sincrónicamente entre regiones con consistencia fuerte y disponibilidad elevada."
+  },
+  {
+    "type": "dropdown",
+    "question": "An email asks for bank account number and password. Which cybersecurity threat is this?",
+    "options": [
+      "Ransomware",
+      "Distributed Denial of Service",
+      "Spamming",
+      "Phishing"
+    ],
+    "right": "Phishing",
+    "explanation": "Intento de suplantación para obtener credenciales mediante correos engañosos."
+  },
+  {
+    "type": "dropdown",
+    "question": "Move from tactical to transformational cloud adoption. How should leadership adapt?",
+    "options": [
+      "Increase top‑down visibility and foster a culture of blamelessness",
+      "Shift from OpEx to CapEx",
+      "Drive cloud adoption with an individual contributor focus",
+      "Invest in on‑prem infrastructure to redesign relationships"
+    ],
+    "right": "Increase top‑down visibility and foster a culture of blamelessness",
+    "explanation": "Transformación requiere liderazgo claro, visibilidad y cultura de aprendizaje sin culpa (SRE)."
+  },
+  {
+    "type": "dropdown",
+    "question": "Why is data stored in Google Cloud secure and private?",
+    "options": [
+      "Encrypted by Security Command Center",
+      "Encrypted by Cloud Data Loss Prevention",
+      "Data is encrypted by default",
+      "Encrypted when an appropriate tag is applied"
+    ],
+    "right": "Data is encrypted by default",
+    "explanation": "Google Cloud cifra datos en reposo y en tránsito por defecto, con gestión de claves y opciones CMEK/CMK."
+  },
+  {
+    "type": "dropdown",
+    "question": "A manager wants to review Google Cloud data access among employees. Who is responsible for defining data access policies?",
+    "options": [
+      "Cloud Identity",
+      "Google Cloud Customer Care team",
+      "Their organization's IT team",
+      "Their organization's end users"
+    ],
+    "right": "Their organization's IT team",
+    "explanation": "El equipo de TI define políticas de acceso (IAM, grupos, roles) según requisitos de negocio y seguridad."
+  },
+  {
+    "type": "dropdown",
+    "question": "Modernize applications in the cloud to keep up with customers' needs. What may have prompted this decision?",
+    "options": [
+      "On‑prem apps only autoscale to meet demand",
+      "They want to change from pay‑as‑you‑go to CapEx",
+      "Source code changes erroneously without developer interaction",
+      "On‑prem apps take months to update and deploy"
+    ],
+    "right": "On‑prem apps take months to update and deploy",
+    "explanation": "La modernización reduce ciclos de lanzamiento, habilita CI/CD y acelera respuesta a necesidades del cliente."
+  },
+  {
+    "type": "dropdown",
+    "question": "Categorize a large group of photographs using pre‑trained ML. Which product should be used?",
+    "options": [
+      "Vision API",
+      "BigQuery ML",
+      "AutoML Vision",
+      "Looker"
+    ],
+    "right": "Vision API",
+    "explanation": "Vision API etiqueta y detecta objetos/propiedades en imágenes con modelos preentrenados."
+  },
+  {
+    "type": "dropdown",
+    "question": "A loyalty program expands with partners. Why use APIs?",
+    "options": [
+      "Migrate all partner data for disaster recovery",
+      "Analyze and publish loyalty stats to a dashboard",
+      "Personalize recommendations for loyalty users",
+      "Connect third‑party systems to ensure up‑to‑date information"
+    ],
+    "right": "Connect third‑party systems to ensure up‑to‑date information",
+    "explanation": "APIs facilitan intercambio seguro y en tiempo real de datos entre sistemas de distintos socios."
+  },
+  {
+    "type": "dropdown",
+    "question": "A travel agency wants to seamlessly share their social media content with partners. What should they use?",
+    "options": [
+      "A NoSQL database",
+      "Anthos Config Management",
+      "The App Engine standard environment",
+      "An application programming interface (API)"
+    ],
+    "right": "An application programming interface (API)",
+    "explanation": "APIs exponen contenidos y endpoints para que terceros consuman datos de forma consistente y segura."
+  },
+  {
+    "type": "dropdown",
+    "question": "How do out‑of‑the‑box APIs make AI/ML more accessible for Google Cloud customers?",
+    "options": [
+      "They don't require technical specialists",
+      "They don't require data input and validation",
+      "They require fewer security permissions",
+      "They all require custom training models"
+    ],
+    "right": "They don't require technical specialists",
+    "explanation": "APIs preentrenadas (Vision, NLP) permiten capacidades ML sin experiencia profunda ni entrenamiento propio."
+  },
+  {
+    "type": "dropdown",
+    "question": "Migrate specialized workloads maintaining complex licensing and architecture. What Google Cloud solution should be used?",
+    "options": [
+      "Compute Engine",
+      "Bare Metal Solution",
+      "Cloud Run",
+      "Cloud Functions"
+    ],
+    "right": "Bare Metal Solution",
+    "explanation": "Bare Metal Solution ofrece hardware dedicado para cargas especializadas y licenciamiento complejo con conectividad a Google Cloud."
+  },
+  {
+    "type": "dropdown",
+    "question": "Upgrade vending machines with cloud‑based mobile payments. How could they benefit?",
+    "options": [
+      "Relax data access permissions",
+      "Reduce error budget overspend",
+      "Improve perimeter security",
+      "View data history to see transactions"
+    ],
+    "right": "View data history to see transactions",
+    "explanation": "Los pagos digitales registran transacciones en la nube con trazabilidad y auditoría para reconciliación."
+  },
+  {
+    "type": "dropdown",
+    "question": "Food delivery needs real‑time menu info from partners and share orders in real time. What should be used?",
+    "options": [
+      "Site reliability engineering (SRE)",
+      "An application programming interface (API)",
+      "A customized machine learning model",
+      "A multi‑regional database"
+    ],
+    "right": "An application programming interface (API)",
+    "explanation": "APIs permiten intercambio en tiempo real de datos de menús y pedidos entre múltiples sistemas."
+  },
+  {
+    "type": "dropdown",
+    "question": "Planning to create many new applications and needs a system for managing and orchestrating containers. Why use Google Kubernetes Engine?",
+    "options": [
+      "It enables rapid application deployment and testing",
+      "It optimizes virtual machine performance",
+      "It connects legacy systems to an application",
+      "It provides pre‑written source code for development"
+    ],
+    "right": "It enables rapid application deployment and testing",
+    "explanation": "GKE orquesta contenedores, automatiza despliegues y pruebas, y escala servicios de forma eficiente."
+  },
+  {
+    "type": "dropdown",
+    "question": "How does Google Cloud enable customers to leverage AI/ML?",
+    "options": [
+      "Scalable on‑prem TPUs",
+      "APIs and tools for users at different expertise levels",
+      "Affordable and scalable quantum computing",
+      "Models that always require custom training"
+    ],
+    "right": "APIs and tools for users at different expertise levels",
+    "explanation": "Ofrece APIs preentrenadas, AutoML y frameworks como TensorFlow, además de TPUs gestionadas."
+  },
+  {
+    "type": "dropdown",
+    "question": "What is an example of unstructured data an online retail org can use to make decisions?",
+    "options": [
+      "Customer survey comments",
+      "Seller location coordinates",
+      "Product sales trends",
+      "Warehouse inventory records"
+    ],
+    "right": "Customer survey comments",
+    "explanation": "Comentarios de encuestas son texto no estructurado útil para insight y sentimiento."
+  },
+  {
+    "type": "dropdown",
+    "question": "Public cloud provider failed to meet 99.99% availability SLA. Potential impact?",
+    "options": [
+      "Risk using up error budget",
+      "Renegotiate SLA to put less emphasis on uptime",
+      "Unexpected downtime could risk the loss of customers",
+      "All data stored in database could be unexpectedly lost"
+    ],
+    "right": "Unexpected downtime could risk the loss of customers",
+    "explanation": "Menor disponibilidad afecta experiencia y puede provocar pérdida de usuarios o ingresos."
+  },
+  {
+    "type": "dropdown",
+    "question": "Train a machine learning model to categorize photographs. Which product or service should be used?",
+    "options": [
+      "Video Intelligence API",
+      "AutoML Vision",
+      "BigQuery ML",
+      "Looker"
+    ],
+    "right": "AutoML Vision",
+    "explanation": "AutoML Vision permite entrenar modelos personalizados de visión sin experiencia profunda en ML."
+  },
+  {
+    "type": "dropdown",
+    "question": "Benefit of using public cloud services to modernize IT infrastructure for a multinational organization?",
+    "options": [
+      "Perform hardware maintenance outside business hours",
+      "Expect 100% service availability in all regions",
+      "Built‑in security no longer required during migrations",
+      "Access to data and compute resources not tied to a geographical location"
+    ],
+    "right": "Access to data and compute resources not tied to a geographical location",
+    "explanation": "La nube permite acceso global y ubicuo a recursos, mejorando colaboración y rendimiento."
+  },
+  {
+    "type": "dropdown",
+    "question": "Meet SLO of 99.999% (‘five nines’). How much downtime do end users experience per year?",
+    "options": [
+      "5 minutes",
+      "500 minutes",
+      "5 hours",
+      "5 days"
+    ],
+    "right": "5 minutes",
+    "explanation": "Cinco nueves de disponibilidad equivalen a ≈5.26 minutos de inactividad anual."
+  },
+  {
+    "type": "dropdown",
+    "question": "Introduce a new image recognition login system. Following SRE, what should be done?",
+    "options": [
+      "Roll out to a subset of employees to test",
+      "Roll out to all employees to collect as much data as possible",
+      "Avoid rollout due to potential security flaws",
+      "Avoid rollout due to privacy policy"
+    ],
+    "right": "Roll out to a subset of employees to test",
+    "explanation": "Despliegues canary reducen riesgo y permiten validar comportamiento antes del lanzamiento global."
+  },
+  {
+    "type": "dropdown",
+    "question": "What does Cloud Debugger help an organization do?",
+    "options": [
+      "Implement code updates in real time without affecting SLO",
+      "Inspect source code in real time without affecting user downtime",
+      "Manage code and accelerate application development",
+      "Analyze live source code during user downtime"
+    ],
+    "right": "Inspect source code in real time without affecting user downtime",
+    "explanation": "Cloud Debugger captura snapshots de estado de código en producción sin pausar ni impactar a los usuarios."
+  },
+  {
+    "type": "dropdown",
+    "question": "How can a streaming service meet global compliance requirements using the cloud?",
+    "options": [
+      "Automatically encrypting personally identifiable information",
+      "Obtaining a business license to operate in a new market",
+      "Allowing users to disable two‑factor authentication",
+      "Adhering only to data policies of the head‑office country"
+    ],
+    "right": "Automatically encrypting personally identifiable information",
+    "explanation": "Protección de PII mediante cifrado y controles de acceso ayuda a cumplir regulaciones globales."
+  },
+  {
+    "type": "dropdown",
+    "question": "Full control of VM infrastructure for a custom app that autoscales and updates. Which product should be used?",
+    "options": [
+      "Cloud Build",
+      "Cloud Run",
+      "Compute Engine",
+      "App Engine"
+    ],
+    "right": "Compute Engine",
+    "explanation": "Compute Engine otorga control de VMs con opciones de autoscaling y gestión de actualizaciones mediante plantillas."
+  },
+  {
+    "type": "dropdown",
+    "question": "Build an entirely new infrastructure and applications in the cloud. Which application modernization approach?",
+    "options": [
+      "Move the application to the cloud, then change it",
+      "Change the application, then move it to the cloud",
+      "Invent in greenfield",
+      "Invent in brownfield"
+    ],
+    "right": "Invent in greenfield",
+    "explanation": "Greenfield implica construir desde cero soluciones cloud‑native sin restricciones de sistemas legados."
+  },
+  {
+    "type": "dropdown",
+    "question": "Upskill IT staff in a transformational way. How?",
+    "options": [
+      "Prioritize training current employees instead of hiring",
+      "Prioritize giving privileged access to third parties",
+      "Create a culture of isolated learning",
+      "Create a culture of continuous peer‑to‑peer learning with official materials"
+    ],
+    "right": "Create a culture of continuous peer‑to‑peer learning with official materials",
+    "explanation": "Aprendizaje continuo entre pares y formación oficial consolidan capacidades cloud de forma sostenible."
+  },
+  {
+    "type": "dropdown",
+    "question": "Several departments collaborate and need customized access to resources. What is the quickest and most efficient way?",
+    "options": [
+      "Map IAM roles to job functions for each department",
+      "Assign IAM primitive roles to each employee",
+      "Apply least‑privilege to roles for each employee",
+      "Create a single shared service account for all departments"
+    ],
+    "right": "Map IAM roles to job functions for each department",
+    "explanation": "Diseña roles basados en función laboral para agilizar concesión y mantener mínimos privilegios."
+  },
+  {
+    "type": "dropdown",
+    "question": "Cloud expenditures are too high. What should the organization do to control costs?",
+    "options": [
+      "Streamline hardware procurement",
+      "Share cost views with departments to establish accountability",
+      "Change cost model from OpEx to CapEx",
+      "Tag all cloud resources with a single tag"
+    ],
+    "right": "Share cost views with departments to establish accountability",
+    "explanation": "Transparencia de costos por equipos/proyectos mejora responsabilidad y eficiencia del gasto."
+  },
+  {
+    "type": "dropdown",
+    "question": "What is monitoring within the context of cloud operations?",
+    "options": [
+      "Observing cloud expenditure in real time",
+      "Collecting predefined and custom metrics from applications and infrastructure",
+      "Tracking user activities to guarantee compliance",
+      "Tracing user location to document regional access"
+    ],
+    "right": "Collecting predefined and custom metrics from applications and infrastructure",
+    "explanation": "Monitoring recoge métricas (CPU, latencia, errores) y alertas para asegurar SLOs y salud del sistema."
+  },
+  {
+    "type": "dropdown",
+    "question": "Create a new application in the cloud to replace an existing on‑prem application. Which modernization approach?",
+    "options": [
+      "Move the application to the cloud, then change it",
+      "Change the application, then move it to the cloud",
+      "Invent in greenfield",
+      "Invent in brownfield"
+    ],
+    "right": "Invent in brownfield",
+    "explanation": "Brownfield moderniza y migra componentes existentes hacia la nube con rediseño progresivo."
+  },
+  {
+    "type": "dropdown",
+    "question": "Why should an organization consider total cost of ownership (TCO) when moving from on‑premises to the cloud?",
+    "options": [
+      "To evaluate error budget",
+      "To understand service level availability",
+      "To evaluate return on investment",
+      "To calculate required compute power"
+    ],
+    "right": "To evaluate return on investment",
+    "explanation": "El TCO compara costos completos (infra, operación, personal) frente a la nube para medir ROI real."
+  },
+  {
+    "type": "dropdown",
+    "question": "How does Google Cloud ensure customer data remains secure and private when at rest?",
+    "options": [
+      "Aggregating training data for customers within each industry",
+      "Automatically locking files containing suspicious code",
+      "Auditing platform privacy practices against industry standards",
+      "Providing privacy reviews for critical customer applications"
+    ],
+    "right": "Auditing platform privacy practices against industry standards",
+    "explanation": "Cumplimientos y auditorías (ISO, SOC, PCI) verifican prácticas de privacidad y seguridad del plataforma."
+  },
+  {
+    "type": "dropdown",
+    "question": "Developers frustrated by limitations of on‑prem infrastructure; how would they benefit from leveraging cloud technology?",
+    "options": [
+      "Expect 100% service availability",
+      "Avoid limitations of serverless computing",
+      "New tools to innovate and optimize resource usage",
+      "Optimize maintenance for on‑prem infrastructure"
+    ],
+    "right": "New tools to innovate and optimize resource usage",
+    "explanation": "La nube ofrece servicios avanzados (CI/CD, ML, observabilidad) y elasticidad para acelerar innovación."
+  },
+  {
+    "type": "dropdown",
+    "question": "How is service availability measured in cloud technology?",
+    "options": [
+      "Number of available regions",
+      "Percentage of uptime",
+      "Speed of response time",
+      "Number of downtime incidents"
+    ],
+    "right": "Percentage of uptime",
+    "explanation": "Disponibilidad se expresa como porcentaje de tiempo activo (SLA 99.9%, 99.99%, etc.)."
+  },
+  {
+    "type": "dropdown",
+    "question": "An organization wants a cost‑effective relational database. Which Google Cloud service should be used?",
+    "options": [
+      "Cloud Storage",
+      "BigQuery",
+      "Cloud SQL",
+      "Dataflow"
+    ],
+    "right": "Cloud SQL",
+    "explanation": "Cloud SQL ofrece instancias gestionadas de MySQL/PostgreSQL/SQL Server con costos ajustados y operación simplificada."
+  },
+  {
+    "type": "dropdown",
+    "question": "Altering a gaming product to be compatible with cloud technology. What can be expected moving from traditional to cloud?",
+    "options": [
+      "No change to existing responsibilities",
+      "A shift toward OpEx",
+      "A shift toward using structured data",
+      "Increased hardware maintenance"
+    ],
+    "right": "A shift toward OpEx",
+    "explanation": "La nube cambia CAPEX a OPEX: pago por uso y costos operativos en lugar de inversión de capital."
+  },
+  {
+    "type": "dropdown",
+    "question": "Adopting cloud technology: how does total cost of ownership (TCO) shift?",
+    "options": [
+      "Away from cost management toward capital expenditure",
+      "Away from operational expenditure toward cost management",
+      "Away from capital expenditure toward operational expenditure",
+      "Away from operational expenditure toward capital expenditure"
+    ],
+    "right": "Away from capital expenditure toward operational expenditure",
+    "explanation": "Modelo de costos pasa de inversión en hardware (CAPEX) a gasto operativo (OPEX) según uso."
+  },
+  {
+    "type": "dropdown",
+    "question": "Which policy helps Google Cloud keep customer data private?",
+    "options": [
+      "Google tests service availability of customer applications",
+      "Google does not use customer data for advertising purposes",
+      "Google migrates customer data to an offline server when a threat is detected",
+      "Google does not allow customers to change encryption keys"
+    ],
+    "right": "Google does not use customer data for advertising purposes",
+    "explanation": "Política de privacidad de Google Cloud prohíbe uso de datos de clientes para publicidad."
+  },
+  {
+    "type": "dropdown",
+    "question": "A cloud‑native org is not meeting SLO but has not exhausted error budget. What should be prioritized?",
+    "options": [
+      "Innovation to improve user experience",
+      "Hardware reliability to improve availability",
+      "Stability to avoid prolonged user downtime",
+      "Speed to release new features"
+    ],
+    "right": "Stability to avoid prolonged user downtime",
+    "explanation": "Con presupuesto de error disponible, prioriza estabilidad para recuperar SLO y evitar más impacto."
+  },
+  {
+    "type": "dropdown",
+    "question": "Moving away from on‑premises infrastructure to create, access, and share information virtually in the cloud. What should be considered?",
+    "options": [
+      "Built‑in security when moving data to the cloud",
+      "Replacing perimeter security with encryption keys",
+      "Optimizing cost‑management with a CapEx model",
+      "Increased hardware capacity when moving data to the cloud"
+    ],
+    "right": "Built‑in security when moving data to the cloud",
+    "explanation": "La nube incorpora cifrado, controles IAM, auditoría y cumplimiento integrados al migrar datos."
+  },
+  {
+    "type": "dropdown",
+    "question": "On‑prem IT infrastructure; customer‑facing app fails during peak usage. What could be causing this?",
+    "options": [
+      "A serverless compute function struggles to scale",
+      "The application contains unclean data",
+      "Not enough servers to meet demand",
+      "The application is only configurable on‑premises"
+    ],
+    "right": "Not enough servers to meet demand",
+    "explanation": "Capacidad fija de servidores on‑prem no escala a picos, causando fallos y degradación."
+  },
+  {
+    "type": "dropdown",
+    "question": "What is artificial intelligence?",
+    "options": [
+      "Any system that ingests data in real time",
+      "Any system that automatically structures data",
+      "Any system capable of a task that requires smart analytics to generate predictions",
+      "Any system capable of a task that normally requires human cognition"
+    ],
+    "right": "Any system capable of a task that normally requires human cognition",
+    "explanation": "La IA realiza tareas que tradicionalmente requieren inteligencia humana (percepción, razonamiento, aprendizaje)."
+  },
+  {
+    "type": "dropdown",
+    "question": "What does Cloud Logging help an organization do?",
+    "options": [
+      "Analyze live source code and log code updates",
+      "Deploy infrastructure as code",
+      "Analyze logs and accelerate application troubleshooting",
+      "Manage storage of custom VM images"
+    ],
+    "right": "Analyze logs and accelerate application troubleshooting",
+    "explanation": "Centraliza logs, crea métricas y alertas, y mejora resolución de incidencias con consultas y paneles."
+  },
+  {
+    "type": "dropdown",
+    "question": "How is privacy defined in the context of cloud technology?",
+    "options": [
+      "Restrictions on data access and sharing",
+      "Procedures to authenticate user identity",
+      "Susceptibility to data breaches and cyber attacks",
+      "Compliance with regulatory standards"
+    ],
+    "right": "Restrictions on data access and sharing",
+    "explanation": "Privacidad regula quién puede acceder y compartir datos personales y sensibles."
+  },
+  {
+    "type": "dropdown",
+    "question": "An organization wants to write and run small pieces of code in a serverless way that respond to events like huge discounts. Which Google Cloud compute solution should the organization use?",
+    "options": [
+      "Google Kubernetes Engine",
+      "Cloud Functions",
+      "Bare Metal Solution",
+      "Compute Engine"
+    ],
+    "right": "Cloud Functions",
+    "explanation": "Functions ejecuta código serverless por eventos, escala automáticamente y elimina gestión de servidores."
+  },
+  {
+    "type": "dropdown",
+    "question": "An organization wants to search hundreds of scanned documents for key information like dates, names, and other specific words. Why should the organization use application programming interfaces (APIs)?",
+    "options": [
+      "Replace the scanned documents with an online survey",
+      "Ingest data in real time and encrypt unmatched words",
+      "Create digital versions of the documents and locate key information",
+      "Transform the documents into unstructured data"
+    ],
+    "right": "Create digital versions of the documents and locate key information",
+    "explanation": "APIs de visión/NLP permiten digitalizar y extraer datos clave de documentos escaneados de forma automatizada."
+  },
+  {
+    "type": "dropdown",
+    "question": "An organization needs a platform to create custom end-to-end artificial intelligence models. Which Google Cloud product or service should the organization use?",
+    "options": [
+      "Dataproc",
+      "Compute Engine",
+      "Recommendations AI",
+      "Vertex AI"
+    ],
+    "right": "Vertex AI",
+    "explanation": "Vertex AI unifica el ciclo de vida de ML (datos, entrenamiento, despliegue, MLOps) para modelos personalizados."
+  },
+  {
+    "type": "dropdown",
+    "question": "An organization is training a machine learning model to make predictions. What could improve the prediction accuracy of their model?",
+    "options": [
+      "An increase in storage capacity",
+      "Higher network bandwidth",
+      "An increase in training data",
+      "Faster CPU processors"
+    ],
+    "right": "An increase in training data",
+    "explanation": "Más datos de entrenamiento relevantes reducen sobreajuste y mejoran la generalización del modelo."
+  },
+  {
+    "type": "dropdown",
+    "question": "What is an example of structured data that a healthcare facility stores in their system?",
+    "options": [
+      "X-ray images",
+      "Surgery video recordings",
+      "Blood pressure history",
+      "Physician-written notes"
+    ],
+    "right": "Blood pressure history",
+    "explanation": "Historial de presión arterial es datos tabulares estructurados aptos para bases relacionales."
+  },
+  {
+    "type": "dropdown",
+    "question": "An organization wants to move from a tactical cloud adoption approach to a transformational approach. How should they change their cloud security?",
+    "options": [
+      "Provide staff identities using only Google Cloud authentication",
+      "Provide multiple layers of network security using a zero-trust model",
+      "Emphasize strong perimeter security and trust in their private network",
+      "Emphasize three main IAM roles: owner, editor, and viewer"
+    ],
+    "right": "Provide multiple layers of network security using a zero-trust model",
+    "explanation": "El modelo zero‑trust asume no confianza por defecto y verifica continuamente identidad, dispositivo y contexto."
+  },
+  {
+    "type": "dropdown",
+    "question": "What can customers expect if their cloud provider doesn't meet their service level agreement (SLA)?",
+    "options": [
+      "Increase in subscription fees",
+      "Cloud service shutdown",
+      "Refund for service interruption",
+      "Error budget expansion"
+    ],
+    "right": "Refund for service interruption",
+    "explanation": "Los SLAs incluyen créditos/reembolsos ante incumplimientos, no cierres del servicio ni aumento de tarifas."
+  },
+  {
+    "type": "dropdown",
+    "question": "An organization wants to ensure that their developers can easily use application programming interfaces (APIs) in future projects. Which Google product or solution should they use?",
+    "options": [
+      "Application migration",
+      "Apigee",
+      "App Engine flexible environment",
+      "AppSheet"
+    ],
+    "right": "Apigee",
+    "explanation": "Apigee facilita gestión del ciclo de vida de APIs (diseño, seguridad, analíticas, catálogo) para reutilización."
+  },
+  {
+    "type": "dropdown",
+    "question": "An organization needs frequent access to only a subset of their data. They want to reduce costs by depositing the rest across Nearline, Coldline, and Archive repositories. Which Google Cloud product should the organization use?",
+    "options": [
+      "Filestore",
+      "Cloud Storage",
+      "Data Catalog",
+      "Cloud Spanner"
+    ],
+    "right": "Cloud Storage",
+    "explanation": "Cloud Storage ofrece clases de almacenamiento (Standard, Nearline, Coldline, Archive) según frecuencia de acceso."
+  },
+  {
+    "type": "dropdown",
+    "question": "A customer service department wants to increase their operational efficiency while maintaining personalized dialog with their customers. What Google Cloud product or service should the organization use?",
+    "options": [
+      "Recommendations AI",
+      "Cloud Identity",
+      "Contact Center AI",
+      "Text-to-Speech"
+    ],
+    "right": "Contact Center AI",
+    "explanation": "CCAI integra bots conversacionales y asistencia de agentes, manteniendo personalización con eficiencia operativa."
+  },
+  {
+    "type": "dropdown",
+    "question": "An organization is struggling to keep up with the growth of their application which is running on legacy infrastructure. What might be holding them back?",
+    "options": [
+      "The time it takes their serverless compute function to scale",
+      "The overreliance on platform as a service",
+      "The inaccessibility of their data due to perimeter security",
+      "The cost of provisioning hardware for peak usage"
+    ],
+    "right": "The cost of provisioning hardware for peak usage",
+    "explanation": "Aprovisionamiento para picos en on‑prem implica costos altos y baja elasticidad frente a demanda variable."
+  },
+  {
+    "type": "dropdown",
+    "question": "An organization wants to build autoscaling web applications without having to manage application infrastructure. Which Google Cloud product should they use?",
+    "options": [
+      "Anthos",
+      "Apigee",
+      "AutoML",
+      "App Engine"
+    ],
+    "right": "App Engine",
+    "explanation": "App Engine es PaaS serverless que gestiona infraestructura, despliegues y escalado automático de aplicaciones web."
+  },
+  {
+    "type": "dropdown",
+    "question": "What is an organization exclusively responsible for when they access an application through a software as a service (SaaS) model?",
+    "options": [
+      "Maintaining overall system operability",
+      "Maintaining customer-facing content",
+      "Monitoring data center servers",
+      "Monitoring computer networks"
+    ],
+    "right": "Maintaining customer-facing content",
+    "explanation": "En SaaS el proveedor gestiona la aplicación e infraestructura; el cliente gestiona contenido y configuración."
+  },
+  {
+    "type": "dropdown",
+    "question": "An organization needs to train a custom machine learning model to categorize customer responses from their website's contact form. Which Google Cloud product or service should the organization use?",
+    "options": [
+      "Anthos",
+      "Recommendations AI",
+      "AutoML Natural Language",
+      "Pub/Sub"
+    ],
+    "right": "AutoML Natural Language",
+    "explanation": "AutoML NL entrena modelos personalizados de clasificación y análisis de texto sin requerir expertos en ML."
+  },
+  {
+    "type": "dropdown",
+    "question": "Which cybersecurity threat can lead to information being stolen or damaged without a user ever being aware?",
+    "options": [
+      "SLA policy violation",
+      "Malware attack",
+      "Ransomware attack",
+      "Incomplete data input"
+    ],
+    "right": "Malware attack",
+    "explanation": "El malware puede operar de forma silenciosa, exfiltrando o dañando información sin alertar al usuario."
+  },
+  {
+    "type": "dropdown",
+    "question": "An organization has decided to create a mobile app for their customer-facing service. What may have prompted this business decision?",
+    "options": [
+      "Customers expect information to be easily accessible on any device",
+      "Customers expect mobile-only access to information in the cloud era",
+      "Developers can apply increased data security on a mobile app",
+      "Developers can run different versions of the service only through a mobile app"
+    ],
+    "right": "Customers expect information to be easily accessible on any device",
+    "explanation": "Los usuarios esperan experiencias omnicanal y acceso desde múltiples dispositivos (web/móvil)."
+  },
+  {
+    "type": "dropdown",
+    "question": "An organization suffers a major data leak only six months after upgrading its security system. What should the organization do to ensure long-term security?",
+    "options": [
+      "Extend data retention policy lengths to at least seven years",
+      "Pay more to get the best security system available on the market",
+      "Hire cybersecurity experts to further develop their data security plan",
+      "Wait for a more advanced security system to be released"
+    ],
+    "right": "Hire cybersecurity experts to further develop their data security plan",
+    "explanation": "Estrategia y gobierno de seguridad requieren expertos para diseñar procesos, controles y respuesta a incidentes."
+  },
+  {
+    "type": "dropdown",
+    "question": "An organization has started to develop cloud-native applications to replace their legacy applications. What else should the organization do to adopt the cloud?",
+    "options": [
+      "Provide privileged cloud network access to third-party partners",
+      "Migrate some of their legacy infrastructure to the cloud",
+      "Conduct maintenance on their legacy hardware",
+      "Increase CapEx on existing projects"
+    ],
+    "right": "Migrate some of their legacy infrastructure to the cloud",
+    "explanation": "La adopción híbrida acelera beneficios migrando componentes elegibles mientras se construyen apps cloud‑native."
+  },
+  {
+    "type": "dropdown",
+    "question": "An organization has created an application that can diagnose different medical conditions when users submit images of their affected body parts. Which Google Cloud product or service did the organization use?",
+    "options": [
+      "Cloud Logging",
+      "Cloud Profiler",
+      "App Engine",
+      "Machine learning"
+    ],
+    "right": "Machine learning",
+    "explanation": "Modelos de visión (CNN/AutoML) permiten clasificar/diagnosticar a partir de imágenes médicas."
+  },
+  {
+    "type": "dropdown",
+    "question": "An organization wants to better understand the behavior of their code in production and analyze its state to identify hard-to-find programming errors. Which Google Cloud tool should the organization use?",
+    "options": [
+      "Debugger",
+      "Profiler",
+      "Cloud Monitoring",
+      "Trace"
+    ],
+    "right": "Debugger",
+    "explanation": "Cloud Debugger captura snapshots del estado del código en producción sin interrumpir el servicio."
+  },
+  {
+    "type": "dropdown",
+    "question": "A retail organization has moved all of their inventory data to a relational database in the cloud. What functionality does a relational database offer?",
+    "options": [
+      "It stores large amounts of raw data in its original format",
+      "It stores transactional data, which can then be accessed electronically",
+      "It rapidly analyzes large and multi-dimensional datasets",
+      "It analyzes unstructured data, which can then be accessed in multiple regions"
+    ],
+    "right": "It stores transactional data, which can then be accessed electronically",
+    "explanation": "Las bases relacionales gestionan transacciones ACID y consultas estructuradas sobre datos normalizados."
+  },
+  {
+    "type": "dropdown",
+    "question": "How does Google Cloud AI Hub make machine learning easy and accessible for Google Cloud customers to get started?",
+    "options": [
+      "It deploys artificial intelligence models in real time",
+      "It automatically codes users' machine learning models",
+      "It automatically sources and prepares users' machine learning data",
+      "It includes a repository of plug-and-play artificial intelligence tools"
+    ],
+    "right": "It includes a repository of plug-and-play artificial intelligence tools",
+    "explanation": "AI Hub ofrece recursos preconstruidos y componentes reutilizables para acelerar adopción de ML."
+  },
+  {
+    "type": "dropdown",
+    "question": "A venue with an online booking system has partnered with a catering business. How can the venue leverage application programming interfaces (APIs) to create new business value?",
+    "options": [
+      "Use an API to redesign their booking system to appeal to targeted customers",
+      "Use an API to identify opportunities for new business collaboration",
+      "Use an API to migrate all their customer data to a machine learning model to predict food requests",
+      "Use an API to connect their booking system with the partner's catering form"
+    ],
+    "right": "Use an API to connect their booking system with the partner's catering form",
+    "explanation": "Las APIs integran sistemas de socios para automatizar procesos entre reservas y solicitaciones de catering."
+  },
+  {
+    "type": "dropdown",
+    "question": "A public cloud provider's service level performance has moved below the service level objective (SLO), but remains above the service level agreement (SLA). What is an outcome of this change in service level performance?",
+    "options": [
+      "The provider is encouraged to push out new updates",
+      "The provider is encouraged to prioritize service reliability",
+      "End users face unexpected or prolonged downtime",
+      "End users face a decrease in service latency"
+    ],
+    "right": "The provider is encouraged to prioritize service reliability",
+    "explanation": "Estar por debajo del SLO impulsa priorizar confiabilidad; mientras se cumpla el SLA, no hay compensación."
+  },
+  {
+    "type": "dropdown",
+    "question": "An organization is looking for a solution to help them build applications using their preferred programming language and tools, minimizing time spent on infrastructure management. What solution should the organization use?",
+    "options": [
+      "Cloud Run",
+      "Dataproc",
+      "Pub/Sub",
+      "Bare Metal Solution"
+    ],
+    "right": "Cloud Run",
+    "explanation": "Cloud Run ejecuta contenedores serverless desde cualquier lenguaje/toolchain, con escalado automático y bajo gestión."
+  },
+  {
+    "type": "dropdown",
+    "question": "An organization has created a medical fitness app and wants to store a very large amount of data about exercise times, activity, and calories burned for later analysis. Which data management solution should the organization use?",
+    "options": [
+      "Data lake",
+      "Data warehouse",
+      "Data field",
+      "Database"
+    ],
+    "right": "Data warehouse",
+    "explanation": "Un warehouse centraliza datos estructurados para análisis y generación de insights con SQL/BI."
+  },
+  {
+    "type": "dropdown",
+    "question": "An organization is looking for a business intelligence solution that allows individual employees and end users to analyze business data and generate insights. Which Google Cloud product or service should the organization use?",
+    "options": [
+      "Cloud Spanner",
+      "BigQuery",
+      "Looker",
+      "Dataflow"
+    ],
+    "right": "Looker",
+    "explanation": "Looker proporciona modelado semántico, dashboards y exploración de datos para usuarios de negocio."
+  },
+  {
+    "type": "dropdown",
+    "question": "What is out-of-the-box observability within the context of cloud operations?",
+    "options": [
+      "Monitoring project development timelines",
+      "Monitoring IT infrastructure and applications",
+      "Monitoring customer satisfaction and feedback",
+      "Monitoring cloud subscription costs"
+    ],
+    "right": "Monitoring IT infrastructure and applications",
+    "explanation": "Observabilidad incluida integra métricas, logs y trazas de servicios e infraestructura sin configuración extensa."
+  },
+  {
+    "type": "dropdown",
+    "question": "An organization wants a serverless execution environment for building and connecting cloud services. They can't predict how many resources they'll need. Which Google Cloud solution should they use?",
+    "options": [
+      "Compute Engine",
+      "Google Kubernetes Engine",
+      "Cloud Functions",
+      "Bare Metal Solution for SAP"
+    ],
+    "right": "Cloud Functions",
+    "explanation": "Funciones serverless se adaptan a carga impredecible, autoescalando y cobrando por ejecución."
+  },
+  {
+    "type": "dropdown",
+    "question": "An organization is struggling to ensure that their legacy systems meet rapidly changing IT needs. Why should the organization use application programming interfaces (APIs)?",
+    "options": [
+      "To expose all underlying data so third parties can make amends",
+      "To completely re-architect legacy applications",
+      "To achieve long-term operational flexibility",
+      "To operate on a pay-as-you go model so IT can scale flexibly"
+    ],
+    "right": "To achieve long-term operational flexibility",
+    "explanation": "Las APIs desacoplan y permiten evolucionar sistemas gradualmente, integrando nuevos servicios sin reescribir todo."
+  },
+  {
+    "type": "dropdown",
+    "question": "An organization wants a solution to build new applications, modernize old ones, and run applications across different cloud providers. What solution should the organization use?",
+    "options": [
+      "Apigee Hybrid",
+      "Anthos",
+      "Cloud Run",
+      "Compute Engine"
+    ],
+    "right": "Anthos",
+    "explanation": "Anthos habilita despliegue y operación multicloud/híbrida con gestión consistente y políticas centralizadas."
+  },
+  {
+    "type": "dropdown",
+    "question": "An organization cannot afford to modernize their infrastructure, but they want to process data from their legacy system in a modern platform hosted by a business partner. What solution should the organization choose to make their data accessible?",
+    "options": [
+      "Compute Engine",
+      "Anthos",
+      "An application programming interface",
+      "Google Kubernetes Engine"
+    ],
+    "right": "An application programming interface",
+    "explanation": "Una API expone datos de sistemas legados a plataformas externas de socios sin cambios profundos de infraestructura."
+  },
+  {
+    "type": "dropdown",
+    "question": "An international bank is looking for a serverless warehouse solution that lets them perform smart analytics. Which Google Cloud product or service should the bank use?",
+    "options": [
+      "Cloud Spanner",
+      "Compute Engine",
+      "BigQuery",
+      "Dataflow"
+    ],
+    "right": "BigQuery",
+    "explanation": "BigQuery es un data warehouse serverless para análisis masivo con SQL y capacidades ML integradas."
+  },
+  {
+    "type": "dropdown",
+    "question": "How does switching from on-premises to the cloud help organizations gain value over time?",
+    "options": [
+      "Expand internal application hosting infrastructure",
+      "Focus efforts on solution development",
+      "Increase development of data recovery systems",
+      "Relax on-premises data security protocols"
+    ],
+    "right": "Focus efforts on solution development",
+    "explanation": "La nube reduce tareas operativas y permite dedicar más recursos a construir soluciones y experiencias."
+  },
+  {
+    "type": "dropdown",
+    "question": "An organization wants to modernize legacy applications by moving them to the cloud. Why would this help satisfy user expectations?",
+    "options": [
+      "Customer data can be used to offer tailored content",
+      "Toil automation helps make automatic updates",
+      "Updates can be pushed out more quickly to repair bugs",
+      "DevOps requires that industry trends be measured and tracked"
+    ],
+    "right": "Updates can be pushed out more quickly to repair bugs",
+    "explanation": "CI/CD y entornos gestionados aceleran correcciones y despliegues, mejorando experiencia de usuario."
+  },
+  {
+    "type": "dropdown",
+    "question": "An organization is looking for a storage solution to serve content to users worldwide with high availability. What feature of Cloud Storage would they benefit from?",
+    "options": [
+      "Multi-regional storage",
+      "Global metadata",
+      "Data encryption",
+      "Object versioning"
+    ],
+    "right": "Multi-regional storage",
+    "explanation": "Multi‑regional replica datos en múltiples regiones para alta disponibilidad y baja latencia global."
+  },
+  {
+    "type": "dropdown",
+    "question": "What kind of architecture does a hybrid cloud offer organizations?",
+    "options": [
+      "A combination of different virtualized servers",
+      "A combination of serverless computing and public cloud services",
+      "A combination of private cloud infrastructure and public cloud services",
+      "A combination of multiple public cloud provider services"
+    ],
+    "right": "A combination of private cloud infrastructure and public cloud services",
+    "explanation": "Híbrido integra on‑prem/private cloud con servicios de nube pública para flexibilidad y control."
+  },
+  {
+    "type": "dropdown",
+    "question": "An international law firm needs their HR application to share and access varying amounts of sensitive data across branch offices. Why would using Cloud Storage be beneficial?",
+    "options": [
+      "It stores geographically dispersed copies of data to prevent loss",
+      "It offers an affordable upgrade that enables data encryption",
+      "It randomly allocates data to different storage locations to protect against threats",
+      "It has a low minimum storage amount requirement"
+    ],
+    "right": "It stores geographically dispersed copies of data to prevent loss",
+    "explanation": "Replicación geográfica y durabilidad 11 nueves protegen contra pérdida y fallos regionales."
+  },
+  {
+    "type": "dropdown",
+    "question": "A large retail organization with traditional technology experiences underutilized or overprovisioned resources during traffic peaks. What aspect of cloud technology will benefit their ecommerce business?",
+    "options": [
+      "Agile infrastructure means they only pay for what they need, when they need it",
+      "Operational expenditure means that total cost of ownership is more predictable",
+      "Unlimited storage means the website will never experience downtime",
+      "Shared responsibility means increased visibility during peaks"
+    ],
+    "right": "Agile infrastructure means they only pay for what they need, when they need it",
+    "explanation": "Escalado automático y pago por uso ajustan capacidad a la demanda evitando infra sobredimensionada."
+  },
+  {
+    "type": "dropdown",
+    "question": "An organization is looking for a hybrid-cloud management solution to build and run applications on-premises and in the cloud. What solution should they use?",
+    "options": [
+      "Anthos",
+      "Cloud Functions",
+      "App Engine",
+      "Compute Engine"
+    ],
+    "right": "Anthos",
+    "explanation": "Anthos gestiona aplicaciones entre on‑prem y nube con políticas, seguridad y operaciones unificadas."
   }
 ]
 

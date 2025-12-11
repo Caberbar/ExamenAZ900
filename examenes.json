@@ -8,7 +8,7 @@
   },
   {
     "name": "gcdl",
-    "title": "Google Cloud Digital Leader // EN PROCESO",
+    "title": "Google Cloud Digital Leaders",
     "desc": "Cuestionario de fundamentos de Google Cloud.",
     "pregunta": "Preguntas/preguntasGCDL.json",
     "apuntes": "https://cloud.google.com/certification/cloud-digital-leader"

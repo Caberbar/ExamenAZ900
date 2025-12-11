@@ -396,6 +396,8 @@ window.FALLBACK_QUESTIONS = [
   const els = {
     examTitle: document.getElementById('examTitle'),
     apuntesLink: document.getElementById('apuntesLink'),
+    menuBtn: document.getElementById('menuBtn'),
+    modeSwitch: document.getElementById('modeSwitch'),
     current: document.getElementById('current'),
     total: document.getElementById('total'),
     points: document.getElementById('points'),
@@ -915,10 +917,25 @@ window.FALLBACK_QUESTIONS = [
 
   async function init() {
     const title = params.get('title') || params.get('name') || 'Examen';
-    if (els.examTitle) els.examTitle.textContent = title + ' Quiz';
+    const mode = String(params.get('mode') || 'examen').toLowerCase();
+    if (els.examTitle) els.examTitle.textContent = `${title} • ${mode === 'practica' ? 'Práctica' : 'Examen'}`;
     const apuntes = resolveUrl(params.get('apuntes'));
     if (els.apuntesLink && apuntes) els.apuntesLink.href = apuntes;
-    state.questions = shuffle(await loadQuestions());
+    const all = shuffle(await loadQuestions());
+    let selected = all;
+    if (mode === 'examen') {
+      const examCount = Math.floor(Math.random() * (60 - 30 + 1)) + 30;
+      selected = all.slice(0, Math.min(examCount, all.length));
+    }
+    state.questions = selected;
+    if (els.menuBtn) els.menuBtn.href = new URL('../index.html', location.href).href;
+    if (els.modeSwitch) {
+      const url = new URL(location.href);
+      const nextMode = mode === 'practica' ? 'examen' : 'practica';
+      url.searchParams.set('mode', nextMode);
+      els.modeSwitch.href = url.href;
+      els.modeSwitch.textContent = nextMode === 'practica' ? 'Cambiar a Práctica' : 'Cambiar a Examen';
+    }
     updateStatus();
     renderQuestion();
   }

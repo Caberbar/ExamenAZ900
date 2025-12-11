@@ -1,0 +1,3308 @@
+
+151
+An organization wants to write and run small pieces of code in a serverless way that respond to events like huge discounts.
+Which Google Cloud compute solution should the organization use?
+
+
+A
+Google Kubernetes Engine
+
+B
+Cloud Functions
+
+C
+Bare Metal Solution
+
+D
+Compute Engine
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es B
+Incorrecto
+152
+An organization wants to search hundreds of scanned documents for key information like dates, names, and other specific words.
+Why should the organization use application programming interfaces (APIs)?
+
+
+A
+To replace the scanned documents with an online survey
+
+B
+To ingest data in real time and encrypt unmatched words
+
+C
+To create digital versions of the documents and locate key information
+
+D
+To transform the documents into unstructured data.
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es C
+Incorrecto
+153
+An organization needs a platform to create custom end-to-end artificial intelligence models.
+Which Google Cloud product or service should the organization use?
+
+
+A
+Dataproc
+
+B
+Compute Engine
+
+C
+Recommendations AI
+
+D
+Vertex AI
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es D
+Incorrecto
+154
+An organization is training a machine learning model to make predictions.
+What could improve the prediction accuracy of their model?
+
+
+A
+An increase in storage capacity
+
+B
+Higher network bandwidth
+
+C
+An increase in training data
+
+D
+Faster CPU processors
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es C
+Incorrecto
+155
+What is an example of structured data that a healthcare facility stores in their system?
+
+
+A
+X-ray images
+
+B
+Surgery video recordings
+
+C
+Blood pressure history
+
+D
+Physician-written notes
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es C
+
+
+156
+An organization wants to move from a tactical cloud adoption approach to a transformational approach.
+How should they change their cloud security?
+
+
+A
+Provide staff identities using only Google Cloud authentication.
+
+B
+Provide multiple layers of network security using a zero-trust model.
+
+C
+Emphasize strong perimeter security and trust in their private network.
+
+D
+Emphasize three main Identity Access Management roles: owner, editor, and viewer.
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es B
+Incorrecto
+157
+What can customers expect if their cloud provider doesn't meet their service level agreement (SLA)?
+
+
+A
+Increase in subscription fees
+
+B
+Cloud service shutdown
+
+C
+Refund for service interruption
+
+D
+Error budget expansion
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es C
+Incorrecto
+158
+An organization wants to ensure that their developers can easily use application programming interfaces (APIs) in future projects.
+
+Which Google product or solution should they use?
+
+
+A
+Application migration
+
+B
+Apigee
+
+C
+The App Engine flexible environment
+
+D
+AppSheet
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es B
+Incorrecto
+159
+An organization needs frequent access to only a subset of their data. They want to reduce costs by depositing the rest of their data across Nearline, Coldline, and Archive repositories.
+
+Which Google Cloud product should the organization use?
+
+
+A
+Filestore
+
+B
+Cloud Storage
+
+C
+Data Catalog
+
+D
+Cloud Spanner
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es B
+Incorrecto
+160
+A customer service department wants to increase their operational efficiency while maintaining personalized dialog with their customers.
+
+What Google Cloud product or service should the organization use?
+
+
+A
+Recommendations Al
+
+B
+Cloud Identity
+
+C
+Contact Center Al
+
+D
+Text-to-Speech
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es C
+
+161
+An organization is struggling to keep up with the growth of their application which is running on legacy infrastructure.
+
+What might be holding them back?
+
+
+A
+The time it takes their serverless compute function to scale
+
+B
+The overreliance on platform as a service
+
+C
+The inaccessibility of their data due to perimeter security
+
+D
+The cost of provisioning hardware for peak usage
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es D
+Incorrecto
+162
+An organization wants to build autoscaling web applications without having to manage application infrastructure
+
+Which Google Cloud product should they use?
+
+
+A
+Anthos
+
+B
+Apigee
+
+C
+AutoML
+
+D
+App Engine
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es D
+Incorrecto
+163
+What is an organization exclusively responsible for when they access an application through a software as a service (SaaS) model?
+
+
+A
+Maintaining overall system operability
+
+B
+Maintaining customer-facing content
+
+C
+Monitoring data center servers
+
+D
+Monitoring computer networks
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es B
+Incorrecto
+164
+An organization needs to train a custom machine learning model to categorize customer responses from their website's contact form.
+
+Which Google Cloud product or service should the organization use?
+
+
+A
+Anthos
+
+B
+Recommendations AI
+
+C
+AutoML Natural Language
+
+D
+Pub/Sub
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es C
+Incorrecto
+165
+Which cybersecurity threat can lead to information being stolen or damaged without a user ever being aware?
+
+
+A
+SLA policy violation
+
+B
+Malware attack
+
+C
+Ransomware attack
+
+D
+Incomplete data input
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es B
+
+166
+An organization has decided to create a mobile app for their customer-facing service.
+
+What may have prompted this business decision?
+
+
+A
+Customers expect information to be easily accessible on any device.
+
+B
+Customers expect mobile-only access to information in the cloud era
+
+C
+Developers can apply increased data security on a mobile app.
+
+D
+Developers can run different versions of the service to test features only through a mobile app.
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es A
+Incorrecto
+167
+An organization suffers a major data leak only six months after upgrading its security system.
+
+What should the organization do to ensure long-term security?
+
+
+A
+Extend data retention policy lengths to at least seven years.
+
+B
+Pay more to get the best security system available on the market.
+
+C
+Hire cybersecurity experts to further develop their data security plan
+
+D
+Wait for a more advanced security system to be released
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es C
+Incorrecto
+168
+An organization has started to develop cloud-native applications to replace their legacy applications.
+
+What else should the organization do to adopt the cloud?
+
+
+A
+Provide privileged cloud network access to third-party partners.
+
+B
+Migrate some of their legacy infrastructure to the cloud.
+
+C
+Conduct maintenance on their legacy hardware.
+
+D
+Increase CapEx on existing projects.
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es B
+Incorrecto
+169
+An organization has created an application that can diagnose different medical conditions when users submit images of their affected body parts.
+
+Which Google Cloud product or service did the organization use?
+
+
+A
+Cloud Logging
+
+B
+Cloud Profiler
+
+C
+App Engine
+
+D
+Machine learning
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es D
+Incorrecto
+170
+An organization wants to better understand the behavior of their code in production and analyze its state to identify hard-to-find programming errors.
+
+Which Google Cloud tool should the organization use?
+
+
+A
+Debugger
+
+B
+Profiler
+
+C
+Cloud Monitoring
+
+D
+Trace
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es A
+
+171
+A retail organization has moved all of their inventory data to a relational database in the cloud.
+
+What functionality does a relational database offer?
+
+
+A
+It stores large amounts of raw data in its original format
+
+B
+It stores transactional data, which can then be accessed electronically
+
+C
+It rapidly analyzes large and multi-dimensional datasets
+
+D
+It analyzes unstructured data, which can then be accessed in multiple regions
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es B
+Incorrecto
+172
+How does Google Cloud AI Hub make machine learning easy and accessible for Google Cloud customers to get started?
+
+
+A
+It deploys artificial intelligence models in real time
+
+B
+It automatically codes users’ machine learn ng models
+
+C
+It automatically sources and prepares users’ machine learning data
+
+D
+It includes a repository of plug-and-play artificial intelligence tools
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es D
+Incorrecto
+173
+A venue with an online booking system has partnered with a catering business.
+
+How can the venue leverage application programming interfaces (APIs) to create new business value?
+
+
+A
+Use an API to redesign their booking system to appeal to targeted customers
+
+B
+Use an API to identify opportunities for new business collaboration
+
+C
+Use an API to migrate all their customer data to a machine learning model to predict food requests
+
+D
+Use an API to connect their booking system with the partner's catering form
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es D
+Incorrecto
+174
+A public cloud provider's service level performance has moved below the service level objective (SLO), but remains above the service level agreement (SLA).
+
+What is an outcome of this change in service level performance?
+
+
+A
+The public cloud provider is encouraged to push out new updates
+
+B
+The public cloud provider is encouraged to prioritize service reliability
+
+C
+End users face unexpected or prolonged downtime
+
+D
+End users face a decrease in service latency
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es B
+
+175
+An organization is looking for a solution to help them build applications using their preferred programming language and tools. They also want to minimize time spent on infrastructure management.
+
+What solution should the organization use?
+
+
+A
+Cloud Run
+
+B
+Dataproc
+
+C
+Pub/Sub
+
+D
+Bare Metal Solution
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es A
+
+176
+An organization has created a medical fitness app and wants to store a very large amount of data about exercise times, activity, and calories burned for later analysis.
+
+Which data management solution should the organization use?
+
+
+A
+Data lake
+
+B
+Data warehouse
+
+C
+Data field
+
+D
+Database
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es B
+Incorrecto
+177
+An organization is looking for a business intelligence solution that allows individual employees and end users to analyze business data and generate insights.
+
+Which Google Cloud product or service should the organization use?
+
+
+A
+Cloud Spanner
+
+B
+BigQuery
+
+C
+Looker
+
+D
+Dataflow
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es C
+Incorrecto
+178
+What is out-of-the-box observability within the context of cloud operations?
+
+
+A
+Monitoring project development timelines
+
+B
+Monitoring IT infrastructure and applications
+
+C
+Monitoring customer satisfaction and feedback
+
+D
+Monitoring cloud subscription costs
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es B
+Incorrecto
+179
+An organization wants a serverless execution environment for building and connecting cloud services. They can't predict how many resources they'll need.
+
+Which Google Cloud solution should they use?
+
+
+A
+Compute Engine
+
+B
+Google Kubernetes Engine
+
+C
+Cloud Functions
+
+D
+Bare Metal Solution for SAP
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es C
+Incorrecto
+180
+An organization is struggling to ensure that their legacy systems meet rapidly changing IT needs.
+
+Why should the organization use application programming interfaces (APIs)?
+
+
+A
+To expose all underlying data so third parties can make amends
+
+B
+To completely re-architect legacy applications
+
+C
+To achieve long-term operational flexibility
+
+D
+To operate on a pay-as-you go model so IT can scale flexibly
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es C
+
+181
+An organization is looking for a solution that will allow them to build new applications, modernize old ones, and run applications across different cloud providers.
+
+What solution should the organization use?
+
+
+A
+Apigee Hybrid
+
+B
+Anthos
+
+C
+Cloud Run
+
+D
+Compute Engine
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es B
+Incorrecto
+182
+An organization cannot afford to modernize their infrastructure, but they want to process data from their legacy system in a modem platform hosted by a business partner.
+
+What solution should the organization choose to make their data accessible?
+
+
+A
+Compute Engine
+
+B
+Anthos
+
+C
+An application programming interface
+
+D
+Google Kubernetes Engine
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es C
+Incorrecto
+183
+An international bank is looking for a serverless warehouse solution that lets them perform smart analytics.
+
+Which Google Cloud product or service should the bank use?
+
+
+A
+Cloud Spanner
+
+B
+Compute Engine
+
+C
+BigQuery
+
+D
+Dataflow
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es C
+Incorrecto
+184
+How does switching from on-premises to the cloud help organizations gain value over time?
+
+
+A
+They can expand their internal application hosting infrastructure
+
+B
+They can focus their efforts on solution development
+
+C
+They can increase development of data recovery systems
+
+D
+They can relax their on-premises data security protocols
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es B
+Incorrecto
+185
+An organization is struggling to meet user demand for change and wants to modernize their legacy applications by moving the applications to the cloud.
+
+Why would this help the organization satisfy user expectations?
+
+
+A
+Customer data can be used to offer tailored content
+
+B
+Toil automation helps make automatic updates
+
+C
+Updates can be pushed out more quickly to repair bugs
+
+D
+DevOps requires that industry trends be measured and tracked
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es C
+
+186
+An organization is looking for a storage solution that will help them serve content to users worldwide. They need a solution that offers a high level of availability.
+
+What feature of Cloud Storage would they benefit from?
+
+
+A
+Multi-regional storage
+
+B
+Global metadata
+
+C
+Data encryption
+
+D
+Object versioning
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es A
+Incorrecto
+187
+What kind of architecture does a hybrid cloud offer organizations?
+
+
+A
+A combination of different virtualized servers
+
+B
+A combination of serverless computing and public cloud services
+
+C
+A combination of private cloud infrastructure and public cloud services
+
+D
+A combination of multiple public cloud provider services
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es C
+Incorrecto
+188
+An international law firm needs their HR application to be able to share and access varying amounts of sensitive data across their branch offices.
+
+Why would using Cloud Storage be beneficial for them?
+
+
+A
+It stores geographically dispersed copies of data to prevent loss.
+
+B
+It offers an affordable upgrade that enables data encryption.
+
+C
+It randomly allocates data to different storage locations to protect against threats.
+
+D
+It has a low minimum storage amount requirement.
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es A
+Incorrecto
+189
+A large retail organization uses traditional technology for their ecommerce website. During peaks in traffic, resources are often underutilized or overprovisioned. They have decided to migrate to cloud technology.
+
+What aspect of cloud technology will benefit their ecommerce business?
+
+
+A
+Agile infrastructure means that they only pay for what they need, when they need it.
+
+B
+Operational expenditure means that their total cost of ownership is more predictable.
+
+C
+Unlimited storage means that their website will never experience downtime.
+
+D
+Shared responsibility means that the cloud provider brings increased visibility during peaks in traffic.
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es A
+Incorrecto
+190
+An organization is looking for a hybrid-cloud management solution that will help them build and run applications on-premises and in the cloud.
+
+What solution should the organization use?
+
+
+A
+Anthos
+
+B
+Cloud Functions
+
+C
+App Engine
+
+D
+Compute Engine
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es A
+
+190
+An organization is looking for a hybrid-cloud management solution that will help them build and run applications on-premises and in the cloud.
+
+What solution should the organization use?
+
+
+A
+Anthos
+
+B
+Cloud Functions
+
+C
+App Engine
+
+D
+Compute Engine
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto
+Incorrecto
+191
+An organization with a commissions-based business model is struggling to predict cloud costs due to fluctuating revenue.
+
+How can the organization optimize the use of their cloud resources?
+
+
+A
+By applying intelligent recommendations
+
+B
+By decentralizing financial decision making
+
+C
+By sharing project ownership across all teams
+
+D
+By increasing their capital expenditure
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es A
+Incorrecto
+192
+What DevOps practice should an organization use when developing their application to help minimize disruption caused by bugs?
+
+
+A
+Pause production until all bugs have been eliminated
+
+B
+Prioritize fixing large bugs during production because they are easier to review
+
+C
+Implement small changes incrementally to reduce recovery time when bugs appear
+
+D
+Implement large changes together to make rolling back easier when bugs appear
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es C
+Incorrecto
+193
+An organization has been struggling to make operations more efficient.
+
+What site reliability engineering (SRE) best practice should the organization follow to increase efficiency?
+
+
+A
+Decrease over-reliance on data to make decisions.
+
+B
+Assign exclusive production ownership to developers.
+
+C
+Spend less time measuring outage impact.
+
+D
+Focus on increasing toil automation.
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es D
+Incorrecto
+194
+An organization wants to ingest custom log data from GKE environments, virtual machines, and Google Cloud services.
+
+Which Google Cloud tool should the organization use?
+
+
+A
+Dialogflow
+
+B
+Cloud Logging
+
+C
+Cloud SDK
+
+D
+Data Catalog
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es B
+Incorrecto
+195
+What makes Google Kubernetes Engine (GKE) an effective solution for developers working to resolve application errors?
+
+
+A
+It reduces the time needed to iterate on various solutions.
+
+B
+It provides intelligent recommendations to optimize application development.
+
+C
+It removes the need for containerizing applications.
+
+D
+It stores application code on multiple servers to facilitate collaboration across silos.
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es A
+Incorrecto
+196
+What is an organization responsible for when migrating from on-premises to the cloud?
+
+
+A
+Covering the cost of cloud service downtime
+
+B
+Managing underlying network infrastructure
+
+C
+Adapting to a pay-as-you-go cloud expenditure model
+
+D
+Optimizing cloud storage systems
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es C
+Incorrecto
+197
+An organization wants to duplicate critical system components to enhance reliability and mitigate single points of failure. Which design consideration should the organization use?
+
+
+A
+Redundancy
+
+B
+Backups
+
+C
+Latency
+
+D
+Security
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es A
+Incorrecto
+198
+An organization stores backup files in Cloud Storage. The files will be accessed annually to test the disaster recovery plans. Which storage class is the most cost-effective?
+
+
+A
+Coldline class
+
+B
+Standard class
+
+C
+Nearline class
+
+D
+Archive class
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es D
+Incorrecto
+199
+An organization is running SQL Server on-premises and is struggling with capacity and management overhead. They want to modernize this database quickly by using Google products or services. What should the organization do?
+
+
+A
+Refactor applications to use a cloud first database like Firestore.
+
+B
+Perform a managed database migration to Cloud SQL.
+
+C
+Export old tables from SQL Server to Cloud Storage.
+
+D
+Migrate all SQL Server data to BigQuery.
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es B
+Incorrecto
+200
+What is a benefit of the OpEx model for cloud security?
+
+
+A
+Organizations do not need to make upfront capital investments in cloud security.
+
+B
+Organizations can deploy custom security hardware.
+
+C
+Organizations do not need to configure any security settings for cloud resources.
+
+D
+The cloud provider guarantees security.
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es A
+
+201
+What is the benefit of using a serverless data processing pipeline service?
+
+
+A
+Full control over compute resources is provided.
+
+B
+Processed data will not require analysis.
+
+C
+Pipeline infrastructure is fully managed and scalable.
+
+D
+Processed data is guaranteed to be free of errors.
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es C
+Incorrecto
+202
+What does the shift toward cloud computing represent for an organization's transformation?
+
+
+A
+An opportunity that is limited to large enterprises
+
+B
+An opportunity to redefine existing business processes and services
+
+C
+An opportunity that is only relevant to the IT department
+
+D
+An opportunity to continue business as usual with new cost savings
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es B
+Incorrecto
+203
+An organization is concerned about the unlikely event that Google Cloud infrastructure is physically accessed by someone with malicious intent. How is data protected in Google Cloud?
+
+
+A
+Data is immediately deleted whenever an intrusion is detected.
+
+B
+Data is stored on quantum computers with unbreakable encryption.
+
+C
+Data is stored using robust encryption.
+
+D
+Data is stored in random locations around the world to prevent it being found.
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es C
+Incorrecto
+204
+An organization needs a flexible and scalable NoSQL database with strong web and mobile application support. Which Google Cloud product or service should the organization use?
+
+
+A
+Cloud Spanner
+
+B
+Cloud Storage
+
+C
+BigQuery
+
+D
+Firestore
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es D
+Incorrecto
+205
+An organization is using three cloud vendors to maximize their available deployment locations worldwide. They are using GKE Enterprise to deploy Kubernetes applications across different clouds. What type is this deployment?
+
+
+A
+On-premises
+
+B
+Multi-cloud
+
+C
+Hybrid-cloud
+
+D
+Private cloud
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es B
+Incorrecto
+206
+An organization wants to transfer some of its data from Google Cloud. Which of these statements is true?
+
+
+A
+Customer data may not be transferred out of Google Cloud.
+
+B
+Customers have full control of their data and may transfer it at any time.
+
+C
+Outgoing data transfer must be enabled in the Google Cloud console.
+
+D
+A technical support ticket must be raised with the correct department.
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es B
+Incorrecto
+207
+A vacation home rental organization wants to predict the popularity of properties in their upcoming busy season. They do not have a data science team, and want to use their in-house database administration skills to create a machine learning model. What should the organization do?
+
+
+A
+Use custom training in Vertex AI with TensorFlow.
+
+B
+Integrate pre-trained APIs into their application.
+
+C
+Use BigQuery ML and create models using SQL.
+
+D
+Build a model in AutoML using labeled data.
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es C
+Incorrecto
+208
+An organization needs to rapidly scale its use of computing resources and honor its commitment to environmental sustainability.
+
+What should the organization do?
+
+
+A
+Refactor application software to use less energy.
+
+B
+Use a public cloud provider with energy-efficient data centers.
+
+C
+Use a carbon-neutral energy provider for an existing on-premises data center.
+
+D
+Purchase energy-efficient servers for an existing on-premises data center.
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es B
+Incorrecto
+209
+What is a defining feature of a non-relational database?
+
+
+A
+Reporting across multiple data sources
+
+B
+A strictly enforced schema
+
+C
+A flexible data model
+
+D
+Queries that join multiple tables
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es C
+Incorrecto
+210
+What is an example of unstructured data?
+
+
+A
+Historical stock inventory
+
+B
+Product ratings
+
+C
+Customer orders
+
+D
+Call center transcripts
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es D
+Incorrecto
+211
+An organization has migrated all workloads to the cloud and is reviewing their cloud security posture. Who is now responsible for securing the physical infrastructure of the data centers?
+
+
+A
+The organization and the cloud service provider
+
+B
+Third-party security service providers
+
+C
+The cloud service provider
+
+D
+The organization
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es C
+Incorrecto
+212
+An organization wants to lease the resources they need for their customized servers from a cloud provider on a pay-as-you-go basis, instead of paying one time for hardware.
+
+Which service model should they use?
+
+
+A
+Hybrid cloud
+
+B
+Software as a service
+
+C
+Infrastructure as a service
+
+D
+Platform as a service
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es C
+Incorrecto
+213
+An organization has petabytes of data gathered from a wide range of sources. They want to use the data for strategic analysis and to guide business decisions. What type of service should they use?
+
+
+A
+Multi cloud environment
+
+B
+Virtual machine environment
+
+C
+Hybrid cloud environment
+
+D
+Container environment
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es A
+Incorrecto
+214
+An organization wants a purpose-built AI solution to increase efficiency and provide personalized interactions for their customer care team. Which Google Cloud AI solution should they use?
+
+
+A
+Text-to-Speech API
+
+B
+Cloud Talent Solution
+
+C
+Document AI
+
+D
+Contact Center AI
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es D
+Incorrecto
+215
+An organization wants to use an open source library with a flexible ecosystem of tools to create and train its own machine learning models. Which product or solution should the organization use?
+
+
+A
+Cloud Functions
+
+B
+Apache Beam
+
+C
+Dataflow
+
+D
+TensorFlow
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es D
+Incorrecto
+216
+An organization wants to leverage cloud technologies but is concerned about vendor lock-in.
+
+What would mitigate this concern?
+
+
+A
+Open standards
+
+B
+Database services
+
+C
+Service level agreements
+
+D
+Scalable infrastructure
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es A
+Incorrecto
+217
+An organization must identify and fix security vulnerabilities in its cloud infrastructure and applications. Which Google Cloud service should they use?
+
+
+A
+Security Command Center
+
+B
+Google Cloud Armor
+
+C
+Cloud Storage
+
+D
+VPC networks
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es A
+Incorrecto
+218
+A cinema company wants to build a model to predict customer visit patterns for the coming year. They have three years of customer visit data across 300 theaters; however, the data has been stored in different formats by different theaters. They must train the ML model. What should they do?
+
+
+A
+Use the last year of data so there are fewer inconsistencies for the model to handle.
+
+B
+Transform the data into a consistent format.
+
+C
+Group different format types and train a different model for each group.
+
+D
+Choose an ML model type that can process different formats of input data.
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es B
+Incorrecto
+219
+Within Google’s Site Reliability Engineering framework, which concept measures how well a system is performing?
+
+
+A
+Service-level agreement
+
+B
+Service-level indicator
+
+C
+Error reporting
+
+D
+Service-level objective
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es B
+Incorrecto
+220
+What is the typical cloud spending behavior of most organizations?
+
+
+A
+Decentralized and variable
+
+B
+Centralized and variable
+
+C
+Decentralized and fixed
+
+D
+Centralized and fixed
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es A
+Incorrecto
+221
+An organization is developing a new container-based application. They do not know how popular the application will be when launched and they do not want to pay for idle infrastructure resources. Which benefit of serverless computing will address this concern?
+
+
+A
+Disaster recovery
+
+B
+Reduced development costs
+
+C
+Scalability
+
+D
+Built-in security
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es C
+Incorrecto
+222
+How does the resource hierarchy in Google Cloud help organizations implement security policies?
+
+
+A
+Policies can be applied at the folder level and are inherited by projects inside the folder.
+
+B
+Projects in the resource hierarchy are not affected by security policies.
+
+C
+Policies can only be applied at the organization level and affect all projects.
+
+D
+Policies can only be applied to individual projects.
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es A
+Incorrecto
+223
+An organization is considering the use of managed services when migrating to the cloud. Which routine tasks are typically provided automatically by a managed services platform?
+
+
+A
+Managing user access
+
+B
+Patching and upgrades
+
+C
+Data archiving
+
+D
+Cost optimization
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es B
+Incorrecto
+224
+An organization has recently completed a migration from on-premises to Google Cloud.
+
+How has cost management been affected?
+
+
+A
+Costs will primarily shift from CapEx to OpEx.
+
+B
+Costs will primarily shift from OpEx to CapEx.
+
+C
+Cost management will stay the same, but the total cost of ownership (TCO) will be lower.
+
+D
+Cost management will stay the same, but the total cost of ownership (TCO) will be higher.
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es A
+Incorrecto
+225
+An organization wants to access a software application from a cloud vendor without the need to manage their own servers or write their own code.
+
+Which service model does this represent?
+
+
+A
+Infrastructure as a service
+
+B
+Platform as a service
+
+C
+Software as a service
+
+D
+Functions as a service
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es C
+Incorrecto
+226
+An organization wants to build a data pipeline to transform its data so it can be reconciled in a data warehouse. The solution must be scalable and require little or no management. Which Google product or service should the organization choose?
+
+
+A
+Cloud Bigtable
+
+B
+Cloud Storage
+
+C
+Pub/Sub
+
+D
+Dataflow
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es D
+Incorrecto
+227
+When is data automatically encrypted in Google Cloud?
+
+
+A
+When it is in transit only,
+
+B
+When it is at rest and in transit.
+
+C
+Data is not automatically encrypted by default.
+
+D
+When it is at rest only.
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es B
+Incorrecto
+228
+An organization must verify the identity of a user seeking access to a system. Which aspect of cloud identity management does this action describe?
+
+
+A
+Authorization
+
+B
+Authentication
+
+C
+Auditing
+
+D
+Encrypting
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es B
+Incorrecto
+229
+An organization is running Kubernetes applications across multiple cloud environments. They want a consistent and centralized management platform. Which service should they choose?
+
+
+A
+Cloud Functions
+
+B
+GKE Enterprise
+
+C
+Cloud Run
+
+D
+Compute Engine
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es B
+Incorrecto
+230
+An organization wants to collect and store all logs generated by applications running in Google Cloud. Which service should they use?
+
+
+A
+Cloud Profiler
+
+B
+Cloud Monitoring
+
+C
+Cloud Trace
+
+D
+Cloud Logging
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es D
+Incorrecto
+231
+What is the benefit of using a unified cloud data solution?
+
+
+A
+Data will always cost less to store.
+
+B
+Data can be automatically secured from external threats.
+
+C
+Data will always be backed up and cannot be lost or deleted.
+
+D
+Data can enable innovation because it's no longer siloed.
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es D
+Incorrecto
+232
+An organization stores its important industry data in a relational database. They want to create a new revenue stream by enabling third parties to use that data in their applications. Which cloud first approach should the organization choose?
+
+
+A
+Add third-party users to their database.
+
+B
+Offer chargeable downloads of archived data.
+
+C
+Expose data through a chargeable API.
+
+D
+Transfer data into a non-relational database.
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es C
+Incorrecto
+233
+Which scenario is a good use case for machine learning?
+
+
+A
+Classifying data with no prior examples
+
+B
+Tasks that require human experience and intuition
+
+C
+Creating customer recommendations
+
+D
+Solving ethical dilemmas
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es C
+Incorrecto
+234
+An organization needs to increase the speed at which they can train machine learning models. Which domain-specific hardware is designed for this task?
+
+
+A
+Bare Metal Solution
+
+B
+Preemptible or Spot VMs
+
+C
+Cloud TPUs
+
+D
+Containers
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es C
+Incorrecto
+235
+An organization has migrated several large databases to the cloud. It wants to increase the value of its data, improve cost controls and strengthen regulatory compliance. What should the organization do?
+
+
+A
+Delete data stored for over a year.
+
+B
+Export relational data to modern NoSQL databases.
+
+C
+Create monthly reports on data access and uses.
+
+D
+Establish an effective data governance program.
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es D
+Incorrecto
+236
+An organization has hired a team of data scientists and developers. They want to create unique value in their business by coding an advanced machine learning model in Vertex AI Workbench. Which service should the organization use to train the model?
+
+
+A
+Custom training
+
+B
+AutoML
+
+C
+Compute Engine
+
+D
+Prebuilt APIs
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es A
+Incorrecto
+237
+An organization is concerned that one of their applications takes too long to return a result. According to Google’s “Four Golden Signals,” which signal measures this aspect of the application’s performance?
+
+
+A
+Saturation
+
+B
+Errors
+
+C
+Latency
+
+D
+Traffic
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es C
+Incorrecto
+238
+An organization is transforming their raw data into a format that can be used to derive business insights. Which step of the data value chain does this action represent?
+
+
+A
+Data analysis
+
+B
+Data collection
+
+C
+Data storage
+
+D
+Data processing
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es D
+Incorrecto
+239
+An organization has a small development team that has created a web application which runs in a single container. They need a simple, serverless, and scalable way to host their container. Which Google service should the organization use?
+
+
+A
+Compute Engine
+
+B
+App Engine
+
+C
+Kubernetes Engine
+
+D
+Cloud Run
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es D
+Incorrecto
+240
+An organization wants a centralized view of their cloud infrastructure in a fully managed system that includes uptime checks. Which Google Cloud service should they use?
+
+
+A
+Cloud Trace
+
+B
+Cloud Monitoring
+
+C
+Cloud Logging
+
+D
+Cloud Profiler
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es B
+Incorrecto
+241
+An organization wants to migrate a workload to the cloud without changing the application code or architecture. Which migration path describes this approach?
+
+
+A
+Rehosted
+
+B
+Reimagined
+
+C
+Replatformed
+
+D
+Refactored
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es A
+Incorrecto
+242
+Which scenario uses machine learning to unlock business value from unstructured data?
+
+
+A
+Analyzing tabular records of product defects to predict future maintenance cycles.
+
+B
+Recommending new products based on previous purchases.
+
+C
+Monitoring financial transactions to identify potential fraud and risk.
+
+D
+Determining customer sentiments from call center voice recordings.
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es D
+Incorrecto
+243
+An organization wants to build custom machine learning models. They require a managed platform that provides services to gather data, build models, and then deploy and monitor those models. Which service should they use?
+
+
+A
+Document AI
+
+B
+Natural Language API
+
+C
+Kubernetes Engine
+
+D
+Vertex AI
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es D
+Incorrecto
+244
+In Google’s cloud security model, how does availability contribute to a robust security posture for data?
+
+
+A
+By restricting data access to authorized users
+
+B
+By ensuring data meets industry standards
+
+C
+By checking that data is accurate and trustworthy
+
+D
+By ensuring data is reliable and accessible
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es D
+Incorrecto
+245
+How does the legal concept of data sovereignty affect data?
+
+
+A
+Data is subject to the laws and regulations of the country where it resides.
+
+B
+A country has the right to access the data generated within its borders.
+
+C
+An individual has the right to control their personal data.
+
+D
+Data must always be encrypted in transit and at rest.
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es A
+Incorrecto
+246
+An organization is concerned about their cloud costs. They want to be informed when their spending exceeds a specific threshold, rather than waiting to see their bill at the end of the month. What should the organization do?
+
+
+A
+Pause virtual machines during non-business hours.
+
+B
+Configure a budget threshold rule and alert.
+
+C
+Adjust project resource quota policies.
+
+D
+Use historical cost data to predict future overspend.
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es B
+Incorrecto
+247
+An organization is running critical workloads in production and requires a Google Cloud support service with fast response times and a dedicated Technical Account Manager. Which customer care service level should the organization choose?
+
+
+A
+Enhanced
+
+B
+Basic
+
+C
+Premium
+
+D
+Standard
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es C
+Incorrecto
+248
+A real estate organization processes photos of properties uploaded by their agents to an internal application. They must manually check and remove photos that contain personally identifiable information like passports and credit cards. They want a solution that their developer can use to integrate with their app as quickly as possible. Which solution should they use?
+
+
+A
+Pre-trained APIs
+
+B
+AutoML
+
+C
+Custom training
+
+D
+BigQuery ML
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es A
+Incorrecto
+249
+What is generative AI?
+
+
+A
+A machine learning model for language translation
+
+B
+A specific field of AI that can be used to create content
+
+C
+An umbrella term that includes all types of machine learning algorithms
+
+D
+An AI model for labeling images
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es B
+Incorrecto
+250
+What is a defining function of streaming analytics?
+
+
+A
+Processing data records continuously
+
+B
+Processing data records in batches
+
+C
+Processing a one-off data backfill
+
+D
+Accessing data with high latency
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es A
+
+251
+An organization is deciding on the layout of their resource hierarchy in Google Cloud. They have several projects within a folder. What will happen when user access policies are applied to the folder?
+
+
+A
+The policy will be inherited by the projects in the folder but will not affect their resources.
+
+B
+The policy will be inherited by the projects and their resources within the folder.
+
+C
+The policy will be applied to all folders within the organization.
+
+D
+The policy applies to the folder only, and will not be inherited by any projects.
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es B
+Incorrecto
+252
+An organization has an ecommerce application that requires a cost-effective, transactional database. The application will only serve customers in a single region. Which service should they use?
+
+
+A
+BigQuery
+
+B
+Cloud Bigtable
+
+C
+Cloud Spanner
+
+D
+Cloud SQL
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es D
+Incorrecto
+253
+An organization wants to control what types of network traffic are allowed to enter and leave its network and access its applications. Which security measure should the organization use?
+
+
+A
+2-Step Verification
+
+B
+Privileged access
+
+C
+Encryption keys
+
+D
+Firewall rules
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es D
+Incorrecto
+254
+An organization has a large archive of unstructured data, including video and audio files. Which storage solution should the organization use?
+
+
+A
+Cloud Spanner
+
+B
+Cloud Storage
+
+C
+Cloud Bigtable
+
+D
+Cloud SQL
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es B
+Incorrecto
+255
+A retail organization is training a model to recommend products to customers for an ecommerce website. The model was trained on previous purchases, but did not include demographic information on each buyer. What dimension of the data is responsible for the model's poor performance?
+
+
+A
+Validity
+
+B
+Accuracy
+
+C
+Timeliness
+
+D
+Completeness
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es D
+Incorrecto
+256
+An organization has collected petabytes of historical data. They need an advanced analysis solution that is fast, scalable, and fully managed. Which Google product or service should the organization use?
+
+
+A
+BigQuery
+
+B
+Cloud SQL
+
+C
+Firestore
+
+D
+Cloud Storage
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es A
+Incorrecto
+257
+What is a benefit of Google’s purpose-built servers compared to standard servers?
+
+
+A
+They are optimized for specific tasks making them more efficient.
+
+B
+They are backward compatible with legacy disk drives.
+
+C
+They are cheaper to build than standard servers.
+
+D
+They run software that cannot be deployed on standard servers.
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es A
+Incorrecto
+258
+What is the Site Reliability Engineering (SRE) term for an organization s desired level of reliability and performance?
+
+
+A
+Service-level objective
+
+B
+Enhanced support
+
+C
+Scalable infrastructure
+
+D
+Service-level indicator
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es A
+Incorrecto
+259
+An organization is operating multiple workloads in containers and requires full control of how the workloads are configured. Which Google Cloud service should the organization use?
+
+
+A
+Cloud Run
+
+B
+Compute Engine
+
+C
+Kubernetes Engine
+
+D
+Cloud Functions
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es C
+Incorrecto
+260
+When customer data is uploaded to Google Cloud, who owns the data?
+
+
+A
+A third party
+
+B
+The customer and Google share ownership
+
+C
+Google
+
+D
+The customer
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es D
+Incorrecto
+261
+An organization is deploying their servers to the cloud using the infrastructure as a service model.
+
+In the shared responsibility model, what is the cloud provider responsible for?
+
+
+A
+Data access policies
+
+B
+Security of the operating system
+
+C
+Security of the software
+
+D
+Physical security
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es D
+Incorrecto
+262
+An organization runs a batch data analysis workload on a virtual machine (VM). The workload can be easily restarted without losing work, and is not time critical. Organizations must choose the lowest cost option to run the workload. What option should they choose?
+
+
+A
+A Preemptible or Spot VM on Compute Engine
+
+B
+A custom VM in a pay-as-you-go model on Compute Engine
+
+C
+A standard VM in a pay-as-you-go model on Compute Engine
+
+D
+A Cloud Function with a small memory limit
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es A
+Incorrecto
+263
+Customers are reporting very high latencies when accessing an application from the United States. The application is currently running in a single region in Europe.
+
+What should the organization do?
+
+
+A
+Set up a new billing account in the United States.
+
+B
+Run the application in additional zones in the European region.
+
+C
+Run the application in additional regions in Europe.
+
+D
+Run a replica of the application in a region in the United States.
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es D
+Incorrecto
+264
+An organization needs protection against distributed denial-of-service (DDoS) attacks. Which Google Cloud service should the organization use?
+
+
+A
+Google Cloud Armor
+
+B
+Cloud Build
+
+C
+Cloud VPN
+
+D
+Security Command Center
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es A
+Incorrecto
+265
+An organization needs to store daily transactional data such as customer records and purchase history. The data follows a consistent schema and is cross-referenced. Which type of service should the organization use?
+
+
+A
+Non-relational database
+
+B
+Data warehouse
+
+C
+Relational database
+
+D
+Data lake
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es C
+Incorrecto
+266
+An organization is hosting an application in Europe, and customers in Asia are reporting slow response times despite their fast internet connection.
+
+What is the problem?
+
+
+A
+Not enough application servers
+
+B
+Network bandwidth
+
+C
+Network latency
+
+D
+Misconfigured application servers
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es C
+Incorrecto
+267
+A manufacturing organization has a large collection of images labeled as intact or defective parts. They want to use this data to build a simple solution to detect faulty parts on their production line. They have no data science expertise. Which solution should they use?
+
+
+A
+Pre-trained APIs
+
+B
+Document AI
+
+C
+AutoML
+
+D
+Discovery AI for Retail
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es C
+Incorrecto
+268
+An organization has a large dataset that contains text transcripts of conversations between their customers and service representatives. They want an automated solution to identify the topics their customers care most about. Which service should the organization use?
+
+
+A
+Vision API
+
+B
+Speech-to-Text API
+
+C
+Cloud Translation API
+
+D
+Natural Language API
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es D
+Incorrecto
+269
+An organization wants to analyze data in a data warehouse. How should they proceed?
+
+
+A
+Import data into a semi-structured time-series database.
+
+B
+Choose a system to store structured and semi-structured data that supports ad-hoc analysis and custom reporting.
+
+C
+Copy unstructured data into a single large object store.
+
+D
+Ensure data is stored in structured tables and rows to support transactional queries and relationships.
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es B
+Incorrecto
+270
+An organization wants to ensure that they grant users only the permissions they require to perform their job responsibilities. Which security principle describes this approach?
+
+
+A
+Cyber resilience
+
+B
+Zero-trust
+
+C
+Least privilege
+
+D
+Security by default
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es C
+Incorrecto
+271
+An organization is concerned about the risk of data loss that may occur due to hardware failures or cyber attacks. They want to restore their systems to a previous state if such an event occurs. What should the organization do?
+
+
+A
+Set service level objectives (SLOs).
+
+B
+Use Cloud Monitoring.
+
+C
+Back up data regularly.
+
+D
+Enable autoscaling.
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es C
+Incorrecto
+272
+An organization processes batch sales data at the end of every month to analyze sales trends and derive business insights. They want to improve accuracy and make near real-time decisions. What should the organization do?
+
+
+A
+Change from a relational database to a NoSQL database.
+
+B
+Filter the data so reports are generated faster.
+
+C
+Switch from batch processing to stream processing.
+
+D
+Process batch reports weekly instead of monthly.
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es C
+Incorrecto
+273
+An information security organization must ensure that its service providers have ISO 27001 certification. They must also access supporting documentation. Which Google Cloud tool should they use?
+
+
+A
+Compliance Reports Manager
+
+B
+Security Command Center
+
+C
+Network Intelligence Center
+
+D
+Cloud Monitoring
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es A
+Incorrecto
+274
+An organization wants to adopt the advanced machine learning capabilities of the Google Cloud. However, regulations require data to be stored in an on-premises data center. Which approach should the organization use?
+
+
+A
+A hybrid-cloud approach
+
+B
+A multi-cloud approach
+
+C
+A public-cloud approach
+
+D
+A private-cloud approach
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es A
+Incorrecto
+275
+An organization wants to run their custom application in the cloud in a flexible and scalable way without managing any infrastructure. Which service model should they use?
+
+
+A
+Infrastructure as a service
+
+B
+Platform as a service
+
+C
+Software as a service
+
+D
+Network as a service
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es B
+Incorrecto
+276
+An organization is using Compute Engine and wants to receive sustained-use discounts. What should the organization do?
+
+
+A
+Choose preemptible or spot instances when creating virtual machines.
+
+B
+Choose low-powered virtual machines.
+
+C
+Nothing. Sustained use discounts are automatically applied.
+
+D
+Commit to virtual machine usage for a one or three-year period.
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es C
+Incorrecto
+277
+An organization is evaluating its defenses against cyber security threats and is concerned about the risks of social engineering by cyber criminals. How might these attacks happen?
+
+
+A
+SQL injection attacks
+
+B
+Physical damage to hardware
+
+C
+Phishing emails
+
+D
+Distributed denial-of-service attacks
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es C
+Incorrecto
+278
+An organization has a large VMWare environment that they want to migrate to the cloud. They want to retain existing operational processes and tools. Which Google Cloud service should the organization use?
+
+
+A
+Compute Engine
+
+B
+Google Cloud VMware Engine
+
+C
+VMWare vSphere
+
+D
+Bare Metal Solution
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es B
+Incorrecto
+279
+An organization is building advanced machine learning models in Google Cloud by using TensorFlow. They want to develop their models faster with purpose-built hardware. Which solution should the organization use?
+
+
+A
+TPUs
+
+B
+CPUs
+
+C
+CPUs
+
+D
+GPUs
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es A
+Incorrecto
+280
+A financial organization has many customers who close their accounts every year. The organization wants to use data and AI to identify at-risk customers, so they can retain customers by offering discounts and improved services. What should the organization do?
+
+
+A
+Create a dashboard of previous customers that have exited, and look for obvious correlations in the visualization.
+
+B
+Create a ML model based on the demographics and activities of previous customers that exited.
+
+C
+Create a survey for all customers to identify their current level of satisfaction.
+
+D
+Create a report based on last year’s customer feedback.
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es B
+Incorrecto
+281
+What is the purpose of an application programming interface (API)?
+
+
+A
+To provide a set of instructions that allow computer programs to communicate with each other
+
+B
+To provide cloud plugins for integrated development environments
+
+C
+To connect networks from different cloud providers
+
+D
+To manage multiple containerized workloads
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es A
+Incorrecto
+282
+An organization supplies electric car chargers in a nationwide network. They store customer and charging data in BigQuery. They want to efficiently upgrade and maintain their network to reduce waste and achieve their sustainability goals. How can Google Cloud services help the organization?
+
+
+A
+Secure data access by using Identity and Access Management.
+
+B
+Provide access to third-party developers by creating an API using Apigee.
+
+C
+Create a model in BigQuery to predict future maintenance schedules.
+
+D
+Move data from BigQuery to Cloud Storage to reduce storage costs.
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es C
+Incorrecto
+283
+An organization is planning to deploy a new workload to Google Cloud. They need an accurate estimate of the likely costs of running the workload. How should the organization create this estimate?
+
+
+A
+Use the Google Cloud Pricing Calculator.
+
+B
+Deploy workload to test environment to observe costs.
+
+C
+Use historic costs of an existing similar workload.
+
+D
+Refer to pricing information and manually calculate an estimate.
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es A
+Incorrecto
+284
+An organization wants to refactor their application by using a microservices architecture when migrating to the cloud. Which benefit would this action provide?
+
+
+A
+The refactored application is more efficient and scalable.
+
+B
+No code changes will be required.
+
+C
+This migration pattern provides the fastest path to the cloud.
+
+D
+The application will become PCI-DSS compliant by default.
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es A
+Incorrecto
+285
+An organization is using new technologies to change its business processes and culture to develop new customer experiences and adapt to market dynamics.
+
+What is the name of this approach?
+
+
+A
+Digital transformation
+
+B
+Data center migration
+
+C
+Operations optimization
+
+D
+User personalization
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es A
+Incorrecto
+286
+An organization is developing applications by using Kubernetes. They want their teams to spend more time developing rather than managing clusters. Which Google Cloud service should the organization choose?
+
+
+A
+GKE Autopilot
+
+B
+Compute Engine
+
+C
+Cloud Run
+
+D
+GKE Standard
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es A
+Incorrecto
+287
+An organization wants to deploy new workloads to the cloud but must keep some systems on-premises for compliance reasons. Both environments must be managed centrally. Which type of environment should the organization use?
+
+
+A
+Virtual machine environment
+
+B
+Multi cloud environment
+
+C
+Hybrid cloud environment
+
+D
+Container environment
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es С
+Incorrecto
+288
+An organization has petabytes of data gathered from a wide range of sources. They want to use the data for strategic analysis and to guide business decisions. What type of service should they use?
+
+
+A
+Object store
+
+B
+Non-relational document database
+
+C
+Data warehouse
+
+D
+Relational transactional database
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es С
+Incorrecto
+289
+An organization is deploying applications to the cloud using platform as a service.
+
+In the shared responsibility model, what remains the responsibility of the customer organization?
+
+
+A
+Operations
+
+B
+Data access policies
+
+C
+Physical security
+
+D
+Network security
+
+Comprobar
+
+Mostrar Comentarios
+
+Editar
+ Incorrecto. La respuesta correcta es B
