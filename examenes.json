@@ -7,14 +7,14 @@
     "apuntes": "Apuntes/apuntesAZ900.html"
   },
   {
-    "name": "gcdl",
+    "name": "Google Cloud Digital Leaders",
     "title": "Google Cloud Digital Leaders",
     "desc": "Cuestionario de fundamentos de Google Cloud.",
     "pregunta": "Preguntas/preguntasGCDL.json",
     "apuntes": "https://cloud.google.com/certification/cloud-digital-leader"
   },
   {
-    "name": "aws-ccp",
+    "name": "AWS Certified Cloud Practitioner",
     "title": "AWS Certified Cloud Practitioner // EN PROCESO",
     "desc": "Fundamentos de AWS: servicios, seguridad, precios y soporte.",
     "pregunta": "Preguntas/preguntasAWSCCP.json",
