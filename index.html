@@ -108,6 +108,8 @@
         else if (isGoogle) { providerColor = GOOGLE_GREEN; icon = '☁️'; }
         else if (isAWS) { providerColor = AWS_ORANGE; icon = '⚙️'; }
 
+        const defaultGoogleNotes = './Apuntes/apuntesGCDL.html';
+
         // Estilos para los botones (Ajustados para consistencia con el cuestionario)
         const btnClasses = {
           // Botón primario: usa el azul Kyndryl, rounded-xl y sombra de acción
@@ -205,9 +207,10 @@
         content.appendChild(actions);
 
         // Botón de Apuntes
-        if (exam.apuntes) {
+        const apuntesUrl = exam.apuntes || (isGoogle ? defaultGoogleNotes : null);
+        if (apuntesUrl) {
            const btnApuntes = document.createElement('a');
-           btnApuntes.href = exam.apuntes;
+           btnApuntes.href = apuntesUrl;
            btnApuntes.className = btnClasses.notes;
            btnApuntes.textContent = 'Ver Apuntes 📄';
            content.appendChild(btnApuntes);
