@@ -394,10 +394,6 @@ window.FALLBACK_QUESTIONS = [
 
 (function () {
   const els = {
-    examTitle: document.getElementById('examTitle'),
-    apuntesLink: document.getElementById('apuntesLink'),
-    menuBtn: document.getElementById('menuBtn'),
-    modeSwitch: document.getElementById('modeSwitch'),
     current: document.getElementById('current'),
     total: document.getElementById('total'),
     points: document.getElementById('points'),
@@ -415,17 +411,6 @@ window.FALLBACK_QUESTIONS = [
     card: document.getElementById('card'),
     progressBar: document.getElementById('progressBar'),
   };
-
-  const params = new URLSearchParams(location.search);
-
-  function resolveUrl(u) {
-    if (!u) return null;
-    const s = String(u);
-    if (/^https?:\/\//i.test(s) || /^file:\/\//i.test(s)) return s;
-    const root = new URL('../', location.href);
-    const clean = s.replace(/^\//, '');
-    return new URL(clean, root).href;
-  }
 
   const state = {
     questions: [],
@@ -589,27 +574,15 @@ window.FALLBACK_QUESTIONS = [
   }
 
   async function loadQuestions() {
-    const qparam = params.get('preguntas');
-    const url = resolveUrl(qparam) || null;
-    if (url) {
-      try {
-        const res = await fetch(url, { cache: 'no-store' });
-        if (res.ok) {
-          const data = await res.json();
-          const arr = Array.isArray(data) ? data.map(normalizeQuestion) : window.FALLBACK_QUESTIONS.map(normalizeQuestion);
-          return arr;
-        }
-      } catch (e) {}
-    }
     try {
       const res = await fetch('./preguntas_avanzadas.json', { cache: 'no-store' });
-      if (res.ok) {
-        const data = await res.json();
-        const arr = Array.isArray(data) ? data.map(normalizeQuestion) : window.FALLBACK_QUESTIONS.map(normalizeQuestion);
-        return arr;
-      }
-    } catch (e) {}
-    return window.FALLBACK_QUESTIONS.map(normalizeQuestion);
+      if (!res.ok) throw new Error('No se pudo cargar preguntas_avanzadas.json');
+      const data = await res.json();
+      const arr = Array.isArray(data) ? data.map(normalizeQuestion) : window.FALLBACK_QUESTIONS.map(normalizeQuestion);
+      return arr;
+    } catch (e) {
+      return window.FALLBACK_QUESTIONS.map(normalizeQuestion);
+    }
   }
 
   function updateStatus() {
@@ -916,26 +889,7 @@ window.FALLBACK_QUESTIONS = [
   }
 
   async function init() {
-    const title = params.get('title') || params.get('name') || 'Examen';
-    const mode = String(params.get('mode') || 'examen').toLowerCase();
-    if (els.examTitle) els.examTitle.textContent = `${title} • ${mode === 'practica' ? 'Práctica' : 'Examen'}`;
-    const apuntes = resolveUrl(params.get('apuntes'));
-    if (els.apuntesLink && apuntes) els.apuntesLink.href = apuntes;
-    const all = shuffle(await loadQuestions());
-    let selected = all;
-    if (mode === 'examen') {
-      const examCount = Math.floor(Math.random() * (60 - 30 + 1)) + 30;
-      selected = all.slice(0, Math.min(examCount, all.length));
-    }
-    state.questions = selected;
-    if (els.menuBtn) els.menuBtn.href = new URL('../index.html', location.href).href;
-    if (els.modeSwitch) {
-      const url = new URL(location.href);
-      const nextMode = mode === 'practica' ? 'examen' : 'practica';
-      url.searchParams.set('mode', nextMode);
-      els.modeSwitch.href = url.href;
-      els.modeSwitch.textContent = nextMode === 'practica' ? 'Cambiar a Práctica' : 'Cambiar a Examen';
-    }
+    state.questions = shuffle(await loadQuestions());
     updateStatus();
     renderQuestion();
   }
