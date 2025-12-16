@@ -179,8 +179,14 @@
         const baseUrl = new URL('./Cuestionario/cuestionario.html', location.href);
         baseUrl.searchParams.set('name', exam.name);
         if (exam.title) baseUrl.searchParams.set('title', exam.title);
-        if (exam.pregunta) baseUrl.searchParams.set('preguntas', exam.pregunta);
-        if (exam.apuntes) baseUrl.searchParams.set('apuntes', exam.apuntes);
+        if (exam.pregunta) {
+          const preg = /^https?:\/\//i.test(exam.pregunta) ? exam.pregunta : `../${exam.pregunta}`;
+          baseUrl.searchParams.set('preguntas', preg);
+        }
+        if (exam.apuntes) {
+          const ap = /^https?:\/\//i.test(exam.apuntes) ? exam.apuntes : `../${exam.apuntes}`;
+          baseUrl.searchParams.set('apuntes', ap);
+        }
 
         const examenUrl = new URL(baseUrl.href);
         examenUrl.searchParams.set('mode', 'examen');

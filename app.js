@@ -410,6 +410,10 @@ window.FALLBACK_QUESTIONS = [
     restartBtn: document.getElementById('restartBtn'),
     card: document.getElementById('card'),
     progressBar: document.getElementById('progressBar'),
+    examTitle: document.getElementById('examTitle'),
+    examSubtitle: document.getElementById('examSubtitle'),
+    apuntesLink: document.getElementById('apuntesLink'),
+    modeSwitch: document.getElementById('modeSwitch'),
   };
 
   const state = {
@@ -573,10 +577,44 @@ window.FALLBACK_QUESTIONS = [
     return `La respuesta correcta es “${a}”. Si quieres una explicación más detallada para esta pregunta, dímelo y la añado. Referencia general: https://learn.microsoft.com/azure/`;
   }
 
+  function getParams() {
+    const p = new URLSearchParams(window.location.search);
+    return {
+      preguntas: p.get('preguntas'),
+      apuntes: p.get('apuntes'),
+      name: p.get('name'),
+      title: p.get('title'),
+      mode: p.get('mode') || 'practica',
+    };
+  }
+
+  function resolvePath(path) {
+    if (!path) return null;
+    try {
+      const u = new URL(path, window.location.href);
+      return u.href;
+    } catch {
+      return path;
+    }
+  }
+
   async function loadQuestions() {
+    const params = getParams();
+    const src = resolvePath(params.preguntas);
+    if (src) {
+      try {
+        const res = await fetch(src, { cache: 'no-store' });
+        if (!res.ok) throw new Error('error');
+        const data = await res.json();
+        const arr = Array.isArray(data) ? data.map(normalizeQuestion) : window.FALLBACK_QUESTIONS.map(normalizeQuestion);
+        return arr;
+      } catch (e) {
+        return window.FALLBACK_QUESTIONS.map(normalizeQuestion);
+      }
+    }
     try {
       const res = await fetch('./preguntas_avanzadas.json', { cache: 'no-store' });
-      if (!res.ok) throw new Error('No se pudo cargar preguntas_avanzadas.json');
+      if (!res.ok) throw new Error('error');
       const data = await res.json();
       const arr = Array.isArray(data) ? data.map(normalizeQuestion) : window.FALLBACK_QUESTIONS.map(normalizeQuestion);
       return arr;
@@ -889,6 +927,20 @@ window.FALLBACK_QUESTIONS = [
   }
 
   async function init() {
+    const params = getParams();
+    const title = params.title || params.name || 'Cuestionario';
+    if (els.examTitle) els.examTitle.textContent = title;
+    if (els.examSubtitle) els.examSubtitle.textContent = params.mode === 'examen' ? 'Modo examen' : 'Modo de práctica';
+    const notesHref = resolvePath(params.apuntes);
+    if (els.apuntesLink && notesHref) els.apuntesLink.href = notesHref;
+    if (els.modeSwitch) {
+      els.modeSwitch.onclick = (ev) => {
+        ev.preventDefault();
+        const url = new URL(window.location.href);
+        url.searchParams.set('mode', params.mode === 'examen' ? 'practica' : 'examen');
+        window.location.href = url.href;
+      };
+    }
     state.questions = shuffle(await loadQuestions());
     updateStatus();
     renderQuestion();
