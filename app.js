@@ -431,6 +431,19 @@ window.FALLBACK_QUESTIONS = [
     }
     return arr;
   }
+  function chooseExamSubset(arr) {
+    const total = arr.length;
+    const min = 30;
+    const max = 60;
+    let count;
+    if (total >= min) {
+      const upper = Math.min(max, total);
+      count = Math.floor(Math.random() * (upper - min + 1)) + min;
+    } else {
+      count = total;
+    }
+    return arr.slice(0, count);
+  }
 
   function normalizeQuestion(q) {
     const n = { ...q };
@@ -941,7 +954,9 @@ window.FALLBACK_QUESTIONS = [
         window.location.href = url.href;
       };
     }
-    state.questions = shuffle(await loadQuestions());
+    const loaded = await loadQuestions();
+    const shuffled = shuffle(loaded);
+    state.questions = params.mode === 'examen' ? chooseExamSubset(shuffled) : shuffled;
     updateStatus();
     renderQuestion();
   }
