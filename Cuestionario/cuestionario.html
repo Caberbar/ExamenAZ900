@@ -53,16 +53,16 @@
   <body class="min-h-screen bg-bg-app text-text-dark antialiased">
     
     <header class="sticky top-0 z-10 bg-white border-b border-border-subtle shadow-sm">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between flex-wrap gap-3">
         <div>
           <h1 id="examTitle" class="text-xl sm:text-2xl font-bold tracking-tight text-text-dark">Cuestionario</h1>
           <p id="examSubtitle" class="text-xs sm:text-sm text-gray-500 mt-0.5">Modo de práctica | Prueba de certificación</p>
         </div>
         
-        <div class="flex items-center gap-2">
-          <a id="menuBtn" href="../index.html" class="px-3 py-2 rounded-lg border border-gray-300 bg-white hover:bg-gray-50 text-sm font-medium">Menú</a>
-          <a id="apuntesLink" href="#" class="px-3 py-2 rounded-lg border border-gray-300 bg-white hover:bg-gray-50 text-sm font-medium">Apuntes</a>
-          <a id="modeSwitch" href="#" class="px-3 py-2 rounded-lg bg-kyndryl-blue text-white hover:bg-blue-700 text-sm font-semibold shadow-action">Cambiar Modo</a>
+        <div class="flex items-center gap-2 flex-wrap w-full sm:w-auto">
+          <a id="menuBtn" href="../index.html" class="px-3 py-2 rounded-lg border border-gray-300 bg-white hover:bg-gray-50 text-sm font-medium w-full sm:w-auto text-center">Menú</a>
+          <a id="apuntesLink" href="#" class="px-3 py-2 rounded-lg border border-gray-300 bg-white hover:bg-gray-50 text-sm font-medium w-full sm:w-auto text-center">Apuntes</a>
+          <a id="modeSwitch" href="#" class="px-3 py-2 rounded-lg bg-kyndryl-blue text-white hover:bg-blue-700 text-sm font-semibold shadow-action w-full sm:w-auto text-center">Cambiar Modo</a>
         </div>
       </div>
     </header>
@@ -71,7 +71,7 @@
       
       <section id="status" class="mb-6 bg-white rounded-xl border border-border-subtle p-4 shadow-md">
         
-        <div class="flex items-center justify-between text-sm font-medium mb-3">
+        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 text-sm font-medium mb-3">
           <div id="progress" class="text-kyndryl-blue font-semibold">Pregunta <span id="current">0</span>/<span id="total">0</span></div>
           <div id="score" class="text-text-dark">Precisión: <span id="accuracy">0%</span> (<span id="points">0</span> de <span id="answered">0</span>)</div>
         </div>
@@ -83,7 +83,7 @@
 
       <section id="card" class="bg-white shadow-xl rounded-2xl border border-kyndryl-blue/30 p-6 sm:p-8">
         
-        <h2 id="question" class="text-xl font-extrabold mb-6 text-text-dark leading-relaxed">Cargando preguntas…</h2>
+        <h2 id="question" class="text-base sm:text-xl font-extrabold mb-6 text-text-dark leading-relaxed">Cargando preguntas…</h2>
         
         <div id="options" class="grid gap-4">
           </div>
@@ -93,11 +93,11 @@
         
         <div class="mt-8 pt-6 border-t border-border-subtle flex flex-wrap justify-between items-center gap-3">
           
-          <button id="resetBtn" class="px-4 py-2 rounded-lg border border-gray-300 bg-white hover:bg-gray-100 text-sm font-medium transition duration-150">Reiniciar</button>
+          <button id="resetBtn" class="px-4 py-2 rounded-lg border border-gray-300 bg-white hover:bg-gray-100 text-sm font-medium transition duration-150 w-full sm:w-auto">Reiniciar</button>
           
-          <div class="flex gap-3">
-            <button id="checkBtn" class="hidden px-5 py-2.5 rounded-xl bg-success text-white hover:bg-emerald-700 font-semibold transition duration-150 shadow-success-light">Comprobar</button>
-            <button id="nextBtn" class="hidden px-5 py-2.5 rounded-xl bg-kyndryl-blue text-white hover:bg-blue-700 font-semibold transition duration-150 shadow-action">Siguiente →</button>
+          <div class="flex gap-3 w-full sm:w-auto">
+            <button id="checkBtn" class="hidden px-5 py-2.5 rounded-xl bg-success text-white hover:bg-emerald-700 font-semibold transition duration-150 shadow-success-light w-full sm:w-auto">Comprobar</button>
+            <button id="nextBtn" class="hidden px-5 py-2.5 rounded-xl bg-kyndryl-blue text-white hover:bg-blue-700 font-semibold transition duration-150 shadow-action w-full sm:w-auto">Siguiente →</button>
           </div>
         </div>
       </section>
