@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Apuntes AZ-900 — Versión académica</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../theme.js"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+      }
+    </script>
     <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
       :root{
@@ -13,8 +19,14 @@
         --ink:#1f2937;
         --hl:#fde68a; /* amber-200 */
       }
+      .dark{
+        --paper:#111827;
+        --ink:#f3f4f6;
+        --hl:#92400e; /* amber-800 */
+      }
       .hand{font-family:"Kalam",system-ui,-apple-system,"Segoe UI",sans-serif;}
       .paper-bg{background:#faf7f2;}
+      .dark .paper-bg{background:#030712;}
       .sheet{
         background:var(--paper);
         border-radius:14px;
@@ -23,32 +35,37 @@
         position:relative;
         overflow:hidden;
       }
+      .dark .sheet{border-color:#374151;box-shadow:0 8px 24px rgba(0,0,0,.4);}
       /* línea roja tipo libreta */
       .sheet::before{content:"";position:absolute;left:26px;top:0;bottom:0;width:2px;background:rgba(249,115,22,.28);}
+      .dark .sheet::before{background:rgba(249,115,22,.15);}
       /* líneas suaves horizontales */
       .sheet::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(transparent 0 34px, rgba(0,0,0,.04) 34px 35px);pointer-events:none;}
+      .dark .sheet::after{background:repeating-linear-gradient(transparent 0 34px, rgba(255,255,255,.03) 34px 35px);}
       .title-scribble{font-family:"Kalam",system-ui,sans-serif;font-size:1.7rem;letter-spacing:.3px;font-weight:700;color:var(--ink);position:relative;}
       .title-scribble::after{content:"";position:absolute;left:-6px;right:-6px;bottom:-2px;height:.7em;background:linear-gradient(transparent 60%, var(--hl) 60%);transform:rotate(-0.6deg);z-index:-1;}
       .hl{background:linear-gradient(transparent 60%, var(--hl) 60%);padding:0 .15em;border-radius:.2em}
       .note-card{background:#fff;border:1px dashed rgba(249,115,22,.28);border-radius:12px}
-      .dark .sheet{border-color:#1e2a4a;box-shadow:0 10px 24px rgba(2,6,23,.5)}
-      .dark .note-card{background:#111833;border-color:#1e2a4a}
+      .dark .note-card{background:#1f2937;border-color:rgba(249,115,22,.2)}
+      
       /* Índice hermoso, estilo libreta */
       html{scroll-behavior:smooth}
       .toc-item{border:1px dashed rgba(249,115,22,.28);border-radius:12px;background:#fff;padding:.6rem .8rem}
+      .dark .toc-item{background:#1f2937;border-color:rgba(249,115,22,.2)}
       .toc-link{display:flex;align-items:center;gap:.5rem;color:#1f2937}
+      .dark .toc-link{color:#e5e7eb}
       .toc-link .num{color:var(--accent);font-weight:700}
       .toc-sub{margin-top:.4rem;margin-left:1.4rem;display:grid;gap:.2rem}
       .toc-sub a{font-size:.82rem;text-decoration:underline;color:#374151}
+      .dark .toc-sub a{color:#9ca3af}
       .toc-progress{position:relative;margin-top:.35rem;height:6px;border-radius:9999px;background:rgba(249,115,22,.15)}
+      .dark .toc-progress{background:rgba(249,115,22,.1)}
       .toc-progress > div{position:absolute;left:0;top:0;bottom:0;background:var(--accent);border-radius:9999px}
       .toc-progress-text{font-size:.72rem;color:#6b7280;margin-top:.25rem;display:block}
+      .dark .toc-progress-text{color:#9ca3af}
       .toc-active{background:#fff7ed;border-color:#fdba74}
-      .dark .toc-item{background:#0f152a;border-color:#1e2a4a}
-      .dark .toc-link{color:#e5e7eb}
-      .dark .toc-sub a{color:#cbd5e1}
-      .dark .toc-progress{background:#1f2a48}
-      .dark .toc-progress > div{background:#fb923c}
+      .dark .toc-active{background:#3f2c22;border-color:#9a3412}
+      
       /* Scroll interno para el índice lateral sticky */
       .sheet-scroll{max-height:calc(100vh - 120px);overflow:auto;overscroll-behavior:contain}
       /* pequeño ajuste responsive */
@@ -57,21 +74,22 @@
       }
     </style>
   </head>
-  <body class="min-h-screen paper-bg text-gray-900 dark:bg-[#0b1020] dark:text-gray-100">
-    <header class="sticky top-0 z-10 border-b bg-white/90 backdrop-blur dark:bg-[#0b1020]/90">
+  <body class="min-h-screen paper-bg text-gray-900 dark:text-gray-100">
+    <header class="sticky top-0 z-10 border-b bg-white/90 backdrop-blur dark:bg-[#030712]/90 dark:border-gray-800">
       <div class="max-w-5xl mx-auto px-4 py-4 flex items-center justify-between gap-4">
         <div>
           <h1 class="title-scribble">Apuntes AZ-900</h1>
           <p class="text-sm text-gray-600 dark:text-gray-400">Versión académica — explicaciones detalladas y ejemplos.</p>
         </div>
         <div class="flex items-center gap-3">
-          <label class="inline-flex items-center gap-2">
-            <input id="toggleDark" type="checkbox" class="h-4 w-4">
-            <span class="text-sm">Modo oscuro</span>
+          <label class="inline-flex items-center cursor-pointer">
+            <input type="checkbox" id="toggleDark" class="sr-only peer">
+            <div class="relative w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-orange-300 dark:peer-focus:ring-orange-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-orange-500"></div>
+            <span class="ms-3 text-sm font-medium text-gray-900 dark:text-gray-300">Modo oscuro</span>
           </label>
-          <button id="expandAll" class="px-3 py-1 text-sm rounded border bg-white dark:bg-[#111833] dark:border-[#1e2a4a]">Expandir todo</button>
-          <button id="collapseAll" class="px-3 py-1 text-sm rounded border bg-white dark:bg-[#111833] dark:border-[#1e2a4a]">Contraer todo</button>
-          <button id="print" class="px-3 py-1 text-sm rounded border bg-white dark:bg-[#111833] dark:border-[#1e2a4a]">Imprimir</button>
+          <button id="expandAll" class="px-3 py-1 text-sm rounded border bg-white hover:bg-gray-50 transition-colors dark:bg-gray-800 dark:border-gray-700 dark:text-gray-200 dark:hover:bg-gray-700">Expandir todo</button>
+          <button id="collapseAll" class="px-3 py-1 text-sm rounded border bg-white hover:bg-gray-50 transition-colors dark:bg-gray-800 dark:border-gray-700 dark:text-gray-200 dark:hover:bg-gray-700">Contraer todo</button>
+          <button id="print" class="px-3 py-1 text-sm rounded border bg-white hover:bg-gray-50 transition-colors dark:bg-gray-800 dark:border-gray-700 dark:text-gray-200 dark:hover:bg-gray-700">Imprimir</button>
         </div>
       </div>
     </header>
@@ -79,10 +97,10 @@
     <main class="max-w-5xl mx-auto px-4 py-6">
       <section class="mb-4 flex items-center justify-between">
         <div class="flex items-center gap-2">
-          <input id="search" type="text" placeholder="Buscar conceptos" class="w-80 px-3 py-2 border rounded bg-white dark:bg-[#111833] dark:border-[#1e2a4a]" />
+          <input id="search" type="text" placeholder="Buscar conceptos" class="w-80 px-3 py-2 border rounded bg-white focus:outline-none focus:ring-2 focus:ring-orange-200 transition-all dark:bg-gray-800 dark:border-gray-700 dark:text-gray-200 dark:focus:ring-orange-900" />
           <span class="text-sm text-gray-600 dark:text-gray-400">Secciones: <span id="sectionCount">0</span> • Notas: <span id="noteCount">0</span></span>
         </div>
-        <div class="text-sm font-medium">Estudiadas: <span id="studiedCount">0</span></div>
+        <div class="text-sm font-medium text-gray-700 dark:text-gray-300">Estudiadas: <span id="studiedCount">0</span></div>
       </section>
 
       <div class="md:grid md:grid-cols-12 gap-6">
@@ -90,7 +108,7 @@
           <div class="sheet sheet-scroll p-6 sticky top-20">
             <div class="flex items-center justify-between">
               <div class="title-scribble">Índice</div>
-              <div class="text-xs text-gray-600 dark:text-gray-400">Se actualiza con la búsqueda</div>
+              <div class="text-xs text-gray-500">Se actualiza con la búsqueda</div>
             </div>
             <nav id="toc" class="mt-3 space-y-2"></nav>
           </div>
@@ -111,17 +129,11 @@
         noteCount: document.getElementById('noteCount'),
         studiedCount: document.getElementById('studiedCount'),
         search: document.getElementById('search'),
-        toggleDark: document.getElementById('toggleDark'),
         expandAll: document.getElementById('expandAll'),
         collapseAll: document.getElementById('collapseAll'),
         print: document.getElementById('print'),
         toc: document.getElementById('toc'),
       };
-
-      function setDark(enabled) {
-        document.documentElement.classList.toggle('dark', enabled);
-        localStorage.setItem('apuntes:dark', enabled ? '1' : '0');
-      }
 
       const studied = JSON.parse(localStorage.getItem('apuntes:studied') || '{}');
 
@@ -772,13 +784,8 @@
          Inicialización y eventos
          ------------------------ */
       function init() {
-        const darkPersisted = localStorage.getItem('apuntes:dark') === '1';
-        els.toggleDark.checked = darkPersisted;
-        setDark(darkPersisted);
-
         render();
         els.search.addEventListener('input', render);
-        els.toggleDark.addEventListener('change', (e) => setDark(e.target.checked));
         els.print.addEventListener('click', () => window.print());
         els.expandAll.addEventListener('click', () => {
           document.querySelectorAll('#notes section > div:nth-child(2)').forEach(el => el.classList.remove('hidden'));

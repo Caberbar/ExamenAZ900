@@ -648,8 +648,8 @@ window.FALLBACK_QUESTIONS = [
     if (els.accuracy) {
       els.accuracy.textContent = `${answeredPct}%`;
       els.accuracy.className = answeredPct >= 70
-        ? 'text-green-700 font-medium'
-        : 'text-amber-700 font-medium';
+        ? 'text-green-700 dark:text-green-400 font-medium'
+        : 'text-amber-700 dark:text-amber-400 font-medium';
     }
     const pct = Math.round(((state.currentIndex) / Math.max(1, state.questions.length)) * 100);
     els.progressBar.style.width = `${pct}%`;
@@ -689,17 +689,18 @@ window.FALLBACK_QUESTIONS = [
       q.options.forEach((opt) => {
         const btn = document.createElement('button');
         btn.textContent = opt;
-        btn.className = 'w-full text-left px-4 py-2 rounded border bg-white hover:bg-gray-50';
+        btn.className = 'option-btn w-full';
         btn.dataset.value = opt;
         btn.addEventListener('click', () => {
           if (state.answered) return;
           const v = btn.dataset.value;
           if (selected.has(v)) {
             selected.delete(v);
-            btn.className = 'w-full text-left px-4 py-2 rounded border bg-white hover:bg-gray-50';
+            btn.className = 'option-btn w-full';
           } else {
             selected.add(v);
-            btn.className = 'w-full text-left px-4 py-2 rounded bg-blue-600 text-white';
+            // Selected state: Blue filled
+            btn.className = 'option-btn w-full bg-blue-600 text-white border-blue-600 hover:bg-blue-700 dark:bg-blue-600 dark:border-blue-500';
           }
         });
         els.options.appendChild(btn);
@@ -712,7 +713,7 @@ window.FALLBACK_QUESTIONS = [
       q.options.forEach((opt) => {
         const btn = document.createElement('button');
         btn.textContent = opt;
-        btn.className = 'w-full text-left px-4 py-2 rounded border bg-white hover:bg-gray-50';
+        btn.className = 'option-btn w-full';
         btn.dataset.value = opt;
         btn.addEventListener('click', () => handleAnswer(btn, q));
         els.options.appendChild(btn);
@@ -722,7 +723,7 @@ window.FALLBACK_QUESTIONS = [
 
   function linkify(text) {
     if (!text) return '';
-    return text.replace(/https?:\/\/\S+/g, (url) => `<a href="${url}" target="_blank" rel="noopener" class="underline text-blue-700">${url}</a>`);
+    return text.replace(/https?:\/\/\S+/g, (url) => `<a href="${url}" target="_blank" rel="noopener" class="underline text-blue-700 dark:text-blue-400">${url}</a>`);
   }
 
   function handleAnswer(clickedBtn, q) {
@@ -742,24 +743,28 @@ window.FALLBACK_QUESTIONS = [
 
     optionButtons.forEach((b) => {
       const v = b.dataset.value;
+      // Reset to base, but we will override colors
+      // Note: option-btn has transition, but we want immediate feedback colors
       if (v === correctAnswer) {
-        b.className = 'w-full text-left px-4 py-2 rounded bg-green-600 text-white';
+        b.className = 'option-btn w-full bg-green-600 text-white border-green-600 dark:bg-green-600 dark:border-green-500';
       } else if (b === clickedBtn) {
-        b.className = 'w-full text-left px-4 py-2 rounded bg-red-600 text-white';
+        b.className = 'option-btn w-full bg-red-600 text-white border-red-600 dark:bg-red-600 dark:border-red-500';
       } else {
-        b.className = 'w-full text-left px-4 py-2 rounded border bg-white';
+        // Unselected, disabled. option-btn handles basic style, but we might want to dim it?
+        // default option-btn is fine, just disabled.
+        b.className = 'option-btn w-full opacity-60'; 
       }
     });
 
     const baseMsg = isCorrect ? '¡Correcto!' : `Incorrecto. Respuesta: ${correctAnswer}`;
-    const baseClass = isCorrect ? 'text-green-700' : 'text-red-700';
+    const baseClass = isCorrect ? 'text-green-700 dark:text-green-400' : 'text-red-700 dark:text-red-400';
 
     const explanationText = q.explanation || getAutoExplanation(q);
     const explanation = explanationText
-      ? `<div class="mt-2 text-gray-700">Motivo: ${linkify(explanationText)}</div>`
+      ? `<div class="mt-2 text-gray-700 dark:text-gray-300">Motivo: ${linkify(explanationText)}</div>`
       : '';
 
-    els.feedback.innerHTML = `<div class="${baseClass}">${baseMsg}</div>${explanation}`;
+    els.feedback.innerHTML = `<div class="${baseClass} font-bold">${baseMsg}</div>${explanation}`;
     els.feedback.className = 'mt-4 text-sm';
 
     els.nextBtn.classList.remove('hidden');
@@ -784,7 +789,7 @@ window.FALLBACK_QUESTIONS = [
       label.className = 'text-sm sm:text-base';
 
       const select = document.createElement('select');
-      select.className = 'w-full px-3 py-2 rounded border bg-white';
+      select.className = 'w-full px-3 py-2 rounded border bg-white dark:bg-gray-700 dark:border-gray-600 dark:text-white';
       const placeholder = document.createElement('option');
       placeholder.value = '';
       placeholder.textContent = 'Selecciona…';
@@ -823,7 +828,7 @@ window.FALLBACK_QUESTIONS = [
 
     if (!allChosen) {
       els.feedback.textContent = 'Selecciona una opción para cada fila.';
-      els.feedback.className = 'mt-4 text-sm text-amber-700';
+      els.feedback.className = 'mt-4 text-sm text-amber-700 dark:text-amber-400 font-medium';
       return;
     }
 
@@ -836,23 +841,23 @@ window.FALLBACK_QUESTIONS = [
       const ok = v === correctMap[leftItem];
       if (!ok) allCorrect = false;
       select.className = ok
-        ? 'w-full px-3 py-2 rounded bg-green-600 text-white'
-        : 'w-full px-3 py-2 rounded bg-red-600 text-white';
+        ? 'w-full px-3 py-2 rounded bg-green-600 text-white dark:bg-green-600'
+        : 'w-full px-3 py-2 rounded bg-red-600 text-white dark:bg-red-600';
       select.disabled = true;
     });
 
     if (allCorrect) {
       state.score += 1;
       const explanationText = q.explanation || getAutoExplanation(q);
-      const explanation = explanationText ? `<div class="mt-2 text-gray-700">Motivo: ${linkify(explanationText)}</div>` : '';
-      els.feedback.innerHTML = `<div class="text-green-700">¡Correcto!</div>${explanation}`;
+      const explanation = explanationText ? `<div class="mt-2 text-gray-700 dark:text-gray-300">Motivo: ${linkify(explanationText)}</div>` : '';
+      els.feedback.innerHTML = `<div class="text-green-700 dark:text-green-400 font-bold">¡Correcto!</div>${explanation}`;
       els.feedback.className = 'mt-4 text-sm';
     } else {
       // Mostrar resumen correcto
       const resumen = q.left.map((l) => `${l} → ${correctMap[l]}`).join('\n');
       const explanationText = q.explanation || getAutoExplanation(q);
-      const explanation = explanationText ? `<div class="mt-2 text-gray-700">Motivo: ${linkify(explanationText)}</div>` : '';
-      els.feedback.innerHTML = `<div class="text-red-700 whitespace-pre-line">Incorrecto. Respuestas correctas:\n${resumen}</div>${explanation}`;
+      const explanation = explanationText ? `<div class="mt-2 text-gray-700 dark:text-gray-300">Motivo: ${linkify(explanationText)}</div>` : '';
+      els.feedback.innerHTML = `<div class="text-red-700 dark:text-red-400 font-bold whitespace-pre-line">Incorrecto. Respuestas correctas:\n${resumen}</div>${explanation}`;
       els.feedback.className = 'mt-4 text-sm';
     }
 
@@ -865,7 +870,7 @@ window.FALLBACK_QUESTIONS = [
     if (state.answered) return;
     if (!selectedSet || selectedSet.size !== requiredCount) {
       els.feedback.textContent = `Selecciona ${requiredCount} respuestas.`;
-      els.feedback.className = 'mt-4 text-sm text-amber-700';
+      els.feedback.className = 'mt-4 text-sm text-amber-700 dark:text-amber-400 font-medium';
       return;
     }
 
@@ -882,26 +887,26 @@ window.FALLBACK_QUESTIONS = [
       const isCorrect = correctSet.has(v);
       b.disabled = true;
       if (isCorrect) {
-        b.className = 'w-full text-left px-4 py-2 rounded bg-green-600 text-white';
+        b.className = 'option-btn w-full bg-green-600 text-white border-green-600 dark:bg-green-600 dark:border-green-500';
       } else if (isSelected) {
         allCorrect = false;
-        b.className = 'w-full text-left px-4 py-2 rounded bg-red-600 text-white';
+        b.className = 'option-btn w-full bg-red-600 text-white border-red-600 dark:bg-red-600 dark:border-red-500';
       } else {
-        b.className = 'w-full text-left px-4 py-2 rounded border bg-white';
+        b.className = 'option-btn w-full opacity-60';
       }
     });
 
     if (allCorrect) {
       state.score += 1;
       const explanationText = q.explanation || getAutoExplanation(q);
-      const explanation = explanationText ? `<div class="mt-2 text-gray-700">Motivo: ${linkify(explanationText)}</div>` : '';
-      els.feedback.innerHTML = `<div class="text-green-700">¡Correcto!</div>${explanation}`;
+      const explanation = explanationText ? `<div class="mt-2 text-gray-700 dark:text-gray-300">Motivo: ${linkify(explanationText)}</div>` : '';
+      els.feedback.innerHTML = `<div class="text-green-700 dark:text-green-400 font-bold">¡Correcto!</div>${explanation}`;
       els.feedback.className = 'mt-4 text-sm';
     } else {
       const correctList = Array.from(correctSet).join('\n');
       const explanationText = q.explanation || getAutoExplanation(q);
-      const explanation = explanationText ? `<div class="mt-2 text-gray-700">Motivo: ${linkify(explanationText)}</div>` : '';
-      els.feedback.innerHTML = `<div class="text-red-700 whitespace-pre-line">Incorrecto. Respuestas correctas:\n${correctList}</div>${explanation}`;
+      const explanation = explanationText ? `<div class="mt-2 text-gray-700 dark:text-gray-300">Motivo: ${linkify(explanationText)}</div>` : '';
+      els.feedback.innerHTML = `<div class="text-red-700 dark:text-red-400 font-bold whitespace-pre-line">Incorrecto. Respuestas correctas:\n${correctList}</div>${explanation}`;
       els.feedback.className = 'mt-4 text-sm';
     }
 

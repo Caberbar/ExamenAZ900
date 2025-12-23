@@ -1,10 +1,16 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Apuntes GCDL — Google Cloud Digital Leader [DISEÑO ELEGANTE]</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../theme.js"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+      }
+    </script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Inter', sans-serif; background-color: #fafaf9; color: #1f2937; }
@@ -30,6 +36,18 @@
             border-radius: 0.75rem;
             padding: 2rem;
         }
+
+        /* Dark Mode Overrides */
+        .dark body { background-color: #111827; color: #f3f4f6; }
+        .dark h2 { color: #f3f4f6 !important; border-color: #374151; }
+        .dark .study-card { background: #1f2937; border-color: #4b5563; }
+        .dark .study-card h3 { color: #e5e7eb !important; }
+        .dark .highlight-note { background-color: #1f2937; border-color: #4b5563; }
+        .dark .notes-wrapper {
+            background: repeating-linear-gradient(#1f2937, #1f2937 34px, #374151 35px);
+            border-color: #374151;
+        }
+
         @media print {
             body { background: #ffffff; }
             header, .fixed, aside { display: none; }
@@ -39,19 +57,24 @@
         }
     </style>
 </head>
-<body class="min-h-screen bg-white text-gray-800">
-    <header class="sticky top-0 z-20 border-b bg-white shadow-lg">
+<body class="min-h-screen bg-white text-gray-800 dark:bg-gray-900 dark:text-gray-200">
+    <header class="sticky top-0 z-20 border-b bg-white shadow-lg dark:bg-gray-800 dark:border-gray-700">
         <div class="max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row items-start md:items-center justify-between">
             <div class="mb-2 md:mb-0">
-                <h1 class="text-4xl font-extrabold text-blue-800 tracking-tight">
+                <h1 class="text-4xl font-extrabold text-blue-800 dark:text-blue-400 tracking-tight">
                     Apuntes Google Cloud Digital Leader
                 </h1>
-                <p class="text-sm text-gray-500 mt-1 italic">
+                <p class="text-sm text-gray-500 dark:text-gray-400 mt-1 italic">
                     📌 Tu guía visual para la Certificación: Detalle, Estilo y Repaso.
                 </p>
             </div>
             <div class="flex items-center gap-3">
-                <a href="#" onclick="window.print()" class="px-5 py-2 text-sm rounded-full font-bold border-2 border-cyan-500 bg-cyan-100 text-cyan-700 hover:bg-cyan-200 transition duration-300 shadow-md">
+                 <label class="inline-flex items-center cursor-pointer mr-4">
+                    <input type="checkbox" id="toggleDark" class="sr-only peer">
+                    <div class="relative w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+                    <span class="ms-3 text-sm font-medium text-gray-900 dark:text-gray-300">Modo oscuro</span>
+                </label>
+                <a href="#" onclick="window.print()" class="px-5 py-2 text-sm rounded-full font-bold border-2 border-cyan-500 bg-cyan-100 text-cyan-700 hover:bg-cyan-200 transition duration-300 shadow-md dark:bg-cyan-900 dark:text-cyan-200 dark:border-cyan-700 dark:hover:bg-cyan-800">
                     Descarga PDF (Simulado)
                 </a>
             </div>
@@ -65,57 +88,57 @@
     <div class="max-w-7xl mx-auto px-6 py-16">
         <div class="grid grid-cols-12 gap-8">
             <aside class="hidden lg:block col-span-3 sticky top-24 self-start">
-                <div class="bg-white rounded-xl border border-gray-200 shadow-sm p-6">
-                    <h2 class="text-2xl font-bold text-blue-700 mb-4">Índice</h2>
+                <div class="bg-white rounded-xl border border-gray-200 shadow-sm p-6 dark:bg-gray-800 dark:border-gray-700">
+                    <h2 class="text-2xl font-bold text-blue-700 dark:text-blue-400 mb-4">Índice</h2>
                     <nav class="space-y-2 text-sm">
-                        <a href="#fundamentos" class="block px-3 py-2 rounded-lg border bg-gray-50 hover:bg-gray-100 text-gray-700">1. Fundamentos</a>
-                        <a href="#compute" class="block px-3 py-2 rounded-lg border bg-gray-50 hover:bg-gray-100 text-gray-700">2. Compute</a>
-                        <a href="#almacenamiento" class="block px-3 py-2 rounded-lg border bg-gray-50 hover:bg-gray-100 text-gray-700">3. Almacenamiento y BD</a>
-                        <a href="#analitica" class="block px-3 py-2 rounded-lg border bg-gray-50 hover:bg-gray-100 text-gray-700">4. Analítica y ML</a>
-                        <a href="#seguridad" class="block px-3 py-2 rounded-lg border bg-gray-50 hover:bg-gray-100 text-gray-700">5. Seguridad/IAM/Red</a>
-                        <a href="#sre" class="block px-3 py-2 rounded-lg border bg-gray-50 hover:bg-gray-100 text-gray-700">6. SRE y Costes</a>
-                        <a href="#qa" class="block px-3 py-2 rounded-lg border bg-gray-50 hover:bg-gray-100 text-gray-700">7. Preguntas</a>
-                        <a href="#gobernanza" class="block px-3 py-2 rounded-lg border bg-gray-50 hover:bg-gray-100 text-gray-700">8. Gobernanza</a>
-                        <a href="#finops" class="block px-3 py-2 rounded-lg border bg-gray-50 hover:bg-gray-100 text-gray-700">9. FinOps</a>
-                        <a href="#red-avanzada" class="block px-3 py-2 rounded-lg border bg-gray-50 hover:bg-gray-100 text-gray-700">10. Red Avanzada</a>
-                        <a href="#iam-avanzado" class="block px-3 py-2 rounded-lg border bg-gray-50 hover:bg-gray-100 text-gray-700">11. IAM Avanzado</a>
-                        <a href="#devops" class="block px-3 py-2 rounded-lg border bg-gray-50 hover:bg-gray-100 text-gray-700">12. DevOps</a>
-                        <a href="#migracion" class="block px-3 py-2 rounded-lg border bg-gray-50 hover:bg-gray-100 text-gray-700">13. Migración</a>
-                        <a href="#datos-cumplimiento" class="block px-3 py-2 rounded-lg border bg-gray-50 hover:bg-gray-100 text-gray-700">14. Datos y Cumplimiento</a>
-                        <a href="#seguridad-avanzada" class="block px-3 py-2 rounded-lg border bg-gray-50 hover:bg-gray-100 text-gray-700">15. Seguridad Avanzada</a>
-                        <a href="#almacenamiento-avanzado" class="block px-3 py-2 rounded-lg border bg-gray-50 hover:bg-gray-100 text-gray-700">16. Almacenamiento Avanzado</a>
-                        <a href="#vertex-ai" class="block px-3 py-2 rounded-lg border bg-gray-50 hover:bg-gray-100 text-gray-700">17. Vertex AI</a>
+                        <a href="#fundamentos" class="block px-3 py-2 rounded-lg border bg-gray-50 hover:bg-gray-100 text-gray-700 dark:bg-gray-700 dark:border-gray-600 dark:text-gray-200 dark:hover:bg-gray-600">1. Fundamentos</a>
+                        <a href="#compute" class="block px-3 py-2 rounded-lg border bg-gray-50 hover:bg-gray-100 text-gray-700 dark:bg-gray-700 dark:border-gray-600 dark:text-gray-200 dark:hover:bg-gray-600">2. Compute</a>
+                        <a href="#almacenamiento" class="block px-3 py-2 rounded-lg border bg-gray-50 hover:bg-gray-100 text-gray-700 dark:bg-gray-700 dark:border-gray-600 dark:text-gray-200 dark:hover:bg-gray-600">3. Almacenamiento y BD</a>
+                        <a href="#analitica" class="block px-3 py-2 rounded-lg border bg-gray-50 hover:bg-gray-100 text-gray-700 dark:bg-gray-700 dark:border-gray-600 dark:text-gray-200 dark:hover:bg-gray-600">4. Analítica y ML</a>
+                        <a href="#seguridad" class="block px-3 py-2 rounded-lg border bg-gray-50 hover:bg-gray-100 text-gray-700 dark:bg-gray-700 dark:border-gray-600 dark:text-gray-200 dark:hover:bg-gray-600">5. Seguridad/IAM/Red</a>
+                        <a href="#sre" class="block px-3 py-2 rounded-lg border bg-gray-50 hover:bg-gray-100 text-gray-700 dark:bg-gray-700 dark:border-gray-600 dark:text-gray-200 dark:hover:bg-gray-600">6. SRE y Costes</a>
+                        <a href="#qa" class="block px-3 py-2 rounded-lg border bg-gray-50 hover:bg-gray-100 text-gray-700 dark:bg-gray-700 dark:border-gray-600 dark:text-gray-200 dark:hover:bg-gray-600">7. Preguntas</a>
+                        <a href="#gobernanza" class="block px-3 py-2 rounded-lg border bg-gray-50 hover:bg-gray-100 text-gray-700 dark:bg-gray-700 dark:border-gray-600 dark:text-gray-200 dark:hover:bg-gray-600">8. Gobernanza</a>
+                        <a href="#finops" class="block px-3 py-2 rounded-lg border bg-gray-50 hover:bg-gray-100 text-gray-700 dark:bg-gray-700 dark:border-gray-600 dark:text-gray-200 dark:hover:bg-gray-600">9. FinOps</a>
+                        <a href="#red-avanzada" class="block px-3 py-2 rounded-lg border bg-gray-50 hover:bg-gray-100 text-gray-700 dark:bg-gray-700 dark:border-gray-600 dark:text-gray-200 dark:hover:bg-gray-600">10. Red Avanzada</a>
+                        <a href="#iam-avanzado" class="block px-3 py-2 rounded-lg border bg-gray-50 hover:bg-gray-100 text-gray-700 dark:bg-gray-700 dark:border-gray-600 dark:text-gray-200 dark:hover:bg-gray-600">11. IAM Avanzado</a>
+                        <a href="#devops" class="block px-3 py-2 rounded-lg border bg-gray-50 hover:bg-gray-100 text-gray-700 dark:bg-gray-700 dark:border-gray-600 dark:text-gray-200 dark:hover:bg-gray-600">12. DevOps</a>
+                        <a href="#migracion" class="block px-3 py-2 rounded-lg border bg-gray-50 hover:bg-gray-100 text-gray-700 dark:bg-gray-700 dark:border-gray-600 dark:text-gray-200 dark:hover:bg-gray-600">13. Migración</a>
+                        <a href="#datos-cumplimiento" class="block px-3 py-2 rounded-lg border bg-gray-50 hover:bg-gray-100 text-gray-700 dark:bg-gray-700 dark:border-gray-600 dark:text-gray-200 dark:hover:bg-gray-600">14. Datos y Cumplimiento</a>
+                        <a href="#seguridad-avanzada" class="block px-3 py-2 rounded-lg border bg-gray-50 hover:bg-gray-100 text-gray-700 dark:bg-gray-700 dark:border-gray-600 dark:text-gray-200 dark:hover:bg-gray-600">15. Seguridad Avanzada</a>
+                        <a href="#almacenamiento-avanzado" class="block px-3 py-2 rounded-lg border bg-gray-50 hover:bg-gray-100 text-gray-700 dark:bg-gray-700 dark:border-gray-600 dark:text-gray-200 dark:hover:bg-gray-600">16. Almacenamiento Avanzado</a>
+                        <a href="#vertex-ai" class="block px-3 py-2 rounded-lg border bg-gray-50 hover:bg-gray-100 text-gray-700 dark:bg-gray-700 dark:border-gray-600 dark:text-gray-200 dark:hover:bg-gray-600">17. Vertex AI</a>
                     </nav>
                 </div>
             </aside>
             <main class="col-span-12 lg:col-span-9 space-y-16 notes-wrapper">
         
         <section id="fundamentos">
-            <h2 class="text-3xl font-bold text-blue-700 mb-8 border-b-4 pb-3 border-cyan-400">
+            <h2 class="text-3xl font-bold text-blue-700 dark:text-blue-400 mb-8 border-b-4 pb-3 border-cyan-400 dark:border-cyan-600">
                 ☁️ 1. Fundamentos de Cloud y Economía
             </h2>
             <div class="grid lg:grid-cols-3 gap-8">
-                <div class="study-card bg-gray-50 rounded-xl p-6">
-                    <h3 class="font-bold text-xl text-cyan-600 mb-3">Modelos de Servicio (Servicio y Control)</h3>
-                    <ul class="list-disc list-inside text-sm text-gray-700 space-y-2">
+                <div class="study-card bg-gray-50 dark:bg-gray-800 rounded-xl p-6">
+                    <h3 class="font-bold text-xl text-cyan-600 dark:text-cyan-400 mb-3">Modelos de Servicio (Servicio y Control)</h3>
+                    <ul class="list-disc list-inside text-sm text-gray-700 dark:text-gray-300 space-y-2">
                         <li>**IaaS:** Infraestructura (VMs, Red). Máximo control. Ej: Compute Engine.</li>
                         <li>**PaaS:** Plataforma (SO, Runtime, DB). Enfocado en el código. Ej: App Engine.</li>
                         <li>**SaaS:** Aplicación completa. Mínimo control. Ej: Gmail, Workspace.</li>
                         <li>**FaaS:** Funciones (código efímero) disparadas por eventos. Ej: Cloud Functions.</li>
                     </ul>
                 </div>
-                <div class="study-card bg-gray-50 rounded-xl p-6">
-                    <h3 class="font-bold text-xl text-cyan-600 mb-3">Modelos de Despliegue (Ubicación)</h3>
-                    <ul class="list-disc list-inside text-sm text-gray-700 space-y-2">
+                <div class="study-card bg-gray-50 dark:bg-gray-800 rounded-xl p-6">
+                    <h3 class="font-bold text-xl text-cyan-600 dark:text-cyan-400 mb-3">Modelos de Despliegue (Ubicación)</h3>
+                    <ul class="list-disc list-inside text-sm text-gray-700 dark:text-gray-300 space-y-2">
                         <li>**Pública:** Servicios de GCP, escalabilidad global.</li>
                         <li>**Privada:** Datacenter propio, control exclusivo.</li>
                         <li>**Híbrida:** Integra pública y privada (p. ej., mediante Cloud Interconnect).</li>
                         <li>**Multi-cloud:** Uso estratégico de múltiples proveedores de nube.</li>
                     </ul>
                 </div>
-                <div class="study-card bg-gray-50 rounded-xl p-6">
-                    <h3 class="font-bold text-xl text-cyan-600 mb-3">Valor y Costes</h3>
-                    <ul class="list-disc list-inside text-sm text-gray-700 space-y-2">
+                <div class="study-card bg-gray-50 dark:bg-gray-800 rounded-xl p-6">
+                    <h3 class="font-bold text-xl text-cyan-600 dark:text-cyan-400 mb-3">Valor y Costes</h3>
+                    <ul class="list-disc list-inside text-sm text-gray-700 dark:text-gray-300 space-y-2">
                         <li>**OpEx (Operativo):** Pago por uso, escalabilidad flexible. (Cloud).</li>
                         <li>**CapEx (Capital):** Inversión inicial en hardware. (On-Premises).</li>
                         <li>**FinOps:** Cultura y práctica para gestionar costes de Cloud.</li>
@@ -126,38 +149,38 @@
         </section>
 
         <section id="compute">
-            <h2 class="text-3xl font-bold text-blue-700 mb-8 border-b-4 pb-3 border-cyan-400">
+            <h2 class="text-3xl font-bold text-blue-700 dark:text-blue-400 mb-8 border-b-4 pb-3 border-cyan-400 dark:border-cyan-600">
                 💻 2. Compute: VMs, Contenedores y Serverless
             </h2>
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="study-card bg-white p-5 rounded-xl border border-gray-100 shadow-sm">
-                    <h4 class="font-semibold text-base mb-1 text-blue-600">Compute Engine (VM)</h4>
-                    <p class="text-xs text-gray-600 italic">IaaS - Máximo control de SO.</p>
-                    <ul class="list-disc list-inside text-xs text-gray-700 mt-2 space-y-0.5">
+                <div class="study-card bg-white dark:bg-gray-800 p-5 rounded-xl border border-gray-100 dark:border-gray-700 shadow-sm">
+                    <h4 class="font-semibold text-base mb-1 text-blue-600 dark:text-blue-400">Compute Engine (VM)</h4>
+                    <p class="text-xs text-gray-600 dark:text-gray-400 italic">IaaS - Máximo control de SO.</p>
+                    <ul class="list-disc list-inside text-xs text-gray-700 dark:text-gray-300 mt-2 space-y-0.5">
                         <li>MIGs (Autoescalado / Autorreparación).</li>
                         <li>SUDs y CUDs para ahorro.</li>
                     </ul>
                 </div>
-                <div class="study-card bg-white p-5 rounded-xl border border-gray-100 shadow-sm">
-                    <h4 class="font-semibold text-base mb-1 text-blue-600">GKE (Kubernetes)</h4>
-                    <p class="text-xs text-gray-600 italic">Orquestación de Contenedores.</p>
-                    <ul class="list-disc list-inside text-xs text-gray-700 mt-2 space-y-0.5">
+                <div class="study-card bg-white dark:bg-gray-800 p-5 rounded-xl border border-gray-100 dark:border-gray-700 shadow-sm">
+                    <h4 class="font-semibold text-base mb-1 text-blue-600 dark:text-blue-400">GKE (Kubernetes)</h4>
+                    <p class="text-xs text-gray-600 dark:text-gray-400 italic">Orquestación de Contenedores.</p>
+                    <ul class="list-disc list-inside text-xs text-gray-700 dark:text-gray-300 mt-2 space-y-0.5">
                         <li>**Autopilot:** Serverless para el plano de control (gestión automática).</li>
                         <li>Ideal para Microservicios.</li>
                     </ul>
                 </div>
-                <div class="study-card bg-white p-5 rounded-xl border border-gray-100 shadow-sm">
-                    <h4 class="font-semibold text-base mb-1 text-blue-600">Cloud Run</h4>
-                    <p class="text-xs text-gray-600 italic">Serverless de Contenedores.</p>
-                    <ul class="list-disc list-inside text-xs text-gray-700 mt-2 space-y-0.5">
+                <div class="study-card bg-white dark:bg-gray-800 p-5 rounded-xl border border-gray-100 dark:border-gray-700 shadow-sm">
+                    <h4 class="font-semibold text-base mb-1 text-blue-600 dark:text-blue-400">Cloud Run</h4>
+                    <p class="text-xs text-gray-600 dark:text-gray-400 italic">Serverless de Contenedores.</p>
+                    <ul class="list-disc list-inside text-xs text-gray-700 dark:text-gray-300 mt-2 space-y-0.5">
                         <li>Escala a cero. Pago por uso exacto.</li>
                         <li>Ideal para APIs y backends web sin complejidad de K8s.</li>
                     </ul>
                 </div>
-                <div class="study-card bg-white p-5 rounded-xl border border-gray-100 shadow-sm">
-                    <h4 class="font-semibold text-base mb-1 text-blue-600">App Engine & Functions</h4>
-                    <p class="text-xs text-gray-600 italic">PaaS y FaaS (eventos).</p>
-                    <ul class="list-disc list-inside text-xs text-gray-700 mt-2 space-y-0.5">
+                <div class="study-card bg-white dark:bg-gray-800 p-5 rounded-xl border border-gray-100 dark:border-gray-700 shadow-sm">
+                    <h4 class="font-semibold text-base mb-1 text-blue-600 dark:text-blue-400">App Engine & Functions</h4>
+                    <p class="text-xs text-gray-600 dark:text-gray-400 italic">PaaS y FaaS (eventos).</p>
+                    <ul class="list-disc list-inside text-xs text-gray-700 dark:text-gray-300 mt-2 space-y-0.5">
                         <li>**App Engine:** Plataforma web gestionada.</li>
                         <li>**Functions:** Código event-driven, respuesta rápida.</li>
                     </ul>
@@ -165,21 +188,21 @@
             </div>
 
             <div class="mt-8 highlight-note p-6 rounded-lg shadow-inner">
-                <p class="font-bold text-teal-800 text-lg mb-2">Diseño Resiliente y Global</p>
-                <p class="text-sm text-teal-900">
+                <p class="font-bold text-teal-800 dark:text-teal-200 text-lg mb-2">Diseño Resiliente y Global</p>
+                <p class="text-sm text-teal-900 dark:text-teal-100">
                     La clave para la **Alta Disponibilidad (HA)** es la **redundancia**. Despliega en múltiples **Zonas** (dentro de una región) para protegerte contra fallos de hardware o software. Usa múltiples **Regiones** (Multi-regional) para la **Recuperación ante Desastres (DR)** ante fallos regionales.
                 </p>
             </div>
         </section>
 
         <section id="almacenamiento">
-            <h2 class="text-3xl font-bold text-blue-700 mb-8 border-b-4 pb-3 border-cyan-400">
+            <h2 class="text-3xl font-bold text-blue-700 dark:text-blue-400 mb-8 border-b-4 pb-3 border-cyan-400 dark:border-cyan-600">
                 🗃️ 3. Almacenamiento y Bases de Datos
             </h2>
             <div class="grid lg:grid-cols-2 gap-8">
-                <div class="study-card bg-gray-50 rounded-xl p-6">
-                    <h3 class="font-bold text-xl text-cyan-600 mb-3">Almacenamiento (Discos, Archivos, Objetos)</h3>
-                    <ul class="list-disc list-inside text-sm text-gray-700 space-y-2">
+                <div class="study-card bg-gray-50 dark:bg-gray-800 rounded-xl p-6">
+                    <h3 class="font-bold text-xl text-cyan-600 dark:text-cyan-400 mb-3">Almacenamiento (Discos, Archivos, Objetos)</h3>
+                    <ul class="list-disc list-inside text-sm text-gray-700 dark:text-gray-300 space-y-2">
                         <li>**Cloud Storage (Objetos):** Duradero, escalable, ideal para data lakes, backups, web estática.
                             <ul class="ml-5 list-circle text-xs mt-1">
                                 <li>Clases por frecuencia de acceso: Standard (frecuente), Nearline, Coldline, Archive (menos frecuente).</li>
@@ -189,16 +212,16 @@
                         <li>**Filestore (Archivos):** Servicio gestionado de NFS para cargas de trabajo empresariales que requieren compartición de archivos.</li>
                     </ul>
                 </div>
-                <div class="study-card bg-gray-50 rounded-xl p-6">
-                    <h3 class="font-bold text-xl text-cyan-600 mb-3">Bases de Datos (SQL vs NoSQL)</h3>
+                <div class="study-card bg-gray-50 dark:bg-gray-800 rounded-xl p-6">
+                    <h3 class="font-bold text-xl text-cyan-600 dark:text-cyan-400 mb-3">Bases de Datos (SQL vs NoSQL)</h3>
                     <div class="space-y-3">
-                        <p class="font-semibold text-base text-blue-700">Relacional (ACID):</p>
-                        <ul class="list-disc list-inside text-sm text-gray-700 ml-3 space-y-1">
+                        <p class="font-semibold text-base text-blue-700 dark:text-blue-300">Relacional (ACID):</p>
+                        <ul class="list-disc list-inside text-sm text-gray-700 dark:text-gray-300 ml-3 space-y-1">
                             <li>**Cloud SQL:** Managed MySQL, PostgreSQL, SQL Server. Fácil de usar, escalamiento vertical.</li>
                             <li>**Cloud Spanner:** Base de datos relacional global, escalable horizontalmente y con **consistencia fuerte**. Para cargas críticas de escala masiva.</li>
                         </ul>
-                        <p class="font-semibold text-base text-blue-700 pt-3 border-t">NoSQL (Escalable, Flexible):</p>
-                        <ul class="list-disc list-inside text-sm text-gray-700 ml-3 space-y-1">
+                        <p class="font-semibold text-base text-blue-700 dark:text-blue-300 pt-3 border-t">NoSQL (Escalable, Flexible):</p>
+                        <ul class="list-disc list-inside text-sm text-gray-700 dark:text-gray-300 ml-3 space-y-1">
                             <li>**Cloud Bigtable:** Wide-column de alto rendimiento. Ideal para IoT y series de tiempo.</li>
                             <li>**Firestore:** Documentos. Sincronización en tiempo real para aplicaciones móviles y web.</li>
                         </ul>
@@ -208,22 +231,22 @@
         </section>
 
         <section id="analitica">
-            <h2 class="text-3xl font-bold text-blue-700 mb-8 border-b-4 pb-3 border-cyan-400">
+            <h2 class="text-3xl font-bold text-blue-700 dark:text-blue-400 mb-8 border-b-4 pb-3 border-cyan-400 dark:border-cyan-600">
                 📈 4. Analítica, Streaming y Machine Learning
             </h2>
             <div class="grid lg:grid-cols-2 gap-8">
-                <div class="study-card bg-gray-50 rounded-xl p-6">
-                    <h3 class="font-bold text-xl text-cyan-600 mb-3">Data Engineering y Analítica</h3>
-                    <ul class="list-disc list-inside text-sm text-gray-700 space-y-2">
+                <div class="study-card bg-gray-50 dark:bg-gray-800 rounded-xl p-6">
+                    <h3 class="font-bold text-xl text-cyan-600 dark:text-cyan-400 mb-3">Data Engineering y Analítica</h3>
+                    <ul class="list-disc list-inside text-sm text-gray-700 dark:text-gray-300 space-y-2">
                         <li>**BigQuery:** Data warehouse **serverless** para petabytes. Permite analítica a escala mediante SQL.</li>
                         <li>**Pub/Sub:** Capa de mensajería asíncrona (eventos) para **desacoplar** sistemas. Clave en arquitecturas de streaming.</li>
                         <li>**Dataflow:** Procesamiento de datos **streaming y batch** de forma unificada. Altamente escalable y gestionado.</li>
                         <li>**Dataproc:** Clústeres Hadoop/Spark gestionados. Ideal para migrar ecosistemas existentes.</li>
                     </ul>
                 </div>
-                <div class="study-card bg-gray-50 rounded-xl p-6">
-                    <h3 class="font-bold text-xl text-cyan-600 mb-3">Inteligencia Artificial y ML</h3>
-                    <ul class="list-disc list-inside text-sm text-gray-700 space-y-2">
+                <div class="study-card bg-gray-50 dark:bg-gray-800 rounded-xl p-6">
+                    <h3 class="font-bold text-xl text-cyan-600 dark:text-cyan-400 mb-3">Inteligencia Artificial y ML</h3>
+                    <ul class="list-disc list-inside text-sm text-gray-700 dark:text-gray-300 space-y-2">
                         <li>**Vertex AI:** Plataforma unificada para todo el ciclo de vida de ML (desde el experimento hasta el despliegue).</li>
                         <li>**BigQuery ML (BQML):** Construir modelos de ML (p. ej., forecasting, clustering) directamente usando sintaxis SQL.</li>
                         <li>**AutoML:** Permite a usuarios con poca experiencia en ML crear modelos de alta calidad para casos de uso comunes (Visión, NLP).</li>
@@ -234,30 +257,30 @@
         </section>
 
         <section id="seguridad">
-            <h2 class="text-3xl font-bold text-blue-700 mb-8 border-b-4 pb-3 border-cyan-400">
+            <h2 class="text-3xl font-bold text-blue-700 dark:text-blue-400 mb-8 border-b-4 pb-3 border-cyan-400 dark:border-cyan-600">
                 🛡️ 5. Seguridad, IAM y Red
             </h2>
             <div class="grid lg:grid-cols-3 gap-8">
-                <div class="study-card bg-gray-50 rounded-xl p-6">
-                    <h3 class="font-bold text-xl text-cyan-600 mb-3">Identidad y Gobernanza</h3>
-                    <ul class="list-disc list-inside text-sm text-gray-700 space-y-2">
+                <div class="study-card bg-gray-50 dark:bg-gray-800 rounded-xl p-6">
+                    <h3 class="font-bold text-xl text-cyan-600 dark:text-cyan-400 mb-3">Identidad y Gobernanza</h3>
+                    <ul class="list-disc list-inside text-sm text-gray-700 dark:text-gray-300 space-y-2">
                         <li>**Cloud IAM:** Define el acceso: **Miembro, Rol, Recurso**.</li>
                         <li>**Mínimo Privilegio:** Principio fundamental de seguridad (dar solo lo necesario).</li>
                         <li>**Políticas de Organización:** Gobernanza centralizada (restricción de regiones, desactivación de servicios).</li>
                     </ul>
                 </div>
-                <div class="study-card bg-gray-50 rounded-xl p-6">
-                    <h3 class="font-bold text-xl text-cyan-600 mb-3">Protección y Cifrado</h3>
-                    <ul class="list-disc list-inside text-sm text-gray-700 space-y-2">
+                <div class="study-card bg-gray-50 dark:bg-gray-800 rounded-xl p-6">
+                    <h3 class="font-bold text-xl text-cyan-600 dark:text-cyan-400 mb-3">Protección y Cifrado</h3>
+                    <ul class="list-disc list-inside text-sm text-gray-700 dark:text-gray-300 space-y-2">
                         <li>**Cifrado por Defecto:** Todos los datos en reposo son cifrados (Google gestiona las claves).</li>
                         <li>**Cloud KMS:** Servicio gestionado de claves. Permite usar **CMEK** (claves gestionadas por el cliente).</li>
                         <li>**Security Command Center:** Vista unificada de riesgos, vulnerabilidades y cumplimiento.</li>
                         <li>**Cloud Armor:** WAF y mitigación de ataques **DDoS** en el borde de la red.</li>
                     </ul>
                 </div>
-                <div class="study-card bg-gray-50 rounded-xl p-6">
-                    <h3 class="font-bold text-xl text-cyan-600 mb-3">Red y Conectividad</h3>
-                    <ul class="list-disc list-inside text-sm text-gray-700 space-y-2">
+                <div class="study-card bg-gray-50 dark:bg-gray-800 rounded-xl p-6">
+                    <h3 class="font-bold text-xl text-cyan-600 dark:text-cyan-400 mb-3">Red y Conectividad</h3>
+                    <ul class="list-disc list-inside text-sm text-gray-700 dark:text-gray-300 space-y-2">
                         <li>**VPC:** Red global. Las subredes son regionales.</li>
                         <li>**Cloud Load Balancing:** Balanceador de carga global, mejora el rendimiento y HA.</li>
                         <li>**Cloud Interconnect:** Conexión dedicada de alta velocidad On-premises a GCP.</li>
@@ -268,22 +291,22 @@
         </section>
         
         <section id="sre">
-            <h2 class="text-3xl font-bold text-blue-700 mb-8 border-b-4 pb-3 border-cyan-400">
+            <h2 class="text-3xl font-bold text-blue-700 dark:text-blue-400 mb-8 border-b-4 pb-3 border-cyan-400 dark:border-cyan-600">
                 ⚙️ 6. Observabilidad, SRE y Optimización de Costes
             </h2>
             <div class="grid lg:grid-cols-2 gap-8">
-                <div class="study-card bg-gray-50 rounded-xl p-6">
-                    <h3 class="font-bold text-xl text-cyan-600 mb-3">SRE y Observabilidad</h3>
-                    <ul class="list-disc list-inside text-sm text-gray-700 space-y-2">
+                <div class="study-card bg-gray-50 dark:bg-gray-800 rounded-xl p-6">
+                    <h3 class="font-bold text-xl text-cyan-600 dark:text-cyan-400 mb-3">SRE y Observabilidad</h3>
+                    <ul class="list-disc list-inside text-sm text-gray-700 dark:text-gray-300 space-y-2">
                         <li>**Observabilidad:** Logging, Monitoring, Trace, Profiler, Debugger (Visión 360° del sistema).</li>
                         <li>**SLO (Service Level Objective):** El objetivo de disponibilidad que promete el equipo al usuario (lo que se mide).</li>
                         <li>**Presupuesto de Error:** La tolerancia al fallo permitida (tiempo que se puede incumplir el SLO).</li>
                         <li>**Automatización del Toil:** Eliminar el trabajo manual para centrarse en la ingeniería.</li>
                     </ul>
                 </div>
-                <div class="study-card bg-gray-50 rounded-xl p-6">
-                    <h3 class="font-bold text-xl text-cyan-600 mb-3">Optimización de Costes (FinOps)</h3>
-                    <ul class="list-disc list-inside text-sm text-gray-700 space-y-2">
+                <div class="study-card bg-gray-50 dark:bg-gray-800 rounded-xl p-6">
+                    <h3 class="font-bold text-xl text-cyan-600 dark:text-cyan-400 mb-3">Optimización de Costes (FinOps)</h3>
+                    <ul class="list-disc list-inside text-sm text-gray-700 dark:text-gray-300 space-y-2">
                         <li>**CUDs (Committed Use Discounts):** Descuentos por comprometerse a un uso constante (1 o 3 años). Máximo ahorro.</li>
                         <li>**SUDs (Sustained Use Discounts):** Descuentos automáticos por usar VMs durante gran parte del mes.</li>
                         <li>**VMs Preemptibles (Spot VMs):** VMs baratas para cargas tolerantes a interrupciones (p. ej., batch).</li>
@@ -294,13 +317,13 @@
         </section>
         
         <section id="qa">
-            <h2 class="text-3xl font-bold text-blue-700 mb-8 border-b-4 pb-3 border-cyan-400">
+            <h2 class="text-3xl font-bold text-blue-700 dark:text-blue-400 mb-8 border-b-4 pb-3 border-cyan-400 dark:border-cyan-600">
                 🧠 7. Preguntas y Respuestas del Examen (Resumen)
             </h2>
             <div class="grid lg:grid-cols-3 gap-8">
-                <div class="study-card bg-white p-5 rounded-xl border border-gray-100 shadow-sm">
-                    <h3 class="font-bold text-xl text-cyan-600 mb-3">Fundamentos y Economía</h3>
-                    <ul class="list-disc list-inside text-sm text-gray-700 space-y-2">
+                <div class="study-card bg-white dark:bg-gray-800 p-5 rounded-xl border border-gray-100 dark:border-gray-700 shadow-sm">
+                    <h3 class="font-bold text-xl text-cyan-600 dark:text-cyan-400 mb-3">Fundamentos y Economía</h3>
+                    <ul class="list-disc list-inside text-sm text-gray-700 dark:text-gray-300 space-y-2">
                         <li>Propuesta de valor: reducir costes y escalar bajo demanda con pago por uso.</li>
                         <li>CapEx a OpEx: convertir compras de hardware en tarifas de servicio.</li>
                         <li>TCO: suele disminuir al optimizar consumo y gobernanza en nube.</li>
@@ -309,52 +332,52 @@
                         <li>Latencia vs ancho de banda: latencia es demora; ancho de banda es capacidad.</li>
                     </ul>
                 </div>
-                <div class="study-card bg-white p-5 rounded-xl border border-gray-100 shadow-sm">
-                    <h3 class="font-bold text-xl text-cyan-600 mb-3">Modelos de Servicio</h3>
-                    <ul class="list-disc list-inside text-sm text-gray-700 space-y-2">
+                <div class="study-card bg-white dark:bg-gray-800 p-5 rounded-xl border border-gray-100 dark:border-gray-700 shadow-sm">
+                    <h3 class="font-bold text-xl text-cyan-600 dark:text-cyan-400 mb-3">Modelos de Servicio</h3>
+                    <ul class="list-disc list-inside text-sm text-gray-700 dark:text-gray-300 space-y-2">
                         <li>IaaS: proveedor entrega infraestructura; cliente gestiona SO y apps.</li>
                         <li>PaaS: proveedor gestiona plataforma y herramientas; cliente apps y datos.</li>
                         <li>SaaS: proveedor gestiona toda la aplicación; el cliente solo usa y configura.</li>
                         <li>Responsabilidad compartida: al pasar a SaaS, aumenta responsabilidad del proveedor.</li>
                     </ul>
                 </div>
-                <div class="study-card bg-white p-5 rounded-xl border border-gray-100 shadow-sm">
-                    <h3 class="font-bold text-xl text-cyan-600 mb-3">Red y Conectividad</h3>
-                    <ul class="list-disc list-inside text-sm text-gray-700 space-y-2">
+                <div class="study-card bg-white dark:bg-gray-800 p-5 rounded-xl border border-gray-100 dark:border-gray-700 shadow-sm">
+                    <h3 class="font-bold text-xl text-cyan-600 dark:text-cyan-400 mb-3">Red y Conectividad</h3>
+                    <ul class="list-disc list-inside text-sm text-gray-700 dark:text-gray-300 space-y-2">
                         <li>DNS: traduce nombres de dominio a direcciones IP para el ruteo.</li>
                         <li>Fibra óptica: más datos y velocidad a largas distancias con menor pérdida.</li>
                     </ul>
                 </div>
-                <div class="study-card bg-white p-5 rounded-xl border border-gray-100 shadow-sm">
-                    <h3 class="font-bold text-xl text-cyan-600 mb-3">Cumplimiento y Residencia</h3>
-                    <ul class="list-disc list-inside text-sm text-gray-700 space-y-2">
+                <div class="study-card bg-white dark:bg-gray-800 p-5 rounded-xl border border-gray-100 dark:border-gray-700 shadow-sm">
+                    <h3 class="font-bold text-xl text-cyan-600 dark:text-cyan-400 mb-3">Cumplimiento y Residencia</h3>
+                    <ul class="list-disc list-inside text-sm text-gray-700 dark:text-gray-300 space-y-2">
                         <li>Residencia de datos: elegir proveedor público que garantice ubicación regional.</li>
                         <li>Entrega global: servir contenido mundialmente manteniendo almacenamiento en la región requerida.</li>
                     </ul>
                 </div>
-                <div class="study-card bg-white p-5 rounded-xl border border-gray-100 shadow-sm">
-                    <h3 class="font-bold text-xl text-cyan-600 mb-3">Compute y Licenciamiento</h3>
-                    <ul class="list-disc list-inside text-sm text-gray-700 space-y-2">
+                <div class="study-card bg-white dark:bg-gray-800 p-5 rounded-xl border border-gray-100 dark:border-gray-700 shadow-sm">
+                    <h3 class="font-bold text-xl text-cyan-600 dark:text-cyan-400 mb-3">Compute y Licenciamiento</h3>
+                    <ul class="list-disc list-inside text-sm text-gray-700 dark:text-gray-300 space-y-2">
                         <li>Picos temporales (2 semanas): usar VM bajo demanda, no compromisos a 1–3 años.</li>
                         <li>Windows Server: optimizar con licenciamiento PAYG en Compute Engine.</li>
                     </ul>
                 </div>
-                <div class="study-card bg-white p-5 rounded-xl border border-gray-100 shadow-sm">
-                    <h3 class="font-bold text-xl text-cyan-600 mb-3">Seguridad y Gobernanza</h3>
-                    <ul class="list-disc list-inside text-sm text-gray-700 space-y-2">
+                <div class="study-card bg-white dark:bg-gray-800 p-5 rounded-xl border border-gray-100 dark:border-gray-700 shadow-sm">
+                    <h3 class="font-bold text-xl text-cyan-600 dark:text-cyan-400 mb-3">Seguridad y Gobernanza</h3>
+                    <ul class="list-disc list-inside text-sm text-gray-700 dark:text-gray-300 space-y-2">
                         <li>Identificar VMs vulnerables: usar Security Command Center.</li>
                         <li>Proveedor nube pública: mantenimiento de hardware y gestión de capacidad.</li>
                     </ul>
                 </div>
-                <div class="study-card bg-white p-5 rounded-xl border border-gray-100 shadow-sm">
-                    <h3 class="font-bold text-xl text-cyan-600 mb-3">Arquitectura y Latencia</h3>
-                    <ul class="list-disc list-inside text-sm text-gray-700 space-y-2">
+                <div class="study-card bg-white dark:bg-gray-800 p-5 rounded-xl border border-gray-100 dark:border-gray-700 shadow-sm">
+                    <h3 class="font-bold text-xl text-cyan-600 dark:text-cyan-400 mb-3">Arquitectura y Latencia</h3>
+                    <ul class="list-disc list-inside text-sm text-gray-700 dark:text-gray-300 space-y-2">
                         <li>Redundancia con baja latencia: distribuir VMs en distintas zonas de una misma región.</li>
                         <li>Característica clave de cloud: entrega bajo demanda vía Internet con autoservicio.</li>
                     </ul>
                 </div>
-                <div class="study-card bg-gray-50 rounded-xl p-6">
-                    <p class="text-sm text-gray-700">
+                <div class="study-card bg-gray-50 dark:bg-gray-800 rounded-xl p-6">
+                    <p class="text-sm text-gray-700 dark:text-gray-300">
                         Esta sección resume respuestas clave del banco de preguntas para reforzar conceptos de coste, arquitectura, seguridad y operaciones.
                     </p>
                 </div>
@@ -362,29 +385,29 @@
         </section>
 
         <section id="gobernanza">
-            <h2 class="text-3xl font-bold text-blue-700 mb-8 border-b-4 pb-3 border-cyan-400">
+            <h2 class="text-3xl font-bold text-blue-700 dark:text-blue-400 mb-8 border-b-4 pb-3 border-cyan-400 dark:border-cyan-600">
                 🏛️ 8. Jerarquía de Recursos y Gobernanza
             </h2>
             <div class="grid lg:grid-cols-3 gap-8">
-                <div class="study-card bg-gray-50 rounded-xl p-6">
-                    <h3 class="font-bold text-xl text-cyan-600 mb-3">Estructura</h3>
-                    <ul class="list-disc list-inside text-sm text-gray-700 space-y-2">
+                <div class="study-card bg-gray-50 dark:bg-gray-800 rounded-xl p-6">
+                    <h3 class="font-bold text-xl text-cyan-600 dark:text-cyan-400 mb-3">Estructura</h3>
+                    <ul class="list-disc list-inside text-sm text-gray-700 dark:text-gray-300 space-y-2">
                         <li>Organización → Carpetas → Proyectos → Recursos.</li>
                         <li>Herencia: IAM y Políticas se propagan hacia abajo.</li>
                         <li>Separación: proyectos por entorno (dev/test/prod) y dominio.</li>
                     </ul>
                 </div>
-                <div class="study-card bg-gray-50 rounded-xl p-6">
-                    <h3 class="font-bold text-xl text-cyan-600 mb-3">Políticas de Organización</h3>
-                    <ul class="list-disc list-inside text-sm text-gray-700 space-y-2">
+                <div class="study-card bg-gray-50 dark:bg-gray-800 rounded-xl p-6">
+                    <h3 class="font-bold text-xl text-cyan-600 dark:text-cyan-400 mb-3">Políticas de Organización</h3>
+                    <ul class="list-disc list-inside text-sm text-gray-700 dark:text-gray-300 space-y-2">
                         <li>Restringir regiones, tipos de recursos y servicios permitidos.</li>
                         <li>Aplicar controles globales de cumplimiento y seguridad.</li>
                         <li>Etiquetas y Tags para gobernanza y coste.</li>
                     </ul>
                 </div>
-                <div class="study-card bg-gray-50 rounded-xl p-6">
-                    <h3 class="font-bold text-xl text-cyan-600 mb-3">Buenas Prácticas</h3>
-                    <ul class="list-disc list-inside text-sm text-gray-700 space-y-2">
+                <div class="study-card bg-gray-50 dark:bg-gray-800 rounded-xl p-6">
+                    <h3 class="font-bold text-xl text-cyan-600 dark:text-cyan-400 mb-3">Buenas Prácticas</h3>
+                    <ul class="list-disc list-inside text-sm text-gray-700 dark:text-gray-300 space-y-2">
                         <li>Diseño por dominio: equipos y líneas de producto.</li>
                         <li>Separación de duty: acceso mínimo y revisiones periódicas.</li>
                         <li>Automatizar aprovisionamiento con IaC.</li>
@@ -394,29 +417,29 @@
         </section>
 
         <section id="finops">
-            <h2 class="text-3xl font-bold text-blue-700 mb-8 border-b-4 pb-3 border-cyan-400">
+            <h2 class="text-3xl font-bold text-blue-700 dark:text-blue-400 mb-8 border-b-4 pb-3 border-cyan-400 dark:border-cyan-600">
                 💳 9. Facturación y FinOps Avanzado
             </h2>
             <div class="grid lg:grid-cols-3 gap-8">
-                <div class="study-card bg-white p-5 rounded-xl border border-gray-100 shadow-sm">
-                    <h3 class="font-bold text-xl text-cyan-600 mb-3">Cuenta de Facturación</h3>
-                    <ul class="list-disc list-inside text-sm text-gray-700 space-y-2">
+                <div class="study-card bg-white dark:bg-gray-800 p-5 rounded-xl border border-gray-100 dark:border-gray-700 shadow-sm">
+                    <h3 class="font-bold text-xl text-cyan-600 dark:text-cyan-400 mb-3">Cuenta de Facturación</h3>
+                    <ul class="list-disc list-inside text-sm text-gray-700 dark:text-gray-300 space-y-2">
                         <li>Vincular proyectos a cuentas de facturación.</li>
                         <li>Presupuestos y alertas para evitar sobrecostes.</li>
                         <li>Exportar costes a BigQuery para análisis.</li>
                     </ul>
                 </div>
-                <div class="study-card bg-white p-5 rounded-xl border border-gray-100 shadow-sm">
-                    <h3 class="font-bold text-xl text-cyan-600 mb-3">Optimización</h3>
-                    <ul class="list-disc list-inside text-sm text-gray-700 space-y-2">
+                <div class="study-card bg-white dark:bg-gray-800 p-5 rounded-xl border border-gray-100 dark:border-gray-700 shadow-sm">
+                    <h3 class="font-bold text-xl text-cyan-600 dark:text-cyan-400 mb-3">Optimización</h3>
+                    <ul class="list-disc list-inside text-sm text-gray-700 dark:text-gray-300 space-y-2">
                         <li>CUDs (1–3 años), SUDs y Spot VMs.</li>
                         <li>Recommender: rightsizing y apagado de recursos ociosos.</li>
                         <li>Autoescalado y escalado a cero en serverless.</li>
                     </ul>
                 </div>
-                <div class="study-card bg-white p-5 rounded-xl border border-gray-100 shadow-sm">
-                    <h3 class="font-bold text-xl text-cyan-600 mb-3">Imputación de Costes</h3>
-                    <ul class="list-disc list-inside text-sm text-gray-700 space-y-2">
+                <div class="study-card bg-white dark:bg-gray-800 p-5 rounded-xl border border-gray-100 dark:border-gray-700 shadow-sm">
+                    <h3 class="font-bold text-xl text-cyan-600 dark:text-cyan-400 mb-3">Imputación de Costes</h3>
+                    <ul class="list-disc list-inside text-sm text-gray-700 dark:text-gray-300 space-y-2">
                         <li>Etiquetas y Tags para centros de coste y proyectos.</li>
                         <li>Carpetas por unidad de negocio para reportes.</li>
                         <li>Políticas para prevenir recursos no aprobados.</li>
@@ -426,29 +449,29 @@
         </section>
 
         <section id="red-avanzada">
-            <h2 class="text-3xl font-bold text-blue-700 mb-8 border-b-4 pb-3 border-cyan-400">
+            <h2 class="text-3xl font-bold text-blue-700 dark:text-blue-400 mb-8 border-b-4 pb-3 border-cyan-400 dark:border-cyan-600">
                 🌐 10. Red Avanzada y Entrega
             </h2>
             <div class="grid lg:grid-cols-3 gap-8">
-                <div class="study-card bg-gray-50 rounded-xl p-6">
-                    <h3 class="font-bold text-xl text-cyan-600 mb-3">Balanceadores</h3>
-                    <ul class="list-disc list-inside text-sm text-gray-700 space-y-2">
+                <div class="study-card bg-gray-50 dark:bg-gray-800 rounded-xl p-6">
+                    <h3 class="font-bold text-xl text-cyan-600 dark:text-cyan-400 mb-3">Balanceadores</h3>
+                    <ul class="list-disc list-inside text-sm text-gray-700 dark:text-gray-300 space-y-2">
                         <li>HTTP(S) global, SSL/TCP Proxy, UDP, internos.</li>
                         <li>Anycast global para distribución de tráfico.</li>
                         <li>Integración con Cloud Armor y CDN.</li>
                     </ul>
                 </div>
-                <div class="study-card bg-gray-50 rounded-xl p-6">
-                    <h3 class="font-bold text-xl text-cyan-600 mb-3">Conectividad</h3>
-                    <ul class="list-disc list-inside text-sm text-gray-700 space-y-2">
+                <div class="study-card bg-gray-50 dark:bg-gray-800 rounded-xl p-6">
+                    <h3 class="font-bold text-xl text-cyan-600 dark:text-cyan-400 mb-3">Conectividad</h3>
+                    <ul class="list-disc list-inside text-sm text-gray-700 dark:text-gray-300 space-y-2">
                         <li>Cloud VPN y Cloud Interconnect (dedicada/partner).</li>
                         <li>Cloud NAT para salida sin IP pública.</li>
                         <li>VPC Peering y Private Service Connect.</li>
                     </ul>
                 </div>
-                <div class="study-card bg-gray-50 rounded-xl p-6">
-                    <h3 class="font-bold text-xl text-cyan-600 mb-3">Entrega</h3>
-                    <ul class="list-disc list-inside text-sm text-gray-700 space-y-2">
+                <div class="study-card bg-gray-50 dark:bg-gray-800 rounded-xl p-6">
+                    <h3 class="font-bold text-xl text-cyan-600 dark:text-cyan-400 mb-3">Entrega</h3>
+                    <ul class="list-disc list-inside text-sm text-gray-700 dark:text-gray-300 space-y-2">
                         <li>Cloud CDN para contenido estático global.</li>
                         <li>Cloud DNS autoritativo y resolutor.</li>
                         <li>Zonas vs regiones: latencia y DR.</li>
@@ -458,29 +481,29 @@
         </section>
 
         <section id="iam-avanzado">
-            <h2 class="text-3xl font-bold text-blue-700 mb-8 border-b-4 pb-3 border-cyan-400">
+            <h2 class="text-3xl font-bold text-blue-700 dark:text-blue-400 mb-8 border-b-4 pb-3 border-cyan-400 dark:border-cyan-600">
                 🔐 11. Identidad y Acceso Avanzado
             </h2>
             <div class="grid lg:grid-cols-3 gap-8">
-                <div class="study-card bg-white p-5 rounded-xl border border-gray-100 shadow-sm">
-                    <h3 class="font-bold text-xl text-cyan-600 mb-3">Roles y Principios</h3>
-                    <ul class="list-disc list-inside text-sm text-gray-700 space-y-2">
+                <div class="study-card bg-white dark:bg-gray-800 p-5 rounded-xl border border-gray-100 dark:border-gray-700 shadow-sm">
+                    <h3 class="font-bold text-xl text-cyan-600 dark:text-cyan-400 mb-3">Roles y Principios</h3>
+                    <ul class="list-disc list-inside text-sm text-gray-700 dark:text-gray-300 space-y-2">
                         <li>Roles básicos, predefinidos y personalizados.</li>
                         <li>Miembros: usuarios, grupos, SA, dominios.</li>
                         <li>Condiciones IAM y acceso temporal.</li>
                     </ul>
                 </div>
-                <div class="study-card bg-white p-5 rounded-xl border border-gray-100 shadow-sm">
-                    <h3 class="font-bold text-xl text-cyan-600 mb-3">Cuentas de Servicio</h3>
-                    <ul class="list-disc list-inside text-sm text-gray-700 space-y-2">
+                <div class="study-card bg-white dark:bg-gray-800 p-5 rounded-xl border border-gray-100 dark:border-gray-700 shadow-sm">
+                    <h3 class="font-bold text-xl text-cyan-600 dark:text-cyan-400 mb-3">Cuentas de Servicio</h3>
+                    <ul class="list-disc list-inside text-sm text-gray-700 dark:text-gray-300 space-y-2">
                         <li>SA por aplicación y principio de mínimo privilegio.</li>
                         <li>Workload Identity Federation (sin claves largas).</li>
                         <li>Rotación y auditoría de llaves.</li>
                     </ul>
                 </div>
-                <div class="study-card bg-white p-5 rounded-xl border border-gray-100 shadow-sm">
-                    <h3 class="font-bold text-xl text-cyan-600 mb-3">Acceso a Apps</h3>
-                    <ul class="list-disc list-inside text-sm text-gray-700 space-y-2">
+                <div class="study-card bg-white dark:bg-gray-800 p-5 rounded-xl border border-gray-100 dark:border-gray-700 shadow-sm">
+                    <h3 class="font-bold text-xl text-cyan-600 dark:text-cyan-400 mb-3">Acceso a Apps</h3>
+                    <ul class="list-disc list-inside text-sm text-gray-700 dark:text-gray-300 space-y-2">
                         <li>Identity-Aware Proxy (IAP) para acceso web seguro.</li>
                         <li>Autenticación y autorización centralizada.</li>
                         <li>Zero Trust: BeyondCorp.</li>
@@ -490,29 +513,29 @@
         </section>
 
         <section id="devops">
-            <h2 class="text-3xl font-bold text-blue-700 mb-8 border-b-4 pb-3 border-cyan-400">
+            <h2 class="text-3xl font-bold text-blue-700 dark:text-blue-400 mb-8 border-b-4 pb-3 border-cyan-400 dark:border-cyan-600">
                 🔧 12. DevOps y CI/CD
             </h2>
             <div class="grid lg:grid-cols-3 gap-8">
-                <div class="study-card bg-gray-50 rounded-xl p-6">
-                    <h3 class="font-bold text-xl text-cyan-600 mb-3">Herramientas</h3>
-                    <ul class="list-disc list-inside text-sm text-gray-700 space-y-2">
+                <div class="study-card bg-gray-50 dark:bg-gray-800 rounded-xl p-6">
+                    <h3 class="font-bold text-xl text-cyan-600 dark:text-cyan-400 mb-3">Herramientas</h3>
+                    <ul class="list-disc list-inside text-sm text-gray-700 dark:text-gray-300 space-y-2">
                         <li>Cloud Build para pipelines CI/CD.</li>
                         <li>Artifact Registry para contenedores y paquetes.</li>
                         <li>Cloud Deploy para entrega progresiva.</li>
                     </ul>
                 </div>
-                <div class="study-card bg-gray-50 rounded-xl p-6">
-                    <h3 class="font-bold text-xl text-cyan-600 mb-3">Infraestructura como Código</h3>
-                    <ul class="list-disc list-inside text-sm text-gray-700 space-y-2">
+                <div class="study-card bg-gray-50 dark:bg-gray-800 rounded-xl p-6">
+                    <h3 class="font-bold text-xl text-cyan-600 dark:text-cyan-400 mb-3">Infraestructura como Código</h3>
+                    <ul class="list-disc list-inside text-sm text-gray-700 dark:text-gray-300 space-y-2">
                         <li>Terraform y Config Connector.</li>
                         <li>Declarativo, revisiones y controles.</li>
                         <li>Entornos y promociones controladas.</li>
                     </ul>
                 </div>
-                <div class="study-card bg-gray-50 rounded-xl p-6">
-                    <h3 class="font-bold text-xl text-cyan-600 mb-3">Calidad y Seguridad</h3>
-                    <ul class="list-disc list-inside text-sm text-gray-700 space-y-2">
+                <div class="study-card bg-gray-50 dark:bg-gray-800 rounded-xl p-6">
+                    <h3 class="font-bold text-xl text-cyan-600 dark:text-cyan-400 mb-3">Calidad y Seguridad</h3>
+                    <ul class="list-disc list-inside text-sm text-gray-700 dark:text-gray-300 space-y-2">
                         <li>Pruebas automatizadas y escaneo de imágenes.</li>
                         <li>Binary Authorization en GKE.</li>
                         <li>Gestión de secretos en pipelines.</li>
@@ -522,29 +545,29 @@
         </section>
 
         <section id="migracion">
-            <h2 class="text-3xl font-bold text-blue-700 mb-8 border-b-4 pb-3 border-cyan-400">
+            <h2 class="text-3xl font-bold text-blue-700 dark:text-blue-400 mb-8 border-b-4 pb-3 border-cyan-400 dark:border-cyan-600">
                 🚀 13. Migración y Modernización
             </h2>
             <div class="grid lg:grid-cols-3 gap-8">
-                <div class="study-card bg-white p-5 rounded-xl border border-gray-100 shadow-sm">
-                    <h3 class="font-bold text-xl text-cyan-600 mb-3">Estrategias</h3>
-                    <ul class="list-disc list-inside text-sm text-gray-700 space-y-2">
+                <div class="study-card bg-white dark:bg-gray-800 p-5 rounded-xl border border-gray-100 dark:border-gray-700 shadow-sm">
+                    <h3 class="font-bold text-xl text-cyan-600 dark:text-cyan-400 mb-3">Estrategias</h3>
+                    <ul class="list-disc list-inside text-sm text-gray-700 dark:text-gray-300 space-y-2">
                         <li>Rehost (lift-and-shift), Replatform, Refactor.</li>
                         <li>Contenerización y serverless.</li>
                         <li>Evaluar dependencia y latencia.</li>
                     </ul>
                 </div>
-                <div class="study-card bg-white p-5 rounded-xl border border-gray-100 shadow-sm">
-                    <h3 class="font-bold text-xl text-cyan-600 mb-3">Datos</h3>
-                    <ul class="list-disc list-inside text-sm text-gray-700 space-y-2">
+                <div class="study-card bg-white dark:bg-gray-800 p-5 rounded-xl border border-gray-100 dark:border-gray-700 shadow-sm">
+                    <h3 class="font-bold text-xl text-cyan-600 dark:text-cyan-400 mb-3">Datos</h3>
+                    <ul class="list-disc list-inside text-sm text-gray-700 dark:text-gray-300 space-y-2">
                         <li>Transfer Service y migraciones a BigQuery.</li>
                         <li>Plan de DR y residencias de datos.</li>
                         <li>Validación y reconciliación.</li>
                     </ul>
                 </div>
-                <div class="study-card bg-white p-5 rounded-xl border border-gray-100 shadow-sm">
-                    <h3 class="font-bold text-xl text-cyan-600 mb-3">Operación</h3>
-                    <ul class="list-disc list-inside text-sm text-gray-700 space-y-2">
+                <div class="study-card bg-white dark:bg-gray-800 p-5 rounded-xl border border-gray-100 dark:border-gray-700 shadow-sm">
+                    <h3 class="font-bold text-xl text-cyan-600 dark:text-cyan-400 mb-3">Operación</h3>
+                    <ul class="list-disc list-inside text-sm text-gray-700 dark:text-gray-300 space-y-2">
                         <li>Blue/Green y canary deployments.</li>
                         <li>Observabilidad desde el día 0.</li>
                         <li>Automatización y rollback rápido.</li>
@@ -554,29 +577,29 @@
         </section>
 
         <section id="datos-cumplimiento">
-            <h2 class="text-3xl font-bold text-blue-700 mb-8 border-b-4 pb-3 border-cyan-400">
+            <h2 class="text-3xl font-bold text-blue-700 dark:text-blue-400 mb-8 border-b-4 pb-3 border-cyan-400 dark:border-cyan-600">
                 📚 14. Gobierno de Datos y Cumplimiento
             </h2>
             <div class="grid lg:grid-cols-3 gap-8">
-                <div class="study-card bg-gray-50 rounded-xl p-6">
-                    <h3 class="font-bold text-xl text-cyan-600 mb-3">Catálogo y Calidad</h3>
-                    <ul class="list-disc list-inside text-sm text-gray-700 space-y-2">
+                <div class="study-card bg-gray-50 dark:bg-gray-800 rounded-xl p-6">
+                    <h3 class="font-bold text-xl text-cyan-600 dark:text-cyan-400 mb-3">Catálogo y Calidad</h3>
+                    <ul class="list-disc list-inside text-sm text-gray-700 dark:text-gray-300 space-y-2">
                         <li>Data Catalog para metadatos y linaje.</li>
                         <li>Dataplex para gobernanza de lakes.</li>
                         <li>Particiones y clustering en BigQuery.</li>
                     </ul>
                 </div>
-                <div class="study-card bg-gray-50 rounded-xl p-6">
-                    <h3 class="font-bold text-xl text-cyan-600 mb-3">Privacidad</h3>
-                    <ul class="list-disc list-inside text-sm text-gray-700 space-y-2">
+                <div class="study-card bg-gray-50 dark:bg-gray-800 rounded-xl p-6">
+                    <h3 class="font-bold text-xl text-cyan-600 dark:text-cyan-400 mb-3">Privacidad</h3>
+                    <ul class="list-disc list-inside text-sm text-gray-700 dark:text-gray-300 space-y-2">
                         <li>Cloud DLP para detectar y enmascarar PII.</li>
                         <li>Retención y versionado en Cloud Storage.</li>
                         <li>Cifrado CMEK/Google-managed y VPC SC.</li>
                     </ul>
                 </div>
-                <div class="study-card bg-gray-50 rounded-xl p-6">
-                    <h3 class="font-bold text-xl text-cyan-600 mb-3">Cumplimiento</h3>
-                    <ul class="list-disc list-inside text-sm text-gray-700 space-y-2">
+                <div class="study-card bg-gray-50 dark:bg-gray-800 rounded-xl p-6">
+                    <h3 class="font-bold text-xl text-cyan-600 dark:text-cyan-400 mb-3">Cumplimiento</h3>
+                    <ul class="list-disc list-inside text-sm text-gray-700 dark:text-gray-300 space-y-2">
                         <li>PCI, HIPAA, SOC: responsabilidad compartida.</li>
                         <li>Residencia de datos y auditorías.</li>
                         <li>Políticas y controles preventivos.</li>
@@ -586,29 +609,29 @@
         </section>
         
         <section id="seguridad-avanzada">
-            <h2 class="text-3xl font-bold text-blue-700 mb-8 border-b-4 pb-3 border-cyan-400">
+            <h2 class="text-3xl font-bold text-blue-700 dark:text-blue-400 mb-8 border-b-4 pb-3 border-cyan-400 dark:border-cyan-600">
                 🛡️ 15. Seguridad Avanzada
             </h2>
             <div class="grid lg:grid-cols-3 gap-8">
-                <div class="study-card bg-white p-5 rounded-xl border border-gray-100 shadow-sm">
-                    <h3 class="font-bold text-xl text-cyan-600 mb-3">Protección</h3>
-                    <ul class="list-disc list-inside text-sm text-gray-700 space-y-2">
+                <div class="study-card bg-white dark:bg-gray-800 p-5 rounded-xl border border-gray-100 dark:border-gray-700 shadow-sm">
+                    <h3 class="font-bold text-xl text-cyan-600 dark:text-cyan-400 mb-3">Protección</h3>
+                    <ul class="list-disc list-inside text-sm text-gray-700 dark:text-gray-300 space-y-2">
                         <li>Cloud Armor (WAF, DDoS).</li>
                         <li>Shielded VMs y parches del SO.</li>
                         <li>Secret Manager y rotación de secretos.</li>
                     </ul>
                 </div>
-                <div class="study-card bg-white p-5 rounded-xl border border-gray-100 shadow-sm">
-                    <h3 class="font-bold text-xl text-cyan-600 mb-3">Detección y Respuesta</h3>
-                    <ul class="list-disc list-inside text-sm text-gray-700 space-y-2">
+                <div class="study-card bg-white dark:bg-gray-800 p-5 rounded-xl border border-gray-100 dark:border-gray-700 shadow-sm">
+                    <h3 class="font-bold text-xl text-cyan-600 dark:text-cyan-400 mb-3">Detección y Respuesta</h3>
+                    <ul class="list-disc list-inside text-sm text-gray-700 dark:text-gray-300 space-y-2">
                         <li>Security Command Center y Health Analytics.</li>
                         <li>Container Analysis y vulnerabilidades.</li>
                         <li>Web Security Scanner para apps.</li>
                     </ul>
                 </div>
-                <div class="study-card bg-white p-5 rounded-xl border border-gray-100 shadow-sm">
-                    <h3 class="font-bold text-xl text-cyan-600 mb-3">Aislamiento</h3>
-                    <ul class="list-disc list-inside text-sm text-gray-700 space-y-2">
+                <div class="study-card bg-white dark:bg-gray-800 p-5 rounded-xl border border-gray-100 dark:border-gray-700 shadow-sm">
+                    <h3 class="font-bold text-xl text-cyan-600 dark:text-cyan-400 mb-3">Aislamiento</h3>
+                    <ul class="list-disc list-inside text-sm text-gray-700 dark:text-gray-300 space-y-2">
                         <li>VPC Service Controls para perímetros de datos.</li>
                         <li>Private clusters en GKE.</li>
                         <li>Acceso privado a APIs.</li>
@@ -618,29 +641,29 @@
         </section>
 
         <section id="almacenamiento-avanzado">
-            <h2 class="text-3xl font-bold text-blue-700 mb-8 border-b-4 pb-3 border-cyan-400">
+            <h2 class="text-3xl font-bold text-blue-700 dark:text-blue-400 mb-8 border-b-4 pb-3 border-cyan-400 dark:border-cyan-600">
                 💾 16. Almacenamiento Avanzado
             </h2>
             <div class="grid lg:grid-cols-3 gap-8">
-                <div class="study-card bg-gray-50 rounded-xl p-6">
-                    <h3 class="font-bold text-xl text-cyan-600 mb-3">Cloud Storage</h3>
-                    <ul class="list-disc list-inside text-sm text-gray-700 space-y-2">
+                <div class="study-card bg-gray-50 dark:bg-gray-800 rounded-xl p-6">
+                    <h3 class="font-bold text-xl text-cyan-600 dark:text-cyan-400 mb-3">Cloud Storage</h3>
+                    <ul class="list-disc list-inside text-sm text-gray-700 dark:text-gray-300 space-y-2">
                         <li>Clases: Standard, Nearline, Coldline, Archive.</li>
                         <li>Ubicaciones: regional, dual, multiregional.</li>
                         <li>Lifecycle, versionado y políticas de retención.</li>
                     </ul>
                 </div>
-                <div class="study-card bg-gray-50 rounded-xl p-6">
-                    <h3 class="font-bold text-xl text-cyan-600 mb-3">Discos y Archivos</h3>
-                    <ul class="list-disc list-inside text-sm text-gray-700 space-y-2">
+                <div class="study-card bg-gray-50 dark:bg-gray-800 rounded-xl p-6">
+                    <h3 class="font-bold text-xl text-cyan-600 dark:text-cyan-400 mb-3">Discos y Archivos</h3>
+                    <ul class="list-disc list-inside text-sm text-gray-700 dark:text-gray-300 space-y-2">
                         <li>Persistent Disk: rendimiento y tipos.</li>
                         <li>Filestore: NFS gestionado.</li>
                         <li>Backup y snapshots.</li>
                     </ul>
                 </div>
-                <div class="study-card bg-gray-50 rounded-xl p-6">
-                    <h3 class="font-bold text-xl text-cyan-600 mb-3">Bases de Datos</h3>
-                    <ul class="list-disc list-inside text-sm text-gray-700 space-y-2">
+                <div class="study-card bg-gray-50 dark:bg-gray-800 rounded-xl p-6">
+                    <h3 class="font-bold text-xl text-cyan-600 dark:text-cyan-400 mb-3">Bases de Datos</h3>
+                    <ul class="list-disc list-inside text-sm text-gray-700 dark:text-gray-300 space-y-2">
                         <li>Cloud SQL vs Spanner (consistencia fuerte y global).</li>
                         <li>Bigtable: alto rendimiento y series de tiempo.</li>
                         <li>Firestore: documentos y tiempo real.</li>
@@ -650,29 +673,29 @@
         </section>
 
         <section id="vertex-ai">
-            <h2 class="text-3xl font-bold text-blue-700 mb-8 border-b-4 pb-3 border-cyan-400">
+            <h2 class="text-3xl font-bold text-blue-700 dark:text-blue-400 mb-8 border-b-4 pb-3 border-cyan-400 dark:border-cyan-600">
                 🤖 17. IA Responsable y Vertex AI
             </h2>
             <div class="grid lg:grid-cols-3 gap-8">
-                <div class="study-card bg-white p-5 rounded-xl border border-gray-100 shadow-sm">
-                    <h3 class="font-bold text-xl text-cyan-600 mb-3">Plataforma</h3>
-                    <ul class="list-disc list-inside text-sm text-gray-700 space-y-2">
+                <div class="study-card bg-white dark:bg-gray-800 p-5 rounded-xl border border-gray-100 dark:border-gray-700 shadow-sm">
+                    <h3 class="font-bold text-xl text-cyan-600 dark:text-cyan-400 mb-3">Plataforma</h3>
+                    <ul class="list-disc list-inside text-sm text-gray-700 dark:text-gray-300 space-y-2">
                         <li>Vertex AI: datasets, training, endpoints.</li>
                         <li>Pipelines, Feature Store y Model Registry.</li>
                         <li>Integración con BigQuery ML y AutoML.</li>
                     </ul>
                 </div>
-                <div class="study-card bg-white p-5 rounded-xl border border-gray-100 shadow-sm">
-                    <h3 class="font-bold text-xl text-cyan-600 mb-3">APIs de IA</h3>
-                    <ul class="list-disc list-inside text-sm text-gray-700 space-y-2">
+                <div class="study-card bg-white dark:bg-gray-800 p-5 rounded-xl border border-gray-100 dark:border-gray-700 shadow-sm">
+                    <h3 class="font-bold text-xl text-cyan-600 dark:text-cyan-400 mb-3">APIs de IA</h3>
+                    <ul class="list-disc list-inside text-sm text-gray-700 dark:text-gray-300 space-y-2">
                         <li>Vision, Natural Language, Translation.</li>
                         <li>Casos comunes y límites.</li>
                         <li>Escalado y coste.</li>
                     </ul>
                 </div>
-                <div class="study-card bg-white p-5 rounded-xl border border-gray-100 shadow-sm">
-                    <h3 class="font-bold text-xl text-cyan-600 mb-3">Responsabilidad</h3>
-                    <ul class="list-disc list-inside text-sm text-gray-700 space-y-2">
+                <div class="study-card bg-white dark:bg-gray-800 p-5 rounded-xl border border-gray-100 dark:border-gray-700 shadow-sm">
+                    <h3 class="font-bold text-xl text-cyan-600 dark:text-cyan-400 mb-3">Responsabilidad</h3>
+                    <ul class="list-disc list-inside text-sm text-gray-700 dark:text-gray-300 space-y-2">
                         <li>Privacidad y seguridad de datos.</li>
                         <li>Sesgo, explicabilidad y gobernanza.</li>
                         <li>Monitoreo post-despliegue.</li>

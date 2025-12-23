@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cuestionario de Certificación</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../theme.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
       body {
@@ -18,6 +19,12 @@
         border: 1px solid theme('colors.border-subtle');
         background-color: white;
         transition: all 0.15s ease-in-out;
+        width: 100%;
+      }
+      .dark .option-btn {
+        background-color: #1f2937; /* gray-800 */
+        border-color: #4b5563; /* gray-600 (more visible than 700) */
+        color: #f3f4f6; /* gray-100 */
       }
       /* Efecto hover/foco para las opciones */
       .option-btn:not([disabled]):hover, 
@@ -26,9 +33,15 @@
         box-shadow: 0 0 0 2px theme('colors.kyndryl-blue.200');
         background-color: theme('colors.kyndryl-blue.50');
       }
+      .dark .option-btn:not([disabled]):hover, 
+      .dark .option-btn:not([disabled]):focus {
+        background-color: rgba(0, 112, 243, 0.2);
+        box-shadow: 0 0 0 2px rgba(0, 112, 243, 0.5);
+      }
     </style>
     <script>
       tailwind.config = {
+        darkMode: 'class',
         theme: {
           extend: {
             // Paleta del Diseño Final
@@ -50,18 +63,23 @@
     </script>
   </head>
 
-  <body class="min-h-screen bg-bg-app text-text-dark antialiased">
+  <body class="min-h-screen bg-bg-app text-text-dark antialiased dark:bg-gray-900 dark:text-gray-100">
     
-    <header class="sticky top-0 z-10 bg-white border-b border-border-subtle shadow-sm">
+    <header class="sticky top-0 z-10 bg-white border-b border-border-subtle shadow-sm dark:bg-gray-900 dark:border-gray-800">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between flex-wrap gap-3">
         <div>
-          <h1 id="examTitle" class="text-xl sm:text-2xl font-bold tracking-tight text-text-dark">Cuestionario</h1>
-          <p id="examSubtitle" class="text-xs sm:text-sm text-gray-500 mt-0.5">Modo de práctica | Prueba de certificación</p>
+          <h1 id="examTitle" class="text-xl sm:text-2xl font-bold tracking-tight text-text-dark dark:text-white">Cuestionario</h1>
+          <p id="examSubtitle" class="text-xs sm:text-sm text-gray-500 mt-0.5 dark:text-gray-400">Modo de práctica | Prueba de certificación</p>
         </div>
         
         <div class="flex items-center gap-2 flex-wrap w-full sm:w-auto">
-          <a id="menuBtn" href="../index.html" class="px-3 py-2 rounded-lg border border-gray-300 bg-white hover:bg-gray-50 text-sm font-medium w-full sm:w-auto text-center">Menú</a>
-          <a id="apuntesLink" href="#" class="px-3 py-2 rounded-lg border border-gray-300 bg-white hover:bg-gray-50 text-sm font-medium w-full sm:w-auto text-center">Apuntes</a>
+          <label class="inline-flex items-center cursor-pointer mr-2">
+              <input type="checkbox" id="toggleDark" class="sr-only peer">
+              <div class="relative w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-kyndryl-blue"></div>
+              <span class="sr-only">Modo oscuro</span>
+          </label>
+          <a id="menuBtn" href="../index.html" class="px-3 py-2 rounded-lg border border-gray-300 bg-white hover:bg-gray-50 text-sm font-medium w-full sm:w-auto text-center dark:bg-gray-800 dark:border-gray-700 dark:text-gray-200 dark:hover:bg-gray-700">Menú</a>
+          <a id="apuntesLink" href="#" class="px-3 py-2 rounded-lg border border-gray-300 bg-white hover:bg-gray-50 text-sm font-medium w-full sm:w-auto text-center dark:bg-gray-800 dark:border-gray-700 dark:text-gray-200 dark:hover:bg-gray-700">Apuntes</a>
           <a id="modeSwitch" href="#" class="px-3 py-2 rounded-lg bg-kyndryl-blue text-white hover:bg-blue-700 text-sm font-semibold shadow-action w-full sm:w-auto text-center">Cambiar Modo</a>
         </div>
       </div>
@@ -69,21 +87,21 @@
 
     <main class="max-w-4xl mx-auto px-4 sm:px-6 py-10">
       
-      <section id="status" class="mb-6 bg-white rounded-xl border border-border-subtle p-4 shadow-md">
+      <section id="status" class="mb-6 bg-white rounded-xl border border-border-subtle p-4 shadow-md dark:bg-gray-800 dark:border-gray-700">
         
         <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 text-sm font-medium mb-3">
           <div id="progress" class="text-kyndryl-blue font-semibold">Pregunta <span id="current">0</span>/<span id="total">0</span></div>
-          <div id="score" class="text-text-dark">Precisión: <span id="accuracy">0%</span> (<span id="points">0</span> de <span id="answered">0</span>)</div>
+          <div id="score" class="text-text-dark dark:text-gray-200">Precisión: <span id="accuracy">0%</span> (<span id="points">0</span> de <span id="answered">0</span>)</div>
         </div>
 
-        <div class="w-full h-2 bg-gray-200 rounded-full">
+        <div class="w-full h-2 bg-gray-200 rounded-full dark:bg-gray-700">
           <div id="progressBar" class="h-2 bg-kyndryl-blue rounded-full transition-all duration-500" style="width:0%"></div>
         </div>
       </section>
 
-      <section id="card" class="bg-white shadow-xl rounded-2xl border border-kyndryl-blue/30 p-6 sm:p-8">
+      <section id="card" class="bg-white shadow-xl rounded-2xl border border-kyndryl-blue/30 p-6 sm:p-8 dark:bg-gray-800 dark:border-kyndryl-blue/20">
         
-        <h2 id="question" class="text-base sm:text-xl font-extrabold mb-6 text-text-dark leading-relaxed">Cargando preguntas…</h2>
+        <h2 id="question" class="text-base sm:text-xl font-extrabold mb-6 text-text-dark leading-relaxed dark:text-white">Cargando preguntas…</h2>
         
         <div id="options" class="grid gap-4">
           </div>
@@ -91,9 +109,9 @@
         <div id="feedback" class="mt-6 p-4 rounded-lg text-sm hidden font-medium">
           </div>
         
-        <div class="mt-8 pt-6 border-t border-border-subtle flex flex-wrap justify-between items-center gap-3">
+        <div class="mt-8 pt-6 border-t border-border-subtle flex flex-wrap justify-between items-center gap-3 dark:border-gray-700">
           
-          <button id="resetBtn" class="px-4 py-2 rounded-lg border border-gray-300 bg-white hover:bg-gray-100 text-sm font-medium transition duration-150 w-full sm:w-auto">Reiniciar</button>
+          <button id="resetBtn" class="px-4 py-2 rounded-lg border border-gray-300 bg-white hover:bg-gray-100 text-sm font-medium transition duration-150 w-full sm:w-auto dark:bg-gray-700 dark:border-gray-600 dark:text-gray-200 dark:hover:bg-gray-600">Reiniciar</button>
           
           <div class="flex gap-3 w-full sm:w-auto">
             <button id="checkBtn" class="hidden px-5 py-2.5 rounded-xl bg-success text-white hover:bg-emerald-700 font-semibold transition duration-150 shadow-success-light w-full sm:w-auto">Comprobar</button>
@@ -102,10 +120,10 @@
         </div>
       </section>
 
-      <section id="final" class="hidden mt-8 bg-white shadow-xl rounded-2xl border border-kyndryl-blue/30 p-6 sm:p-8 text-center">
+      <section id="final" class="hidden mt-8 bg-white shadow-xl rounded-2xl border border-kyndryl-blue/30 p-6 sm:p-8 text-center dark:bg-gray-800 dark:border-kyndryl-blue/20">
         <h2 class="text-2xl font-extrabold mb-3 text-kyndryl-blue">¡Prueba Finalizada!</h2>
-        <p class="mb-6 text-lg text-gray-700">Tu precisión final es:</p>
-        <p id="finalScore" class="font-extrabold text-5xl text-text-dark mb-6">0%</p>
+        <p class="mb-6 text-lg text-gray-700 dark:text-gray-300">Tu precisión final es:</p>
+        <p id="finalScore" class="font-extrabold text-5xl text-text-dark mb-6 dark:text-white">0%</p>
         <button id="restartBtn" class="px-6 py-3 rounded-xl bg-kyndryl-blue text-white hover:bg-blue-700 font-bold shadow-action">Volver a empezar</button>
       </section>
       
