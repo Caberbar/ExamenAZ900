@@ -71,6 +71,12 @@
         </div>
       </section>
 
+      <section class="mb-12">
+        <h3 class="text-2xl font-semibold mb-6 text-text-dark border-b border-border-subtle pb-3 dark:text-white dark:border-gray-700">Planes de Estudio</h3>
+        <div id="studyGrid" class="scroll-snap-container flex overflow-x-scroll snap-x snap-mandatory gap-6 pb-4 sm:grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 sm:gap-8 sm:overflow-visible">
+        </div>
+      </section>
+
       <section>
         <h3 class="text-2xl font-semibold mb-6 text-text-dark border-b border-border-subtle pb-3 dark:text-white dark:border-gray-700">Listado de Certificaciones</h3>
         
@@ -97,12 +103,13 @@
         }
       }
 
-      function createCard(exam) {
+      function createCard(exam, isStudyPlan = false) {
         // Colores de acento para la línea lateral del card
         const KYNDRYL_BLUE = '#0070f3';
         const AZURE_BLUE = '#0078d4';
         const GOOGLE_GREEN = '#34a853';
         const AWS_ORANGE = '#ff9900';
+        const STUDY_INDIGO = '#4f46e5';
 
         const isAzure = /az\d+/i.test(exam.name || '') || /azure|microsoft/i.test(exam.title || '');
         const isGoogle = /gc|gcdl|google/i.test(exam.name || '') || /google/i.test(exam.title || '');
@@ -110,7 +117,8 @@
         
         let providerColor = KYNDRYL_BLUE;
         let icon = '💻';
-        if (isAzure) { providerColor = AZURE_BLUE; icon = '⚡'; }
+        if (isStudyPlan) { providerColor = STUDY_INDIGO; icon = '📚'; }
+        else if (isAzure) { providerColor = AZURE_BLUE; icon = '⚡'; }
         else if (isGoogle) { providerColor = GOOGLE_GREEN; icon = '☁️'; }
         else if (isAWS) { providerColor = AWS_ORANGE; icon = '⚙️'; }
 
@@ -122,8 +130,9 @@
           primary: `flex-1 text-center px-4 py-2.5 rounded-xl text-white font-semibold bg-kyndryl-blue hover:bg-blue-600 transition duration-150 shadow-action`,
           // Botón secundario: borde simple, hover sutil, rounded-xl
           secondary: `flex-1 text-center px-4 py-2.5 rounded-xl border border-gray-300 bg-white text-gray-700 font-medium hover:bg-gray-50 transition duration-150 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-200 dark:hover:bg-gray-700`,
-          // Botón de Apuntes: discreto
+          // Botón de Apuntes: discreto (o principal si es plan de estudio)
           notes: `text-center px-3 py-2.5 rounded-xl border border-gray-300 bg-gray-50 text-gray-600 hover:bg-gray-100 text-sm w-full mt-3 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-200 dark:hover:bg-gray-700`,
+          notesPrimary: `text-center px-4 py-3 rounded-xl text-white font-bold bg-indigo-600 hover:bg-indigo-700 transition duration-150 shadow-md w-full block mt-4`
         };
 
         // Creación del Card
@@ -177,54 +186,57 @@
         p.className = 'mt-3 text-sm text-gray-600 line-clamp-3 flex-grow dark:text-gray-400';
         p.textContent = exam.desc || 'Descripción de la certificación no disponible. Listo para practicar.';
 
-        // 3. Sección de Acciones (Separada por la línea sutil)
-        const actions = document.createElement('div');
-        actions.className = 'mt-6 pt-4 border-t border-border-subtle flex flex-wrap gap-2 dark:border-gray-700';
-
-        // Lógica de URLs (sin cambios)
-        const baseUrl = new URL('./Cuestionario/cuestionario.html', location.href);
-        baseUrl.searchParams.set('name', exam.name);
-        if (exam.title) baseUrl.searchParams.set('title', exam.title);
-        if (exam.pregunta) {
-          const preg = /^https?:\/\//i.test(exam.pregunta) ? exam.pregunta : `../${exam.pregunta}`;
-          baseUrl.searchParams.set('preguntas', preg);
-        }
-        if (exam.apuntes) {
-          const ap = /^https?:\/\//i.test(exam.apuntes) ? exam.apuntes : `../${exam.apuntes}`;
-          baseUrl.searchParams.set('apuntes', ap);
-        }
-
-        const examenUrl = new URL(baseUrl.href);
-        examenUrl.searchParams.set('mode', 'examen');
-        const practicaUrl = new URL(baseUrl.href);
-        practicaUrl.searchParams.set('mode', 'practica');
-
-        // Botones (con clases actualizadas)
-        const btnExamen = document.createElement('a');
-        btnExamen.href = examenUrl.href;
-        btnExamen.className = btnClasses.primary;
-        btnExamen.textContent = 'Iniciar Examen';
-
-        const btnPractica = document.createElement('a');
-        btnPractica.href = practicaUrl.href;
-        btnPractica.className = btnClasses.secondary;
-        btnPractica.textContent = 'Práctica';
-
-        actions.appendChild(btnExamen);
-        actions.appendChild(btnPractica);
-
-        // Ensamblaje final
+        // Ensamblaje parcial
         content.appendChild(titleArea);
         content.appendChild(p);
-        content.appendChild(actions);
+
+        // 3. Sección de Acciones (Separada por la línea sutil)
+        if (!isStudyPlan) {
+            const actions = document.createElement('div');
+            actions.className = 'mt-6 pt-4 border-t border-border-subtle flex flex-wrap gap-2 dark:border-gray-700';
+
+            // Lógica de URLs (sin cambios)
+            const baseUrl = new URL('./Cuestionario/cuestionario.html', location.href);
+            baseUrl.searchParams.set('name', exam.name);
+            if (exam.title) baseUrl.searchParams.set('title', exam.title);
+            if (exam.pregunta) {
+            const preg = /^https?:\/\//i.test(exam.pregunta) ? exam.pregunta : `../${exam.pregunta}`;
+            baseUrl.searchParams.set('preguntas', preg);
+            }
+            if (exam.apuntes) {
+            const ap = /^https?:\/\//i.test(exam.apuntes) ? exam.apuntes : `../${exam.apuntes}`;
+            baseUrl.searchParams.set('apuntes', ap);
+            }
+
+            const examenUrl = new URL(baseUrl.href);
+            examenUrl.searchParams.set('mode', 'examen');
+            const practicaUrl = new URL(baseUrl.href);
+            practicaUrl.searchParams.set('mode', 'practica');
+
+            // Botones (con clases actualizadas)
+            const btnExamen = document.createElement('a');
+            btnExamen.href = examenUrl.href;
+            btnExamen.className = btnClasses.primary;
+            btnExamen.textContent = 'Iniciar Examen';
+
+            const btnPractica = document.createElement('a');
+            btnPractica.href = practicaUrl.href;
+            btnPractica.className = btnClasses.secondary;
+            btnPractica.textContent = 'Práctica';
+
+            actions.appendChild(btnExamen);
+            actions.appendChild(btnPractica);
+            content.appendChild(actions);
+        }
 
         // Botón de Apuntes
         const apuntesUrl = exam.apuntes || (isGoogle ? defaultGoogleNotes : null);
         if (apuntesUrl) {
            const btnApuntes = document.createElement('a');
            btnApuntes.href = apuntesUrl;
-           btnApuntes.className = btnClasses.notes;
-           btnApuntes.textContent = 'Ver Apuntes 📄';
+           // Si es plan de estudio, usamos estilo primario y texto diferente
+           btnApuntes.className = isStudyPlan ? btnClasses.notesPrimary : btnClasses.notes;
+           btnApuntes.textContent = isStudyPlan ? 'Abrir Plan de Estudio 📖' : 'Ver Apuntes 📄';
            content.appendChild(btnApuntes);
         }
 
@@ -236,6 +248,7 @@
       // Inicialización
       (async function init() {
         const grid = document.getElementById('examGrid');
+        const studyGrid = document.getElementById('studyGrid');
         const exams = await loadExams();
         
         if (!Array.isArray(exams) || exams.length === 0) {
@@ -246,7 +259,15 @@
           grid.appendChild(empty);
           return;
         }
-        exams.forEach(exam => grid.appendChild(createCard(exam)));
+        
+        exams.forEach(exam => {
+            // Si el nombre contiene 'Ka0s', lo mandamos a studyGrid, si no, a examGrid
+            if (/ka0s/i.test(exam.name)) {
+                studyGrid.appendChild(createCard(exam, true)); // true indica que es modo estudio
+            } else {
+                grid.appendChild(createCard(exam, false));
+            }
+        });
       })();
     </script>
   </body>

@@ -19,5 +19,12 @@
     "desc": "Fundamentos de AWS: servicios, seguridad, precios y soporte.",
     "pregunta": "Preguntas/preguntasAWSCCP.json",
     "apuntes": "https://aws.amazon.com/certification/certified-cloud-practitioner/"
+  },
+  {
+    "name": "Ka0s Training",
+    "title": "Plan de Formación Ka0s",
+    "desc": "Onboarding técnico: arquitectura, automatización y cultura operativa.",
+    "pregunta": "",
+    "apuntes": "Apuntes/apuntesKa0s.html"
   }
 ]
