@@ -1,6 +1,6 @@
 [
   {
-    "name": "az900",
+    "name": "AZ-900",
     "title": "AZ-900 • Fundamentos de Azure",
     "desc": "Preguntas de verdadero/falso, opción múltiple y emparejamiento.",
     "pregunta": "Preguntas/preguntasAZ900.json",
@@ -8,14 +8,14 @@
   },
   {
     "name": "Google Cloud Digital Leaders",
-    "title": "Google Cloud Digital Leaders",
+    "title": "Google Cloud • Digital Leaders",
     "desc": "Cuestionario de fundamentos de Google Cloud.",
     "pregunta": "Preguntas/preguntasGCDL.json",
     "apuntes": "Apuntes/apuntesGCDL.html"
   },
   {
     "name": "AWS Certified Cloud Practitioner",
-    "title": "AWS Certified Cloud Practitioner // EN PROCESO",
+    "title": "AWS • Certified Cloud Practitioner",
     "desc": "Fundamentos de AWS: servicios, seguridad, precios y soporte.",
     "pregunta": "Preguntas/preguntasAWSCCP.json",
     "apuntes": "https://aws.amazon.com/certification/certified-cloud-practitioner/"
@@ -26,5 +26,12 @@
     "desc": "Onboarding técnico: arquitectura, automatización y cultura operativa.",
     "pregunta": "",
     "apuntes": "Apuntes/apuntesKa0s.html"
+  },
+  {
+    "name": "Mastering GitHub",
+    "title": "Git & GitHub: De Zero a Hero",
+    "desc": "Aprende flujos de trabajo profesionales, Pull Requests, conflictos y GitHub Actions.",
+    "pregunta": "",
+    "apuntes": "Apuntes/apuntesGithub.html"
   }
 ]

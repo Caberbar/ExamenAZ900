@@ -63,10 +63,11 @@
           <h2 class="text-4xl sm:text-5xl font-extrabold tracking-tight text-text-dark dark:text-white">Selector de Exámenes</h2>
           <p class="mt-4 text-lg text-gray-600 max-w-2xl dark:text-gray-400">Catálogo organizado por proveedor y listo para la práctica o el examen simulado.</p>
           
-          <div class="mt-6 flex flex-wrap gap-3">
-            <span class="px-3 py-1.5 text-sm font-medium rounded-full bg-kyndryl-blue text-white shadow-sm">Azure</span>
-            <span class="px-3 py-1.5 text-sm font-medium rounded-full bg-gray-100 text-gray-700 border border-gray-300 dark:bg-gray-700 dark:text-gray-200 dark:border-gray-600">Google Cloud</span>
-            <span class="px-3 py-1.5 text-sm font-medium rounded-full bg-gray-100 text-gray-700 border border-gray-300 dark:bg-gray-700 dark:text-gray-200 dark:border-gray-600">AWS</span>
+          <div class="mt-6 flex flex-wrap gap-3" id="filterContainer">
+            <button data-filter="all" class="filter-btn px-3 py-1.5 text-sm font-medium rounded-full bg-kyndryl-blue text-white shadow-sm transition-colors">Todos</button>
+            <button data-filter="azure" class="filter-btn px-3 py-1.5 text-sm font-medium rounded-full bg-gray-100 text-gray-700 border border-gray-300 hover:bg-gray-200 dark:bg-gray-700 dark:text-gray-200 dark:border-gray-600 dark:hover:bg-gray-600 transition-colors">Azure</button>
+            <button data-filter="google" class="filter-btn px-3 py-1.5 text-sm font-medium rounded-full bg-gray-100 text-gray-700 border border-gray-300 hover:bg-gray-200 dark:bg-gray-700 dark:text-gray-200 dark:border-gray-600 dark:hover:bg-gray-600 transition-colors">Google Cloud</button>
+            <button data-filter="aws" class="filter-btn px-3 py-1.5 text-sm font-medium rounded-full bg-gray-100 text-gray-700 border border-gray-300 hover:bg-gray-200 dark:bg-gray-700 dark:text-gray-200 dark:border-gray-600 dark:hover:bg-gray-600 transition-colors">AWS</button>
           </div>
         </div>
       </section>
@@ -245,6 +246,24 @@
         return card;
       }
       
+      // Función para renderizar exámenes en el grid principal
+      function renderExams(exams) {
+          const grid = document.getElementById('examGrid');
+          grid.innerHTML = '';
+          
+          if (exams.length === 0) {
+             const empty = document.createElement('div');
+             empty.className = 'text-gray-500 p-8 w-full text-center col-span-full border-dashed border-2 border-gray-200 rounded-xl';
+             empty.textContent = 'No se encontraron certificaciones para este filtro.';
+             grid.appendChild(empty);
+             return;
+          }
+
+          exams.forEach(exam => {
+              grid.appendChild(createCard(exam, false));
+          });
+      }
+
       // Inicialización
       (async function init() {
         const grid = document.getElementById('examGrid');
@@ -260,13 +279,49 @@
           return;
         }
         
+        // Separar planes de estudio y exámenes regulares
+        const studyPlans = [];
+        const regularExams = [];
+
         exams.forEach(exam => {
-            // Si el nombre contiene 'Ka0s', lo mandamos a studyGrid, si no, a examGrid
-            if (/ka0s/i.test(exam.name)) {
-                studyGrid.appendChild(createCard(exam, true)); // true indica que es modo estudio
+            if (/ka0s|github/i.test(exam.name)) {
+                studyPlans.push(exam);
             } else {
-                grid.appendChild(createCard(exam, false));
+                regularExams.push(exam);
             }
+        });
+
+        // Renderizar Planes de Estudio (siempre visibles)
+        studyPlans.forEach(exam => studyGrid.appendChild(createCard(exam, true)));
+
+        // Renderizar Exámenes Regulares (inicialmente todos)
+        renderExams(regularExams);
+
+        // Configurar Filtros
+        const buttons = document.querySelectorAll('.filter-btn');
+        buttons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Actualizar estado visual
+                buttons.forEach(b => {
+                    // Resetear estilo inactivo
+                    b.className = 'filter-btn px-3 py-1.5 text-sm font-medium rounded-full bg-gray-100 text-gray-700 border border-gray-300 hover:bg-gray-200 dark:bg-gray-700 dark:text-gray-200 dark:border-gray-600 dark:hover:bg-gray-600 transition-colors';
+                });
+                // Establecer estilo activo
+                btn.className = 'filter-btn px-3 py-1.5 text-sm font-medium rounded-full bg-kyndryl-blue text-white shadow-sm transition-colors';
+
+                const filter = btn.getAttribute('data-filter');
+                let filtered = regularExams;
+
+                if (filter === 'azure') {
+                    filtered = regularExams.filter(e => /az\d+/i.test(e.name || '') || /azure|microsoft/i.test(e.title || ''));
+                } else if (filter === 'google') {
+                    filtered = regularExams.filter(e => /gc|gcdl|google/i.test(e.name || '') || /google/i.test(e.title || ''));
+                } else if (filter === 'aws') {
+                    filtered = regularExams.filter(e => /aws|amazon/i.test(e.name || '') || /aws|amazon/i.test(e.title || ''));
+                }
+
+                renderExams(filtered);
+            });
         });
       })();
     </script>

@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="es" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mastering GitHub: Zero to Hero</title>
+    <script>
+      // Auth Guard
+      if (sessionStorage.getItem('ka0s_auth') !== 'true') {
+          window.location.href = 'loginKa0s.html';
+      }
+      
+      // Theme Check
+      if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark')
+      } else {
+        document.documentElement.classList.remove('dark')
+      }
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              mono: ['Fira Code', 'monospace'],
+              serif: ['Merriweather', 'serif'],
+            },
+            colors: {
+              github: {
+                dark: '#0d1117',
+                darker: '#010409',
+                border: '#30363d',
+                light: '#ffffff',
+                accent: '#238636',
+                link: '#58a6ff'
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&display=swap" rel="stylesheet">
+    <style>
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar { width: 8px; height: 8px; }
+      ::-webkit-scrollbar-track { background: transparent; }
+      ::-webkit-scrollbar-thumb { background: #d1d5db; border-radius: 4px; }
+      .dark ::-webkit-scrollbar-thumb { background: #30363d; }
+      ::-webkit-scrollbar-thumb:hover { background: #9ca3af; }
+      .dark ::-webkit-scrollbar-thumb:hover { background: #8b949e; }
+
+      /* Prose Typography Overrides for Dark/Light */
+      .prose h2 { margin-top: 1.5em; margin-bottom: 0.5em; font-weight: 700; color: #111827; }
+      .dark .prose h2 { color: #e5e7eb; }
+      
+      .prose h3 { margin-top: 1.2em; margin-bottom: 0.5em; font-weight: 600; color: #374151; }
+      .dark .prose h3 { color: #d1d5db; }
+      
+      .prose p { margin-bottom: 1em; line-height: 1.7; color: #4b5563; }
+      .dark .prose p { color: #9ca3af; }
+      
+      .prose strong { color: #111827; font-weight: 600; }
+      .dark .prose strong { color: #f3f4f6; }
+      
+      .prose code { background: rgba(175, 184, 193, 0.2); padding: 0.2em 0.4em; border-radius: 6px; font-family: 'Fira Code', monospace; font-size: 0.85em; color: #24292f; }
+      .dark .prose code { background: rgba(110, 118, 129, 0.4); color: #a5d6ff; }
+      
+      .prose pre { background: #f6f8fa; padding: 1em; border-radius: 6px; overflow-x: auto; margin-bottom: 1em; border: 1px solid #d0d7de; }
+      .dark .prose pre { background: #161b22; border: 1px solid #30363d; }
+      
+      .prose ul { list-style-type: disc; padding-left: 1.5em; margin-bottom: 1em; color: #4b5563; }
+      .dark .prose ul { color: #9ca3af; }
+      
+      .analogy-box { border-left: 4px solid #a371f7; background: rgba(163, 113, 247, 0.1); padding: 1rem; border-radius: 0 0.5rem 0.5rem 0; margin: 1.5rem 0; color: #4b5563; }
+      .dark .analogy-box { color: #c9d1d9; }
+      
+      .tech-box { border-left: 4px solid #238636; background: rgba(35, 134, 54, 0.1); padding: 1rem; border-radius: 0 0.5rem 0.5rem 0; margin: 1.5rem 0; color: #4b5563; }
+      .dark .tech-box { color: #c9d1d9; }
+      
+      /* Typing Animation Cursor */
+      .cursor-blink { animation: blink 1s step-end infinite; }
+      @keyframes blink { 50% { opacity: 0; } }
+    </style>
+  </head>
+  <body class="bg-white dark:bg-[#010409] text-gray-900 dark:text-[#c9d1d9] font-sans h-screen overflow-hidden flex flex-col transition-colors duration-200">
+
+    <!-- Header -->
+    <header class="h-14 border-b border-gray-200 dark:border-[#30363d] bg-gray-50 dark:bg-[#0d1117] flex items-center justify-between px-4 shrink-0 z-50 transition-colors duration-200">
+      <div class="flex items-center gap-3">
+        <svg height="32" viewBox="0 0 16 16" width="32" class="fill-black dark:fill-white">
+            <path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"></path>
+        </svg>
+        <div>
+            <h1 class="font-bold text-sm md:text-base leading-tight text-gray-900 dark:text-white">Mastering GitHub</h1>
+            <p class="text-[10px] text-gray-500 dark:text-gray-400 uppercase tracking-wider font-semibold">Zero to Hero Protocol</p>
+        </div>
+      </div>
+      
+      <div class="flex items-center gap-4">
+        <div class="hidden md:flex items-center gap-2 text-xs">
+            <span class="text-gray-500 dark:text-gray-400">Progreso:</span>
+            <div class="w-32 h-2 bg-gray-200 dark:bg-[#30363d] rounded-full overflow-hidden">
+                <div id="globalProgress" class="h-full bg-[#238636] transition-all duration-500" style="width: 0%"></div>
+            </div>
+            <span id="progressText" class="font-mono font-bold text-gray-700 dark:text-white">0%</span>
+        </div>
+
+        <!-- Theme Toggle -->
+        <button id="themeToggle" class="p-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-800 text-gray-500 dark:text-gray-400 transition-colors">
+            <!-- Sun Icon -->
+            <svg id="sunIcon" class="hidden dark:block w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+            <!-- Moon Icon -->
+            <svg id="moonIcon" class="block dark:hidden w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
+        </button>
+
+        <button onclick="location.href='../index.html'" class="text-xs font-medium text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white border border-gray-300 dark:border-[#30363d] px-3 py-1.5 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+          Salir al Menú
+        </button>
+      </div>
+    </header>
+
+    <!-- Main Split Layout -->
+    <div class="flex-1 flex overflow-hidden">
+        
+        <!-- Left Panel: Educational Content -->
+        <aside class="w-1/2 flex flex-col border-r border-gray-200 dark:border-[#30363d] bg-white dark:bg-[#0d1117] transition-colors duration-200">
+            <!-- Module Navigation -->
+            <div class="p-3 border-b border-gray-200 dark:border-[#30363d] bg-gray-50 dark:bg-[#161b22]">
+                <label class="text-xs text-gray-500 dark:text-gray-400 font-semibold uppercase block mb-1">Módulo Actual</label>
+                <select id="moduleSelect" class="w-full bg-white dark:bg-[#0d1117] border border-gray-300 dark:border-[#30363d] text-gray-900 dark:text-white text-sm rounded-md px-3 py-2 focus:border-[#58a6ff] focus:ring-1 focus:ring-[#58a6ff] outline-none appearance-none cursor-pointer">
+                    <!-- Populated by JS -->
+                </select>
+            </div>
+
+            <!-- Scrollable Content -->
+            <div id="lessonContent" class="flex-1 overflow-y-auto p-8 prose max-w-none">
+                <!-- Content injected here -->
+            </div>
+
+            <!-- Footer Navigation -->
+            <div class="p-4 border-t border-gray-200 dark:border-[#30363d] bg-gray-50 dark:bg-[#161b22] flex justify-between items-center shrink-0">
+                <button id="prevBtn" class="text-sm text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white flex items-center gap-1 disabled:opacity-30" disabled>
+                    &larr; Anterior
+                </button>
+                <span id="pageIndicator" class="text-xs text-gray-500 font-mono">1/12</span>
+                <button id="nextBtn" class="text-sm text-[#0969da] dark:text-[#58a6ff] hover:underline font-medium flex items-center gap-1 disabled:opacity-30" disabled>
+                    Siguiente &rarr;
+                </button>
+            </div>
+        </aside>
+
+        <!-- Right Panel: Interactive Terminal -->
+        <main class="w-1/2 flex flex-col bg-gray-900 dark:bg-[#010409] relative transition-colors duration-200">
+            <!-- Terminal Toolbar -->
+            <div class="bg-gray-800 dark:bg-[#161b22] px-4 py-2 border-b border-gray-700 dark:border-[#30363d] flex justify-between items-center shrink-0 h-10 transition-colors duration-200">
+                <div class="flex items-center gap-2 group">
+                    <div class="flex gap-1.5">
+                        <span class="w-3 h-3 rounded-full bg-[#ff5f56] group-hover:bg-[#ff5f56] opacity-70 group-hover:opacity-100 transition-opacity"></span>
+                        <span class="w-3 h-3 rounded-full bg-[#ffbd2e] group-hover:bg-[#ffbd2e] opacity-70 group-hover:opacity-100 transition-opacity"></span>
+                        <span class="w-3 h-3 rounded-full bg-[#27c93f] group-hover:bg-[#27c93f] opacity-70 group-hover:opacity-100 transition-opacity"></span>
+                    </div>
+                    <span class="ml-3 text-xs font-mono text-gray-400 dark:text-gray-500">ka0s-shell — git — main</span>
+                </div>
+                <div class="text-[10px] uppercase font-bold tracking-wider text-[#238636] border border-[#238636] px-2 py-0.5 rounded-full bg-[#238636]/10">
+                    Online
+                </div>
+            </div>
+
+            <!-- Output Area -->
+            <div id="terminalOutput" class="flex-1 p-4 font-mono text-sm overflow-y-auto text-gray-300 dark:text-[#c9d1d9] space-y-1 scroll-smooth" onclick="document.getElementById('cmdInput').focus()">
+                <div class="text-gray-500 mb-6">
+                    Welcome to Ka0s Git Simulator v4.2.0<br>
+                    Type <span class="text-gray-300 bg-gray-700 px-1 rounded">help</span> for available commands.<br>
+                    <br>
+                    <span class="text-[#238636]">System ready.</span> Waiting for input...
+                </div>
+            </div>
+
+            <!-- Mission Status Bar -->
+            <div class="bg-gray-800/90 dark:bg-[#161b22]/90 backdrop-blur border-t border-gray-700 dark:border-[#30363d] p-3 text-sm shrink-0 transition-colors duration-200">
+                <div class="flex items-start gap-3">
+                    <div class="mt-1 w-2 h-2 bg-yellow-500 rounded-full animate-pulse shadow-[0_0_8px_rgba(234,179,8,0.5)]"></div>
+                    <div class="flex-1">
+                        <div class="text-[10px] uppercase font-bold text-gray-500 tracking-wider mb-0.5">Misión Actual</div>
+                        <div id="taskHint" class="text-yellow-400 font-mono text-xs md:text-sm">Cargando misión...</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Input Area -->
+            <div class="bg-gray-900 dark:bg-[#0d1117] p-3 border-t border-gray-700 dark:border-[#30363d] shrink-0 transition-colors duration-200">
+                <div class="flex items-center gap-2 font-mono text-sm">
+                    <span class="text-[#238636] font-bold">user@ka0s</span>
+                    <span class="text-gray-500">:</span>
+                    <span class="text-[#58a6ff]">~/project</span>
+                    <span class="text-gray-500" id="gitBranchLabel"></span>
+                    <span class="text-gray-400">$</span>
+                    <input type="text" id="cmdInput" class="flex-1 bg-transparent border-none outline-none text-white placeholder-gray-700" autocomplete="off" spellcheck="false" autofocus>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        /* ------------------------------------------------
+           THEME TOGGLE
+           ------------------------------------------------ */
+        const themeToggleBtn = document.getElementById('themeToggle');
+        
+        themeToggleBtn.addEventListener('click', () => {
+            if (document.documentElement.classList.contains('dark')) {
+                document.documentElement.classList.remove('dark');
+                localStorage.theme = 'light';
+            } else {
+                document.documentElement.classList.add('dark');
+                localStorage.theme = 'dark';
+            }
+        });
+
+        /* ------------------------------------------------
+           CORE: GIT SIMULATION ENGINE
+           ------------------------------------------------ */
+        class GitEngine {
+            constructor() {
+                this.reset();
+            }
+
+            reset() {
+                this.fs = {}; // Virtual FS: { 'README.md': 'Content' }
+                this.index = {}; // Staging: { 'README.md': 'Content' }
+                this.commits = []; // History array
+                this.branches = { 'main': null }; // HEADs of branches
+                this.currentBranch = 'main';
+                this.remotes = {};
+                this.config = { name: '', email: '' };
+                this.initialized = false;
+                this.history = []; // Command history
+            }
+
+            // --- Helpers ---
+            getCurrentHead() {
+                return this.branches[this.currentBranch]; // Returns commit ID or null
+            }
+
+            // --- Commands ---
+            init() {
+                if (this.initialized) return "Reinitialized existing Git repository in /home/user/project/.git/";
+                this.initialized = true;
+                return "Initialized empty Git repository in /home/user/project/.git/";
+            }
+
+            status() {
+                if (!this.initialized) return "fatal: not a git repository (or any of the parent directories): .git";
+                
+                let out = `On branch ${this.currentBranch}\n`;
+                
+                const headCommit = this.commits.find(c => c.id === this.getCurrentHead());
+                const headFiles = headCommit ? headCommit.files : {};
+
+                const staged = [];
+                const modified = [];
+                const untracked = [];
+
+                // Check all files in FS
+                Object.keys(this.fs).forEach(f => {
+                    if (this.index[f]) {
+                        // In index
+                        if (this.index[f] !== this.fs[f]) modified.push(f); // Modified after staging
+                    } else if (headFiles[f]) {
+                         // Tracked but not in index (and changed)
+                         if (headFiles[f] !== this.fs[f]) modified.push(f);
+                    } else {
+                        untracked.push(f);
+                    }
+                });
+
+                // Check Index vs Head (Staged changes)
+                Object.keys(this.index).forEach(f => {
+                    if (!headFiles[f] || headFiles[f] !== this.index[f]) {
+                        staged.push(f);
+                    }
+                });
+
+                if (staged.length === 0 && modified.length === 0 && untracked.length === 0) {
+                    out += "nothing to commit, working tree clean";
+                } else {
+                    if (staged.length > 0) {
+                        out += "Changes to be committed:\n";
+                        staged.forEach(f => out += `\t<span class="text-green-400">new file:   ${f}</span>\n`);
+                    }
+                    if (modified.length > 0) {
+                        out += "Changes not staged for commit:\n";
+                        modified.forEach(f => out += `\t<span class="text-red-400">modified:   ${f}</span>\n`);
+                    }
+                    if (untracked.length > 0) {
+                        out += "Untracked files:\n";
+                        untracked.forEach(f => out += `\t<span class="text-red-400">${f}</span>\n`);
+                    }
+                }
+                return out;
+            }
+
+            add(args) {
+                if (!this.initialized) return "fatal: not a git repository";
+                if (!args[0]) return "Nothing specified, nothing added.";
+                
+                const files = args[0] === '.' ? Object.keys(this.fs) : args;
+                
+                let addedCount = 0;
+                files.forEach(f => {
+                    if (this.fs[f]) {
+                        this.index[f] = this.fs[f];
+                        addedCount++;
+                    } else if (args[0] !== '.') {
+                         return `fatal: pathspec '${f}' did not match any files`;
+                    }
+                });
+                return "";
+            }
+
+            commit(args) {
+                if (!this.initialized) return "fatal: not a git repository";
+                
+                // Parse -m "msg"
+                const mIndex = args.indexOf('-m');
+                if (mIndex === -1 || !args[mIndex+1]) return "error: switch `m' requires a value";
+                const msg = args.slice(mIndex+1).join(' ').replace(/['"]/g, '');
+
+                // Check if anything to commit
+                if (Object.keys(this.index).length === 0) return "nothing to commit, working tree clean";
+
+                const newCommit = {
+                    id: Math.random().toString(16).substring(2, 9),
+                    parent: this.getCurrentHead(),
+                    msg: msg,
+                    author: this.config.name || "User",
+                    date: new Date(),
+                    files: { ...this.index } // Snapshot
+                };
+
+                this.commits.push(newCommit);
+                this.branches[this.currentBranch] = newCommit.id; // Move branch pointer
+                
+                // Keep index for next operations (Git index doesn't clear tracked files, just 'clean' state relative to HEAD)
+                // BUT for simulation simplicity, we assume index matches HEAD now.
+                
+                return `[${this.currentBranch} ${newCommit.id}] ${msg}\n ${Object.keys(this.index).length} files changed`;
+            }
+
+            log() {
+                if (!this.initialized) return "fatal: not a git repository";
+                
+                let currentId = this.getCurrentHead();
+                if (!currentId) return "fatal: your current branch '" + this.currentBranch + "' has no commits yet";
+
+                let output = "";
+                let count = 0;
+                
+                // Traverse backwards
+                while (currentId && count < 10) {
+                    const c = this.commits.find(x => x.id === currentId);
+                    if (!c) break;
+                    output += `<span class="text-yellow-400">commit ${c.id}</span>\nAuthor: ${c.author}\nDate: ${c.date.toDateString()}\n\n    ${c.msg}\n\n`;
+                    currentId = c.parent;
+                    count++;
+                }
+                return output;
+            }
+
+            branch(args) {
+                if (!this.initialized) return "fatal: not a git repository";
+                if (args.length === 0) {
+                    return Object.keys(this.branches).map(b => 
+                        b === this.currentBranch ? `* <span class="text-green-400">${b}</span>` : `  ${b}`
+                    ).join('\n');
+                }
+                // Create branch
+                const newBranch = args[0];
+                this.branches[newBranch] = this.getCurrentHead();
+                return "";
+            }
+
+            checkout(args) {
+                if (!this.initialized) return "fatal: not a git repository";
+                
+                // Handle -b
+                if (args[0] === '-b') {
+                    const newBranch = args[1];
+                    if (this.branches[newBranch]) return `fatal: A branch named '${newBranch}' already exists.`;
+                    this.branches[newBranch] = this.getCurrentHead();
+                    this.currentBranch = newBranch;
+                    return `Switched to a new branch '${newBranch}'`;
+                }
+
+                const target = args[0];
+                if (this.branches[target] !== undefined) {
+                    this.currentBranch = target;
+                    // Restore files from that branch's HEAD to FS (Simulation)
+                    const headId = this.branches[target];
+                    if (headId) {
+                        const commit = this.commits.find(c => c.id === headId);
+                        if (commit) {
+                            this.fs = { ...commit.files };
+                            this.index = { ...commit.files };
+                        }
+                    }
+                    return `Switched to branch '${target}'`;
+                }
+                return `error: pathspec '${target}' did not match any file(s) known to git`;
+            }
+
+            merge(args) {
+                if (!this.initialized) return "fatal: not a git repository";
+                const targetBranch = args[0];
+                if (!this.branches[targetBranch]) return `merge: ${targetBranch} - not something we can merge`;
+
+                const targetHeadId = this.branches[targetBranch];
+                const currentHeadId = this.getCurrentHead();
+
+                if (targetHeadId === currentHeadId) return "Already up to date.";
+
+                // Fast-forward simulation (Simplified)
+                this.branches[this.currentBranch] = targetHeadId;
+                
+                // Update FS
+                const commit = this.commits.find(c => c.id === targetHeadId);
+                if (commit) {
+                    this.fs = { ...commit.files };
+                    this.index = { ...commit.files };
+                }
+
+                return "Updating " + (currentHeadId || "null") + ".." + targetHeadId + "\nFast-forward";
+            }
+            
+            remote(args) {
+                if (args[0] === 'add' && args[1] === 'origin') {
+                    this.remotes['origin'] = args[2];
+                    return "";
+                }
+                return "";
+            }
+
+            push(args) {
+                if (!this.remotes['origin']) return "fatal: 'origin' does not appear to be a git repository";
+                return "Enumerating objects: 5, done.\nWriting objects: 100% (3/3), 283 bytes | 283.00 KiB/s, done.\nTo https://github.com/user/repo.git\n * [new branch]      main -> main";
+            }
+        }
+
+        /* ------------------------------------------------
+           DATA: CURRICULUM (12 MODULES - DEEP DIVE)
+           ------------------------------------------------ */
+        const CURRICULUM = [
+            {
+                title: "1. Introducción y Configuración",
+                content: `
+                    <h2 class="text-3xl font-bold mb-6">El Porqué de Git</h2>
+                    <p>Imagina que estás escribiendo una novela. Cada vez que quieres cambiar un capítulo importante, guardas el archivo como "novela_v1.doc", "novela_final.doc", "novela_final_ahora_si.doc".</p>
+                    <div class="analogy-box">
+                        <strong>La Analogía:</strong> Git es como un videojuego donde puedes guardar tu partida (Save Point) en cualquier momento. Si te enfrentas a un jefe final (un bug crítico) y pierdes, simplemente cargas la partida anterior. Además, permite que tus amigos jueguen en el mismo mundo sin borrarse los avances entre sí.
+                    </div>
+                    
+                    <h3 class="text-xl mt-8">Tu Identidad Digital</h3>
+                    <p>Git es un sistema distribuido y social. Cada cambio que haces queda "firmado" por ti. Si no configuras tu firma, Git no te dejará guardar nada oficial.</p>
+                    
+                    <div class="tech-box">
+                        <p class="font-mono text-sm">Comando: git config --global user.name "Tu Nombre"</p>
+                        <p class="text-sm mt-2">Esto escribe en tu archivo <code>~/.gitconfig</code>.</p>
+                    </div>
+                `,
+                task: {
+                    hint: "Configura tu usuario: git config user.name \"Jhonathan\"",
+                    check: (cmd, out, git) => git.config.name !== '',
+                    success: "¡Identidad establecida! Ahora tus commits llevarán tu firma."
+                }
+            },
+            {
+                title: "2. Inicialización del Repositorio",
+                content: `
+                    <h2 class="text-3xl font-bold mb-6">El Nacimiento de un Universo</h2>
+                    <p>Tienes una carpeta con código. Para el sistema operativo, es solo una carpeta. Para convertirla en un <strong>Repositorio</strong>, necesitamos invocar a Git.</p>
+                    
+                    <h3 class="text-xl mt-6">La Carpeta Oculta <code>.git</code></h3>
+                    <p>Al ejecutar <code>git init</code>, Git crea un subdirectorio oculto llamado <code>.git</code>. Aquí es donde Git almacena <strong>toda</strong> la historia, las ramas y la configuración. Si borras esta carpeta, pierdes la historia, pero no tus archivos actuales.</p>
+                    
+                    <div class="analogy-box">
+                        <strong>La Analogía:</strong> Es como contratar a un notario para que empiece a vigilar tu carpeta. El notario instala su oficina en el sótano (la carpeta .git) y espera tus órdenes.
+                    </div>
+                `,
+                task: {
+                    hint: "Ejecuta 'git init' para despertar a Git.",
+                    check: (cmd, out, git) => git.initialized,
+                    success: "¡Boom! Has creado un nuevo universo de control de versiones."
+                }
+            },
+            {
+                title: "3. El Ciclo de Vida: Status",
+                content: `
+                    <h2 class="text-3xl font-bold mb-6">Los Tres Estados de la Materia</h2>
+                    <p>En Git, los archivos pueden estar en tres estados principales. Entender esto es la clave de todo:</p>
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li><strong>Working Directory:</strong> Tu mesa de trabajo. Donde editas, borras y creas archivos.</li>
+                        <li><strong>Staging Area (Index):</strong> Una zona de preparación. Donde eliges qué cambios irán en la próxima foto.</li>
+                        <li><strong>Repository (.git):</strong> El álbum de fotos. Donde los cambios se guardan para siempre.</li>
+                    </ul>
+
+                    <h3 class="text-xl mt-6">El Radar: <code>git status</code></h3>
+                    <p>Este es el comando que usarás el 90% del tiempo. Te dice en qué estado está cada archivo.</p>
+                    
+                    <div class="tech-box">
+                        <p>Vamos a crear un archivo para ver qué nos dice el radar.</p>
+                    </div>
+                `,
+                task: {
+                    hint: "Crea un archivo: 'touch script.py' y luego mira 'git status'",
+                    check: (cmd, out, git) => git.fs['script.py'] && cmd.includes('status'),
+                    success: "¿Ves ese color rojo? Git sabe que hay un archivo nuevo, pero no lo está vigilando aún (Untracked)."
+                }
+            },
+            {
+                title: "4. Staging Area (Add)",
+                content: `
+                    <h2 class="text-3xl font-bold mb-6">El Limbo Selectivo</h2>
+                    <p>¿Por qué existe el paso intermedio <code>git add</code>? ¿Por qué no guardar todo directamente?</p>
+                    <p>Imagina que has trabajado en dos bugs diferentes en el mismo archivo. Solo quieres guardar (commit) la solución del Bug A primero. El <strong>Staging Area</strong> te permite seleccionar quirúrgicamente qué cambios incluir.</p>
+                    
+                    <div class="analogy-box">
+                        <strong>La Analogía:</strong> Estás preparando una maleta para un viaje. 
+                        1. Sacas la ropa del armario (Working Directory).
+                        2. Pones la ropa en la cama para ver qué llevas (Staging Area).
+                        3. Cierras la maleta (Commit).
+                    </div>
+
+                    <p>El comando <code>git add &lt;archivo&gt;</code> mueve el cambio del Working Directory al Staging Area.</p>
+                `,
+                task: {
+                    hint: "Mueve tu archivo al escenario: 'git add script.py'",
+                    check: (cmd, out, git) => git.index['script.py'],
+                    success: "¡Archivo preparado (Staged)! Ahora aparece en verde en el status."
+                }
+            },
+            {
+                title: "5. Commit: La Fotografía",
+                content: `
+                    <h2 class="text-3xl font-bold mb-6">Grabado en Piedra</h2>
+                    <p>Un <strong>Commit</strong> es el átomo fundamental de Git. No guarda "diferencias" (deltas), guarda una <strong>foto completa</strong> (snapshot) de cómo se veían tus archivos en ese momento.</p>
+                    
+                    <h3 class="text-xl mt-6">Anatomía de un Commit</h3>
+                    <ul class="list-disc pl-5">
+                        <li><strong>ID (Hash):</strong> Un código único SHA-1 (ej: <code>a1b2c3d</code>).</li>
+                        <li><strong>Autor:</strong> Quién lo hizo.</li>
+                        <li><strong>Mensaje:</strong> Qué se hizo y por qué.</li>
+                        <li><strong>Padre:</strong> El commit anterior.</li>
+                    </ul>
+
+                    <div class="tech-box">
+                        <code>git commit -m "Crear script inicial"</code>
+                    </div>
+                    <p class="mt-2 text-sm text-yellow-500">Nota: Un buen mensaje de commit es vital. "Fix bug" no sirve. "Corregir error de división por cero en módulo de pagos" es profesional.</p>
+                `,
+                task: {
+                    hint: "Haz la foto: git commit -m \"Initial commit\"",
+                    check: (cmd, out, git) => git.commits.length > 0,
+                    success: "¡Foto guardada! Has creado tu primer punto en la historia."
+                }
+            },
+            {
+                title: "6. Historial: Log",
+                content: `
+                    <h2 class="text-3xl font-bold mb-6">La Bitácora del Capitán</h2>
+                    <p>A medida que tu proyecto crece, tendrás cientos de commits. <code>git log</code> es tu herramienta para navegar por el pasado.</p>
+                    
+                    <p>Te muestra la historia en orden cronológico inverso (lo más nuevo arriba). Es útil para ver qué pasó, quién rompió el código, o cuándo se introdujo una funcionalidad.</p>
+                    
+                    <div class="tech-box">
+                        <strong>Comando Pro:</strong><br>
+                        <code>git log --oneline --graph</code><br>
+                        (Muestra una versión resumida y visual del árbol).
+                    </div>
+                `,
+                task: {
+                    hint: "Consulta la historia: 'git log'",
+                    check: (cmd, out, git) => cmd.includes('log'),
+                    success: "Ahí está tu commit con su hash único. Ese hash es la matrícula de tu código."
+                }
+            },
+            {
+                title: "7. Ramas (Branches)",
+                content: `
+                    <h2 class="text-3xl font-bold mb-6">El Multiverso</h2>
+                    <p>Aquí es donde Git brilla. Una <strong>Rama (Branch)</strong> es simplemente un puntero móvil a un commit. Por defecto, estás en la rama <code>main</code> (o master).</p>
+                    
+                    <div class="analogy-box">
+                        <strong>La Analogía:</strong> Estás escribiendo un libro. Quieres probar un final alternativo donde el protagonista muere, pero no quieres borrar el final feliz original. Creas una "rama" (copia) del manuscrito. Si te gusta, la usas. Si no, la tiras, y el original sigue intacto.
+                    </div>
+
+                    <p>Crear ramas es increíblemente barato y rápido en Git. Deberías crear una para cada nueva funcionalidad o corrección.</p>
+                `,
+                task: {
+                    hint: "Crea una rama nueva: 'git branch feature-login'",
+                    check: (cmd, out, git) => git.branches['feature-login'],
+                    success: "Rama creada. Pero OJO: Sigues estando en 'main'. Solo has creado la etiqueta."
+                }
+            },
+            {
+                title: "8. Checkout & Switch",
+                content: `
+                    <h2 class="text-3xl font-bold mb-6">Teletransportación</h2>
+                    <p>Para trabajar en tu nueva rama, debes moverte a ella. El comando clásico es <code>git checkout</code>.</p>
+                    
+                    <p>Cuando cambias de rama, Git <strong>cambia físicamente los archivos en tu carpeta</strong> para que coincidan con la foto de esa rama. Es magia pura.</p>
+
+                    <div class="tech-box">
+                        <p>Truco Ninja: <code>git checkout -b nueva-rama</code> crea y cambia a la vez.</p>
+                    </div>
+
+                    <p>Vamos a cambiarnos a la rama que creaste y hacer un cambio allí que no afectará a main.</p>
+                `,
+                task: {
+                    hint: "Cámbiate a tu rama: 'git checkout feature-login'",
+                    check: (cmd, out, git) => git.currentBranch === 'feature-login',
+                    success: "Ahora estás en 'feature-login'. Todo lo que hagas aquí, se queda aquí (por ahora)."
+                }
+            },
+            {
+                title: "9. Modificando en Paralelo",
+                content: `
+                    <h2 class="text-3xl font-bold mb-6">Divergencia</h2>
+                    <p>Ahora estás en tu universo paralelo <code>feature-login</code>. Vamos a simular trabajo aquí.</p>
+                    
+                    <p>Si creamos un archivo aquí y hacemos commit, la rama <code>main</code> no sabrá nada de él. Esa es la belleza del aislamiento.</p>
+                `,
+                task: {
+                    hint: "1. Crea 'login.js' (touch)\n2. Añádelo (add)\n3. Haz commit",
+                    check: (cmd, out, git) => git.currentBranch === 'feature-login' && git.commits.length >= 2,
+                    success: "¡Commit realizado en la rama! Tu rama 'main' se ha quedado atrás en la historia."
+                }
+            },
+            {
+                title: "10. Merge (Fusión)",
+                content: `
+                    <h2 class="text-3xl font-bold mb-6">Reuniendo los Mundos</h2>
+                    <p>Has terminado tu funcionalidad de login. Funciona perfecto. Ahora quieres traer esos cambios a la rama principal <code>main</code>.</p>
+                    
+                    <p>Esto se llama <strong>Merge</strong> (Fusión).</p>
+                    
+                    <div class="analogy-box">
+                        <strong>Proceso:</strong>
+                        1. Vuelves a la base (checkout main).
+                        2. Absorbes los cambios de la otra rama (merge feature-login).
+                    </div>
+                    
+                    <p>Si nadie tocó <code>main</code> mientras tú trabajabas, Git hará un "Fast-Forward" (simplemente mueve el puntero hacia adelante). Si hubo cambios, hará un "Merge Commit" para unir las historias.</p>
+                `,
+                task: {
+                    hint: "1. 'git checkout main'\n2. 'git merge feature-login'",
+                    check: (cmd, out, git) => git.currentBranch === 'main' && git.fs['login.js'],
+                    success: "¡Fusión completada! Ahora 'main' tiene tu código de login. Has cerrado el ciclo."
+                }
+            },
+            {
+                title: "11. Remotos (GitHub)",
+                content: `
+                    <h2 class="text-3xl font-bold mb-6">La Nube</h2>
+                    <p>Hasta ahora, todo ha ocurrido en tu ordenador. Pero el software moderno es colaborativo. Necesitamos subir nuestro código a un servidor central: <strong>GitHub</strong>.</p>
+                    
+                    <p>Un <strong>Remote</strong> es simplemente una URL donde vive una copia de tu repositorio. Normalmente lo llamamos <code>origin</code>.</p>
+                    
+                    <div class="tech-box">
+                        <code>git remote add origin https://github.com/usuario/repo.git</code>
+                    </div>
+                `,
+                task: {
+                    hint: "Añade el remoto: 'git remote add origin https://github.com/ka0s/demo.git'",
+                    check: (cmd, out, git) => git.remotes['origin'],
+                    success: "Conexión establecida. Tu ordenador ahora sabe dónde enviar los datos."
+                }
+            },
+            {
+                title: "12. Push: Despegue",
+                content: `
+                    <h2 class="text-3xl font-bold mb-6">Publicando tu Trabajo</h2>
+                    <p>El paso final. <code>git push</code> envía tus commits locales al servidor remoto.</p>
+                    
+                    <p>Es el momento de la verdad. Cuando haces push, tu código se vuelve visible para tu equipo (o para el mundo, si es Open Source).</p>
+                    
+                    <div class="analogy-box">
+                        <strong>Resumen Final:</strong>
+                        Has configurado tu identidad, iniciado un repo, creado cambios, preparado el paquete (stage), sacado la foto (commit), creado universos paralelos (branch), y fusionado todo de vuelta. ¡Ahora compártelo!
+                    </div>
+                `,
+                task: {
+                    hint: "Sube tu código: 'git push origin main'",
+                    check: (cmd, out, git) => cmd.includes('push'),
+                    success: "¡ÉXITO TOTAL! Eres oficialmente un Git Master. Has completado el protocolo Zero to Hero."
+                }
+            }
+        ];
+
+        /* ------------------------------------------------
+           APP CONTROLLER
+           ------------------------------------------------ */
+        const app = {
+            git: new GitEngine(),
+            currentLesson: 0,
+            
+            init() {
+                this.renderMenu();
+                this.loadLesson(0);
+                this.bindEvents();
+            },
+
+            renderMenu() {
+                const select = document.getElementById('moduleSelect');
+                select.innerHTML = CURRICULUM.map((mod, i) => 
+                    `<option value="${i}">${mod.title}</option>`
+                ).join('');
+                
+                select.addEventListener('change', (e) => {
+                    this.loadLesson(parseInt(e.target.value));
+                });
+            },
+
+            loadLesson(idx) {
+                if (idx < 0 || idx >= CURRICULUM.length) return;
+                
+                this.currentLesson = idx;
+                const lesson = CURRICULUM[idx];
+                
+                // Content Injection
+                const container = document.getElementById('lessonContent');
+                container.innerHTML = `
+                    <div class="animate-fade-in">
+                        ${lesson.content}
+                    </div>
+                `;
+                
+                // Update UI State
+                document.getElementById('taskHint').textContent = lesson.task.hint;
+                document.getElementById('moduleSelect').value = idx;
+                
+                // Navigation Buttons
+                document.getElementById('prevBtn').disabled = idx === 0;
+                document.getElementById('nextBtn').disabled = idx === CURRICULUM.length - 1;
+                document.getElementById('pageIndicator').textContent = `${idx + 1}/${CURRICULUM.length}`;
+
+                // Progress Bar
+                const progress = ((idx + 1) / CURRICULUM.length) * 100;
+                document.getElementById('globalProgress').style.width = `${progress}%`;
+                document.getElementById('progressText').textContent = `${Math.round(progress)}%`;
+
+                // Update Terminal Branch Label
+                this.updateTerminalLabel();
+            },
+
+            updateTerminalLabel() {
+                const branchLabel = document.getElementById('gitBranchLabel');
+                const branch = this.git.currentBranch;
+                if (this.git.initialized) {
+                    branchLabel.innerHTML = ` (<span class="text-red-400">${branch}</span>)`;
+                } else {
+                    branchLabel.innerHTML = '';
+                }
+            },
+
+            handleCommand(cmd) {
+                const termOutput = document.getElementById('terminalOutput');
+                
+                // Echo
+                const branchHtml = this.git.initialized ? ` (<span class="text-red-400">${this.git.currentBranch}</span>)` : '';
+                termOutput.innerHTML += `
+                    <div class="mt-2">
+                        <span class="text-[#238636] font-bold">user@ka0s</span>
+                        <span class="text-gray-500">:</span>
+                        <span class="text-[#58a6ff]">~/project</span>${branchHtml}
+                        <span class="text-gray-400 dark:text-gray-500">$</span> <span class="text-gray-900 dark:text-white">${cmd}</span>
+                    </div>
+                `;
+
+                // Logic
+                let response = "";
+                const parts = cmd.trim().split(/\s+/);
+                
+                if (parts[0] === 'git') {
+                    const gitCmd = parts[1];
+                    const args = parts.slice(2);
+                    
+                    if (this.git[gitCmd]) {
+                        response = this.git[gitCmd](args);
+                    } else if (['push', 'pull', 'remote'].includes(gitCmd)) {
+                         // Specific handlers if not in main class methods or generic fallback
+                         if (this.git[gitCmd]) response = this.git[gitCmd](args);
+                         else response = `git: '${gitCmd}' is not yet implemented in simulation.`;
+                    } else {
+                        response = `git: '${gitCmd}' is not a git command. See 'git --help'.`;
+                    }
+                } else if (parts[0] === 'touch') {
+                    if (parts[1]) {
+                        this.git.fs[parts[1]] = "Content of " + parts[1];
+                        response = "";
+                    } else response = "usage: touch <filename>";
+                } else if (parts[0] === 'ls') {
+                    response = Object.keys(this.git.fs).join('  ');
+                } else if (parts[0] === 'clear') {
+                    termOutput.innerHTML = ''; 
+                    return;
+                } else if (parts[0] === 'help') {
+                    response = "Supported: git init, status, add, commit, log, branch, checkout, merge, remote, push\nUtils: touch, ls, clear";
+                } else if (parts[0] === '') {
+                    response = "";
+                } else {
+                    response = `bash: ${parts[0]}: command not found`;
+                }
+
+                if (response) {
+                    termOutput.innerHTML += `<div class="text-gray-500 dark:text-gray-400 whitespace-pre-wrap mb-2">${response}</div>`;
+                }
+
+                this.updateTerminalLabel();
+
+                // Check Task
+                const currentTask = CURRICULUM[this.currentLesson].task;
+                if (currentTask && currentTask.check(cmd, response, this.git)) {
+                    this.completeTask(currentTask.success);
+                }
+
+                // Auto Scroll
+                termOutput.scrollTop = termOutput.scrollHeight;
+            },
+
+            completeTask(msg) {
+                confetti({ particleCount: 150, spread: 60, origin: { y: 0.7 } });
+                
+                const termOutput = document.getElementById('terminalOutput');
+                termOutput.innerHTML += `
+                    <div class="my-4 p-3 bg-[#238636]/10 dark:bg-[#238636]/20 border border-[#238636] text-[#2ea043] dark:text-[#3fb950] rounded-md flex items-center gap-3">
+                        <span class="text-xl">✨</span>
+                        <div>
+                            <div class="font-bold text-sm">Misión Cumplida</div>
+                            <div class="text-xs opacity-90">${msg}</div>
+                        </div>
+                    </div>
+                `;
+                termOutput.scrollTop = termOutput.scrollHeight;
+
+                // Unlock next button
+                document.getElementById('nextBtn').disabled = false;
+                
+                // Auto-advance logic (optional)
+                setTimeout(() => {
+                    if (this.currentLesson < CURRICULUM.length - 1) {
+                         // this.loadLesson(this.currentLesson + 1); // Optional: Auto advance
+                         // Better let user read and click next
+                         document.getElementById('nextBtn').classList.add('animate-pulse', 'text-green-600', 'dark:text-green-400');
+                    }
+                }, 1000);
+            },
+            
+            bindEvents() {
+                const input = document.getElementById('cmdInput');
+                input.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter') {
+                        this.handleCommand(input.value);
+                        input.value = '';
+                    }
+                });
+
+                document.getElementById('prevBtn').addEventListener('click', () => {
+                    this.loadLesson(this.currentLesson - 1);
+                });
+                
+                document.getElementById('nextBtn').addEventListener('click', () => {
+                    this.loadLesson(this.currentLesson + 1);
+                });
+            }
+        };
+
+        // Initialize
+        app.init();
+    </script>
+    <style>
+        .animate-fade-in { animation: fadeIn 0.5s ease-out; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+    </style>
+  </body>
+</html>
