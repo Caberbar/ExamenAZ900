@@ -58,7 +58,9 @@
 
         // Comprobar si ya está logueado
         if (sessionStorage.getItem('ka0s_auth') === 'true') {
-            window.location.href = 'apuntesKa0s.html';
+            const urlParams = new URLSearchParams(window.location.search);
+            const redirectTarget = urlParams.get('redirect') || 'apuntesKa0s.html';
+            window.location.href = redirectTarget;
         }
 
         document.getElementById('loginForm').addEventListener('submit', function(e) {
@@ -78,8 +80,12 @@
                 btn.classList.remove('bg-indigo-600', 'hover:bg-indigo-700');
                 btn.classList.add('bg-green-600');
                 
+                // Redirect logic
+                const urlParams = new URLSearchParams(window.location.search);
+                const redirectTarget = urlParams.get('redirect') || 'apuntesKa0s.html';
+
                 setTimeout(() => {
-                    window.location.href = 'apuntesKa0s.html';
+                    window.location.href = redirectTarget;
                 }, 500);
             } else {
                 // Error
