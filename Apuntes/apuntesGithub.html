@@ -71,20 +71,62 @@
       .dark .prose strong { color: #f3f4f6; }
       
       .prose code { background: rgba(175, 184, 193, 0.2); padding: 0.2em 0.4em; border-radius: 6px; font-family: 'Fira Code', monospace; font-size: 0.85em; color: #24292f; }
-      .dark .prose code { background: rgba(110, 118, 129, 0.4); color: #a5d6ff; }
+      .dark .prose code { background: rgba(110, 118, 129, 0.4); color: #c9d1d9; }
       
       .prose pre { background: #f6f8fa; padding: 1em; border-radius: 6px; overflow-x: auto; margin-bottom: 1em; border: 1px solid #d0d7de; }
       .dark .prose pre { background: #161b22; border: 1px solid #30363d; }
       
-      .prose ul { list-style-type: disc; padding-left: 1.5em; margin-bottom: 1em; color: #4b5563; }
-      .dark .prose ul { color: #9ca3af; }
+      .prose ul { list-style-type: disc; padding-left: 1.5em; margin-bottom: 1em; color: #1f2328; }
+      .dark .prose ul { color: #c9d1d9; }
       
-      .analogy-box { border-left: 4px solid #a371f7; background: rgba(163, 113, 247, 0.1); padding: 1rem; border-radius: 0 0.5rem 0.5rem 0; margin: 1.5rem 0; color: #4b5563; }
-      .dark .analogy-box { color: #c9d1d9; }
+      /* GitHub Alert Styles */
+      .analogy-box {
+          border-left: 3px solid #a371f7;
+          background-color: #f8faff;
+          padding: 16px;
+          margin-bottom: 16px;
+          border-radius: 0 6px 6px 0;
+          color: #24292f;
+          position: relative;
+      }
+      .dark .analogy-box {
+          background-color: rgba(163, 113, 247, 0.1);
+          color: #c9d1d9;
+          border-left-color: #bc8cff;
+      }
+      .analogy-box::before {
+          content: "💡 Note";
+          display: block;
+          font-weight: 600;
+          margin-bottom: 8px;
+          color: #a371f7;
+          font-size: 0.9em;
+      }
+      .dark .analogy-box::before { color: #bc8cff; }
       
-      .tech-box { border-left: 4px solid #238636; background: rgba(35, 134, 54, 0.1); padding: 1rem; border-radius: 0 0.5rem 0.5rem 0; margin: 1.5rem 0; color: #4b5563; }
-      .dark .tech-box { color: #c9d1d9; }
-      
+      .tech-box {
+          border-left: 3px solid #2da44e;
+          background-color: #f6fff8;
+          padding: 16px;
+          margin-bottom: 16px;
+          border-radius: 0 6px 6px 0;
+          color: #24292f;
+      }
+      .dark .tech-box {
+          background-color: rgba(45, 164, 78, 0.1);
+          color: #c9d1d9;
+          border-left-color: #3fb950;
+      }
+      .tech-box::before {
+          content: "⚡ Tip";
+          display: block;
+          font-weight: 600;
+          margin-bottom: 8px;
+          color: #2da44e;
+          font-size: 0.9em;
+      }
+      .dark .tech-box::before { color: #3fb950; }
+
       /* Typing Animation Cursor */
       .cursor-blink { animation: blink 1s step-end infinite; }
       @keyframes blink { 50% { opacity: 0; } }
@@ -1025,8 +1067,25 @@
                 // Content Injection
                 const container = document.getElementById('lessonContent');
                 container.innerHTML = `
-                    <div class="animate-fade-in">
-                        ${lesson.content}
+                    <div class="animate-fade-in max-w-4xl mx-auto">
+                        <!-- GitHub README Header style -->
+                        <div class="rounded-t-md bg-[#f6f8fa] dark:bg-[#161b22] border border-[#d0d7de] dark:border-[#30363d] px-4 py-3 flex items-center gap-3 sticky top-0 z-10">
+                             <div class="flex items-center justify-center w-8 h-8 rounded-full bg-white dark:bg-[#21262d] border border-[#d0d7de] dark:border-[#30363d] text-gray-500">
+                                <svg class="w-4 h-4" viewBox="0 0 16 16" fill="currentColor"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 1 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 0 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1V9h-8c-.356 0-.694.074-1 .208V2.5a1 1 0 0 1 1-1h8ZM5 12.25a.25.25 0 1 0 0 .5.25.25 0 0 0 0-.5Z"></path></svg>
+                             </div>
+                             <div class="flex-1">
+                                <div class="text-xs font-mono font-semibold text-[#1f2328] dark:text-[#c9d1d9]">README.md</div>
+                                <div class="text-[10px] text-gray-500">Lesson ${idx + 1} of ${CURRICULUM.length}</div>
+                             </div>
+                             <div class="flex gap-2">
+                                <span class="px-2 py-0.5 text-[10px] border border-[#d0d7de] dark:border-[#30363d] rounded-full text-gray-500 font-mono">master</span>
+                             </div>
+                        </div>
+                        
+                        <!-- Content Body -->
+                        <div class="rounded-b-md border-x border-b border-[#d0d7de] dark:border-[#30363d] bg-white dark:bg-[#0d1117] p-8 md:p-10 prose prose-sm md:prose-base dark:prose-invert max-w-none">
+                            ${lesson.content}
+                        </div>
                     </div>
                 `;
                 

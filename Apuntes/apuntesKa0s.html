@@ -12,202 +12,178 @@
       }
     </script>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="../theme.js"></script>
     <script>
       tailwind.config = {
         darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              mono: ['Fira Code', 'monospace'],
+            },
+            colors: {
+              github: {
+                dark: '#0d1117',
+                darker: '#010409',
+                border: '#30363d',
+                light: '#ffffff',
+                accent: '#238636',
+                link: '#58a6ff'
+              }
+            }
+          }
+        }
       }
     </script>
-    <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Inter:wght@400;500;600&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-      :root{
-        /* Tema Soft Slate & Indigo - Optimizado para lectura */
-        --accent:#4f46e5; /* indigo-600 - Un poco más oscuro para mejor contraste */
-        --paper:#faf9f6; /* Off-white / Creamy paper */
-        --ink:#1e293b; /* slate-800 */
-        --hl:#e0e7ff; /* indigo-100 */
-        --border:#cbd5e1; /* slate-300 */
-      }
-      .dark{
-        --paper:#0f172a; /* slate-900 */
-        --ink:#e2e8f0; /* slate-200 */
-        --hl:#312e81; /* indigo-900 */
-        --border:#334155; /* slate-700 */
-        --accent:#818cf8; /* indigo-400 */
-      }
-      .hand{font-family:"Kalam",cursive;}
-      .body-font{font-family:"Merriweather",serif;}
-      .ui-font{font-family:"Inter",sans-serif;}
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar { width: 8px; height: 8px; }
+      ::-webkit-scrollbar-track { background: transparent; }
+      ::-webkit-scrollbar-thumb { background: #d1d5db; border-radius: 4px; }
+      .dark ::-webkit-scrollbar-thumb { background: #30363d; }
+      ::-webkit-scrollbar-thumb:hover { background: #9ca3af; }
+      .dark ::-webkit-scrollbar-thumb:hover { background: #8b949e; }
+
+      /* GitHub-like Typography */
+      .prose h2, .prose h3, .prose h4 { color: #1f2328; font-weight: 600; margin-top: 24px; margin-bottom: 16px; }
+      .dark .prose h2, .dark .prose h3, .dark .prose h4 { color: #e6edf3; }
       
-      .paper-bg{background:var(--paper); color:var(--ink);}
+      .prose h2 { font-size: 1.5em; border-bottom: 1px solid #d0d7de; padding-bottom: 0.3em; }
+      .dark .prose h2 { border-bottom-color: #30363d; }
       
-      .sheet{
-        background:#fff;
-        border-radius:8px;
-        border:1px solid var(--border);
-        box-shadow:0 4px 6px -1px rgba(0,0,0,.05), 0 2px 4px -1px rgba(0,0,0,.03);
-        position:relative;
-        overflow:hidden;
-      }
-      .dark .sheet{background:#1e293b; box-shadow:none;}
+      .prose p { margin-bottom: 16px; line-height: 1.5; color: #1f2328; }
+      .dark .prose p { color: #e6edf3; }
       
-      /* Decoración lateral sutil */
-      .sheet::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--accent);opacity:0.8;}
+      .prose code { background: rgba(175, 184, 193, 0.2); padding: 0.2em 0.4em; border-radius: 6px; font-family: 'Fira Code', monospace; font-size: 0.85em; color: #24292f; }
+      .dark .prose code { background: rgba(110, 118, 129, 0.4); color: #c9d1d9; }
       
-      .title-scribble{font-family:"Kalam",cursive;font-size:1.8rem;letter-spacing:.2px;font-weight:700;color:var(--ink);position:relative;display:inline-block;}
-      .title-scribble::after{content:"";position:absolute;left:0;right:0;bottom:2px;height:8px;background:var(--hl);z-index:-1;transform:skewX(-10deg);}
+      .prose pre { background: #f6f8fa; padding: 16px; border-radius: 6px; overflow-x: auto; margin-bottom: 16px; border: 1px solid #d0d7de; }
+      .dark .prose pre { background: #161b22; border-color: #30363d; }
       
-      .note-card{
-        background:#fff;
-        border:1px solid var(--border);
-        border-radius:8px;
-        margin-bottom:1.5rem;
-      }
-      .dark .note-card{background:#1e293b;}
+      .prose ul { list-style-type: disc; padding-left: 2em; margin-bottom: 16px; color: #1f2328; }
+      .dark .prose ul { color: #e6edf3; }
       
-      /* Índice lateral limpio */
-      html{scroll-behavior:smooth}
-      .toc-item{
-        border-left:2px solid transparent;
-        padding:.5rem .8rem;
-        margin-bottom:0.25rem;
-        transition:all 0.2s;
-        border-radius:0 4px 4px 0;
+      .prose a { color: #0969da; text-decoration: none; }
+      .dark .prose a { color: #58a6ff; }
+      .prose a:hover { text-decoration: underline; }
+
+      /* Alerts */
+      .alert-note {
+          border-left: 3px solid #0969da;
+          background-color: #ddf4ff;
+          padding: 16px;
+          margin-bottom: 16px;
+          color: #24292f;
+          border-radius: 0 6px 6px 0;
       }
-      .toc-link{display:flex;align-items:center;gap:.5rem;color:var(--ink);font-family:"Inter",sans-serif;font-size:0.9rem;}
-      .toc-link .num{color:var(--accent);font-weight:600;min-width:1.5rem;}
+      .dark .alert-note {
+          background-color: rgba(56, 139, 253, 0.1);
+          color: #c9d1d9;
+          border-left-color: #1f6feb;
+      }
       
-      .toc-progress{height:4px;border-radius:2px;background:var(--border);margin-top:0.4rem;overflow:hidden;opacity:0.5;}
-      .toc-progress > div{height:100%;background:var(--accent);border-radius:2px;}
-      .toc-progress-text{font-size:.7rem;color:var(--ink);opacity:0.7;margin-top:0.1rem;display:block;}
+      .alert-tip {
+          border-left: 3px solid #1a7f37;
+          background-color: #dafbe1;
+          padding: 16px;
+          margin-bottom: 16px;
+          color: #24292f;
+          border-radius: 0 6px 6px 0;
+      }
+      .dark .alert-tip {
+          background-color: rgba(45, 164, 78, 0.1);
+          color: #c9d1d9;
+          border-left-color: #238636;
+      }
+
+      /* Layout Utilities */
+      .file-header {
+          background-color: #f6f8fa;
+          border: 1px solid #d0d7de;
+          border-bottom: 0;
+          border-top-left-radius: 6px;
+          border-top-right-radius: 6px;
+          padding: 8px 16px;
+          font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+          font-size: 14px;
+          color: #1f2328;
+      }
+      .dark .file-header {
+          background-color: #161b22;
+          border-color: #30363d;
+          color: #e6edf3;
+      }
       
-      .toc-active{
-        background:var(--hl);
-        border-left-color:var(--accent);
+      .file-content {
+          border: 1px solid #d0d7de;
+          border-bottom-left-radius: 6px;
+          border-bottom-right-radius: 6px;
+          background-color: #ffffff;
+          padding: 32px;
       }
-      .dark .toc-active{background:rgba(79, 70, 229, 0.15);}
-      
-      /* Scroll interno para el índice lateral sticky */
-      .sheet-scroll{max-height:calc(100vh - 120px);overflow:auto;overscroll-behavior:contain;scrollbar-width:thin;}
-      
-      /* Estilos para el markdown renderizado - Optimizado para lectura */
-      .md-content {
-        font-family: "Merriweather", serif;
-        font-size: 1.05rem;
-        line-height: 1.8;
-        color: var(--ink);
+      .dark .file-content {
+          border-color: #30363d;
+          background-color: #0d1117;
       }
-      .md-content h4 { 
-        font-family: 'Inter', sans-serif; 
-        font-weight: 700; 
-        font-size: 1.25rem; 
-        margin-top: 2rem; 
-        margin-bottom: 0.75rem; 
-        color: var(--accent); 
-        border-bottom: 1px solid var(--border);
-        padding-bottom: 0.25rem;
-      }
-      .md-content h5 { 
-        font-family: 'Inter', sans-serif; 
-        font-weight: 600; 
-        font-size: 1.1rem; 
-        margin-top: 1.5rem; 
-        margin-bottom: 0.5rem; 
-        color: var(--ink); 
-      }
-      .md-content ul { 
-        list-style-type: disc; 
-        padding-left: 1.5rem; 
-        margin-top: 0.75rem; 
-        margin-bottom: 0.75rem; 
-      }
-      .md-content li { 
-        margin-bottom: 0.5rem; 
-        padding-left: 0.25rem;
-      }
-      .md-content p { 
-        margin-bottom: 1rem; 
-      }
-      .md-content code { 
-        font-family: 'Consolas', 'Monaco', monospace; 
-        font-size: 0.9em;
-        background: rgba(99,102,241,0.08); 
-        padding: 0.1rem 0.3rem; 
-        border-radius: 0.25rem; 
-        color: var(--accent); 
-        border: 1px solid rgba(99,102,241,0.1);
-      }
-      .dark .md-content code { background: rgba(99,102,241,0.15); border-color: rgba(99,102,241,0.2); }
-      .md-content a { 
-        color: var(--accent); 
-        text-decoration: none; 
-        border-bottom: 1px dotted var(--accent);
-        transition: border-bottom 0.2s;
-      }
-      .md-content a:hover { border-bottom-style: solid; }
-      .md-content strong { font-weight: 700; color: var(--ink); }
-      
-      /* Botones sutiles */
-      .btn-soft {
-        background: #fff;
-        border: 1px solid var(--border);
-        color: var(--ink);
-        border-radius: 6px;
-        padding: 0.25rem 0.75rem;
-        font-size: 0.875rem;
-        transition: all 0.2s;
-      }
-      .btn-soft:hover { background: var(--hl); border-color: var(--accent); }
-      .dark .btn-soft { background: #1e293b; }
-      
     </style>
   </head>
-  <body class="min-h-screen paper-bg text-gray-900 dark:text-gray-100">
-    <header class="sticky top-0 z-10 border-b bg-white/90 backdrop-blur dark:bg-[#0f172a]/90 dark:border-indigo-900">
-      <div class="max-w-5xl mx-auto px-4 py-4 flex items-center justify-between gap-4">
-        <div>
-          <h1 class="title-scribble">Plan de Formación Ka0s</h1>
-          <p class="text-sm text-indigo-800 dark:text-indigo-200 ui-font">Onboarding técnico: arquitectura, automatización y cultura operativa.</p>
-        </div>
+  <body class="bg-white dark:bg-[#0d1117] text-[#1f2328] dark:text-[#e6edf3] transition-colors duration-200">
+    <!-- Header -->
+    <header class="bg-[#f6f8fa] dark:bg-[#161b22] border-b border-[#d0d7de] dark:border-[#30363d] sticky top-0 z-20">
+      <div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
         <div class="flex items-center gap-3">
-          <label class="inline-flex items-center cursor-pointer">
-            <input type="checkbox" id="toggleDark" class="sr-only peer">
-            <div class="relative w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-indigo-300 dark:peer-focus:ring-indigo-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-indigo-600"></div>
-            <span class="ms-3 text-sm font-medium text-gray-900 dark:text-gray-300 ui-font">Modo oscuro</span>
-          </label>
-          <button id="expandAll" class="btn-soft ui-font">Expandir todo</button>
-          <button id="collapseAll" class="btn-soft ui-font">Contraer todo</button>
-          <button id="logoutBtn" class="px-3 py-1 text-sm rounded border border-red-200 bg-red-50 text-red-600 hover:bg-red-100 transition-colors dark:bg-red-900/30 dark:border-red-800 dark:text-red-200 dark:hover:bg-red-900/50 ui-font">Cerrar Sesión</button>
+          <svg height="32" viewBox="0 0 16 16" width="32" class="fill-black dark:fill-white">
+              <path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"></path>
+          </svg>
+          <div>
+            <h1 class="font-semibold text-lg leading-tight">Ka0s Training Plan</h1>
+            <p class="text-xs text-gray-500 dark:text-gray-400">master branch</p>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-3">
+            <button id="themeToggle" class="p-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-800 text-gray-500 dark:text-gray-400 transition-colors">
+                <svg id="sunIcon" class="hidden dark:block w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+                <svg id="moonIcon" class="block dark:hidden w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
+            </button>
+            <button id="logoutBtn" class="text-sm font-medium text-red-600 hover:text-red-700 dark:text-red-400 border border-red-200 dark:border-red-900 bg-red-50 dark:bg-red-900/10 px-3 py-1.5 rounded-md transition-colors">Sign Out</button>
         </div>
       </div>
     </header>
 
-    <main class="max-w-5xl mx-auto px-4 py-6">
-      <section class="mb-4 flex items-center justify-between">
-        <div class="flex items-center gap-2">
-          <input id="search" type="text" placeholder="Buscar temas" class="w-80 px-3 py-2 border rounded bg-white focus:outline-none focus:ring-2 focus:ring-indigo-200 transition-all dark:bg-indigo-900 dark:border-indigo-800 dark:text-indigo-100 dark:focus:ring-indigo-700 ui-font text-sm" />
-          <span class="text-sm text-gray-600 dark:text-gray-400 ui-font">Semanas: <span id="sectionCount">0</span> • Días: <span id="noteCount">0</span></span>
+    <main class="max-w-7xl mx-auto px-4 py-8 md:grid md:grid-cols-12 gap-8">
+      
+      <!-- Left Sidebar: File Explorer / TOC -->
+      <aside class="md:col-span-3 lg:col-span-3">
+        <div class="sticky top-24">
+            <div class="mb-4">
+                <input id="search" type="text" placeholder="Go to file..." class="w-full bg-[#f6f8fa] dark:bg-[#0d1117] border border-[#d0d7de] dark:border-[#30363d] rounded-md px-3 py-1.5 text-sm focus:border-[#0969da] focus:ring-1 focus:ring-[#0969da] outline-none text-[#1f2328] dark:text-[#c9d1d9]" />
+            </div>
+            
+            <nav class="border border-[#d0d7de] dark:border-[#30363d] rounded-md bg-white dark:bg-[#0d1117] overflow-hidden">
+                <div class="bg-[#f6f8fa] dark:bg-[#161b22] px-3 py-2 border-b border-[#d0d7de] dark:border-[#30363d] text-xs font-semibold text-[#1f2328] dark:text-[#c9d1d9] flex justify-between items-center">
+                    <span>Explorer</span>
+                    <span id="studiedCount" class="bg-[#afb8c1]/20 px-1.5 py-0.5 rounded-full text-[10px]">0%</span>
+                </div>
+                <div id="toc" class="text-sm"></div>
+            </nav>
+
+            <div class="mt-4 flex gap-2">
+                <button id="expandAll" class="text-xs text-[#0969da] hover:underline">Expand all</button>
+                <span class="text-gray-300">|</span>
+                <button id="collapseAll" class="text-xs text-[#0969da] hover:underline">Collapse all</button>
+            </div>
         </div>
-        <div class="text-sm font-medium text-gray-700 dark:text-gray-300 ui-font">Completado: <span id="studiedCount">0</span></div>
+      </aside>
+
+      <!-- Main Content: README View -->
+      <section class="md:col-span-9 lg:col-span-9">
+        <div id="notes" class="space-y-8">
+            <!-- Content injected here -->
+        </div>
       </section>
 
-      <div class="md:grid md:grid-cols-12 gap-6">
-        <aside class="md:col-span-4 lg:col-span-3">
-          <div class="sheet sheet-scroll p-6 sticky top-20">
-            <div class="flex items-center justify-between">
-              <div class="title-scribble" style="font-size:1.4rem">Progreso</div>
-              <div class="text-xs text-gray-500 ui-font">Auto-guardado</div>
-            </div>
-            <nav id="toc" class="mt-4 space-y-1"></nav>
-          </div>
-        </aside>
-
-        <section class="md:col-span-8 lg:col-span-9">
-          <div class="sheet p-6">
-            <div id="notes" class="space-y-8"></div>
-          </div>
-        </section>
-      </div>
     </main>
 
     <script>
@@ -810,120 +786,106 @@ Get -> Update/Create -> Close (si OK).
         const searchTerm = els.search.value.trim().toLowerCase();
         els.notes.innerHTML = '';
         els.toc.innerHTML = '';
-        let sections = 0;
         let totalNotes = 0;
-        let studiedCount = 0;
-        let secIdx = 0;
-        const tocParts = [];
-
-        SECTIONS.forEach(sec => {
+        let studiedTotal = 0;
+        
+        SECTIONS.forEach((sec, secIdx) => {
           const filtered = sec.items.map((it, idx) => ({...it, id: `${sec.id}-${idx}`})).filter(it => {
             if (!searchTerm) return true;
             return it.t.toLowerCase().includes(searchTerm) || (it.d && it.d.toLowerCase().includes(searchTerm));
           });
+          
           if (filtered.length === 0) return;
-          sections += 1;
-          secIdx += 1;
           totalNotes += filtered.length;
 
-          const section = document.createElement('section');
-          section.className = 'bg-transparent rounded-lg';
+          // TOC Folder
+          const folderOpen = true; // Always open for now
+          const secDiv = document.createElement('div');
+          secDiv.className = 'border-b border-[#d0d7de] dark:border-[#30363d] last:border-0';
+          
+          const folderHeader = document.createElement('div');
+          folderHeader.className = 'px-3 py-2 flex items-center gap-2 hover:bg-[#f6f8fa] dark:hover:bg-[#161b22] cursor-pointer text-[#1f2328] dark:text-[#c9d1d9]';
+          folderHeader.innerHTML = `
+            <svg class="w-4 h-4 text-[#54aeff]" viewBox="0 0 16 16" fill="currentColor"><path d="M1.75 1A1.75 1.75 0 0 0 0 2.75v10.5C0 14.216.784 15 1.75 15h12.5A1.75 1.75 0 0 0 16 13.25v-8.5A1.75 1.75 0 0 0 14.25 3H7.5a.25.25 0 0 1-.2-.1l-.9-1.2C6.07 1.26 5.55 1 5 1H1.75Z"></path></svg>
+            <span class="font-semibold truncate">${sec.label}</span>
+          `;
+          secDiv.appendChild(folderHeader);
 
-          const header = document.createElement('div');
-          header.className = 'px-5 py-4 flex items-center justify-between border-b dark:border-indigo-800';
-          header.id = `sec-${sec.id}`;
-          header.innerHTML = `<div class="title-scribble text-xl">${sec.label} <span class="text-sm text-gray-500 dark:text-gray-400 ui-font">(${filtered.length})</span></div>
-                              <button class="btn-soft ui-font" data-toggle>Ver</button>`;
-          section.appendChild(header);
-
-          const list = document.createElement('div');
-          list.className = 'p-5 space-y-6';
-          if (sec.desc) {
-            const summary = document.createElement('p');
-            summary.className = 'text-sm leading-relaxed note-card p-4 mb-4 ui-font';
-            summary.innerHTML = sec.desc;
-            list.appendChild(summary);
-          }
-
-          const secStudied = filtered.reduce((acc, it) => acc + (studied[it.id] ? 1 : 0), 0);
-          const percent = Math.round(100 * secStudied / filtered.length);
-          const secToc = [
-            `<div class="toc-item" data-toc="${sec.id}">
-               <a class="toc-link" href="#sec-${sec.id}"><span class="hand num">${secIdx}.</span> ${sec.label}</a>
-               <div class="toc-progress"><div style="width:${percent}%"></div></div>
-               <span class="toc-progress-text">${secStudied}/${filtered.length} completados</span>
-             </div>`
-          ];
-
-          filtered.forEach((it, subIdx) => {
-            const li = document.createElement('div');
+          const folderContent = document.createElement('div');
+          // folderContent.className = 'pl-2'; // Indent
+          
+          filtered.forEach((it) => {
             const checked = !!studied[it.id];
-            if (checked) studiedCount += 1;
-            li.className = 'note-card p-6 transition-all hover:shadow-md';
+            if (checked) studiedTotal += 1;
+
+            // TOC Item (File)
+            const fileLink = document.createElement('a');
+            fileLink.href = `#note-${it.id}`;
+            fileLink.className = `block px-3 py-1.5 flex items-center gap-2 text-[#1f2328] dark:text-[#c9d1d9] hover:text-[#0969da] dark:hover:text-[#58a6ff] hover:underline decoration-dashed text-xs pl-8`;
+            fileLink.innerHTML = `
+                <svg class="w-3.5 h-3.5 text-[#656d76] dark:text-[#7d8590]" viewBox="0 0 16 16" fill="currentColor"><path d="M2 1.75C2 .784 2.784 0 3.75 0h6.586c.464 0 .909.184 1.228.504l2.932 2.932c.32.319.504.764.504 1.228v8.59c0 .966-.784 1.75-1.75 1.75H3.75A1.75 1.75 0 0 1 2 13.25v-11.5Z"></path></svg>
+                <span class="truncate ${checked ? 'line-through opacity-50' : ''}">${it.t}</span>
+            `;
+            folderContent.appendChild(fileLink);
+
+            // Note Content (README style)
+            const noteContainer = document.createElement('div');
+            noteContainer.id = `note-${it.id}`;
+            noteContainer.className = 'mb-8 scroll-mt-24';
             
-            // Render Markdown
             const renderedContent = parseMarkdown(it.md);
             
-            li.innerHTML = `
-              <div class="flex items-start justify-between gap-4 mb-4 border-b border-indigo-100 dark:border-indigo-900 pb-3">
-                <h3 class="hand text-xl font-bold text-gray-800 dark:text-gray-100">${it.t}</h3>
-                <label class="select-none inline-flex flex-col items-center gap-1 cursor-pointer">
-                  <input type="checkbox" ${checked ? 'checked' : ''} data-id="${it.id}" class="h-6 w-6 text-indigo-600 rounded focus:ring-indigo-500">
-                  <span class="text-[10px] text-gray-500 font-medium ui-font">Hecho</span>
-                </label>
-              </div>
-              <div class="text-sm text-gray-600 dark:text-gray-400 mb-4 italic ui-font">${it.d}</div>
-              <div class="md-content">
-                ${renderedContent}
-              </div>
+            noteContainer.innerHTML = `
+                <div class="file-header flex items-center justify-between">
+                    <div class="flex items-center gap-2">
+                        <svg class="w-4 h-4 text-[#656d76] dark:text-[#7d8590]" viewBox="0 0 16 16" fill="currentColor"><path d="M2 1.75C2 .784 2.784 0 3.75 0h6.586c.464 0 .909.184 1.228.504l2.932 2.932c.32.319.504.764.504 1.228v8.59c0 .966-.784 1.75-1.75 1.75H3.75A1.75 1.75 0 0 1 2 13.25v-11.5Z"></path></svg>
+                        <span class="font-mono font-semibold">${it.t}.md</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <label class="text-xs cursor-pointer select-none flex items-center gap-1 px-2 py-1 rounded hover:bg-[#eaeef2] dark:hover:bg-[#30363d] transition-colors border border-transparent hover:border-[#d0d7de] dark:hover:border-[#6e7681]">
+                            <input type="checkbox" ${checked ? 'checked' : ''} data-id="${it.id}" class="accent-[#238636]">
+                            <span>Mark as read</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="file-content prose prose-sm md:prose-base dark:prose-invert max-w-none">
+                    ${renderedContent}
+                </div>
             `;
-            li.querySelector('input[type="checkbox"]').addEventListener('change', (e) => {
-              studied[it.id] = e.target.checked;
-              localStorage.setItem('ka0s:studied', JSON.stringify(studied));
-              render();
+            
+            noteContainer.querySelector('input').addEventListener('change', (e) => {
+                studied[it.id] = e.target.checked;
+                localStorage.setItem('ka0s:studied', JSON.stringify(studied));
+                render(); // Re-render to update TOC strikethrough and progress
             });
-            list.appendChild(li);
+
+            els.notes.appendChild(noteContainer);
           });
 
-          section.appendChild(list);
-          header.querySelector('[data-toggle]').addEventListener('click', () => list.classList.toggle('hidden'));
-          els.notes.appendChild(section);
-
-          tocParts.push(`<div class="space-y-1">${secToc.join('')}</div>`);
+          secDiv.appendChild(folderContent);
+          els.toc.appendChild(secDiv);
         });
 
-        els.toc.innerHTML = tocParts.join('');
-        setupSpy();
-        els.sectionCount.textContent = sections;
-        els.noteCount.textContent = totalNotes;
-        els.studiedCount.textContent = studiedCount;
+        // Update Progress
+        const percent = totalNotes > 0 ? Math.round((studiedTotal / totalNotes) * 100) : 0;
+        els.studiedCount.textContent = `${percent}%`;
+        els.studiedCount.className = `px-1.5 py-0.5 rounded-full text-[10px] text-white font-bold ${percent === 100 ? 'bg-[#238636]' : 'bg-[#1f6feb]'}`;
       }
 
       function setupSpy(){
-        const map = {};
-        document.querySelectorAll('#toc [data-toc]').forEach(el => { map[el.getAttribute('data-toc')] = el; });
-        const observer = new IntersectionObserver((entries)=>{
-          entries.forEach(entry => {
-            if (!entry.isIntersecting) return;
-            const id = entry.target.id.replace('sec-','');
-            const nav = map[id];
-            if (!nav) return;
-            document.querySelectorAll('#toc .toc-item').forEach(i => i.classList.remove('toc-active'));
-            nav.classList.add('toc-active');
-          });
-        },{rootMargin:'-20% 0px -60% 0px', threshold:0.1});
-        document.querySelectorAll('[id^="sec-"]').forEach(el => observer.observe(el));
+        // Simplified spy not needed with this new layout, 
+        // as we are using anchors directly.
       }
 
       function init() {
         render();
         els.search.addEventListener('input', render);
-        els.expandAll.addEventListener('click', () => {
-          document.querySelectorAll('#notes section > div:nth-child(2)').forEach(el => el.classList.remove('hidden'));
-        });
-        els.collapseAll.addEventListener('click', () => {
-          document.querySelectorAll('#notes section > div:nth-child(2)').forEach(el => el.classList.add('hidden'));
-        });
+        
+        // Expand/Collapse now just scroll to top/bottom for simplicity in this view
+        // or could toggle folder visibility if implemented.
+        if(els.expandAll) els.expandAll.style.display = 'none'; 
+        if(els.collapseAll) els.collapseAll.style.display = 'none';
+
         document.getElementById('logoutBtn').addEventListener('click', () => {
           if(confirm('¿Cerrar sesión de Ka0s Training?')) {
             sessionStorage.removeItem('ka0s_auth');
