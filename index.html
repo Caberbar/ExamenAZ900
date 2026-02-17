@@ -1,329 +1,343 @@
 <!DOCTYPE html>
-<html lang="es">
-  <head>
+<html lang="es" class="h-full">
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Catálogo de Exámenes - Certifications</title>
+    <title>Certification Hub • Dashboard</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="./theme.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-    <style>
-      body {
-        font-family: 'Inter', sans-serif;
-      }
-      .scroll-snap-container::-webkit-scrollbar { display: none; }
-      .scroll-snap-container { -ms-overflow-style: none; scrollbar-width: none; }
-      
-      /* Estilo para el borde izquierdo del card, indicando el proveedor */
-      .exam-card {
-          border-left-width: 4px; /* Borde izquierdo más grueso para acentuar la organización */
-          transition: all 0.2s ease-in-out;
-      }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <script>
-      tailwind.config = {
-        darkMode: 'class',
-        theme: {
-          extend: {
-            // Paleta de Colores del Cuestionario (Propuesta 8)
-            colors: {
-              'kyndryl-blue': '#0070f3', // Azul Tecnológico como acento
-              'text-dark': '#293241', // Gris oscuro suave (Texto principal)
-              'bg-app': '#f7f8fa', // Fondo muy ligero
-              'border-subtle': '#e0e7ff', // Borde con un ligero tinte azul
-            },
-            boxShadow: {
-              'card-shadow': '0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05)',
-              'action': '0 4px 6px -1px rgba(0, 112, 243, 0.2), 0 2px 4px -2px rgba(0, 112, 243, 0.1)',
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            500: '#0ea5e9', // Sky 500
+                            600: '#0284c7', // Sky 600
+                            900: '#0c4a6e',
+                        },
+                        dark: {
+                            bg: '#0f172a', // Slate 900
+                            card: '#1e293b', // Slate 800
+                            border: '#334155', // Slate 700
+                        }
+                    }
+                }
             }
-          }
         }
-      }
     </script>
-  </head>
-
-  <body class="min-h-screen bg-bg-app text-text-dark antialiased dark:bg-gray-900 dark:text-gray-100">
-    
-    <header class="sticky top-0 z-10 bg-white shadow-sm border-b border-border-subtle dark:bg-gray-900 dark:border-gray-800">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
-        <div class="flex items-center gap-3">
-          <h1 class="text-xl sm:text-2xl font-extrabold tracking-tight text-text-dark dark:text-white">Certifications</h1>
-        </div>
-        <label class="inline-flex items-center cursor-pointer">
-            <input type="checkbox" id="toggleDark" class="sr-only peer">
-            <div class="relative w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-kyndryl-blue"></div>
-            <span class="ms-3 text-sm font-medium text-gray-900 dark:text-gray-300">Modo oscuro</span>
-        </label>  
-      </div>
-    </header>
-
-    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-      <section class="mb-12">
-        <div class="rounded-xl bg-white p-8 sm:p-10 shadow-lg border border-border-subtle dark:bg-gray-800 dark:border-gray-700">
-          <h2 class="text-4xl sm:text-5xl font-extrabold tracking-tight text-text-dark dark:text-white">Selector de Exámenes</h2>
-          <p class="mt-4 text-lg text-gray-600 max-w-2xl dark:text-gray-400">Catálogo organizado por proveedor y listo para la práctica o el examen simulado.</p>
-          
-          <div class="mt-6 flex flex-wrap gap-3" id="filterContainer">
-            <button data-filter="all" class="filter-btn px-3 py-1.5 text-sm font-medium rounded-full bg-kyndryl-blue text-white shadow-sm transition-colors">Todos</button>
-            <button data-filter="azure" class="filter-btn px-3 py-1.5 text-sm font-medium rounded-full bg-gray-100 text-gray-700 border border-gray-300 hover:bg-gray-200 dark:bg-gray-700 dark:text-gray-200 dark:border-gray-600 dark:hover:bg-gray-600 transition-colors">Azure</button>
-            <button data-filter="google" class="filter-btn px-3 py-1.5 text-sm font-medium rounded-full bg-gray-100 text-gray-700 border border-gray-300 hover:bg-gray-200 dark:bg-gray-700 dark:text-gray-200 dark:border-gray-600 dark:hover:bg-gray-600 transition-colors">Google Cloud</button>
-            <button data-filter="aws" class="filter-btn px-3 py-1.5 text-sm font-medium rounded-full bg-gray-100 text-gray-700 border border-gray-300 hover:bg-gray-200 dark:bg-gray-700 dark:text-gray-200 dark:border-gray-600 dark:hover:bg-gray-600 transition-colors">AWS</button>
-          </div>
-        </div>
-      </section>
-
-      <section class="mb-12">
-        <h3 class="text-2xl font-semibold mb-6 text-text-dark border-b border-border-subtle pb-3 dark:text-white dark:border-gray-700">Planes de Estudio</h3>
-        <div id="studyGrid" class="scroll-snap-container flex overflow-x-scroll snap-x snap-mandatory gap-6 pb-4 sm:grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 sm:gap-8 sm:overflow-visible">
-        </div>
-      </section>
-
-      <section>
-        <h3 class="text-2xl font-semibold mb-6 text-text-dark border-b border-border-subtle pb-3 dark:text-white dark:border-gray-700">Listado de Certificaciones</h3>
+    <style>
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+        }
+        .dark .glass-effect {
+            background: rgba(30, 41, 59, 0.7);
+        }
         
-        <div id="examGrid" class="scroll-snap-container flex overflow-x-scroll snap-x snap-mandatory gap-6 pb-4 sm:grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 sm:gap-8 sm:overflow-visible">
-          </div>
-      </section>
+        .exam-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .exam-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+<body class="h-full bg-slate-50 text-slate-900 dark:bg-dark-bg dark:text-slate-100 transition-colors duration-200">
+
+    <!-- Navbar -->
+    <nav class="sticky top-0 z-50 border-b border-slate-200 dark:border-slate-800 glass-effect">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 rounded-lg bg-brand-600 flex items-center justify-center text-white shadow-lg shadow-brand-500/30">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <span class="font-bold text-xl tracking-tight">CertHub</span>
+                </div>
+                
+                <div class="flex items-center gap-4">
+                    <button id="themeToggle" class="p-2 rounded-lg text-slate-500 hover:bg-slate-100 dark:text-slate-400 dark:hover:bg-slate-800 transition-colors">
+                        <i class="fa-solid fa-moon dark:hidden"></i>
+                        <i class="fa-solid fa-sun hidden dark:block"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        
+        <div class="flex flex-col md:flex-row justify-between items-end gap-6 mb-12">
+            <div>
+                <h1 class="text-3xl font-bold text-slate-900 dark:text-white mb-2">Explore Certifications</h1>
+                <p class="text-slate-500 dark:text-slate-400 text-lg">Practice exams and study guides to help you succeed.</p>
+            </div>
+            
+            <div class="w-full md:w-auto relative">
+                <i class="fa-solid fa-search absolute left-3 top-1/2 -translate-y-1/2 text-slate-400"></i>
+                <input type="text" id="searchInput" placeholder="Search..." 
+                    class="w-full md:w-80 pl-10 pr-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white focus:ring-2 focus:ring-brand-500 focus:border-transparent outline-none transition-all shadow-sm">
+            </div>
+        </div>
+        
+        <!-- Filter Bar -->
+        <div class="flex gap-2 overflow-x-auto w-full pb-4 mb-8 no-scrollbar">
+            <button class="filter-btn active px-4 py-2 rounded-lg text-sm font-medium bg-slate-900 text-white dark:bg-white dark:text-slate-900 shadow-sm" data-filter="all">All</button>
+            <button class="filter-btn px-4 py-2 rounded-lg text-sm font-medium bg-white text-slate-600 border border-slate-200 hover:bg-slate-50 dark:bg-slate-800 dark:text-slate-300 dark:border-slate-700 dark:hover:bg-slate-700 transition-colors" data-filter="azure">Azure</button>
+            <button class="filter-btn px-4 py-2 rounded-lg text-sm font-medium bg-white text-slate-600 border border-slate-200 hover:bg-slate-50 dark:bg-slate-800 dark:text-slate-300 dark:border-slate-700 dark:hover:bg-slate-700 transition-colors" data-filter="aws">AWS</button>
+            <button class="filter-btn px-4 py-2 rounded-lg text-sm font-medium bg-white text-slate-600 border border-slate-200 hover:bg-slate-50 dark:bg-slate-800 dark:text-slate-300 dark:border-slate-700 dark:hover:bg-slate-700 transition-colors" data-filter="google">Google</button>
+        </div>
+
+        <!-- Section: Certifications -->
+        <div id="certsSection">
+            <h2 class="text-xl font-bold text-slate-900 dark:text-white mb-6 flex items-center gap-2">
+                <i class="fa-solid fa-certificate text-brand-500"></i> Certifications
+            </h2>
+            <div id="examGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+                <!-- Cert Cards injected here -->
+            </div>
+        </div>
+
+        <!-- Section: Study Plans -->
+        <div id="plansSection">
+            <h2 class="text-xl font-bold text-slate-900 dark:text-white mb-6 flex items-center gap-2">
+                <i class="fa-solid fa-book-open text-purple-500"></i> Study Plans
+            </h2>
+            <div id="plansGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Plan Cards injected here -->
+            </div>
+        </div>
+
     </main>
 
-    <footer class="mt-20 border-t border-border-subtle bg-white dark:bg-gray-900 dark:border-gray-800">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 text-sm text-gray-500 flex justify-between items-center dark:text-gray-400">
-        <p>© Exámenes Certificados </p>
-        <p>Creado por: <span class="font-medium text-text-dark dark:text-white">Jhonathan Chaves Manzano</span></p>
-      </div>
+    <footer class="bg-white dark:bg-dark-card border-t border-slate-200 dark:border-slate-800 mt-12 py-8">
+        <div class="max-w-7xl mx-auto px-4 text-center text-slate-500 text-sm">
+            <p>&copy; 2024 Certification Hub. Open Source Learning.</p>
+        </div>
     </footer>
 
+    <!-- Dev Popup -->
+    <div id="dev-popup" class="fixed bottom-4 right-4 z-50 max-w-md w-full bg-white dark:bg-slate-800 shadow-xl rounded-xl border border-slate-200 dark:border-slate-700 p-4 transform transition-all duration-500 flex items-start gap-4 animate-bounce-in">
+        <div class="flex-shrink-0 w-10 h-10 rounded-full bg-amber-100 dark:bg-amber-900/30 flex items-center justify-center text-amber-600 dark:text-amber-400">
+            <i class="fa-solid fa-code"></i>
+        </div>
+        <div class="flex-1 pt-0.5">
+            <h3 class="text-sm font-semibold text-slate-900 dark:text-white">Plataforma en Desarrollo</h3>
+            <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">
+                Esta página se encuentra actualmente en construcción.
+                <br>
+                Si deseas añadir nuevas certificaciones, por favor contacta con <strong class="text-brand-600 dark:text-brand-400">Jhonathan Chaves</strong>.
+            </p>
+        </div>
+        <button onclick="this.parentElement.remove()" class="text-slate-400 hover:text-slate-500 dark:hover:text-slate-300 transition-colors">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+    </div>
+
     <script>
-      async function loadExams() {
-        try {
-          const res = await fetch('./examenes.json', { cache: 'no-store' });
-          if (!res.ok) throw new Error('Error al cargar examenes.json');
-          return await res.json();
-        } catch (e) {
-          return [];
+        // Theme Toggle Logic
+        const toggleBtn = document.getElementById('themeToggle');
+        toggleBtn.addEventListener('click', () => {
+            document.documentElement.classList.toggle('dark');
+            const isDark = document.documentElement.classList.contains('dark');
+            localStorage.setItem('theme:dark', isDark ? '1' : '0');
+        });
+
+        // Load Exams
+        async function loadExams() {
+            try {
+                const res = await fetch('./examenes.json', { cache: 'no-store' });
+                return await res.json();
+            } catch (e) {
+                console.error(e);
+                return [];
+            }
         }
-      }
 
-      function createCard(exam, isStudyPlan = false) {
-        // Colores de acento para la línea lateral del card
-        const KYNDRYL_BLUE = '#0070f3';
-        const AZURE_BLUE = '#0078d4';
-        const GOOGLE_GREEN = '#34a853';
-        const AWS_ORANGE = '#ff9900';
-        const STUDY_INDIGO = '#4f46e5';
+        function getProviderStyle(name, title) {
+            const text = (name + title).toLowerCase();
+            if (text.includes('azure') || text.includes('microsoft')) 
+                return { color: 'text-[#0078d4]', bg: 'bg-[#0078d4]/10', border: 'border-[#0078d4]/20', icon: 'fa-microsoft' };
+            if (text.includes('aws') || text.includes('amazon')) 
+                return { color: 'text-[#ff9900]', bg: 'bg-[#ff9900]/10', border: 'border-[#ff9900]/20', icon: 'fa-aws' };
+            if (text.includes('google') || text.includes('gcp')) 
+                return { color: 'text-[#34a853]', bg: 'bg-[#34a853]/10', border: 'border-[#34a853]/20', icon: 'fa-google' };
+            if (text.includes('terraform') || text.includes('hashicorp')) 
+                return { color: 'text-[#5c4ee5]', bg: 'bg-[#5c4ee5]/10', border: 'border-[#5c4ee5]/20', icon: 'fa-layer-group' };
+            if (text.includes('git')) 
+                return { color: 'text-[#f05032]', bg: 'bg-[#f05032]/10', border: 'border-[#f05032]/20', icon: 'fa-git-alt' };
+            
+            return { color: 'text-slate-600', bg: 'bg-slate-100', border: 'border-slate-200', icon: 'fa-certificate' };
+        }
 
-        const isAzure = /az\d+/i.test(exam.name || '') || /azure|microsoft/i.test(exam.title || '');
-        const isGoogle = /gc|gcdl|google/i.test(exam.name || '') || /google/i.test(exam.title || '');
-        const isAWS = /aws|amazon/i.test(exam.name || '') || /aws|amazon/i.test(exam.title || '');
-        
-        let providerColor = KYNDRYL_BLUE;
-        let icon = '💻';
-        if (isStudyPlan) { providerColor = STUDY_INDIGO; icon = '📚'; }
-        else if (isAzure) { providerColor = AZURE_BLUE; icon = '⚡'; }
-        else if (isGoogle) { providerColor = GOOGLE_GREEN; icon = '☁️'; }
-        else if (isAWS) { providerColor = AWS_ORANGE; icon = '⚙️'; }
-
-        const defaultGoogleNotes = './Apuntes/apuntesGCDL.html';
-
-        // Estilos para los botones (Ajustados para consistencia con el cuestionario)
-        const btnClasses = {
-          // Botón primario: usa el azul , rounded-xl y sombra de acción
-          primary: `flex-1 text-center px-4 py-2.5 rounded-xl text-white font-semibold bg-kyndryl-blue hover:bg-blue-600 transition duration-150 shadow-action`,
-          // Botón secundario: borde simple, hover sutil, rounded-xl
-          secondary: `flex-1 text-center px-4 py-2.5 rounded-xl border border-gray-300 bg-white text-gray-700 font-medium hover:bg-gray-50 transition duration-150 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-200 dark:hover:bg-gray-700`,
-          // Botón de Apuntes: discreto (o principal si es plan de estudio)
-          notes: `text-center px-3 py-2.5 rounded-xl border border-gray-300 bg-gray-50 text-gray-600 hover:bg-gray-100 text-sm w-full mt-3 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-200 dark:hover:bg-gray-700`,
-          notesPrimary: `text-center px-4 py-3 rounded-xl text-white font-bold bg-indigo-600 hover:bg-indigo-700 transition duration-150 shadow-md w-full block mt-4`
-        };
-
-        // Creación del Card
-        const card = document.createElement('article');
-        // Estilo: rounded-2xl (como la tarjeta del cuestionario), borde sutil azul, hover sutil
-        card.className = `exam-card group relative overflow-hidden rounded-2xl bg-white border border-border-subtle transition duration-300 min-w-[300px] sm:min-w-0 snap-start transform hover:shadow-lg hover:border-kyndryl-blue/50 dark:bg-gray-800 dark:border-gray-700`;
-        card.style.borderLeftColor = providerColor;
-        
-        const content = document.createElement('div');
-        content.className = 'p-6 h-full flex flex-col';
-
-        // 1. Sección Superior: Título principal y Código (en Gris Oscuro Suave)
-        const titleArea = document.createElement('div');
-        titleArea.className = 'flex items-start justify-between mb-4 pb-2 border-b border-border-subtle dark:border-gray-700';
-
-        const titleText = document.createElement('div');
-        titleText.className = 'flex-grow min-w-0';
-
-        const h3 = document.createElement('h3');
-        h3.className = 'text-xl font-extrabold text-text-dark truncate dark:text-white';
-        h3.textContent = exam.name || 'EXAM CODE';
-        
-        const nameText = document.createElement('p');
-        // Título secundario más suave
-        nameText.className = 'text-sm font-medium text-gray-500 mt-0.5 truncate dark:text-gray-400';
-        nameText.textContent = exam.title || 'Certificación sin título';
-
-        titleText.appendChild(h3);
-        titleText.appendChild(nameText);
-
-        // Icono y Estado
-        const statusArea = document.createElement('div');
-        statusArea.className = 'flex-shrink-0 ml-4 text-center';
-
-        const iconContainer = document.createElement('div');
-        iconContainer.className = 'h-8 w-8 text-2xl mb-1';
-        iconContainer.textContent = icon;
-        
-        const badge = document.createElement('span');
-        badge.className = `px-2 py-0.5 text-xs font-semibold rounded-full bg-kyndryl-blue/10 text-kyndryl-blue dark:bg-blue-900/30 dark:text-blue-200`;
-        badge.textContent = 'Activo';
-
-        statusArea.appendChild(iconContainer);
-        statusArea.appendChild(badge);
-
-        titleArea.appendChild(titleText);
-        titleArea.appendChild(statusArea);
-
-        // 2. Sección de Descripción
-        const p = document.createElement('p');
-        p.className = 'mt-3 text-sm text-gray-600 line-clamp-3 flex-grow dark:text-gray-400';
-        p.textContent = exam.desc || 'Descripción de la certificación no disponible. Listo para practicar.';
-
-        // Ensamblaje parcial
-        content.appendChild(titleArea);
-        content.appendChild(p);
-
-        // 3. Sección de Acciones (Separada por la línea sutil)
-        if (!isStudyPlan) {
-            const actions = document.createElement('div');
-            actions.className = 'mt-6 pt-4 border-t border-border-subtle flex flex-wrap gap-2 dark:border-gray-700';
-
-            // Lógica de URLs (sin cambios)
+        function createCard(exam) {
+            const style = getProviderStyle(exam.name, exam.title);
+            const isStudyPlan = /ka0s|github/i.test(exam.name);
+            
+            // URLs
             const baseUrl = new URL('./Cuestionario/cuestionario.html', location.href);
             baseUrl.searchParams.set('name', exam.name);
             if (exam.title) baseUrl.searchParams.set('title', exam.title);
             if (exam.pregunta) {
-            const preg = /^https?:\/\//i.test(exam.pregunta) ? exam.pregunta : `../${exam.pregunta}`;
-            baseUrl.searchParams.set('preguntas', preg);
+                const preg = /^https?:\/\//i.test(exam.pregunta) ? exam.pregunta : `../${exam.pregunta}`;
+                baseUrl.searchParams.set('preguntas', preg);
             }
             if (exam.apuntes) {
-            const ap = /^https?:\/\//i.test(exam.apuntes) ? exam.apuntes : `../${exam.apuntes}`;
-            baseUrl.searchParams.set('apuntes', ap);
+                const ap = /^https?:\/\//i.test(exam.apuntes) ? exam.apuntes : `../${exam.apuntes}`;
+                baseUrl.searchParams.set('apuntes', ap);
             }
+            const examenUrl = new URL(baseUrl.href); examenUrl.searchParams.set('mode', 'examen');
+            const practicaUrl = new URL(baseUrl.href); practicaUrl.searchParams.set('mode', 'practica');
+            const apuntesUrl = exam.apuntes || '#';
 
-            const examenUrl = new URL(baseUrl.href);
-            examenUrl.searchParams.set('mode', 'examen');
-            const practicaUrl = new URL(baseUrl.href);
-            practicaUrl.searchParams.set('mode', 'practica');
+            const card = document.createElement('div');
+            card.className = `exam-card bg-white dark:bg-dark-card rounded-2xl p-6 border border-slate-200 dark:border-slate-700 flex flex-col h-full relative overflow-hidden group`;
+            
+            // Header
+            const headerHtml = `
+                <div class="flex justify-between items-start mb-4 relative z-10">
+                    <div class="w-12 h-12 rounded-xl ${style.bg} ${style.color} flex items-center justify-center text-2xl group-hover:scale-110 transition-transform duration-300">
+                        <i class="fa-brands ${style.icon} fa-fw"></i>
+                    </div>
+                    ${isStudyPlan ? 
+                        `<span class="px-3 py-1 rounded-full text-xs font-semibold bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-300">Study Plan</span>` :
+                        `<span class="px-3 py-1 rounded-full text-xs font-semibold bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300">Certification</span>`
+                    }
+                </div>
+            `;
 
-            // Botones (con clases actualizadas)
-            const btnExamen = document.createElement('a');
-            btnExamen.href = examenUrl.href;
-            btnExamen.className = btnClasses.primary;
-            btnExamen.textContent = 'Iniciar Examen';
+            // Body
+            const bodyHtml = `
+                <div class="flex-1 relative z-10">
+                    <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-1 line-clamp-1 group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors" title="${exam.name}">${exam.name}</h3>
+                    <p class="text-sm text-slate-500 dark:text-slate-400 mb-6 line-clamp-2 min-h-[2.5rem]">${exam.desc || exam.title}</p>
+                </div>
+            `;
 
-            const btnPractica = document.createElement('a');
-            btnPractica.href = practicaUrl.href;
-            btnPractica.className = btnClasses.secondary;
-            btnPractica.textContent = 'Práctica';
-
-            actions.appendChild(btnExamen);
-            actions.appendChild(btnPractica);
-            content.appendChild(actions);
-        }
-
-        // Botón de Apuntes
-        const apuntesUrl = exam.apuntes || (isGoogle ? defaultGoogleNotes : null);
-        if (apuntesUrl) {
-           const btnApuntes = document.createElement('a');
-           btnApuntes.href = apuntesUrl;
-           // Si es plan de estudio, usamos estilo primario y texto diferente
-           btnApuntes.className = isStudyPlan ? btnClasses.notesPrimary : btnClasses.notes;
-           btnApuntes.textContent = isStudyPlan ? 'Abrir Plan de Estudio 📖' : 'Ver Apuntes 📄';
-           content.appendChild(btnApuntes);
-        }
-
-        card.appendChild(content);
-        
-        return card;
-      }
-      
-      // Función para renderizar exámenes en el grid principal
-      function renderExams(exams) {
-          const grid = document.getElementById('examGrid');
-          grid.innerHTML = '';
-          
-          if (exams.length === 0) {
-             const empty = document.createElement('div');
-             empty.className = 'text-gray-500 p-8 w-full text-center col-span-full border-dashed border-2 border-gray-200 rounded-xl';
-             empty.textContent = 'No se encontraron certificaciones para este filtro.';
-             grid.appendChild(empty);
-             return;
-          }
-
-          exams.forEach(exam => {
-              grid.appendChild(createCard(exam, false));
-          });
-      }
-
-      // Inicialización
-      (async function init() {
-        const grid = document.getElementById('examGrid');
-        const studyGrid = document.getElementById('studyGrid');
-        const exams = await loadExams();
-        
-        if (!Array.isArray(exams) || exams.length === 0) {
-          const empty = document.createElement('div');
-          empty.className = 'text-xl text-gray-500 p-8 w-full text-center border-dashed border-2 border-gray-300 rounded-xl col-span-full';
-          empty.textContent = '🥲 No hay exámenes disponibles. Por favor, verifica el archivo examenes.json.';
-          grid.className = 'flex justify-center items-center';
-          grid.appendChild(empty);
-          return;
-        }
-        
-        // Separar planes de estudio y exámenes regulares
-        const studyPlans = [];
-        const regularExams = [];
-
-        exams.forEach(exam => {
-            if (/ka0s|github/i.test(exam.name)) {
-                studyPlans.push(exam);
+            // Footer / Actions
+            let actionsHtml = '';
+            if (isStudyPlan) {
+                actionsHtml = `
+                    <div class="relative z-10 mt-auto pt-4 border-t border-slate-100 dark:border-slate-800">
+                        <a href="${apuntesUrl}" class="flex items-center justify-between w-full px-4 py-2.5 rounded-xl bg-slate-900 text-white hover:bg-slate-800 dark:bg-white dark:text-slate-900 dark:hover:bg-slate-100 font-medium transition-all group-hover:shadow-md">
+                            <span>Open Guide</span>
+                            <i class="fa-solid fa-arrow-right text-sm opacity-50 group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                    </div>
+                `;
             } else {
-                regularExams.push(exam);
+                actionsHtml = `
+                    <div class="grid grid-cols-2 gap-3 relative z-10 mt-auto pt-4 border-t border-slate-100 dark:border-slate-800">
+                        <a href="${practicaUrl.href}" class="flex items-center justify-center gap-2 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-700 font-medium transition-colors text-sm">
+                            <i class="fa-regular fa-compass"></i> Practice
+                        </a>
+                        <a href="${examenUrl.href}" class="flex items-center justify-center gap-2 py-2.5 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-medium transition-colors shadow-sm shadow-brand-500/20 text-sm">
+                            <i class="fa-solid fa-play"></i> Exam
+                        </a>
+                    </div>
+                    ${exam.apuntes ? `
+                    <div class="mt-3 text-center">
+                        <a href="${apuntesUrl}" class="text-xs text-slate-500 hover:text-brand-600 transition-colors">View Study Materials</a>
+                    </div>` : ''}
+                `;
             }
-        });
 
-        // Renderizar Planes de Estudio (siempre visibles)
-        studyPlans.forEach(exam => studyGrid.appendChild(createCard(exam, true)));
+            card.innerHTML = headerHtml + bodyHtml + actionsHtml;
+            return card;
+        }
 
-        // Renderizar Exámenes Regulares (inicialmente todos)
-        renderExams(regularExams);
-
-        // Configurar Filtros
-        const buttons = document.querySelectorAll('.filter-btn');
-        buttons.forEach(btn => {
-            btn.addEventListener('click', () => {
-                // Actualizar estado visual
-                buttons.forEach(b => {
-                    // Resetear estilo inactivo
-                    b.className = 'filter-btn px-3 py-1.5 text-sm font-medium rounded-full bg-gray-100 text-gray-700 border border-gray-300 hover:bg-gray-200 dark:bg-gray-700 dark:text-gray-200 dark:border-gray-600 dark:hover:bg-gray-600 transition-colors';
+        // Init
+        (async function() {
+            const examGrid = document.getElementById('examGrid');
+            const plansGrid = document.getElementById('plansGrid');
+            const certsSection = document.getElementById('certsSection');
+            const plansSection = document.getElementById('plansSection');
+            const searchInput = document.getElementById('searchInput');
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            
+            const allItems = await loadExams();
+            
+            function render(filterType = 'all', query = '') {
+                examGrid.innerHTML = '';
+                plansGrid.innerHTML = '';
+                const q = query.toLowerCase();
+                
+                const filtered = allItems.filter(e => {
+                    const matchesSearch = (e.name + e.title + e.desc).toLowerCase().includes(q);
+                    
+                    let matchesType = true;
+                    if (filterType === 'azure') matchesType = /az|azure|microsoft/i.test(e.name + e.title);
+                    else if (filterType === 'aws') matchesType = /aws|amazon/i.test(e.name + e.title);
+                    else if (filterType === 'google') matchesType = /google|gcp/i.test(e.name + e.title);
+                    
+                    return matchesSearch && matchesType;
                 });
-                // Establecer estilo activo
-                btn.className = 'filter-btn px-3 py-1.5 text-sm font-medium rounded-full bg-kyndryl-blue text-white shadow-sm transition-colors';
 
-                const filter = btn.getAttribute('data-filter');
-                let filtered = regularExams;
+                let certCount = 0;
+                let planCount = 0;
 
-                if (filter === 'azure') {
-                    filtered = regularExams.filter(e => /az\d+/i.test(e.name || '') || /azure|microsoft/i.test(e.title || ''));
-                } else if (filter === 'google') {
-                    filtered = regularExams.filter(e => /gc|gcdl|google/i.test(e.name || '') || /google/i.test(e.title || ''));
-                } else if (filter === 'aws') {
-                    filtered = regularExams.filter(e => /aws|amazon/i.test(e.name || '') || /aws|amazon/i.test(e.title || ''));
+                filtered.forEach(e => {
+                    const isPlan = /ka0s|github/i.test(e.name);
+                    if (isPlan) {
+                        plansGrid.appendChild(createCard(e));
+                        planCount++;
+                    } else {
+                        examGrid.appendChild(createCard(e));
+                        certCount++;
+                    }
+                });
+                
+                // Toggle sections visibility based on content
+                certsSection.style.display = certCount > 0 ? 'block' : 'none';
+                plansSection.style.display = planCount > 0 ? 'block' : 'none';
+
+                if (certCount === 0 && planCount === 0) {
+                    certsSection.style.display = 'block'; // Show empty state in main area
+                    examGrid.innerHTML = `
+                        <div class="col-span-full text-center py-12">
+                            <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-400 mb-4">
+                                <i class="fa-solid fa-inbox text-2xl"></i>
+                            </div>
+                            <h3 class="text-lg font-medium text-slate-900 dark:text-white">No results found</h3>
+                            <p class="text-slate-500">Try adjusting your search or filters.</p>
+                        </div>
+                    `;
                 }
+            }
 
-                renderExams(filtered);
+            // Events
+            searchInput.addEventListener('input', (e) => {
+                const activeBtn = document.querySelector('.filter-btn.active');
+                render(activeBtn.dataset.filter, e.target.value);
             });
-        });
-      })();
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    filterBtns.forEach(b => {
+                        b.classList.remove('active', 'bg-slate-900', 'text-white', 'dark:bg-white', 'dark:text-slate-900');
+                        b.classList.add('bg-white', 'text-slate-600', 'dark:bg-slate-800', 'dark:text-slate-300');
+                    });
+                    btn.classList.remove('bg-white', 'text-slate-600', 'dark:bg-slate-800', 'dark:text-slate-300');
+                    btn.classList.add('active', 'bg-slate-900', 'text-white', 'dark:bg-white', 'dark:text-slate-900');
+                    
+                    render(btn.dataset.filter, searchInput.value);
+                });
+            });
+
+            // Initial render
+            render();
+        })();
     </script>
-  </body>
+</body>
 </html>
