@@ -35,6 +35,13 @@
     "apuntes": "https://developer.hashicorp.com/terraform/certification/003-study-guide"
   },
   {
+    "name": "Microsoft Azure AI Fundamentals",
+    "title": "AI-900 • Azure AI Fundamentals",
+    "desc": "Preguntas de práctica sobre conceptos de IA, ML y servicios de Azure AI.",
+    "pregunta": "Preguntas/preguntasAI900.json",
+    "apuntes": "https://learn.microsoft.com/en-us/credentials/certifications/azure-ai-fundamentals/"
+  },
+  {
     "name": "Ka0s Training",
     "title": "Plan de Formación Ka0s",
     "desc": "Onboarding técnico: arquitectura, automatización y cultura operativa.",

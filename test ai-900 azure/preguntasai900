@@ -2357,7 +2357,7 @@ Computer Vision
 Question 138
 HOTSPOT
 
--
+-![alt text](image-66.png)
 
 Select the answer that correctly completes the sentence.
 
@@ -2377,7 +2377,7 @@ You have an app that identifies birds in images. The app performs the following 
 Which type of computer vision does each task use? To answer, select the appropriate options in the answer area.
 
 NOTE: Each correct selection is worth one point.
-
+![alt text](image-67.png)
 Question
 
 Question 140
@@ -2407,7 +2407,7 @@ HOTSPOT
 -
 
 Select the answer that correctly completes the sentence.
-
+![alt text](image-68.png)
 Question
 
 Question 142
@@ -2440,7 +2440,7 @@ HOTSPOT
 -
 
 Select the answer that correctly completes the sentence.
-
+![alt text](image-69.png)
 Question
 
 Question 144
@@ -2492,7 +2492,7 @@ HOTSPOT -
 To complete the sentence, select the appropriate option in the answer area.
 
 Hot Area:
-
+![alt text](image-70.png)
 Question
 
 Question 147
@@ -2501,7 +2501,7 @@ HOTSPOT
 -
 
 Select the answer that correctly completes the sentence.
-
+![alt text](image-71.png)
 Question
 
 Question 148
@@ -2512,7 +2512,7 @@ HOTSPOT
 For each of the following statement, select Yes if the statement is true. Otherwise, select No.
 
 NOTE: Each correct selection is worth one point.
-
+![alt text](image-72.png)
 Question
 
 Question 149
@@ -2586,7 +2586,7 @@ HOTSPOT
 For each of the following statements, select Yes if the statement is true. Otherwise, select No.
 
 NOTE: Each correct selection is worth one point.
-
+![alt text](image-73.png)
 Question
 
 Question 153
@@ -2611,7 +2611,7 @@ HOTSPOT
 -
 
 Select the answer that correctly completes the sentence.
-
+![alt text](image-74.png)
 Question
 
 Question 155
@@ -2643,7 +2643,7 @@ Match the machine learning models to the appropriate descriptions.
 To answer, drag the appropriate model from the column on the left to its description on the right. Each model may be used once, more than once, or not at all.
 
 NOTE: Each correct match is worth one point.
-
+![alt text](image-75.png)
 Question
 
 Question 157
@@ -2652,7 +2652,7 @@ HOTSPOT -
 Select the answer that correctly completes the sentence.
 
 Hot Area:
-
+![alt text](image-76.png)
 Question
 
 Question 158
@@ -2685,7 +2685,7 @@ HOTSPOT
 -
 
 Select the answer that correctly completes the sentence.
-
+![alt text](image-77.png)
 Question
 
 Question 160
@@ -2735,7 +2735,7 @@ Match the types of computer vision workloads to the appropriate scenarios.
 To answer, drag the appropriate workload type from the column on the left to its scenario on the right. Each workload type may be used once, more than once, or not at all.
 
 NOTE: Each correct selection is worth one point.
-
+![alt text](image-78.png)
 Question
 
 Question 163
@@ -2790,7 +2790,7 @@ Match the types of AI workloads to the appropriate scenarios.
 To answer, drag the appropriate workload type from the column on the left to its scenario on the right. Each workload type may be used once, more than once, or not at all.
 
 NOTE: Each correct selection is worth one point.
-
+![alt text](image-79.png)
 Select and Place:
 
 Question
@@ -2805,7 +2805,7 @@ To answer, drag the appropriate task from the column on the left to its scenario
 NOTE: Each correct selection is worth one point.
 
 Select and Place:
-
+![alt text](image-80.png)
 Question
 
 Question 167
@@ -2814,12 +2814,12 @@ HOTSPOT -
 To complete the sentence, select the appropriate option in the answer area.
 
 Hot Area:
-
+![alt text](image-81.png)
 Question
 
 Question 168
 You have the Predicted vs. True chart shown in the following exhibit.
-
+![alt text](image-82.png)
 Question
 Which type of model is the chart used to evaluate?
 
@@ -2858,14 +2858,14 @@ HOTSPOT -
 You are developing a model to predict events by using classification.
 
 You have a confusion matrix for the model scored on test data as shown in the following exhibit.
-
+![alt text](image-83.png)
 Question
 Use the drop-down menus to select the answer choice that completes each statement based on the information presented in the graphic.
 
 NOTE: Each correct selection is worth one point.
 
 Hot Area:
-
+![alt text](image-84.png)
 Question
 
 Question 171
@@ -2918,7 +2918,7 @@ For each of the following statements, select Yes if the statement is true. Other
 NOTE: Each correct selection is worth one point.
 
 Hot Area:
-
+![alt text](image-85.png)
 Question
 
 Question 174
@@ -2927,7 +2927,7 @@ HOTSPOT -
 To complete the sentence, select the appropriate option in the answer area.
 
 Hot Area:
-
+![alt text](image-86.png)
 Question
 
 Question 175
@@ -2938,7 +2938,7 @@ For each of the following statements, select Yes if the statement is true. Other
 NOTE: Each correct selection is worth one point.
 
 Hot Area:
-
+![alt text](image-87.png)
 Question
 
 Question 176
@@ -2967,7 +2967,7 @@ HOTSPOT -
 To complete the sentence, select the appropriate option in the answer area.
 
 Hot Area:
-
+![alt text](image-88.png)
 Question
 
 Question 178
@@ -3000,7 +3000,7 @@ HOTSPOT -
 To complete the sentence, select the appropriate option in the answer area.
 
 Hot Area:
-
+![alt text](image-89.png)
 Question
 
 Question 180
@@ -3009,7 +3009,7 @@ HOTSPOT -
 To complete the sentence, select the appropriate option in the answer area.
 
 Hot Area:
-
+![alt text](image-90.png)
 Question
 
 Question 181
@@ -3044,14 +3044,14 @@ For each of the following statements, select Yes if the statement is true. Other
 NOTE: Each correct selection is worth one point.
 
 Hot Area:
-
+![alt text](image-91.png)
 Question
 
 Question 183
 HOTSPOT -
 
 You have the following dataset.
-
+![alt text](image-92.png)
 Question
 You plan to use the dataset to train a model that will predict the house price categories of houses.
 
@@ -3060,7 +3060,7 @@ What are Household Income and House Price Category? To answer, select the approp
 NOTE: Each correct selection is worth one point.
 
 Hot Area:
-
+![alt text](image-93.png)
 Question
 
 Question 184
@@ -3069,7 +3069,7 @@ HOTSPOT -
 To complete the sentence, select the appropriate option in the answer area.
 
 Hot Area:
-
+![alt text](image-94.png)
 Question
 
 Question 185
@@ -3080,7 +3080,7 @@ For each of the following statements, select Yes if the statement is true. Other
 NOTE: Each correct selection is worth one point.
 
 Hot Area:
-
+![alt text](image-95.png)
 Question
 
 Question 186
@@ -3146,7 +3146,7 @@ Create a dataset from a comma-separated value (CSV) file.
 Question 189
 You need to predict the income range of a given customer by using the following dataset.
 
-Question
+![alt text](image-96.png)
 Which two fields should you use as features? Each correct answer presents a complete solution.
 
 NOTE: Each correct selection is worth one point.
@@ -3203,7 +3203,7 @@ For each of the following statements, select Yes if the statement is true. Other
 NOTE: Each correct selection is worth one point.
 
 Hot Area:
-
+![alt text](image-97.png)
 Question
 
 Question 192
@@ -3214,7 +3214,7 @@ For each of the following statements, select Yes if the statement is true. Other
 NOTE: Each correct selection is worth one point.
 
 Hot Area:
-
+![alt text](image-98.png)
 Question
 
 Question 193
@@ -3225,7 +3225,7 @@ For each of the following statements, select Yes if the statement is true. Other
 NOTE: Each correct selection is worth one point.
 
 Hot Area:
-
+![alt text](image-99.png)
 Question
 
 Question 194
@@ -3260,7 +3260,7 @@ HOTSPOT -
 To complete the sentence, select the appropriate option in the answer area.
 
 Hot Area:
-
+![alt text](image-100.png)
 Question
 
 
@@ -3274,7 +3274,7 @@ Which type of modules should you use to complete the model? To answer, drag the 
 NOTE: Each correct selection is worth one point.
 
 Select and Place:
-
+![alt text](image-101.png)
 Question
 
 Question 197
@@ -3299,7 +3299,7 @@ HOTSPOT -
 To complete the sentence, select the appropriate option in the answer area.
 
 Hot Area:
-
+![alt text](image-102.png)
 Question
 
 Question 199
@@ -3375,7 +3375,7 @@ To answer, drag the appropriate machine learning type from the column on the lef
 NOTE: Each correct selection is worth one point.
 
 Select and Place:
-
+![alt text](image-103.png)
 Question
 
 Question 203
@@ -3384,7 +3384,7 @@ HOTSPOT -
 To complete the sentence, select the appropriate option in the answer area.
 
 Hot Area:
-
+![alt text](image-104.png)
 Question
 
 Question 204
@@ -3393,7 +3393,7 @@ HOTSPOT -
 To complete the sentence, select the appropriate option in the answer area.
 
 Hot Area:
-
+![alt text](image-105.png)
 Question
 
 Question 205
@@ -3402,7 +3402,7 @@ HOTSPOT -
 To complete the sentence, select the appropriate option in the answer area.
 
 Hot Area:
-
+![alt text](image-106.png)
 Question
 
 Question 206
@@ -3411,7 +3411,7 @@ HOTSPOT -
 To complete the sentence, select the appropriate option in the answer area.
 
 Hot Area:
-
+![alt text](image-107.png)
 Question
 
 Question 207
@@ -3420,21 +3420,21 @@ HOTSPOT -
 To complete the sentence, select the appropriate option in the answer area.
 
 Hot Area:
-
+![alt text](image-108.png)
 Question
 
 Question 208
 HOTSPOT -
 
 You have an Azure Machine Learning model that predicts product quality. The model has a training dataset that contains 50,000 records. A sample of the data is shown in the following table.
-
+![alt text](image-109.png)
 Question
 For each of the following statements, select Yes if the statement is true. Otherwise, select No.
 
 NOTE: Each correct selection is worth one point.
 
 Hot Area:
-
+![alt text](image-110.png)
 Question
 
 Question 209
@@ -3445,7 +3445,7 @@ For each of the following statements, select Yes if the statement is true. Other
 NOTE: Each correct selection is worth one point.
 
 Hot Area:
-
+![alt text](image-111.png)
 Question
 
 Question 210
@@ -3521,7 +3521,7 @@ For each of the following statements, select Yes if the statement is true. Other
 NOTE: Each correct selection is worth one point.
 
 Hot Area:
-
+![alt text](image-112.png)
 Question
 
 Question 214
@@ -3534,7 +3534,7 @@ To answer, drag the appropriate workload type from the column on the left to its
 NOTE: Each correct selection is worth one point.
 
 Select and Place:
-
+![alt text](image-113.png)
 Question
 
 Question 215
@@ -3567,7 +3567,7 @@ For each of the following statements, select Yes if the statement is true. Other
 NOTE: Each correct selection is worth one point.
 
 Hot Area:
-
+![alt text](image-114.png)
 Question
 
 Question 217
@@ -3598,7 +3598,7 @@ HOTSPOT -
 Select the answer that correctly completes the sentence.
 
 Hot Area:
-
+![alt text](image-115.png)
 Question
 
 Question 219
@@ -3613,7 +3613,7 @@ For each of the following statements select Yes if the statement is true. Otherw
 NOTE: Each correct selection is worth one point.
 
 Hot Area:
-
+![alt text](image-116.png)
 Question
 
 Question 220
@@ -3645,7 +3645,7 @@ For each of the following statements, select Yes if the statement is true. Other
 NOTE: Each correct selection is worth one point.
 
 Hot Area:
-
+![alt text](image-117.png)
 Question
 
 Question 222
@@ -3682,7 +3682,7 @@ To answer, drag the appropriate machine learning type from the column on the lef
 NOTE: Each correct selection is worth one point.
 
 Select and Place:
-
+![alt text](image-118.png)
 Question
 
 Question 224
@@ -3734,7 +3734,7 @@ To answer, drag the appropriate task from the column on the left to its question
 NOTE: Each correct selection is worth one point.
 
 Select and Place:
-
+![alt text](image-119.png)
 Question
 
 Question 227
@@ -3747,7 +3747,7 @@ To answer, drag the appropriate workload type from the column on the left to its
 NOTE: Each correct selection is worth one point.
 
 Select and Place:
-
+![alt text](image-120.png)
 Question
 
 Question 228
@@ -3778,12 +3778,12 @@ HOTSPOT -
 To complete the sentence, select the appropriate option in the answer area.
 
 Hot Area:
-
+![alt text](image-121.png)
 Question
 
 Question 230
 You send an image to a Computer Vision API and receive back the annotated image shown in the exhibit.
-
+![alt text](image-122.png)
 Question
 Which type of computer vision was used?
 
@@ -3924,7 +3924,7 @@ To answer, drag the appropriate principle from the column on the left to its des
 NOTE: Each correct selection is worth one point.
 
 Select and Place:
-
+![alt text](image-123.png)
 Question
 
 Question 237
@@ -3937,7 +3937,7 @@ To answer, drag the appropriate task from the column on the left to its question
 NOTE: Each correct selection is worth one point.
 
 Select and Place:
-
+![alt text](image-124.png)
 Question
 
 Question 238
@@ -3986,7 +3986,7 @@ HOTSPOT -
 Select the answer that correctly completes the sentence.
 
 Hot Area:
-
+![alt text](image-125.png)
 Question
 
 Question 241
@@ -4041,7 +4041,7 @@ HOTSPOT -
 To complete the sentence, select the appropriate option in the answer area.
 
 Hot Area:
-
+![alt text](image-126.png)
 Question
 
 Question 244
@@ -4074,7 +4074,7 @@ For each of the following statements, select Yes if the statement is true. Other
 NOTE: Each correct selection is worth one point.
 
 Hot Area:
-
+![alt text](image-127.png)
 Question 246
 Your website has a chatbot to assist customers.
 
@@ -4097,43 +4097,3 @@ regression
 D.
 
 natural language processing
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

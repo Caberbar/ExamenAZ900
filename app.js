@@ -152,6 +152,11 @@ window.FALLBACK_QUESTIONS = [
         .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
         .replace(/\n/g, '<br>');
 
+    // Add Image if exists
+    if (q.image) {
+        els.question.innerHTML += `<div class="mt-6 mb-4 flex justify-center"><img src="${q.image}" class="max-w-full max-h-[400px] h-auto rounded-lg border border-slate-200 dark:border-slate-700 shadow-sm" alt="Question Image" onerror="this.style.display='none'"></div>`;
+    }
+
     clearOptions();
     state.answered = false;
     
@@ -160,6 +165,12 @@ window.FALLBACK_QUESTIONS = [
 
     if (q.type === 'matching') {
       renderMatching(q);
+    } else if (q.type === 'dropdown') {
+      renderDropdown(q);
+    } else if (q.type === 'hotspot-yes-no') {
+      renderHotspotYesNo(q);
+    } else if (q.type === 'ordering') {
+      renderOrdering(q);
     } else if (Array.isArray(q.answer)) {
       renderMultiSelect(q);
     } else {
@@ -168,6 +179,317 @@ window.FALLBACK_QUESTIONS = [
         els.options.appendChild(btn);
       });
     }
+  }
+
+  function renderHotspotYesNo(q) {
+      const container = document.createElement('div');
+      container.className = 'w-full overflow-x-auto mt-6 bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm';
+
+      const table = document.createElement('table');
+      table.className = 'w-full text-left border-collapse min-w-[600px]';
+
+      const thead = document.createElement('thead');
+      thead.innerHTML = `
+          <tr class="bg-slate-50 dark:bg-slate-900/50">
+              <th class="p-4 border-b border-slate-200 dark:border-slate-700 font-semibold text-slate-900 dark:text-white w-full">Statement</th>
+              <th class="p-4 border-b border-slate-200 dark:border-slate-700 font-semibold text-slate-900 dark:text-white text-center w-24">Yes</th>
+              <th class="p-4 border-b border-slate-200 dark:border-slate-700 font-semibold text-slate-900 dark:text-white text-center w-24">No</th>
+          </tr>
+      `;
+      table.appendChild(thead);
+
+      const tbody = document.createElement('tbody');
+      const selections = new Map();
+
+      q.statements.forEach((stmt, idx) => {
+          const row = document.createElement('tr');
+          row.className = 'border-b border-slate-100 dark:border-slate-800 last:border-0 hover:bg-slate-50 dark:hover:bg-slate-800/30 transition-colors';
+          
+          const textCell = document.createElement('td');
+          textCell.className = 'p-4 text-slate-700 dark:text-slate-300 leading-relaxed';
+          textCell.textContent = stmt.text;
+          
+          const createRadio = (val) => {
+              const cell = document.createElement('td');
+              cell.className = 'p-4 text-center';
+              
+              const label = document.createElement('label');
+              label.className = 'inline-flex items-center justify-center cursor-pointer p-2 rounded-full hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors';
+              
+              const input = document.createElement('input');
+              input.type = 'radio';
+              input.name = `stmt-${idx}`;
+              input.value = val;
+              input.className = 'w-5 h-5 text-brand-600 border-slate-300 focus:ring-brand-500 cursor-pointer accent-brand-600';
+              
+              input.onchange = () => {
+                  if (state.answered) return;
+                  selections.set(idx, val);
+              };
+              
+              label.appendChild(input);
+              cell.appendChild(label);
+              return { cell, input };
+          };
+
+          const yes = createRadio('Yes');
+          const no = createRadio('No');
+
+          row.appendChild(textCell);
+          row.appendChild(yes.cell);
+          row.appendChild(no.cell);
+          tbody.appendChild(row);
+      });
+      table.appendChild(tbody);
+      container.appendChild(table);
+      els.options.appendChild(container);
+
+      if (els.checkBtn) {
+          els.checkBtn.classList.remove('hidden');
+          els.checkBtn.onclick = () => {
+              if (state.answered) return;
+              if (selections.size < q.statements.length) {
+                  // Simple alert or better UI feedback
+                  const feedback = document.createElement('div');
+                  feedback.className = 'mt-4 text-red-500 font-medium text-center animate-pulse';
+                  feedback.textContent = 'Please answer all statements.';
+                  container.after(feedback);
+                  setTimeout(() => feedback.remove(), 2000);
+                  return;
+              }
+
+              state.answered = true;
+              state.answeredCount += 1;
+              
+              let allCorrect = true;
+              q.statements.forEach((stmt, idx) => {
+                  const userVal = selections.get(idx);
+                  const isRowCorrect = userVal === stmt.correct;
+                  if (!isRowCorrect) allCorrect = false;
+
+                  const row = tbody.children[idx];
+                  const inputs = row.querySelectorAll('input');
+                  inputs.forEach(input => {
+                      input.disabled = true;
+                      if (input.value === stmt.correct) {
+                          // Correct answer styling
+                          input.parentElement.classList.add('bg-green-100', 'dark:bg-green-900/30');
+                      } else if (input.checked && !isRowCorrect) {
+                          // Wrong selection styling
+                          input.parentElement.classList.add('bg-red-100', 'dark:bg-red-900/30');
+                      }
+                  });
+                  
+                  // Color text
+                  if (!isRowCorrect) {
+                      row.children[0].classList.add('text-red-600', 'dark:text-red-400');
+                  } else {
+                      row.children[0].classList.add('text-green-600', 'dark:text-green-400');
+                  }
+              });
+
+              if (allCorrect) state.score += 1;
+              showFeedback(allCorrect, q);
+              els.checkBtn.classList.add('hidden');
+              els.nextBtn.classList.remove('hidden');
+              updateStatus();
+          };
+      }
+  }
+
+  function renderOrdering(q) {
+      const container = document.createElement('div');
+      container.className = 'flex flex-col gap-6 mt-6';
+
+      const sourceTitle = document.createElement('h4');
+      sourceTitle.textContent = 'Available Steps';
+      sourceTitle.className = 'font-semibold text-slate-700 dark:text-slate-300';
+      
+      const sourceList = document.createElement('div');
+      sourceList.className = 'flex flex-col gap-2 p-4 bg-slate-50 dark:bg-slate-800/50 rounded-xl border border-slate-200 dark:border-slate-700 min-h-[100px]';
+      
+      const targetTitle = document.createElement('h4');
+      targetTitle.textContent = 'Correct Sequence';
+      targetTitle.className = 'font-semibold text-slate-700 dark:text-slate-300';
+      
+      const targetList = document.createElement('div');
+      targetList.className = 'flex flex-col gap-2 p-4 bg-slate-50 dark:bg-slate-800/50 rounded-xl border border-slate-200 dark:border-slate-700 min-h-[100px] relative';
+      
+      // Add numeric markers to target list background or pseudo-elements for guidance
+      
+      const items = shuffle([...q.items]); // Shuffle source items
+      const selectedItems = [];
+
+      const createItem = (text, isSource) => {
+          const item = document.createElement('div');
+          item.textContent = text;
+          item.className = 'p-3 bg-white dark:bg-slate-700 rounded-lg shadow-sm border border-slate-200 dark:border-slate-600 cursor-pointer hover:bg-brand-50 dark:hover:bg-slate-600 transition-colors flex justify-between items-center';
+          
+          if (!isSource) {
+              const num = document.createElement('span');
+              num.className = 'w-6 h-6 rounded-full bg-brand-100 dark:bg-brand-900/30 text-brand-600 dark:text-brand-400 text-xs flex items-center justify-center font-bold mr-3';
+              num.textContent = selectedItems.indexOf(text) + 1;
+              item.prepend(num);
+          } else {
+              const icon = document.createElement('i');
+              icon.className = 'fa-solid fa-plus text-slate-400';
+              item.appendChild(icon);
+          }
+
+          item.onclick = () => {
+              if (state.answered) return;
+              if (isSource) {
+                  // Move to target
+                  const idx = items.indexOf(text);
+                  if (idx > -1) {
+                      items.splice(idx, 1);
+                      selectedItems.push(text);
+                      refreshLists();
+                  }
+              } else {
+                  // Move back to source
+                  const idx = selectedItems.indexOf(text);
+                  if (idx > -1) {
+                      selectedItems.splice(idx, 1);
+                      items.push(text);
+                      refreshLists();
+                  }
+              }
+          };
+          return item;
+      };
+
+      const refreshLists = () => {
+          sourceList.innerHTML = '';
+          targetList.innerHTML = '';
+          
+          if (items.length === 0) {
+              sourceList.innerHTML = '<div class="text-slate-400 text-sm text-center italic py-2">All items selected</div>';
+          }
+          
+          items.forEach(text => {
+              sourceList.appendChild(createItem(text, true));
+          });
+
+          if (selectedItems.length === 0) {
+              targetList.innerHTML = '<div class="text-slate-400 text-sm text-center italic py-2">Select items to build sequence</div>';
+          }
+
+          selectedItems.forEach(text => {
+              targetList.appendChild(createItem(text, false));
+          });
+      };
+
+      refreshLists();
+
+      container.appendChild(sourceTitle);
+      container.appendChild(sourceList);
+      container.appendChild(targetTitle);
+      container.appendChild(targetList);
+      els.options.appendChild(container);
+
+      if (els.checkBtn) {
+          els.checkBtn.classList.remove('hidden');
+          els.checkBtn.onclick = () => {
+              if (state.answered) return;
+              if (selectedItems.length === 0) return;
+              
+              state.answered = true;
+              state.answeredCount += 1;
+              
+              // Check if sequence matches exactly
+              const isCorrect = JSON.stringify(selectedItems) === JSON.stringify(q.correctOrder);
+              
+              if (isCorrect) state.score += 1;
+              
+              // Visual feedback on items
+              const targetDivs = targetList.children;
+              for (let i = 0; i < targetDivs.length; i++) {
+                  const itemDiv = targetDivs[i];
+                  const itemText = selectedItems[i];
+                  if (itemText === q.correctOrder[i]) {
+                      itemDiv.classList.add('border-green-500', 'bg-green-50', 'dark:bg-green-900/20');
+                      itemDiv.classList.remove('border-slate-200', 'dark:border-slate-600', 'bg-white', 'dark:bg-slate-700');
+                  } else {
+                      itemDiv.classList.add('border-red-500', 'bg-red-50', 'dark:bg-red-900/20');
+                      itemDiv.classList.remove('border-slate-200', 'dark:border-slate-600', 'bg-white', 'dark:bg-slate-700');
+                  }
+              }
+              
+              // Show correct order in feedback if wrong
+              if (!isCorrect) {
+                  q.explanation = (q.explanation || '') + `<br><br><strong>Correct Order:</strong><ol class="list-decimal ml-5 mt-2 space-y-1">${q.correctOrder.map(s => `<li>${s}</li>`).join('')}</ol>`;
+              }
+
+              showFeedback(isCorrect, q);
+              els.checkBtn.classList.add('hidden');
+              els.nextBtn.classList.remove('hidden');
+              updateStatus();
+          };
+      }
+  }
+
+  function renderDropdown(q) {
+      const container = document.createElement('div');
+      container.className = 'p-6 bg-slate-50 dark:bg-slate-800/50 rounded-xl border border-slate-200 dark:border-slate-700 mt-4';
+      
+      const select = document.createElement('select');
+      select.className = 'inline-block w-auto min-w-[200px] p-2.5 mx-2 rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-dark-bg text-slate-900 dark:text-white outline-none focus:ring-2 focus:ring-brand-500 font-medium align-middle';
+      
+      const ph = document.createElement('option');
+      ph.text = 'Select an option...'; ph.value = ''; ph.disabled = true; ph.selected = true;
+      select.add(ph);
+      
+      q.options.forEach(opt => {
+          const o = document.createElement('option');
+          o.text = opt; o.value = opt;
+          select.add(o);
+      });
+
+      // Replace {{option}} with select or append select
+      const parts = q.question.split('{{option}}');
+      if (parts.length > 1) {
+          els.question.innerHTML = ''; // Clear original question text as we rebuild it
+          const wrapper = document.createElement('div');
+          wrapper.className = 'text-lg md:text-xl leading-relaxed text-slate-900 dark:text-white flex flex-wrap items-center gap-2';
+          
+          const part1 = document.createElement('span');
+          part1.innerHTML = parts[0];
+          wrapper.appendChild(part1);
+          wrapper.appendChild(select);
+          const part2 = document.createElement('span');
+          part2.innerHTML = parts[1];
+          wrapper.appendChild(part2);
+          
+          els.question.appendChild(wrapper);
+      } else {
+          // If no placeholder, just append select to container
+          container.appendChild(select);
+          els.options.appendChild(container);
+      }
+
+      if (els.checkBtn) {
+          els.checkBtn.classList.remove('hidden');
+          els.checkBtn.onclick = () => {
+              if (state.answered) return;
+              if (!select.value) return;
+              
+              state.answered = true;
+              state.answeredCount += 1;
+              const isCorrect = select.value === q.answer;
+              
+              select.disabled = true;
+              select.classList.add(isCorrect ? 'bg-green-50' : 'bg-red-50');
+              select.classList.add(isCorrect ? 'border-green-500' : 'border-red-500');
+              select.classList.add(isCorrect ? 'text-green-900' : 'text-red-900');
+              
+              if (isCorrect) state.score += 1;
+              showFeedback(isCorrect, q);
+              els.checkBtn.classList.add('hidden');
+              els.nextBtn.classList.remove('hidden');
+              updateStatus();
+          };
+      }
   }
 
   function linkify(text) {
