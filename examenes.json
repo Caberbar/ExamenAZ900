@@ -21,6 +21,20 @@
     "apuntes": "https://aws.amazon.com/certification/certified-cloud-practitioner/"
   },
   {
+    "name": "Google Cloud Associate Cloud Engineer",
+    "title": "GCP • Associate Cloud Engineer",
+    "desc": "Preguntas de práctica importadas (Sin respuestas verificadas).",
+    "pregunta": "Preguntas/preguntasGCPACE.json",
+    "apuntes": "https://cloud.google.com/certification/cloud-engineer"
+  },
+  {
+    "name": "HashiCorp Terraform Associate",
+    "title": "Terraform • Associate (003)",
+    "desc": "Preguntas de práctica sobre IaC, State, Modules y Core Workflow.",
+    "pregunta": "Preguntas/preguntasTerraform.json",
+    "apuntes": "https://developer.hashicorp.com/terraform/certification/003-study-guide"
+  },
+  {
     "name": "Ka0s Training",
     "title": "Plan de Formación Ka0s",
     "desc": "Onboarding técnico: arquitectura, automatización y cultura operativa.",
