@@ -64,7 +64,26 @@ window.FALLBACK_QUESTIONS = [
   }
 
   function getAutoExplanation(q) {
-      return q.explanation || `Correct answer: ${q.answer}`; 
+      if (q.explanation) return q.explanation;
+      
+      if (Array.isArray(q.answer)) {
+          const joined = q.answer.join(', ');
+          return `Respuestas correctas: ${joined}.`;
+      }
+      
+      if (q.type === 'hotspot-yes-no') {
+          return `Combinación correcta de Sí/No: ${q.answer}.`;
+      }
+      
+      if (q.type === 'matching') {
+          return 'La respuesta correcta se basa en las correspondencias mostradas en la corrección.';
+      }
+      
+      if (q.type === 'ordering') {
+          return 'El orden correcto se muestra en la lista marcada como correcta.';
+      }
+      
+      return `La respuesta correcta es: ${q.answer}.`;
   }
 
   function getParams() {

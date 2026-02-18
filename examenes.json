@@ -39,7 +39,21 @@
     "title": "AI-900 • Azure AI Fundamentals",
     "desc": "Preguntas de práctica sobre conceptos de IA, ML y servicios de Azure AI.",
     "pregunta": "Preguntas/preguntasAI900.json",
-    "apuntes": "https://learn.microsoft.com/en-us/credentials/certifications/azure-ai-fundamentals/"
+    "apuntes": "Apuntes/apuntesAI900.html"
+  },
+  {
+    "name": "DP-900",
+    "title": "DP-900 • Azure Data Fundamentals",
+    "desc": "Preguntas sobre conceptos de datos relacionales y no relacionales.",
+    "pregunta": "Preguntas/preguntasDP900.json",
+    "apuntes": "https://learn.microsoft.com/en-us/credentials/certifications/azure-data-fundamentals/"
+  },
+  {
+    "name": "AWS AI Practitioner",
+    "title": "AWS • AI Practitioner",
+    "desc": "Conceptos de IA/ML en AWS, ética y herramientas.",
+    "pregunta": "Preguntas/preguntasAWSAI.json",
+    "apuntes": "Apuntes/apuntesAWSAI.html"
   },
   {
     "name": "Ka0s Training",

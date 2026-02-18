@@ -6,8 +6,9 @@
       "True",
       "False"
     ],
-    "right": "False",
-    "explanation": "Respuesta verificada."
+    "answer": "False",
+    "explanation": "The state file can drift from reality if manual changes are made outside of Terraform. Use 'terraform plan' to detect drift.",
+    "id": "1"
   },
   {
     "type": "dropdown",
@@ -18,8 +19,9 @@
       "Run terraform state list to find the name of the resource, then terraform state show to find the attributes including public IP address",
       "Run terraform destroy then terraform apply and look for the IP address in stdout"
     ],
-    "right": "Run terraform state list to find the name of the resource, then terraform state show to find the attributes including public IP address",
-    "explanation": "Respuesta verificada."
+    "answer": "Run terraform state list to find the name of the resource, then terraform state show to find the attributes including public IP address",
+    "explanation": "Respuesta verificada.",
+    "id": "2"
   },
   {
     "type": "dropdown",
@@ -30,8 +32,9 @@
       "Declare a node_count input variable for child module",
       "Nothing, child modules inherit variables of parent module"
     ],
-    "right": "Declare a node_count input variable for child module",
-    "explanation": "Respuesta verificada."
+    "answer": "Declare a node_count input variable for child module",
+    "explanation": "Respuesta verificada.",
+    "id": "3"
   },
   {
     "type": "dropdown",
@@ -40,8 +43,9 @@
       "True",
       "False"
     ],
-    "right": "True",
-    "explanation": "Respuesta verificada."
+    "answer": "True",
+    "explanation": "Even if it has a default, the variable must be declared (defined) in the configuration.",
+    "id": "4"
   },
   {
     "type": "dropdown",
@@ -52,8 +56,9 @@
       "A Terraform provider",
       "A -var flag"
     ],
-    "right": "Mark the variable as sensitive",
-    "explanation": "Respuesta verificada."
+    "answer": "Mark the variable as sensitive",
+    "explanation": "Marking a variable as sensitive only hides it from output; it is still stored in the state file. It doesn't keep it out of the configuration if you hardcode it.",
+    "id": "5"
   },
   {
     "type": "dropdown",
@@ -64,8 +69,9 @@
       "default",
       "value"
     ],
-    "right": "sensitive",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "value",
+    "explanation": "The 'value' argument is the only required argument in an output block.",
+    "id": "6"
   },
   {
     "type": "dropdown",
@@ -76,8 +82,9 @@
       "With an S3 module with proper settings for buckets",
       "Auditing cloud storage buckets with a vulnerability scanning tool"
     ],
-    "right": "With a Sentinel policy, which runs before every apply",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "With a Sentinel policy, which runs before every apply",
+    "explanation": "Sentinel is a policy-as-code framework that can enforce rules (like encryption requirements) before infrastructure is provisioned.",
+    "id": "7"
   },
   {
     "type": "dropdown",
@@ -88,8 +95,9 @@
       "Shell scripts",
       "None of the above"
     ],
-    "right": "API",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "API",
+    "explanation": "Terraform providers interact with the cloud provider's API to manage resources.",
+    "id": "8"
   },
   {
     "type": "dropdown",
@@ -98,8 +106,9 @@
       "True",
       "False"
     ],
-    "right": "True",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "False",
+    "explanation": "'terraform validate' only checks the syntax and internal consistency of the configuration. It does not access the state or remote infrastructure.",
+    "id": "9"
   },
   {
     "type": "dropdown",
@@ -110,15 +119,17 @@
       "Import provisioned infrastructure to your state file",
       "Import an existing state file to a new Terraform workspace"
     ],
-    "right": "Import a new Terraform module",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Import provisioned infrastructure to your state file",
+    "explanation": "'terraform import' is used to bring existing resources under Terraform management by adding them to the state file.",
+    "id": "10"
   },
   {
     "type": "dropdown",
     "question": "FILL BLANK - In the below configuration, how would you reference the module output vpc_id? Question Type your answer in the field provided. The text field is not case sensitive and all variations of the correct answer are accepted.",
     "options": [],
-    "right": "Unknown",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "module.vpc.vpc_id",
+    "explanation": "Module outputs are referenced as module.<MODULE_NAME>.<OUTPUT_NAME>.",
+    "id": "11"
   },
   {
     "type": "dropdown",
@@ -129,8 +140,9 @@
       "aws_instance.example.ebs_block_device[sda2,sda3].volume_id",
       "aws_instance.example.ebs_block_device.*.volume_id"
     ],
-    "right": "aws_instance.example.ebs_block_device.[*].volume_id",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "aws_instance.example.ebs_block_device[*].volume_id",
+    "explanation": " The splat operator [*] allows you to access attributes of all items in a list.",
+    "id": "12"
   },
   {
     "type": "dropdown",
@@ -141,8 +153,9 @@
       "Idempotence",
       "Self-describing infrastructure"
     ],
-    "right": "Versioned infrastructure",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Golden images",
+    "explanation": "Golden images are an artifact pattern, not a core principle of IaC (like Idempotence, Versioning, and Self-describing infrastructure).",
+    "id": "13"
   },
   {
     "type": "dropdown",
@@ -153,8 +166,9 @@
       "Blocks Terraform commands from modifying the state file",
       "Prevents accidental deletion of the state file"
     ],
-    "right": "Copies the state file from memory to disk",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Blocks Terraform commands from modifying the state file",
+    "explanation": "State locking prevents concurrent operations from corrupting the state file.",
+    "id": "14"
   },
   {
     "type": "dropdown",
@@ -165,8 +179,9 @@
       "Run terraform refresh",
       "Upgrade your version of Terraform"
     ],
-    "right": "Run terraform apply -upgrade",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Run terraform init -upgrade",
+    "explanation": "You must run 'terraform init -upgrade' to install new provider versions.",
+    "id": "15"
   },
   {
     "type": "dropdown",
@@ -175,8 +190,9 @@
       "True",
       "False"
     ],
-    "right": "True",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "False",
+    "explanation": "Child modules cannot access parent variables automatically; they must be explicitly passed as input variables.",
+    "id": "16"
   },
   {
     "type": "dropdown",
@@ -187,8 +203,9 @@
       "Write the authentication credentials in the Terraform configuration files",
       "Keep the Terraform configuration files in a secret store"
     ],
-    "right": "Use partial configuration to load the authentication credentials outside of the Terraform code",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Use partial configuration to load the authentication credentials outside of the Terraform code",
+    "explanation": "Partial configuration keeps sensitive credentials out of the main configuration files.",
+    "id": "17"
   },
   {
     "type": "dropdown",
@@ -199,8 +216,9 @@
       "Terraform will apply the VM to the state file",
       "Nothing"
     ],
-    "right": "Terraform will terminate and recreate the VM",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Nothing",
+    "explanation": "Terraform is idempotent; applying the same configuration to an up-to-date state results in no changes.",
+    "id": "18"
   },
   {
     "type": "dropdown",
@@ -211,8 +229,9 @@
       "Rebuild only the instances that were deleted",
       "Stop and generate an error message about the missing instances"
     ],
-    "right": "Build a completely brand new set of infrastructure",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Build a completely brand new set of infrastructure",
+    "explanation": "Explanation coming soon.",
+    "id": "19"
   },
   {
     "type": "dropdown",
@@ -224,8 +243,9 @@
       "Terraform will prompt you to pick which resource you want to destroy",
       "Terraform will immediately destroy all the infrastructure"
     ],
-    "right": "Terraform will destroy the application server because it is listed first in the code",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Terraform will destroy the application server because it is listed first in the code",
+    "explanation": "Explanation coming soon.",
+    "id": "20"
   },
   {
     "type": "dropdown",
@@ -236,8 +256,9 @@
       "local",
       "data"
     ],
-    "right": "provider",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "provider",
+    "explanation": "Explanation coming soon.",
+    "id": "21"
   },
   {
     "type": "dropdown",
@@ -248,8 +269,9 @@
       "terraform show",
       "terraform init"
     ],
-    "right": "terraform apply",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "terraform apply",
+    "explanation": "Explanation coming soon.",
+    "id": "22"
   },
   {
     "type": "dropdown",
@@ -258,8 +280,9 @@
       "True",
       "False"
     ],
-    "right": "True",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "True",
+    "explanation": "Explanation coming soon.",
+    "id": "23"
   },
   {
     "type": "dropdown",
@@ -268,8 +291,9 @@
       "True",
       "False"
     ],
-    "right": "True",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "True",
+    "explanation": "Explanation coming soon.",
+    "id": "24"
   },
   {
     "type": "dropdown",
@@ -278,8 +302,9 @@
       "True",
       "False"
     ],
-    "right": "True",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "True",
+    "explanation": "Explanation coming soon.",
+    "id": "25"
   },
   {
     "type": "dropdown",
@@ -291,8 +316,9 @@
       "State file",
       "Terraform code"
     ],
-    "right": "Cloud infrastructure",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Cloud infrastructure",
+    "explanation": "Explanation coming soon.",
+    "id": "26"
   },
   {
     "type": "dropdown",
@@ -304,8 +330,9 @@
       "All of the above",
       "None of the above"
     ],
-    "right": "apply",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "apply",
+    "explanation": "Explanation coming soon.",
+    "id": "27"
   },
   {
     "type": "dropdown",
@@ -316,8 +343,9 @@
       "Preventing Terraform runs from occurring",
       "Storing references to workspaces which are locked"
     ],
-    "right": "Tracking provider dependencies",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Tracking provider dependencies",
+    "explanation": "Explanation coming soon.",
+    "id": "28"
   },
   {
     "type": "dropdown",
@@ -328,8 +356,9 @@
       "Use the terraform apply command targeting the VM resources only",
       "Delete the Terraform VM resources from your Terraform code then run terraform plan and terraform apply"
     ],
-    "right": "Use the terraform state rm command to remove the VM from state file",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Use the terraform state rm command to remove the VM from state file",
+    "explanation": "Explanation coming soon.",
+    "id": "29"
   },
   {
     "type": "dropdown",
@@ -340,8 +369,9 @@
       "The release tags in the associated repo",
       "The module's Terraform code"
     ],
-    "right": "The module's configuration page on the Terraform Module Registry",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "The module's configuration page on the Terraform Module Registry",
+    "explanation": "Explanation coming soon.",
+    "id": "30"
   },
   {
     "type": "dropdown",
@@ -350,8 +380,9 @@
       "True",
       "False"
     ],
-    "right": "True",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "True",
+    "explanation": "Explanation coming soon.",
+    "id": "31"
   },
   {
     "type": "dropdown",
@@ -362,8 +393,9 @@
       "terraform fmt ג€\"list -recursive",
       "terraform fmt -check -recursive"
     ],
-    "right": "terraform fmt -check",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "terraform fmt -check",
+    "explanation": "Explanation coming soon.",
+    "id": "32"
   },
   {
     "type": "dropdown",
@@ -374,8 +406,9 @@
       "remote-exec",
       "file"
     ],
-    "right": "null-ex׀µׁ",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "null-ex׀µׁ",
+    "explanation": "Explanation coming soon.",
+    "id": "33"
   },
   {
     "type": "dropdown",
@@ -386,8 +419,9 @@
       "Define the attribute vnet_id as an output in the networking module",
       "Change the referenced value to my_network.outputs.vnet_id"
     ],
-    "right": "Define the attribute vnet_id as a variable in the networking module",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Define the attribute vnet_id as a variable in the networking module",
+    "explanation": "Explanation coming soon.",
+    "id": "34"
   },
   {
     "type": "dropdown",
@@ -398,8 +432,9 @@
       "aws",
       "test"
     ],
-    "right": "vpc",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "vpc",
+    "explanation": "Explanation coming soon.",
+    "id": "35"
   },
   {
     "type": "dropdown",
@@ -408,8 +443,9 @@
       "![alt text](image-8.png) Question",
       "![alt text](image-9.png) Question"
     ],
-    "right": "![alt text](image-8.png) Question",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "![alt text](image-8.png) Question",
+    "explanation": "Explanation coming soon.",
+    "id": "36"
   },
   {
     "type": "dropdown",
@@ -420,8 +456,9 @@
       "As additional resources are required, more tickets are submitted",
       "A catalog of approved resources can be accessed from drop down lists in a request form"
     ],
-    "right": "A full audit trail of the request and fulfillment process is generated",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "A full audit trail of the request and fulfillment process is generated",
+    "explanation": "Explanation coming soon.",
+    "id": "37"
   },
   {
     "type": "dropdown",
@@ -432,8 +469,9 @@
       "Module is a container for one or more resources",
       "Modules can call other modules"
     ],
-    "right": "Modules must be publicly accessible",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Modules must be publicly accessible",
+    "explanation": "Explanation coming soon.",
+    "id": "38"
   },
   {
     "type": "dropdown",
@@ -444,8 +482,9 @@
       "maׁ€",
       "list"
     ],
-    "right": "tuple",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "tuple",
+    "explanation": "Explanation coming soon.",
+    "id": "39"
   },
   {
     "type": "dropdown",
@@ -456,8 +495,9 @@
       "Run terraform destroy and it will first output all the resources that will be deleted before prompting for approval",
       "Run terraform show -destroy"
     ],
-    "right": "Run terraform plan -destroy",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Run terraform plan -destroy",
+    "explanation": "Explanation coming soon.",
+    "id": "40"
   },
   {
     "type": "dropdown",
@@ -468,8 +508,9 @@
       "Before every terraform import",
       "None of the above"
     ],
-    "right": "Before every terraform plan",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Before every terraform plan",
+    "explanation": "Explanation coming soon.",
+    "id": "41"
   },
   {
     "type": "dropdown",
@@ -478,8 +519,9 @@
       "True",
       "False"
     ],
-    "right": "True",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "True",
+    "explanation": "Explanation coming soon.",
+    "id": "42"
   },
   {
     "type": "dropdown",
@@ -490,8 +532,9 @@
       "The ability to reuse best practice configurations and settings",
       "The ability to autoscale a group of servers"
     ],
-    "right": "The ability to delete infrastructure",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "The ability to delete infrastructure",
+    "explanation": "Explanation coming soon.",
+    "id": "43"
   },
   {
     "type": "dropdown",
@@ -501,8 +544,9 @@
       "terraform apply",
       "terraform refresh"
     ],
-    "right": "terraform mv aws_security_group.htp aws_security_group.http",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "terraform mv aws_security_group.htp aws_security_group.http",
+    "explanation": "Explanation coming soon.",
+    "id": "44"
   },
   {
     "type": "dropdown",
@@ -512,8 +556,9 @@
       "![alt text](image-11.png) Question",
       "![alt text](image-10.png) Question"
     ],
-    "right": "![alt text](image-12.png) Question",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "![alt text](image-12.png) Question",
+    "explanation": "Explanation coming soon.",
+    "id": "45"
   },
   {
     "type": "dropdown",
@@ -524,8 +569,9 @@
       "Manually update the state fire",
       "Run terraform import"
     ],
-    "right": "Run terraform refresh",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Run terraform refresh",
+    "explanation": "Explanation coming soon.",
+    "id": "46"
   },
   {
     "type": "dropdown",
@@ -534,8 +580,9 @@
       "True",
       "False"
     ],
-    "right": "True",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "True",
+    "explanation": "Explanation coming soon.",
+    "id": "47"
   },
   {
     "type": "dropdown",
@@ -544,8 +591,9 @@
       "True",
       "False"
     ],
-    "right": "True",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "True",
+    "explanation": "Explanation coming soon.",
+    "id": "48"
   },
   {
     "type": "dropdown",
@@ -556,8 +604,9 @@
       "Passing --destroy at the end of a plan request",
       "Delete the state file and run terraform apply"
     ],
-    "right": "Using the destroy command with auto-approve",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Using the destroy command with auto-approve",
+    "explanation": "Explanation coming soon.",
+    "id": "49"
   },
   {
     "type": "dropdown",
@@ -569,8 +618,9 @@
       "Modify a count parameter to scale resources",
       "API driven workflows"
     ],
-    "right": "Self-service infrastructure deployment",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Self-service infrastructure deployment",
+    "explanation": "Explanation coming soon.",
+    "id": "50"
   },
   {
     "type": "dropdown",
@@ -581,8 +631,9 @@
       "templatefile(\"id_rsa.pub\")",
       "file(\"id_rsa.pub\")"
     ],
-    "right": "fileset(\"id_rsa.pub\")",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "fileset(\"id_rsa.pub\")",
+    "explanation": "Explanation coming soon.",
+    "id": "51"
   },
   {
     "type": "dropdown",
@@ -594,8 +645,9 @@
       "Enforce security and compliance policies",
       "Group a collection of Terraform configuration files that map to a single state file"
     ],
-    "right": "Provision resources for on-premises infrastructure services",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Provision resources for on-premises infrastructure services",
+    "explanation": "Explanation coming soon.",
+    "id": "52"
   },
   {
     "type": "dropdown",
@@ -604,8 +656,9 @@
       "True",
       "False"
     ],
-    "right": "True",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "True",
+    "explanation": "Explanation coming soon.",
+    "id": "53"
   },
   {
     "type": "dropdown",
@@ -616,8 +669,9 @@
       "Terraform requires resources in a configuration to be listed in the order they will be created to determine dependencies",
       "Terraform requires resource dependencies to be defined as modules and sourced in order"
     ],
-    "right": "Terraform automatically builds a resource graph based on resources, provisioners, special meta-parameters, and the state file, if present.",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Terraform automatically builds a resource graph based on resources, provisioners, special meta-parameters, and the state file, if present.",
+    "explanation": "Explanation coming soon.",
+    "id": "54"
   },
   {
     "type": "dropdown",
@@ -628,8 +682,9 @@
       "Resource ID",
       "Resource address"
     ],
-    "right": "Path",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Path",
+    "explanation": "Explanation coming soon.",
+    "id": "55"
   },
   {
     "type": "dropdown",
@@ -640,8 +695,9 @@
       "terraform destroy, then terraform apply",
       "terraform init"
     ],
-    "right": "terraform apply",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "terraform apply",
+    "explanation": "Explanation coming soon.",
+    "id": "56"
   },
   {
     "type": "dropdown",
@@ -652,8 +708,9 @@
       "Credentials",
       "Cloud provider"
     ],
-    "right": "State file",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "State file",
+    "explanation": "Explanation coming soon.",
+    "id": "57"
   },
   {
     "type": "dropdown",
@@ -664,8 +721,9 @@
       "Requires any version of the AWS provider after the 3.0 major release, like 4.1",
       "Requires any version of the AWS provider > 3.0"
     ],
-    "right": "Requires any version of the AWS provider >= 3.0 and < 4.0",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Requires any version of the AWS provider >= 3.0 and < 4.0",
+    "explanation": "Explanation coming soon.",
+    "id": "58"
   },
   {
     "type": "dropdown",
@@ -676,8 +734,9 @@
       "Your Terraform plan",
       "Your Terraform configuration"
     ],
-    "right": "Your cloud infrastructure",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Your cloud infrastructure",
+    "explanation": "Explanation coming soon.",
+    "id": "59"
   },
   {
     "type": "dropdown",
@@ -688,8 +747,9 @@
       "source = \"./module\"",
       "source = \"hashicorp/consul/aws\""
     ],
-    "right": "source = \"./modulelversion=v1.0.0\"",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "source = \"./modulelversion=v1.0.0\"",
+    "explanation": "Explanation coming soon.",
+    "id": "60"
   },
   {
     "type": "dropdown",
@@ -701,8 +761,9 @@
       "By default, it does not refresh your state file to reflect current infrastructure configuration",
       "You cannot target specific resources for the operation"
     ],
-    "right": "It only operates on infrastructure defined in the current working directory or workspace",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "It only operates on infrastructure defined in the current working directory or workspace",
+    "explanation": "Explanation coming soon.",
+    "id": "61"
   },
   {
     "type": "dropdown",
@@ -714,8 +775,9 @@
       "All of the above (all statements above are incorrect)",
       "None of the above (all statements above are correct)"
     ],
-    "right": "Local modules are not cached by terraform init command",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Local modules are not cached by terraform init command",
+    "explanation": "Explanation coming soon.",
+    "id": "62"
   },
   {
     "type": "dropdown",
@@ -727,8 +789,9 @@
       "It requires manual configuration of infrastructure resources",
       "It allows you to automate infrastructure provisioning"
     ],
-    "right": "It is only compatible with AWS infrastructure management",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "It is only compatible with AWS infrastructure management",
+    "explanation": "Explanation coming soon.",
+    "id": "63"
   },
   {
     "type": "dropdown",
@@ -739,8 +802,9 @@
       "A for each block",
       "A dynamic block"
     ],
-    "right": "A count loop",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "A count loop",
+    "explanation": "Explanation coming soon.",
+    "id": "64"
   },
   {
     "type": "dropdown",
@@ -751,8 +815,9 @@
       "Edit the state file directly just before running terraform apply",
       "Set the variable value on the command line with the -var flag"
     ],
-    "right": "Write the value to a file and specify the file with the -var-file flag",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Write the value to a file and specify the file with the -var-file flag",
+    "explanation": "Explanation coming soon.",
+    "id": "65"
   },
   {
     "type": "dropdown",
@@ -761,8 +826,9 @@
       "True",
       "False"
     ],
-    "right": "True",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "True",
+    "explanation": "Explanation coming soon.",
+    "id": "66"
   },
   {
     "type": "dropdown",
@@ -774,8 +840,9 @@
       "data.kubernetes_namespace.name",
       "None of the above"
     ],
-    "right": "resource.kubernetes_namespace.example.name",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "resource.kubernetes_namespace.example.name",
+    "explanation": "Explanation coming soon.",
+    "id": "67"
   },
   {
     "type": "dropdown",
@@ -787,8 +854,9 @@
       "All of the above",
       "None of the above"
     ],
-    "right": "Required input variables",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Required input variables",
+    "explanation": "Explanation coming soon.",
+    "id": "68"
   },
   {
     "type": "dropdown",
@@ -797,8 +865,9 @@
       "True",
       "False"
     ],
-    "right": "True",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "True",
+    "explanation": "Explanation coming soon.",
+    "id": "69"
   },
   {
     "type": "dropdown",
@@ -810,8 +879,9 @@
       "terraform apply",
       "terraform plan F. terraform validate"
     ],
-    "right": "terraform destroy",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "terraform destroy",
+    "explanation": "Explanation coming soon.",
+    "id": "70"
   },
   {
     "type": "dropdown",
@@ -822,8 +892,9 @@
       "Refresh",
       "All of the above"
     ],
-    "right": "Plan",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Plan",
+    "explanation": "Explanation coming soon.",
+    "id": "71"
   },
   {
     "type": "dropdown",
@@ -834,8 +905,9 @@
       "Before the apply phase",
       "After the apply phase"
     ],
-    "right": "Before the plan phase",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Before the plan phase",
+    "explanation": "Explanation coming soon.",
+    "id": "72"
   },
   {
     "type": "dropdown",
@@ -846,8 +918,9 @@
       "A method of grouping multiple infrastructure security policies",
       "Provides limited access to a cloud environment"
     ],
-    "right": "Workspaces allow you to manage collections of infrastructure in state files",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Workspaces allow you to manage collections of infrastructure in state files",
+    "explanation": "Explanation coming soon.",
+    "id": "73"
   },
   {
     "type": "dropdown",
@@ -858,8 +931,9 @@
       "Nothing ג€\" modules stored on GitHub always default to version 1.0.0",
       "Modules stored on GitHub do not support versioning"
     ],
-    "right": "Append ?ref=v1. 0. 0 argument to the source path",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Append ?ref=v1. 0. 0 argument to the source path",
+    "explanation": "Explanation coming soon.",
+    "id": "74"
   },
   {
     "type": "dropdown",
@@ -870,8 +944,9 @@
       "Impossible",
       "Discouraged"
     ],
-    "right": "Mandatory",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Mandatory",
+    "explanation": "Explanation coming soon.",
+    "id": "75"
   },
   {
     "type": "dropdown",
@@ -880,8 +955,9 @@
       "True",
       "False"
     ],
-    "right": "True",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "True",
+    "explanation": "Explanation coming soon.",
+    "id": "76"
   },
   {
     "type": "dropdown",
@@ -892,8 +968,9 @@
       "Run terraform login to reauthenticate with the provider",
       "Review /var/log/terraform.log for error messages"
     ],
-    "right": "Set TF_LOG=DEBUG",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Set TF_LOG=DEBUG",
+    "explanation": "Explanation coming soon.",
+    "id": "77"
   },
   {
     "type": "dropdown",
@@ -905,8 +982,9 @@
       "Make the change via the public cloud API endpoint",
       "Submit a pull request and wait for an approved merge of the proposed changes"
     ],
-    "right": "Clone the repository containing your infrastructure code and then run the code",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Clone the repository containing your infrastructure code and then run the code",
+    "explanation": "Explanation coming soon.",
+    "id": "78"
   },
   {
     "type": "dropdown",
@@ -915,8 +993,9 @@
       "True",
       "False"
     ],
-    "right": "True",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "True",
+    "explanation": "Explanation coming soon.",
+    "id": "79"
   },
   {
     "type": "dropdown",
@@ -927,8 +1006,9 @@
       "terraform graph",
       "terraform output"
     ],
-    "right": "terraform refresh",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "terraform refresh",
+    "explanation": "Explanation coming soon.",
+    "id": "80"
   },
   {
     "type": "dropdown",
@@ -939,8 +1019,9 @@
       "Setting credentials as Terraform variables",
       "None of the above"
     ],
-    "right": "Using environment variables",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Using environment variables",
+    "explanation": "Explanation coming soon.",
+    "id": "81"
   },
   {
     "type": "dropdown",
@@ -949,8 +1030,9 @@
       "True",
       "False"
     ],
-    "right": "True",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "True",
+    "explanation": "Explanation coming soon.",
+    "id": "82"
   },
   {
     "type": "dropdown",
@@ -959,8 +1041,9 @@
       "True",
       "False"
     ],
-    "right": "True",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "True",
+    "explanation": "Explanation coming soon.",
+    "id": "83"
   },
   {
     "type": "dropdown",
@@ -971,8 +1054,9 @@
       "Terraform will error",
       "Terraform will remove the virtual machine from the state file, but the resource will still exist"
     ],
-    "right": "Nothing",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Nothing",
+    "explanation": "Explanation coming soon.",
+    "id": "84"
   },
   {
     "type": "dropdown",
@@ -983,8 +1067,9 @@
       "Terraform module isn't the latest version",
       "Declaring a resource identifier more than once"
     ],
-    "right": "A mix of spaces and tabs in configuration files",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "A mix of spaces and tabs in configuration files",
+    "explanation": "Explanation coming soon.",
+    "id": "85"
   },
   {
     "type": "dropdown",
@@ -993,8 +1078,9 @@
       "Question",
       "Question"
     ],
-    "right": "Question",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Question",
+    "explanation": "Explanation coming soon.",
+    "id": "86"
   },
   {
     "type": "dropdown",
@@ -1005,8 +1091,9 @@
       "Official HashiCorp distribution on releases.hashicorp.com",
       "Provider plugin cache"
     ],
-    "right": "Source code",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Source code",
+    "explanation": "Explanation coming soon.",
+    "id": "87"
   },
   {
     "type": "dropdown",
@@ -1017,8 +1104,9 @@
       "Private repository on GitHub",
       "Public repository on GitHub"
     ],
-    "right": "Internally hosted SCM (Source Control Manager) platform",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Internally hosted SCM (Source Control Manager) platform",
+    "explanation": "Explanation coming soon.",
+    "id": "88"
   },
   {
     "type": "dropdown",
@@ -1029,8 +1117,9 @@
       "The Terraform code is copied to the target resources to be applied locally and could expose secrets if a target resource is compromised.",
       "All passwords should be rotated on a quarterly basis."
     ],
-    "right": "It makes the code less reusable.",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "It makes the code less reusable.",
+    "explanation": "Explanation coming soon.",
+    "id": "89"
   },
   {
     "type": "dropdown",
@@ -1039,8 +1128,9 @@
       "![alt text](image-17.png) True",
       "![alt text](image-18.png) False"
     ],
-    "right": "![alt text](image-17.png) True",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "![alt text](image-17.png) True",
+    "explanation": "Explanation coming soon.",
+    "id": "90"
   },
   {
     "type": "dropdown",
@@ -1051,8 +1141,9 @@
       "The resource will be marked as \"tainted\"",
       "Nothing, provisioners will not show errors in the command line"
     ],
-    "right": "The resource will not be affected, but the provisioner will need to be applied again",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "The resource will not be affected, but the provisioner will need to be applied again",
+    "explanation": "Explanation coming soon.",
+    "id": "91"
   },
   {
     "type": "dropdown",
@@ -1063,8 +1154,9 @@
       "You should write Terraform configuration files after the next terraform import is executed",
       "Terraform configuration should be written before terraform import is executed"
     ],
-    "right": "Infrastructure can be imported without corresponding Terraform code",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Infrastructure can be imported without corresponding Terraform code",
+    "explanation": "Explanation coming soon.",
+    "id": "92"
   },
   {
     "type": "dropdown",
@@ -1075,8 +1167,9 @@
       "terraform test",
       "terraform validate"
     ],
-    "right": "terraform env",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "terraform env",
+    "explanation": "Explanation coming soon.",
+    "id": "93"
   },
   {
     "type": "dropdown",
@@ -1087,8 +1180,9 @@
       "An alias meta-argument should be included in backend blocks whenever possible",
       "The backend configuration should contain multiple credentials so that more than one user can execute terraform plan and terraform apply"
     ],
-    "right": "You should not store credentials in Terraform Configuration",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "You should not store credentials in Terraform Configuration",
+    "explanation": "Explanation coming soon.",
+    "id": "94"
   },
   {
     "type": "dropdown",
@@ -1097,8 +1191,9 @@
       "True",
       "False"
     ],
-    "right": "True",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "True",
+    "explanation": "Explanation coming soon.",
+    "id": "95"
   },
   {
     "type": "dropdown",
@@ -1109,8 +1204,9 @@
       "Destroy all infrastructure in the configured Terraform provider",
       "Destroy the Terraform state file while leaving infrastructure intact"
     ],
-    "right": "Destroy all infrastructure in the Terraform state file",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Destroy all infrastructure in the Terraform state file",
+    "explanation": "Explanation coming soon.",
+    "id": "96"
   },
   {
     "type": "dropdown",
@@ -1121,8 +1217,9 @@
       "TF_LOG",
       "TP_LOG_PATH"
     ],
-    "right": "TF_LOG_LEVEL",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "TF_LOG_LEVEL",
+    "explanation": "Explanation coming soon.",
+    "id": "97"
   },
   {
     "type": "dropdown",
@@ -1133,8 +1230,9 @@
       "The organization decides to expand into Azure and wishes to deploy new infrastructure using their existing codebase",
       "The DevOps team is tasked with automating a manual provisioning process"
     ],
-    "right": "The team is asked to build a reusable code base that can deploy resources into any AWS region",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "The team is asked to build a reusable code base that can deploy resources into any AWS region",
+    "explanation": "Explanation coming soon.",
+    "id": "98"
   },
   {
     "type": "dropdown",
@@ -1143,8 +1241,9 @@
       "True",
       "False"
     ],
-    "right": "True",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "True",
+    "explanation": "Explanation coming soon.",
+    "id": "99"
   },
   {
     "type": "dropdown",
@@ -1155,8 +1254,9 @@
       "View the execution plan and check if the changes match your expectations",
       "Schedule Terraform to run at a planned time in the future"
     ],
-    "right": "Save a generated execution plan to apply later",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Save a generated execution plan to apply later",
+    "explanation": "Explanation coming soon.",
+    "id": "100"
   },
   {
     "type": "dropdown",
@@ -1167,8 +1267,9 @@
       "slice",
       "chomp"
     ],
-    "right": "split",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "split",
+    "explanation": "Explanation coming soon.",
+    "id": "101"
   },
   {
     "type": "dropdown",
@@ -1179,15 +1280,17 @@
       "Versioned configuration files",
       "Docker files"
     ],
-    "right": "Cloned virtual machine images",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Cloned virtual machine images",
+    "explanation": "Explanation coming soon.",
+    "id": "102"
   },
   {
     "type": "dropdown",
     "question": "FILL BLANK - You need to migrate a workspace to use a remote backend. After updating your configuration, what command do you run to perform the migration? Type your answer in the field provided. The text field is not case-sensitive and all variations of the correct answer are accepted.",
     "options": [],
-    "right": "Unknown",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Unknown",
+    "explanation": "Explanation coming soon.",
+    "id": "103"
   },
   {
     "type": "dropdown",
@@ -1199,8 +1302,9 @@
       "Each of the module’s dependencies (example: submodules)",
       "The version of the module"
     ],
-    "right": "Each of the module’s required inputs",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Each of the module’s required inputs",
+    "explanation": "Explanation coming soon.",
+    "id": "104"
   },
   {
     "type": "dropdown",
@@ -1211,8 +1315,9 @@
       "terraform refresh -upgrade",
       "terraform providers -upgrade"
     ],
-    "right": "terraform init -upgrade",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "terraform init -upgrade",
+    "explanation": "Explanation coming soon.",
+    "id": "105"
   },
   {
     "type": "dropdown",
@@ -1221,8 +1326,9 @@
       "True",
       "False"
     ],
-    "right": "True",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "True",
+    "explanation": "Explanation coming soon.",
+    "id": "106"
   },
   {
     "type": "dropdown",
@@ -1233,8 +1339,9 @@
       "Terraform will not make any changes to the Load Balancer and will update the state file to reflect any changes made.",
       "Terraform will change the port back to 80 in your code."
     ],
-    "right": "Terraform will fail with an error because the state file is no longer accurate.",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Terraform will fail with an error because the state file is no longer accurate.",
+    "explanation": "Explanation coming soon.",
+    "id": "107"
   },
   {
     "type": "dropdown",
@@ -1243,8 +1350,9 @@
       "True",
       "False"
     ],
-    "right": "True",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "True",
+    "explanation": "Explanation coming soon.",
+    "id": "108"
   },
   {
     "type": "dropdown",
@@ -1256,8 +1364,9 @@
       "Create a new Terraform provider for staging",
       "Add new Terraform code (*.tf files) for staging in the same directory"
     ],
-    "right": "Copy the existing terraform.tfstate file and save it as staging.terraform.tfstate",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Copy the existing terraform.tfstate file and save it as staging.terraform.tfstate",
+    "explanation": "Explanation coming soon.",
+    "id": "109"
   },
   {
     "type": "dropdown",
@@ -1268,8 +1377,9 @@
       "Terraform provider",
       "Terraform provisioner"
     ],
-    "right": "Terraform configuration",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Terraform configuration",
+    "explanation": "Explanation coming soon.",
+    "id": "110"
   },
   {
     "type": "dropdown",
@@ -1278,8 +1388,9 @@
       "True",
       "False"
     ],
-    "right": "True",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "True",
+    "explanation": "Explanation coming soon.",
+    "id": "111"
   },
   {
     "type": "dropdown",
@@ -1288,8 +1399,9 @@
       "True",
       "False"
     ],
-    "right": "True",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "True",
+    "explanation": "Explanation coming soon.",
+    "id": "112"
   },
   {
     "type": "dropdown",
@@ -1300,8 +1412,9 @@
       "Write Terraform configuration for the existing VMs",
       "Run the terraform import-gcp command"
     ],
-    "right": "Provision new VMs using Terraform with the same VM names",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Provision new VMs using Terraform with the same VM names",
+    "explanation": "Explanation coming soon.",
+    "id": "113"
   },
   {
     "type": "dropdown",
@@ -1312,8 +1425,9 @@
       "servers - var(num_servers)",
       "$(var.num_servers)"
     ],
-    "right": "servers - var.num_servers",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "servers - var.num_servers",
+    "explanation": "Explanation coming soon.",
+    "id": "114"
   },
   {
     "type": "dropdown",
@@ -1324,8 +1438,9 @@
       "terraform get",
       "terraform state list"
     ],
-    "right": "terraform state list",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "terraform state list",
+    "explanation": "Explanation coming soon.",
+    "id": "115"
   },
   {
     "type": "dropdown",
@@ -1336,8 +1451,9 @@
       "vsphere_datacenter.dc.id",
       "data.vsphere_datacenter.dc.id"
     ],
-    "right": "data.dc.id",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "data.dc.id",
+    "explanation": "Explanation coming soon.",
+    "id": "116"
   },
   {
     "type": "dropdown",
@@ -1348,8 +1464,9 @@
       "terraform refresh",
       "terraform push"
     ],
-    "right": "terraform state",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "terraform state",
+    "explanation": "Explanation coming soon.",
+    "id": "117"
   },
   {
     "type": "dropdown",
@@ -1360,8 +1477,9 @@
       "Modules",
       "Outputs"
     ],
-    "right": "Local values",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Local values",
+    "explanation": "Explanation coming soon.",
+    "id": "118"
   },
   {
     "type": "dropdown",
@@ -1372,8 +1490,9 @@
       "Versioning",
       "Automation"
     ],
-    "right": "Interpolation",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Interpolation",
+    "explanation": "Explanation coming soon.",
+    "id": "119"
   },
   {
     "type": "dropdown",
@@ -1382,8 +1501,9 @@
       "True",
       "False"
     ],
-    "right": "True",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "True",
+    "explanation": "Explanation coming soon.",
+    "id": "120"
   },
   {
     "type": "dropdown",
@@ -1394,8 +1514,9 @@
       "Run terraform apply again",
       "Run terraform destroy then terraform apply"
     ],
-    "right": "Run terraform taint against the virtual machine’s resource name, then terraform apply",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Run terraform taint against the virtual machine’s resource name, then terraform apply",
+    "explanation": "Explanation coming soon.",
+    "id": "121"
   },
   {
     "type": "dropdown",
@@ -1404,8 +1525,9 @@
       "True",
       "False"
     ],
-    "right": "True",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "True",
+    "explanation": "Explanation coming soon.",
+    "id": "122"
   },
   {
     "type": "dropdown",
@@ -1414,8 +1536,9 @@
       "True",
       "False"
     ],
-    "right": "True",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "True",
+    "explanation": "Explanation coming soon.",
+    "id": "123"
   },
   {
     "type": "dropdown",
@@ -1426,8 +1549,9 @@
       "Replace the compute instance type with a larger version to reduce the number of required deployments",
       "Implement a provisioning pipeline that deploys infrastructure configurations committed to your version control system following code reviews"
     ],
-    "right": "Implement a ticketing workflow that makes engineers submit a ticket before manually provisioning and configuring a resource",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Implement a ticketing workflow that makes engineers submit a ticket before manually provisioning and configuring a resource",
+    "explanation": "Explanation coming soon.",
+    "id": "124"
   },
   {
     "type": "dropdown",
@@ -1438,8 +1562,9 @@
       "Dynamic blocks",
       "Count arguments"
     ],
-    "right": "Local values",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Local values",
+    "explanation": "Explanation coming soon.",
+    "id": "125"
   },
   {
     "type": "dropdown",
@@ -1450,8 +1575,9 @@
       "source = “github.com/hashicorp/example”",
       "source = “hashicorp/consul/aws”"
     ],
-    "right": "source = “./modules/consul”",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "source = “./modules/consul”",
+    "explanation": "Explanation coming soon.",
+    "id": "126"
   },
   {
     "type": "dropdown",
@@ -1462,8 +1588,9 @@
       "top(numcpus)",
       "high[numcpus]"
     ],
-    "right": "max(numcpus)",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "max(numcpus)",
+    "explanation": "Explanation coming soon.",
+    "id": "127"
   },
   {
     "type": "dropdown",
@@ -1472,8 +1599,9 @@
       "True",
       "False"
     ],
-    "right": "True",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "True",
+    "explanation": "Explanation coming soon.",
+    "id": "128"
   },
   {
     "type": "dropdown",
@@ -1484,8 +1612,9 @@
       "array",
       "string"
     ],
-    "right": "list",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "list",
+    "explanation": "Explanation coming soon.",
+    "id": "129"
   },
   {
     "type": "dropdown",
@@ -1496,8 +1625,9 @@
       "A state file represents the desired state expressed by the Terraform code files",
       "A state file represents a source of truth for resources provisioned with Terraform"
     ],
-    "right": "A state file can be used to schedule recurring infrastructure tasks",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "A state file can be used to schedule recurring infrastructure tasks",
+    "explanation": "Explanation coming soon.",
+    "id": "130"
   },
   {
     "type": "dropdown",
@@ -1508,8 +1638,9 @@
       "Plans and applies can be triggered via version control system integrations",
       "They have role-based access controls"
     ],
-    "right": "They can securely store cloud credentials",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "They can securely store cloud credentials",
+    "explanation": "Explanation coming soon.",
+    "id": "131"
   },
   {
     "type": "dropdown",
@@ -1520,8 +1651,9 @@
       "State is used to enforce resource configurations that relate to compliance policies",
       "State is used to store variables and quickly reuse existing code"
     ],
-    "right": "State is used to map real world resources to your configuration and keep track of metadata",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "State is used to map real world resources to your configuration and keep track of metadata",
+    "explanation": "Explanation coming soon.",
+    "id": "132"
   },
   {
     "type": "dropdown",
@@ -1533,8 +1665,9 @@
       "Local",
       "HTTP"
     ],
-    "right": "API",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "API",
+    "explanation": "Explanation coming soon.",
+    "id": "133"
   },
   {
     "type": "dropdown",
@@ -1543,8 +1676,9 @@
       "True",
       "False"
     ],
-    "right": "True",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "True",
+    "explanation": "Explanation coming soon.",
+    "id": "134"
   },
   {
     "type": "dropdown",
@@ -1553,8 +1687,9 @@
       "True",
       "False"
     ],
-    "right": "True",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "True",
+    "explanation": "Explanation coming soon.",
+    "id": "135"
   },
   {
     "type": "dropdown",
@@ -1565,15 +1700,17 @@
       "Public Terraform Module Registry",
       "Subfolder within a workspace"
     ],
-    "right": "Generic git repository",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Generic git repository",
+    "explanation": "Explanation coming soon.",
+    "id": "136"
   },
   {
     "type": "dropdown",
     "question": "You are writing a child Terraform module which provisions an AWS instance. You want to make use of the IP address returned in the root configuration. You name the instance resource “main”. Which of these is the correct way to define the output value using HCL2?",
     "options": [],
-    "right": "Unknown",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Unknown",
+    "explanation": "Explanation coming soon.",
+    "id": "137"
   },
   {
     "type": "dropdown",
@@ -1584,8 +1721,9 @@
       "aws_instance-web[“indexing”]",
       "aws_instance.web[“indexing”]"
     ],
-    "right": "aws_instance[“web”][“indexing”]",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "aws_instance[“web”][“indexing”]",
+    "explanation": "Explanation coming soon.",
+    "id": "138"
   },
   {
     "type": "dropdown",
@@ -1596,8 +1734,9 @@
       "Audit logging",
       "Private module registry"
     ],
-    "right": "Workspace",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Workspace",
+    "explanation": "Explanation coming soon.",
+    "id": "139"
   },
   {
     "type": "dropdown",
@@ -1608,8 +1747,9 @@
       "After you start coding a new Terraform project and before you run terraform plan for the first time",
       "Before you start coding a new Terraform project"
     ],
-    "right": "After you run terraform apply for the first time in a new Terraform project and before you run terraform plan",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "After you run terraform apply for the first time in a new Terraform project and before you run terraform plan",
+    "explanation": "Explanation coming soon.",
+    "id": "140"
   },
   {
     "type": "dropdown",
@@ -1618,8 +1758,9 @@
       "True",
       "False"
     ],
-    "right": "True",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "True",
+    "explanation": "Explanation coming soon.",
+    "id": "141"
   },
   {
     "type": "dropdown",
@@ -1630,8 +1771,9 @@
       "Before you run terraform apply so you can validate your infrastructure changes",
       "After you run terraform apply so you can validate that your infrastructure is reflected in your code"
     ],
-    "right": "After you run terraform plan so you can validate that your state file is consistent with your infrastructure",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "After you run terraform plan so you can validate that your state file is consistent with your infrastructure",
+    "explanation": "Explanation coming soon.",
+    "id": "142"
   },
   {
     "type": "dropdown",
@@ -1642,8 +1784,9 @@
       "Using the depends_on parameter",
       "Terraform will automatically manage most resource dependencies"
     ],
-    "right": "By defining dependencies as modules and including them in a particular order",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "By defining dependencies as modules and including them in a particular order",
+    "explanation": "Explanation coming soon.",
+    "id": "143"
   },
   {
     "type": "dropdown",
@@ -1654,8 +1797,9 @@
       "Imports all of your existing cloud provider resources to your Terraform configuration file",
       "Compares your Terraform code and local state file to the remote state file in a cloud provider and determines if any changes need to be made"
     ],
-    "right": "Imports all of your existing cloud provider resources to the state file",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Imports all of your existing cloud provider resources to the state file",
+    "explanation": "Explanation coming soon.",
+    "id": "144"
   },
   {
     "type": "dropdown",
@@ -1667,8 +1811,9 @@
       "Sentinel Policies can be written in HashiCorp Configuration Language (HCL)",
       "You can check out and check in cloud access keys"
     ],
-    "right": "Policy-as-code can enforce security best practices",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Policy-as-code can enforce security best practices",
+    "explanation": "Explanation coming soon.",
+    "id": "145"
   },
   {
     "type": "dropdown",
@@ -1680,8 +1825,9 @@
       "Init",
       "Validate"
     ],
-    "right": "Destroy",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Destroy",
+    "explanation": "Explanation coming soon.",
+    "id": "146"
   },
   {
     "type": "dropdown",
@@ -1693,8 +1839,9 @@
       "Using an s3 terraform backend with an appropriate IAM policy and dynamodb_field option configured.",
       "Using the consul Terraform backend."
     ],
-    "right": "Using the remote Terraform backend with Terraform Cloud / Terraform Enterprise.",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Using the remote Terraform backend with Terraform Cloud / Terraform Enterprise.",
+    "explanation": "Explanation coming soon.",
+    "id": "147"
   },
   {
     "type": "dropdown",
@@ -1705,8 +1852,9 @@
       "Terraform Module Registry",
       "All of the above"
     ],
-    "right": "Local path",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Local path",
+    "explanation": "Explanation coming soon.",
+    "id": "148"
   },
   {
     "type": "dropdown",
@@ -1717,8 +1865,9 @@
       "Declare the output in both the root and child module",
       "None of the above"
     ],
-    "right": "Declare the output in the root configuration",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Declare the output in the root configuration",
+    "explanation": "Explanation coming soon.",
+    "id": "149"
   },
   {
     "type": "dropdown",
@@ -1729,8 +1878,9 @@
       "It uses a different branch of code",
       "It uses a different backend"
     ],
-    "right": "It has its own state file",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "It has its own state file",
+    "explanation": "Explanation coming soon.",
+    "id": "150"
   },
   {
     "type": "dropdown",
@@ -1739,8 +1889,9 @@
       "True",
       "False"
     ],
-    "right": "True",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "True",
+    "explanation": "Explanation coming soon.",
+    "id": "151"
   },
   {
     "type": "dropdown",
@@ -1751,8 +1902,9 @@
       "terraform plan",
       "terraform fmt"
     ],
-    "right": "terraform validate",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "terraform validate",
+    "explanation": "Explanation coming soon.",
+    "id": "152"
   },
   {
     "type": "dropdown",
@@ -1761,8 +1913,9 @@
       "True",
       "False"
     ],
-    "right": "True",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "True",
+    "explanation": "Explanation coming soon.",
+    "id": "153"
   },
   {
     "type": "dropdown",
@@ -1773,8 +1926,9 @@
       "terraform plan",
       "terraform state list"
     ],
-    "right": "terraform apply",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "terraform apply",
+    "explanation": "Explanation coming soon.",
+    "id": "154"
   },
   {
     "type": "dropdown",
@@ -1783,8 +1937,9 @@
       "True",
       "False"
     ],
-    "right": "True",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "True",
+    "explanation": "Explanation coming soon.",
+    "id": "155"
   },
   {
     "type": "dropdown",
@@ -1793,8 +1948,9 @@
       "True",
       "False"
     ],
-    "right": "True",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "True",
+    "explanation": "Explanation coming soon.",
+    "id": "156"
   },
   {
     "type": "dropdown",
@@ -1805,8 +1961,9 @@
       "When you want Terraform to ignore a resource on the next apply",
       "When you want Terraform to destroy all the infrastructure in your workspace"
     ],
-    "right": "When you want to force Terraform to destroy a resource on the next apply",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "When you want to force Terraform to destroy a resource on the next apply",
+    "explanation": "Explanation coming soon.",
+    "id": "157"
   },
   {
     "type": "dropdown",
@@ -1818,8 +1975,9 @@
       "Init",
       "Validate"
     ],
-    "right": "Plan",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Plan",
+    "explanation": "Explanation coming soon.",
+    "id": "158"
   },
   {
     "type": "dropdown",
@@ -1831,8 +1989,9 @@
       "Terraform workspaces",
       "None of the above"
     ],
-    "right": "Terraform data sources",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Terraform data sources",
+    "explanation": "Explanation coming soon.",
+    "id": "159"
   },
   {
     "type": "dropdown",
@@ -1843,8 +2002,9 @@
       "local-exec",
       "null-exec"
     ],
-    "right": "remote-exec",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "remote-exec",
+    "explanation": "Explanation coming soon.",
+    "id": "160"
   },
   {
     "type": "dropdown",
@@ -1855,8 +2015,9 @@
       "Only local",
       "All"
     ],
-    "right": "Some",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Some",
+    "explanation": "Explanation coming soon.",
+    "id": "161"
   },
   {
     "type": "dropdown",
@@ -1867,8 +2028,9 @@
       "A script that contains a series of public cloud CLI commands",
       "A series of commands you enter into a public cloud console"
     ],
-    "right": "curl commands manually run from a terminal",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "curl commands manually run from a terminal",
+    "explanation": "Explanation coming soon.",
+    "id": "162"
   },
   {
     "type": "dropdown",
@@ -1878,8 +2040,9 @@
       "version = “>= 3.1”",
       "version ~> 3.1"
     ],
-    "right": "version >= 3.1",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "version >= 3.1",
+    "explanation": "Explanation coming soon.",
+    "id": "163"
   },
   {
     "type": "dropdown",
@@ -1890,8 +2053,9 @@
       "Terraform will generate the corresponding configuration files for you",
       "After you run terraform import"
     ],
-    "right": "Before you run terraform import",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Before you run terraform import",
+    "explanation": "Explanation coming soon.",
+    "id": "164"
   },
   {
     "type": "dropdown",
@@ -1902,8 +2066,9 @@
       "terraform fmt -check -recursive",
       "terraform fmt -check"
     ],
-    "right": "terraform fmt -write=false",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "terraform fmt -write=false",
+    "explanation": "Explanation coming soon.",
+    "id": "165"
   },
   {
     "type": "dropdown",
@@ -1914,15 +2079,17 @@
       "State locking",
       "Version control"
     ],
-    "right": "Provider constraints",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Provider constraints",
+    "explanation": "Explanation coming soon.",
+    "id": "166"
   },
   {
     "type": "dropdown",
     "question": "You are creating a reusable Terraform configuration and want to include a billing_dept tag so your Finance team can track team-specific spending on resources. Which of the following billing_dept variable declarations will allow you to do this?",
     "options": [],
-    "right": "Unknown",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Unknown",
+    "explanation": "Explanation coming soon.",
+    "id": "167"
   },
   {
     "type": "dropdown",
@@ -1931,8 +2098,9 @@
       "True",
       "False"
     ],
-    "right": "True",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "True",
+    "explanation": "Explanation coming soon.",
+    "id": "168"
   },
   {
     "type": "dropdown",
@@ -1943,8 +2111,9 @@
       "Defined in a connection configuration outside of Terraform",
       "A variable file"
     ],
-    "right": "Inside the backend block within the Terraform configuration",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Inside the backend block within the Terraform configuration",
+    "explanation": "Explanation coming soon.",
+    "id": "169"
   },
   {
     "type": "dropdown",
@@ -1955,8 +2124,9 @@
       "Map",
       "Terraform does not support complex input variables of different types"
     ],
-    "right": "List",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "List",
+    "explanation": "Explanation coming soon.",
+    "id": "170"
   },
   {
     "type": "dropdown",
@@ -1967,8 +2137,9 @@
       "Terraform resource definitions in configuration files",
       "Cloud provider"
     ],
-    "right": "Credentials",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Credentials",
+    "explanation": "Explanation coming soon.",
+    "id": "171"
   },
   {
     "type": "dropdown",
@@ -1978,8 +2149,9 @@
       "Manually apply two spaces indentation and align equal sign \"=\" characters in every Terraform file (*.tf)",
       "Run the terraform validate command prior to executing terraform plan or terraform apply"
     ],
-    "right": "Run the terraform fmt command during the code linting phase of your CI/CD process",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Run the terraform fmt command during the code linting phase of your CI/CD process",
+    "explanation": "Explanation coming soon.",
+    "id": "172"
   },
   {
     "type": "dropdown",
@@ -1990,15 +2162,17 @@
       "In an environment variable",
       "In the remote backend or Terraform Cloud"
     ],
-    "right": "On the disk",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "On the disk",
+    "explanation": "Explanation coming soon.",
+    "id": "173"
   },
   {
     "type": "dropdown",
     "question": "In Terraform HCL, an object type of object({ name=string, age=number }) would match this value:",
     "options": [],
-    "right": "Unknown",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Unknown",
+    "explanation": "Explanation coming soon.",
+    "id": "174"
   },
   {
     "type": "dropdown",
@@ -2009,8 +2183,9 @@
       "Terraform will check your state file to determine the provider version to use",
       "Terraform will use the latest version of the provider available at the time you provision your new resource"
     ],
-    "right": "Terraform will use the latest version of the provider for the new resource and the version recorded in the lock file to manage existing resources",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Terraform will use the latest version of the provider for the new resource and the version recorded in the lock file to manage existing resources",
+    "explanation": "Explanation coming soon.",
+    "id": "175"
   },
   {
     "type": "dropdown",
@@ -2019,8 +2194,9 @@
       "True",
       "False"
     ],
-    "right": "True",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "True",
+    "explanation": "Explanation coming soon.",
+    "id": "176"
   },
   {
     "type": "dropdown",
@@ -2031,8 +2207,9 @@
       "State codifies the dependencies of related resources",
       "State maps real world resources to your configuration and keeps track of metadata"
     ],
-    "right": "State stores variables and lets you quickly reuse existing code",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "State stores variables and lets you quickly reuse existing code",
+    "explanation": "Explanation coming soon.",
+    "id": "177"
   },
   {
     "type": "dropdown",
@@ -2043,8 +2220,9 @@
       "Configure state locking for your state backend",
       "Run Terraform with parallelism set to 1"
     ],
-    "right": "Refresh the state after running Terraform",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Refresh the state after running Terraform",
+    "explanation": "Explanation coming soon.",
+    "id": "178"
   },
   {
     "type": "dropdown",
@@ -2055,8 +2233,9 @@
       "Automatic unlocking failed",
       "You apply failed due to a state lock"
     ],
-    "right": "You see a status message that you cannot acquire the lock",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "You see a status message that you cannot acquire the lock",
+    "explanation": "Explanation coming soon.",
+    "id": "179"
   },
   {
     "type": "dropdown",
@@ -2067,8 +2246,9 @@
       "TF_LOG",
       "TF_VAR_log_path"
     ],
-    "right": "TF_LOG_PATH",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "TF_LOG_PATH",
+    "explanation": "Explanation coming soon.",
+    "id": "180"
   },
   {
     "type": "dropdown",
@@ -2077,8 +2257,9 @@
       "True",
       "False"
     ],
-    "right": "True",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "True",
+    "explanation": "Explanation coming soon.",
+    "id": "181"
   },
   {
     "type": "dropdown",
@@ -2087,8 +2268,9 @@
       "True",
       "False"
     ],
-    "right": "True",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "True",
+    "explanation": "Explanation coming soon.",
+    "id": "182"
   },
   {
     "type": "dropdown",
@@ -2097,8 +2279,9 @@
       "True",
       "False"
     ],
-    "right": "True",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "True",
+    "explanation": "Explanation coming soon.",
+    "id": "183"
   },
   {
     "type": "dropdown",
@@ -2109,8 +2292,9 @@
       "Working in a team",
       "Delegate output to other teams"
     ],
-    "right": "Keeping unencrypted sensitive information off disk",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Keeping unencrypted sensitive information off disk",
+    "explanation": "Explanation coming soon.",
+    "id": "184"
   },
   {
     "type": "dropdown",
@@ -2121,8 +2305,9 @@
       "id",
       "name"
     ],
-    "right": "depends_on",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "depends_on",
+    "explanation": "Explanation coming soon.",
+    "id": "185"
   },
   {
     "type": "dropdown",
@@ -2133,8 +2318,9 @@
       "Run terraform state list to find the names of all VMs, then run terraform state show for each of them to find which VM ID Terraform manages",
       "Use terraform refresh/code to find out which IDs are already part of state"
     ],
-    "right": "Run terraform taint/code on all the VMs to recreate them",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Run terraform taint/code on all the VMs to recreate them",
+    "explanation": "Explanation coming soon.",
+    "id": "186"
   },
   {
     "type": "dropdown",
@@ -2144,8 +2330,9 @@
       "Set the variable value on the command line with the -var flag",
       "Write the value to a file and specify the file with the -var-file flag"
     ],
-    "right": "Edit the state file directly just before running terraform apply",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Edit the state file directly just before running terraform apply",
+    "explanation": "Explanation coming soon.",
+    "id": "187"
   },
   {
     "type": "dropdown",
@@ -2154,8 +2341,9 @@
       "True",
       "False"
     ],
-    "right": "True",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "True",
+    "explanation": "Explanation coming soon.",
+    "id": "188"
   },
   {
     "type": "dropdown",
@@ -2164,8 +2352,9 @@
       "True",
       "False"
     ],
-    "right": "True",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "True",
+    "explanation": "Explanation coming soon.",
+    "id": "189"
   },
   {
     "type": "dropdown",
@@ -2176,8 +2365,9 @@
       "Local path",
       "Terraform Module Registry"
     ],
-    "right": "FTP server",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "FTP server",
+    "explanation": "Explanation coming soon.",
+    "id": "190"
   },
   {
     "type": "dropdown",
@@ -2188,8 +2378,9 @@
       "Run terraform import",
       "It will happen automatically"
     ],
-    "right": "Manually update the state fire",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Manually update the state fire",
+    "explanation": "Explanation coming soon.",
+    "id": "191"
   },
   {
     "type": "dropdown",
@@ -2200,8 +2391,9 @@
       "terraform refresh",
       "terraform import"
     ],
-    "right": "terraform init",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "terraform init",
+    "explanation": "Explanation coming soon.",
+    "id": "192"
   },
   {
     "type": "dropdown",
@@ -2212,8 +2404,9 @@
       "When you change a resource via the Azure Cloud Console, Terraform records the changes in a new state file",
       "Changing resources via the Azure Cloud Console does not update current state file"
     ],
-    "right": "When you change a Terraform-managed resource via the Azure Cloud Console, Terraform updates the state file to reflect the change during the next plan or apply",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "When you change a Terraform-managed resource via the Azure Cloud Console, Terraform updates the state file to reflect the change during the next plan or apply",
+    "explanation": "Explanation coming soon.",
+    "id": "193"
   },
   {
     "type": "dropdown",
@@ -2224,8 +2417,9 @@
       "Write once, run anywhere",
       "The programmatic configuration of resources"
     ],
-    "right": "A pipeline process to test and deliver software",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "A pipeline process to test and deliver software",
+    "explanation": "Explanation coming soon.",
+    "id": "194"
   },
   {
     "type": "dropdown",
@@ -2234,8 +2428,9 @@
       "True",
       "False"
     ],
-    "right": "True",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "True",
+    "explanation": "Explanation coming soon.",
+    "id": "195"
   },
   {
     "type": "dropdown",
@@ -2247,8 +2442,9 @@
       "terraform import",
       "All of these"
     ],
-    "right": "terraform init",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "terraform init",
+    "explanation": "Explanation coming soon.",
+    "id": "196"
   },
   {
     "type": "dropdown",
@@ -2257,8 +2453,9 @@
       "True",
       "False"
     ],
-    "right": "True",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "True",
+    "explanation": "Explanation coming soon.",
+    "id": "197"
   },
   {
     "type": "dropdown",
@@ -2269,8 +2466,9 @@
       "terraform get ‘provider_type.name’",
       "terraform state list"
     ],
-    "right": "terraform state list ‘provider_type.name’",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "terraform state list ‘provider_type.name’",
+    "explanation": "Explanation coming soon.",
+    "id": "198"
   },
   {
     "type": "dropdown",
@@ -2279,8 +2477,9 @@
       "True",
       "False"
     ],
-    "right": "True",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "True",
+    "explanation": "Explanation coming soon.",
+    "id": "199"
   },
   {
     "type": "dropdown",
@@ -2291,8 +2490,9 @@
       "Rebuild only the instances that were deleted",
       "Stop and generate an error message about the missing instances"
     ],
-    "right": "Build a completely brand new set of infrastructure",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Build a completely brand new set of infrastructure",
+    "explanation": "Explanation coming soon.",
+    "id": "200"
   },
   {
     "type": "dropdown",
@@ -2303,8 +2503,9 @@
       "Dry runs with terraform plan",
       "Using the workspace as a data source"
     ],
-    "right": "Secure variable storage",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Secure variable storage",
+    "explanation": "Explanation coming soon.",
+    "id": "201"
   },
   {
     "type": "dropdown",
@@ -2313,8 +2514,9 @@
       "True",
       "False"
     ],
-    "right": "True",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "True",
+    "explanation": "Explanation coming soon.",
+    "id": "202"
   },
   {
     "type": "dropdown",
@@ -2325,8 +2527,9 @@
       "version",
       "lifecycle"
     ],
-    "right": "count",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "count",
+    "explanation": "Explanation coming soon.",
+    "id": "203"
   },
   {
     "type": "dropdown",
@@ -2335,8 +2538,9 @@
       "True",
       "False"
     ],
-    "right": "True",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "True",
+    "explanation": "Explanation coming soon.",
+    "id": "204"
   },
   {
     "type": "dropdown",
@@ -2347,8 +2551,9 @@
       "Declare the output in both the root and child module",
       "None of the above"
     ],
-    "right": "Declare the output in the root configuration",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Declare the output in the root configuration",
+    "explanation": "Explanation coming soon.",
+    "id": "205"
   },
   {
     "type": "dropdown",
@@ -2359,8 +2564,9 @@
       "test",
       "dev"
     ],
-    "right": "azurerm_resource_group",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "azurerm_resource_group",
+    "explanation": "Explanation coming soon.",
+    "id": "206"
   },
   {
     "type": "dropdown",
@@ -2371,8 +2577,9 @@
       "Before every terraform import",
       "None of the above"
     ],
-    "right": "Before every terraform plan",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Before every terraform plan",
+    "explanation": "Explanation coming soon.",
+    "id": "207"
   },
   {
     "type": "dropdown",
@@ -2383,8 +2590,9 @@
       "It is only available to paying customers",
       "All of the above"
     ],
-    "right": "It can execute Terraform runs on dedicated infrastructure in Terraform Cloud",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "It can execute Terraform runs on dedicated infrastructure in Terraform Cloud",
+    "explanation": "Explanation coming soon.",
+    "id": "208"
   },
   {
     "type": "dropdown",
@@ -2396,8 +2604,9 @@
       "Reduces risk of operator error",
       "Prevents manual modifications to your resources"
     ],
-    "right": "Secures your credentials",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Secures your credentials",
+    "explanation": "Explanation coming soon.",
+    "id": "209"
   },
   {
     "type": "dropdown",
@@ -2406,8 +2615,9 @@
       "True",
       "False"
     ],
-    "right": "True",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "True",
+    "explanation": "Explanation coming soon.",
+    "id": "210"
   },
   {
     "type": "dropdown",
@@ -2418,8 +2628,9 @@
       "Run terraform validate prior to executing terraform plan or terraform apply",
       "Use terraform fmt"
     ],
-    "right": "Replace all tabs with spaces",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Replace all tabs with spaces",
+    "explanation": "Explanation coming soon.",
+    "id": "211"
   },
   {
     "type": "dropdown",
@@ -2428,8 +2639,9 @@
       "True",
       "False"
     ],
-    "right": "True",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "True",
+    "explanation": "Explanation coming soon.",
+    "id": "212"
   },
   {
     "type": "dropdown",
@@ -2441,8 +2653,9 @@
       "Local",
       "HTTP"
     ],
-    "right": "Depends on the cloud provider configured",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Depends on the cloud provider configured",
+    "explanation": "Explanation coming soon.",
+    "id": "213"
   },
   {
     "type": "dropdown",
@@ -2451,8 +2664,9 @@
       "True",
       "False"
     ],
-    "right": "True",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "True",
+    "explanation": "Explanation coming soon.",
+    "id": "214"
   },
   {
     "type": "dropdown",
@@ -2463,8 +2677,9 @@
       "Your Terraform configuration",
       "Your state file"
     ],
-    "right": "Your cloud infrastructure",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Your cloud infrastructure",
+    "explanation": "Explanation coming soon.",
+    "id": "215"
   },
   {
     "type": "dropdown",
@@ -2476,8 +2691,9 @@
       "Imports clean copies of tainted resources",
       "None of the above"
     ],
-    "right": "Imports existing resources into the state file",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Imports existing resources into the state file",
+    "explanation": "Explanation coming soon.",
+    "id": "216"
   },
   {
     "type": "dropdown",
@@ -2488,8 +2704,9 @@
       "servers = num_servers",
       "servers = var.num_servers"
     ],
-    "right": "servers = var(num_servers)",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "servers = var(num_servers)",
+    "explanation": "Explanation coming soon.",
+    "id": "217"
   },
   {
     "type": "dropdown",
@@ -2500,8 +2717,9 @@
       "terraform state rm aws_instance.ubuntu[l]",
       "terraform plan rm aws_instance.ubuntu[l]"
     ],
-    "right": "terraform destroy aws_instance.ubuntu[l]",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "terraform destroy aws_instance.ubuntu[l]",
+    "explanation": "Explanation coming soon.",
+    "id": "218"
   },
   {
     "type": "dropdown",
@@ -2510,8 +2728,9 @@
       "True",
       "False"
     ],
-    "right": "True",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "True",
+    "explanation": "Explanation coming soon.",
+    "id": "219"
   },
   {
     "type": "dropdown",
@@ -2522,8 +2741,9 @@
       "Installs all providers and modules referenced by configuration",
       "Compares the state file to your Terraform code and determines if any changes need to be made"
     ],
-    "right": "Compares your Terraform code and local state file to the remote state file in a cloud provider and determines if any changes need to be made",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Compares your Terraform code and local state file to the remote state file in a cloud provider and determines if any changes need to be made",
+    "explanation": "Explanation coming soon.",
+    "id": "220"
   },
   {
     "type": "dropdown",
@@ -2534,8 +2754,9 @@
       "A module is a container for one or more resources",
       "Modules can call other modules"
     ],
-    "right": "Modules must be publicly accessible",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Modules must be publicly accessible",
+    "explanation": "Explanation coming soon.",
+    "id": "221"
   },
   {
     "type": "dropdown",
@@ -2546,8 +2767,9 @@
       "Users can access a catalog of approved resources from drop down lists m a request form",
       "The more resources your organization needs, the more tickets your infrastructure team has to process"
     ],
-    "right": "End-users have to request infrastructure changes",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "End-users have to request infrastructure changes",
+    "explanation": "Explanation coming soon.",
+    "id": "222"
   },
   {
     "type": "dropdown",
@@ -2558,8 +2780,9 @@
       "It is only available to paying customers",
       "All of the above"
     ],
-    "right": "It can execute Terraform runs on dedicated infrastructure on premises or in Terraform Cloud",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "It can execute Terraform runs on dedicated infrastructure on premises or in Terraform Cloud",
+    "explanation": "Explanation coming soon.",
+    "id": "223"
   },
   {
     "type": "dropdown",
@@ -2570,8 +2793,9 @@
       "Run terraform state rm *.",
       "Run terraform destroy and it will first output all the resources that will be deleted before prompting for approval."
     ],
-    "right": "Run terraform plan -destroy.",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Run terraform plan -destroy.",
+    "explanation": "Explanation coming soon.",
+    "id": "224"
   },
   {
     "type": "dropdown",
@@ -2582,8 +2806,9 @@
       "The Terraform Module Registry does not support versioning modules",
       "Tag a release in the associated repo"
     ],
-    "right": "Configure it in the module's Terraform code",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Configure it in the module's Terraform code",
+    "explanation": "Explanation coming soon.",
+    "id": "225"
   },
   {
     "type": "dropdown",
@@ -2594,8 +2819,9 @@
       "terraform apply -lock-false",
       "terraform plan -target-state"
     ],
-    "right": "terraform plan -refresh-only",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "terraform plan -refresh-only",
+    "explanation": "Explanation coming soon.",
+    "id": "226"
   },
   {
     "type": "dropdown",
@@ -2606,8 +2832,9 @@
       "terraform init",
       "terraform import"
     ],
-    "right": "terraform plan",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "terraform plan",
+    "explanation": "Explanation coming soon.",
+    "id": "227"
   },
   {
     "type": "dropdown",
@@ -2618,8 +2845,9 @@
       "terraform env",
       "terraform test"
     ],
-    "right": "terraform console",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "terraform console",
+    "explanation": "Explanation coming soon.",
+    "id": "228"
   },
   {
     "type": "dropdown",
@@ -2630,8 +2858,9 @@
       "data",
       "resource"
     ],
-    "right": "provider",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "provider",
+    "explanation": "Explanation coming soon.",
+    "id": "229"
   },
   {
     "type": "dropdown",
@@ -2642,8 +2871,9 @@
       "Immediately",
       "None of the above are correct"
     ],
-    "right": "After Terraform has updated the state file",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "After Terraform has updated the state file",
+    "explanation": "Explanation coming soon.",
+    "id": "230"
   },
   {
     "type": "dropdown",
@@ -2654,8 +2884,9 @@
       "Write Terraform configuration, run terraform apply to create infrastructure, use terraform validate to confirm Terraform deployed resources correctly",
       "Write Terraform configuration, run terraform plan to initialize the working directory or workspace, and terraform apply to create the infrastructure"
     ],
-    "right": "Write Terraform configuration, run terraform init to initialize the working directory or workspace, and run terraform apply",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Write Terraform configuration, run terraform init to initialize the working directory or workspace, and run terraform apply",
+    "explanation": "Explanation coming soon.",
+    "id": "231"
   },
   {
     "type": "dropdown",
@@ -2666,8 +2897,9 @@
       "Automatic backups",
       "Automated infrastructure deployment visualization"
     ],
-    "right": "Remote state storage",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Remote state storage",
+    "explanation": "Explanation coming soon.",
+    "id": "232"
   },
   {
     "type": "dropdown",
@@ -2678,8 +2910,9 @@
       "Environment Variables",
       "A -var flag"
     ],
-    "right": "A shared credential file",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "A shared credential file",
+    "explanation": "Explanation coming soon.",
+    "id": "233"
   },
   {
     "type": "dropdown",
@@ -2691,8 +2924,9 @@
       "Cloud providers and infrastructure vendors can write, maintain, or collaborate on Terraform providers",
       "None of the above"
     ],
-    "right": "An individual person can write a Terraform Provider",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "An individual person can write a Terraform Provider",
+    "explanation": "Explanation coming soon.",
+    "id": "234"
   },
   {
     "type": "dropdown",
@@ -2703,8 +2937,9 @@
       "servers = var(num_servers)",
       "servers = var.num_servers"
     ],
-    "right": "servers = num_servers",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "servers = num_servers",
+    "explanation": "Explanation coming soon.",
+    "id": "235"
   },
   {
     "type": "dropdown",
@@ -2715,8 +2950,9 @@
       "terraform init",
       "terraform show"
     ],
-    "right": "terraform fmt",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "terraform fmt",
+    "explanation": "Explanation coming soon.",
+    "id": "236"
   },
   {
     "type": "dropdown",
@@ -2725,8 +2961,9 @@
       "True",
       "False"
     ],
-    "right": "True",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "True",
+    "explanation": "Explanation coming soon.",
+    "id": "237"
   },
   {
     "type": "dropdown",
@@ -2737,8 +2974,9 @@
       "The Terraform CLI needs you to log into Terraform Cloud first",
       "Terraform needs to install the necessary plugins first"
     ],
-    "right": "Terraform needs you to format your code according to best practices first",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Terraform needs you to format your code according to best practices first",
+    "explanation": "Explanation coming soon.",
+    "id": "238"
   },
   {
     "type": "dropdown",
@@ -2749,8 +2987,9 @@
       "You must use the CLI to switch between workspaces",
       "Plans and applies can be triggered via version control system integrations"
     ],
-    "right": "They can securely store cloud credentials",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "They can securely store cloud credentials",
+    "explanation": "Explanation coming soon.",
+    "id": "239"
   },
   {
     "type": "dropdown",
@@ -2761,8 +3000,9 @@
       "The ability to tag modules by version or release",
       "The ability to share modules with public Terraform users and members of Terraform Cloud Organizations"
     ],
-    "right": "The ability to restrict modules to members of Terraform Cloud or Enterprise organizations",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "The ability to restrict modules to members of Terraform Cloud or Enterprise organizations",
+    "explanation": "Explanation coming soon.",
+    "id": "240"
   },
   {
     "type": "dropdown",
@@ -2771,8 +3011,9 @@
       "True",
       "False"
     ],
-    "right": "True",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "True",
+    "explanation": "Explanation coming soon.",
+    "id": "241"
   },
   {
     "type": "dropdown",
@@ -2783,8 +3024,9 @@
       "Graphical User Interface",
       "Versioning"
     ],
-    "right": "Reusability of code",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Reusability of code",
+    "explanation": "Explanation coming soon.",
+    "id": "242"
   },
   {
     "type": "dropdown",
@@ -2795,8 +3037,9 @@
       "In the terraform.tfstate directory",
       "In the .terraform.lock.hcl file"
     ],
-    "right": "In the terraform.tfstate file",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "In the terraform.tfstate file",
+    "explanation": "Explanation coming soon.",
+    "id": "243"
   },
   {
     "type": "dropdown",
@@ -2807,8 +3050,9 @@
       "Every provider in a configuration has its own state file for its resources",
       "All providers are part of the Terraform core binary"
     ],
-    "right": "Terraform can only source providers from the internet",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Terraform can only source providers from the internet",
+    "explanation": "Explanation coming soon.",
+    "id": "244"
   },
   {
     "type": "dropdown",
@@ -2819,8 +3063,9 @@
       "With an S3 module with proper settings for buckets",
       "By adding variables to each Terraform Cloud workspace to ensure these settings are always enabled"
     ],
-    "right": "Auditing cloud storage buckets with a vulnerability scanning tool",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "With a Sentinel policy, which runs before every apply",
+    "explanation": "Sentinel is a policy-as-code framework that can enforce rules (like encryption requirements) before infrastructure is provisioned.",
+    "id": "245"
   },
   {
     "type": "dropdown",
@@ -2829,8 +3074,9 @@
       "True",
       "False"
     ],
-    "right": "True",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "True",
+    "explanation": "Explanation coming soon.",
+    "id": "246"
   },
   {
     "type": "dropdown",
@@ -2841,15 +3087,17 @@
       "In memory",
       "In an environment variable"
     ],
-    "right": "In the remote backend or Terraform Cloud",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "In the remote backend or Terraform Cloud",
+    "explanation": "Explanation coming soon.",
+    "id": "247"
   },
   {
     "type": "dropdown",
     "question": "You are writing a child Terraform module that provisions an AWS instance. You want to reference the IP address returned by the child module in the root configuration. You name the instance resource \"main\". Which of these is the correct way to define the output value?",
     "options": [],
-    "right": "Unknown",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Unknown",
+    "explanation": "Explanation coming soon.",
+    "id": "248"
   },
   {
     "type": "dropdown",
@@ -2860,8 +3108,9 @@
       "Before the apply phase",
       "After the apply phase"
     ],
-    "right": "Before the plan phase",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Before the plan phase",
+    "explanation": "Explanation coming soon.",
+    "id": "249"
   },
   {
     "type": "dropdown",
@@ -2872,8 +3121,9 @@
       "Terraform configuration code changes",
       "State file drift"
     ],
-    "right": "Empty state files",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Empty state files",
+    "explanation": "Explanation coming soon.",
+    "id": "250"
   },
   {
     "type": "dropdown",
@@ -2882,8 +3132,9 @@
       "True",
       "False"
     ],
-    "right": "True",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "True",
+    "explanation": "Explanation coming soon.",
+    "id": "251"
   },
   {
     "type": "dropdown",
@@ -2894,8 +3145,9 @@
       "You want to force Terraform to destroy and recreate a resource on the next apply",
       "You want Terraform to destroy all the infrastructure in your workspace"
     ],
-    "right": "You want to force Terraform to destroy a resource on the next apply",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "You want to force Terraform to destroy a resource on the next apply",
+    "explanation": "Explanation coming soon.",
+    "id": "252"
   },
   {
     "type": "dropdown",
@@ -2904,8 +3156,9 @@
       "True",
       "False"
     ],
-    "right": "True",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "True",
+    "explanation": "Explanation coming soon.",
+    "id": "253"
   },
   {
     "type": "dropdown",
@@ -2916,8 +3169,9 @@
       "After your first terraform init",
       "Whenever you enable state locking"
     ],
-    "right": "After your first terraform plan",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "After your first terraform plan",
+    "explanation": "Explanation coming soon.",
+    "id": "254"
   },
   {
     "type": "dropdown",
@@ -2928,8 +3182,9 @@
       "Terraform will not make any changes to the Load Balancer and will update the state file to reflect any changes made.",
       "Terraform will recreate the load balancer."
     ],
-    "right": "Terraform will fail with an error because the state file is no longer accurate.",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Terraform will fail with an error because the state file is no longer accurate.",
+    "explanation": "Explanation coming soon.",
+    "id": "255"
   },
   {
     "type": "dropdown",
@@ -2940,8 +3195,9 @@
       "Retrieve the source code for all referenced modules",
       "Load required provider plugins"
     ],
-    "right": "Create template configuration files",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Create template configuration files",
+    "explanation": "Explanation coming soon.",
+    "id": "256"
   },
   {
     "type": "dropdown",
@@ -2950,8 +3206,9 @@
       "True",
       "False"
     ],
-    "right": "True",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "True",
+    "explanation": "Explanation coming soon.",
+    "id": "257"
   },
   {
     "type": "dropdown",
@@ -2960,8 +3217,9 @@
       "True",
       "False"
     ],
-    "right": "True",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "True",
+    "explanation": "Explanation coming soon.",
+    "id": "258"
   },
   {
     "type": "dropdown",
@@ -2970,8 +3228,9 @@
       "True",
       "False"
     ],
-    "right": "True",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "True",
+    "explanation": "Explanation coming soon.",
+    "id": "259"
   },
   {
     "type": "dropdown",
@@ -2982,8 +3241,9 @@
       "google",
       "compute_instance"
     ],
-    "right": "test",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "test",
+    "explanation": "Explanation coming soon.",
+    "id": "260"
   },
   {
     "type": "dropdown",
@@ -2994,8 +3254,9 @@
       "Nothing. Modules stored on the public Terraform module Registry always default to version 1.0.0.",
       "Append ?ref=v1.0.0 argument to the source path."
     ],
-    "right": "You cannot. Modules stored on the public Terraform Registry do not support versioning.",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "You cannot. Modules stored on the public Terraform Registry do not support versioning.",
+    "explanation": "Explanation coming soon.",
+    "id": "261"
   },
   {
     "type": "dropdown",
@@ -3006,8 +3267,9 @@
       "The state file does not match the current infrastructure.",
       "None of the above."
     ],
-    "right": "The code contains tabs for indentation instead of spaces.",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "The code contains tabs for indentation instead of spaces.",
+    "explanation": "Explanation coming soon.",
+    "id": "262"
   },
   {
     "type": "dropdown",
@@ -3016,8 +3278,9 @@
       "True",
       "False"
     ],
-    "right": "True",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "True",
+    "explanation": "Explanation coming soon.",
+    "id": "263"
   },
   {
     "type": "dropdown",
@@ -3028,8 +3291,9 @@
       "After you start coding a new Terraform project and before you run terraform plan for the first time",
       "Before you start coding a new Terraform project"
     ],
-    "right": "Every time you run terraform apply",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Every time you run terraform apply",
+    "explanation": "Explanation coming soon.",
+    "id": "264"
   },
   {
     "type": "dropdown",
@@ -3040,8 +3304,9 @@
       "Before you run terraform apply so you can validate your infrastructure",
       "After you run terraform apply so you can validate your provider credentials"
     ],
-    "right": "After you run terraform plan so you can validate that your state file is consistent with your infrastructure",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "After you run terraform plan so you can validate that your state file is consistent with your infrastructure",
+    "explanation": "Explanation coming soon.",
+    "id": "265"
   },
   {
     "type": "dropdown",
@@ -3052,8 +3317,9 @@
       "terraform show",
       "terraform fmt"
     ],
-    "right": "terraform validate",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "terraform validate",
+    "explanation": "Explanation coming soon.",
+    "id": "266"
   },
   {
     "type": "dropdown",
@@ -3062,8 +3328,9 @@
       "True",
       "False"
     ],
-    "right": "True",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "True",
+    "explanation": "Explanation coming soon.",
+    "id": "267"
   },
   {
     "type": "dropdown",
@@ -3074,8 +3341,9 @@
       "Provider plugins",
       "State file"
     ],
-    "right": "tfplan files",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "tfplan files",
+    "explanation": "Explanation coming soon.",
+    "id": "268"
   },
   {
     "type": "dropdown",
@@ -3086,8 +3354,9 @@
       "main",
       "compute_instance"
     ],
-    "right": "test",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "test",
+    "explanation": "Explanation coming soon.",
+    "id": "269"
   },
   {
     "type": "dropdown",
@@ -3096,8 +3365,9 @@
       "True",
       "False"
     ],
-    "right": "True",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "True",
+    "explanation": "Explanation coming soon.",
+    "id": "270"
   },
   {
     "type": "dropdown",
@@ -3106,8 +3376,9 @@
       "True",
       "False"
     ],
-    "right": "True",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "True",
+    "explanation": "Explanation coming soon.",
+    "id": "271"
   },
   {
     "type": "dropdown",
@@ -3118,8 +3389,9 @@
       "kubernetes_namespace.test.name",
       "kubernetes_namespace.example.name"
     ],
-    "right": "data.kubernetes_namespace.name",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "data.kubernetes_namespace.name",
+    "explanation": "Explanation coming soon.",
+    "id": "272"
   },
   {
     "type": "dropdown",
@@ -3131,8 +3403,9 @@
       "In a plaintext document on a shared drive.",
       "In an HCP Terraform/Terraform Cloud variable, with the sensitive option checked."
     ],
-    "right": "In a terraform.tfvars file, securely managed and shared with your team.",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "In a terraform.tfvars file, securely managed and shared with your team.",
+    "explanation": "Explanation coming soon.",
+    "id": "273"
   },
   {
     "type": "dropdown",
@@ -3143,8 +3416,9 @@
       "Compares your Terraform code and local state file to the remote state file in a cloud provider and determines if any changes need to be made.",
       "Refreshes your state, then compares your state file to your Terraform configuration and creates an execution plan if any changes need to be made."
     ],
-    "right": "Imports all of your existing cloud provider resources to the state.",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Imports all of your existing cloud provider resources to the state.",
+    "explanation": "Explanation coming soon.",
+    "id": "274"
   },
   {
     "type": "dropdown",
@@ -3155,8 +3429,9 @@
       "Destroy all infrastructure in the Terraform state file.",
       "Destroys all infrastructure in the configured Terraform provider."
     ],
-    "right": "Destroys the Terraform state file, leaves the infrastructure intact.",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Destroys the Terraform state file, leaves the infrastructure intact.",
+    "explanation": "Explanation coming soon.",
+    "id": "275"
   },
   {
     "type": "dropdown",
@@ -3165,8 +3440,9 @@
       "True",
       "False"
     ],
-    "right": "True",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "True",
+    "explanation": "Explanation coming soon.",
+    "id": "276"
   },
   {
     "type": "dropdown",
@@ -3177,8 +3453,9 @@
       "servers = var(num.servers)",
       "servers = var.num_servers"
     ],
-    "right": "${var.num.servers}",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "${var.num.servers}",
+    "explanation": "Explanation coming soon.",
+    "id": "277"
   },
   {
     "type": "dropdown",
@@ -3189,8 +3466,9 @@
       "tfplan files",
       "State file"
     ],
-    "right": "Provider plugins",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Provider plugins",
+    "explanation": "Explanation coming soon.",
+    "id": "278"
   },
   {
     "type": "dropdown",
@@ -3201,8 +3479,9 @@
       "Manually apply two spaces indentation and align equal sign \"=\" characters in every Terraform file (*.tf)",
       "Write a shell script to transform Terraform files using tools such as AWK, Python, and sed"
     ],
-    "right": "Run the terraform fmt command during the code linting phase of your CI/CD process",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Run the terraform fmt command during the code linting phase of your CI/CD process",
+    "explanation": "Explanation coming soon.",
+    "id": "279"
   },
   {
     "type": "dropdown",
@@ -3213,8 +3492,9 @@
       "After you run terraform apply, so you can validate your infrastructure.",
       "After you run terraform plan, so you can validate that your state file is consistent with your infrastructure."
     ],
-    "right": "Before you run terraform apply, so you can validate your provider credentials.",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Before you run terraform apply, so you can validate your provider credentials.",
+    "explanation": "Explanation coming soon.",
+    "id": "280"
   },
   {
     "type": "dropdown",
@@ -3225,8 +3505,9 @@
       "HCP Terraform/Terraform Cloud private registry.",
       "A Git repository containing your modules."
     ],
-    "right": "Public Terraform module registry.",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Public Terraform module registry.",
+    "explanation": "Explanation coming soon.",
+    "id": "281"
   },
   {
     "type": "dropdown",
@@ -3237,8 +3518,9 @@
       "Tag a release in your module’s source control repository.",
       "Configure it in the module’s Terraform code."
     ],
-    "right": "Terraform Registry does not support versioning modules.",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Terraform Registry does not support versioning modules.",
+    "explanation": "Explanation coming soon.",
+    "id": "282"
   },
   {
     "type": "dropdown",
@@ -3250,8 +3532,9 @@
       "Group a collection of Terraform configuration files that map to a single state file.",
       "Enforce security and compliance policies."
     ],
-    "right": "Interact with cloud provider APIs.",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Interact with cloud provider APIs.",
+    "explanation": "Explanation coming soon.",
+    "id": "283"
   },
   {
     "type": "dropdown",
@@ -3263,8 +3546,9 @@
       "terraform import",
       "All of these"
     ],
-    "right": "terraform init",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "terraform init",
+    "explanation": "Explanation coming soon.",
+    "id": "284"
   },
   {
     "type": "dropdown",
@@ -3275,8 +3559,9 @@
       "impossible",
       "discouraged"
     ],
-    "right": "mandatory",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "mandatory",
+    "explanation": "Explanation coming soon.",
+    "id": "285"
   },
   {
     "type": "dropdown",
@@ -3285,8 +3570,9 @@
       "True",
       "False"
     ],
-    "right": "True",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "True",
+    "explanation": "Explanation coming soon.",
+    "id": "286"
   },
   {
     "type": "dropdown",
@@ -3297,8 +3583,9 @@
       "Your state file.",
       "Your cloud infrastructure."
     ],
-    "right": "Your Terraform configuration.",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Your Terraform configuration.",
+    "explanation": "Explanation coming soon.",
+    "id": "287"
   },
   {
     "type": "dropdown",
@@ -3309,8 +3596,9 @@
       "Internally hosted VCS (Version Control System) platform.",
       "Private repository on GitHub."
     ],
-    "right": "Public repository on GitHub.",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Public repository on GitHub.",
+    "explanation": "Explanation coming soon.",
+    "id": "288"
   },
   {
     "type": "dropdown",
@@ -3321,8 +3609,9 @@
       "The ability to restrict modules to members of Terraform Cloud or Enterprise organizations",
       "The ability to share modules publicly with any user of Terraform"
     ],
-    "right": "The ability to share modules with public Terraform users and members of Terraform Enterprise Organizations",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "The ability to share modules with public Terraform users and members of Terraform Enterprise Organizations",
+    "explanation": "Explanation coming soon.",
+    "id": "289"
   },
   {
     "type": "dropdown",
@@ -3333,8 +3622,9 @@
       "Sources any modules and copies the configuration locally",
       "Validates all required variables are present"
     ],
-    "right": "Sources all providers present in the configuration and ensures they are downloaded and available locally",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Sources all providers present in the configuration and ensures they are downloaded and available locally",
+    "explanation": "Explanation coming soon.",
+    "id": "290"
   },
   {
     "type": "dropdown",
@@ -3345,8 +3635,9 @@
       "[ var.list[*].id ]",
       "[ for o in var.list : o.id ]"
     ],
-    "right": "{ for o in var.list : o => o.id }",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "{ for o in var.list : o => o.id }",
+    "explanation": "Explanation coming soon.",
+    "id": "291"
   },
   {
     "type": "dropdown",
@@ -3358,8 +3649,9 @@
       "All of the above",
       "None of the above"
     ],
-    "right": "type",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "type",
+    "explanation": "Explanation coming soon.",
+    "id": "292"
   },
   {
     "type": "dropdown",
@@ -3370,8 +3662,9 @@
       "terraform import to import the current infrastructure to the state file, make code changes, and terraform apply to update the infrastructure.",
       "Write a Terraform configuration, run terraform init, run terraform plan to view planned infrastructure changes, and terraform apply to create new infrastructure."
     ],
-    "right": "terraform plan to import the current infrastructure to the state file, make code changes, and terraform apply to update the infrastructure.",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "terraform plan to import the current infrastructure to the state file, make code changes, and terraform apply to update the infrastructure.",
+    "explanation": "Explanation coming soon.",
+    "id": "293"
   },
   {
     "type": "dropdown",
@@ -3382,8 +3675,9 @@
       "Add version = \"1.0.0\" attribute to module block",
       "Nothing ג€\" modules stored on the public Terraform Module Registry always default to version 1.0.0"
     ],
-    "right": "Modules stored on the public Terraform Module Registry do not support versioning",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Modules stored on the public Terraform Module Registry do not support versioning",
+    "explanation": "Explanation coming soon.",
+    "id": "294"
   },
   {
     "type": "dropdown",
@@ -3394,8 +3688,9 @@
       "Remote state storage",
       "A web-based user interface (UI)"
     ],
-    "right": "Automated infrastructure deployment visualization",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Automated infrastructure deployment visualization",
+    "explanation": "Explanation coming soon.",
+    "id": "295"
   },
   {
     "type": "dropdown",
@@ -3406,8 +3701,9 @@
       "In the terraform.tfstate file",
       "In the user's terraform.state file"
     ],
-    "right": "In the /tmp directory",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "In the /tmp directory",
+    "explanation": "Explanation coming soon.",
+    "id": "296"
   },
   {
     "type": "dropdown",
@@ -3418,8 +3714,9 @@
       "A -var flag",
       "secure string"
     ],
-    "right": "A Terraform provider",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "A Terraform provider",
+    "explanation": "Explanation coming soon.",
+    "id": "297"
   },
   {
     "type": "dropdown",
@@ -3430,8 +3727,9 @@
       "They make configuration harder to read and understand",
       "Terraform will run more slowly"
     ],
-    "right": "They cannot be used to loop through a list of values",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "They cannot be used to loop through a list of values",
+    "explanation": "Explanation coming soon.",
+    "id": "298"
   },
   {
     "type": "dropdown",
@@ -3440,8 +3738,9 @@
       "True",
       "False"
     ],
-    "right": "True",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "True",
+    "explanation": "Explanation coming soon.",
+    "id": "299"
   },
   {
     "type": "dropdown",
@@ -3452,15 +3751,17 @@
       "data.aws_ami.ubuntu.id",
       "aws_ami.ubuntu.id ExamPrepper"
     ],
-    "right": "aws_ami.ubuntu",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "aws_ami.ubuntu",
+    "explanation": "Explanation coming soon.",
+    "id": "300"
   },
   {
     "type": "dropdown",
     "question": "FILL BLANK - You need to specify a dependency manually. What resource meta-parameter can you use to make sure Terraform respects the dependency? Type your answer in the field provided. The text field is not case-sensitive and all variations of the correct answer are accepted.",
     "options": [],
-    "right": "Unknown",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Unknown",
+    "explanation": "Explanation coming soon.",
+    "id": "301"
   },
   {
     "type": "dropdown",
@@ -3471,8 +3772,9 @@
       "Delete the Terraform state file and execute Terraform apply.",
       "Delete the VM using the cloud provider console and terraform apply to apply the changes to the Terraform state file."
     ],
-    "right": "The Terraform state file contains all 16 VMs in the team account. Execute terraform destroy and select the newly-created VM.",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "The Terraform state file contains all 16 VMs in the team account. Execute terraform destroy and select the newly-created VM.",
+    "explanation": "Explanation coming soon.",
+    "id": "302"
   },
   {
     "type": "dropdown",
@@ -3483,8 +3785,9 @@
       "azurerm",
       "test"
     ],
-    "right": "dev",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "dev",
+    "explanation": "Explanation coming soon.",
+    "id": "303"
   },
   {
     "type": "dropdown",
@@ -3493,8 +3796,9 @@
       "True",
       "False"
     ],
-    "right": "True",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "True",
+    "explanation": "Explanation coming soon.",
+    "id": "304"
   },
   {
     "type": "dropdown",
@@ -3503,8 +3807,9 @@
       "True",
       "False ExamPrepper"
     ],
-    "right": "True",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "True",
+    "explanation": "Explanation coming soon.",
+    "id": "305"
   },
   {
     "type": "dropdown",
@@ -3515,8 +3820,9 @@
       "The provider block",
       "The datasource block"
     ],
-    "right": "The terraform block",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "The terraform block",
+    "explanation": "Explanation coming soon.",
+    "id": "306"
   },
   {
     "type": "dropdown",
@@ -3525,8 +3831,9 @@
       "True",
       "False"
     ],
-    "right": "True",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "True",
+    "explanation": "Explanation coming soon.",
+    "id": "307"
   },
   {
     "type": "dropdown",
@@ -3537,8 +3844,9 @@
       "terraform workspace list",
       "terraform show workspace"
     ],
-    "right": "terraform workspace",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "terraform workspace",
+    "explanation": "Explanation coming soon.",
+    "id": "308"
   },
   {
     "type": "dropdown",
@@ -3547,8 +3855,9 @@
       "True",
       "False"
     ],
-    "right": "True",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "True",
+    "explanation": "Explanation coming soon.",
+    "id": "309"
   },
   {
     "type": "dropdown",
@@ -3559,8 +3868,9 @@
       "Enhanced remote backends",
       "Signed Terraform providers"
     ],
-    "right": "Blockchain",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Blockchain",
+    "explanation": "Explanation coming soon.",
+    "id": "310"
   },
   {
     "type": "dropdown",
@@ -3572,8 +3882,9 @@
       "Based on the value provided to the -refresh command line argument",
       "None of the above"
     ],
-    "right": "Immediately",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Immediately",
+    "explanation": "Explanation coming soon.",
+    "id": "311"
   },
   {
     "type": "dropdown",
@@ -3585,8 +3896,9 @@
       "aws_instance.web[2].name",
       "aws_instance.web.*.name"
     ],
-    "right": "element(aws_instance.web, 2)",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "element(aws_instance.web, 2)",
+    "explanation": "Explanation coming soon.",
+    "id": "312"
   },
   {
     "type": "dropdown",
@@ -3597,8 +3909,9 @@
       "Exposing resources and data sources based on an API",
       "Managing actions to take based on resource differences"
     ],
-    "right": "Understanding API interactions with some service",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Understanding API interactions with some service",
+    "explanation": "Explanation coming soon.",
+    "id": "313"
   },
   {
     "type": "dropdown",
@@ -3607,8 +3920,9 @@
       "True",
       "False"
     ],
-    "right": "True",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "True",
+    "explanation": "Explanation coming soon.",
+    "id": "314"
   },
   {
     "type": "dropdown",
@@ -3619,8 +3933,9 @@
       "terraform validate null_resource.run_script",
       "terraform plan -target=null_resource.run_script"
     ],
-    "right": "terraform taint null_resource.run_script",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "terraform taint null_resource.run_script",
+    "explanation": "Explanation coming soon.",
+    "id": "315"
   },
   {
     "type": "dropdown",
@@ -3631,22 +3946,25 @@
       "State file drift",
       "Corrupt state files"
     ],
-    "right": "Terraform configuration code changes",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Terraform configuration code changes",
+    "explanation": "Explanation coming soon.",
+    "id": "316"
   },
   {
     "type": "dropdown",
     "question": "FILL BLANK - Which flag would you add to terraform plan to save the execution plan to a file? Type your answer in the field provided. The text field is not case-sensitive and all variations of the correct answer are accepted.",
     "options": [],
-    "right": "Unknown",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Unknown",
+    "explanation": "Explanation coming soon.",
+    "id": "317"
   },
   {
     "type": "dropdown",
     "question": "FILL BLANK - What is the name of the default file where Terraform stores the state? Type your answer in the field provided. The text field is not case-sensitive and all variations of the correct answer are accepted.",
     "options": [],
-    "right": "Unknown",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Unknown",
+    "explanation": "Explanation coming soon.",
+    "id": "318"
   },
   {
     "type": "dropdown",
@@ -3655,8 +3973,9 @@
       "True",
       "False"
     ],
-    "right": "True",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "True",
+    "explanation": "Explanation coming soon.",
+    "id": "319"
   },
   {
     "type": "dropdown",
@@ -3667,8 +3986,9 @@
       "tree",
       "set"
     ],
-    "right": "list",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "list",
+    "explanation": "Explanation coming soon.",
+    "id": "320"
   },
   {
     "type": "dropdown",
@@ -3677,8 +3997,9 @@
       "True",
       "False"
     ],
-    "right": "True",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "True",
+    "explanation": "Explanation coming soon.",
+    "id": "321"
   },
   {
     "type": "dropdown",
@@ -3687,8 +4008,9 @@
       "True",
       "False"
     ],
-    "right": "True",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "True",
+    "explanation": "Explanation coming soon.",
+    "id": "322"
   },
   {
     "type": "dropdown",
@@ -3699,8 +4021,9 @@
       "Formats your Terraform configuration files",
       "Reconciles Terraform's state against deployed resources and permanently modifies state using the current status of deployed resources"
     ],
-    "right": "Validates your expectations against the execution plan without permanently modifying state",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Validates your expectations against the execution plan without permanently modifying state",
+    "explanation": "Explanation coming soon.",
+    "id": "323"
   },
   {
     "type": "dropdown",
@@ -3711,8 +4034,9 @@
       "terraform state",
       "terraform init"
     ],
-    "right": "terraform import",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "terraform import",
+    "explanation": "Explanation coming soon.",
+    "id": "324"
   },
   {
     "type": "dropdown",
@@ -3723,8 +4047,9 @@
       "google",
       "teat"
     ],
-    "right": "compute_instance",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "compute_instance",
+    "explanation": "Explanation coming soon.",
+    "id": "325"
   },
   {
     "type": "dropdown",
@@ -3735,8 +4060,9 @@
       "local-exec",
       "file"
     ],
-    "right": "remote-exec",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "remote-exec",
+    "explanation": "Explanation coming soon.",
+    "id": "326"
   },
   {
     "type": "dropdown",
@@ -3747,8 +4073,9 @@
       "Store the sensitive variables in a secure_vars.tf file",
       "Store the sensitive variables as plain text in a source code repository"
     ],
-    "right": "Pass variables to Terraform with a ג€\"var flag",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Pass variables to Terraform with a ג€\"var flag",
+    "explanation": "Explanation coming soon.",
+    "id": "327"
   },
   {
     "type": "dropdown",
@@ -3759,8 +4086,9 @@
       "Edit your state file to scrub out the sensitive data",
       "Always store your secrets in a secrets.tfvars file."
     ],
-    "right": "Delete the state file every time you run Terraform",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Delete the state file every time you run Terraform",
+    "explanation": "Explanation coming soon.",
+    "id": "328"
   },
   {
     "type": "dropdown",
@@ -3769,8 +4097,9 @@
       "True",
       "False"
     ],
-    "right": "True",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "True",
+    "explanation": "Explanation coming soon.",
+    "id": "329"
   },
   {
     "type": "dropdown",
@@ -3781,8 +4110,9 @@
       "Set the environment variable TF_VAR_log=TRACE",
       "Set the environment variable TF_LOG_PATH"
     ],
-    "right": "Set the environment variable TF_LOG=TRACE",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Set the environment variable TF_LOG=TRACE",
+    "explanation": "Explanation coming soon.",
+    "id": "330"
   },
   {
     "type": "dropdown",
@@ -3794,8 +4124,9 @@
       "By an explicit call",
       "All of the above"
     ],
-    "right": "As a part of terraform init",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "As a part of terraform init",
+    "explanation": "Explanation coming soon.",
+    "id": "331"
   },
   {
     "type": "dropdown",
@@ -3806,8 +4137,9 @@
       "Terraform will not make any changes",
       "Terraform will recreate the VM"
     ],
-    "right": "Terraform will remove the VM from state file",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Terraform will remove the VM from state file",
+    "explanation": "Explanation coming soon.",
+    "id": "332"
   },
   {
     "type": "dropdown",
@@ -3818,8 +4150,9 @@
       "Defined in a connection configuration outside of Terraform",
       "None of above"
     ],
-    "right": "Defined in Environment variables",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Defined in Environment variables",
+    "explanation": "Explanation coming soon.",
+    "id": "333"
   },
   {
     "type": "dropdown",
@@ -3830,8 +4163,9 @@
       "Git",
       "Terraform Cloud"
     ],
-    "right": "Amazon S3",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Amazon S3",
+    "explanation": "Explanation coming soon.",
+    "id": "334"
   },
   {
     "type": "dropdown",
@@ -3842,8 +4176,9 @@
       "Remote",
       "Local"
     ],
-    "right": "Terraform Cloud",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Terraform Cloud",
+    "explanation": "Explanation coming soon.",
+    "id": "335"
   },
   {
     "type": "dropdown",
@@ -3854,8 +4189,9 @@
       "On disk in the .terraform sub-directory",
       "They are not cached"
     ],
-    "right": "On disk in the /tmp directory",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "On disk in the /tmp directory",
+    "explanation": "Explanation coming soon.",
+    "id": "336"
   },
   {
     "type": "dropdown",
@@ -3867,8 +4203,9 @@
       "Major cloud vendors and non-cloud vendors can write, maintain, or collaborate on Terraform providers",
       "None of the above"
     ],
-    "right": "Providers can be written by individuals",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Providers can be written by individuals",
+    "explanation": "Explanation coming soon.",
+    "id": "337"
   },
   {
     "type": "dropdown",
@@ -3879,8 +4216,9 @@
       "The Terraform CLI needs you to log into Terraform cloud first",
       "Terraform requires you to manually run terraform plan first"
     ],
-    "right": "Terraform needs you to format your code according to best practices first",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Terraform needs you to format your code according to best practices first",
+    "explanation": "Explanation coming soon.",
+    "id": "338"
   },
   {
     "type": "dropdown",
@@ -3891,8 +4229,9 @@
       "Provider constraints",
       "State locking"
     ],
-    "right": "Version control",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Version control",
+    "explanation": "Explanation coming soon.",
+    "id": "339"
   },
   {
     "type": "dropdown",
@@ -3903,8 +4242,9 @@
       "terraform plan rm aws_instance.ubuntu[1]",
       "terraform delete aws_instance.ubuntu[1]"
     ],
-    "right": "terraform apply rm aws_instance.ubuntu[1]",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "terraform apply rm aws_instance.ubuntu[1]",
+    "explanation": "Explanation coming soon.",
+    "id": "340"
   },
   {
     "type": "dropdown",
@@ -3913,8 +4253,9 @@
       "True",
       "False"
     ],
-    "right": "True",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "True",
+    "explanation": "Explanation coming soon.",
+    "id": "341"
   },
   {
     "type": "dropdown",
@@ -3925,8 +4266,9 @@
       "provision",
       "import"
     ],
-    "right": "change",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "change",
+    "explanation": "Explanation coming soon.",
+    "id": "342"
   },
   {
     "type": "dropdown",
@@ -3937,8 +4279,9 @@
       "version = ג€<= 2.1ג€",
       "version = ג€>= 2.1ג€"
     ],
-    "right": "version >= 2.1",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "version >= 2.1",
+    "explanation": "Explanation coming soon.",
+    "id": "343"
   },
   {
     "type": "dropdown",
@@ -3949,8 +4292,9 @@
       "Reinitialize because your configuration has changed",
       "Inspect all Terraform outputs to make sure they are correct"
     ],
-    "right": "Run an apply and confirm the planned changes",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Run an apply and confirm the planned changes",
+    "explanation": "Explanation coming soon.",
+    "id": "344"
   },
   {
     "type": "dropdown",
@@ -3961,8 +4305,9 @@
       "secrets",
       "ssh"
     ],
-    "right": "connection",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "connection",
+    "explanation": "Explanation coming soon.",
+    "id": "345"
   },
   {
     "type": "dropdown",
@@ -3973,8 +4318,9 @@
       "The state files does not match the current infrastructure",
       "None of the above"
     ],
-    "right": "Code contains tabs indentation instead of spaces",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Code contains tabs indentation instead of spaces",
+    "explanation": "Explanation coming soon.",
+    "id": "346"
   },
   {
     "type": "dropdown",
@@ -3985,8 +4331,9 @@
       "source",
       "version"
     ],
-    "right": "count",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "count",
+    "explanation": "Explanation coming soon.",
+    "id": "347"
   },
   {
     "type": "dropdown",
@@ -3997,8 +4344,9 @@
       "terraform plan",
       "terraform workspace"
     ],
-    "right": "terraform import",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "terraform import",
+    "explanation": "Explanation coming soon.",
+    "id": "348"
   },
   {
     "type": "dropdown",
@@ -4009,8 +4357,9 @@
       "nesting",
       "dynamic"
     ],
-    "right": "for_each",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "for_each",
+    "explanation": "Explanation coming soon.",
+    "id": "349"
   },
   {
     "type": "dropdown",
@@ -4019,8 +4368,9 @@
       "True",
       "False"
     ],
-    "right": "True",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "True",
+    "explanation": "Explanation coming soon.",
+    "id": "350"
   },
   {
     "type": "dropdown",
@@ -4031,8 +4381,9 @@
       "With three spaces",
       "With two spaces"
     ],
-    "right": "With four spaces",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "With four spaces",
+    "explanation": "Explanation coming soon.",
+    "id": "351"
   },
   {
     "type": "dropdown",
@@ -4043,8 +4394,9 @@
       "Retrieve the source code for all referenced modules",
       "Load required provider plugins"
     ],
-    "right": "Create a sample main.tf file",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Create a sample main.tf file",
+    "explanation": "Explanation coming soon.",
+    "id": "352"
   },
   {
     "type": "dropdown",
@@ -4053,8 +4405,9 @@
       "True",
       "False"
     ],
-    "right": "True",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "True",
+    "explanation": "Explanation coming soon.",
+    "id": "353"
   },
   {
     "type": "dropdown",
@@ -4065,8 +4418,9 @@
       "Only members of a VCS organization can open a pull request against repositories that are connected to Terraform Cloud workspaces",
       "Only Terraform Cloud organization owners can approve plans in VCS connected workspaces"
     ],
-    "right": "Only Terraform Cloud organization owners can set workspace variables on VCS connected workspaces",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "Only Terraform Cloud organization owners can set workspace variables on VCS connected workspaces",
+    "explanation": "Explanation coming soon.",
+    "id": "354"
   },
   {
     "type": "dropdown",
@@ -4075,8 +4429,9 @@
       "True",
       "False"
     ],
-    "right": "True",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "True",
+    "explanation": "Explanation coming soon.",
+    "id": "355"
   },
   {
     "type": "dropdown",
@@ -4087,8 +4442,9 @@
       "A pipeline process to test and deliver software",
       "The programmatic configuration of resources"
     ],
-    "right": "An abstraction from vendor specific APIs",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "An abstraction from vendor specific APIs",
+    "explanation": "Explanation coming soon.",
+    "id": "356"
   },
   {
     "type": "dropdown",
@@ -4099,8 +4455,9 @@
       "When a change is made to the resources via the Azure Cloud Console, the current state file will not be updated",
       "When a change is made to the resources via the Azure Cloud Console, the changes are recorded in the current state file"
     ],
-    "right": "When a change is made to the resources via the Azure Cloud Console, the changes are recorded in a new state file",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "When a change is made to the resources via the Azure Cloud Console, the changes are recorded in a new state file",
+    "explanation": "Explanation coming soon.",
+    "id": "357"
   },
   {
     "type": "dropdown",
@@ -4111,7 +4468,8 @@
       "provider = aws.west",
       "alias = aws.west"
     ],
-    "right": "alias = west",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "answer": "alias = west",
+    "explanation": "Explanation coming soon.",
+    "id": "358"
   }
 ]

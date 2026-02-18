@@ -8,7 +8,8 @@
       "improved product reliability"
     ],
     "image": null,
-    "answer": "a reduced workload for the customer service agents"
+    "answer": "a reduced workload for the customer service agents",
+    "explanation": "La respuesta correcta es: a reduced workload for the customer service agents."
   },
   {
     "id": "2",
@@ -36,7 +37,8 @@
     "answer": [
       "QnA Maker",
       "Azure Bot Service"
-    ]
+    ],
+    "explanation": "Las respuestas correctas son: QnA Maker, Azure Bot Service."
   },
   {
     "id": "4",
@@ -51,7 +53,8 @@
     "answer": [
       "an automated voice that reads back a credit card number entered into a telephone by using a numeric keypad",
       "an AI character in a computer game that speaks audibly to a player"
-    ]
+    ],
+    "explanation": "Las respuestas correctas son: an automated voice that reads back a credit card number entered into a telephone by using a numeric keypad, an AI character in a computer game that speaks audibly to a player."
   },
   {
     "id": "5",
@@ -73,14 +76,18 @@
         "text": "You can use the Translator service to transcribe audible speech into text.",
         "correct": "No"
       }
-    ]
+    ],
+    "explanation": "Cada afirmación tiene una respuesta Sí/No correcta. La combinación correcta es: Yes, Yes, No.<br><br>\"You can use the Translator service to translate text between languages.\" => Yes<br>\"You can use the Translator service to detect the language of a given text.\" => Yes<br>\"You can use the Translator service to transcribe audible speech into text.\" => No"
   },
   {
     "id": "6",
     "question": "You need to scan the news for articles about your customers and alert employees when there is a negative article. Positive articles must be added to a press book.\r\n\r\nWhich natural language processing tasks should you use to complete the process?",
     "options": [],
     "image": null,
-    "answer": null,
+    "answer": [
+      "Identify companies/people in articles => Entity Recognition",
+      "Detect negative articles => Sentiment Analysis"
+    ],
     "type": "matching",
     "left": [
       "Identify companies/people in articles",
@@ -93,7 +100,8 @@
     "correctMap": {
       "Identify companies/people in articles": "Entity Recognition",
       "Detect negative articles": "Sentiment Analysis"
-    }
+    },
+    "explanation": "La respuesta correcta se basa en emparejar cada elemento de la izquierda con su opción correcta de la derecha.<br><br>Identify companies/people in articles => Entity Recognition<br>Detect negative articles => Sentiment Analysis"
   },
   {
     "id": "7",
@@ -105,7 +113,8 @@
       "PDF"
     ],
     "image": null,
-    "answer": "PDF"
+    "answer": "PDF",
+    "explanation": "La respuesta correcta es: PDF."
   },
   {
     "id": "8",
@@ -117,7 +126,8 @@
       "translating a set of documents from English to German"
     ],
     "image": null,
-    "answer": null
+    "answer": "identifying which documents provide information about the same topics",
+    "explanation": "La respuesta correcta es: identifying which documents provide information about the same topics."
   },
   {
     "id": "9",
@@ -129,7 +139,8 @@
       "computer vision"
     ],
     "image": null,
-    "answer": null
+    "answer": "natural language processing",
+    "explanation": "La respuesta correcta es: natural language processing."
   },
   {
     "id": "10",
@@ -142,7 +153,8 @@
     ],
     "image": null,
     "answer": "classify email messages as work-related or personal.",
-    "type": "dropdown"
+    "type": "dropdown",
+    "explanation": "La respuesta correcta es: classify email messages as work-related or personal.."
   },
   {
     "id": "11",
@@ -154,7 +166,8 @@
       "Language Understanding (LUIS)"
     ],
     "image": null,
-    "answer": null
+    "answer": "Language Understanding (LUIS)",
+    "explanation": "La respuesta correcta es: Language Understanding (LUIS)."
   },
   {
     "id": "12",
@@ -166,7 +179,8 @@
       "Language Understanding (LUIS)"
     ],
     "image": null,
-    "answer": null
+    "answer": "Language Understanding (LUIS)",
+    "explanation": "La respuesta correcta es: Language Understanding (LUIS)."
   },
   {
     "id": "13",
@@ -178,7 +192,8 @@
       "Ensure that a training dataset is representative of the population."
     ],
     "image": null,
-    "answer": "Provide documentation to help developers debug code."
+    "answer": "Provide documentation to help developers debug code.",
+    "explanation": "La respuesta correcta es: Provide documentation to help developers debug code.."
   },
   {
     "id": "14",
@@ -190,7 +205,8 @@
       "Language Understanding (LUIS)"
     ],
     "image": null,
-    "answer": null
+    "answer": "Translator",
+    "explanation": "La respuesta correcta es: Translator."
   },
   {
     "id": "15",
@@ -212,14 +228,20 @@
         "text": "The Text Analytics service can identify companies and organizations mentioned in a document.",
         "correct": "Yes"
       }
-    ]
+    ],
+    "explanation": "Cada afirmación tiene una respuesta Sí/No correcta. La combinación correcta es: Yes, No, Yes.<br><br>\"The Text Analytics service can identify in which language text is written.\" => Yes<br>\"The Text Analytics service can detect handwritten signatures in a document.\" => No<br>\"The Text Analytics service can identify companies and organizations mentioned in a document.\" => Yes"
   },
   {
     "id": "16",
     "question": "Match the types of natural languages processing workloads to the appropriate scenarios.\r\n\r\nTo answer, drag the appropriate workload type from the column on the left to its scenario on the right. Each workload type may be used once, more than once, or not at all.",
     "options": [],
     "image": null,
-    "answer": null,
+    "answer": [
+      "Extracts persons, locations, and organizations => Entity Recognition",
+      "Evaluates text along a positive-negative scale => Sentiment Analysis",
+      "Returns text translated to target language => Translation",
+      "Identify main talking points => Key Phrase Extraction"
+    ],
     "type": "matching",
     "left": [
       "Extracts persons, locations, and organizations",
@@ -238,7 +260,8 @@
       "Evaluates text along a positive-negative scale": "Sentiment Analysis",
       "Returns text translated to target language": "Translation",
       "Identify main talking points": "Key Phrase Extraction"
-    }
+    },
+    "explanation": "La respuesta correcta se basa en emparejar cada elemento de la izquierda con su opción correcta de la derecha.<br><br>Extracts persons, locations, and organizations => Entity Recognition<br>Evaluates text along a positive-negative scale => Sentiment Analysis<br>Returns text translated to target language => Translation<br>Identify main talking points => Key Phrase Extraction"
   },
   {
     "id": "17",
@@ -260,7 +283,8 @@
         "text": "Monitoring public news sites for negative mentions of a product is an example of natural language processing.",
         "correct": "Yes"
       }
-    ]
+    ],
+    "explanation": "Cada afirmación tiene una respuesta Sí/No correcta. La combinación correcta es: Yes, No, Yes.<br><br>\"Monitoring online service reviews for profanities is an example of natural language processing.\" => Yes<br>\"Identifying brand logos in an image is an example of natural languages processing.\" => No<br>\"Monitoring public news sites for negative mentions of a product is an example of natural language processing.\" => Yes"
   },
   {
     "id": "18",
@@ -272,7 +296,8 @@
       "entity recognition"
     ],
     "image": null,
-    "answer": null
+    "answer": "sentiment analysis",
+    "explanation": "La respuesta correcta es: sentiment analysis."
   },
   {
     "id": "19",
@@ -284,14 +309,20 @@
       "translation"
     ],
     "image": "../Preguntas/images/ai900/image-6.png",
-    "answer": null
+    "answer": "entity recognition",
+    "explanation": "La respuesta correcta es: entity recognition."
   },
   {
     "id": "20",
     "question": "You plan to apply Text Analytics API features to a technical support ticketing system.\r\n\r\nMatch the Text Analytics API features to the appropriate natural language processing scenarios.\r\n\r\nTo answer, drag the appropriate feature from the column on the left to its scenario on the right. Each feature may be used once, more than once, or not at all.",
     "options": [],
     "image": null,
-    "answer": null,
+    "answer": [
+      "Extracts persons, locations, and organizations => Entity Recognition",
+      "Evaluates text along a positive-negative scale => Sentiment Analysis",
+      "Returns text translated to target language => Translation",
+      "Identify main talking points => Key Phrase Extraction"
+    ],
     "type": "matching",
     "left": [
       "Extracts persons, locations, and organizations",
@@ -310,7 +341,8 @@
       "Evaluates text along a positive-negative scale": "Sentiment Analysis",
       "Returns text translated to target language": "Translation",
       "Identify main talking points": "Key Phrase Extraction"
-    }
+    },
+    "explanation": "La respuesta correcta se basa en emparejar cada elemento de la izquierda con su opción correcta de la derecha.<br><br>Extracts persons, locations, and organizations => Entity Recognition<br>Evaluates text along a positive-negative scale => Sentiment Analysis<br>Returns text translated to target language => Translation<br>Identify main talking points => Key Phrase Extraction"
   },
   {
     "id": "21",
@@ -322,7 +354,8 @@
       "an entity"
     ],
     "image": null,
-    "answer": null
+    "answer": "an utterance",
+    "explanation": "La respuesta correcta es: an utterance."
   },
   {
     "id": "22",
@@ -334,7 +367,8 @@
       "Add chit-chat"
     ],
     "image": null,
-    "answer": null
+    "answer": "Add chit-chat",
+    "explanation": "La respuesta correcta es: Add chit-chat."
   },
   {
     "id": "23",
@@ -346,7 +380,8 @@
       "QnA Maker"
     ],
     "image": null,
-    "answer": null
+    "answer": "QnA Maker",
+    "explanation": "La respuesta correcta es: QnA Maker."
   },
   {
     "id": "24",
@@ -370,7 +405,12 @@
     },
     "options": [],
     "image": null,
-    "answer": null
+    "answer": [
+      "Identify handwritten letters => Computer Vision",
+      "Predict the sentiment of a social media post => Natural Language Processing",
+      "Identify a fraudulent credit card payment => Anomaly Detection"
+    ],
+    "explanation": "La respuesta correcta se basa en emparejar cada elemento de la izquierda con su opción correcta de la derecha.<br><br>Identify handwritten letters => Computer Vision<br>Predict the sentiment of a social media post => Natural Language Processing<br>Identify a fraudulent credit card payment => Anomaly Detection"
   },
   {
     "id": "25",
@@ -382,7 +422,8 @@
       "Create a new model"
     ],
     "image": null,
-    "answer": null
+    "answer": "Add utterances to the None intent",
+    "explanation": "La respuesta correcta es: Add utterances to the None intent."
   },
   {
     "id": "26",
@@ -394,7 +435,11 @@
       "assembly line machinery that autonomously inserts headlamps into cars"
     ],
     "image": null,
-    "answer": null
+    "answer": [
+      "a smart device in the home that responds to questions such as, \"What will the weather be like today?\"",
+      "a website that uses a knowledge base to interactively respond to users' questions"
+    ],
+    "explanation": "Las respuestas correctas son: a smart device in the home that responds to questions such as, \"What will the weather be like today?\", a website that uses a knowledge base to interactively respond to users' questions."
   },
   {
     "id": "27",
@@ -407,7 +452,11 @@
       "translation"
     ],
     "image": null,
-    "answer": null
+    "answer": [
+      "text-to-speech",
+      "speech-to-text"
+    ],
+    "explanation": "Las respuestas correctas son: text-to-speech, speech-to-text."
   },
   {
     "id": "28",
@@ -436,7 +485,12 @@
     "question": "You plan to use Azure Cognitive Services to develop a voice controlled personal assistant app.\r\n\r\nMatch the Azure Cognitive Services to the appropriate tasks.\r\n\r\nTo answer, drag the appropriate service from the column on the left to its description on the right. Each service may be used once, more than once, or not at all.",
     "options": [],
     "image": null,
-    "answer": null,
+    "answer": [
+      "Transcribe audible speech into text => Speech",
+      "Translate text between languages => Translator",
+      "Extract key phrases from text => Text Analytics",
+      "Interpret user intent from utterance => Language Understanding (LUIS)"
+    ],
     "type": "matching",
     "left": [
       "Transcribe audible speech into text",
@@ -455,7 +509,8 @@
       "Translate text between languages": "Translator",
       "Extract key phrases from text": "Text Analytics",
       "Interpret user intent from utterance": "Language Understanding (LUIS)"
-    }
+    },
+    "explanation": "La respuesta correcta se basa en emparejar cada elemento de la izquierda con su opción correcta de la derecha.<br><br>Transcribe audible speech into text => Speech<br>Translate text between languages => Translator<br>Extract key phrases from text => Text Analytics<br>Interpret user intent from utterance => Language Understanding (LUIS)"
   },
   {
     "id": "30",
@@ -467,7 +522,8 @@
       "Personalizer"
     ],
     "image": null,
-    "answer": null
+    "answer": "Translator",
+    "explanation": "La respuesta correcta es: Translator."
   },
   {
     "id": "31",
@@ -479,7 +535,8 @@
       "knowledge mining"
     ],
     "image": null,
-    "answer": null
+    "answer": "natural language processing",
+    "explanation": "La respuesta correcta es: natural language processing."
   },
   {
     "id": "32",
@@ -491,7 +548,8 @@
       "Personalizer"
     ],
     "image": null,
-    "answer": "Speech"
+    "answer": "Speech",
+    "explanation": "La respuesta correcta es: Speech."
   },
   {
     "id": "33",
@@ -503,7 +561,8 @@
       "active learning"
     ],
     "image": null,
-    "answer": null
+    "answer": "active learning",
+    "explanation": "La respuesta correcta es: active learning."
   },
   {
     "id": "34",
@@ -515,7 +574,8 @@
       "Form Recognizer"
     ],
     "image": null,
-    "answer": "Azure Bot Service"
+    "answer": "Azure Bot Service",
+    "explanation": "La respuesta correcta es: Azure Bot Service."
   },
   {
     "id": "35",
@@ -528,7 +588,8 @@
     ],
     "image": null,
     "answer": "Named Entity Recognition (NER)",
-    "type": "dropdown"
+    "type": "dropdown",
+    "explanation": "La respuesta correcta es: Named Entity Recognition (NER)."
   },
   {
     "id": "36",
@@ -550,7 +611,8 @@
         "text": "A web form used to submit a request to reset a password is an example of a conversational AI workload.",
         "correct": "No"
       }
-    ]
+    ],
+    "explanation": "Cada afirmación tiene una respuesta Sí/No correcta. La combinación correcta es: Yes, No, No.<br><br>\"A bot that responds to queries by internal users is an example of a conversational AI workload.\" => Yes<br>\"An application that displays images relating to an entered search term is an example of a conversational AI workload.\" => No<br>\"A web form used to submit a request to reset a password is an example of a conversational AI workload.\" => No"
   },
   {
     "id": "37",
@@ -567,7 +629,8 @@
       "Generate the questions and answers from an existing webpage.",
       "Manually enter the questions and answers.",
       "Import chit-chat content from a predefined data source."
-    ]
+    ],
+    "explanation": "Las respuestas correctas son: Generate the questions and answers from an existing webpage., Manually enter the questions and answers., Import chit-chat content from a predefined data source.."
   },
   {
     "id": "38",
@@ -579,7 +642,8 @@
       "Language Understanding (LUIS)"
     ],
     "image": null,
-    "answer": "QnA Maker"
+    "answer": "QnA Maker",
+    "explanation": "La respuesta correcta es: QnA Maker."
   },
   {
     "id": "39",
@@ -594,7 +658,8 @@
     "answer": [
       "QnA Maker",
       "Azure Bot Service"
-    ]
+    ],
+    "explanation": "Las respuestas correctas son: QnA Maker, Azure Bot Service."
   },
   {
     "id": "40",
@@ -609,7 +674,8 @@
     "answer": [
       "a smart device in the home that responds to questions such as ג€What will the weather be like today?ג€",
       "a website that uses a knowledge base to interactively respond to users' questions"
-    ]
+    ],
+    "explanation": "Las respuestas correctas son: a smart device in the home that responds to questions such as ג€What will the weather be like today?ג€, a website that uses a knowledge base to interactively respond to users' questions."
   },
   {
     "id": "41",
@@ -621,7 +687,8 @@
       "a computer vision application"
     ],
     "image": "../Preguntas/images/ai900/image-14.png",
-    "answer": "a chatbot"
+    "answer": "a chatbot",
+    "explanation": "La respuesta correcta es: a chatbot."
   },
   {
     "id": "42",
@@ -633,7 +700,8 @@
       "Face"
     ],
     "image": null,
-    "answer": "QnA Maker"
+    "answer": "QnA Maker",
+    "explanation": "La respuesta correcta es: QnA Maker."
   },
   {
     "id": "43",
@@ -645,7 +713,8 @@
       "Speech"
     ],
     "image": null,
-    "answer": "QnA Maker"
+    "answer": "QnA Maker",
+    "explanation": "La respuesta correcta es: QnA Maker."
   },
   {
     "id": "44",
@@ -658,7 +727,8 @@
     ],
     "image": null,
     "answer": "conversational AI.",
-    "type": "dropdown"
+    "type": "dropdown",
+    "explanation": "La respuesta correcta es: conversational AI.."
   },
   {
     "id": "45",
@@ -670,7 +740,8 @@
       "From a website interface, answer common questions about scheduled events and ticket purchases for a music festival."
     ],
     "image": null,
-    "answer": "From a website interface, answer common questions about scheduled events and ticket purchases for a music festival."
+    "answer": "From a website interface, answer common questions about scheduled events and ticket purchases for a music festival.",
+    "explanation": "La respuesta correcta es: From a website interface, answer common questions about scheduled events and ticket purchases for a music festival.."
   },
   {
     "id": "46",
@@ -688,7 +759,8 @@
       "inclusiveness",
       "fairness",
       "reliability and safety"
-    ]
+    ],
+    "explanation": "Las respuestas correctas son: inclusiveness, fairness, reliability and safety."
   },
   {
     "id": "47",
@@ -710,7 +782,8 @@
         "text": "The QnA Maker service can determine the intent of a user utterance.",
         "correct": "No"
       }
-    ]
+    ],
+    "explanation": "Cada afirmación tiene una respuesta Sí/No correcta. La combinación correcta es: No, Yes, No.<br><br>\"You can use QnA Maker to query an Azure SQL database.\" => No<br>\"You should use QnA Maker when you want a knowledge base to provide the same answer to different users who submit similar questions.\" => Yes<br>\"The QnA Maker service can determine the intent of a user utterance.\" => No"
   },
   {
     "id": "48",
@@ -732,7 +805,8 @@
         "text": "You can communicate with a bot by using a webchat interface.",
         "correct": "Yes"
       }
-    ]
+    ],
+    "explanation": "Cada afirmación tiene una respuesta Sí/No correcta. La combinación correcta es: Yes, Yes, Yes.<br><br>\"You can communicate with a bot by using Cortana.\" => Yes<br>\"You can communicate with a bot by using Microsoft Teams.\" => Yes<br>\"You can communicate with a bot by using a webchat interface.\" => Yes"
   },
   {
     "id": "49",
@@ -754,7 +828,8 @@
         "text": "A restaurant can use a chatbot to automate responses to customer reviews on an external website.",
         "correct": "No"
       }
-    ]
+    ],
+    "explanation": "Cada afirmación tiene una respuesta Sí/No correcta. La combinación correcta es: Yes, Yes, No.<br><br>\"A restaurant can use a chatbot to empower customers to make reservations by using a website or an app.\" => Yes<br>\"A restaurant can use a chatbot to answer inquiries about business hours from a webpage.\" => Yes<br>\"A restaurant can use a chatbot to automate responses to customer reviews on an external website.\" => No"
   },
   {
     "id": "50",
@@ -769,21 +844,54 @@
     "answer": [
       "a chatbot that provides users with the ability to find answers on a website by themselves",
       "telephone voice menus to reduce the load on human resources"
-    ]
+    ],
+    "explanation": "Las respuestas correctas son: a chatbot that provides users with the ability to find answers on a website by themselves, telephone voice menus to reduce the load on human resources."
   },
   {
     "id": "51",
-    "question": "HOTSPOT -\r\n\r\nFor each of the following statements, select Yes if the statement is true. Otherwise, select No.\r\n\r\nNOTE: Each correct selection is worth one point.\r\n\r\nHot Area:",
+    "question": "For each of the following statements, select Yes if the statement is true. Otherwise, select No.",
     "options": [],
-    "image": "../Preguntas/images/ai900/image-22.png",
-    "answer": null
+    "image": null,
+    "answer": "Yes, Yes, Yes",
+    "type": "hotspot-yes-no",
+    "statements": [
+      {
+        "text": "Azure Bot Service and Azure Cognitive Services can be integrated.",
+        "correct": "Yes"
+      },
+      {
+        "text": "Azure Bot Service engages with customers in a conversational manner.",
+        "correct": "Yes"
+      },
+      {
+        "text": "Azure Bot Service can import frequently asked questions (FAQ) to question and answer sets.",
+        "correct": "Yes"
+      }
+    ],
+    "explanation": "Cada afirmación tiene una respuesta Sí/No correcta. La combinación correcta es: Yes, Yes, Yes.<br><br>\"Azure Bot Service and Azure Cognitive Services can be integrated.\" => Yes<br>\"Azure Bot Service engages with customers in a conversational manner.\" => Yes<br>\"Azure Bot Service can import frequently asked questions (FAQ) to question and answer sets.\" => Yes"
   },
   {
     "id": "52",
-    "question": "HOTSPOT -\r\n\r\nFor each of the following statements, select Yes if the statement is true. Otherwise, select No.\r\n\r\nNOTE: Each correct selection is worth one point.\r\n\r\nHot Area:",
+    "question": "For each of the following statements, select Yes if the statement is true. Otherwise, select No.",
     "options": [],
-    "image": "../Preguntas/images/ai900/image-21.png",
-    "answer": null
+    "image": null,
+    "answer": "Yes, No, Yes",
+    "type": "hotspot-yes-no",
+    "statements": [
+      {
+        "text": "A webchat bot can interact with users visiting a website",
+        "correct": "Yes"
+      },
+      {
+        "text": "Automatically generating captions for pre-recorded videos is an example of conversational AI",
+        "correct": "No"
+      },
+      {
+        "text": "A smart device in the home that responds to questions such as 'What will the weather like today?' is an example of conversational AI",
+        "correct": "Yes"
+      }
+    ],
+    "explanation": "Cada afirmación tiene una respuesta Sí/No correcta. La combinación correcta es: Yes, No, Yes.<br><br>\"A webchat bot can interact with users visiting a website\" => Yes<br>\"Automatically generating captions for pre-recorded videos is an example of conversational AI\" => No<br>\"A smart device in the home that responds to questions such as 'What will the weather like today?' is an example of conversational AI\" => Yes"
   },
   {
     "id": "53",
@@ -795,35 +903,73 @@
       "Provide customers with return materials authorization (RMA) numbers."
     ],
     "image": null,
-    "answer": "Answer questions from multiple users simultaneously."
+    "answer": "Answer questions from multiple users simultaneously.",
+    "explanation": "La respuesta correcta es: Answer questions from multiple users simultaneously.."
   },
   {
     "id": "54",
-    "question": "HOTSPOT -\r\n\r\nFor each of the following statements, select Yes if the statement is true. Otherwise, select No.\r\n\r\nNOTE: Each correct selection is worth one point.\r\n\r\nHot Area:",
+    "question": "For each of the following statements, select Yes if the statement is true. Otherwise, select No.",
     "options": [],
-    "image": "../Preguntas/images/ai900/image-20.png",
-    "answer": null
+    "image": null,
+    "answer": "No, Yes, Yes",
+    "type": "hotspot-yes-no",
+    "statements": [
+      {
+        "text": "Chatbots can only be built by using custom code.",
+        "correct": "No"
+      },
+      {
+        "text": "The Azure Bot Service provides services that can be used to host conversational bots.",
+        "correct": "Yes"
+      },
+      {
+        "text": "Bots built by using the Azure Bot Service can communicate with Microsoft Teams users.",
+        "correct": "Yes"
+      }
+    ],
+    "explanation": "Cada afirmación tiene una respuesta Sí/No correcta. La combinación correcta es: No, Yes, Yes.<br><br>\"Chatbots can only be built by using custom code.\" => No<br>\"The Azure Bot Service provides services that can be used to host conversational bots.\" => Yes<br>\"Bots built by using the Azure Bot Service can communicate with Microsoft Teams users.\" => Yes"
   },
   {
     "id": "55",
-    "question": "HOTSPOT -\r\n\r\nFor each of the following statements, select Yes if the statement is true. Otherwise, select No.\r\n\r\nNOTE: Each correct selection is worth one point.\r\n\r\nHot Area:",
-    "options": [],
-    "image": "../Preguntas/images/ai900/image-19.png",
-    "answer": null
+    "question": "Computer vision capabilities can be deployed to {{option}}",
+    "options": [
+      "develop a text-based chatbot for a website.",
+      "identify anomalous customer behavior on an online store.",
+      "integrate a facial recognition feature into an app.",
+      "suggest automated responses to incoming email."
+    ],
+    "image": null,
+    "answer": "integrate a facial recognition feature into an app.",
+    "type": "dropdown",
+    "explanation": "La respuesta correcta es: integrate a facial recognition feature into an app.."
   },
   {
     "id": "56",
-    "question": "HOTSPOT -\r\n\r\nSelect the answer that correctly completes the sentence.\r\n\r\nHot Area:",
-    "options": [],
-    "image": "../Preguntas/images/ai900/image-25.png",
-    "answer": null
+    "question": "Computer vision capabilities can be deployed to {{option}}",
+    "options": [
+      "develop a text-based chatbot for a website.",
+      "identify anomalous customer behavior on an online store.",
+      "integrate a facial recognition feature into an app.",
+      "suggest automated responses to incoming email."
+    ],
+    "image": null,
+    "answer": "integrate a facial recognition feature into an app.",
+    "type": "dropdown",
+    "explanation": "La respuesta correcta es: integrate a facial recognition feature into an app.."
   },
   {
     "id": "57",
-    "question": "HOTSPOT -\r\n\r\nTo complete the sentence, select the appropriate option in the answer area.\r\n\r\nHot Area:",
-    "options": [],
-    "image": "../Preguntas/images/ai900/image-24.png",
-    "answer": null
+    "question": "Returning a bounding box that indicates the location of a vehicle in an image is an example of {{option}}",
+    "options": [
+      "image classification.",
+      "object detection.",
+      "optical character recognizer (OCR).",
+      "semantic segmentation."
+    ],
+    "image": null,
+    "answer": "object detection.",
+    "type": "dropdown",
+    "explanation": "La respuesta correcta es: object detection.."
   },
   {
     "id": "58",
@@ -835,7 +981,8 @@
       "selecting columns that must be included in the model"
     ],
     "image": null,
-    "answer": null
+    "answer": "creating training and validation datasets",
+    "explanation": "La respuesta correcta es: creating training and validation datasets."
   },
   {
     "id": "59",
@@ -847,14 +994,20 @@
       "AI systems must protect the interests of the company"
     ],
     "image": null,
-    "answer": null
+    "answer": "AI systems must be transparent and inclusive",
+    "explanation": "La respuesta correcta es: AI systems must be transparent and inclusive."
   },
   {
     "id": "60",
     "question": "Match the types of natural language processing workloads to the appropriate scenarios.\r\n\r\nTo answer, drag the appropriate workload type from the column on the left to its scenario on the right. Each workload type may be used once, more than once, or not at all.",
     "options": [],
     "image": null,
-    "answer": null,
+    "answer": [
+      "Extracts persons, locations, and organizations => Entity Recognition",
+      "Evaluates text along a positive-negative scale => Sentiment Analysis",
+      "Returns text translated to target language => Translation",
+      "Identify main talking points => Key Phrase Extraction"
+    ],
     "type": "matching",
     "left": [
       "Extracts persons, locations, and organizations",
@@ -873,7 +1026,8 @@
       "Evaluates text along a positive-negative scale": "Sentiment Analysis",
       "Returns text translated to target language": "Translation",
       "Identify main talking points": "Key Phrase Extraction"
-    }
+    },
+    "explanation": "La respuesta correcta se basa en emparejar cada elemento de la izquierda con su opción correcta de la derecha.<br><br>Extracts persons, locations, and organizations => Entity Recognition<br>Evaluates text along a positive-negative scale => Sentiment Analysis<br>Returns text translated to target language => Translation<br>Identify main talking points => Key Phrase Extraction"
   },
   {
     "id": "61",
@@ -887,14 +1041,22 @@
     "image": null,
     "answer": [
       "Azure Bot Service"
-    ]
+    ],
+    "explanation": "Las respuestas correctas son: Azure Bot Service."
   },
   {
     "id": "62",
     "question": "Match the principles of responsible AI to the appropriate descriptions.",
     "options": [],
     "image": null,
-    "answer": null,
+    "answer": [
+      "Ensure AI systems operate as designed => Reliability & Safety",
+      "Protect data and privacy => Privacy & Security",
+      "Empower everyone including those with disabilities => Inclusiveness",
+      "Ensure AI systems are explainable => Transparency",
+      "Humans are responsible for AI systems => Accountability",
+      "No bias based on race or gender => Fairness"
+    ],
     "type": "matching",
     "left": [
       "Ensure AI systems operate as designed",
@@ -919,7 +1081,8 @@
       "Ensure AI systems are explainable": "Transparency",
       "Humans are responsible for AI systems": "Accountability",
       "No bias based on race or gender": "Fairness"
-    }
+    },
+    "explanation": "La respuesta correcta se basa en emparejar cada elemento de la izquierda con su opción correcta de la derecha.<br><br>Ensure AI systems operate as designed => Reliability & Safety<br>Protect data and privacy => Privacy & Security<br>Empower everyone including those with disabilities => Inclusiveness<br>Ensure AI systems are explainable => Transparency<br>Humans are responsible for AI systems => Accountability<br>No bias based on race or gender => Fairness"
   },
   {
     "id": "63",
@@ -931,7 +1094,8 @@
       "After you test a model on the validation data."
     ],
     "image": null,
-    "answer": null
+    "answer": "After you test a model on the validation data.",
+    "explanation": "La respuesta correcta es: After you test a model on the validation data.."
   },
   {
     "id": "64",
@@ -943,14 +1107,22 @@
       "transparency"
     ],
     "image": null,
-    "answer": null
+    "answer": "privacy and security",
+    "explanation": "La respuesta correcta es: privacy and security."
   },
   {
     "id": "65",
-    "question": "HOTSPOT\r\n\r\n\r\n\r\nSelect the answer that correctly completes the sentence.",
-    "options": [],
-    "image": "../Preguntas/images/ai900/image-26.png",
-    "answer": null
+    "question": "Ensuring an AI system does not provide a prediction when important fields contain unusual or missing values is {{option}} principle for responsible AI.",
+    "options": [
+      "an inclusiveness",
+      "a privacy and security",
+      "a reliability and safety",
+      "a transparency"
+    ],
+    "image": null,
+    "answer": "a reliability and safety",
+    "type": "dropdown",
+    "explanation": "La respuesta correcta es: a reliability and safety."
   },
   {
     "id": "66",
@@ -972,7 +1144,11 @@
     },
     "options": [],
     "image": null,
-    "answer": null
+    "answer": [
+      "Enables the use of natural language to query a knowledge base => QnA Maker",
+      "Enables the real-time transcription of speech-to-text => Speech"
+    ],
+    "explanation": "La respuesta correcta se basa en emparejar cada elemento de la izquierda con su opción correcta de la derecha.<br><br>Enables the use of natural language to query a knowledge base => QnA Maker<br>Enables the real-time transcription of speech-to-text => Speech"
   },
   {
     "id": "67",
@@ -984,14 +1160,22 @@
       "A machine learning technique that analyzes data over time and identifies unusual changes."
     ],
     "image": null,
-    "answer": null
+    "answer": "A machine learning technique that analyzes data over time and identifies unusual changes.",
+    "explanation": "La respuesta correcta es: A machine learning technique that analyzes data over time and identifies unusual changes.."
   },
   {
     "id": "68",
-    "question": "HOTSPOT -\r\n\r\nTo complete the sentence, select the appropriate option in the answer area.\r\n\r\nHot Area:",
-    "options": [],
-    "image": "../Preguntas/images/ai900/image-28.png",
-    "answer": null
+    "question": "{{option}} is used to generate additional features.",
+    "options": [
+      "Feature engineering",
+      "Feature selection",
+      "Model evaluation",
+      "Model training"
+    ],
+    "image": null,
+    "answer": "Feature engineering",
+    "type": "dropdown",
+    "explanation": "La respuesta correcta es: Feature engineering."
   },
   {
     "id": "69",
@@ -1003,7 +1187,8 @@
       "fairness"
     ],
     "image": null,
-    "answer": null
+    "answer": "fairness",
+    "explanation": "La respuesta correcta es: fairness."
   },
   {
     "id": "70",
@@ -1015,14 +1200,22 @@
       "Take a completely random training sample."
     ],
     "image": null,
-    "answer": null
+    "answer": "Take a training sample that is representative of the population in the United Kingdom.",
+    "explanation": "La respuesta correcta es: Take a training sample that is representative of the population in the United Kingdom.."
   },
   {
     "id": "71",
-    "question": "HOTSPOT\r\n\r\n-\r\n\r\nSelect the answer that correctly completes the sentence.",
-    "options": [],
-    "image": "../Preguntas/images/ai900/image-31.png",
-    "answer": null
+    "question": "Azure Machine Learning designer lets you create machine learning models by {{option}}",
+    "options": [
+      "adding and connecting modules on a visual canvas.",
+      "automatically performing common data preparation tasks.",
+      "automatically selecting an algorithm to build the most accurate model.",
+      "using a code-first notebook experience."
+    ],
+    "image": null,
+    "answer": "adding and connecting modules on a visual canvas.",
+    "type": "dropdown",
+    "explanation": "La respuesta correcta es: adding and connecting modules on a visual canvas.."
   },
   {
     "id": "72",
@@ -1034,7 +1227,8 @@
       "Create a classification model."
     ],
     "image": null,
-    "answer": null
+    "answer": "Split the data into training and testing datasets.",
+    "explanation": "La respuesta correcta es: Split the data into training and testing datasets.."
   },
   {
     "id": "73",
@@ -1045,14 +1239,19 @@
       "a Jupyter notebook"
     ],
     "image": null,
-    "answer": null
+    "answer": "a compute resource",
+    "explanation": "La respuesta correcta es: a compute resource."
   },
   {
     "id": "74",
     "question": "Match the tool to the Azure Machine Learning task.\r\n\r\nTo answer, drag the appropriate tool from the column on the left to its tasks on the right. Each tool may be used once, more than once, or not at all.",
     "options": [],
     "image": null,
-    "answer": null,
+    "answer": [
+      "Predict future values (e.g. prices) => Regression",
+      "Classify items into categories (e.g. spam/not spam) => Classification",
+      "Group similar items (e.g. customer segmentation) => Clustering"
+    ],
     "type": "matching",
     "left": [
       "Predict future values (e.g. prices)",
@@ -1068,7 +1267,8 @@
       "Predict future values (e.g. prices)": "Regression",
       "Classify items into categories (e.g. spam/not spam)": "Classification",
       "Group similar items (e.g. customer segmentation)": "Clustering"
-    }
+    },
+    "explanation": "La respuesta correcta se basa en emparejar cada elemento de la izquierda con su opción correcta de la derecha.<br><br>Predict future values (e.g. prices) => Regression<br>Classify items into categories (e.g. spam/not spam) => Classification<br>Group similar items (e.g. customer segmentation) => Clustering"
   },
   {
     "id": "75",
@@ -1080,14 +1280,20 @@
       "natural language processing (NLP)"
     ],
     "image": null,
-    "answer": null
+    "answer": "chatbot",
+    "explanation": "La respuesta correcta es: chatbot."
   },
   {
     "id": "76",
     "question": "Match the types of AI workloads to the appropriate scenarios.\r\n\r\nTo answer, drag the appropriate workload type from the column on the left to its scenario on the right. Each workload type may be used once, more than once, or not at all.",
     "options": [],
     "image": null,
-    "answer": null,
+    "answer": [
+      "Identify handwritten letters => Computer Vision",
+      "Predict the sentiment of a social media post => Natural Language Processing",
+      "Identify a fraudulent credit card payment => Anomaly Detection",
+      "Automated chat to answer questions => Conversational AI"
+    ],
     "type": "matching",
     "left": [
       "Identify handwritten letters",
@@ -1106,7 +1312,8 @@
       "Predict the sentiment of a social media post": "Natural Language Processing",
       "Identify a fraudulent credit card payment": "Anomaly Detection",
       "Automated chat to answer questions": "Conversational AI"
-    }
+    },
+    "explanation": "La respuesta correcta se basa en emparejar cada elemento de la izquierda con su opción correcta de la derecha.<br><br>Identify handwritten letters => Computer Vision<br>Predict the sentiment of a social media post => Natural Language Processing<br>Identify a fraudulent credit card payment => Anomaly Detection<br>Automated chat to answer questions => Conversational AI"
   },
   {
     "id": "77",
@@ -1118,7 +1325,8 @@
       "clustering"
     ],
     "image": null,
-    "answer": null
+    "answer": "regression",
+    "explanation": "La respuesta correcta es: regression."
   },
   {
     "id": "78",
@@ -1129,7 +1337,8 @@
       "variables"
     ],
     "image": null,
-    "answer": null
+    "answer": "variables",
+    "explanation": "La respuesta correcta es: variables."
   },
   {
     "id": "79",
@@ -1141,14 +1350,22 @@
       "the Analyze Image operation in the Computer Vision service"
     ],
     "image": null,
-    "answer": "the Detect operation in the Face service"
+    "answer": "the Detect operation in the Face service",
+    "explanation": "La respuesta correcta es: the Detect operation in the Face service."
   },
   {
     "id": "80",
-    "question": "HOTSPOT -\r\n\r\nSelect the answer that correctly completes the sentence.",
-    "options": [],
-    "image": "../Preguntas/images/ai900/image-32.png",
-    "answer": null
+    "question": "Using Recency, Frequency, and Monetary (RFM) values to identify segments of a customer base is an example of {{option}}",
+    "options": [
+      "clustering.",
+      "regression.",
+      "classification.",
+      "regularization."
+    ],
+    "image": null,
+    "answer": "clustering.",
+    "type": "dropdown",
+    "explanation": "La respuesta correcta es: clustering.."
   },
   {
     "id": "81",
@@ -1169,21 +1386,43 @@
     "explanation": "1. Create a training pipeline to train your model.<br>2. Run the training pipeline to generate the trained model.<br>3. Create a real-time inference pipeline from the trained model.<br>4. Deploy the real-time endpoint to make it available as a service.",
     "options": [],
     "image": null,
-    "answer": null
+    "answer": [
+      "Create a training pipeline",
+      "Run the training pipeline",
+      "Create a real-time inference pipeline",
+      "Deploy the real-time endpoint"
+    ]
   },
   {
     "id": "82",
-    "question": "HOTSPOT\r\n\r\n\r\n\r\nFor each of the following statements, select Yes if the statement is true. Otherwise, select No.\r\n\r\nNOTE: Each correct selection is worth one point.\r\n![alt text](image-35.png)",
+    "question": "For each of the following statements, select Yes if the statement is true. Otherwise, select No.",
     "options": [],
-    "image": "../Preguntas/images/ai900/image-36.png",
-    "answer": null
+    "image": null,
+    "answer": "Yes, Yes, No",
+    "type": "hotspot-yes-no",
+    "statements": [
+      {
+        "text": "Organizing documents into groups based on different usage statistics is an example of clustering.",
+        "correct": "Yes"
+      },
+      {
+        "text": "Grouping similar patients based on symptoms and diagnostic test results is an example of clustering.",
+        "correct": "Yes"
+      },
+      {
+        "text": "Predicting whether a person will develop mild, moderate, or severe allergy symptoms based on pollen count is an example of clustering.",
+        "correct": "No"
+      }
+    ],
+    "explanation": "Cada afirmación tiene una respuesta Sí/No correcta. La combinación correcta es: Yes, Yes, No.<br><br>\"Organizing documents into groups based on different usage statistics is an example of clustering.\" => Yes<br>\"Grouping similar patients based on symptoms and diagnostic test results is an example of clustering.\" => Yes<br>\"Predicting whether a person will develop mild, moderate, or severe allergy symptoms based on pollen count is an example of clustering.\" => No"
   },
   {
     "id": "83",
     "question": "HOTSPOT\r\n\r\n-\r\n\r\nSelect the answer that correctly completes the sentence.",
     "options": [],
     "image": null,
-    "answer": null
+    "answer": "regression",
+    "explanation": "La respuesta correcta es: regression."
   },
   {
     "id": "84",
@@ -1195,7 +1434,8 @@
       "Split the original dataset into a dataset for training and a dataset for testing. Use the training dataset for evaluation."
     ],
     "image": null,
-    "answer": null
+    "answer": "Split the original dataset into a dataset for training and a dataset for testing. Use the testing dataset for evaluation.",
+    "explanation": "La respuesta correcta es: Split the original dataset into a dataset for training and a dataset for testing. Use the testing dataset for evaluation.."
   },
   {
     "id": "85",
@@ -1206,7 +1446,8 @@
       "regression"
     ],
     "image": "../Preguntas/images/ai900/image-34.png",
-    "answer": null
+    "answer": "regression",
+    "explanation": "La respuesta correcta es: regression."
   },
   {
     "id": "86",
@@ -1218,7 +1459,8 @@
       "Provision an inference cluster."
     ],
     "image": null,
-    "answer": null
+    "answer": "Register the model.",
+    "explanation": "La respuesta correcta es: Register the model.."
   },
   {
     "id": "87",
@@ -1229,21 +1471,34 @@
       "classification"
     ],
     "image": null,
-    "answer": null
+    "answer": "clustering",
+    "explanation": "La respuesta correcta es: clustering."
   },
   {
     "id": "88",
-    "question": "HOTSPOT -\r\n\r\nSelect the answer that correctly completes the sentence.",
-    "options": [],
-    "image": "../Preguntas/images/ai900/image-38.png",
-    "answer": null
+    "question": "A banking system that predicts whether a loan will be repaid is an example of the {{option}} type of machine learning.",
+    "options": [
+      "clustering",
+      "regression",
+      "classification"
+    ],
+    "image": null,
+    "answer": "classification",
+    "type": "dropdown",
+    "explanation": "La respuesta correcta es: classification."
   },
   {
     "id": "89",
-    "question": "HOTSPOT\r\n\r\n-\r\n\r\nSelect the answer that correctly completes the sentence.",
-    "options": [],
-    "image": "../Preguntas/images/ai900/image-39.png",
-    "answer": null
+    "question": "{{option}} models can be used to predict the sale price of auctioned items.",
+    "options": [
+      "Classification",
+      "Clustering",
+      "Regression"
+    ],
+    "image": null,
+    "answer": "Regression",
+    "type": "dropdown",
+    "explanation": "La respuesta correcta es: Regression."
   },
   {
     "id": "90",
@@ -1255,7 +1510,8 @@
       "privacy and security"
     ],
     "image": null,
-    "answer": "transparency"
+    "answer": "transparency",
+    "explanation": "La respuesta correcta es: transparency."
   },
   {
     "id": "91",
@@ -1267,14 +1523,31 @@
       "Optical character recognition (OCR)"
     ],
     "image": null,
-    "answer": null
+    "answer": "Optical character recognition (OCR)",
+    "explanation": "La respuesta correcta es: Optical character recognition (OCR)."
   },
   {
     "id": "92",
-    "question": "HOTSPOT -\r\n\r\nFor each of the following statements, select Yes if the statement is true. Otherwise, select No.\r\n\r\nNOTE: Each correct selection is worth one point.",
+    "question": "For each of the following statements, select Yes if the statement is true. Otherwise, select No.",
     "options": [],
-    "image": "../Preguntas/images/ai900/image-40.png",
-    "answer": null
+    "image": null,
+    "answer": "Yes, Yes, Yes",
+    "type": "hotspot-yes-no",
+    "statements": [
+      {
+        "text": "Object detection can identify the location of a damaged product in an image.",
+        "correct": "Yes"
+      },
+      {
+        "text": "Object detection can identify multiple instances of a damaged product in an image.",
+        "correct": "Yes"
+      },
+      {
+        "text": "Object detection can identify multiple types of damaged products in an image.",
+        "correct": "Yes"
+      }
+    ],
+    "explanation": "Cada afirmación tiene una respuesta Sí/No correcta. La combinación correcta es: Yes, Yes, Yes.<br><br>\"Object detection can identify the location of a damaged product in an image.\" => Yes<br>\"Object detection can identify multiple instances of a damaged product in an image.\" => Yes<br>\"Object detection can identify multiple types of damaged products in an image.\" => Yes"
   },
   {
     "id": "93",
@@ -1286,28 +1559,48 @@
       "Computer Vision"
     ],
     "image": null,
-    "answer": null
+    "answer": "Computer Vision",
+    "explanation": "La respuesta correcta es: Computer Vision."
   },
   {
     "id": "94",
-    "question": "HOTSPOT\r\n\r\n-\r\n\r\nSelect the answer that correctly completes the sentence.",
-    "options": [],
-    "image": "../Preguntas/images/ai900/image-41.png",
-    "answer": null
+    "question": "{{option}} is used to identify multiple types of items in one image.",
+    "options": [
+      "Object detection",
+      "Image description",
+      "Image classification",
+      "Optical character recognition (OCR)"
+    ],
+    "image": null,
+    "answer": "Object detection",
+    "type": "dropdown",
+    "explanation": "La respuesta correcta es: Object detection."
   },
   {
     "id": "95",
-    "question": "HOTSPOT\r\n\r\n-\r\n\r\nSelect the answer that correctly completes the sentence.",
-    "options": [],
-    "image": "../Preguntas/images/ai900/image-42.png",
-    "answer": null
+    "question": "Identifying whether a kiosk user is annoyed by monitoring a video feed from the kiosk is an example of {{option}}",
+    "options": [
+      "face detection.",
+      "facial analysis.",
+      "facial recognition.",
+      "optical character recognition (OCR)."
+    ],
+    "image": null,
+    "answer": "facial analysis.",
+    "type": "dropdown",
+    "explanation": "La respuesta correcta es: facial analysis.."
   },
   {
     "id": "96",
     "question": "Match the Azure Cognitive Services to the appropriate actions.\r\n\r\nTo answer, drag the appropriate service from the column on the left to its action on the right. Each service may be used once, more than once, or not at all.",
     "options": [],
     "image": null,
-    "answer": null,
+    "answer": [
+      "Transcribe audible speech into text => Speech",
+      "Translate text between languages => Translator",
+      "Extract key phrases from text => Text Analytics",
+      "Interpret user intent from utterance => Language Understanding (LUIS)"
+    ],
     "type": "matching",
     "left": [
       "Transcribe audible speech into text",
@@ -1326,14 +1619,21 @@
       "Translate text between languages": "Translator",
       "Extract key phrases from text": "Text Analytics",
       "Interpret user intent from utterance": "Language Understanding (LUIS)"
-    }
+    },
+    "explanation": "La respuesta correcta se basa en emparejar cada elemento de la izquierda con su opción correcta de la derecha.<br><br>Transcribe audible speech into text => Speech<br>Translate text between languages => Translator<br>Extract key phrases from text => Text Analytics<br>Interpret user intent from utterance => Language Understanding (LUIS)"
   },
   {
     "id": "97",
-    "question": "HOTSPOT -\r\n\r\nSelect the answer that correctly completes the sentence.",
-    "options": [],
-    "image": "../Preguntas/images/ai900/image-44.png",
-    "answer": null
+    "question": "An AI solution that helps photographers take better portrait photographs by providing feedback on exposure, noise, and occlusion is an example of facial {{option}}",
+    "options": [
+      "analysis.",
+      "detection.",
+      "recognition."
+    ],
+    "image": null,
+    "answer": "analysis.",
+    "type": "dropdown",
+    "explanation": "La respuesta correcta es: analysis.."
   },
   {
     "id": "98",
@@ -1345,7 +1645,8 @@
       "Custom Vision classification"
     ],
     "image": null,
-    "answer": null
+    "answer": "Custom Vision object detection",
+    "explanation": "La respuesta correcta es: Custom Vision object detection."
   },
   {
     "id": "99",
@@ -1357,21 +1658,45 @@
       "object detection"
     ],
     "image": null,
-    "answer": null
+    "answer": "optical character recognition (OCR)",
+    "explanation": "La respuesta correcta es: optical character recognition (OCR)."
   },
   {
     "id": "100",
-    "question": "HOTSPOT\r\n\r\n-\r\n\r\nSelect the answer that correctly completes the sentence.",
-    "options": [],
-    "image": "../Preguntas/images/ai900/image-45.png",
-    "answer": null
+    "question": "{{option}} is used to identify multiple types of items in one image.",
+    "options": [
+      "Image classification",
+      "Image description",
+      "Object detection",
+      "Optical character recognition (OCR)"
+    ],
+    "image": null,
+    "answer": "Object detection",
+    "type": "dropdown",
+    "explanation": "La respuesta correcta es: Object detection."
   },
   {
     "id": "101",
-    "question": "HOTSPOT -\r\n\r\nFor each of the following statements, select Yes if the statement is true. Otherwise, select No.\r\n\r\nNOTE: Each correct selection is worth one point.\r\n\r\nHot Area:",
+    "question": "For each of the following statements, select Yes if the statement is true. Otherwise, select No.",
     "options": [],
-    "image": "../Preguntas/images/ai900/image-46.png",
-    "answer": null
+    "image": null,
+    "answer": "Yes, No, No",
+    "type": "hotspot-yes-no",
+    "statements": [
+      {
+        "text": "Providing an explanation of the outcome of a credit loan application is an example of the Microsoft transparency principle for responsible AI.",
+        "correct": "Yes"
+      },
+      {
+        "text": "A triage bot that prioritizes insurance claims based on injuries is an example of the Microsoft reliability and safety principle for responsible AI.",
+        "correct": "No"
+      },
+      {
+        "text": "An AI solution that is offered at different prices for different sales territories is an example of the Microsoft inclusiveness principle for responsible AI.",
+        "correct": "No"
+      }
+    ],
+    "explanation": "Cada afirmación tiene una respuesta Sí/No correcta. La combinación correcta es: Yes, No, No.<br><br>\"Providing an explanation of the outcome of a credit loan application is an example of the Microsoft transparency principle for responsible AI.\" => Yes<br>\"A triage bot that prioritizes insurance claims based on injuries is an example of the Microsoft reliability and safety principle for responsible AI.\" => No<br>\"An AI solution that is offered at different prices for different sales territories is an example of the Microsoft inclusiveness principle for responsible AI.\" => No"
   },
   {
     "id": "102",
@@ -1383,28 +1708,47 @@
       "optical character recognition (OCR)"
     ],
     "image": null,
-    "answer": "optical character recognition (OCR)"
+    "answer": "optical character recognition (OCR)",
+    "explanation": "La respuesta correcta es: optical character recognition (OCR)."
   },
   {
     "id": "103",
-    "question": "HOTSPOT\r\n\r\n-\r\n\r\nSelect the answer that correctly completes the sentence.",
-    "options": [],
-    "image": "../Preguntas/images/ai900/image-47.png",
-    "answer": null
+    "question": "You can use the {{option}} service to train an object detection model by using your own images.",
+    "options": [
+      "Computer Vision",
+      "Custom Vision",
+      "Form Recognizer",
+      "Azure Video Analyzer for Media"
+    ],
+    "image": null,
+    "answer": "Custom Vision",
+    "type": "dropdown",
+    "explanation": "La respuesta correcta es: Custom Vision."
   },
   {
     "id": "104",
-    "question": "HOTSPOT -\r\n\r\nTo complete the sentence, select the appropriate option in the answer area.",
-    "options": [],
-    "image": "../Preguntas/images/ai900/image-48.png",
-    "answer": null
+    "question": "An AI solution that helps photographers take better portrait photographs by providing feedback on exposure, noise, and occlusion is an example of facial {{option}}",
+    "options": [
+      "analysis.",
+      "detection.",
+      "recognition."
+    ],
+    "image": null,
+    "answer": "analysis.",
+    "type": "dropdown",
+    "explanation": "La respuesta correcta es: analysis.."
   },
   {
     "id": "105",
     "question": "Match the Azure Cognitive Services to the appropriate AI workloads.\r\n\r\nTo answer, drag the appropriate service from the column on the left to its workload on the right. Each service may be used once, more than once, or not at all.",
     "options": [],
     "image": null,
-    "answer": null,
+    "answer": [
+      "Transcribe audible speech into text => Speech",
+      "Translate text between languages => Translator",
+      "Extract key phrases from text => Text Analytics",
+      "Interpret user intent from utterance => Language Understanding (LUIS)"
+    ],
     "type": "matching",
     "left": [
       "Transcribe audible speech into text",
@@ -1423,7 +1767,8 @@
       "Translate text between languages": "Translator",
       "Extract key phrases from text": "Text Analytics",
       "Interpret user intent from utterance": "Language Understanding (LUIS)"
-    }
+    },
+    "explanation": "La respuesta correcta se basa en emparejar cada elemento de la izquierda con su opción correcta de la derecha.<br><br>Transcribe audible speech into text => Speech<br>Translate text between languages => Translator<br>Extract key phrases from text => Text Analytics<br>Interpret user intent from utterance => Language Understanding (LUIS)"
   },
   {
     "id": "106",
@@ -1435,7 +1780,8 @@
       "Computer Vision"
     ],
     "image": null,
-    "answer": null
+    "answer": "Computer Vision",
+    "explanation": "La respuesta correcta es: Computer Vision."
   },
   {
     "id": "107",
@@ -1447,7 +1793,8 @@
       "Classify images"
     ],
     "image": null,
-    "answer": null
+    "answer": "Classify email messages as work-related or personal.",
+    "explanation": "La respuesta correcta es: Classify email messages as work-related or personal.."
   },
   {
     "id": "108",
@@ -1461,14 +1808,31 @@
     "image": null,
     "answer": [
       "Azure Bot Service"
-    ]
+    ],
+    "explanation": "Las respuestas correctas son: Azure Bot Service."
   },
   {
     "id": "109",
-    "question": "HOTSPOT\r\n\r\n-\r\n\r\nFor each of the following statements, select Yes if the statement is true. Otherwise, select No.\r\n\r\nNOTE: Each correct selection is worth one point.",
+    "question": "For each of the following statements, select Yes if the statement is true. Otherwise, select No.",
     "options": [],
-    "image": "../Preguntas/images/ai900/image-50.png",
-    "answer": null
+    "image": null,
+    "answer": "No, Yes, Yes",
+    "type": "hotspot-yes-no",
+    "statements": [
+      {
+        "text": "The following service call will accept English text as an input and output Italian and French text. /translate?from=it&to=fr&to=en",
+        "correct": "No"
+      },
+      {
+        "text": "The following service call will accept English text as an input and output Italian and French text. /translate?from=en&to=fr&to=it",
+        "correct": "Yes"
+      },
+      {
+        "text": "The Translator service can be used to translate documents from English to French.",
+        "correct": "Yes"
+      }
+    ],
+    "explanation": "Cada afirmación tiene una respuesta Sí/No correcta. La combinación correcta es: No, Yes, Yes.<br><br>\"The following service call will accept English text as an input and output Italian and French text. /translate?from=it&to=fr&to=en\" => No<br>\"The following service call will accept English text as an input and output Italian and French text. /translate?from=en&to=fr&to=it\" => Yes<br>\"The Translator service can be used to translate documents from English to French.\" => Yes"
   },
   {
     "id": "110",
@@ -1480,7 +1844,8 @@
       "entity recognition"
     ],
     "image": null,
-    "answer": null
+    "answer": "sentiment analysis",
+    "explanation": "La respuesta correcta es: sentiment analysis."
   },
   {
     "id": "111",
@@ -1492,7 +1857,8 @@
       "language modeling"
     ],
     "image": null,
-    "answer": null
+    "answer": "language modeling",
+    "explanation": "La respuesta correcta es: language modeling."
   },
   {
     "id": "112",
@@ -1504,14 +1870,22 @@
       "Randomly split the data into columns for training and columns for evaluation."
     ],
     "image": null,
-    "answer": "Randomly split the data into rows for training and rows for evaluation."
+    "answer": "Randomly split the data into rows for training and rows for evaluation.",
+    "explanation": "La respuesta correcta es: Randomly split the data into rows for training and rows for evaluation.."
   },
   {
     "id": "113",
     "question": "Match the principles of responsible AI to appropriate requirements.",
     "options": [],
     "image": null,
-    "answer": null,
+    "answer": [
+      "Ensure AI systems operate as designed => Reliability & Safety",
+      "Protect data and privacy => Privacy & Security",
+      "Empower everyone including those with disabilities => Inclusiveness",
+      "Ensure AI systems are explainable => Transparency",
+      "Humans are responsible for AI systems => Accountability",
+      "No bias based on race or gender => Fairness"
+    ],
     "type": "matching",
     "left": [
       "Ensure AI systems operate as designed",
@@ -1536,14 +1910,20 @@
       "Ensure AI systems are explainable": "Transparency",
       "Humans are responsible for AI systems": "Accountability",
       "No bias based on race or gender": "Fairness"
-    }
+    },
+    "explanation": "La respuesta correcta se basa en emparejar cada elemento de la izquierda con su opción correcta de la derecha.<br><br>Ensure AI systems operate as designed => Reliability & Safety<br>Protect data and privacy => Privacy & Security<br>Empower everyone including those with disabilities => Inclusiveness<br>Ensure AI systems are explainable => Transparency<br>Humans are responsible for AI systems => Accountability<br>No bias based on race or gender => Fairness"
   },
   {
     "id": "114",
     "question": "Match the Azure Cognitive Services service to the appropriate actions.\r\n\r\nTo answer, drag the appropriate service from the column on the left to its action on the right. Each service may be used once, more than once, or not at all.",
     "options": [],
     "image": null,
-    "answer": null,
+    "answer": [
+      "Transcribe audible speech into text => Speech",
+      "Translate text between languages => Translator",
+      "Extract key phrases from text => Text Analytics",
+      "Interpret user intent from utterance => Language Understanding (LUIS)"
+    ],
     "type": "matching",
     "left": [
       "Transcribe audible speech into text",
@@ -1562,14 +1942,31 @@
       "Translate text between languages": "Translator",
       "Extract key phrases from text": "Text Analytics",
       "Interpret user intent from utterance": "Language Understanding (LUIS)"
-    }
+    },
+    "explanation": "La respuesta correcta se basa en emparejar cada elemento de la izquierda con su opción correcta de la derecha.<br><br>Transcribe audible speech into text => Speech<br>Translate text between languages => Translator<br>Extract key phrases from text => Text Analytics<br>Interpret user intent from utterance => Language Understanding (LUIS)"
   },
   {
     "id": "115",
-    "question": "HOTSPOT -\r\n\r\nFor each of the following statements, select Yes if the statement is true. Otherwise, select No.\r\n\r\nNOTE: Each correct selection is worth one point.",
+    "question": "For each of the following statements, select Yes if the statement is true. Otherwise, select No.",
     "options": [],
-    "image": "../Preguntas/images/ai900/image-53.png",
-    "answer": null
+    "image": null,
+    "answer": "Yes, No, Yes",
+    "type": "hotspot-yes-no",
+    "statements": [
+      {
+        "text": "A webchat bot can interact with users visiting a website.",
+        "correct": "Yes"
+      },
+      {
+        "text": "Automatically generating captions for pre-recorded videos is an example of natural language processing.",
+        "correct": "No"
+      },
+      {
+        "text": "A smart device in the home that responds to questions such as 'What will the weather be like today?' is an example of natural language processing.",
+        "correct": "Yes"
+      }
+    ],
+    "explanation": "Cada afirmación tiene una respuesta Sí/No correcta. La combinación correcta es: Yes, No, Yes.<br><br>\"A webchat bot can interact with users visiting a website.\" => Yes<br>\"Automatically generating captions for pre-recorded videos is an example of natural language processing.\" => No<br>\"A smart device in the home that responds to questions such as 'What will the weather be like today?' is an example of natural language processing.\" => Yes"
   },
   {
     "id": "116",
@@ -1581,21 +1978,54 @@
       "translation"
     ],
     "image": null,
-    "answer": null
+    "answer": "translation",
+    "explanation": "La respuesta correcta es: translation."
   },
   {
     "id": "117",
-    "question": "HOTSPOT\r\n\r\n-\r\n\r\nFor each of the following statements, select Yes if the statement is true. Otherwise, select No.\r\n\r\nNOTE: Each correct selection is worth one point.",
+    "question": "For each of the following statements, select Yes if the statement is true. Otherwise, select No.",
     "options": [],
-    "image": "../Preguntas/images/ai900/image-54.png",
-    "answer": null
+    "image": null,
+    "answer": "Yes, No, Yes",
+    "type": "hotspot-yes-no",
+    "statements": [
+      {
+        "text": "Chatbots can support voice input.",
+        "correct": "Yes"
+      },
+      {
+        "text": "A separate chatbot is required for each communication channel.",
+        "correct": "No"
+      },
+      {
+        "text": "Chatbots manage conversation flows by using a combination of natural language and constrained option responses.",
+        "correct": "Yes"
+      }
+    ],
+    "explanation": "Cada afirmación tiene una respuesta Sí/No correcta. La combinación correcta es: Yes, No, Yes.<br><br>\"Chatbots can support voice input.\" => Yes<br>\"A separate chatbot is required for each communication channel.\" => No<br>\"Chatbots manage conversation flows by using a combination of natural language and constrained option responses.\" => Yes"
   },
   {
     "id": "118",
-    "question": "HOTSPOT -\r\n\r\nFor each of the following statements, select Yes if the statement is true. Otherwise, select No.\r\n\r\nNOTE: Each correct selection is worth one point.",
+    "question": "For each of the following statements, select Yes if the statement is true. Otherwise, select No.",
     "options": [],
-    "image": "../Preguntas/images/ai900/image-55.png",
-    "answer": null
+    "image": null,
+    "answer": "Yes, No, No",
+    "type": "hotspot-yes-no",
+    "statements": [
+      {
+        "text": "A bot that responds to queries by internal users is an example of a natural language processing workload.",
+        "correct": "Yes"
+      },
+      {
+        "text": "A mobile application that displays images relating to an entered search term is an example of a natural language processing workload.",
+        "correct": "No"
+      },
+      {
+        "text": "A web form used to submit a request to reset a password is an example of a natural language processing workload.",
+        "correct": "No"
+      }
+    ],
+    "explanation": "Cada afirmación tiene una respuesta Sí/No correcta. La combinación correcta es: Yes, No, No.<br><br>\"A bot that responds to queries by internal users is an example of a natural language processing workload.\" => Yes<br>\"A mobile application that displays images relating to an entered search term is an example of a natural language processing workload.\" => No<br>\"A web form used to submit a request to reset a password is an example of a natural language processing workload.\" => No"
   },
   {
     "id": "119",
@@ -1607,14 +2037,31 @@
       "entity recognition"
     ],
     "image": null,
-    "answer": null
+    "answer": "entity recognition",
+    "explanation": "La respuesta correcta es: entity recognition."
   },
   {
     "id": "120",
-    "question": "HOTSPOT\r\n\r\n-\r\n\r\nFor each of the following statements, select Yes if the statement is true. Otherwise, select No.\r\n\r\nNOTE: Each correct selection is worth one point.",
+    "question": "For each of the following statements, select Yes if the statement is true. Otherwise, select No.",
     "options": [],
-    "image": "../Preguntas/images/ai900/image-56.png",
-    "answer": null
+    "image": null,
+    "answer": "No, Yes, No",
+    "type": "hotspot-yes-no",
+    "statements": [
+      {
+        "text": "You can use Language Service's question answering to query an Azure SQL database.",
+        "correct": "No"
+      },
+      {
+        "text": "You should use Language Service's question answering when you want a knowledge base to provide the same answer to different users who submit similar questions.",
+        "correct": "Yes"
+      },
+      {
+        "text": "Language Service's question answering can determine the intent of a user utterance.",
+        "correct": "No"
+      }
+    ],
+    "explanation": "Cada afirmación tiene una respuesta Sí/No correcta. La combinación correcta es: No, Yes, No.<br><br>\"You can use Language Service's question answering to query an Azure SQL database.\" => No<br>\"You should use Language Service's question answering when you want a knowledge base to provide the same answer to different users who submit similar questions.\" => Yes<br>\"Language Service's question answering can determine the intent of a user utterance.\" => No"
   },
   {
     "id": "121",
@@ -1626,14 +2073,22 @@
       "key phrase extraction"
     ],
     "image": null,
-    "answer": "key phrase extraction"
+    "answer": "key phrase extraction",
+    "explanation": "La respuesta correcta es: key phrase extraction."
   },
   {
     "id": "122",
     "question": "You are designing a system that will generate insurance quotes automatically.\r\n\r\nMatch the Microsoft responsible AI principles to the appropriate requirements.\r\n\r\nTo answer, drag the appropriate principle from the column on the left to its requirement on the right. Each principle may be used once, more than once, or not at all.",
     "options": [],
     "image": null,
-    "answer": null,
+    "answer": [
+      "Ensure AI systems operate as designed => Reliability & Safety",
+      "Protect data and privacy => Privacy & Security",
+      "Empower everyone including those with disabilities => Inclusiveness",
+      "Ensure AI systems are explainable => Transparency",
+      "Humans are responsible for AI systems => Accountability",
+      "No bias based on race or gender => Fairness"
+    ],
     "type": "matching",
     "left": [
       "Ensure AI systems operate as designed",
@@ -1658,7 +2113,8 @@
       "Ensure AI systems are explainable": "Transparency",
       "Humans are responsible for AI systems": "Accountability",
       "No bias based on race or gender": "Fairness"
-    }
+    },
+    "explanation": "La respuesta correcta se basa en emparejar cada elemento de la izquierda con su opción correcta de la derecha.<br><br>Ensure AI systems operate as designed => Reliability & Safety<br>Protect data and privacy => Privacy & Security<br>Empower everyone including those with disabilities => Inclusiveness<br>Ensure AI systems are explainable => Transparency<br>Humans are responsible for AI systems => Accountability<br>No bias based on race or gender => Fairness"
   },
   {
     "id": "123",
@@ -1670,7 +2126,8 @@
       "Pattern.any"
     ],
     "image": null,
-    "answer": null
+    "answer": "regular expression",
+    "explanation": "La respuesta correcta es: regular expression."
   },
   {
     "id": "124",
@@ -1689,14 +2146,25 @@
     "explanation": "1. Train the model using your data.<br>2. Evaluate the model to ensure it meets performance metrics.<br>3. Register the model in the workspace to version and track it before deployment.",
     "options": [],
     "image": null,
-    "answer": null
+    "answer": [
+      "Train model",
+      "Model evaluation",
+      "Register model"
+    ]
   },
   {
     "id": "125",
-    "question": "HOTSPOT\r\n\r\n-\r\n\r\nTo complete the sentence, select the appropriate option in the answer area.",
-    "options": [],
-    "image": "../Preguntas/images/ai900/image-59.png",
-    "answer": null
+    "question": "Returning a bounding box that indicates the location of a vehicle in an image is an example of {{option}}",
+    "options": [
+      "image classification",
+      "object detection",
+      "optical character recognition (OCR)",
+      "facial detection"
+    ],
+    "image": null,
+    "answer": "object detection",
+    "type": "dropdown",
+    "explanation": "La respuesta correcta es: object detection."
   },
   {
     "id": "126",
@@ -1708,21 +2176,37 @@
       "inclusiveness"
     ],
     "image": null,
-    "answer": null
+    "answer": "inclusiveness",
+    "explanation": "La respuesta correcta es: inclusiveness."
   },
   {
     "id": "127",
-    "question": "HOTSPOT\r\n\r\n-\r\n\r\nYou have a large dataset that contains motor vehicle sales data.\r\n\r\nYou need to train an automated machine learning (automated ML) model to predict vehicle sale values based on the type of vehicle.\r\n\r\nWhich task should you select? To answer, select the appropriate task in the answer area.\r\n\r\nNOTE: Each correct selection is worth one point.",
-    "options": [],
-    "image": "../Preguntas/images/ai900/image-60.png",
-    "answer": null
+    "question": "You need to train an automated machine learning (automated ML) model to predict vehicle sale values based on the type of vehicle. Which task should you select?",
+    "options": [
+      "Classification",
+      "Regression",
+      "Time series forecasting",
+      "Natural Language Processing (preview)",
+      "Computer Vision (preview)"
+    ],
+    "image": null,
+    "answer": "Regression",
+    "type": "dropdown",
+    "explanation": "La respuesta correcta es: Regression."
   },
   {
     "id": "128",
-    "question": "HOTSPOT -\r\n\r\nSelect the answer that correctly completes the sentence.",
-    "options": [],
-    "image": "../Preguntas/images/ai900/image-61.png",
-    "answer": null
+    "question": "When evaluating the performance of a model, the {{option}} displays the predicted and actual positives and negatives by using a grid of 0 and 1 values.",
+    "options": [
+      "AUC metric",
+      "confusion matrix",
+      "ROC curve",
+      "threshold"
+    ],
+    "image": null,
+    "answer": "confusion matrix",
+    "type": "dropdown",
+    "explanation": "La respuesta correcta es: confusion matrix."
   },
   {
     "id": "129",
@@ -1734,21 +2218,35 @@
       "Language"
     ],
     "image": null,
-    "answer": "Form Recognizer"
+    "answer": "Form Recognizer",
+    "explanation": "La respuesta correcta es: Form Recognizer."
   },
   {
     "id": "130",
-    "question": "HOTSPOT\r\n\r\n-\r\n\r\nSelect the answer that correctly completes the sentence.",
-    "options": [],
-    "image": "../Preguntas/images/ai900/image-62.png",
-    "answer": null
+    "question": "Predicting how many vehicles will travel across a bridge on a given day is an example of {{option}}",
+    "options": [
+      "classification",
+      "clustering",
+      "regression"
+    ],
+    "image": null,
+    "answer": "regression",
+    "type": "dropdown",
+    "explanation": "La respuesta correcta es: regression."
   },
   {
     "id": "131",
-    "question": "HOTSPOT\r\n\r\n-\r\n\r\nSelect the answer that correctly completes the sentence.",
-    "options": [],
-    "image": "../Preguntas/images/ai900/image-63.png",
-    "answer": null
+    "question": "In a machine learning model, the data that is used as inputs are called {{option}}",
+    "options": [
+      "features",
+      "functions",
+      "labels",
+      "instances"
+    ],
+    "image": null,
+    "answer": "features",
+    "type": "dropdown",
+    "explanation": "La respuesta correcta es: features."
   },
   {
     "id": "132",
@@ -1760,7 +2258,8 @@
       "image analysis"
     ],
     "image": null,
-    "answer": null
+    "answer": "facial detection and facial recognition",
+    "explanation": "La respuesta correcta es: facial detection and facial recognition."
   },
   {
     "id": "133",
@@ -1773,7 +2272,11 @@
       "describing the contents of an image"
     ],
     "image": null,
-    "answer": null
+    "answer": [
+      "assigning the color pixels in an image to object names",
+      "describing the contents of an image"
+    ],
+    "explanation": "Las respuestas correctas son: assigning the color pixels in an image to object names, describing the contents of an image."
   },
   {
     "id": "134",
@@ -1785,7 +2288,8 @@
       "Computer Vision optical character recognition (OCR)"
     ],
     "image": null,
-    "answer": null
+    "answer": "Custom Vision object detection",
+    "explanation": "La respuesta correcta es: Custom Vision object detection."
   },
   {
     "id": "135",
@@ -1800,14 +2304,22 @@
     "answer": [
       "Implement a process of AI model validation as part of the software review process",
       "Establish a risk governance committee that includes members of the legal team, members of the risk management team, and a privacy officer"
-    ]
+    ],
+    "explanation": "Las respuestas correctas son: Implement a process of AI model validation as part of the software review process, Establish a risk governance committee that includes members of the legal team, members of the risk management team, and a privacy officer."
   },
   {
     "id": "136",
-    "question": "HOTSPOT -\r\n\r\nSelect the answer that correctly completes the sentence.",
-    "options": [],
-    "image": "../Preguntas/images/ai900/image-64.png",
-    "answer": null
+    "question": "A traffic monitoring system that collects vehicle registration numbers from CCTV footage is an example of {{option}} in the Computer Vision service.",
+    "options": [
+      "image classification",
+      "object detection",
+      "spatial Analysis",
+      "text extraction"
+    ],
+    "image": null,
+    "answer": "text extraction",
+    "type": "dropdown",
+    "explanation": "La respuesta correcta es: text extraction."
   },
   {
     "id": "137",
@@ -1819,21 +2331,48 @@
       "Computer Vision"
     ],
     "image": null,
-    "answer": null
+    "answer": "Face",
+    "explanation": "La respuesta correcta es: Face."
   },
   {
     "id": "138",
-    "question": "HOTSPOT\r\n\r\n-\r\n\r\nSelect the answer that correctly completes the sentence.",
-    "options": [],
-    "image": "../Preguntas/images/ai900/image-66.png",
-    "answer": null
+    "question": "A historian can use {{option}} to digitize newspaper articles",
+    "options": [
+      "facial analysis",
+      "image classification",
+      "object detection",
+      "optical character recognition (OCR)"
+    ],
+    "image": null,
+    "answer": "optical character recognition (OCR)",
+    "type": "dropdown",
+    "explanation": "La respuesta correcta es: optical character recognition (OCR)."
   },
   {
     "id": "139",
-    "question": "HOTSPOT\r\n\r\n-\r\n\r\nYou have an app that identifies birds in images. The app performs the following tasks:\r\n\r\n• Identifies the location of the birds in the image\r\n\r\n• Identifies the species of the birds in the image\r\n\r\nWhich type of computer vision does each task use? To answer, select the appropriate options in the answer area.\r\n\r\nNOTE: Each correct selection is worth one point.",
+    "question": "Match the tasks to the appropriate Computer Vision capabilities.",
     "options": [],
-    "image": "../Preguntas/images/ai900/image-67.png",
-    "answer": null
+    "image": null,
+    "answer": [
+      "Locate the birds => Object detection",
+      "Identify the species of the birds => Image classification"
+    ],
+    "type": "matching",
+    "left": [
+      "Locate the birds",
+      "Identify the species of the birds"
+    ],
+    "right": [
+      "Automated captioning",
+      "Image classification",
+      "Object detection",
+      "Optical character recognition (OCR)"
+    ],
+    "correctMap": {
+      "Locate the birds": "Object detection",
+      "Identify the species of the birds": "Image classification"
+    },
+    "explanation": "La respuesta correcta se basa en emparejar cada elemento de la izquierda con su opción correcta de la derecha.<br><br>Locate the birds => Object detection<br>Identify the species of the birds => Image classification"
   },
   {
     "id": "140",
@@ -1845,33 +2384,50 @@
       "translation and sentiment analysis"
     ],
     "image": null,
-    "answer": null
+    "answer": "translation and key phrase extraction",
+    "explanation": "La respuesta correcta es: translation and key phrase extraction."
   },
   {
     "id": "141",
-    "question": "HOTSPOT\r\n\r\n-\r\n\r\nSelect the answer that correctly completes the sentence.",
-    "options": [],
-    "image": "../Preguntas/images/ai900/image-68.png",
-    "answer": null
+    "question": "The interactive answering of questions entered by a user as part of an application is an example of {{option}}",
+    "options": [
+      "anomaly detection.",
+      "computer vision.",
+      "natural language processing.",
+      "forecasting."
+    ],
+    "image": null,
+    "answer": "natural language processing.",
+    "type": "dropdown",
+    "explanation": "La respuesta correcta es: natural language processing.."
   },
   {
     "id": "142",
-    "question": "You have 100 instructional videos that do NOT contain any audio. Each instructional video has a script.\r\n\r\nYou need to generate a narration audio file for each video based on the script.\r\n\r\nWhich type of workload should you use?",
+    "question": "Natural language processing can be used to {{option}}",
     "options": [
-      "language modeling",
-      "speech recognition",
-      "speech synthesis",
-      "translation"
+      "classify email messages as work-related or personal",
+      "predict the number of future car rentals",
+      "predict which website visitors will make a transaction",
+      "stop a process in a factory when extremely high temperatures are registered"
     ],
     "image": null,
-    "answer": null
+    "answer": "classify email messages as work-related or personal",
+    "type": "dropdown",
+    "explanation": "La respuesta correcta es: classify email messages as work-related or personal."
   },
   {
     "id": "143",
-    "question": "HOTSPOT\r\n\r\n-\r\n\r\nSelect the answer that correctly completes the sentence.",
-    "options": [],
-    "image": "../Preguntas/images/ai900/image-69.png",
-    "answer": null
+    "question": "Natural language processing can be used to {{option}}",
+    "options": [
+      "classify email messages as work-related or personal",
+      "predict the number of future car rentals",
+      "predict which website visitors will make a transaction",
+      "stop a process in a factory when extremely high temperatures are registered"
+    ],
+    "image": null,
+    "answer": "classify email messages as work-related or personal",
+    "type": "dropdown",
+    "explanation": "La respuesta correcta es: classify email messages as work-related or personal."
   },
   {
     "id": "144",
@@ -1883,44 +2439,53 @@
       "Speech"
     ],
     "image": null,
-    "answer": null
+    "answer": "Language",
+    "explanation": "La respuesta correcta es: Language."
   },
   {
     "id": "145",
-    "question": "You are building a Language Understanding model for an e-commerce business.\r\n\r\nYou need to ensure that the model detects when utterances are outside the intended scope of the model.\r\n\r\nWhat should you do?",
+    "question": "According to Microsoft's {{option}} principle of responsible AI, AI systems should NOT reflect biases from the data sets that are used to train the systems.",
     "options": [
-      "Export the model",
-      "Add utterances to the None intent",
-      "Create a prebuilt task entity",
-      "Create a new model"
+      "accountability",
+      "fairness",
+      "inclusiveness",
+      "transparency"
     ],
     "image": null,
-    "answer": null
+    "answer": "fairness",
+    "type": "dropdown",
+    "explanation": "La respuesta correcta es: fairness."
   },
   {
     "id": "146",
-    "question": "HOTSPOT -\r\n\r\nTo complete the sentence, select the appropriate option in the answer area.\r\n\r\nHot Area:",
-    "options": [],
-    "image": "../Preguntas/images/ai900/image-70.png",
-    "answer": null
+    "question": "According to Microsoft's {{option}} principle of responsible AI, AI systems should NOT reflect biases from the data sets that are used to train the systems.",
+    "options": [
+      "accountability",
+      "fairness",
+      "inclusiveness",
+      "transparency"
+    ],
+    "image": null,
+    "answer": "fairness",
+    "type": "dropdown",
+    "explanation": "La respuesta correcta es: fairness."
   },
   {
     "id": "147",
-    "question": "HOTSPOT\r\n\r\n-\r\n\r\nSelect the answer that correctly completes the sentence.",
-    "options": [],
-    "image": "../Preguntas/images/ai900/image-71.png",
-    "answer": null
+    "question": "{{option}} can be used to build no-code apps that use built-in natural language processing models",
+    "options": [
+      "Azure Health Bot",
+      "Microsoft Bot Framework",
+      "Power Virtual Agents"
+    ],
+    "image": null,
+    "answer": "Power Virtual Agents",
+    "type": "dropdown",
+    "explanation": "La respuesta correcta es: Power Virtual Agents."
   },
   {
     "id": "148",
-    "question": "HOTSPOT\r\n\r\n-\r\n\r\nFor each of the following statement, select Yes if the statement is true. Otherwise, select No.\r\n\r\nNOTE: Each correct selection is worth one point.",
-    "options": [],
-    "image": "../Preguntas/images/ai900/image-72.png",
-    "answer": null
-  },
-  {
-    "id": "149",
-    "question": "What is an example of the Microsoft responsible AI principle of transparency?",
+    "question": "For each of the following statements, select Yes if the statement is true. Otherwise, select No.",
     "options": [
       "ensuring that opportunities are allocated equally to all applicants",
       "helping users understand the decisions made by an AI system",
@@ -1928,11 +2493,55 @@
       "ensuring that the privileged data of users is stored in a secure manner"
     ],
     "image": null,
-    "answer": null
+    "answer": "Yes, Yes, No",
+    "type": "hotspot-yes-no",
+    "statements": [
+      {
+        "text": "A smart device in the home that responds to questions such as 'When is my next appointment?' is an example of conversational AI.",
+        "correct": "Yes"
+      },
+      {
+        "text": "An interactive webchat feature on a company website can be implemented by using Azure Bot Service.",
+        "correct": "Yes"
+      },
+      {
+        "text": "Automatically generating captions for pre-recorded videos is an example of conversation AI.",
+        "correct": "No"
+      }
+    ],
+    "explanation": "Cada afirmación tiene una respuesta Sí/No correcta. La combinación correcta es: Yes, Yes, No.<br><br>\"A smart device in the home that responds to questions such as 'When is my next appointment?' is an example of conversational AI.\" => Yes<br>\"An interactive webchat feature on a company website can be implemented by using Azure Bot Service.\" => Yes<br>\"Automatically generating captions for pre-recorded videos is an example of conversation AI.\" => No"
+  },
+  {
+    "id": "149",
+    "question": "For each of the following statements, select Yes if the statement is true. Otherwise, select No.",
+    "options": [
+      "ensuring that opportunities are allocated equally to all applicants",
+      "helping users understand the decisions made by an AI system",
+      "ensuring that developers are accountable for the solutions they create",
+      "ensuring that the privileged data of users is stored in a secure manner"
+    ],
+    "image": null,
+    "answer": "Yes, Yes, No",
+    "type": "hotspot-yes-no",
+    "statements": [
+      {
+        "text": "A smart device in the home that responds to questions such as 'When is my next appointment?' is an example of conversational AI.",
+        "correct": "Yes"
+      },
+      {
+        "text": "An interactive webchat feature on a company website can be implemented by using Azure Bot Service.",
+        "correct": "Yes"
+      },
+      {
+        "text": "Automatically generating captions for pre-recorded videos is an example of conversation AI.",
+        "correct": "No"
+      }
+    ],
+    "explanation": "Cada afirmación tiene una respuesta Sí/No correcta. La combinación correcta es: Yes, Yes, No.<br><br>\"A smart device in the home that responds to questions such as 'When is my next appointment?' is an example of conversational AI.\" => Yes<br>\"An interactive webchat feature on a company website can be implemented by using Azure Bot Service.\" => Yes<br>\"Automatically generating captions for pre-recorded videos is an example of conversation AI.\" => No"
   },
   {
     "id": "150",
-    "question": "You need to provide customers with the ability to query the status of orders by using phones, social media, or digital assistants.\r\n\r\nWhat should you use?",
+    "question": "For each of the following statements, select Yes if the statement is true. Otherwise, select No.",
     "options": [
       "an Azure Machine Learning model",
       "the Translator service",
@@ -1940,7 +2549,23 @@
       "Azure Bot Service"
     ],
     "image": null,
-    "answer": null
+    "answer": "Yes, No, Yes",
+    "type": "hotspot-yes-no",
+    "statements": [
+      {
+        "text": "An interactive webchat feature on a company website can be implemented by using Azure Bot Service.",
+        "correct": "Yes"
+      },
+      {
+        "text": "Automatically generating captions for pre-recorded videos is an example of conversational AI.",
+        "correct": "No"
+      },
+      {
+        "text": "A smart device in the home that responds to questions such as 'When is my next appointment?' is an example of conversational AI",
+        "correct": "Yes"
+      }
+    ],
+    "explanation": "Cada afirmación tiene una respuesta Sí/No correcta. La combinación correcta es: Yes, No, Yes.<br><br>\"An interactive webchat feature on a company website can be implemented by using Azure Bot Service.\" => Yes<br>\"Automatically generating captions for pre-recorded videos is an example of conversational AI.\" => No<br>\"A smart device in the home that responds to questions such as 'When is my next appointment?' is an example of conversational AI\" => Yes"
   },
   {
     "id": "151",
@@ -1952,36 +2577,53 @@
       "Language service"
     ],
     "image": null,
-    "answer": null
+    "answer": "Azure Bot Service",
+    "explanation": "La respuesta correcta es: Azure Bot Service."
   },
   {
     "id": "152",
-    "question": "HOTSPOT\r\n\r\n-\r\n\r\nFor each of the following statements, select Yes if the statement is true. Otherwise, select No.\r\n\r\nNOTE: Each correct selection is worth one point.",
-    "options": [],
-    "image": "../Preguntas/images/ai900/image-73.png",
-    "answer": null
+    "question": "Detecting unusual temperature fluctuations for a large machine is an example of {{option}}",
+    "options": [
+      "a computer vision workload.",
+      "a knowledge mining workload.",
+      "a natural language processing (NLP) workload.",
+      "an anomaly detection workload."
+    ],
+    "image": null,
+    "answer": "an anomaly detection workload.",
+    "type": "dropdown",
+    "explanation": "La respuesta correcta es: an anomaly detection workload.."
   },
   {
     "id": "153",
-    "question": "Which Azure Cognitive Services service can be used to identify documents that contain sensitive information?",
+    "question": "According to Microsoft's {{option}} principle of responsible AI, AI systems should NOT reflect biases from the data sets that are used to train the systems.",
     "options": [
-      "Custom Vision",
-      "Conversational Language Understanding",
-      "Form Recognizer"
+      "accountability",
+      "fairness",
+      "inclusiveness",
+      "transparency"
     ],
     "image": null,
-    "answer": null
+    "answer": "fairness",
+    "type": "dropdown",
+    "explanation": "La respuesta correcta es: fairness."
   },
   {
     "id": "154",
-    "question": "HOTSPOT\r\n\r\n-\r\n\r\nSelect the answer that correctly completes the sentence.",
-    "options": [],
-    "image": "../Preguntas/images/ai900/image-74.png",
-    "answer": null
+    "question": "Predicting how many hours of overtime a delivery person will work based on the number of orders received is an example of {{option}}",
+    "options": [
+      "classification.",
+      "clustering.",
+      "regression."
+    ],
+    "image": null,
+    "answer": "regression.",
+    "type": "dropdown",
+    "explanation": "La respuesta correcta es: regression.."
   },
   {
     "id": "155",
-    "question": "A smart device that responds to the question “What is the stock price of Contoso. Ltd.?” is an example of which AI workload?",
+    "question": "Match the workload types to the appropriate scenarios.",
     "options": [
       "knowledge mining",
       "natural language processing",
@@ -1989,7 +2631,28 @@
       "anomaly detection"
     ],
     "image": null,
-    "answer": null
+    "answer": [
+      "Generate captions for images => Image classification",
+      "Extract movie title names from movie poster images => Optical character recognition (OCR)",
+      "Locate vehicles in images => Object detection"
+    ],
+    "type": "matching",
+    "left": [
+      "Generate captions for images",
+      "Extract movie title names from movie poster images",
+      "Locate vehicles in images"
+    ],
+    "right": [
+      "Image classification",
+      "Object detection",
+      "Optical character recognition (OCR)"
+    ],
+    "correctMap": {
+      "Generate captions for images": "Image classification",
+      "Extract movie title names from movie poster images": "Optical character recognition (OCR)",
+      "Locate vehicles in images": "Object detection"
+    },
+    "explanation": "La respuesta correcta se basa en emparejar cada elemento de la izquierda con su opción correcta de la derecha.<br><br>Generate captions for images => Image classification<br>Extract movie title names from movie poster images => Optical character recognition (OCR)<br>Locate vehicles in images => Object detection"
   },
   {
     "id": "156",
@@ -2012,14 +2675,41 @@
     },
     "options": [],
     "image": null,
-    "answer": null
+    "answer": [
+      "Predicts a numeric value => Regression",
+      "Predicts a category or class => Classification",
+      "Groups similar data points together => Clustering"
+    ],
+    "explanation": "La respuesta correcta se basa en emparejar cada elemento de la izquierda con su opción correcta de la derecha.<br><br>Predicts a numeric value => Regression<br>Predicts a category or class => Classification<br>Groups similar data points together => Clustering"
   },
   {
     "id": "157",
-    "question": "HOTSPOT -\r\n\r\nSelect the answer that correctly completes the sentence.\r\n\r\nHot Area:",
+    "question": "Match the workload types to the appropriate scenarios.",
     "options": [],
-    "image": "../Preguntas/images/ai900/image-76.png",
-    "answer": null
+    "image": null,
+    "answer": [
+      "An automated chatbot to answer questions about refunds and exchanges => Natural language processing",
+      "Determining whether a photo contains a person => Computer vision",
+      "Determining whether a review is positive or negative => Natural language processing"
+    ],
+    "type": "matching",
+    "left": [
+      "An automated chatbot to answer questions about refunds and exchanges",
+      "Determining whether a photo contains a person",
+      "Determining whether a review is positive or negative"
+    ],
+    "right": [
+      "Anomaly detection",
+      "Computer vision",
+      "Knowledge mining",
+      "Natural language processing"
+    ],
+    "correctMap": {
+      "An automated chatbot to answer questions about refunds and exchanges": "Natural language processing",
+      "Determining whether a photo contains a person": "Computer vision",
+      "Determining whether a review is positive or negative": "Natural language processing"
+    },
+    "explanation": "La respuesta correcta se basa en emparejar cada elemento de la izquierda con su opción correcta de la derecha.<br><br>An automated chatbot to answer questions about refunds and exchanges => Natural language processing<br>Determining whether a photo contains a person => Computer vision<br>Determining whether a review is positive or negative => Natural language processing"
   },
   {
     "id": "158",
@@ -2031,14 +2721,21 @@
       "Computer Vision"
     ],
     "image": null,
-    "answer": "Custom Vision"
+    "answer": "Custom Vision",
+    "explanation": "La respuesta correcta es: Custom Vision."
   },
   {
     "id": "159",
-    "question": "HOTSPOT\r\n\r\n-\r\n\r\nSelect the answer that correctly completes the sentence.",
-    "options": [],
-    "image": "../Preguntas/images/ai900/image-77.png",
-    "answer": null
+    "question": "Predicting how many hours of overtime a delivery person will work based on the number of orders received is an example of {{option}}",
+    "options": [
+      "classification.",
+      "clustering.",
+      "regression."
+    ],
+    "image": null,
+    "answer": "regression.",
+    "type": "dropdown",
+    "explanation": "La respuesta correcta es: regression.."
   },
   {
     "id": "160",
@@ -2049,7 +2746,11 @@
       "clustering"
     ],
     "image": null,
-    "answer": null
+    "answer": [
+      "assigning the color pixels in an image to object names",
+      "describing the contents of an image"
+    ],
+    "explanation": "Las respuestas correctas son: assigning the color pixels in an image to object names, describing the contents of an image."
   },
   {
     "id": "161",
@@ -2061,14 +2762,20 @@
       "facial recognition"
     ],
     "image": null,
-    "answer": null
+    "answer": "optical character recognition (OCR)",
+    "explanation": "La respuesta correcta es: optical character recognition (OCR)."
   },
   {
     "id": "162",
     "question": "Match the types of computer vision workloads to the appropriate scenarios.\r\n\r\nTo answer, drag the appropriate workload type from the column on the left to its scenario on the right. Each workload type may be used once, more than once, or not at all.",
     "options": [],
     "image": null,
-    "answer": null,
+    "answer": [
+      "Detect objects in an image => Object Detection",
+      "Read text from an image => OCR",
+      "Identify faces in an image => Facial Recognition",
+      "Classify images by content => Image Classification"
+    ],
     "type": "matching",
     "left": [
       "Detect objects in an image",
@@ -2087,7 +2794,8 @@
       "Read text from an image": "OCR",
       "Identify faces in an image": "Facial Recognition",
       "Classify images by content": "Image Classification"
-    }
+    },
+    "explanation": "La respuesta correcta se basa en emparejar cada elemento de la izquierda con su opción correcta de la derecha.<br><br>Detect objects in an image => Object Detection<br>Read text from an image => OCR<br>Identify faces in an image => Facial Recognition<br>Classify images by content => Image Classification"
   },
   {
     "id": "163",
@@ -2099,7 +2807,8 @@
       "Language Understanding capabilities"
     ],
     "image": null,
-    "answer": null
+    "answer": "Custom Vision Image Classification capabilities",
+    "explanation": "La respuesta correcta es: Custom Vision Image Classification capabilities."
   },
   {
     "id": "164",
@@ -2111,14 +2820,20 @@
       "Speech"
     ],
     "image": null,
-    "answer": null
+    "answer": "optical character recognition (OCR)",
+    "explanation": "La respuesta correcta es: optical character recognition (OCR)."
   },
   {
     "id": "165",
     "question": "Match the types of AI workloads to the appropriate scenarios.\r\n\r\nTo answer, drag the appropriate workload type from the column on the left to its scenario on the right. Each workload type may be used once, more than once, or not at all.",
     "options": [],
     "image": null,
-    "answer": null,
+    "answer": [
+      "Identify handwritten letters => Computer Vision",
+      "Predict the sentiment of a social media post => Natural Language Processing",
+      "Identify a fraudulent credit card payment => Anomaly Detection",
+      "Automated chat to answer questions => Conversational AI"
+    ],
     "type": "matching",
     "left": [
       "Identify handwritten letters",
@@ -2137,14 +2852,19 @@
       "Predict the sentiment of a social media post": "Natural Language Processing",
       "Identify a fraudulent credit card payment": "Anomaly Detection",
       "Automated chat to answer questions": "Conversational AI"
-    }
+    },
+    "explanation": "La respuesta correcta se basa en emparejar cada elemento de la izquierda con su opción correcta de la derecha.<br><br>Identify handwritten letters => Computer Vision<br>Predict the sentiment of a social media post => Natural Language Processing<br>Identify a fraudulent credit card payment => Anomaly Detection<br>Automated chat to answer questions => Conversational AI"
   },
   {
     "id": "166",
     "question": "Match the machine learning tasks to the appropriate scenarios.\r\n\r\nTo answer, drag the appropriate task from the column on the left to its scenario on the right. Each task may be used once, more than once, or not at all.",
     "options": [],
     "image": null,
-    "answer": null,
+    "answer": [
+      "Predict future values (e.g. prices) => Regression",
+      "Classify items into categories (e.g. spam/not spam) => Classification",
+      "Group similar items (e.g. customer segmentation) => Clustering"
+    ],
     "type": "matching",
     "left": [
       "Predict future values (e.g. prices)",
@@ -2160,14 +2880,22 @@
       "Predict future values (e.g. prices)": "Regression",
       "Classify items into categories (e.g. spam/not spam)": "Classification",
       "Group similar items (e.g. customer segmentation)": "Clustering"
-    }
+    },
+    "explanation": "La respuesta correcta se basa en emparejar cada elemento de la izquierda con su opción correcta de la derecha.<br><br>Predict future values (e.g. prices) => Regression<br>Classify items into categories (e.g. spam/not spam) => Classification<br>Group similar items (e.g. customer segmentation) => Clustering"
   },
   {
     "id": "167",
-    "question": "HOTSPOT -\r\n\r\nTo complete the sentence, select the appropriate option in the answer area.\r\n\r\nHot Area:",
-    "options": [],
-    "image": "../Preguntas/images/ai900/image-81.png",
-    "answer": null
+    "question": "Data values that influence the prediction of a model are called {{option}}",
+    "options": [
+      "dependant variables.",
+      "features.",
+      "identifiers.",
+      "labels."
+    ],
+    "image": null,
+    "answer": "features.",
+    "type": "dropdown",
+    "explanation": "La respuesta correcta es: features.."
   },
   {
     "id": "168",
@@ -2178,7 +2906,8 @@
       "clustering"
     ],
     "image": "../Preguntas/images/ai900/image-82.png",
-    "answer": "regression"
+    "answer": "regression",
+    "explanation": "La respuesta correcta es: regression."
   },
   {
     "id": "169",
@@ -2189,14 +2918,22 @@
       "clustering"
     ],
     "image": null,
-    "answer": "regression"
+    "answer": "regression",
+    "explanation": "La respuesta correcta es: regression."
   },
   {
     "id": "170",
-    "question": "HOTSPOT -\r\n\r\nYou are developing a model to predict events by using classification.\r\n\r\nYou have a confusion matrix for the model scored on test data as shown in the following exhibit.\r\n\r\nQuestion\r\nUse the drop-down menus to select the answer choice that completes each statement based on the information presented in the graphic.\r\n\r\nNOTE: Each correct selection is worth one point.\r\n\r\nHot Area:\r\n![alt text](image-84.png)",
-    "options": [],
+    "question": "You use Azure Machine Learning designer to train a model. The results are shown in the confusion matrix. How many true positives are there?",
+    "options": [
+      "5",
+      "11",
+      "1033",
+      "13951"
+    ],
     "image": "../Preguntas/images/ai900/image-83.png",
-    "answer": null
+    "answer": "11",
+    "type": "dropdown",
+    "explanation": "La respuesta correcta es: 11."
   },
   {
     "id": "171",
@@ -2208,7 +2945,8 @@
       "the trip ID of individual taxi journeys"
     ],
     "image": null,
-    "answer": "the trip distance of individual taxi journeys"
+    "answer": "the trip distance of individual taxi journeys",
+    "explanation": "La respuesta correcta es: the trip distance of individual taxi journeys."
   },
   {
     "id": "172",
@@ -2219,76 +2957,148 @@
       "clustering"
     ],
     "image": null,
-    "answer": "regression"
+    "answer": "regression",
+    "explanation": "La respuesta correcta es: regression."
   },
   {
     "id": "173",
-    "question": "HOTSPOT -\r\n\r\nFor each of the following statements, select Yes if the statement is true. Otherwise, select No.\r\n\r\nNOTE: Each correct selection is worth one point.\r\n\r\nHot Area:",
+    "question": "For each of the following statements, select Yes if the statement is true. Otherwise, select No.",
     "options": [],
-    "image": "../Preguntas/images/ai900/image-85.png",
-    "answer": null
+    "image": null,
+    "answer": "Yes, No, Yes, No",
+    "type": "hotspot-yes-no",
+    "statements": [
+      {
+        "text": "Automated machine learning is the process of automating the time-consuming, iterative tasks of machine learning model development.",
+        "correct": "Yes"
+      },
+      {
+        "text": "Automated machine learning can automatically infer the training data from the use case provided.",
+        "correct": "No"
+      },
+      {
+        "text": "Automated machine learning works by running multiple training iterations that are scored and ranked by the metrics you specify.",
+        "correct": "Yes"
+      },
+      {
+        "text": "Automated machine learning enables you to specify a dataset and will automatically understand which label to predict.",
+        "correct": "No"
+      }
+    ],
+    "explanation": "Cada afirmación tiene una respuesta Sí/No correcta. La combinación correcta es: Yes, No, Yes, No.<br><br>\"Automated machine learning is the process of automating the time-consuming, iterative tasks of machine learning model development.\" => Yes<br>\"Automated machine learning can automatically infer the training data from the use case provided.\" => No<br>\"Automated machine learning works by running multiple training iterations that are scored and ranked by the metrics you specify.\" => Yes<br>\"Automated machine learning enables you to specify a dataset and will automatically understand which label to predict.\" => No"
   },
   {
     "id": "174",
-    "question": "HOTSPOT -\r\n\r\nTo complete the sentence, select the appropriate option in the answer area.\r\n\r\nHot Area:",
-    "options": [],
-    "image": "../Preguntas/images/ai900/image-86.png",
-    "answer": null
+    "question": "A banking system that predicts whether a loan will be repaid is an example of the {{option}} type of machine learning.",
+    "options": [
+      "classification",
+      "regression",
+      "clustering"
+    ],
+    "image": null,
+    "answer": "classification",
+    "type": "dropdown",
+    "explanation": "La respuesta correcta es: classification."
   },
   {
     "id": "175",
-    "question": "HOTSPOT -\r\n\r\nFor each of the following statements, select Yes if the statement is true. Otherwise, select No.\r\n\r\nNOTE: Each correct selection is worth one point.\r\n\r\nHot Area:",
+    "question": "For each of the following statements, select Yes if the statement is true. Otherwise, select No.",
     "options": [],
-    "image": "../Preguntas/images/ai900/image-87.png",
-    "answer": null
+    "image": null,
+    "answer": "Yes, No, No",
+    "type": "hotspot-yes-no",
+    "statements": [
+      {
+        "text": "Labelling is the process of tagging training data with known values.",
+        "correct": "Yes"
+      },
+      {
+        "text": "You should evaluate a model by using the same data used to train the model.",
+        "correct": "No"
+      },
+      {
+        "text": "Accuracy is always the primary metric used to measure a model's performance.",
+        "correct": "No"
+      }
+    ],
+    "explanation": "Cada afirmación tiene una respuesta Sí/No correcta. La combinación correcta es: Yes, No, No.<br><br>\"Labelling is the process of tagging training data with known values.\" => Yes<br>\"You should evaluate a model by using the same data used to train the model.\" => No<br>\"Accuracy is always the primary metric used to measure a model's performance.\" => No"
   },
   {
     "id": "176",
-    "question": "Which service should you use to extract text, key/value pairs, and table data automatically from scanned documents?",
+    "question": "The ability to extract subtotals and totals from a receipt is a capability of the {{option}} service.",
     "options": [
+      "Custom Vision",
       "Form Recognizer",
-      "Text Analytics",
-      "Language Understanding",
-      "Custom Vision"
+      "Ink Recognizer",
+      "Text Analytics"
     ],
     "image": null,
-    "answer": "Form Recognizer"
+    "answer": "Form Recognizer",
+    "type": "dropdown",
+    "explanation": "La respuesta correcta es: Form Recognizer."
   },
   {
     "id": "177",
-    "question": "HOTSPOT -\r\n\r\nTo complete the sentence, select the appropriate option in the answer area.\r\n\r\nHot Area:",
-    "options": [],
-    "image": "../Preguntas/images/ai900/image-88.png",
-    "answer": null
+    "question": "From Azure Machine Learning designer, to deploy a real-time inference pipeline as a service for others to consume, you must deploy the model to {{option}}",
+    "options": [
+      "a local web service.",
+      "Azure Container Instances.",
+      "Azure Kubernetes Service (AKS).",
+      "Azure Machine Learning compute."
+    ],
+    "image": null,
+    "answer": "Azure Kubernetes Service (AKS).",
+    "type": "dropdown",
+    "explanation": "La respuesta correcta es: Azure Kubernetes Service (AKS).."
   },
   {
     "id": "178",
-    "question": "You use Azure Machine Learning designer to publish an inference pipeline.\r\n\r\nWhich two parameters should you use to access the web service? Each correct answer presents part of the solution.\r\n\r\nNOTE: Each correct selection is worth one point.",
+    "question": "Predicting how many hours of overtime a delivery person will work based on the number of order received is an example of {{option}}",
     "options": [
-      "the model name",
-      "the training endpoint",
-      "the authentication key",
-      "the REST endpoint"
+      "classification.",
+      "clustering.",
+      "regression."
     ],
     "image": null,
-    "answer": [
-      "the authentication key",
-      "the REST endpoint"
-    ]
+    "answer": "regression.",
+    "type": "dropdown",
+    "explanation": "La respuesta correcta es: regression.."
   },
   {
     "id": "179",
-    "question": "HOTSPOT -\r\n\r\nTo complete the sentence, select the appropriate option in the answer area.\r\n\r\nHot Area:",
+    "question": "For each of the following statements, select Yes if the statement is true. Otherwise, select No.",
     "options": [],
-    "image": "../Preguntas/images/ai900/image-89.png",
-    "answer": null
+    "image": null,
+    "answer": "Yes, Yes, No",
+    "type": "hotspot-yes-no",
+    "statements": [
+      {
+        "text": "Azure Machine Learning designer provides a drag-and-drop visual canvas to build, test, and deploy machine learning models.",
+        "correct": "Yes"
+      },
+      {
+        "text": "Azure Machine Learning designer enables you to save your progress as a pipeline draft.",
+        "correct": "Yes"
+      },
+      {
+        "text": "Azure Machine Learning designer enables you to include custom JavaScript functions.",
+        "correct": "No"
+      }
+    ],
+    "explanation": "Cada afirmación tiene una respuesta Sí/No correcta. La combinación correcta es: Yes, Yes, No.<br><br>\"Azure Machine Learning designer provides a drag-and-drop visual canvas to build, test, and deploy machine learning models.\" => Yes<br>\"Azure Machine Learning designer enables you to save your progress as a pipeline draft.\" => Yes<br>\"Azure Machine Learning designer enables you to include custom JavaScript functions.\" => No"
   },
   {
     "id": "180",
-    "question": "HOTSPOT -\r\n\r\nTo complete the sentence, select the appropriate option in the answer area.\r\n\r\nHot Area:",
-    "options": [],
-    "image": "../Preguntas/images/ai900/image-90.png",
-    "answer": null
+    "question": "You are building a machine learning model to predict the House Price Category. Which column represents the label?",
+    "options": [
+      "Household Income",
+      "Postal Code",
+      "House Price Category"
+    ],
+    "image": null,
+    "answer": "House Price Category",
+    "type": "dropdown",
+    "explanation": "La respuesta correcta es: House Price Category."
   },
   {
     "id": "181",
@@ -2300,35 +3110,81 @@
       "Set Max concurrent iterations to 0."
     ],
     "image": null,
-    "answer": "Enable Explain best model."
+    "answer": "Enable Explain best model.",
+    "explanation": "La respuesta correcta es: Enable Explain best model.."
   },
   {
     "id": "182",
-    "question": "HOTSPOT -\r\n\r\nFor each of the following statements, select Yes if the statement is true. Otherwise, select No.\r\n\r\nNOTE: Each correct selection is worth one point.\r\n\r\nHot Area:",
+    "question": "For each of the following statements, select Yes if the statement is true. Otherwise, select No.",
     "options": [],
-    "image": "../Preguntas/images/ai900/image-91.png",
-    "answer": null
+    "image": null,
+    "answer": "Yes, Yes, No",
+    "type": "hotspot-yes-no",
+    "statements": [
+      {
+        "text": "Azure Machine Learning designer provides a drag-and-drop visual canvas to build, test, and deploy machine learning models.",
+        "correct": "Yes"
+      },
+      {
+        "text": "Azure Machine Learning designer enables you to save your progress as a pipeline draft.",
+        "correct": "Yes"
+      },
+      {
+        "text": "Azure Machine Learning designer enables you to include custom JavaScript functions.",
+        "correct": "No"
+      }
+    ],
+    "explanation": "Cada afirmación tiene una respuesta Sí/No correcta. La combinación correcta es: Yes, Yes, No.<br><br>\"Azure Machine Learning designer provides a drag-and-drop visual canvas to build, test, and deploy machine learning models.\" => Yes<br>\"Azure Machine Learning designer enables you to save your progress as a pipeline draft.\" => Yes<br>\"Azure Machine Learning designer enables you to include custom JavaScript functions.\" => No"
   },
   {
     "id": "183",
-    "question": "HOTSPOT -\r\n\r\nYou have the following dataset.\r\n\r\nQuestion\r\nYou plan to use the dataset to train a model that will predict the house price categories of houses.\r\n\r\nWhat are Household Income and House Price Category? To answer, select the appropriate option in the answer area.\r\n\r\nNOTE: Each correct selection is worth one point.\r\n\r\nHot Area:\r\n![alt text](image-93.png)",
-    "options": [],
-    "image": "../Preguntas/images/ai900/image-92.png",
-    "answer": null
+    "question": "You are building a machine learning model to predict the House Price Category. Which column represents the label?",
+    "options": [
+      "Household Income",
+      "Postal Code",
+      "House Price Category"
+    ],
+    "image": null,
+    "answer": "House Price Category",
+    "type": "dropdown",
+    "explanation": "La respuesta correcta es: House Price Category."
   },
   {
     "id": "184",
-    "question": "HOTSPOT -\r\n\r\nTo complete the sentence, select the appropriate option in the answer area.\r\n\r\nHot Area:",
-    "options": [],
-    "image": "../Preguntas/images/ai900/image-94.png",
-    "answer": null
+    "question": "Azure Machine Learning designer lets you create machine learning models by {{option}}",
+    "options": [
+      "adding and connecting modules on a visual canvas.",
+      "automatically performing common data preparation tasks.",
+      "automatically selecting an algorithm to build the most accurate model.",
+      "using a code-first notebook experience."
+    ],
+    "image": null,
+    "answer": "adding and connecting modules on a visual canvas.",
+    "type": "dropdown",
+    "explanation": "La respuesta correcta es: adding and connecting modules on a visual canvas.."
   },
   {
     "id": "185",
-    "question": "HOTSPOT -\r\n\r\nFor each of the following statements, select Yes if the statement is true. Otherwise, select No.\r\n\r\nNOTE: Each correct selection is worth one point.\r\n\r\nHot Area:",
+    "question": "For each of the following statements, select Yes if the statement is true. Otherwise, select No.",
     "options": [],
-    "image": "../Preguntas/images/ai900/image-95.png",
-    "answer": null
+    "image": null,
+    "answer": "No, Yes, No",
+    "type": "hotspot-yes-no",
+    "statements": [
+      {
+        "text": "Automated machine learning provides you with the ability to include custom Python scripts in a training pipeline.",
+        "correct": "No"
+      },
+      {
+        "text": "Automated machine learning implements machine learning solutions without the need for programming experience.",
+        "correct": "Yes"
+      },
+      {
+        "text": "Automated machine learning provides you with the ability to visually connect datasets and modules on an interactive canvas.",
+        "correct": "No"
+      }
+    ],
+    "explanation": "Cada afirmación tiene una respuesta Sí/No correcta. La combinación correcta es: No, Yes, No.<br><br>\"Automated machine learning provides you with the ability to include custom Python scripts in a training pipeline.\" => No<br>\"Automated machine learning implements machine learning solutions without the need for programming experience.\" => Yes<br>\"Automated machine learning provides you with the ability to visually connect datasets and modules on an interactive canvas.\" => No"
   },
   {
     "id": "186",
@@ -2339,7 +3195,8 @@
       "classification"
     ],
     "image": null,
-    "answer": "classification"
+    "answer": "classification",
+    "explanation": "La respuesta correcta es: classification."
   },
   {
     "id": "187",
@@ -2350,7 +3207,8 @@
       "to test the model by using data that was not used to train the model"
     ],
     "image": null,
-    "answer": "to test the model by using data that was not used to train the model"
+    "answer": "to test the model by using data that was not used to train the model",
+    "explanation": "La respuesta correcta es: to test the model by using data that was not used to train the model."
   },
   {
     "id": "188",
@@ -2365,7 +3223,8 @@
     "answer": [
       "Use a graphical user interface (GUI) to run automated machine learning experiments.",
       "Use a graphical user interface (GUI) to define and run machine learning experiments from Azure Machine Learning designer."
-    ]
+    ],
+    "explanation": "Las respuestas correctas son: Use a graphical user interface (GUI) to run automated machine learning experiments., Use a graphical user interface (GUI) to define and run machine learning experiments from Azure Machine Learning designer.."
   },
   {
     "id": "189",
@@ -2381,7 +3240,8 @@
     "answer": [
       "Education Level",
       "Age"
-    ]
+    ],
+    "explanation": "Las respuestas correctas son: Education Level, Age."
   },
   {
     "id": "190",
@@ -2393,28 +3253,77 @@
       "Computer Vision"
     ],
     "image": null,
-    "answer": "Custom Vision"
+    "answer": "Custom Vision",
+    "explanation": "La respuesta correcta es: Custom Vision."
   },
   {
     "id": "191",
-    "question": "HOTSPOT -\r\n\r\nFor each of the following statements, select Yes if the statement is true. Otherwise, select No.\r\n\r\nNOTE: Each correct selection is worth one point.\r\n\r\nHot Area:",
+    "question": "For each of the following statements, select Yes if the statement is true. Otherwise, select No.",
     "options": [],
-    "image": "../Preguntas/images/ai900/image-97.png",
-    "answer": null
+    "image": null,
+    "answer": "Yes, Yes, No",
+    "type": "hotspot-yes-no",
+    "statements": [
+      {
+        "text": "Organizing documents into groups based on similarities of the text contained in the documents is an example of clustering.",
+        "correct": "Yes"
+      },
+      {
+        "text": "Grouping similar patients based on symptoms and diagnostic test results is an example of clustering.",
+        "correct": "Yes"
+      },
+      {
+        "text": "Predicting whether a person will develop mild, moderate, or severe allergy symptoms based on pollen count is an example of clustering.",
+        "correct": "No"
+      }
+    ],
+    "explanation": "Cada afirmación tiene una respuesta Sí/No correcta. La combinación correcta es: Yes, Yes, No.<br><br>\"Organizing documents into groups based on similarities of the text contained in the documents is an example of clustering.\" => Yes<br>\"Grouping similar patients based on symptoms and diagnostic test results is an example of clustering.\" => Yes<br>\"Predicting whether a person will develop mild, moderate, or severe allergy symptoms based on pollen count is an example of clustering.\" => No"
   },
   {
     "id": "192",
-    "question": "HOTSPOT -\r\n\r\nFor each of the following statements, select Yes if the statement is true. Otherwise, select No.\r\n\r\nNOTE: Each correct selection is worth one point.\r\n\r\nHot Area:",
+    "question": "For each of the following statements, select Yes if the statement is true. Otherwise, select No.",
     "options": [],
-    "image": "../Preguntas/images/ai900/image-98.png",
-    "answer": null
+    "image": null,
+    "answer": "No, Yes, No",
+    "type": "hotspot-yes-no",
+    "statements": [
+      {
+        "text": "Forecasting housing prices based on historical data is an example of anomaly detection.",
+        "correct": "No"
+      },
+      {
+        "text": "Identifying suspicious sign-ins by looking for deviations from usual patterns is an example of anomaly detection.",
+        "correct": "Yes"
+      },
+      {
+        "text": "Predicting whether a patient will develop diabetes based on the patient's medical history is an example of anomaly detection.",
+        "correct": "No"
+      }
+    ],
+    "explanation": "Cada afirmación tiene una respuesta Sí/No correcta. La combinación correcta es: No, Yes, No.<br><br>\"Forecasting housing prices based on historical data is an example of anomaly detection.\" => No<br>\"Identifying suspicious sign-ins by looking for deviations from usual patterns is an example of anomaly detection.\" => Yes<br>\"Predicting whether a patient will develop diabetes based on the patient's medical history is an example of anomaly detection.\" => No"
   },
   {
     "id": "193",
-    "question": "HOTSPOT -\r\n\r\nFor each of the following statements, select Yes if the statement is true. Otherwise, select No.\r\n\r\nNOTE: Each correct selection is worth one point.\r\n\r\nHot Area:",
+    "question": "For each of the following statements, select Yes if the statement is true. Otherwise, select No.",
     "options": [],
-    "image": "../Preguntas/images/ai900/image-99.png",
-    "answer": null
+    "image": null,
+    "answer": "No, Yes, No",
+    "type": "hotspot-yes-no",
+    "statements": [
+      {
+        "text": "A validation set includes the set of input examples that will be used to train a model.",
+        "correct": "No"
+      },
+      {
+        "text": "A validation set can be used to determine how well a model predicts labels.",
+        "correct": "Yes"
+      },
+      {
+        "text": "A validation set can be used to verify that all the training data was used to train the model.",
+        "correct": "No"
+      }
+    ],
+    "explanation": "Cada afirmación tiene una respuesta Sí/No correcta. La combinación correcta es: No, Yes, No.<br><br>\"A validation set includes the set of input examples that will be used to train a model.\" => No<br>\"A validation set can be used to determine how well a model predicts labels.\" => Yes<br>\"A validation set can be used to verify that all the training data was used to train the model.\" => No"
   },
   {
     "id": "194",
@@ -2430,14 +3339,21 @@
     "answer": [
       "coefficient of determination (R2)",
       "root mean squared error (RMSE)"
-    ]
+    ],
+    "explanation": "Las respuestas correctas son: coefficient of determination (R2), root mean squared error (RMSE)."
   },
   {
     "id": "195",
-    "question": "HOTSPOT -\r\n\r\nTo complete the sentence, select the appropriate option in the answer area.\r\n\r\nHot Area:",
-    "options": [],
-    "image": "../Preguntas/images/ai900/image-100.png",
-    "answer": null
+    "question": "Predicting how many vehicles will travel across a bridge on a given day is an example of {{option}}",
+    "options": [
+      "classification.",
+      "clustering.",
+      "regression."
+    ],
+    "image": null,
+    "answer": "regression.",
+    "type": "dropdown",
+    "explanation": "La respuesta correcta es: regression.."
   },
   {
     "id": "196",
@@ -2462,7 +3378,14 @@
     "explanation": "Typical regression pipeline: Select features -> Clean data -> Split into train/test -> Train model (with algo) -> Score model (with test data) -> Evaluate results.",
     "options": [],
     "image": null,
-    "answer": null
+    "answer": [
+      "Select Columns in Dataset",
+      "Clean Missing Data",
+      "Split Data",
+      "Train Model",
+      "Score Model",
+      "Evaluate Model"
+    ]
   },
   {
     "id": "197",
@@ -2473,14 +3396,21 @@
       "clustering"
     ],
     "image": null,
-    "answer": "clustering"
+    "answer": "clustering",
+    "explanation": "La respuesta correcta es: clustering."
   },
   {
     "id": "198",
-    "question": "HOTSPOT -\r\n\r\nTo complete the sentence, select the appropriate option in the answer area.\r\n\r\nHot Area:",
-    "options": [],
-    "image": "../Preguntas/images/ai900/image-102.png",
-    "answer": null
+    "question": "{{option}} models can be used to predict the sale price of auctioned items.",
+    "options": [
+      "Classification",
+      "Clustering",
+      "Regression"
+    ],
+    "image": null,
+    "answer": "Regression",
+    "type": "dropdown",
+    "explanation": "La respuesta correcta es: Regression."
   },
   {
     "id": "199",
@@ -2492,7 +3422,8 @@
       "root mean squared error (RMSE)"
     ],
     "image": null,
-    "answer": "true positive rate"
+    "answer": "true positive rate",
+    "explanation": "La respuesta correcta es: true positive rate."
   },
   {
     "id": "200",
@@ -2507,7 +3438,8 @@
     "answer": [
       "dataset",
       "module"
-    ]
+    ],
+    "explanation": "Las respuestas correctas son: dataset, module."
   },
   {
     "id": "201",
@@ -2519,14 +3451,19 @@
       "Join Data"
     ],
     "image": null,
-    "answer": "Split Data"
+    "answer": "Split Data",
+    "explanation": "La respuesta correcta es: Split Data."
   },
   {
     "id": "202",
     "question": "Match the types of machine learning to the appropriate scenarios.\r\n\r\nTo answer, drag the appropriate machine learning type from the column on the left to its scenario on the right. Each machine learning type may be used once, more than once, or not at all.",
     "options": [],
     "image": null,
-    "answer": null,
+    "answer": [
+      "Predict future values (e.g. prices) => Regression",
+      "Classify items into categories (e.g. spam/not spam) => Classification",
+      "Group similar items (e.g. customer segmentation) => Clustering"
+    ],
     "type": "matching",
     "left": [
       "Predict future values (e.g. prices)",
@@ -2542,56 +3479,115 @@
       "Predict future values (e.g. prices)": "Regression",
       "Classify items into categories (e.g. spam/not spam)": "Classification",
       "Group similar items (e.g. customer segmentation)": "Clustering"
-    }
+    },
+    "explanation": "La respuesta correcta se basa en emparejar cada elemento de la izquierda con su opción correcta de la derecha.<br><br>Predict future values (e.g. prices) => Regression<br>Classify items into categories (e.g. spam/not spam) => Classification<br>Group similar items (e.g. customer segmentation) => Clustering"
   },
   {
     "id": "203",
-    "question": "HOTSPOT -\r\n\r\nTo complete the sentence, select the appropriate option in the answer area.\r\n\r\nHot Area:",
-    "options": [],
-    "image": "../Preguntas/images/ai900/image-104.png",
-    "answer": null
+    "question": "The handling of unusual or missing values provided to an AI system is a consideration for the Microsoft {{option}} principle for responsible AI.",
+    "options": [
+      "inclusiveness",
+      "privacy and security",
+      "reliability and safety",
+      "transparency"
+    ],
+    "image": null,
+    "answer": "reliability and safety",
+    "type": "dropdown",
+    "explanation": "La respuesta correcta es: reliability and safety."
   },
   {
     "id": "204",
-    "question": "HOTSPOT -\r\n\r\nTo complete the sentence, select the appropriate option in the answer area.\r\n\r\nHot Area:",
-    "options": [],
-    "image": "../Preguntas/images/ai900/image-105.png",
-    "answer": null
+    "question": "{{option}} is the calculated probability of a correct image classification.",
+    "options": [
+      "Accuracy",
+      "Confidence",
+      "Root Mean Square Error",
+      "Sentiment"
+    ],
+    "image": null,
+    "answer": "Confidence",
+    "type": "dropdown",
+    "explanation": "La respuesta correcta es: Confidence."
   },
   {
     "id": "205",
-    "question": "HOTSPOT -\r\n\r\nTo complete the sentence, select the appropriate option in the answer area.\r\n\r\nHot Area:",
-    "options": [],
-    "image": "../Preguntas/images/ai900/image-106.png",
-    "answer": null
+    "question": "Ensuring an AI system does not provide a prediction when important fields contain unusual or missing values is {{option}} principle for responsible AI.",
+    "options": [
+      "an inclusiveness",
+      "a privacy and security",
+      "a reliability and safety",
+      "a transparency"
+    ],
+    "image": null,
+    "answer": "a reliability and safety",
+    "type": "dropdown",
+    "explanation": "La respuesta correcta es: a reliability and safety."
   },
   {
     "id": "206",
-    "question": "HOTSPOT -\r\n\r\nTo complete the sentence, select the appropriate option in the answer area.\r\n\r\nHot Area:",
-    "options": [],
-    "image": "../Preguntas/images/ai900/image-107.png",
-    "answer": null
+    "question": "Ensuring that the numeric variables in training data are on a similar scale is an example of {{option}}",
+    "options": [
+      "data ingestion.",
+      "feature engineering.",
+      "feature selection.",
+      "model training."
+    ],
+    "image": null,
+    "answer": "feature engineering.",
+    "type": "dropdown",
+    "explanation": "La respuesta correcta es: feature engineering.."
   },
   {
     "id": "207",
-    "question": "HOTSPOT -\r\n\r\nTo complete the sentence, select the appropriate option in the answer area.\r\n\r\nHot Area:",
-    "options": [],
-    "image": "../Preguntas/images/ai900/image-108.png",
-    "answer": null
+    "question": "Assigning classes to images before training a classification model is an example of {{option}}",
+    "options": [
+      "evaluation.",
+      "feature engineering",
+      "hyperparameter tuning.",
+      "labeling."
+    ],
+    "image": null,
+    "answer": "labeling.",
+    "type": "dropdown",
+    "explanation": "La respuesta correcta es: labeling.."
   },
   {
     "id": "208",
-    "question": "HOTSPOT -\r\n\r\nYou have an Azure Machine Learning model that predicts product quality. The model has a training dataset that contains 50,000 records. A sample of the data is shown in the following table.\r\n\r\nQuestion\r\nFor each of the following statements, select Yes if the statement is true. Otherwise, select No.\r\n\r\nNOTE: Each correct selection is worth one point.\r\n\r\nHot Area:\r\n![alt text](image-110.png)",
-    "options": [],
-    "image": "../Preguntas/images/ai900/image-109.png",
-    "answer": null
+    "question": "You have a dataset with columns: Date, Time, Mass (kg), Temperature (C), and Quality Test (Pass/Fail). Which column represents the label for a classification model?",
+    "options": [
+      "Date",
+      "Mass (kg)",
+      "Temperature (C)",
+      "Quality Test"
+    ],
+    "image": null,
+    "answer": "Quality Test",
+    "type": "dropdown",
+    "explanation": "La respuesta correcta es: Quality Test."
   },
   {
     "id": "209",
-    "question": "HOTSPOT -\r\n\r\nFor each of the following statements, select Yes if the statement is true. Otherwise, select No.\r\n\r\nNOTE: Each correct selection is worth one point.\r\n\r\nHot Area:",
+    "question": "For each of the following statements, select Yes if the statement is true. Otherwise, select No.",
     "options": [],
-    "image": "../Preguntas/images/ai900/image-111.png",
-    "answer": null
+    "image": null,
+    "answer": "No, No, Yes",
+    "type": "hotspot-yes-no",
+    "statements": [
+      {
+        "text": "You train a regression model by using unlabeled data.",
+        "correct": "No"
+      },
+      {
+        "text": "The classification technique is used to predict sequential numerical data over time.",
+        "correct": "No"
+      },
+      {
+        "text": "Grouping items by their common characteristics is an example of clustering.",
+        "correct": "Yes"
+      }
+    ],
+    "explanation": "Cada afirmación tiene una respuesta Sí/No correcta. La combinación correcta es: No, No, Yes.<br><br>\"You train a regression model by using unlabeled data.\" => No<br>\"The classification technique is used to predict sequential numerical data over time.\" => No<br>\"Grouping items by their common characteristics is an example of clustering.\" => Yes"
   },
   {
     "id": "210",
@@ -2607,7 +3603,8 @@
     "answer": [
       "Combine multiple datasets.",
       "Remove records that have missing values."
-    ]
+    ],
+    "explanation": "Las respuestas correctas son: Combine multiple datasets., Remove records that have missing values.."
   },
   {
     "id": "211",
@@ -2618,7 +3615,8 @@
       "classification"
     ],
     "image": null,
-    "answer": "regression"
+    "answer": "regression",
+    "explanation": "La respuesta correcta es: regression."
   },
   {
     "id": "212",
@@ -2633,21 +3631,43 @@
     "answer": [
       "Python",
       "R"
-    ]
+    ],
+    "explanation": "Las respuestas correctas son: Python, R."
   },
   {
     "id": "213",
-    "question": "HOTSPOT -\r\n\r\nFor each of the following statements, select Yes if the statement is true. Otherwise, select No.\r\n\r\nNOTE: Each correct selection is worth one point.\r\n\r\nHot Area:",
+    "question": "For each of the following statements, select Yes if the statement is true. Otherwise, select No.",
     "options": [],
-    "image": "../Preguntas/images/ai900/image-112.png",
-    "answer": null
+    "image": null,
+    "answer": "Yes, No, No",
+    "type": "hotspot-yes-no",
+    "statements": [
+      {
+        "text": "For a regression model, labels must be numeric.",
+        "correct": "Yes"
+      },
+      {
+        "text": "For a clustering model, labels must be used.",
+        "correct": "No"
+      },
+      {
+        "text": "For a classification model, labels must be numeric.",
+        "correct": "No"
+      }
+    ],
+    "explanation": "Cada afirmación tiene una respuesta Sí/No correcta. La combinación correcta es: Yes, No, No.<br><br>\"For a regression model, labels must be numeric.\" => Yes<br>\"For a clustering model, labels must be used.\" => No<br>\"For a classification model, labels must be numeric.\" => No"
   },
   {
     "id": "214",
     "question": "Match the types of AI workloads to the appropriate scenarios.\r\n\r\nTo answer, drag the appropriate workload type from the column on the left to its scenario on the right. Each workload type may be used once, more than once, or not at all.",
     "options": [],
     "image": null,
-    "answer": null,
+    "answer": [
+      "Identify handwritten letters => Computer Vision",
+      "Predict the sentiment of a social media post => Natural Language Processing",
+      "Identify a fraudulent credit card payment => Anomaly Detection",
+      "Automated chat to answer questions => Conversational AI"
+    ],
     "type": "matching",
     "left": [
       "Identify handwritten letters",
@@ -2666,7 +3686,8 @@
       "Predict the sentiment of a social media post": "Natural Language Processing",
       "Identify a fraudulent credit card payment": "Anomaly Detection",
       "Automated chat to answer questions": "Conversational AI"
-    }
+    },
+    "explanation": "La respuesta correcta se basa en emparejar cada elemento de la izquierda con su opción correcta de la derecha.<br><br>Identify handwritten letters => Computer Vision<br>Predict the sentiment of a social media post => Natural Language Processing<br>Identify a fraudulent credit card payment => Anomaly Detection<br>Automated chat to answer questions => Conversational AI"
   },
   {
     "id": "215",
@@ -2678,14 +3699,31 @@
       "natural language processing"
     ],
     "image": null,
-    "answer": "computer vision"
+    "answer": "computer vision",
+    "explanation": "La respuesta correcta es: computer vision."
   },
   {
     "id": "216",
-    "question": "HOTSPOT -\r\n\r\nFor each of the following statements, select Yes if the statement is true. Otherwise, select No.\r\n\r\nNOTE: Each correct selection is worth one point.\r\n\r\nHot Area:",
+    "question": "For each of the following statements, select Yes if the statement is true. Otherwise, select No.",
     "options": [],
-    "image": "../Preguntas/images/ai900/image-114.png",
-    "answer": null
+    "image": null,
+    "answer": "No, Yes, Yes",
+    "type": "hotspot-yes-no",
+    "statements": [
+      {
+        "text": "When creating an object detection model in the Custom Vision service, you must choose a classification type of either Multilabel or Multiclass.",
+        "correct": "No"
+      },
+      {
+        "text": "You can create an object detection model in the Custom Vision service to find the location of content within an image.",
+        "correct": "Yes"
+      },
+      {
+        "text": "When creating an object detection model in the Custom Vision service, you can select from a set of predefined domains.",
+        "correct": "Yes"
+      }
+    ],
+    "explanation": "Cada afirmación tiene una respuesta Sí/No correcta. La combinación correcta es: No, Yes, Yes.<br><br>\"When creating an object detection model in the Custom Vision service, you must choose a classification type of either Multilabel or Multiclass.\" => No<br>\"You can create an object detection model in the Custom Vision service to find the location of content within an image.\" => Yes<br>\"When creating an object detection model in the Custom Vision service, you can select from a set of predefined domains.\" => Yes"
   },
   {
     "id": "217",
@@ -2700,21 +3738,45 @@
     "answer": [
       "Extract the invoice number from an invoice.",
       "Identify the retailer from a receipt."
-    ]
+    ],
+    "explanation": "Las respuestas correctas son: Extract the invoice number from an invoice., Identify the retailer from a receipt.."
   },
   {
     "id": "218",
-    "question": "HOTSPOT -\r\n\r\nSelect the answer that correctly completes the sentence.\r\n\r\nHot Area:",
-    "options": [],
-    "image": "../Preguntas/images/ai900/image-115.png",
-    "answer": null
+    "question": "Counting the number of animals in an area based on a video feed is an example of {{option}}",
+    "options": [
+      "forecasting.",
+      "computer vision.",
+      "conversational AI.",
+      "anomaly detection."
+    ],
+    "image": null,
+    "answer": "computer vision.",
+    "type": "dropdown",
+    "explanation": "La respuesta correcta es: computer vision.."
   },
   {
     "id": "219",
-    "question": "HOTSPOT -\r\n\r\nYou have a database that contains a list of employees and their photos.\r\n\r\nYou are tagging new photos of the employees.\r\n\r\nFor each of the following statements select Yes if the statement is true. Otherwise, select No.\r\n\r\nNOTE: Each correct selection is worth one point.\r\n\r\nHot Area:",
+    "question": "For each of the following statements, select Yes if the statement is true. Otherwise, select No.",
     "options": [],
-    "image": "../Preguntas/images/ai900/image-116.png",
-    "answer": null
+    "image": null,
+    "answer": "Yes, Yes, No",
+    "type": "hotspot-yes-no",
+    "statements": [
+      {
+        "text": "The Face service can be used to perform facial recognition for employees",
+        "correct": "Yes"
+      },
+      {
+        "text": "The Face service will be more accurate if you provide more sample photos of each employee from different angles.",
+        "correct": "Yes"
+      },
+      {
+        "text": "If an employee is wearing sunglasses, the Face service will always fail to recognize the employee.",
+        "correct": "No"
+      }
+    ],
+    "explanation": "Cada afirmación tiene una respuesta Sí/No correcta. La combinación correcta es: Yes, Yes, No.<br><br>\"The Face service can be used to perform facial recognition for employees\" => Yes<br>\"The Face service will be more accurate if you provide more sample photos of each employee from different angles.\" => Yes<br>\"If an employee is wearing sunglasses, the Face service will always fail to recognize the employee.\" => No"
   },
   {
     "id": "220",
@@ -2726,18 +3788,35 @@
       "optical character recognition (OCR)"
     ],
     "image": null,
-    "answer": "optical character recognition (OCR)"
+    "answer": "optical character recognition (OCR)",
+    "explanation": "La respuesta correcta es: optical character recognition (OCR)."
   },
   {
     "id": "221",
-    "question": "HOTSPOT -\r\n\r\nFor each of the following statements, select Yes if the statement is true. Otherwise, select No.\r\n\r\nNOTE: Each correct selection is worth one point.\r\n\r\nHot Area:",
+    "question": "For each of the following statements, select Yes if the statement is true. Otherwise, select No.",
     "options": [],
-    "image": "../Preguntas/images/ai900/image-117.png",
-    "answer": null
+    "image": null,
+    "answer": "Yes, Yes, No",
+    "type": "hotspot-yes-no",
+    "statements": [
+      {
+        "text": "The Custom Vision service can be used to detect objects in an image.",
+        "correct": "Yes"
+      },
+      {
+        "text": "The Custom Vision service requires that you provide your own data to train the model.",
+        "correct": "Yes"
+      },
+      {
+        "text": "The Custom Vision service can be used to analyze video files.",
+        "correct": "No"
+      }
+    ],
+    "explanation": "Cada afirmación tiene una respuesta Sí/No correcta. La combinación correcta es: Yes, Yes, No.<br><br>\"The Custom Vision service can be used to detect objects in an image.\" => Yes<br>\"The Custom Vision service requires that you provide your own data to train the model.\" => Yes<br>\"The Custom Vision service can be used to analyze video files.\" => No"
   },
   {
     "id": "222",
-    "question": "You are processing photos of runners in a race.\r\n\r\nYou need to read the numbers on the runners' shirts to identity the runners in the photos.\r\n\r\nWhich type of computer vision should you use?",
+    "question": "Match the Face service tasks to the appropriate questions.",
     "options": [
       "facial recognition",
       "optical character recognition (OCR)",
@@ -2745,14 +3824,43 @@
       "object detection"
     ],
     "image": null,
-    "answer": "optical character recognition (OCR)"
+    "answer": [
+      "Do two images of a face belong to the same person? => verification",
+      "Does this person look like other people? => similarity",
+      "Do all the faces belong together? => grouping",
+      "Who is this person in this group of people? => identification"
+    ],
+    "type": "matching",
+    "left": [
+      "Do two images of a face belong to the same person?",
+      "Does this person look like other people?",
+      "Do all the faces belong together?",
+      "Who is this person in this group of people?"
+    ],
+    "right": [
+      "grouping",
+      "identification",
+      "similarity",
+      "verification"
+    ],
+    "correctMap": {
+      "Do two images of a face belong to the same person?": "verification",
+      "Does this person look like other people?": "similarity",
+      "Do all the faces belong together?": "grouping",
+      "Who is this person in this group of people?": "identification"
+    },
+    "explanation": "La respuesta correcta se basa en emparejar cada elemento de la izquierda con su opción correcta de la derecha.<br><br>Do two images of a face belong to the same person? => verification<br>Does this person look like other people? => similarity<br>Do all the faces belong together? => grouping<br>Who is this person in this group of people? => identification"
   },
   {
     "id": "223",
     "question": "Match the types of machine learning to the appropriate scenarios.\r\n\r\nTo answer, drag the appropriate machine learning type from the column on the left to its scenario on the right. Each machine learning type may be used once, more than once, or not at all.",
     "options": [],
     "image": null,
-    "answer": null,
+    "answer": [
+      "Predict future values (e.g. prices) => Regression",
+      "Classify items into categories (e.g. spam/not spam) => Classification",
+      "Group similar items (e.g. customer segmentation) => Clustering"
+    ],
     "type": "matching",
     "left": [
       "Predict future values (e.g. prices)",
@@ -2768,7 +3876,8 @@
       "Predict future values (e.g. prices)": "Regression",
       "Classify items into categories (e.g. spam/not spam)": "Classification",
       "Group similar items (e.g. customer segmentation)": "Clustering"
-    }
+    },
+    "explanation": "La respuesta correcta se basa en emparejar cada elemento de la izquierda con su opción correcta de la derecha.<br><br>Predict future values (e.g. prices) => Regression<br>Classify items into categories (e.g. spam/not spam) => Classification<br>Group similar items (e.g. customer segmentation) => Clustering"
   },
   {
     "id": "224",
@@ -2779,71 +3888,84 @@
       "scene segmentation"
     ],
     "image": null,
-    "answer": "object detection"
+    "answer": "object detection",
+    "explanation": "La respuesta correcta es: object detection."
   },
   {
     "id": "225",
-    "question": "You are designing an AI system that empowers everyone, including people who have hearing, visual, and other impairments.\r\n\r\nThis is an example of which Microsoft guiding principle for responsible AI?",
+    "question": "The image shows bounding boxes around fruit with labels and confidence scores. Which type of computer vision was used?",
     "options": [
-      "fairness",
-      "inclusiveness",
-      "reliability and safety",
-      "accountability"
+      "Object detection",
+      "Image classification",
+      "Semantic segmentation",
+      "OCR"
     ],
     "image": null,
-    "answer": "inclusiveness"
+    "answer": "Object detection",
+    "type": "dropdown",
+    "explanation": "La respuesta correcta es: Object detection."
   },
   {
     "id": "226",
-    "question": "Match the facial recognition tasks to the appropriate questions.\r\n\r\nTo answer, drag the appropriate task from the column on the left to its question on the right. Each task may be used once, more than once, or not at all.",
+    "question": "Match the principles to the descriptions.",
     "options": [],
     "image": null,
-    "answer": null,
+    "answer": [
+      "Ensure that AI systems operate as they were originally designed... => Reliability and safety",
+      "Implementing processes to ensure that decisions made by AI systems can be overridden by humans. => Accountability",
+      "Provide consumers with information and controls over the collection, use, and storage of their data. => Privacy and security"
+    ],
     "type": "matching",
     "left": [
-      "Detect objects in an image",
-      "Read text from an image",
-      "Identify faces in an image",
-      "Classify images by content"
+      "Ensure that AI systems operate as they were originally designed...",
+      "Implementing processes to ensure that decisions made by AI systems can be overridden by humans.",
+      "Provide consumers with information and controls over the collection, use, and storage of their data."
     ],
     "right": [
-      "Object Detection",
-      "OCR",
-      "Facial Recognition",
-      "Image Classification"
+      "Accountability",
+      "Fairness",
+      "Inclusiveness",
+      "Privacy and security",
+      "Reliability and safety"
     ],
     "correctMap": {
-      "Detect objects in an image": "Object Detection",
-      "Read text from an image": "OCR",
-      "Identify faces in an image": "Facial Recognition",
-      "Classify images by content": "Image Classification"
-    }
+      "Ensure that AI systems operate as they were originally designed...": "Reliability and safety",
+      "Implementing processes to ensure that decisions made by AI systems can be overridden by humans.": "Accountability",
+      "Provide consumers with information and controls over the collection, use, and storage of their data.": "Privacy and security"
+    },
+    "explanation": "La respuesta correcta se basa en emparejar cada elemento de la izquierda con su opción correcta de la derecha.<br><br>Ensure that AI systems operate as they were originally designed... => Reliability and safety<br>Implementing processes to ensure that decisions made by AI systems can be overridden by humans. => Accountability<br>Provide consumers with information and controls over the collection, use, and storage of their data. => Privacy and security"
   },
   {
     "id": "227",
-    "question": "Match the types of computer vision workloads to the appropriate scenarios.\r\n\r\nTo answer, drag the appropriate workload type from the column on the left to its scenario on the right. Each workload type may be used once, more than once, or not at all.",
+    "question": "Match the Face service tasks to the appropriate questions.",
     "options": [],
     "image": null,
-    "answer": null,
+    "answer": [
+      "Do two images of a face belong to the same person? => verification",
+      "Does this person look like other people? => similarity",
+      "Do all the faces belong together? => grouping",
+      "Who is this person in this group of people? => identification"
+    ],
     "type": "matching",
     "left": [
-      "Detect objects in an image",
-      "Read text from an image",
-      "Identify faces in an image",
-      "Classify images by content"
+      "Do two images of a face belong to the same person?",
+      "Does this person look like other people?",
+      "Do all the faces belong together?",
+      "Who is this person in this group of people?"
     ],
     "right": [
-      "Object Detection",
-      "OCR",
-      "Facial Recognition",
-      "Image Classification"
+      "grouping",
+      "identification",
+      "similarity",
+      "verification"
     ],
     "correctMap": {
-      "Detect objects in an image": "Object Detection",
-      "Read text from an image": "OCR",
-      "Identify faces in an image": "Facial Recognition",
-      "Classify images by content": "Image Classification"
-    }
+      "Do two images of a face belong to the same person?": "verification",
+      "Does this person look like other people?": "similarity",
+      "Do all the faces belong together?": "grouping",
+      "Who is this person in this group of people?": "identification"
+    },
+    "explanation": "La respuesta correcta se basa en emparejar cada elemento de la izquierda con su opción correcta de la derecha.<br><br>Do two images of a face belong to the same person? => verification<br>Does this person look like other people? => similarity<br>Do all the faces belong together? => grouping<br>Who is this person in this group of people? => identification"
   },
   {
     "id": "228",
@@ -2855,26 +3977,50 @@
       "face detection"
     ],
     "image": null,
-    "answer": "object detection"
+    "answer": "object detection",
+    "explanation": "La respuesta correcta es: object detection."
   },
   {
     "id": "229",
-    "question": "HOTSPOT -\r\n\r\nTo complete the sentence, select the appropriate option in the answer area.\r\n\r\nHot Area:",
-    "options": [],
-    "image": "../Preguntas/images/ai900/image-121.png",
-    "answer": null
+    "question": "You can use the {{option}} service to train an object detection model by using your own images.",
+    "options": [
+      "Computer Vision",
+      "Custom Vision",
+      "Form Recognizer",
+      "Video Indexer"
+    ],
+    "image": null,
+    "answer": "Custom Vision",
+    "type": "dropdown",
+    "explanation": "La respuesta correcta es: Custom Vision."
   },
   {
     "id": "230",
-    "question": "You send an image to a Computer Vision API and receive back the annotated image shown in the exhibit.\r\n\r\nQuestion\r\nWhich type of computer vision was used?",
+    "question": "For each of the following statements, select Yes if the statement is true. Otherwise, select No.",
     "options": [
       "object detection",
       "face detection",
       "optical character recognition (OCR)",
       "image classification"
     ],
-    "image": "../Preguntas/images/ai900/image-122.png",
-    "answer": "object detection"
+    "image": null,
+    "answer": "Yes, Yes, Yes",
+    "type": "hotspot-yes-no",
+    "statements": [
+      {
+        "text": "You can use the Speech service to transcribe a call to text.",
+        "correct": "Yes"
+      },
+      {
+        "text": "You can use the Text Analytics service to extract key entities from a call transcript.",
+        "correct": "Yes"
+      },
+      {
+        "text": "You can use the Speech service to translate the audio of a call to a different language.",
+        "correct": "Yes"
+      }
+    ],
+    "explanation": "Cada afirmación tiene una respuesta Sí/No correcta. La combinación correcta es: Yes, Yes, Yes.<br><br>\"You can use the Speech service to transcribe a call to text.\" => Yes<br>\"You can use the Text Analytics service to extract key entities from a call transcript.\" => Yes<br>\"You can use the Speech service to translate the audio of a call to a different language.\" => Yes"
   },
   {
     "id": "231",
@@ -2889,7 +4035,8 @@
     "answer": [
       "Detect faces in an image.",
       "Recognize handwritten text."
-    ]
+    ],
+    "explanation": "Las respuestas correctas son: Detect faces in an image., Recognize handwritten text.."
   },
   {
     "id": "232",
@@ -2901,7 +4048,8 @@
       "predicting how many minutes it will take someone to run a race based on past race times"
     ],
     "image": null,
-    "answer": "predicting whether someone uses a bicycle to travel to work based on the distance from home to work"
+    "answer": "predicting whether someone uses a bicycle to travel to work based on the distance from home to work",
+    "explanation": "La respuesta correcta es: predicting whether someone uses a bicycle to travel to work based on the distance from home to work."
   },
   {
     "id": "233",
@@ -2914,7 +4062,11 @@
       "Extract key phrases."
     ],
     "image": null,
-    "answer": null
+    "answer": [
+      "Detect brands in an image.",
+      "Detect the color scheme in an image"
+    ],
+    "explanation": "Las respuestas correctas son: Detect brands in an image., Detect the color scheme in an image."
   },
   {
     "id": "234",
@@ -2926,7 +4078,8 @@
       "Computer Vision"
     ],
     "image": null,
-    "answer": null
+    "answer": "Face",
+    "explanation": "La respuesta correcta es: Face."
   },
   {
     "id": "235",
@@ -2941,14 +4094,22 @@
     "answer": [
       "Identify the retailer from a receipt",
       "Extract the invoice number from an invoice"
-    ]
+    ],
+    "explanation": "Las respuestas correctas son: Identify the retailer from a receipt, Extract the invoice number from an invoice."
   },
   {
     "id": "236",
     "question": "Match the Microsoft guiding principles for responsible AI to the appropriate descriptions.\r\n\r\nTo answer, drag the appropriate principle from the column on the left to its description on the right. Each principle may be used once, more than once, or not at all.",
     "options": [],
     "image": null,
-    "answer": null,
+    "answer": [
+      "Ensure AI systems operate as designed => Reliability & Safety",
+      "Protect data and privacy => Privacy & Security",
+      "Empower everyone including those with disabilities => Inclusiveness",
+      "Ensure AI systems are explainable => Transparency",
+      "Humans are responsible for AI systems => Accountability",
+      "No bias based on race or gender => Fairness"
+    ],
     "type": "matching",
     "left": [
       "Ensure AI systems operate as designed",
@@ -2973,14 +4134,20 @@
       "Ensure AI systems are explainable": "Transparency",
       "Humans are responsible for AI systems": "Accountability",
       "No bias based on race or gender": "Fairness"
-    }
+    },
+    "explanation": "La respuesta correcta se basa en emparejar cada elemento de la izquierda con su opción correcta de la derecha.<br><br>Ensure AI systems operate as designed => Reliability & Safety<br>Protect data and privacy => Privacy & Security<br>Empower everyone including those with disabilities => Inclusiveness<br>Ensure AI systems are explainable => Transparency<br>Humans are responsible for AI systems => Accountability<br>No bias based on race or gender => Fairness"
   },
   {
     "id": "237",
     "question": "Match the facial recognition tasks to the appropriate questions.\r\n\r\nTo answer, drag the appropriate task from the column on the left to its question on the right. Each task may be used once, more than once, or not at all.",
     "options": [],
     "image": null,
-    "answer": null,
+    "answer": [
+      "Detect objects in an image => Object Detection",
+      "Read text from an image => OCR",
+      "Identify faces in an image => Facial Recognition",
+      "Classify images by content => Image Classification"
+    ],
     "type": "matching",
     "left": [
       "Detect objects in an image",
@@ -2999,7 +4166,8 @@
       "Read text from an image": "OCR",
       "Identify faces in an image": "Facial Recognition",
       "Classify images by content": "Image Classification"
-    }
+    },
+    "explanation": "La respuesta correcta se basa en emparejar cada elemento de la izquierda con su opción correcta de la derecha.<br><br>Detect objects in an image => Object Detection<br>Read text from an image => OCR<br>Identify faces in an image => Facial Recognition<br>Classify images by content => Image Classification"
   },
   {
     "id": "238",
@@ -3011,7 +4179,8 @@
       "Describe the images."
     ],
     "image": null,
-    "answer": null
+    "answer": "Describe the images.",
+    "explanation": "La respuesta correcta es: Describe the images.."
   },
   {
     "id": "239",
@@ -3023,14 +4192,22 @@
       "Language"
     ],
     "image": null,
-    "answer": "Form Recognizer"
+    "answer": "Form Recognizer",
+    "explanation": "La respuesta correcta es: Form Recognizer."
   },
   {
     "id": "240",
-    "question": "HOTSPOT -\r\n\r\nSelect the answer that correctly completes the sentence.\r\n\r\nHot Area:",
-    "options": [],
-    "image": "../Preguntas/images/ai900/image-125.png",
-    "answer": null
+    "question": "{{option}} extracts text from handwritten documents.",
+    "options": [
+      "Object detection",
+      "Facial recognition",
+      "Image classification",
+      "Optical character recognition (OCR)"
+    ],
+    "image": null,
+    "answer": "Optical character recognition (OCR)",
+    "type": "dropdown",
+    "explanation": "La respuesta correcta es: Optical character recognition (OCR)."
   },
   {
     "id": "241",
@@ -3042,7 +4219,8 @@
       "language detection"
     ],
     "image": null,
-    "answer": "key phrase extraction"
+    "answer": "key phrase extraction",
+    "explanation": "La respuesta correcta es: key phrase extraction."
   },
   {
     "id": "242",
@@ -3057,14 +4235,22 @@
     "answer": [
       "providing closed captions for recorded or live videos",
       "creating a transcript of a telephone call or meeting"
-    ]
+    ],
+    "explanation": "Las respuestas correctas son: providing closed captions for recorded or live videos, creating a transcript of a telephone call or meeting."
   },
   {
     "id": "243",
-    "question": "HOTSPOT -\r\n\r\nTo complete the sentence, select the appropriate option in the answer area.\r\n\r\nHot Area:",
-    "options": [],
-    "image": "../Preguntas/images/ai900/image-126.png",
-    "answer": null
+    "question": "While presenting at a conference, your session is transcribed into subtitles for the audience. This is an example of {{option}}",
+    "options": [
+      "sentiment analysis.",
+      "speech recognition.",
+      "speech synthesis.",
+      "translation."
+    ],
+    "image": null,
+    "answer": "speech recognition.",
+    "type": "dropdown",
+    "explanation": "La respuesta correcta es: speech recognition.."
   },
   {
     "id": "244",
@@ -3076,14 +4262,31 @@
       "Language Understanding (LUIS)"
     ],
     "image": null,
-    "answer": "Speech"
+    "answer": "Speech",
+    "explanation": "La respuesta correcta es: Speech."
   },
   {
     "id": "245",
-    "question": "HOTSPOT -\r\n\r\nFor each of the following statements, select Yes if the statement is true. Otherwise, select No.\r\n\r\nNOTE: Each correct selection is worth one point.\r\n\r\nHot Area:",
+    "question": "For each of the following statements, select Yes if the statement is true. Otherwise, select No.",
     "options": [],
-    "image": "../Preguntas/images/ai900/image-127.png",
-    "answer": null
+    "image": null,
+    "answer": "Yes, Yes, Yes",
+    "type": "hotspot-yes-no",
+    "statements": [
+      {
+        "text": "You can use the Speech service to transcribe a call to text.",
+        "correct": "Yes"
+      },
+      {
+        "text": "You can use the Text Analytics service to extract key entities from a call transcript.",
+        "correct": "Yes"
+      },
+      {
+        "text": "You can use the Speech service to translate the audio of a call to a different language.",
+        "correct": "Yes"
+      }
+    ],
+    "explanation": "Cada afirmación tiene una respuesta Sí/No correcta. La combinación correcta es: Yes, Yes, Yes.<br><br>\"You can use the Speech service to transcribe a call to text.\" => Yes<br>\"You can use the Text Analytics service to extract key entities from a call transcript.\" => Yes<br>\"You can use the Speech service to translate the audio of a call to a different language.\" => Yes"
   },
   {
     "id": "246",
@@ -3095,6 +4298,7 @@
       "natural language processing"
     ],
     "image": null,
-    "answer": "natural language processing"
+    "answer": "natural language processing",
+    "explanation": "La respuesta correcta es: natural language processing."
   }
 ]
