@@ -9,7 +9,8 @@
       "Generate a new SSH key pair. Give the private key to each member of your team. Configure the public key as a project-wide public SSH key in your Cloud Platform project and allow project-wide public SSH keys on each instance."
     ],
     "answer": "Generate a new SSH key pair. Give the private key to each member of your team. Configure the public key in the metadata of each instance.",
-    "explanation": "Pendiente de verificación (no se encontraron respuestas en el archivo original)."
+    "explanation": "To manage credentials efficiently and track access, use OS Login. By granting the `compute.osAdminLogin` role to the team's Google Group, you centralize access management. Each user manages their own SSH keys in their Google account, and OS Login links these keys to their identity for auditing.",
+    "right": "Ask each member of the team to generate a new SSH key pair and to add the public key to their Google account. Grant the ג€compute.osAdminLoginג€ role to the Google group corresponding to this team."
   },
   {
     "type": "dropdown",

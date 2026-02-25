@@ -453,7 +453,8 @@ window.FALLBACK_QUESTIONS = [
       container.className = 'p-6 bg-slate-50 dark:bg-slate-800/50 rounded-xl border border-slate-200 dark:border-slate-700 mt-4';
       
       const select = document.createElement('select');
-      select.className = 'inline-block w-auto min-w-[200px] p-2.5 mx-2 rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-dark-bg text-slate-900 dark:text-white outline-none focus:ring-2 focus:ring-brand-500 font-medium align-middle';
+      // Added max-w-full to prevent overflow on small screens
+      select.className = 'inline-block max-w-full md:w-auto min-w-[200px] p-2.5 mx-2 my-1 rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-dark-bg text-slate-900 dark:text-white outline-none focus:ring-2 focus:ring-brand-500 font-medium align-middle whitespace-normal overflow-hidden text-ellipsis';
       
       const ph = document.createElement('option');
       ph.text = 'Select an option...'; ph.value = ''; ph.disabled = true; ph.selected = true;
@@ -470,7 +471,7 @@ window.FALLBACK_QUESTIONS = [
       if (parts.length > 1) {
           els.question.innerHTML = ''; // Clear original question text as we rebuild it
           const wrapper = document.createElement('div');
-          wrapper.className = 'text-lg md:text-xl leading-relaxed text-slate-900 dark:text-white flex flex-wrap items-center gap-2';
+          wrapper.className = 'text-lg md:text-xl leading-relaxed text-slate-900 dark:text-white flex flex-wrap items-baseline gap-2'; // Changed items-center to items-baseline
           
           const part1 = document.createElement('span');
           part1.innerHTML = parts[0];
@@ -483,6 +484,8 @@ window.FALLBACK_QUESTIONS = [
           els.question.appendChild(wrapper);
       } else {
           // If no placeholder, just append select to container
+          // Ensure container handles overflow
+          container.className = 'p-4 md:p-6 bg-slate-50 dark:bg-slate-800/50 rounded-xl border border-slate-200 dark:border-slate-700 mt-4 overflow-x-auto';
           container.appendChild(select);
           els.options.appendChild(container);
       }
