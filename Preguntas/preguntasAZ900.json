@@ -1,50 +1,71 @@
-[ 
+[
   {
     "type": "yes_no",
     "question": "A resource group can be created inside another resource group.",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "No",
     "explanation": "Los grupos de recursos no pueden anidarse. Cada recurso pertenece a un único grupo de recursos, y los grupos de recursos sirven como ámbito de administración y RBAC. Referencia: https://learn.microsoft.com/azure/azure-resource-manager/management/overview"
   },
   {
     "question": "An Azure free account has a spending limit.",
     "type": "yes_no",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "right": "Yes",
     "explanation": "La cuenta gratuita aplica un límite de gasto para evitar cargos mientras consumes el crédito promocional. Cuando se alcanza el límite, los recursos se detienen hasta que quites el límite o actualices a pago por uso. Referencia: https://learn.microsoft.com/azure/cost-management-billing/manage/spending-limit"
   },
   {
     "question": "An Azure free account has a limit of 2 TB of data that can be uploaded to Azure.",
     "type": "yes_no",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "right": "No",
     "explanation": "La cuenta gratuita está regida por crédito y tiempo (p. ej., 30 días y crédito promocional), no por un límite fijo de 2 TB de datos subidos. Referencia: https://azure.microsoft.com/free/"
   },
   {
     "question": "An Azure free account can contain an unlimited number of web apps.",
     "type": "yes_no",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "right": "No",
     "explanation": "Los planes de App Service y la oferta gratuita tienen cuotas y límites (instancias, CPU, conexiones, etc.). No es ilimitado. Referencia: https://learn.microsoft.com/azure/app-service/overview"
   },
   {
     "question": "Azure Pay-As-You-Go pricing is an example of CapEx.",
     "type": "yes_no",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "right": "No",
     "explanation": "Pay‑As‑You‑Go es gasto operativo (OpEx): pagas por uso mensual sin inversión de capital inicial. CapEx se refiere a adquirir activos como hardware. Referencia: https://learn.microsoft.com/azure/architecture/cloud-adoption/getting-started/what-is-cloud-adoption#capex-vs-opex"
   },
   {
     "question": "Paying electricity for our datacenter is an example of OpEx.",
     "type": "yes_no",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "right": "Yes",
     "explanation": "El costo de la electricidad es un gasto operativo recurrente (OpEx) asociado a operar el centro de datos."
   },
   {
     "question": "Deploying your own datacenter is an example of CapEx.",
     "type": "yes_no",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "right": "Yes",
     "explanation": "Implementar tu propio centro de datos requiere inversión inicial en activos (hardware, instalaciones), lo cual se clasifica como gasto de capital (CapEx)."
   },
@@ -74,21 +95,30 @@
   {
     "question": "Azure Firewall will encrypt all network traffic sent from Azure to the Internet.",
     "type": "yes_no",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "right": "No",
     "explanation": "Azure Firewall inspecciona/filtra tráfico a nivel de red/aplicación, pero no cifra el tráfico. El cifrado se proporciona con TLS/IPsec entre clientes y servidores. Referencia: https://learn.microsoft.com/azure/firewall/overview"
   },
   {
     "question": "A network security group (NSG) will encrypt all the network traffic sent from Azure to the Internet.",
     "type": "yes_no",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "right": "No",
     "explanation": "Un grupo de seguridad de red (NSG) aplica reglas de permitir/denegar (firewall de capa 4) y no cifra el tráfico. El cifrado se realiza con protocolos como TLS/SSL o IPsec. Referencia: https://learn.microsoft.com/azure/virtual-network/network-security-groups-overview"
   },
   {
     "question": "Azure virtual machines that run Windows Server 2016 can encrypt the network traffic sent from the virtual machines to a host on the Internet.",
     "type": "yes_no",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "right": "Yes",
     "explanation": "Las máquinas virtuales pueden cifrar el tráfico usando TLS/SSL (aplicación) o IPsec (red) al comunicarse con hosts de Internet. Esto depende de la configuración del sistema/aplicación."
   },
@@ -107,21 +137,30 @@
   {
     "question": "Azure Security Center can monitor Azure resources and on-premises resources.",
     "type": "yes_no",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "right": "Yes",
     "explanation": "Microsoft Defender for Cloud (antes Security Center) puede evaluar recursos en Azure y entornos híbridos/on‑prem mediante Azure Arc. Referencia: https://learn.microsoft.com/azure/defender-for-cloud/"
   },
   {
     "question": "All Azure Security Center features are free.",
     "type": "yes_no",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "right": "No",
     "explanation": "Defender for Cloud ofrece recomendaciones básicas gratis, pero capacidades avanzadas (protección, alertas, etc.) requieren planes de pago. Referencia: https://learn.microsoft.com/azure/defender-for-cloud/defender-for-cloud-introduction"
   },
   {
     "question": "From Azure Security Center, you can download a Regulatory Compliance report.",
     "type": "yes_no",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "right": "Yes",
     "explanation": "El panel de cumplimiento normativo permite ver y exportar evaluaciones frente a marcos como ISO y PCI. Referencia: https://learn.microsoft.com/azure/defender-for-cloud/defender-for-cloud-compliance"
   },
@@ -140,21 +179,30 @@
   {
     "question": "You can associate a network security group (NSG) to a virtual network subnet.",
     "type": "yes_no",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "right": "Yes",
     "explanation": "Los NSG pueden asociarse a subredes y NIC de VM. Asociar un NSG a una subred aplica sus reglas a todas las interfaces de los recursos dentro de esa subred. Referencia: https://learn.microsoft.com/azure/virtual-network/network-security-groups-overview"
   },
   {
     "question": "You can associate a network security group (NSG) to a virtual network.",
     "type": "yes_no",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "right": "No",
     "explanation": "Los NSG no pueden asociarse al recurso de red virtual en su conjunto; solo a subredes específicas o NIC individuales. Referencia: https://learn.microsoft.com/azure/virtual-network/network-security-groups-overview"
   },
   {
     "question": "You can associate a network security group (NSG) to a network interface (NIC).",
     "type": "yes_no",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "right": "Yes",
     "explanation": "Además de las subredes, un NSG puede aplicarse directamente a la NIC de una VM para reglas más específicas. Referencia: https://learn.microsoft.com/azure/virtual-network/network-security-groups-overview"
   },
@@ -197,43 +245,62 @@
   {
     "question": "Azure Advisor can generate a list of Azure virtual machines that are protected by Azure Backup.",
     "type": "yes_no",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "right": "No",
     "explanation": "Azure Advisor proporciona recomendaciones de costo, rendimiento, confiabilidad y seguridad, pero no inventarios detallados de protección de copias de seguridad. Usa Azure Backup Reports o un Recovery Services vault para eso. Referencia: https://learn.microsoft.com/azure/advisor/advisor-overview"
   },
   {
     "question": "If you implement the security recommendations provided by Azure Advisor, your company's secure score will decrease.",
     "type": "yes_no",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "right": "No",
     "explanation": "Implementar recomendaciones de seguridad normalmente mejora el Secure Score (de Defender for Cloud/Microsoft Secure Score), no lo reduce. Referencia: https://learn.microsoft.com/azure/defender-for-cloud/secure-score-security-controls"
   },
   {
     "question": "To maintain Microsoft support, you must implement the security recommendations provided by Azure Advisor within 30 days.",
     "type": "yes_no",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "right": "No",
     "explanation": "No existe un requisito de soporte que te obligue a aplicar las recomendaciones de Advisor en 30 días. Advisor guía buenas prácticas, pero no impone plazos de soporte."
   },
   {
     "type": "yes_no",
     "question": "An Azure virtual machine can be in multiple resource groups.",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "No",
     "explanation": "Un recurso solo puede pertenecer a un grupo de recursos a la vez; no puede estar en múltiples grupos. Referencia: https://learn.microsoft.com/azure/azure-resource-manager/management/overview"
   },
   {
     "type": "yes_no",
     "question": "A resource group can contain resources from multiple Azure regions.",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "Yes",
     "explanation": "Los grupos de recursos son contenedores lógicos y pueden incluir recursos implementados en diferentes regiones de Azure."
   },
-
   {
     "type": "matching",
     "prompt": "Match each item with its definition.",
-    "left": ["ISO", "NIST", "GDPR", "Azure Government"],
+    "left": [
+      "ISO",
+      "NIST",
+      "GDPR",
+      "Azure Government"
+    ],
     "right": [
       "An organization that defines international standards across all industries.",
       "An organization that defines standards used by the U.S. government.",
@@ -248,63 +315,87 @@
     },
     "explanation": "ISO define estándares internacionales; NIST define estándares usados por el gobierno de EE. UU.; GDPR regula la privacidad en la UE; Azure Government es una nube pública dedicada a agencias gubernamentales de EE. UU."
   },
-
   {
     "type": "dropdown",
     "question": "From which service can you see which user shut down a specific virtual machine during the last 14 days?",
-    "options": ["Azure Control IAM", "Azure Event Hubs", "Azure Activity Log", "Azure Service Health"],
+    "options": [
+      "Azure Control IAM",
+      "Azure Event Hubs",
+      "Azure Activity Log",
+      "Azure Service Health"
+    ],
     "answer": "Azure Activity Log",
     "explanation": "El Activity Log registra operaciones del plano de control (iniciar/detener/eliminar, etc.) sobre recursos durante los últimos 90 días, incluyendo quién realizó la acción. Referencia: https://learn.microsoft.com/azure/azure-monitor/essentials/activity-log"
   },
-
   {
     "type": "yes_no",
     "question": "A single Microsoft account can be used to manage multiple Azure subscriptions.",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "Yes",
     "explanation": "Una sola identidad puede tener roles en múltiples suscripciones dentro del mismo tenant o entre tenants, administrando recursos según permisos RBAC."
   },
   {
     "type": "yes_no",
     "question": "Two Azure subscriptions can be merged into a single subscription by creating a support request.",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "No",
     "explanation": "No existe una operación de 'fusión' de suscripciones. Puedes mover recursos compatibles entre suscripciones, pero no puedes fusionarlas. Referencia: https://learn.microsoft.com/azure/azure-resource-manager/management/move-resource-group-and-subscription"
   },
   {
     "type": "yes_no",
     "question": "A company can use resources from multiple subscriptions.",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "Yes",
     "explanation": "Es común operar múltiples suscripciones (por entorno, departamento, aislamiento) y acceder entre ellas con conectividad y permisos adecuados."
   },
-
   {
     "type": "yes_no",
     "question": "Creating additional resource groups in an Azure subscription incurs additional costs.",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "No",
     "explanation": "Los grupos de recursos son contenedores lógicos sin costo. Los cargos provienen de los recursos dentro del grupo."
   },
   {
     "type": "yes_no",
     "question": "Copying several gigabits of data to Azure from an on-premises network through a VPN incurs additional Azure data transfer costs.",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "No",
     "explanation": "El tráfico entrante a Azure generalmente no se factura; el egreso sí. Pueden aplicar cargos del proveedor por VPN/ExpressRoute, pero no por el ingreso a Azure."
   },
   {
     "type": "yes_no",
     "question": "Copying several gigabytes of data from Azure to an on-premises network through a VPN incurs additional Azure data transfer costs.",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "Yes",
     "explanation": "El tráfico saliente (egreso) desde Azure genera costo según la región y el tipo de conexión (Internet/ExpressRoute)."
   },
-
   {
     "type": "matching",
     "prompt": "Match each Azure service with its description.",
-    "left": ["Azure Functions", "Azure Databricks", "Azure Application Insights", "Azure App Service"],
+    "left": [
+      "Azure Functions",
+      "Azure Databricks",
+      "Azure Application Insights",
+      "Azure App Service"
+    ],
     "right": [
       "Provides the platform for serverless code.",
       "Big data analytics service for machine learning.",
@@ -319,7 +410,6 @@
     },
     "explanation": "Functions ejecuta código sin servidor; Databricks proporciona analítica de big data y ML; Application Insights supervisa y detecta anomalías en aplicaciones; App Service hospeda aplicaciones web gestionadas."
   },
-
   {
     "type": "dropdown",
     "question": "When you need to delegate permissions to multiple Azure virtual machines simultaneously, you must deploy the virtual machines…",
@@ -332,7 +422,6 @@
     "answer": "in the same resource group",
     "explanation": "Asignar RBAC en el grupo de recursos otorga permisos sobre todos los recursos del grupo, habilitando delegación simultánea."
   },
-
   {
     "type": "dropdown",
     "question": "Monitor threats by using sensors",
@@ -357,11 +446,15 @@
     "answer": "Azure Active Directory (Azure AD) Identity Protection",
     "explanation": "Identity Protection y Acceso Condicional permiten imponer MFA según condiciones (riesgo de inicio de sesión, ubicación, dispositivo)."
   },
-
   {
     "type": "matching",
     "prompt": "Match the service to the functionality.",
-    "left": ["Azure Bot Services", "Azure Machine Learning", "Azure Functions", "Azure IoT Hub"],
+    "left": [
+      "Azure Bot Services",
+      "Azure Machine Learning",
+      "Azure Functions",
+      "Azure IoT Hub"
+    ],
     "right": [
       "Online digital assistant that provides voice support.",
       "Uses prior training to predict outcomes with high probability.",
@@ -376,51 +469,66 @@
     },
     "explanation": "Bot Services crea asistentes conversacionales; ML entrena y predice; Functions proporciona cómputo sin servidor; IoT Hub ingiere/gestiona datos de dispositivos IoT a escala."
   },
-
   {
     "type": "yes_no",
     "question": "Adding resource groups in an Azure subscription causes additional costs.",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "No",
     "explanation": "Los grupos de recursos no tienen costo directo; los cargos provienen de los recursos que contienen."
   },
   {
     "type": "yes_no",
     "question": "Copying 10 GB of data to Azure from an on-premises network through a VPN incurs additional Azure data transfer costs.",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "No",
     "explanation": "El ingreso de datos a Azure no se factura por Azure; pueden aplicar cargos del proveedor por la conectividad."
   },
   {
     "type": "yes_no",
     "question": "Copying 10 GB of data from Azure to an on-premises network through a VPN incurs additional Azure data transfer costs.",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "Yes",
     "explanation": "El egreso desde Azure tiene costo, independientemente de si ocurre vía VPN o Internet."
   },
-
   {
     "type": "yes_no",
     "question": "Azure Active Directory (Azure AD) requires the deployment of domain controllers on Azure virtual machines.",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "No",
     "explanation": "Azure AD es un servicio de directorio en la nube administrado; no requiere controladores de dominio en VMs. Para AD DS administrado, usa Azure AD DS."
   },
   {
     "type": "yes_no",
     "question": "Azure Active Directory (Azure AD) provides authentication services for resources hosted in Azure and Microsoft 365.",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "Yes",
     "explanation": "Azure AD es el servicio de identidad y acceso que autentica usuarios/aplicaciones para Azure, Microsoft 365 y servicios asociados."
   },
   {
     "type": "yes_no",
     "question": "Each user account in Azure Active Directory (Azure AD) can be assigned only one license.",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "No",
     "explanation": "Un usuario puede tener múltiples licencias/planes (p. ej., M365, EMS, AAD Premium); no está limitado a una sola licencia."
   },
-
   {
     "type": "dropdown",
     "question": "When planning to migrate a public website to Azure, you should plan to…",
@@ -436,25 +544,33 @@
   {
     "type": "yes_no",
     "question": "A Platform as a Service (PaaS) solution that hosts web applications in Azure provides full control over the operating systems that host the applications.",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "No",
     "explanation": "En PaaS el sistema operativo es administrado por el proveedor; el usuario controla la aplicación y su configuración, no el SO subyacente."
   },
   {
     "type": "yes_no",
     "question": "A Platform as a Service (PaaS) solution that hosts web applications in Azure provides the ability to scale the platform automatically.",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "Yes",
     "explanation": "Los servicios PaaS (como App Service) admiten escalado automático basado en reglas/métricas, reduciendo la administración."
   },
   {
     "type": "yes_no",
     "question": "A Platform as a Service (PaaS) solution that hosts web applications in Azure provides professional development services to continuously add features to custom applications.",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "No",
     "explanation": "PaaS proporciona plataforma/infraestructura, no servicios profesionales de desarrollo para entrega continua de funcionalidades; eso es aparte."
   },
-
   {
     "type": "dropdown",
     "question": "Which tool can calculate cost savings from reduced electricity consumption when migrating on-premises Microsoft SQL servers to Azure?",
@@ -479,166 +595,234 @@
     "answer": "configuring the SaaS solution",
     "explanation": "En SaaS el proveedor gestiona la infraestructura y la aplicación; el cliente configura el servicio (usuarios, opciones) según sus necesidades."
   },
-
   {
     "type": "yes_no",
     "question": "To achieve a hybrid cloud model, a company must always migrate from a private cloud model.",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "No",
     "explanation": "Un modelo híbrido combina recursos on‑prem y nube pública/privada; no requiere migrar desde una nube privada y puede partir de on‑prem tradicional."
   },
   {
     "type": "yes_no",
     "question": "A company can extend the capacity of its internal network by using the public cloud.",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "Yes",
     "explanation": "La nube pública permite escalar capacidad (cómputo, almacenamiento) conectada vía VPN/ExpressRoute para extender el entorno interno."
   },
   {
     "type": "yes_no",
     "question": "In a public cloud model, only guest users from your company can access cloud resources.",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "No",
     "explanation": "Los recursos pueden ser accedidos por usuarios internos autorizados, invitados externos y/o clientes según permisos; no está limitado a invitados."
   },
-
   {
     "type": "yes_no",
     "question": "The guaranteed uptime Service Level Agreement (SLA) for paid Azure services is at least 99.9 percent.",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "Yes",
     "explanation": "Muchos servicios ofrecen ≥99.9% de SLA; algunos son más altos (99.95/99.99). Revisa siempre el SLA específico por servicio. Referencia: https://azure.microsoft.com/support/legal/sla/"
   },
   {
     "type": "yes_no",
     "question": "Companies can increase the guaranteed uptime Service Level Agreement (SLA) by adding Azure resources to multiple regions.",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "Yes",
     "explanation": "Los diseños multirregión mejoran la disponibilidad compuesta al evitar fallas regionales, aumentando el SLA efectivo de la solución."
   },
   {
     "type": "yes_no",
     "question": "Companies can increase the guaranteed uptime Service Level Agreement (SLA) by purchasing multiple subscriptions.",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "No",
     "explanation": "El SLA depende del servicio y la arquitectura (zonas/regiones); múltiples suscripciones no aumentan el SLA garantizado."
   },
-
   {
     "type": "yes_no",
     "question": "Identities stored in an on-premises Active Directory can be synchronized with Azure Active Directory (Azure AD).",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "Yes",
     "explanation": "Azure AD Connect sincroniza identidades de AD local con Azure AD para SSO/híbrido."
   },
   {
     "type": "yes_no",
     "question": "Identities stored in Azure Active Directory (Azure AD), third-party cloud services, and on-premises Active Directory can be used to access Azure resources.",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "Yes",
     "explanation": "Azure admite identidades externas (B2B, federación) e identidades on‑prem para acceder a recursos con RBAC/roles."
   },
   {
     "type": "yes_no",
     "question": "Azure has built-in authentication and authorization services that provide secure access to Azure resources.",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "Yes",
     "explanation": "Azure AD, RBAC y Resource Manager proporcionan autenticación y autorización integradas para acceso seguro."
   },
-
   {
     "type": "yes_no",
     "question": "To implement an Azure Multi-Factor Authentication (MFA) solution, you must implement a federation solution or synchronize on-premises identities to the cloud.",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "No",
     "explanation": "MFA puede habilitarse directamente en Azure AD (Conditional Access) sin federación ni sincronización."
   },
   {
     "type": "yes_no",
     "question": "Two valid methods for Azure Multi-Factor Authentication (MFA) are image identification and a passport number.",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "No",
     "explanation": "Los métodos válidos incluyen la app Authenticator, SMS, llamada telefónica, FIDO2, etc. Imagen/número de pasaporte no son factores aceptados."
   },
   {
     "type": "yes_no",
     "question": "Azure Multi-Factor Authentication (MFA) can be required for administrative and non-administrative user accounts.",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "Yes",
     "explanation": "Mediante Acceso Condicional, se puede aplicar MFA a cualquier grupo de usuarios (administradores y no administradores)."
   },
-
   {
     "type": "yes_no",
     "question": "All Azure services in public preview must be accessed using a separate Azure portal.",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "No",
     "explanation": "Los servicios en vista previa pública se gestionan en el mismo Azure Portal (marcados como Preview); no requieren un portal separado."
   },
   {
     "type": "yes_no",
     "question": "Azure services in public preview can be used in production.",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "Yes",
     "explanation": "Pueden usarse en producción a discreción del cliente, aunque no tienen SLA y pueden cambiar."
   },
   {
     "type": "yes_no",
     "question": "Azure services in public preview are subject to a Service Level Agreement (SLA).",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "No",
     "explanation": "Las características/servicios en vista previa generalmente están excluidos de los SLA."
   },
-
   {
     "type": "dropdown",
     "question": "An organization that hosts its infrastructure… no longer requires a datacenter.",
-    "options": ["in a private cloud", "in a public cloud", "in a hybrid cloud"],
+    "options": [
+      "in a private cloud",
+      "in a public cloud",
+      "in a hybrid cloud"
+    ],
     "answer": "in a public cloud",
     "explanation": "Alojar infraestructura en una nube pública elimina la necesidad de operar tu propio centro de datos; el proveedor gestiona la infraestructura."
   },
-
   {
     "type": "dropdown",
     "question": "Monitor the health of Azure services",
-    "options": ["Monitor", "Subscriptions", "Marketplace", "Advisor"],
+    "options": [
+      "Monitor",
+      "Subscriptions",
+      "Marketplace",
+      "Advisor"
+    ],
     "answer": "Monitor",
     "explanation": "Azure Monitor y Service Health muestran métricas, incidentes y mantenimiento del servicio."
   },
   {
     "type": "dropdown",
     "question": "Explore available virtual machine images",
-    "options": ["Monitor", "Subscriptions", "Marketplace", "Advisor"],
+    "options": [
+      "Monitor",
+      "Subscriptions",
+      "Marketplace",
+      "Advisor"
+    ],
     "answer": "Marketplace",
     "explanation": "Azure Marketplace ofrece imágenes y soluciones publicadas por Microsoft y socios."
   },
   {
     "type": "dropdown",
     "question": "View security recommendations",
-    "options": ["Monitor", "Subscriptions", "Marketplace", "Advisor"],
+    "options": [
+      "Monitor",
+      "Subscriptions",
+      "Marketplace",
+      "Advisor"
+    ],
     "answer": "Advisor",
     "explanation": "Azure Advisor y Defender for Cloud proporcionan recomendaciones de seguridad y buenas prácticas."
   },
-
   {
     "type": "dropdown",
     "question": "Minimum number of virtual machines to meet high availability",
-    "options": ["1", "2", "3"],
+    "options": [
+      "1",
+      "2",
+      "3"
+    ],
     "answer": "2",
     "explanation": "Al menos dos instancias distribuidas (conjunto de disponibilidad o zonas) para tolerancia a fallos."
   },
   {
     "type": "dropdown",
     "question": "Minimum number of availability zones to meet high availability",
-    "options": ["1", "2", "3"],
+    "options": [
+      "1",
+      "2",
+      "3"
+    ],
     "answer": "2",
     "explanation": "Distribuir en dos zonas dentro de una región proporciona alta disponibilidad frente a la falla de un centro de datos."
   },
-
   {
     "type": "matching",
     "prompt": "Match the tool to its description.",
-    "left": ["Azure DevOps", "Azure Advisor", "Azure Cognitive Services", "Azure Application Insights"],
+    "left": [
+      "Azure DevOps",
+      "Azure Advisor",
+      "Azure Cognitive Services",
+      "Azure Application Insights"
+    ],
     "right": [
       "Integrated solution for code deployment.",
       "Tool that provides guidance and recommendations to improve an Azure environment.",
@@ -656,7 +840,11 @@
   {
     "type": "matching",
     "prompt": "Match IoT services with their description.",
-    "left": ["IoT Hub", "IoT Central", "Azure Sphere"],
+    "left": [
+      "IoT Hub",
+      "IoT Central",
+      "Azure Sphere"
+    ],
     "right": [
       "Managed service that provides bidirectional communication between IoT devices and Azure.",
       "Fully-managed SaaS solution to connect, monitor, and manage IoT devices at scale.",
@@ -730,196 +918,282 @@
   {
     "type": "dropdown",
     "question": "An Azure web app that queries an on-premises Microsoft SQL server is an example of a ____ cloud.",
-    "options": ["hybrid", "multi-vendor", "private", "public"],
+    "options": [
+      "hybrid",
+      "multi-vendor",
+      "private",
+      "public"
+    ],
     "answer": "hybrid",
     "explanation": "Combina recursos de nube (aplicación web en Azure) con recursos on‑prem (SQL Server), formando un modelo híbrido."
   },
   {
     "type": "yes_no",
     "question": "Azure China is operated by Microsoft.",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "No",
     "explanation": "Azure China es operado por 21Vianet en cumplimiento de regulaciones locales; no directamente por Microsoft."
   },
   {
     "type": "yes_no",
     "question": "Azure Government is operated by Microsoft.",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "Yes",
     "explanation": "Azure Government es un entorno aislado operado por Microsoft para cargas de trabajo del gobierno de EE. UU."
   },
   {
     "type": "yes_no",
     "question": "Azure Government is available only for U.S. government agencies and their partners.",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "Yes",
     "explanation": "El acceso a Azure Government está restringido a agencias gubernamentales de EE. UU. y socios autorizados."
   },
   {
     "type": "yes_no",
     "question": "An Azure resource can have multiple Delete locks.",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "No",
     "explanation": "Los bloqueos se heredan y su efecto se consolida; múltiples bloqueos Delete no cambian el comportamiento: uno es suficiente para evitar la eliminación."
   },
   {
     "type": "yes_no",
     "question": "An Azure resource inherits the locks from its resource group.",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "Yes",
     "explanation": "Los bloqueos aplicados a nivel de suscripción o grupo de recursos se propagan a los recursos contenidos (herencia de bloqueos)."
   },
   {
     "type": "yes_no",
     "question": "If an Azure resource has a Read-only lock, you can add a Delete lock to the resource.",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "No",
     "explanation": "Con un bloqueo de solo lectura, el recurso no puede modificarse ni eliminarse; añadir un bloqueo Delete adicional es innecesario."
   },
   {
     "type": "yes_no",
     "question": "Most Azure services are introduced in private preview before being introduced in public preview and then in general availability.",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "Yes",
     "explanation": "Ciclo de vida típico: Private Preview → Public Preview → General Availability (GA)."
   },
   {
     "type": "yes_no",
     "question": "Azure services in public preview can only be managed by Azure CLI.",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "No",
     "explanation": "Los servicios en vista previa suelen estar disponibles vía Azure Portal y APIs, no solo CLI."
   },
   {
     "type": "yes_no",
     "question": "The cost of an Azure service in private preview decreases when the service becomes generally available.",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "No",
     "explanation": "No existe una regla de que los precios disminuyan cuando se alcanza GA; los precios se establecen por servicio y pueden cambiar."
   },
   {
     "type": "yes_no",
     "question": "All Azure resources deployed in a resource group must use the same Azure region.",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "No",
     "explanation": "Un grupo de recursos es un contenedor lógico; puede contener recursos en diferentes regiones (según el servicio)."
   },
   {
     "type": "yes_no",
     "question": "If you assign a tag to a resource group, all Azure resources in that resource group will be assigned the same tag.",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "No",
     "explanation": "Las etiquetas no se heredan automáticamente; pueden imponerse/propagarse con Azure Policy si se desea."
   },
   {
     "type": "yes_no",
     "question": "If you assign permissions to a user to manage a resource group, the user can manage all Azure resources in that resource group.",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "Yes",
     "explanation": "Los permisos RBAC asignados en el grupo de recursos se aplican a los recursos contenidos, salvo que existan asignaciones más restrictivas."
   },
   {
     "type": "yes_no",
     "question": "In Azure Active Directory Premium P1, at least 99.9 percent availability is guaranteed.",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "Yes",
     "explanation": "Azure AD Premium tiene un SLA de disponibilidad del 99.9% para autenticación y servicios de directorio. Referencia: https://azure.microsoft.com/support/legal/sla/active-directory/"
   },
   {
     "type": "yes_no",
     "question": "The Service Level Agreement (SLA) for Azure Active Directory Premium P1 is the same as the SLA for Azure Active Directory Free.",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "No",
     "explanation": "Las ediciones Premium tienen un SLA formal; la edición Free no ofrece el mismo SLA. Consulta los detalles de SLA por edición. Referencia: https://azure.microsoft.com/support/legal/sla/active-directory/"
   },
   {
     "type": "yes_no",
     "question": "For pay-as-you-go accounts, the monthly credit is 10% if the uptime percentage is less than 99.9%.",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "No",
     "explanation": "Los créditos de SLA aplican por servicio según métricas de SLA; no existe un crédito genérico del 10% para una cuenta PAYG. Referencia: https://azure.microsoft.com/support/legal/sla/"
   },
   {
     "type": "yes_no",
     "question": "A user with the Owner role can transfer the ownership of an Azure subscription.",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "No",
     "explanation": "El rol Owner (RBAC) administra recursos, no la titularidad de la suscripción. Cambiar el propietario de la suscripción requiere permisos de cuenta/facturación (p. ej., Account Owner). Referencia: https://learn.microsoft.com/azure/cost-management-billing/manage/change-azure-subscription-owner"
   },
   {
     "type": "yes_no",
     "question": "You can convert your company's Azure subscription from Free Trial to Pay-As-You-Go.",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "Yes",
     "explanation": "Tras finalizar la prueba gratuita, puedes actualizar a Pay‑As‑You‑Go para seguir usando servicios sin el límite de gasto. Referencia: https://learn.microsoft.com/azure/cost-management-billing/manage/spending-limit#remove-the-spending-limit"
   },
   {
     "type": "yes_no",
     "question": "The Azure spending limit is fixed and cannot be increased or decreased.",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "No",
     "explanation": "El límite de gasto puede quitarse o volver a habilitarse en cuentas elegibles; no es inmutable. Referencia: https://learn.microsoft.com/azure/cost-management-billing/manage/spending-limit"
   },
   {
     "type": "yes_no",
     "question": "With Azure Reservations, you pay less for virtual machines than with pay-as-you-go pricing.",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "Yes",
     "explanation": "Las reservas (1/3 años) ofrecen descuentos significativos frente a PAYG al comprometer capacidad. Referencia: https://learn.microsoft.com/azure/cost-management-billing/reservations/save-compute-costs-reservations"
   },
   {
     "type": "yes_no",
     "question": "If you create two Azure virtual machines using size B2S, each virtual machine will always incur the same monthly costs.",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "No",
     "explanation": "El costo varía por región, SO/licenciamiento, horas de ejecución, discos y tráfico. Igual tamaño no garantiza el mismo costo mensual."
   },
   {
     "type": "yes_no",
     "question": "When an Azure virtual machine is stopped, you still pay for the storage costs associated with the virtual machine.",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "Yes",
     "explanation": "Cuando está detenida (desasignada), la computación no se factura, pero los discos (administrados/no administrados) y las instantáneas continúan generando costos."
   },
   {
     "type": "yes_no",
     "question": "If your company uses an Azure free account, you can only use a subset of Azure services.",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "Yes",
     "explanation": "La cuenta gratuita limita los servicios/recursos disponibles y las cuotas; no se incluye todo el catálogo. Referencia: https://azure.microsoft.com/free/"
   },
   {
     "type": "yes_no",
     "question": "All Azure free accounts expire after a specific period.",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "Yes",
     "explanation": "La prueba gratuita expira tras el periodo promocional (p. ej., 30 días). Debes actualizar a una oferta de pago para continuar."
   },
   {
     "type": "yes_no",
     "question": "You can create up to 10 Azure free accounts using the same Microsoft account.",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "No",
     "explanation": "La oferta gratuita está limitada a clientes nuevos y no permite múltiples cuentas gratuitas con el mismo inicio de sesión."
   },
   {
     "type": "yes_no",
     "question": "Azure Monitor can monitor the performance of on-premises computers.",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "Yes",
     "explanation": "Usando agentes (Azure Monitor Agent/Log Analytics) puedes recopilar métricas y registros de equipos on‑prem. Referencia: https://learn.microsoft.com/azure/azure-monitor/agents/agents-overview"
   },
   {
     "type": "yes_no",
     "question": "Azure Monitor can send alerts to Azure Active Directory security groups.",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "Yes",
     "explanation": "Los grupos de acción pueden enviar correo a direcciones de grupo (Azure AD), webhooks, SMS, etc. Referencia: https://learn.microsoft.com/azure/azure-monitor/alerts/action-groups"
   },
   {
     "type": "yes_no",
     "question": "Azure Monitor can trigger alerts based on data in an Azure Log Analytics workspace.",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "Yes",
     "explanation": "Las alertas de Log Analytics usan consultas KQL sobre espacios de trabajo para evaluar condiciones y activar grupos de acción. Referencia: https://learn.microsoft.com/azure/azure-monitor/alerts/alerts-log"
   },
@@ -938,7 +1212,10 @@
   {
     "type": "yes_no",
     "question": "Azure offers flexibility between capital expenditure (CapEx) and operational expenditure (OpEx).",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "Yes",
     "explanation": "La nube permite pasar de CapEx (hardware propio) a OpEx (pago por uso), aumentando la flexibilidad financiera."
   },
@@ -951,7 +1228,12 @@
       "A cloud service that responds quickly as load increases",
       "A cloud service that can be accessed quickly from the Internet"
     ],
-    "right": ["Fault tolerance", "Disaster recovery", "Dynamic scalability", "Low latency"],
+    "right": [
+      "Fault tolerance",
+      "Disaster recovery",
+      "Dynamic scalability",
+      "Low latency"
+    ],
     "answer": {
       "A cloud service that remains available after a failure occurs": "Fault tolerance",
       "A cloud service that can recover after a failure occurs": "Disaster recovery",
@@ -999,105 +1281,152 @@
   {
     "type": "yes_no",
     "question": "You can use Availability Zones in Azure to protect virtual machines from a datacenter failure.",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "Yes",
     "explanation": "Las Availability Zones son centros de datos independientes dentro de una región; desplegar VM en varias zonas protege contra fallos de un datacenter. Referencia: https://learn.microsoft.com/azure/reliability/availability-zones-overview"
   },
   {
     "type": "yes_no",
     "question": "You can use Availability Zones in Azure to protect virtual machines from a region failure.",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "No",
     "explanation": "Las zonas están dentro de una sola región; para manejar una falla de región usa redundancia entre regiones (pares de regiones, multirregión)."
   },
   {
     "type": "yes_no",
     "question": "You can use Availability Zones in Azure to protect Azure managed disks from a datacenter failure.",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "Yes",
     "explanation": "Los discos con redundancia zonal (ZRS para Managed Disks, en regiones compatibles) proporcionan resiliencia frente a fallos de datacenter. Referencia: https://learn.microsoft.com/azure/virtual-machines/disks-redundancy"
   },
   {
     "type": "yes_no",
     "question": "An Azure subscription can be associated with multiple Azure Active Directory (Azure AD) tenants.",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "No",
     "explanation": "Una suscripción pertenece a un único tenant de Azure AD a la vez."
   },
   {
     "type": "yes_no",
     "question": "You can change the Azure Active Directory (Azure AD) tenant associated to an Azure subscription.",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "Yes",
     "explanation": "Puedes mover una suscripción a otro directorio (cambiar tenant) siguiendo los requisitos. Referencia: https://learn.microsoft.com/azure/cost-management-billing/manage/change-directory"
   },
   {
     "type": "yes_no",
     "question": "When an Azure subscription expires, the associated Azure Active Directory (Azure AD) tenant is automatically deleted.",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "No",
     "explanation": "El tenant de Azure AD no se elimina automáticamente cuando una suscripción expira; puede permanecer para otros usos/licencias."
   },
   {
     "type": "yes_no",
     "question": "Azure resources can only access other resources in the same resource group.",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "No",
     "explanation": "Los recursos pueden comunicarse entre grupos y suscripciones si hay conectividad/red y permisos adecuados."
   },
   {
     "type": "yes_no",
     "question": "If you delete a resource group, all resources in the group will be deleted.",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "Yes",
     "explanation": "Eliminar el grupo de recursos quita de forma irreversible todos los recursos contenidos (excepto los recursos bloqueados)."
   },
   {
     "type": "yes_no",
     "question": "Building a datacenter infrastructure is an example of operational expenditure (OpEx) costs.",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "No",
     "explanation": "Construir infraestructura es CapEx (inversión de capital), no gasto operativo."
   },
   {
     "type": "yes_no",
     "question": "Monthly salaries of technical staff are an example of operational expenditure (OpEx) costs.",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "Yes",
     "explanation": "Los salarios mensuales son gastos operativos recurrentes (OpEx)."
   },
   {
     "type": "yes_no",
     "question": "Leasing software is an example of operational expenditure (OpEx) costs.",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "Yes",
     "explanation": "El arrendamiento/licenciamiento por suscripción de software es OpEx (pago recurrente por uso)."
   },
   {
     "type": "yes_no",
     "question": "With a consumption-based plan, you pay a fixed rate for all data sent to or from cloud-hosted virtual machines.",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "No",
     "explanation": "Los costos de datos dependen de la dirección (entrada/salida), región, servicio y plan; no existe una tarifa plana universal."
   },
   {
     "type": "yes_no",
     "question": "With a consumption-based plan, you reduce costs by paying only for extra capacity when required.",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "Yes",
     "explanation": "Un modelo de consumo te permite escalar y pagar solo por los recursos utilizados cuando se requieren."
   },
   {
     "type": "yes_no",
     "question": "Serverless computing is an example of a consumption-based plan.",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "Yes",
     "explanation": "El modelo sin servidor factura por ejecución y consumo (tiempo/memoria), alineado con un modelo bajo demanda."
   },
   {
     "type": "dropdown",
     "question": "Provides organizations the ability to manage Azure resource compliance across multiple subscriptions.",
-    "options": ["Resource groups", "Management groups", "Azure policies", "Azure App Service plans"],
+    "options": [
+      "Resource groups",
+      "Management groups",
+      "Azure policies",
+      "Azure App Service plans"
+    ],
     "answer": "Azure policies",
     "explanation": "Azure Policy evalúa e impone reglas de cumplimiento a escala (suscripciones/grupos de administración)."
   },
@@ -1116,35 +1445,53 @@
   {
     "type": "dropdown",
     "question": "After creating a virtual machine, you must modify the ____ to allow connections to TCP port 8080 on the virtual machine.",
-    "options": ["Network Security Group (NSG)", "virtual network", "route table"],
+    "options": [
+      "Network Security Group (NSG)",
+      "virtual network",
+      "route table"
+    ],
     "answer": "Network Security Group (NSG)",
     "explanation": "Los NSG definen reglas de seguridad (puertos/protocolos) para permitir tráfico entrante/saliente como TCP 8080."
   },
   {
     "type": "dropdown",
     "question": "An Azure service is available to all Azure customers when it is in…",
-    "options": ["public preview", "private preview", "development", "an Enterprise Agreement (EA) subscription"],
+    "options": [
+      "public preview",
+      "private preview",
+      "development",
+      "an Enterprise Agreement (EA) subscription"
+    ],
     "answer": "public preview",
     "explanation": "En Public Preview los servicios están abiertos a todos los clientes (con limitaciones); Private Preview es por invitación."
   },
   {
     "type": "yes_no",
     "question": "Availability Zones can be implemented in all Azure regions.",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "No",
     "explanation": "Las zonas de disponibilidad sólo existen en regiones compatibles; no están disponibles en todas las regiones."
   },
   {
     "type": "yes_no",
     "question": "Only virtual machines that run Windows Server can be created in Availability Zones.",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "No",
     "explanation": "Las zonas no restringen el SO; se pueden crear VMs Linux/Windows en zonas según soporte regional."
   },
   {
     "type": "yes_no",
     "question": "Availability Zones are used to replicate data and applications to multiple regions.",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "No",
     "explanation": "Las zonas protegen dentro de una región; para replicación entre regiones se usan pares/multirregión."
   },
@@ -1163,148 +1510,212 @@
   {
     "type": "yes_no",
     "question": "From the Azure portal, you can distinguish between services in general availability (GA) and services in public preview.",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "Yes",
     "explanation": "El portal identifica características en preview con etiquetas ‘Preview’; GA no muestra ese estado."
   },
   {
     "type": "yes_no",
     "question": "When an Azure service reaches general availability (GA), it is no longer in preview.",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "Yes",
     "explanation": "GA indica disponibilidad general; por definición deja de ser ‘preview’."
   },
   {
     "type": "yes_no",
     "question": "When you create resources for a service in public preview, you must recreate them when the service becomes generally available (GA).",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "No",
     "explanation": "Normalmente no se requiere recrear recursos al pasar a GA; pueden cambiar APIs/propiedades, pero se migra sin recreación en la mayoría de casos."
   },
   {
     "type": "yes_no",
     "question": "Storing 1 TB of data in Azure Blob Storage always costs the same regardless of the Azure region in which the data resides.",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "No",
     "explanation": "Los precios de Blob varían por región, nivel de acceso (Hot/Cool/Archive) y redundancia (LRS/ZRS/GRS)."
   },
   {
     "type": "yes_no",
     "question": "In a General Purpose v2 Azure Storage account, you are charged only for the amount of data stored; all read and write operations are free.",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "No",
     "explanation": "Además del almacenamiento, se cobran operaciones/solicitudes (lecturas/escrituras), ancho de banda y otros conceptos."
   },
   {
     "type": "yes_no",
     "question": "Transferring data between Azure Storage accounts in different Azure regions is free.",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "No",
     "explanation": "Las transferencias entre regiones incurren en cargos de egreso y posibles costos de replicación."
   },
   {
     "type": "yes_no",
     "question": "Using an Azure ExpressRoute connection, incoming data traffic from an on-premises network to Azure is always free.",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "Yes",
     "explanation": "El tráfico entrante por ExpressRoute no tiene cargo por GB; se paga el circuito y el puerto."
   },
   {
     "type": "yes_no",
     "question": "Outgoing data traffic from Azure to an on-premises network is always free.",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "No",
     "explanation": "El tráfico saliente desde Azure tiene cargos; con ExpressRoute depende del plan (metered/unlimited)."
   },
   {
     "type": "yes_no",
     "question": "Data traffic between Azure services within the same Azure region is always free.",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "Yes",
     "explanation": "Generalmente el tráfico intra-región entre servicios de Azure es gratuito; se cobran transferencias entre regiones o hacia Internet."
   },
   {
     "type": "yes_no",
     "question": "Each Azure subscription can contain multiple account administrators.",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "No",
     "explanation": "El rol de Account/Billing Administrator es único; la administración de recursos usa RBAC con varios roles, no múltiples 'account admins'."
   },
   {
     "type": "yes_no",
     "question": "Each Azure subscription can only be managed using a Microsoft account.",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "No",
     "explanation": "Las suscripciones se administran también con cuentas organizacionales (Azure AD); no sólo cuentas Microsoft (MSA)."
   },
   {
     "type": "dropdown",
     "question": "You can enable Just-In-Time (JIT) access to virtual machines by using…",
-    "options": ["Azure Bastion", "Azure Firewall", "Azure Front Door", "Azure Security Center"],
+    "options": [
+      "Azure Bastion",
+      "Azure Firewall",
+      "Azure Front Door",
+      "Azure Security Center"
+    ],
     "answer": "Azure Security Center",
     "explanation": "Defender for Cloud (antes Security Center) habilita JIT para VMs, abriendo puertos sólo en ventanas aprobadas."
   },
   {
     "type": "yes_no",
     "question": "To implement a hybrid cloud model, a company must have an internal network.",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "Yes",
     "explanation": "Un modelo híbrido implica recursos locales conectados (red interna/VPN/ExpressRoute) junto con servicios en la nube."
   },
   {
     "type": "yes_no",
     "question": "An Azure Virtual Desktop (Windows Virtual Desktop) session host can only run Windows 10.",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "No",
     "explanation": "AVD soporta Windows 10/11 multi-session y Windows Server como sistemas operativos de hosts de sesión."
   },
   {
     "type": "yes_no",
     "question": "An Azure Virtual Desktop host pool that includes 25 session hosts supports a maximum of 20 simultaneous user connections.",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "No",
     "explanation": "La capacidad depende del tamaño y rendimiento de los hosts; no existe un límite fijo de 20 conexiones."
   },
   {
     "type": "yes_no",
     "question": "Azure Virtual Desktop supports desktop and application virtualization.",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "Yes",
     "explanation": "Permite publicar escritorios completos y aplicaciones remotas (RemoteApp) para usuarios finales."
   },
   {
     "type": "yes_no",
     "question": "Data copied to an Azure Storage account is automatically kept with at least three copies.",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "Yes",
     "explanation": "La redundancia LRS mantiene tres copias dentro del mismo datacenter; opciones ZRS/GRS añaden replicación adicional."
   },
   {
     "type": "yes_no",
     "question": "All data copied to an Azure Storage account is automatically backed up in another Azure datacenter.",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "No",
     "explanation": "Sólo cuentas con GRS/GZRS replican a una segunda región; no es automático en todas las cuentas."
   },
   {
     "type": "yes_no",
     "question": "An Azure Storage account can contain up to 7 TB of data and up to one million files.",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "No",
     "explanation": "Los objetivos de escala por cuenta superan ampliamente 7 TB (múltiples PiB según tipo)."
-  }
-,
+  },
   {
     "type": "yes_no",
     "question": "Your company plans to migrate all its data and resources to Azure. <br> <br> The company's migration plan states that only Platform as a Service (PaaS) solutions must be used in Azure. You need to deploy an Azure environment that meets the company migration plan. <br> <br>  Solution: You create an Azure App Service and Azure SQL databases. <br> <br> Does this meet the goal?",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "Yes",
     "explanation": "Ambos servicios (App Service y Azure SQL Database) son PaaS y cumplen el objetivo."
   },
   {
     "type": "yes_no",
     "question": "You plan to deploy several Azure virtual machines. <br> <br> You need to ensure that the services running on the virtual machines are available if a single datacenter fails.  <br> <br> Solution: You deploy the virtual machines to two or more resource groups.  <br> <br> Does this meet the goal?",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "No",
     "explanation": "El uso de varios resource groups no proporciona resiliencia de datacenter; se deben usar Availability Zones o conjuntos de disponibilidad."
   },
@@ -1331,12 +1742,14 @@
     ],
     "answer": "Privileged Identity Management",
     "explanation": "PIM habilita asignaciones temporales de roles con menor privilegio y aprobación (JIT), ajustándose a ventanas específicas para arrancar/parar VMs minimizando costes y riesgos. Referencia: https://learn.microsoft.com/azure/active-directory/privileged-identity-management/"
-  }
-,
+  },
   {
     "type": "yes_no",
     "question": "Your company has an Azure subscription that contains the following unused resources: 20 user accounts in Azure Active Directory (Azure AD), five groups in Azure AD, 10 public IP addresses, and 10 network interfaces. <br> <br> You need to reduce the Azure costs for the company. <br> <br> Solution: You remove the unused network interfaces. <br> <br> Does this meet the goal?",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "No",
     "explanation": "Eliminar NICs sin uso no suele impactar significativamente en costes. Los principales costes provienen de VMs, discos, direcciones IP públicas, etc. Para reducir coste, enfoque en recursos facturables."
   },
@@ -1387,19 +1800,24 @@
     ],
     "answer": "elasticity",
     "explanation": "La elasticidad permite ajustar capacidad según demanda (escalar/descender) y pagar solo por lo que se usa, optimizando costes."
-  }
-,
+  },
   {
     "type": "yes_no",
     "question": "On Windows, Command Prompt can be used to run the Azure CLI.",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "Yes",
     "explanation": "En Windows, el instalador MSI del Azure CLI añade el comando `az` al PATH, por lo que puede ejecutarse desde Command Prompt (cmd.exe) y también desde PowerShell. Referencia: https://learn.microsoft.com/cli/azure/install-azure-cli-windows"
   },
   {
     "type": "yes_no",
     "question": "On Windows, Windows PowerShell can be used to run the Azure CLI.",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "Yes",
     "explanation": "Azure CLI es multiplataforma. En Windows se puede ejecutar `az` desde PowerShell además de CMD. También está disponible en Azure Cloud Shell. Referencia: https://learn.microsoft.com/cli/azure/"
   },
@@ -1430,7 +1848,10 @@
   {
     "type": "yes_no",
     "question": "You have an Azure environment. <br> <br> You need to create a new Azure virtual machine from a tablet that runs the Android operating system. <br> <br> Solution: You use the Azure portal. <br> <br> Does this meet the goal?",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "Yes",
     "explanation": "El portal de Azure es una aplicación web accesible desde navegadores modernos, incluido en tablets Android. Desde el portal se pueden crear y administrar máquinas virtuales. Referencia: https://learn.microsoft.com/azure/azure-portal/azure-portal-overview"
   },
@@ -1445,12 +1866,14 @@
     ],
     "answer": "Azure virtual machines",
     "explanation": "En la página de 'Máquinas virtuales' del portal existe la columna 'Estado de mantenimiento' que muestra incidencias del host que podrían afectar a la VM. Referencia: https://learn.microsoft.com/azure/virtual-machines/maintenance-and-updates"
-  }
-  ,
+  },
   {
     "type": "yes_no",
     "question": "You need to create VM1 in Subscription1 by using the command <br> <br> 'az vm create  --resource-group RG1 --name VM1 --image UbuntuLTS --generate-ssh-keys'.  <br> <br> Solution: From the Azure portal, launch Azure Cloud Shell and select PowerShell. <br> <br> Run the command in Cloud Shell. Does this meet the goal?",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "Yes",
     "explanation": "El comando de Azure CLI puede ejecutarse en Azure Cloud Shell. Aunque selecciones PowerShell en Cloud Shell, los comandos 'az' funcionan tanto en PowerShell como en Bash. Referencia: https://learn.microsoft.com/azure/virtual-machines/linux/quick-create-cli"
   },
@@ -1469,14 +1892,20 @@
   {
     "type": "yes_no",
     "question": "To ensure that a virtual machine named VM1 is accessible from the Internet over HTTP, modifying a network security group (NSG) is a valid solution.",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "Yes",
     "explanation": "Un NSG funciona como firewall de capa 4 y puede asociarse a una subred o a la NIC de la VM. Agregar una regla de entrada para el puerto 80 (HTTP) permite el acceso desde Internet. Referencia: https://learn.microsoft.com/azure/virtual-network/security-overview"
   },
   {
     "type": "yes_no",
     "question": "To ensure that a virtual machine named VM1 is accessible from the Internet over HTTP, modifying Azure Firewall is a valid solution.",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "Yes",
     "explanation": "Azure Firewall puede controlar y permitir tráfico hacia recursos de Azure. Configurar una regla para permitir HTTP puede cumplir el objetivo dependiendo de la arquitectura de red. Referencia: https://learn.microsoft.com/azure/firewall/overview"
   },
@@ -1495,11 +1924,13 @@
   {
     "type": "yes_no",
     "question": "You need to create VM1 in Subscription1 by using the command <br> <br> 'az vm create  --resource-group RG1 --name VM1 --image UbuntuLTS --generate-ssh-keys'. <br> <br>  Solution: From a computer that runs Windows 10, install Azure CLI. From PowerShell, sign in to Azure and then run the command. Does this meet the goal?",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "No",
     "explanation": "El comando de Azure CLI puede ejecutarse desde PowerShell o el símbolo del sistema si Azure CLI está instalado. Sin embargo, debe ejecutarse en el equipo Windows 10, no desde Azure Portal. Referencia: https://learn.microsoft.com/cli/azure/install-azure-cli-windows?view=azure-cli-latest"
-  }
-  ,
+  },
   {
     "type": "dropdown",
     "question": "You have an on-premises network that contains 100 servers. You need to recommend a solution that provides additional resources to your users. <br> <br> The solution must minimize capital and operational expenditure costs. <br> <br> What should you include in the recommendation?",
@@ -1527,50 +1958,70 @@
   {
     "type": "yes_no",
     "question": "You have an Azure web app. From an iPhone, you can manage the settings of the web app by using the Azure portal.",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "Yes",
     "explanation": "El portal de Azure es basado en web y accesible desde navegadores móviles (incluido iPhone), por lo que permite administrar apps web. Referencia: https://learn.microsoft.com/azure/azure-portal/azure-portal-overview"
   },
   {
     "type": "yes_no",
     "question": "You have an Azure web app. From an iPhone, you can manage the settings of the web app by using Azure Cloud Shell.",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "Yes",
     "explanation": "Azure Cloud Shell es una consola basada en web integrada en el portal; al ser web, se puede usar desde iPhone para gestionar recursos. Referencia: https://learn.microsoft.com/azure/cloud-shell/overview"
   },
   {
     "type": "yes_no",
     "question": "An Azure administrator plans to run a PowerShell script that creates Azure resources. <br> <br> Solution: Run the script from a computer that runs Windows 10 and has the Azure PowerShell module installed. <br> <br> Does this meet the goal?",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "Yes",
     "explanation": "Un script de PowerShell debe ejecutarse en PowerShell con el módulo de Azure instalado (Az). En Windows 10 con Azure PowerShell, la solución cumple el objetivo. Referencia: https://learn.microsoft.com/powershell/azure/overview?view=azps-11.3.0"
   },
   {
     "type": "yes_no",
     "question": "An Azure administrator plans to run a PowerShell script that creates Azure resources. <br> <br> Solution: Run the script from a computer that runs Linux and has the Azure CLI tools installed.  <br> <br> Does this meet the goal?",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "No",
     "explanation": "El script requiere PowerShell. Tener solo las herramientas de Azure CLI en Linux no proporciona el entorno de PowerShell necesario para ejecutar el script. Referencia: https://learn.microsoft.com/powershell/scripting/overview?view=powershell-7.4"
-  }
-  ,
+  },
   {
     "type": "yes_no",
     "question": "After migrating servers to Azure virtual machines, replacing failed server hardware will no longer be your administrative responsibility.",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "Yes",
     "explanation": "Las VM de Azure se ejecutan sobre servidores físicos Hyper‑V administrados por Microsoft. El reemplazo de hardware averiado lo gestiona Microsoft; el cliente no tiene acceso al hardware físico. Referencia: https://learn.microsoft.com/azure/virtual-machines/overview"
   },
   {
     "type": "yes_no",
     "question": "After migrating servers to Azure virtual machines, managing physical server security will no longer be your administrative responsibility.",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "Yes",
     "explanation": "La seguridad física de los servidores de Azure es responsabilidad de Microsoft. Al mover cargas a VM de Azure se elimina la gestión de seguridad física del hardware por parte del cliente. Referencia: https://learn.microsoft.com/azure/security/fundamentals/physical-security"
   },
   {
     "type": "yes_no",
     "question": "You plan to deploy several Azure virtual machines. You need to ensure that the services running on the virtual machines are available if a single data center fails.  <br> <br> Solution: You deploy the virtual machines to a scale set. <br> <br> Does this meet the goal?",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "No",
     "explanation": "Los scale sets ofrecen alta disponibilidad y escalado, pero para resistir la caída de un datacenter deben desplegarse a través de Availability Zones o regiones emparejadas. No se especifica que el scale set abarque múltiples centros. Referencia: https://learn.microsoft.com/azure/virtual-machine-scale-sets/availability"
   },
@@ -1601,43 +2052,60 @@
   {
     "type": "yes_no",
     "question": "A United States government entity is eligible to use Azure Government to develop a cloud solution.",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "Yes",
     "explanation": "Azure Government está diseñado para entidades gubernamentales de EE. UU. en todos los niveles. Referencia: https://learn.microsoft.com/learn/modules/intro-to-azure-government/2-what-is-azure-government"
   },
   {
     "type": "yes_no",
     "question": "A United States government contractor is eligible to use Azure Government to develop a cloud solution.",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "Yes",
     "explanation": "Azure Government está disponible para agencias gubernamentales de EE. UU. y sus contratistas/partners con cargas de trabajo elegibles. Referencia: https://learn.microsoft.com/learn/modules/intro-to-azure-government/2-what-is-azure-government"
-  }
-  ,
+  },
   {
     "type": "yes_no",
     "question": "When designing infrastructure for a stateless microservices app with Azure Service Fabric, you should consider the number of node types in the cluster.",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "Yes",
     "explanation": "El dimensionamiento/capacidad del clúster depende del número de tipos de nodo y su configuración. Referencia: https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-capacity"
   },
   {
     "type": "yes_no",
     "question": "When designing infrastructure for a stateless microservices app with Azure Service Fabric, you should consider the properties for each node type.",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "Yes",
     "explanation": "Las propiedades del tipo de nodo (recuento de nodos, tamaño, durabilidad, colocation) afectan capacidad y resiliencia del clúster. Referencia: https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-capacity"
   },
   {
     "type": "yes_no",
     "question": "An Azure administrator plans to run a PowerShell script that creates Azure resources. <br> <br> Solution: Run the script from a computer that runs Chrome OS and uses Azure Cloud Shell. <br> <br> Does this meet the goal?",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "Yes",
     "explanation": "En Azure Cloud Shell se puede ejecutar PowerShell desde un navegador (incluido Chrome OS) con el módulo de Azure preinstalado. Referencia: https://learn.microsoft.com/azure/cloud-shell/quickstart-powershell"
   },
   {
     "type": "yes_no",
     "question": "You deploy two Azure Virtual Machines in two separate regions and then create an Azure Traffic Manager profile to provide redundancy if an Azure region fails.  <br> <br> Does this meet the requirement?",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "Yes",
     "explanation": "Traffic Manager distribuye tráfico DNS entre endpoints en múltiples regiones y puede aplicar failover, cumpliendo requisitos de redundancia geográfica. Referencia: https://learn.microsoft.com/azure/traffic-manager/traffic-manager-overview"
   },
@@ -1664,8 +2132,7 @@
     ],
     "answer": "Azure Traffic Manager",
     "explanation": "Traffic Manager ofrece enrutamiento DNS con failover global a bajo coste para aplicaciones en múltiples regiones. Referencia: https://learn.microsoft.com/azure/traffic-manager/traffic-manager-overview"
-  }
-  ,
+  },
   {
     "type": "dropdown",
     "question": "A team of developers plans to deploy, and then remove, 50 virtual machines each week using Azure Resource Manager templates. <br> <br> Which Azure service will minimize the administrative effort to deploy and remove the virtual machines?",
@@ -1725,12 +2192,14 @@
     ],
     "answer": "Azure policies",
     "explanation": "La conformidad de recursos se gestiona con Azure Policy mediante reglas y evaluaciones; los grupos de recursos organizan recursos y no aplican cumplimiento. Referencia: https://learn.microsoft.com/azure/governance/policy/overview"
-  }
-  ,
+  },
   {
     "type": "yes_no",
     "question": "An Azure administrator plans to run a PowerShell script that creates Azure resources. <br> <br> Solution: Run the script from a computer that runs macOS and has PowerShell Core 6.0 installed. <br> <br> Does this meet the goal?",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "Yes",
     "explanation": "PowerShell Core 6 es multiplataforma y permite ejecutar cmdlets y scripts de PowerShell en macOS. Para crear recursos de Azure, se requiere el módulo Azure PowerShell instalado. Referencia: https://learn.microsoft.com/powershell/scripting/overview?view=powershell-6"
   },
@@ -1761,7 +2230,10 @@
   {
     "type": "yes_no",
     "question": "Your company plans to migrate all its data and resources to Azure. The company's migration plan states that only Platform as a Service (PaaS) solutions must be used in Azure. <br> <br> Solution: You create Azure virtual machines, Azure SQL databases, and Azure Storage accounts. <br> <br> Does this meet the goal?",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "No",
     "explanation": "Las máquinas virtuales son IaaS, por lo que la solución propuesta no cumple con usar únicamente PaaS. Azure SQL y Storage son PaaS, pero incluir VMs rompe el requisito. Referencias: https://azure.microsoft.com/overview/what-is-paas/ y https://azure.microsoft.com/overview/what-is-iaas/"
   },
@@ -1776,8 +2248,7 @@
     ],
     "answer": "Sync all the Active Directory user accounts to Azure Active Directory (Azure AD)",
     "explanation": "Usar Azure AD Connect para sincronizar identidades y (opcionalmente) contraseñas reduce el impacto, habilita SSO y simplifica la transición. Referencia: https://learn.microsoft.com/azure/active-directory/hybrid/how-to-connect-sync-whatis"
-  }
-  ,
+  },
   {
     "type": "dropdown",
     "question": "Your company plans to request an architectural review of an Azure environment from Microsoft. The company currently has a Basic support plan. You need to recommend a new support plan that minimizes costs. <br> <br> Which support plan should you recommend?",
@@ -1837,19 +2308,24 @@
     ],
     "answer": "Basic",
     "explanation": "El plan Basic es el de menor coste e incluye acceso 24/7 a información de facturación, documentación y recomendaciones (Azure Advisor/Service Health). El plan Standard tiene coste superior. Referencia: https://azure.microsoft.com/support/plans"
-  }
-  ,
+  },
   {
     "type": "yes_no",
     "question": "You plan to deploy several Azure virtual machines. You need to ensure that the services running on the virtual machines are available if a single data center fails.  <br> <br> Solution: You deploy the virtual machines to two or more availability zones.  <br> <br> Does this meet the goal?",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "Yes",
     "explanation": "Las Availability Zones son zonas físicas separadas dentro de una región. Desplegar en dos o más zonas proporciona tolerancia a fallos de un datacenter. Referencia: https://learn.microsoft.com/azure/availability-zones/az-overview"
   },
   {
     "type": "yes_no",
     "question": "Your company has an Azure subscription that contains the following unused resources: 20 user accounts in Azure AD, five groups in Azure AD, 10 public IP addresses, and 10 network interfaces. You need to reduce Azure costs. <br> <br> Solution: Remove the unused user accounts. <br> <br> Does this meet the goal?",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "No",
     "explanation": "Las cuentas de usuario de Azure AD no generan cargos por sí mismas; eliminarlas no reduce costos. Referencia: https://learn.microsoft.com/azure/advisor/advisor-cost-recommendations"
   },
@@ -1868,7 +2344,10 @@
   {
     "type": "yes_no",
     "question": "You plan to deploy several Azure virtual machines. You need to ensure that the services running on the virtual machines are available if a single datacenter fails. <br> <br> Solution: You deploy the virtual machines to two or more regions. <br> <br> Does this meet the goal?",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "Yes",
     "explanation": "Distribuir VMs en dos o más regiones separa cargas en múltiples datacenters, aumentando disponibilidad si falla un datacenter. Referencia: https://learn.microsoft.com/azure/virtual-machines/windows/regions"
   },
@@ -1883,8 +2362,7 @@
     ],
     "answer": "fault tolerance",
     "explanation": "La tolerancia a fallos asegura continuidad del servicio ante fallos (p. ej., replicación entre zonas/regiones). Referencia: https://learn.microsoft.com/azure/virtual-machines/windows/manage-availability"
-  }
-  ,
+  },
   {
     "type": "dropdown",
     "question": "What is guaranteed in an Azure Service Level Agreement (SLA) for virtual machines?",
@@ -1900,7 +2378,10 @@
   {
     "type": "yes_no",
     "question": "Your company plans to purchase an Azure subscription. The company's support policy states that Azure Environment must provide an option to access support engineers by phone or email. <br> <br> You need to recommend a Basic support plan. <br> <br> Does this meet the goal?",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "No",
     "explanation": "El plan Basic no incluye acceso a ingenieros de soporte por teléfono o correo. Para soporte técnico se requieren Standard, Professional Direct o Premier. Referencia: https://azure.microsoft.com/support/plans/"
   },
@@ -1931,11 +2412,13 @@
   {
     "type": "yes_no",
     "question": "You have an Azure environment. You need to create a new Azure virtual machine from a tablet that runs the Android operating system. <br> <br> Solution: You use PowerShell in Azure Cloud Shell. <br> <br> Does this meet the goal?",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "Yes",
     "explanation": "Azure Cloud Shell es una experiencia de shell basada en navegador y funciona en dispositivos móviles, incluido Android. Permite ejecutar PowerShell para administrar y crear máquinas virtuales. Referencia: https://learn.microsoft.com/azure/cloud-shell/overview"
-  }
-  ,
+  },
   {
     "type": "dropdown",
     "question": "Your company has a Software Assurance agreement that includes Microsoft SQL Server licenses. <br> <br> You plan to deploy SQL Server on Azure virtual machines. <br> <br> What should you do to minimize licensing costs for the deployment?",
@@ -2014,7 +2497,10 @@
   {
     "type": "yes_no",
     "question": "You have an Azure subscription named Subscription1 and a resource group named RG1. You need to create VM1 in Subscription1 by using the command: <br> <br> az vm create --resource-group RG1 --name VM1 --image UbuntuLTS --generate-ssh-keys. <br> <br> From the Azure portal, launch Azure Cloud Shell and select Bash. Run the command. <br> <br> Does this meet the goal?",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "Yes",
     "explanation": "Azure Cloud Shell proporciona un entorno preconfigurado para ejecutar Azure CLI directamente desde el portal, por lo que se puede crear la VM con ese comando. Referencias: https://learn.microsoft.com/azure/cloud-shell/overview , https://learn.microsoft.com/azure/virtual-machines/linux/quick-create-cli"
   },
@@ -2069,14 +2555,20 @@
   {
     "type": "yes_no",
     "question": "Your company has an Azure subscription that contains the following unused resources: 20 user accounts in Azure Active Directory (Azure AD), five groups in Azure AD, 10 public IP addresses, and 10 network interfaces. <br> <br> You need to reduce the Azure costs for the company. <br> <br> Solution: You remove the unused groups. <br> <br> Does this meet the goal?",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "No",
     "explanation": "Los grupos de Azure Active Directory no generan costos; eliminarlos no reduce el gasto. Referencia: https://learn.microsoft.com/azure/advisor/advisor-cost-recommendations#reduce-costs-by-deleting-or-reconfiguring-idle-virtual-network-gateways"
   },
   {
     "type": "yes_no",
     "question": "Your company plans to migrate all its data and resources to Azure. The company's migration plan states that only Platform as a Service (PaaS) solutions must be used in Azure. You need to deploy an Azure environment that meets the company migration plan. <br> <br> Solution: You create an Azure App Service and Azure Storage accounts. <br> <br> Does this meet the goal?",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "No",
     "explanation": "Azure App Service es PaaS, pero las cuentas de Azure Storage se consideran IaaS en este contexto del examen, así que la solución no cumple el plan."
   },
@@ -2095,7 +2587,10 @@
   {
     "type": "yes_no",
     "question": "Your company plans to migrate all its data and resources to Azure. The company's migration plan states that only Platform as a Service (PaaS) solutions must be used in Azure. <br> <br> You need to deploy an Azure environment that meets the company migration plan. <br> <br> Solution: You create an Azure App Service and Azure virtual machines that have Microsoft SQL Server installed. <br> <br> Does this meet the goal?",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "No",
     "explanation": "Las máquinas virtuales son IaaS; instalar SQL Server en VMs no cumple un plan que exige exclusivamente PaaS."
   },
@@ -2115,7 +2610,10 @@
   {
     "type": "yes_no",
     "question": "Note: This question is part of a series of questions that present the same scenario. Each question-in-the-series contains a unique solution that might meet the stated goals. Some question-sets might have more than one correct solution, while others might not have a correct solution. <br> <br> After you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen. <br> <br> Your Azure environment contains multiple Azure virtual machines. You need to ensure that a virtual machine named VM1 is accessible from the Internet over HTTP. <br> <br> Solution: You modify an Azure Traffic Manager profile. <br> <br> Does this meet the goal?",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "No",
     "explanation": "Azure Traffic Manager es un balanceador basado en DNS; no expone ni permite tráfico HTTP por sí mismo. Para publicar HTTP (puerto 80) hacia VM1 debe abrirse una regla en el Network Security Group o en Azure Firewall. Referencia: https://learn.microsoft.com/azure/traffic-manager/traffic-manager-overview"
   },
@@ -2157,7 +2655,10 @@
   {
     "type": "yes_no",
     "question": "Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question-sets might have more than one correct solution, while others might not have a correct solution. <br> <br> After you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen. <br> <br> You have an Azure subscription named Subscription1. You sign in to the Azure portal and create a resource group named RG1. From Azure documentation, you have the following command that creates a virtual machine named VM1: az vm create --resource-group RG1 --name VM1 --image UbuntuLTS --generate-ssh-keys. You need to create VM1 in Subscription1 by using the command. <br> <br> Solution: From a computer that runs Windows 10, install Azure CLI. <br> <br> From a command prompt, sign in to Azure and then run the command. Does this meet the goal?",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "No",
     "explanation": "El comando puede ejecutarse desde PowerShell o símbolo del sistema si se tiene Azure CLI. Sin embargo, debe ejecutarse en el equipo Windows 10, no en Azure Cloud Shell para que coincida con el escenario de la pregunta. Referencia: https://learn.microsoft.com/cli/azure/install-azure-cli-windows"
   },
@@ -2188,14 +2689,20 @@
   {
     "type": "yes_no",
     "question": "Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question-sets might have more than one correct solution, while others might not have a correct solution. <br> <br> After you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen. <br> <br> Your Azure environment contains multiple Azure virtual machines. You need to ensure that a virtual machine named VM1 is accessible from the Internet over HTTP. <br> <br> Solution: You modify a DDoS protection plan. <br> <br> Does this meet the goal?",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "No",
     "explanation": "DDoS Protection ayuda a proteger recursos ante ataques; no habilita conectividad HTTP hacia una VM. Para exponer HTTP se debe abrir una regla de NSG o usar Azure Firewall. Referencia: https://learn.microsoft.com/azure/virtual-network/ddos-protection-overview"
   },
   {
     "type": "yes_no",
     "question": "Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question-sets might have more than one correct solution, while others might not have a correct solution. <br> <br> After you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen.  <br> <br> You have an Azure environment. You need to create a new Azure virtual machine from a tablet that runs the Android operating system. <br> <br> Solution: You use the PowerApps portal. <br> <br> Does this meet the goal?",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "No",
     "explanation": "Power Apps permite crear aplicaciones empresariales low/no-code y portales; no se usa para crear máquinas virtuales de Azure. Para ello se puede usar Azure Portal o Azure Cloud Shell. Referencia: https://powerapps.microsoft.com/"
   },
@@ -2226,7 +2733,10 @@
   {
     "type": "yes_no",
     "question": "Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question-sets might have more than one correct solution, while others might not have a correct solution. <br> <br> After you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen. <br> <br> You plan to deploy several Azure virtual machines. You need to ensure that the services running on the virtual machines are available if a single data center fails. <br> <br> Solution: You deploy the virtual machines to two or more scale sets. <br> <br> Does this meet the goal?",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "No",
     "explanation": "Los scale sets brindan escalado y alta disponibilidad dentro de un dominio de actualización/fallo pero no garantizan resiliencia ante la caída de un datacenter salvo que se configuren explícitamente en múltiples zonas/regiones. Referencia: https://learn.microsoft.com/azure/virtual-machine-scale-sets/availability"
   },
@@ -2253,8 +2763,7 @@
     ],
     "answer": "a Files service in a storage account",
     "explanation": "Azure Files ofrece compartidos SMB accesibles desde Windows y Windows Server mediante unidad de red/UNC. Referencia: https://learn.microsoft.com/azure/storage/files/storage-how-to-use-files-windows"
-  }
-  ,
+  },
   {
     "type": "dropdown",
     "question": "Your company plans to migrate all on-premises data to Azure. <br> <br> You need to identify whether Azure complies with the company's regional requirements. <br> <br> What should you use?",
@@ -2315,8 +2824,7 @@
     ],
     "answer": "Azure Data Lake",
     "explanation": "Pregunta de múltiples respuestas: las respuestas correctas son Azure Data Lake y Azure SQL Data Warehouse (Synapse). Ambas se integran con Power BI y admiten grandes volúmenes. Referencias: https://learn.microsoft.com/azure/data-lake-store/data-lake-store-power-bi | https://learn.microsoft.com/power-bi/connect-data/service-azure-sql-data-warehouse"
-  }
-  ,
+  },
   {
     "type": "dropdown",
     "question": "Your company plans to migrate to Azure. The company has several departments. All the Azure resources used by each department will be managed by a department administrator. <br> <br> What are two possible techniques to segment Azure for the departments? <br> <br> Each correct answer presents a complete solution.",
@@ -2376,8 +2884,7 @@
     ],
     "answer": "No change is needed",
     "explanation": "Una región de Azure contiene uno o más centros de datos conectados por una red regional de baja latencia dentro de un perímetro definido. Referencia: https://azure.microsoft.com/global-infrastructure/regions/"
-  }
-  ,
+  },
   {
     "type": "dropdown",
     "question": "In which type of cloud model are all the hardware resources owned by a third-party and shared between multiple tenants?",
@@ -2436,8 +2943,7 @@
     ],
     "answer": "Azure Key Vault",
     "explanation": "Azure Key Vault almacena de forma segura credenciales y secretos, habilitando acceso controlado desde scripts y plantillas sin exponer valores en texto claro. Referencia: https://learn.microsoft.com/azure/key-vault/general/overview"
-  }
-  ,
+  },
   {
     "type": "dropdown",
     "question": "Your company plans to purchase Azure. The support policy requires that the Azure environment must provide an option to access support engineers by phone or email.  <br> <br> You recommend a Standard support plan. Does this meet the goal?",
@@ -2495,12 +3001,14 @@
     ],
     "answer": "Azure Data Lake & Azure IoT Hub",
     "explanation": "Azure IoT Hub ingiere telemetría de dispositivo a la nube de forma segura y a escala; Azure Data Lake Storage Gen2 ofrece espacio de nombres jerárquico y un almacenamiento apto para analítica para conjuntos masivos de datos de sensores. Referencias: https://learn.microsoft.com/azure/iot-hub/iot-hub-devguide-messages-d2c y https://learn.microsoft.com/azure/storage/blobs/data-lake-storage-introduction"
-  }
-  ,
+  },
   {
     "type": "dropdown",
     "question": "You have unused resources in Azure: 20 Azure AD user accounts, five groups, 10 public IP addresses, and 10 network interfaces.  <br> <br> You must reduce the company's Azure costs. Solution: Remove the unused public IP addresses. <br> <br> Does this meet the goal?",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "Yes",
     "explanation": "Las direcciones IP públicas son facturables; eliminar IP públicas no usadas reduce costos. Referencia: https://azure.microsoft.com/en-us/pricing/details/ip-addresses/"
   },
@@ -2519,7 +3027,12 @@
   {
     "type": "dropdown",
     "question": "Your company has 10 offices. <br> <br> You plan to generate several billing reports in the Azure portal, each showing resource utilization for each office. <br> <br> Which Azure Resource Manager feature should you use before generating the reports?",
-    "options": ["tags", "templates", "locks", "policies"],
+    "options": [
+      "tags",
+      "templates",
+      "locks",
+      "policies"
+    ],
     "answer": "tags",
     "explanation": "Las etiquetas son metadatos clave/valor para etiquetar recursos (p. ej., Office=1) y permiten filtrar e informar costos por etiqueta. Referencia: https://learn.microsoft.com/azure/azure-resource-manager/management/tag-resources"
   },
@@ -2538,11 +3051,13 @@
   {
     "type": "dropdown",
     "question": "Your company plans to purchase Azure. The support policy requires options to access support engineers by phone or email. <br> <br> You recommend a Professional Direct support plan. <br> <br> Does this meet the goal?",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "Yes",
     "explanation": "Los planes Professional Direct, Standard y Premier incluyen soporte técnico por correo y teléfono. Referencia: https://azure.microsoft.com/en-gb/support/plans/"
-  }
-  ,
+  },
   {
     "type": "dropdown",
     "question": "This question requires that you evaluate the underlined text to determine if it is correct. <br> <br> Azure Germany can be used by /underline legal residents of Germany only. /underline/",
@@ -2558,7 +3073,10 @@
   {
     "type": "dropdown",
     "question": "Your Azure environment contains multiple Azure virtual machines. <br> <br> You need to ensure that a virtual machine named VM1 is accessible from the Internet over HTTP. <br> <br> Solution: You modify a network security group (NSG). <br> <br> Does this meet the goal?",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "Yes",
     "explanation": "Agrega una regla NSG entrante que permita el puerto TCP 80 (HTTP) a la NIC/subred de la VM. Los NSG proporcionan reglas de permitir/denegar para tráfico entrante/saliente. Referencia: https://learn.microsoft.com/azure/virtual-network/network-security-group-overview"
   },
@@ -2577,22 +3095,30 @@
   {
     "type": "dropdown",
     "question": "Your Azure environment contains multiple Azure virtual machines. <br> <br> You need to ensure that a virtual machine named VM1 is accessible from the Internet over HTTP. <br> <br> Solution: You modify an Azure firewall. <br> <br> Does this meet the goal?",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "Yes",
     "explanation": "Configura reglas DNAT/de red de Azure Firewall para permitir HTTP entrante (TCP 80) hacia la VM. Referencia: https://learn.microsoft.com/azure/firewall/overview"
   },
   {
     "type": "dropdown",
     "question": "You have an Azure environment. <br> <br> You need to create a new Azure virtual machine from a tablet that runs the Android operating system. <br> <br> Solution: You use Bash in Azure Cloud Shell. <br> <br> Does this meet the goal?",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "Yes",
     "explanation": "Azure Cloud Shell es una shell accesible por navegador (Bash o PowerShell) que se ejecuta en el portal de Azure y funciona en dispositivos móviles, permitiendo crear VM mediante CLI. Referencia: https://learn.microsoft.com/azure/cloud-shell/overview"
-  }
-  ,
+  },
   {
     "type": "dropdown",
     "question": "Your company plans to purchase Azure. The company's support policy requires an option to access support engineers by phone or email. <br> <br> Solution: Recommend a Premier support plan. <br> <br> Does this meet the goal?",
-    "options": ["Yes", "No"],
+    "options": [
+      "Yes",
+      "No"
+    ],
     "answer": "Yes",
     "explanation": "Los planes Standard, Professional Direct y Premier incluyen soporte técnico por correo y teléfono. Referencia: https://azure.microsoft.com/en-gb/support/plans/"
   },
@@ -2624,12 +3150,12 @@
     "type": "dropdown",
     "question": "An Azure administrator plans to run a PowerShell script that creates Azure resources. <br> <br>  Which three computers can run the script? <br> <br> (Choose the correct combination)",
     "options": [
-      "A, B, C",
-      "A, B, D",
-      "A, C, D",
-      "B, C, D"
+      "macOS with PowerShell Core 6.0, Windows 10 with Azure PowerShell, Chrome OS with Azure Cloud Shell",
+      "macOS with PowerShell Core 6.0, Windows 10 with Azure PowerShell, Linux with Azure CLI",
+      "macOS with PowerShell Core 6.0, Chrome OS with Azure Cloud Shell, Linux with Azure CLI",
+      "Windows 10 with Azure PowerShell, Chrome OS with Azure Cloud Shell, Linux with Azure CLI"
     ],
-    "answer": "A, B, C",
+    "answer": "macOS with PowerShell Core 6.0, Windows 10 with Azure PowerShell, Chrome OS with Azure Cloud Shell",
     "explanation": "Entornos válidos: macOS con PowerShell Core, Windows 10 con el módulo Azure PowerShell, y cualquier dispositivo usando Azure Cloud Shell (soporta PowerShell). Linux solo con Azure CLI no puede ejecutar un script de PowerShell. Referencias: https://learn.microsoft.com/powershell/scripting/install/installing-powershell y https://learn.microsoft.com/azure/cloud-shell/overview"
   },
   {
