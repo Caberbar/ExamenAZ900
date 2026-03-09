@@ -9,7 +9,7 @@
     ],
     "image": null,
     "answer": "a reduced workload for the customer service agents",
-    "explanation": "La respuesta correcta es: a reduced workload for the customer service agents."
+    "explanation": "La respuesta correcta es: una carga de trabajo reducida para los agentes de servicio al cliente."
   },
   {
     "id": "2",
@@ -22,7 +22,7 @@
       "Azure Machine Learning compute."
     ],
     "answer": "Azure Kubernetes Service (AKS).",
-    "explanation": "Deploying to AKS provides a production-grade, scalable endpoint for real-time inference."
+    "explanation": "Implementar en AKS proporciona un punto final escalable y de nivel de producción para la inferencia en tiempo real."
   },
   {
     "id": "3",
@@ -1696,7 +1696,7 @@
         "correct": "No"
       }
     ],
-    "explanation": "Cada afirmación tiene una respuesta Sí/No correcta. La combinación correcta es: Yes, No, No.<br><br>\"Providing an explanation of the outcome of a credit loan application is an example of the Microsoft transparency principle for responsible AI.\" => Yes<br>\"A triage bot that prioritizes insurance claims based on injuries is an example of the Microsoft reliability and safety principle for responsible AI.\" => No<br>\"An AI solution that is offered at different prices for different sales territories is an example of the Microsoft inclusiveness principle for responsible AI.\" => No"
+    "explanation": "Cada afirmación tiene una respuesta Sí/No correcta. La combinación correcta es: Sí, No, No.<br><br>\"Proporcionar una explicación del resultado de una solicitud de crédito es un ejemplo del principio de transparencia de Microsoft para la IA responsable.\" => Sí<br>\"Un bot de triaje que prioriza las reclamaciones de seguros en función de las lesiones es un ejemplo del principio de confiabilidad y seguridad de Microsoft para la IA responsable.\" => No<br>\"Una solución de IA que se ofrece a diferentes precios para diferentes territorios de ventas es un ejemplo del principio de inclusión de Microsoft para la IA responsable.\" => No"
   },
   {
     "id": "102",
@@ -1768,7 +1768,7 @@
       "Extract key phrases from text": "Text Analytics",
       "Interpret user intent from utterance": "Language Understanding (LUIS)"
     },
-    "explanation": "La respuesta correcta se basa en emparejar cada elemento de la izquierda con su opción correcta de la derecha.<br><br>Transcribe audible speech into text => Speech<br>Translate text between languages => Translator<br>Extract key phrases from text => Text Analytics<br>Interpret user intent from utterance => Language Understanding (LUIS)"
+    "explanation": "La respuesta correcta se basa en emparejar cada elemento de la izquierda con su opción correcta de la derecha.<br><br>Transcribir voz audible a texto => Voz (Speech)<br>Traducir texto entre idiomas => Traductor (Translator)<br>Extraer frases clave del texto => Análisis de texto (Text Analytics)<br>Interpretar la intención del usuario a partir de la expresión => Comprensión del lenguaje (LUIS)"
   },
   {
     "id": "106",
@@ -1832,7 +1832,7 @@
         "correct": "Yes"
       }
     ],
-    "explanation": "Cada afirmación tiene una respuesta Sí/No correcta. La combinación correcta es: No, Yes, Yes.<br><br>\"The following service call will accept English text as an input and output Italian and French text. /translate?from=it&to=fr&to=en\" => No<br>\"The following service call will accept English text as an input and output Italian and French text. /translate?from=en&to=fr&to=it\" => Yes<br>\"The Translator service can be used to translate documents from English to French.\" => Yes"
+    "explanation": "Cada afirmación tiene una respuesta Sí/No correcta. La combinación correcta es: No, Sí, Sí.<br><br>\"La siguiente llamada al servicio aceptará texto en inglés como entrada y generará texto en italiano y francés. /translate?from=it&to=fr&to=en\" => No<br>\"La siguiente llamada al servicio aceptará texto en inglés como entrada y generará texto en italiano y francés. /translate?from=en&to=fr&to=it\" => Sí<br>\"El servicio Translator se puede utilizar para traducir documentos del inglés al francés.\" => Sí"
   },
   {
     "id": "110",
@@ -1911,7 +1911,7 @@
       "Humans are responsible for AI systems": "Accountability",
       "No bias based on race or gender": "Fairness"
     },
-    "explanation": "La respuesta correcta se basa en emparejar cada elemento de la izquierda con su opción correcta de la derecha.<br><br>Ensure AI systems operate as designed => Reliability & Safety<br>Protect data and privacy => Privacy & Security<br>Empower everyone including those with disabilities => Inclusiveness<br>Ensure AI systems are explainable => Transparency<br>Humans are responsible for AI systems => Accountability<br>No bias based on race or gender => Fairness"
+    "explanation": "La respuesta correcta se basa en emparejar cada elemento de la izquierda con su opción correcta de la derecha.<br><br>Garantizar que los sistemas de IA funcionen según lo diseñado => Confiabilidad y seguridad<br>Proteger los datos y la privacidad => Privacidad y seguridad<br>Empoderar a todos, incluidas las personas con discapacidades => Inclusión<br>Garantizar que los sistemas de IA sean explicables => Transparencia<br>Los humanos son responsables de los sistemas de IA => Responsabilidad (Accountability)<br>Sin sesgos basados en raza o género => Equidad (Fairness)"
   },
   {
     "id": "114",
@@ -1943,7 +1943,7 @@
       "Extract key phrases from text": "Text Analytics",
       "Interpret user intent from utterance": "Language Understanding (LUIS)"
     },
-    "explanation": "La respuesta correcta se basa en emparejar cada elemento de la izquierda con su opción correcta de la derecha.<br><br>Transcribe audible speech into text => Speech<br>Translate text between languages => Translator<br>Extract key phrases from text => Text Analytics<br>Interpret user intent from utterance => Language Understanding (LUIS)"
+    "explanation": "La respuesta correcta se basa en emparejar cada elemento de la izquierda con su opción correcta de la derecha.<br><br>Transcribir voz audible a texto => Voz (Speech)<br>Traducir texto entre idiomas => Traductor (Translator)<br>Extraer frases clave del texto => Análisis de texto (Text Analytics)<br>Interpretar la intención del usuario a partir de la expresión => Comprensión del lenguaje (LUIS)"
   },
   {
     "id": "115",
@@ -1966,7 +1966,7 @@
         "correct": "Yes"
       }
     ],
-    "explanation": "Cada afirmación tiene una respuesta Sí/No correcta. La combinación correcta es: Yes, No, Yes.<br><br>\"A webchat bot can interact with users visiting a website.\" => Yes<br>\"Automatically generating captions for pre-recorded videos is an example of natural language processing.\" => No<br>\"A smart device in the home that responds to questions such as 'What will the weather be like today?' is an example of natural language processing.\" => Yes"
+    "explanation": "Cada afirmación tiene una respuesta Sí/No correcta. La combinación correcta es: Sí, No, Sí.<br><br>\"Un bot de webchat puede interactuar con los usuarios que visitan un sitio web.\" => Sí<br>\"Generar subtítulos automáticamente para videos pregrabados es un ejemplo de procesamiento del lenguaje natural.\" => No<br>\"Un dispositivo inteligente en el hogar que responde a preguntas como '¿Cómo estará el clima hoy?' es un ejemplo de procesamiento del lenguaje natural.\" => Sí"
   },
   {
     "id": "116",
@@ -2002,7 +2002,7 @@
         "correct": "Yes"
       }
     ],
-    "explanation": "Cada afirmación tiene una respuesta Sí/No correcta. La combinación correcta es: Yes, No, Yes.<br><br>\"Chatbots can support voice input.\" => Yes<br>\"A separate chatbot is required for each communication channel.\" => No<br>\"Chatbots manage conversation flows by using a combination of natural language and constrained option responses.\" => Yes"
+    "explanation": "Cada afirmación tiene una respuesta Sí/No correcta. La combinación correcta es: Sí, No, Sí.<br><br>\"Los chatbots pueden admitir entrada de voz.\" => Sí<br>\"Se requiere un chatbot separado para cada canal de comunicación.\" => No<br>\"Los chatbots gestionan los flujos de conversación utilizando una combinación de lenguaje natural y respuestas de opciones restringidas.\" => Sí"
   },
   {
     "id": "118",
@@ -2025,7 +2025,7 @@
         "correct": "No"
       }
     ],
-    "explanation": "Cada afirmación tiene una respuesta Sí/No correcta. La combinación correcta es: Yes, No, No.<br><br>\"A bot that responds to queries by internal users is an example of a natural language processing workload.\" => Yes<br>\"A mobile application that displays images relating to an entered search term is an example of a natural language processing workload.\" => No<br>\"A web form used to submit a request to reset a password is an example of a natural language processing workload.\" => No"
+    "explanation": "Cada afirmación tiene una respuesta Sí/No correcta. La combinación correcta es: Sí, No, No.<br><br>\"Un bot que responde a consultas de usuarios internos es un ejemplo de una carga de trabajo de procesamiento de lenguaje natural.\" => Sí<br>\"Una aplicación móvil que muestra imágenes relacionadas con un término de búsqueda introducido es un ejemplo de una carga de trabajo de procesamiento de lenguaje natural.\" => No<br>\"Un formulario web utilizado para enviar una solicitud para restablecer una contraseña es un ejemplo de una carga de trabajo de procesamiento de lenguaje natural.\" => No"
   },
   {
     "id": "119",
@@ -2061,7 +2061,7 @@
         "correct": "No"
       }
     ],
-    "explanation": "Cada afirmación tiene una respuesta Sí/No correcta. La combinación correcta es: No, Yes, No.<br><br>\"You can use Language Service's question answering to query an Azure SQL database.\" => No<br>\"You should use Language Service's question answering when you want a knowledge base to provide the same answer to different users who submit similar questions.\" => Yes<br>\"Language Service's question answering can determine the intent of a user utterance.\" => No"
+    "explanation": "Cada afirmación tiene una respuesta Sí/No correcta. La combinación correcta es: No, Sí, No.<br><br>\"Puede utilizar la respuesta a preguntas del servicio de lenguaje para consultar una base de datos Azure SQL.\" => No<br>\"Debe utilizar la respuesta a preguntas del servicio de lenguaje cuando desee que una base de conocimiento proporcione la misma respuesta a diferentes usuarios que envían preguntas similares.\" => Sí<br>\"La respuesta a preguntas del servicio de lenguaje puede determinar la intención de una expresión del usuario.\" => No"
   },
   {
     "id": "121",
@@ -2114,7 +2114,7 @@
       "Humans are responsible for AI systems": "Accountability",
       "No bias based on race or gender": "Fairness"
     },
-    "explanation": "La respuesta correcta se basa en emparejar cada elemento de la izquierda con su opción correcta de la derecha.<br><br>Ensure AI systems operate as designed => Reliability & Safety<br>Protect data and privacy => Privacy & Security<br>Empower everyone including those with disabilities => Inclusiveness<br>Ensure AI systems are explainable => Transparency<br>Humans are responsible for AI systems => Accountability<br>No bias based on race or gender => Fairness"
+    "explanation": "La respuesta correcta se basa en emparejar cada elemento de la izquierda con su opción correcta de la derecha.<br><br>Garantizar que los sistemas de IA funcionen según lo diseñado => Confiabilidad y seguridad<br>Proteger los datos y la privacidad => Privacidad y seguridad<br>Empoderar a todos, incluidas las personas con discapacidades => Inclusión<br>Garantizar que los sistemas de IA sean explicables => Transparencia<br>Los humanos son responsables de los sistemas de IA => Responsabilidad (Accountability)<br>Sin sesgos basados en raza o género => Equidad (Fairness)"
   },
   {
     "id": "123",
@@ -2143,7 +2143,7 @@
       "Model evaluation",
       "Register model"
     ],
-    "explanation": "1. Train the model using your data.<br>2. Evaluate the model to ensure it meets performance metrics.<br>3. Register the model in the workspace to version and track it before deployment.",
+    "explanation": "1. Entrenar el modelo usando sus datos.<br>2. Evaluar el modelo para asegurar que cumple con las métricas de rendimiento.<br>3. Registrar el modelo en el espacio de trabajo para versionarlo y rastrearlo antes de la implementación.",
     "options": [],
     "image": null,
     "answer": [
@@ -2372,7 +2372,7 @@
       "Locate the birds": "Object detection",
       "Identify the species of the birds": "Image classification"
     },
-    "explanation": "La respuesta correcta se basa en emparejar cada elemento de la izquierda con su opción correcta de la derecha.<br><br>Locate the birds => Object detection<br>Identify the species of the birds => Image classification"
+    "explanation": "La respuesta correcta se basa en emparejar cada elemento de la izquierda con su opción correcta de la derecha.<br><br>Localizar las aves => Detección de objetos (Object detection)<br>Identificar la especie de las aves => Clasificación de imágenes (Image classification)"
   },
   {
     "id": "140",
@@ -2509,7 +2509,7 @@
         "correct": "No"
       }
     ],
-    "explanation": "Cada afirmación tiene una respuesta Sí/No correcta. La combinación correcta es: Yes, Yes, No.<br><br>\"A smart device in the home that responds to questions such as 'When is my next appointment?' is an example of conversational AI.\" => Yes<br>\"An interactive webchat feature on a company website can be implemented by using Azure Bot Service.\" => Yes<br>\"Automatically generating captions for pre-recorded videos is an example of conversation AI.\" => No"
+    "explanation": "Cada afirmación tiene una respuesta Sí/No correcta. La combinación correcta es: Sí, Sí, No.<br><br>\"Un dispositivo inteligente en el hogar que responde a preguntas como '¿Cuándo es mi próxima cita?' es un ejemplo de IA conversacional.\" => Sí<br>\"Una función de chat web interactivo en el sitio web de una empresa se puede implementar utilizando Azure Bot Service.\" => Sí<br>\"Generar subtítulos automáticamente para videos pregrabados es un ejemplo de IA conversacional.\" => No"
   },
   {
     "id": "149",
@@ -2537,7 +2537,7 @@
         "correct": "No"
       }
     ],
-    "explanation": "Cada afirmación tiene una respuesta Sí/No correcta. La combinación correcta es: Yes, Yes, No.<br><br>\"A smart device in the home that responds to questions such as 'When is my next appointment?' is an example of conversational AI.\" => Yes<br>\"An interactive webchat feature on a company website can be implemented by using Azure Bot Service.\" => Yes<br>\"Automatically generating captions for pre-recorded videos is an example of conversation AI.\" => No"
+    "explanation": "Cada afirmación tiene una respuesta Sí/No correcta. La combinación correcta es: Sí, Sí, No.<br><br>\"Un dispositivo inteligente en el hogar que responde a preguntas como '¿Cuándo es mi próxima cita?' es un ejemplo de IA conversacional.\" => Sí<br>\"Una función de chat web interactivo en el sitio web de una empresa se puede implementar utilizando Azure Bot Service.\" => Sí<br>\"Generar subtítulos automáticamente para videos pregrabados es un ejemplo de IA conversacional.\" => No"
   },
   {
     "id": "150",
@@ -2565,7 +2565,7 @@
         "correct": "Yes"
       }
     ],
-    "explanation": "Cada afirmación tiene una respuesta Sí/No correcta. La combinación correcta es: Yes, No, Yes.<br><br>\"An interactive webchat feature on a company website can be implemented by using Azure Bot Service.\" => Yes<br>\"Automatically generating captions for pre-recorded videos is an example of conversational AI.\" => No<br>\"A smart device in the home that responds to questions such as 'When is my next appointment?' is an example of conversational AI\" => Yes"
+    "explanation": "Cada afirmación tiene una respuesta Sí/No correcta. La combinación correcta es: Sí, No, Sí.<br><br>\"Una función de chat web interactivo en el sitio web de una empresa se puede implementar utilizando Azure Bot Service.\" => Sí<br>\"Generar subtítulos automáticamente para videos pregrabados es un ejemplo de IA conversacional.\" => No<br>\"Un dispositivo inteligente en el hogar que responde a preguntas como '¿Cuándo es mi próxima cita?' es un ejemplo de IA conversacional\" => Sí"
   },
   {
     "id": "151",
@@ -2652,7 +2652,7 @@
       "Extract movie title names from movie poster images": "Optical character recognition (OCR)",
       "Locate vehicles in images": "Object detection"
     },
-    "explanation": "La respuesta correcta se basa en emparejar cada elemento de la izquierda con su opción correcta de la derecha.<br><br>Generate captions for images => Image classification<br>Extract movie title names from movie poster images => Optical character recognition (OCR)<br>Locate vehicles in images => Object detection"
+    "explanation": "La respuesta correcta se basa en emparejar cada elemento de la izquierda con su opción correcta de la derecha.<br><br>Generar subtítulos para imágenes => Clasificación de imágenes (Image classification)<br>Extraer nombres de títulos de películas de carteles de películas => Reconocimiento óptico de caracteres (OCR)<br>Localizar vehículos en imágenes => Detección de objetos (Object detection)"
   },
   {
     "id": "156",
@@ -2680,7 +2680,7 @@
       "Predicts a category or class => Classification",
       "Groups similar data points together => Clustering"
     ],
-    "explanation": "La respuesta correcta se basa en emparejar cada elemento de la izquierda con su opción correcta de la derecha.<br><br>Predicts a numeric value => Regression<br>Predicts a category or class => Classification<br>Groups similar data points together => Clustering"
+    "explanation": "La respuesta correcta se basa en emparejar cada elemento de la izquierda con su opción correcta de la derecha.<br><br>Predice un valor numérico => Regresión<br>Predice una categoría o clase => Clasificación<br>Agrupa puntos de datos similares => Agrupamiento (Clustering)"
   },
   {
     "id": "157",
@@ -2709,7 +2709,7 @@
       "Determining whether a photo contains a person": "Computer vision",
       "Determining whether a review is positive or negative": "Natural language processing"
     },
-    "explanation": "La respuesta correcta se basa en emparejar cada elemento de la izquierda con su opción correcta de la derecha.<br><br>An automated chatbot to answer questions about refunds and exchanges => Natural language processing<br>Determining whether a photo contains a person => Computer vision<br>Determining whether a review is positive or negative => Natural language processing"
+    "explanation": "La respuesta correcta se basa en emparejar cada elemento de la izquierda con su opción correcta de la derecha.<br><br>Un chatbot automatizado para responder preguntas sobre reembolsos y cambios => Procesamiento de lenguaje natural<br>Determinar si una foto contiene una persona => Visión por computadora<br>Determinar si una reseña es positiva o negativa => Procesamiento de lenguaje natural"
   },
   {
     "id": "158",
@@ -2795,7 +2795,7 @@
       "Identify faces in an image": "Facial Recognition",
       "Classify images by content": "Image Classification"
     },
-    "explanation": "La respuesta correcta se basa en emparejar cada elemento de la izquierda con su opción correcta de la derecha.<br><br>Detect objects in an image => Object Detection<br>Read text from an image => OCR<br>Identify faces in an image => Facial Recognition<br>Classify images by content => Image Classification"
+    "explanation": "La respuesta correcta se basa en emparejar cada elemento de la izquierda con su opción correcta de la derecha.<br><br>Detectar objetos en una imagen => Detección de objetos (Object Detection)<br>Leer texto de una imagen => OCR<br>Identificar rostros en una imagen => Reconocimiento facial (Facial Recognition)<br>Clasificar imágenes por contenido => Clasificación de imágenes (Image Classification)"
   },
   {
     "id": "163",
@@ -2853,7 +2853,7 @@
       "Identify a fraudulent credit card payment": "Anomaly Detection",
       "Automated chat to answer questions": "Conversational AI"
     },
-    "explanation": "La respuesta correcta se basa en emparejar cada elemento de la izquierda con su opción correcta de la derecha.<br><br>Identify handwritten letters => Computer Vision<br>Predict the sentiment of a social media post => Natural Language Processing<br>Identify a fraudulent credit card payment => Anomaly Detection<br>Automated chat to answer questions => Conversational AI"
+    "explanation": "La respuesta correcta se basa en emparejar cada elemento de la izquierda con su opción correcta de la derecha.<br><br>Identificar letras escritas a mano => Visión por computadora (Computer Vision)<br>Predecir el sentimiento de una publicación en redes sociales => Procesamiento de lenguaje natural (NLP)<br>Identificar un pago fraudulento con tarjeta de crédito => Detección de anomalías (Anomaly Detection)<br>Chat automatizado para responder preguntas => IA conversacional (Conversational AI)"
   },
   {
     "id": "166",
@@ -2881,7 +2881,7 @@
       "Classify items into categories (e.g. spam/not spam)": "Classification",
       "Group similar items (e.g. customer segmentation)": "Clustering"
     },
-    "explanation": "La respuesta correcta se basa en emparejar cada elemento de la izquierda con su opción correcta de la derecha.<br><br>Predict future values (e.g. prices) => Regression<br>Classify items into categories (e.g. spam/not spam) => Classification<br>Group similar items (e.g. customer segmentation) => Clustering"
+    "explanation": "La respuesta correcta se basa en emparejar cada elemento de la izquierda con su opción correcta de la derecha.<br><br>Predecir valores futuros (ej. precios) => Regresión<br>Clasificar elementos en categorías (ej. spam/no spam) => Clasificación<br>Agrupar elementos similares (ej. segmentación de clientes) => Agrupamiento (Clustering)"
   },
   {
     "id": "167",
@@ -2985,7 +2985,7 @@
         "correct": "No"
       }
     ],
-    "explanation": "Cada afirmación tiene una respuesta Sí/No correcta. La combinación correcta es: Yes, No, Yes, No.<br><br>\"Automated machine learning is the process of automating the time-consuming, iterative tasks of machine learning model development.\" => Yes<br>\"Automated machine learning can automatically infer the training data from the use case provided.\" => No<br>\"Automated machine learning works by running multiple training iterations that are scored and ranked by the metrics you specify.\" => Yes<br>\"Automated machine learning enables you to specify a dataset and will automatically understand which label to predict.\" => No"
+    "explanation": "Cada afirmación tiene una respuesta Sí/No correcta. La combinación correcta es: Sí, No, Sí, No.<br><br>\"El aprendizaje automático automatizado es el proceso de automatizar las tareas iterativas y que consumen mucho tiempo del desarrollo de modelos de aprendizaje automático.\" => Sí<br>\"El aprendizaje automático automatizado puede inferir automáticamente los datos de entrenamiento a partir del caso de uso proporcionado.\" => No<br>\"El aprendizaje automático automatizado funciona ejecutando múltiples iteraciones de entrenamiento que se puntúan y clasifican según las métricas que especifique.\" => Sí<br>\"El aprendizaje automático automatizado le permite especificar un conjunto de datos y comprenderá automáticamente qué etiqueta predecir.\" => No"
   },
   {
     "id": "174",
@@ -3021,7 +3021,7 @@
         "correct": "No"
       }
     ],
-    "explanation": "Cada afirmación tiene una respuesta Sí/No correcta. La combinación correcta es: Yes, No, No.<br><br>\"Labelling is the process of tagging training data with known values.\" => Yes<br>\"You should evaluate a model by using the same data used to train the model.\" => No<br>\"Accuracy is always the primary metric used to measure a model's performance.\" => No"
+    "explanation": "Cada afirmación tiene una respuesta Sí/No correcta. La combinación correcta es: Sí, No, No.<br><br>\"El etiquetado es el proceso de etiquetar datos de entrenamiento con valores conocidos.\" => Sí<br>\"Debe evaluar un modelo utilizando los mismos datos utilizados para entrenar el modelo.\" => No<br>\"La precisión es siempre la métrica principal utilizada para medir el rendimiento de un modelo.\" => No"
   },
   {
     "id": "176",
@@ -3085,7 +3085,7 @@
         "correct": "No"
       }
     ],
-    "explanation": "Cada afirmación tiene una respuesta Sí/No correcta. La combinación correcta es: Yes, Yes, No.<br><br>\"Azure Machine Learning designer provides a drag-and-drop visual canvas to build, test, and deploy machine learning models.\" => Yes<br>\"Azure Machine Learning designer enables you to save your progress as a pipeline draft.\" => Yes<br>\"Azure Machine Learning designer enables you to include custom JavaScript functions.\" => No"
+    "explanation": "Cada afirmación tiene una respuesta Sí/No correcta. La combinación correcta es: Sí, Sí, No.<br><br>\"Azure Machine Learning designer proporciona un lienzo visual de arrastrar y soltar para construir, probar e implementar modelos de aprendizaje automático.\" => Sí<br>\"Azure Machine Learning designer le permite guardar su progreso como un borrador de canalización.\" => Sí<br>\"Azure Machine Learning designer le permite incluir funciones JavaScript personalizadas.\" => No"
   },
   {
     "id": "180",
@@ -3134,7 +3134,7 @@
         "correct": "No"
       }
     ],
-    "explanation": "Cada afirmación tiene una respuesta Sí/No correcta. La combinación correcta es: Yes, Yes, No.<br><br>\"Azure Machine Learning designer provides a drag-and-drop visual canvas to build, test, and deploy machine learning models.\" => Yes<br>\"Azure Machine Learning designer enables you to save your progress as a pipeline draft.\" => Yes<br>\"Azure Machine Learning designer enables you to include custom JavaScript functions.\" => No"
+    "explanation": "Cada afirmación tiene una respuesta Sí/No correcta. La combinación correcta es: Sí, Sí, No.<br><br>\"Azure Machine Learning designer proporciona un lienzo visual de arrastrar y soltar para construir, probar e implementar modelos de aprendizaje automático.\" => Sí<br>\"Azure Machine Learning designer le permite guardar su progreso como un borrador de canalización.\" => Sí<br>\"Azure Machine Learning designer le permite incluir funciones JavaScript personalizadas.\" => No"
   },
   {
     "id": "183",
@@ -3184,7 +3184,7 @@
         "correct": "No"
       }
     ],
-    "explanation": "Cada afirmación tiene una respuesta Sí/No correcta. La combinación correcta es: No, Yes, No.<br><br>\"Automated machine learning provides you with the ability to include custom Python scripts in a training pipeline.\" => No<br>\"Automated machine learning implements machine learning solutions without the need for programming experience.\" => Yes<br>\"Automated machine learning provides you with the ability to visually connect datasets and modules on an interactive canvas.\" => No"
+    "explanation": "Cada afirmación tiene una respuesta Sí/No correcta. La combinación correcta es: No, Sí, No.<br><br>\"El aprendizaje automático automatizado le brinda la capacidad de incluir scripts de Python personalizados en una canalización de entrenamiento.\" => No<br>\"El aprendizaje automático automatizado implementa soluciones de aprendizaje automático sin necesidad de experiencia en programación.\" => Sí<br>\"El aprendizaje automático automatizado le brinda la capacidad de conectar visualmente conjuntos de datos y módulos en un lienzo interactivo.\" => No"
   },
   {
     "id": "186",
@@ -3277,7 +3277,7 @@
         "correct": "No"
       }
     ],
-    "explanation": "Cada afirmación tiene una respuesta Sí/No correcta. La combinación correcta es: Yes, Yes, No.<br><br>\"Organizing documents into groups based on similarities of the text contained in the documents is an example of clustering.\" => Yes<br>\"Grouping similar patients based on symptoms and diagnostic test results is an example of clustering.\" => Yes<br>\"Predicting whether a person will develop mild, moderate, or severe allergy symptoms based on pollen count is an example of clustering.\" => No"
+    "explanation": "Cada afirmación tiene una respuesta Sí/No correcta. La combinación correcta es: Sí, Sí, No.<br><br>\"Organizar documentos en grupos basados en similitudes del texto contenido en los documentos es un ejemplo de agrupamiento (clustering).\" => Sí<br>\"Agrupar pacientes similares según síntomas y resultados de pruebas de diagnóstico es un ejemplo de agrupamiento.\" => Sí<br>\"Predecir si una persona desarrollará síntomas de alergia leves, moderados o graves según el recuento de polen es un ejemplo de agrupamiento.\" => No"
   },
   {
     "id": "192",
@@ -3300,7 +3300,7 @@
         "correct": "No"
       }
     ],
-    "explanation": "Cada afirmación tiene una respuesta Sí/No correcta. La combinación correcta es: No, Yes, No.<br><br>\"Forecasting housing prices based on historical data is an example of anomaly detection.\" => No<br>\"Identifying suspicious sign-ins by looking for deviations from usual patterns is an example of anomaly detection.\" => Yes<br>\"Predicting whether a patient will develop diabetes based on the patient's medical history is an example of anomaly detection.\" => No"
+    "explanation": "Cada afirmación tiene una respuesta Sí/No correcta. La combinación correcta es: No, Sí, No.<br><br>\"Pronosticar precios de vivienda basados en datos históricos es un ejemplo de detección de anomalías.\" => No<br>\"Identificar inicios de sesión sospechosos buscando desviaciones de los patrones habituales es un ejemplo de detección de anomalías.\" => Sí<br>\"Predecir si un paciente desarrollará diabetes según el historial médico del paciente es un ejemplo de detección de anomalías.\" => No"
   },
   {
     "id": "193",
@@ -3323,7 +3323,7 @@
         "correct": "No"
       }
     ],
-    "explanation": "Cada afirmación tiene una respuesta Sí/No correcta. La combinación correcta es: No, Yes, No.<br><br>\"A validation set includes the set of input examples that will be used to train a model.\" => No<br>\"A validation set can be used to determine how well a model predicts labels.\" => Yes<br>\"A validation set can be used to verify that all the training data was used to train the model.\" => No"
+    "explanation": "Cada afirmación tiene una respuesta Sí/No correcta. La combinación correcta es: No, Sí, No.<br><br>\"Un conjunto de validación incluye el conjunto de ejemplos de entrada que se utilizarán para entrenar un modelo.\" => No<br>\"Un conjunto de validación se puede utilizar para determinar qué tan bien un modelo predice las etiquetas.\" => Sí<br>\"Un conjunto de validación se puede utilizar para verificar que todos los datos de entrenamiento se utilizaron para entrenar el modelo.\" => No"
   },
   {
     "id": "194",
@@ -3375,7 +3375,7 @@
       "Score Model",
       "Evaluate Model"
     ],
-    "explanation": "Typical regression pipeline: Select features -> Clean data -> Split into train/test -> Train model (with algo) -> Score model (with test data) -> Evaluate results.",
+    "explanation": "Canalización de regresión típica: Seleccionar características -> Limpiar datos -> Dividir en entrenamiento/prueba -> Entrenar modelo (con algoritmo) -> Puntuar modelo (con datos de prueba) -> Evaluar resultados.",
     "options": [],
     "image": null,
     "answer": [
@@ -3480,7 +3480,7 @@
       "Classify items into categories (e.g. spam/not spam)": "Classification",
       "Group similar items (e.g. customer segmentation)": "Clustering"
     },
-    "explanation": "La respuesta correcta se basa en emparejar cada elemento de la izquierda con su opción correcta de la derecha.<br><br>Predict future values (e.g. prices) => Regression<br>Classify items into categories (e.g. spam/not spam) => Classification<br>Group similar items (e.g. customer segmentation) => Clustering"
+    "explanation": "La respuesta correcta se basa en emparejar cada elemento de la izquierda con su opción correcta de la derecha.<br><br>Predecir valores futuros (ej. precios) => Regresión<br>Clasificar elementos en categorías (ej. spam/no spam) => Clasificación<br>Agrupar elementos similares (ej. segmentación de clientes) => Agrupamiento (Clustering)"
   },
   {
     "id": "203",
@@ -3587,7 +3587,7 @@
         "correct": "Yes"
       }
     ],
-    "explanation": "Cada afirmación tiene una respuesta Sí/No correcta. La combinación correcta es: No, No, Yes.<br><br>\"You train a regression model by using unlabeled data.\" => No<br>\"The classification technique is used to predict sequential numerical data over time.\" => No<br>\"Grouping items by their common characteristics is an example of clustering.\" => Yes"
+    "explanation": "Cada afirmación tiene una respuesta Sí/No correcta. La combinación correcta es: No, No, Sí.<br><br>\"Entrena un modelo de regresión utilizando datos no etiquetados.\" => No<br>\"La técnica de clasificación se utiliza para predecir datos numéricos secuenciales a lo largo del tiempo.\" => No<br>\"Agrupar elementos por sus características comunes es un ejemplo de agrupamiento (clustering).\" => Sí"
   },
   {
     "id": "210",
@@ -3655,7 +3655,7 @@
         "correct": "No"
       }
     ],
-    "explanation": "Cada afirmación tiene una respuesta Sí/No correcta. La combinación correcta es: Yes, No, No.<br><br>\"For a regression model, labels must be numeric.\" => Yes<br>\"For a clustering model, labels must be used.\" => No<br>\"For a classification model, labels must be numeric.\" => No"
+    "explanation": "Cada afirmación tiene una respuesta Sí/No correcta. La combinación correcta es: Sí, No, No.<br><br>\"Para un modelo de regresión, las etiquetas deben ser numéricas.\" => Sí<br>\"Para un modelo de agrupamiento, se deben utilizar etiquetas.\" => No<br>\"Para un modelo de clasificación, las etiquetas deben ser numéricas.\" => No"
   },
   {
     "id": "214",
@@ -3687,7 +3687,7 @@
       "Identify a fraudulent credit card payment": "Anomaly Detection",
       "Automated chat to answer questions": "Conversational AI"
     },
-    "explanation": "La respuesta correcta se basa en emparejar cada elemento de la izquierda con su opción correcta de la derecha.<br><br>Identify handwritten letters => Computer Vision<br>Predict the sentiment of a social media post => Natural Language Processing<br>Identify a fraudulent credit card payment => Anomaly Detection<br>Automated chat to answer questions => Conversational AI"
+    "explanation": "La respuesta correcta se basa en emparejar cada elemento de la izquierda con su opción correcta de la derecha.<br><br>Identificar letras escritas a mano => Visión por computadora (Computer Vision)<br>Predecir el sentimiento de una publicación en redes sociales => Procesamiento de lenguaje natural (NLP)<br>Identificar un pago fraudulento con tarjeta de crédito => Detección de anomalías (Anomaly Detection)<br>Chat automatizado para responder preguntas => IA conversacional (Conversational AI)"
   },
   {
     "id": "215",
@@ -3723,7 +3723,7 @@
         "correct": "Yes"
       }
     ],
-    "explanation": "Cada afirmación tiene una respuesta Sí/No correcta. La combinación correcta es: No, Yes, Yes.<br><br>\"When creating an object detection model in the Custom Vision service, you must choose a classification type of either Multilabel or Multiclass.\" => No<br>\"You can create an object detection model in the Custom Vision service to find the location of content within an image.\" => Yes<br>\"When creating an object detection model in the Custom Vision service, you can select from a set of predefined domains.\" => Yes"
+    "explanation": "Cada afirmación tiene una respuesta Sí/No correcta. La combinación correcta es: No, Sí, Sí.<br><br>\"Al crear un modelo de detección de objetos en el servicio Custom Vision, debe elegir un tipo de clasificación de Multilabel o Multiclass.\" => No<br>\"Puede crear un modelo de detección de objetos en el servicio Custom Vision para encontrar la ubicación del contenido dentro de una imagen.\" => Sí<br>\"Al crear un modelo de detección de objetos en el servicio Custom Vision, puede seleccionar entre un conjunto de dominios predefinidos.\" => Sí"
   },
   {
     "id": "217",
@@ -3776,7 +3776,7 @@
         "correct": "No"
       }
     ],
-    "explanation": "Cada afirmación tiene una respuesta Sí/No correcta. La combinación correcta es: Yes, Yes, No.<br><br>\"The Face service can be used to perform facial recognition for employees\" => Yes<br>\"The Face service will be more accurate if you provide more sample photos of each employee from different angles.\" => Yes<br>\"If an employee is wearing sunglasses, the Face service will always fail to recognize the employee.\" => No"
+    "explanation": "Cada afirmación tiene una respuesta Sí/No correcta. La combinación correcta es: Sí, Sí, No.<br><br>\"El servicio Face se puede utilizar para realizar reconocimiento facial para empleados.\" => Sí<br>\"El servicio Face será más preciso si proporciona más fotos de muestra de cada empleado desde diferentes ángulos.\" => Sí<br>\"Si un empleado lleva gafas de sol, el servicio Face siempre fallará en reconocer al empleado.\" => No"
   },
   {
     "id": "220",
@@ -3812,7 +3812,7 @@
         "correct": "No"
       }
     ],
-    "explanation": "Cada afirmación tiene una respuesta Sí/No correcta. La combinación correcta es: Yes, Yes, No.<br><br>\"The Custom Vision service can be used to detect objects in an image.\" => Yes<br>\"The Custom Vision service requires that you provide your own data to train the model.\" => Yes<br>\"The Custom Vision service can be used to analyze video files.\" => No"
+    "explanation": "Cada afirmación tiene una respuesta Sí/No correcta. La combinación correcta es: Sí, Sí, No.<br><br>\"El servicio Custom Vision se puede utilizar para detectar objetos en una imagen.\" => Sí<br>\"El servicio Custom Vision requiere que proporcione sus propios datos para entrenar el modelo.\" => Sí<br>\"El servicio Custom Vision se puede utilizar para analizar archivos de video.\" => No"
   },
   {
     "id": "222",
@@ -3849,7 +3849,7 @@
       "Do all the faces belong together?": "grouping",
       "Who is this person in this group of people?": "identification"
     },
-    "explanation": "La respuesta correcta se basa en emparejar cada elemento de la izquierda con su opción correcta de la derecha.<br><br>Do two images of a face belong to the same person? => verification<br>Does this person look like other people? => similarity<br>Do all the faces belong together? => grouping<br>Who is this person in this group of people? => identification"
+    "explanation": "La respuesta correcta se basa en emparejar cada elemento de la izquierda con su opción correcta de la derecha.<br><br>¿Pertenecen dos imágenes de un rostro a la misma persona? => verificación<br>¿Se parece esta persona a otras personas? => similitud<br>¿Pertenecen todos los rostros juntos? => agrupación<br>¿Quién es esta persona en este grupo de personas? => identificación"
   },
   {
     "id": "223",
@@ -3877,7 +3877,7 @@
       "Classify items into categories (e.g. spam/not spam)": "Classification",
       "Group similar items (e.g. customer segmentation)": "Clustering"
     },
-    "explanation": "La respuesta correcta se basa en emparejar cada elemento de la izquierda con su opción correcta de la derecha.<br><br>Predict future values (e.g. prices) => Regression<br>Classify items into categories (e.g. spam/not spam) => Classification<br>Group similar items (e.g. customer segmentation) => Clustering"
+    "explanation": "La respuesta correcta se basa en emparejar cada elemento de la izquierda con su opción correcta de la derecha.<br><br>Predecir valores futuros (ej. precios) => Regresión<br>Clasificar elementos en categorías (ej. spam/no spam) => Clasificación<br>Agrupar elementos similares (ej. segmentación de clientes) => Agrupamiento (Clustering)"
   },
   {
     "id": "224",
@@ -3933,7 +3933,7 @@
       "Implementing processes to ensure that decisions made by AI systems can be overridden by humans.": "Accountability",
       "Provide consumers with information and controls over the collection, use, and storage of their data.": "Privacy and security"
     },
-    "explanation": "La respuesta correcta se basa en emparejar cada elemento de la izquierda con su opción correcta de la derecha.<br><br>Ensure that AI systems operate as they were originally designed... => Reliability and safety<br>Implementing processes to ensure that decisions made by AI systems can be overridden by humans. => Accountability<br>Provide consumers with information and controls over the collection, use, and storage of their data. => Privacy and security"
+    "explanation": "La respuesta correcta se basa en emparejar cada elemento de la izquierda con su opción correcta de la derecha.<br><br>Garantizar que los sistemas de IA funcionen como se diseñaron originalmente... => Confiabilidad y seguridad<br>Implementar procesos para garantizar que las decisiones tomadas por los sistemas de IA puedan ser anuladas por humanos. => Responsabilidad (Accountability)<br>Proporcionar a los consumidores información y controles sobre la recopilación, el uso y el almacenamiento de sus datos. => Privacidad y seguridad"
   },
   {
     "id": "227",
@@ -3965,7 +3965,7 @@
       "Do all the faces belong together?": "grouping",
       "Who is this person in this group of people?": "identification"
     },
-    "explanation": "La respuesta correcta se basa en emparejar cada elemento de la izquierda con su opción correcta de la derecha.<br><br>Do two images of a face belong to the same person? => verification<br>Does this person look like other people? => similarity<br>Do all the faces belong together? => grouping<br>Who is this person in this group of people? => identification"
+    "explanation": "La respuesta correcta se basa en emparejar cada elemento de la izquierda con su opción correcta de la derecha.<br><br>¿Pertenecen dos imágenes de un rostro a la misma persona? => verificación<br>¿Se parece esta persona a otras personas? => similitud<br>¿Pertenecen todos los rostros juntos? => agrupación<br>¿Quién es esta persona en este grupo de personas? => identificación"
   },
   {
     "id": "228",
@@ -4020,7 +4020,7 @@
         "correct": "Yes"
       }
     ],
-    "explanation": "Cada afirmación tiene una respuesta Sí/No correcta. La combinación correcta es: Yes, Yes, Yes.<br><br>\"You can use the Speech service to transcribe a call to text.\" => Yes<br>\"You can use the Text Analytics service to extract key entities from a call transcript.\" => Yes<br>\"You can use the Speech service to translate the audio of a call to a different language.\" => Yes"
+    "explanation": "Cada afirmación tiene una respuesta Sí/No correcta. La combinación correcta es: Sí, Sí, Sí.<br><br>\"Puede utilizar el servicio Speech para transcribir una llamada a texto.\" => Sí<br>\"Puede utilizar el servicio Text Analytics para extraer entidades clave de una transcripción de llamada.\" => Sí<br>\"Puede utilizar el servicio Speech para traducir el audio de una llamada a un idioma diferente.\" => Sí"
   },
   {
     "id": "231",
@@ -4135,7 +4135,7 @@
       "Humans are responsible for AI systems": "Accountability",
       "No bias based on race or gender": "Fairness"
     },
-    "explanation": "La respuesta correcta se basa en emparejar cada elemento de la izquierda con su opción correcta de la derecha.<br><br>Ensure AI systems operate as designed => Reliability & Safety<br>Protect data and privacy => Privacy & Security<br>Empower everyone including those with disabilities => Inclusiveness<br>Ensure AI systems are explainable => Transparency<br>Humans are responsible for AI systems => Accountability<br>No bias based on race or gender => Fairness"
+    "explanation": "La respuesta correcta se basa en emparejar cada elemento de la izquierda con su opción correcta de la derecha.<br><br>Garantizar que los sistemas de IA funcionen según lo diseñado => Confiabilidad y seguridad<br>Proteger los datos y la privacidad => Privacidad y seguridad<br>Empoderar a todos, incluidas las personas con discapacidades => Inclusión<br>Garantizar que los sistemas de IA sean explicables => Transparencia<br>Los humanos son responsables de los sistemas de IA => Responsabilidad (Accountability)<br>Sin sesgos basados en raza o género => Equidad (Fairness)"
   },
   {
     "id": "237",
@@ -4167,7 +4167,7 @@
       "Identify faces in an image": "Facial Recognition",
       "Classify images by content": "Image Classification"
     },
-    "explanation": "La respuesta correcta se basa en emparejar cada elemento de la izquierda con su opción correcta de la derecha.<br><br>Detect objects in an image => Object Detection<br>Read text from an image => OCR<br>Identify faces in an image => Facial Recognition<br>Classify images by content => Image Classification"
+    "explanation": "La respuesta correcta se basa en emparejar cada elemento de la izquierda con su opción correcta de la derecha.<br><br>Detectar objetos en una imagen => Detección de objetos (Object Detection)<br>Leer texto de una imagen => OCR<br>Identificar rostros en una imagen => Reconocimiento facial (Facial Recognition)<br>Clasificar imágenes por contenido => Clasificación de imágenes (Image Classification)"
   },
   {
     "id": "238",
@@ -4286,7 +4286,7 @@
         "correct": "Yes"
       }
     ],
-    "explanation": "Cada afirmación tiene una respuesta Sí/No correcta. La combinación correcta es: Yes, Yes, Yes.<br><br>\"You can use the Speech service to transcribe a call to text.\" => Yes<br>\"You can use the Text Analytics service to extract key entities from a call transcript.\" => Yes<br>\"You can use the Speech service to translate the audio of a call to a different language.\" => Yes"
+    "explanation": "Cada afirmación tiene una respuesta Sí/No correcta. La combinación correcta es: Sí, Sí, Sí.<br><br>\"Puede utilizar el servicio Speech para transcribir una llamada a texto.\" => Sí<br>\"Puede utilizar el servicio Text Analytics para extraer entidades clave de una transcripción de llamada.\" => Sí<br>\"Puede utilizar el servicio Speech para traducir el audio de una llamada a un idioma diferente.\" => Sí"
   },
   {
     "id": "246",

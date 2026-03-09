@@ -109,7 +109,7 @@
     ],
     "image": null,
     "answer": "Text generation",
-    "explanation": "Text completion is the ability of an LLM to generate the most likely continuation of a given input. In this case, the input is the natural language code comment, and the model needs to generate the corresponding code. This aligns perfectly with how text completion works, as it predicts the next sequence of tokens based on the provided context."
+    "explanation": "La finalización de texto es la capacidad de un LLM para generar la continuación más probable de una entrada dada. En este caso, la entrada es el comentario de código en lenguaje natural y el modelo necesita generar el código correspondiente. Esto se alinea perfectamente con cómo funciona la finalización de texto, ya que predice la siguiente secuencia de tokens basándose en el contexto proporcionado."
   },
   {
     "id": "9",
@@ -179,7 +179,7 @@
     ],
     "image": null,
     "answer": "Amazon SageMaker Feature Store",
-    "explanation": "Amazon SageMaker Feature Store is a purpose-built repository for storing, sharing, and managing features (variables) used in machine learning models. It allows teams to collaborate effectively by providing a centralized location for storing and accessing features across multiple ML workflows, ensuring consistency and reusability."
+    "explanation": "Amazon SageMaker Feature Store es un repositorio diseñado específicamente para almacenar, compartir y administrar características (variables) utilizadas en modelos de aprendizaje automático. Permite a los equipos colaborar de manera efectiva proporcionando una ubicación centralizada para almacenar y acceder a características a través de múltiples flujos de trabajo de ML, asegurando consistencia y reutilización."
   },
   {
     "id": "14",
@@ -235,7 +235,7 @@
     ],
     "image": null,
     "answer": "Logistic regression model",
-    "explanation": "A logistic regression model is interpretable and allows direct adjustment of the weights assigned to different variables (features). This aligns with the requirement for employees to view and modify the weights based on their domain knowledge and expertise. Logistic regression provides a clear relationship between input features and output predictions, making it ideal for use cases that demand transparency and control."
+    "explanation": "Un modelo de regresión logística es interpretable y permite el ajuste directo de los pesos asignados a diferentes variables (características). Esto se alinea con el requisito de que los empleados vean y modifiquen los pesos basándose en su conocimiento y experiencia del dominio. La regresión logística proporciona una relación clara entre las características de entrada y las predicciones de salida, lo que la hace ideal para casos de uso que exigen transparencia y control."
   },
   {
     "id": "18",
@@ -258,7 +258,7 @@
     ],
     "image": null,
     "answer": "Assess the model's alignment with specific use cases.",
-    "explanation": "To determine if a foundation model (FM) effectively meets business objectives, it is crucial to evaluate how well the model aligns with the specific use cases and objectives of the business. This involves testing the model's performance on real-world tasks and ensuring that it addresses the desired outcomes, such as accuracy, relevance, and user satisfaction, in the context of the business problem.\r\n\r\nWhy not the other options?\r\n\r\nA: Evaluate the model's performance on benchmark datasets:\r\n\r\nWhile benchmarking provides useful insights into the model's capabilities, it does not guarantee alignment with business-specific needs or objectives."
+    "explanation": "Para determinar si un modelo fundacional (FM) cumple efectivamente con los objetivos comerciales, es crucial evaluar qué tan bien se alinea el modelo con los casos de uso y objetivos específicos del negocio. Esto implica probar el rendimiento del modelo en tareas del mundo real y asegurar que aborde los resultados deseados, como precisión, relevancia y satisfacción del usuario, en el contexto del problema comercial.\n\n¿Por qué no las otras opciones?\n\nA: Evaluar el rendimiento del modelo en conjuntos de datos de referencia:\n\nSi bien la evaluación comparativa proporciona información útil sobre las capacidades del modelo, no garantiza la alineación con las necesidades u objetivos específicos del negocio."
   },
   {
     "id": "20",
@@ -272,7 +272,7 @@
     ],
     "image": null,
     "answer": "Supervised learning",
-    "explanation": "Supervised learning is the appropriate method when a dataset of labeled examples is available, as it involves training a model using input-output pairs. In this case, the labeled images of animals (input) and their corresponding categories (output) make supervised learning the ideal approach. The model learns from these examples to classify new, unseen images into the correct categories.\r\n\r\nWhy not the other options?\r\n\r\nB: Unsupervised learning:\r\n\r\nUnsupervised learning does not use labeled data and is typically used for clustering or pattern discovery. It is not suitable for this classification task, which requires labeled data."
+    "explanation": "El aprendizaje supervisado es el método apropiado cuando se dispone de un conjunto de datos de ejemplos etiquetados, ya que implica entrenar un modelo utilizando pares de entrada-salida. En este caso, las imágenes etiquetadas de animales (entrada) y sus categorías correspondientes (salida) hacen que el aprendizaje supervisado sea el enfoque ideal. El modelo aprende de estos ejemplos para clasificar nuevas imágenes no vistas en las categorías correctas.\n\n¿Por qué no las otras opciones?\n\nB: Aprendizaje no supervisado:\n\nEl aprendizaje no supervisado no utiliza datos etiquetados y se utiliza normalmente para agrupamiento o descubrimiento de patrones. No es adecuado para esta tarea de clasificación, que requiere datos etiquetados."
   },
   {
     "id": "21",
@@ -286,7 +286,7 @@
     ],
     "image": null,
     "answer": "Business goal identification",
-    "explanation": "The data collection phase of the ML lifecycle is where compliance and regulatory requirements are primarily determined. During this phase, it's important to ensure that the data being gathered complies with legal and regulatory standards, such as data privacy laws (e.g., GDPR, HIPAA). Compliance considerations include ensuring that data is collected ethically, with proper consent, and that sensitive or personal information is handled appropriately."
+    "explanation": "La fase de recopilación de datos del ciclo de vida de ML es donde se determinan principalmente los requisitos de cumplimiento y normativos. Durante esta fase, es importante asegurarse de que los datos que se recopilan cumplan con los estándares legales y normativos, como las leyes de privacidad de datos (por ejemplo, GDPR, HIPAA). Las consideraciones de cumplimiento incluyen garantizar que los datos se recopilen de manera ética, con el consentimiento adecuado, y que la información confidencial o personal se maneje de manera adecuada."
   },
   {
     "id": "22",
@@ -300,7 +300,7 @@
     ],
     "image": null,
     "answer": "Use Amazon SageMaker and iterate with newer data.",
-    "explanation": "To meet the requirements of decreasing food waste and increasing sales revenue, the company needs a machine learning model that can continuously improve and adjust based on new data.\r\n\r\nAmazon SageMaker is a fully managed service that allows companies to build, train, and deploy machine learning models at scale. By iterating with newer data, the model can be continuously updated to reflect changing patterns in customer behavior, demand, and food consumption, leading to more accurate predictions over time."
+    "explanation": "Para cumplir con los requisitos de disminuir el desperdicio de alimentos y aumentar los ingresos por ventas, la empresa necesita un modelo de aprendizaje automático que pueda mejorar y ajustarse continuamente en función de nuevos datos.\n\nAmazon SageMaker es un servicio totalmente administrado que permite a las empresas crear, entrenar e implementar modelos de aprendizaje automático a escala. Al iterar con datos más nuevos, el modelo se puede actualizar continuamente para reflejar los patrones cambiantes en el comportamiento del cliente, la demanda y el consumo de alimentos, lo que lleva a predicciones más precisas con el tiempo."
   },
   {
     "id": "23",
@@ -314,7 +314,7 @@
     ],
     "image": null,
     "answer": "Deploy the model by using an Amazon SageMaker endpoint.",
-    "explanation": "Amazon SageMaker is a fully managed service that enables you to quickly build, train, and deploy machine learning models at scale. Deploying a model using an Amazon SageMaker endpoint allows the company to make predictions without needing to manage servers or infrastructure. SageMaker automatically handles the provisioning of resources, scaling, and maintenance, making it an ideal solution for production-grade ML deployments."
+    "explanation": "Amazon SageMaker es un servicio totalmente administrado que le permite crear, entrenar e implementar rápidamente modelos de aprendizaje automático a escala. La implementación de un modelo mediante un punto de enlace de Amazon SageMaker permite a la empresa realizar predicciones sin necesidad de administrar servidores o infraestructura. SageMaker maneja automáticamente el aprovisionamiento de recursos, el escalado y el mantenimiento, lo que lo convierte en una solución ideal para implementaciones de ML de grado de producción."
   },
   {
     "id": "24",
@@ -328,7 +328,7 @@
     ],
     "image": null,
     "answer": "Create software snippets, reference tracking, and open source license tracking.",
-    "explanation": "Amazon Q Developer is a generative AI tool designed to assist developers by increasing productivity. It helps in generating software snippets, automating reference tracking, and managing open-source licenses, which directly benefits the software development lifecycle."
+    "explanation": "Amazon Q Developer es una herramienta de IA generativa diseñada para ayudar a los desarrolladores aumentando la productividad. Ayuda a generar fragmentos de software, automatizar el seguimiento de referencias y administrar licencias de código abierto, lo que beneficia directamente al ciclo de vida del desarrollo de software."
   },
   {
     "id": "25",
@@ -342,7 +342,7 @@
     ],
     "image": null,
     "answer": "Use Agents for Amazon Bedrock with Amazon Bedrock knowledge bases to build the application.",
-    "explanation": "Amazon Bedrock is a fully managed service that allows you to build and deploy generative AI applications. Agents for Amazon Bedrock provides AI-powered agents to interact with users and help them get information, making it ideal for helping employees check open customer claims, identify claim details, and access documents."
+    "explanation": "Amazon Bedrock es un servicio totalmente administrado que le permite crear e implementar aplicaciones de IA generativa. Los agentes para Amazon Bedrock proporcionan agentes impulsados por IA para interactuar con los usuarios y ayudarlos a obtener información, lo que lo hace ideal para ayudar a los empleados a verificar reclamos de clientes abiertos, identificar detalles de reclamos y acceder a documentos."
   },
   {
     "id": "26",
@@ -356,7 +356,7 @@
     ],
     "image": null,
     "answer": "Computer vision",
-    "explanation": "Computer vision is a field of AI that enables machines to interpret and make decisions based on visual data, such as images or videos. In the context of inspecting products for damages or defects, computer vision algorithms can analyze product images to detect visual patterns, anomalies, or defects, making it the most appropriate AI application type for this use case."
+    "explanation": "La visión por computadora es un campo de la IA que permite a las máquinas interpretar y tomar decisiones basadas en datos visuales, como imágenes o videos. En el contexto de la inspección de productos en busca de daños o defectos, los algoritmos de visión por computadora pueden analizar imágenes de productos para detectar patrones visuales, anomalías o defectos, lo que lo convierte en el tipo de aplicación de IA más apropiado para este caso de uso."
   },
   {
     "id": "27",
@@ -370,7 +370,7 @@
     ],
     "image": null,
     "answer": "Amazon SageMaker",
-    "explanation": "Amazon SageMaker is a fully managed service that provides tools to build, train, and deploy machine learning models. It includes SageMaker Autopilot, which automates the machine learning model development process, including model tuning. This feature helps users create and optimize models with minimal manual intervention, making it ideal for fully automated model tuning."
+    "explanation": "Amazon SageMaker es un servicio totalmente administrado que proporciona herramientas para crear, entrenar e implementar modelos de aprendizaje automático. Incluye SageMaker Autopilot, que automatiza el proceso de desarrollo de modelos de aprendizaje automático, incluido el ajuste de modelos. Esta característica ayuda a los usuarios a crear y optimizar modelos con una intervención manual mínima, lo que lo hace ideal para el ajuste de modelos totalmente automatizado."
   },
   {
     "id": "28",
@@ -384,7 +384,7 @@
     ],
     "image": null,
     "answer": "Human-in-the-loop",
-    "explanation": "Human-in-the-loop (HITL) is a technique used in the post-processing stage of the machine learning lifecycle to improve model performance, including reducing bias and toxicity. In HITL, human evaluators intervene to assess and refine model outputs. This feedback loop helps to identify and correct biases, toxic language, or other undesirable outputs before they are presented to end-users. It ensures that the AI system adheres to ethical guidelines and improves the quality of generated content."
+    "explanation": "Human-in-the-loop (HITL) es una técnica utilizada en la etapa de posprocesamiento del ciclo de vida del aprendizaje automático para mejorar el rendimiento del modelo, incluida la reducción del sesgo y la toxicidad. En HITL, los evaluadores humanos intervienen para evaluar y refinar las salidas del modelo. Este ciclo de retroalimentación ayuda a identificar y corregir sesgos, lenguaje tóxico u otros resultados indeseables antes de que se presenten a los usuarios finales. Asegura que el sistema de IA se adhiera a las pautas éticas y mejore la calidad del contenido generado."
   },
   {
     "id": "29",
@@ -398,7 +398,7 @@
     ],
     "image": null,
     "answer": "Include more diverse training data. Fine-tune the model again by using the new data.",
-    "explanation": "The issue of bias in the loan approval model likely arises from the model being trained on data that does not sufficiently represent all demographics. To address this, the bank should augment the training dataset with more diverse data to ensure that the model can learn to make fair and equitable decisions across different demographics. After incorporating the more diverse training data, the bank can fine-tune the model again to adjust its behavior and reduce any biases identified during the audit."
+    "explanation": "El problema del sesgo en el modelo de aprobación de préstamos probablemente surja del hecho de que el modelo se entrenó con datos que no representan suficientemente a todos los grupos demográficos. Para abordar esto, el banco debe aumentar el conjunto de datos de entrenamiento con datos más diversos para garantizar que el modelo pueda aprender a tomar decisiones justas y equitativas en diferentes grupos demográficos. Después de incorporar los datos de entrenamiento más diversos, el banco puede ajustar el modelo nuevamente para ajustar su comportamiento y reducir cualquier sesgo identificado durante la auditoría."
   },
   {
     "id": "30",
@@ -422,7 +422,7 @@
     ],
     "image": null,
     "answer": "AWS CloudTrail",
-    "explanation": "A: AWS CloudTrail:\r\n\r\nAWS CloudTrail records all API calls made to AWS services, including Amazon Bedrock, and provides detailed logs of these interactions. It is the primary service for tracking and logging API requests.\r\n\r\nD: Amazon S3 Intelligent-Tiering:\r\n\r\nAmazon S3 Intelligent-Tiering is a cost-effective storage class designed to optimize costs for data with unknown or changing access patterns. It automatically moves data between frequent and infrequent access tiers based on usage, ensuring cost efficiency while meeting long-term retention requirements."
+    "explanation": "A: AWS CloudTrail:\n\nAWS CloudTrail registra todas las llamadas a la API realizadas a los servicios de AWS, incluido Amazon Bedrock, y proporciona registros detallados de estas interacciones. Es el servicio principal para rastrear y registrar solicitudes de API.\n\nD: Amazon S3 Intelligent-Tiering:\n\nAmazon S3 Intelligent-Tiering es una clase de almacenamiento rentable diseñada para optimizar los costos de los datos con patrones de acceso desconocidos o cambiantes. Mueve automáticamente los datos entre niveles de acceso frecuente e infrecuente según el uso, lo que garantiza la eficiencia de costos al tiempo que cumple con los requisitos de retención a largo plazo."
   },
   {
     "id": "32",
@@ -478,7 +478,7 @@
     ],
     "image": null,
     "answer": "AWS PrivateLink",
-    "explanation": "Since the VPC does not have internet access, the financial institution must use a private connectivity option to access Amazon Bedrock, which is a managed AI service. AWS PrivateLink allows private communication between VPCs and AWS services without requiring internet access, making it the best option for regulatory compliance.\r\n\r\nAmazon Macie (B): A data security service that helps identify sensitive data but does not provide private connectivity.\r\n\r\nAmazon CloudFront (C): A CDN service that optimizes content delivery but still requires internet access.\r\n\r\nInternet Gateway (D): This would provide internet access, which is explicitly not allowed per the requirements.\r\n\r\nThus, AWS PrivateLink is the right solution to enable secure, private access to Amazon Bedrock within the VPC."
+    "explanation": "Dado que la VPC no tiene acceso a Internet, la institución financiera debe utilizar una opción de conectividad privada para acceder a Amazon Bedrock, que es un servicio de IA administrado. AWS PrivateLink permite la comunicación privada entre las VPC y los servicios de AWS sin requerir acceso a Internet, lo que la convierte en la mejor opción para el cumplimiento normativo.\n\nAmazon Macie (B): Un servicio de seguridad de datos que ayuda a identificar datos confidenciales pero no proporciona conectividad privada.\n\nAmazon CloudFront (C): Un servicio de CDN que optimiza la entrega de contenido pero aún requiere acceso a Internet.\n\nInternet Gateway (D): Esto proporcionaría acceso a Internet, lo cual no está permitido explícitamente según los requisitos.\n\nPor lo tanto, AWS PrivateLink es la solución correcta para permitir el acceso seguro y privado a Amazon Bedrock dentro de la VPC."
   },
   {
     "id": "36",
@@ -627,7 +627,7 @@
     ],
     "image": null,
     "answer": "Use code that will calculate probability by using simple rules and computations.",
-    "explanation": "For a question like this, where the probability can be computed using basic arithmetic (e.g., number of favorable outcomes divided by total outcomes), implementing a straightforward function in code will meet the requirements with the least operational overhead. This avoids the complexity and resource demands of machine learning.\r\n\r\nFor example:\r\n\r\nTotal marbles =\r\n\r\n6\r\n\r\n+\r\n\r\n4\r\n\r\n+\r\n\r\n3\r\n\r\n=\r\n\r\n13\r\n\r\n6+4+3=13"
+    "explanation": "Para una pregunta como esta, donde la probabilidad se puede calcular utilizando aritmética básica (por ejemplo, número de resultados favorables dividido por el total de resultados), implementar una función directa en código cumplirá con los requisitos con la menor sobrecarga operativa. Esto evita la complejidad y las demandas de recursos del aprendizaje automático.\n\nPor ejemplo:\n\nCanicas totales =\n\n6\n\n+\n\n4\n\n+\n\n3\n\n=\n\n13\n\n6+4+3=13"
   },
   {
     "id": "47",
@@ -772,7 +772,7 @@
     ],
     "image": null,
     "answer": "Average response time",
-    "explanation": "Average response time is a key metric for measuring the runtime efficiency of operating AI models. It indicates how quickly the AI model processes a request and returns a response, which is critical for assessing the performance and efficiency of deployed models, especially in real-time applications."
+    "explanation": "El tiempo de respuesta promedio es una métrica clave para medir la eficiencia del tiempo de ejecución de los modelos de IA. Indica qué tan rápido el modelo de IA procesa una solicitud y devuelve una respuesta, lo cual es crítico para evaluar el rendimiento y la eficiencia de los modelos implementados, especialmente en aplicaciones en tiempo real."
   },
   {
     "id": "58",
@@ -921,7 +921,7 @@
     ],
     "image": null,
     "answer": "Transcribe call recordings by using Amazon Transcribe.",
-    "explanation": "Amazon Transcribe is designed for converting speech in audio files (such as customer calls) into text. This text can then be analyzed further to extract key information. It is the first step in gaining insights from audio conversations, making it the appropriate solution for the given requirement."
+    "explanation": "Amazon Transcribe está diseñado para convertir voz en archivos de audio (como llamadas de clientes) en texto. Este texto luego se puede analizar más a fondo para extraer información clave. Es el primer paso para obtener información de conversaciones de audio, lo que lo convierte en la solución adecuada para el requisito dado."
   },
   {
     "id": "69",
@@ -977,7 +977,7 @@
     ],
     "image": null,
     "answer": "Transformer-based language models use self-attention mechanisms to capture contextual relationships.",
-    "explanation": "Self-attention: This is a key feature of transformers that allows them to weigh the importance of different words in an input sequence and determine their influence on the output, regardless of their position. This ability is crucial for understanding context and relationships within language."
+    "explanation": "Autoatención (Self-attention): Esta es una característica clave de los transformadores que les permite sopesar la importancia de diferentes palabras en una secuencia de entrada y determinar su influencia en la salida, independientemente de su posición. Esta capacidad es crucial para comprender el contexto y las relaciones dentro del lenguaje."
   },
   {
     "id": "73",
@@ -1077,7 +1077,7 @@
     ],
     "image": null,
     "answer": "Unsupervised learning",
-    "explanation": "Unsupervised learning is used when working with unlabeled data, such as the customer data described in this scenario. This methodology allows the company to identify patterns and group similar customers into clusters or tiers without the need for predefined labels. Techniques like clustering (e.g., K-Means or hierarchical clustering) would help classify customers based on shared characteristics for targeted advertisement campaigns.\r\n\r\nWhy not the other options?\r\n\r\nA: Supervised learning:\r\n\r\nSupervised learning requires labeled data, which is not available in this case. Labels would need to be provided for each customer, making this approach unsuitable for the given scenario."
+    "explanation": "El aprendizaje no supervisado se utiliza cuando se trabaja con datos no etiquetados, como los datos de clientes descritos en este escenario. Esta metodología permite a la empresa identificar patrones y agrupar clientes similares en clústeres o niveles sin necesidad de etiquetas predefinidas. Técnicas como el agrupamiento (por ejemplo, K-Means o agrupamiento jerárquico) ayudarían a clasificar a los clientes en función de características compartidas para campañas publicitarias específicas.\n\n¿Por qué no las otras opciones?\n\nA: Aprendizaje supervisado:\n\nEl aprendizaje supervisado requiere datos etiquetados, que no están disponibles en este caso. Sería necesario proporcionar etiquetas para cada cliente, lo que hace que este enfoque no sea adecuado para el escenario dado."
   },
   {
     "id": "80",

@@ -472,26 +472,23 @@ window.FALLBACK_QUESTIONS = [
     }
 
     function renderDropdown(q) {
-        const container = document.createElement('div');
-        container.className = 'p-6 bg-slate-50 dark:bg-slate-800/50 rounded-xl border border-slate-200 dark:border-slate-700 mt-4';
-
-        const select = document.createElement('select');
-        // Added max-w-full to prevent overflow on small screens
-        select.className = 'inline-block max-w-full md:w-auto min-w-[200px] p-2.5 mx-2 my-1 rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-dark-bg text-slate-900 dark:text-white outline-none focus:ring-2 focus:ring-brand-500 font-medium align-middle whitespace-normal overflow-hidden text-ellipsis';
-
-        const ph = document.createElement('option');
-        ph.text = 'Select an option...'; ph.value = ''; ph.disabled = true; ph.selected = true;
-        select.add(ph);
-
-        q.options.forEach(opt => {
-            const o = document.createElement('option');
-            o.text = opt; o.value = opt;
-            select.add(o);
-        });
-
-        // Replace {{option}} with select or append select
         const parts = q.question.split('{{option}}');
+
         if (parts.length > 1) {
+            const select = document.createElement('select');
+            // Added max-w-full to prevent overflow on small screens
+            select.className = 'inline-block max-w-full md:w-auto min-w-[200px] p-2.5 mx-2 my-1 rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-dark-bg text-slate-900 dark:text-white outline-none focus:ring-2 focus:ring-brand-500 font-medium align-middle whitespace-normal overflow-hidden text-ellipsis';
+
+            const ph = document.createElement('option');
+            ph.text = 'Select an option...'; ph.value = ''; ph.disabled = true; ph.selected = true;
+            select.add(ph);
+
+            q.options.forEach(opt => {
+                const o = document.createElement('option');
+                o.text = opt; o.value = opt;
+                select.add(o);
+            });
+
             els.question.innerHTML = ''; // Clear original question text as we rebuild it
             const wrapper = document.createElement('div');
             wrapper.className = 'text-lg md:text-xl leading-relaxed text-slate-900 dark:text-white flex flex-wrap items-baseline gap-2'; // Changed items-center to items-baseline
@@ -505,35 +502,35 @@ window.FALLBACK_QUESTIONS = [
             wrapper.appendChild(part2);
 
             els.question.appendChild(wrapper);
+
+            if (els.checkBtn) {
+                els.checkBtn.classList.remove('hidden');
+                els.checkBtn.onclick = () => {
+                    if (state.answered) return;
+                    if (!select.value) return;
+
+                    state.answered = true;
+                    state.answeredCount += 1;
+                    const isCorrect = select.value === q.answer;
+
+                    select.disabled = true;
+                    select.classList.add(isCorrect ? 'bg-green-50' : 'bg-red-50');
+                    select.classList.add(isCorrect ? 'border-green-500' : 'border-red-500');
+                    select.classList.add(isCorrect ? 'text-green-900' : 'text-red-900');
+
+                    if (isCorrect) state.score += 1;
+                    showFeedback(isCorrect, q);
+                    els.checkBtn.classList.add('hidden');
+                    els.nextBtn.classList.remove('hidden');
+                    updateStatus();
+                };
+            }
         } else {
-            // If no placeholder, just append select to container
-            // Ensure container handles overflow
-            container.className = 'p-4 md:p-6 bg-slate-50 dark:bg-slate-800/50 rounded-xl border border-slate-200 dark:border-slate-700 mt-4 overflow-x-auto';
-            container.appendChild(select);
-            els.options.appendChild(container);
-        }
-
-        if (els.checkBtn) {
-            els.checkBtn.classList.remove('hidden');
-            els.checkBtn.onclick = () => {
-                if (state.answered) return;
-                if (!select.value) return;
-
-                state.answered = true;
-                state.answeredCount += 1;
-                const isCorrect = select.value === q.answer;
-
-                select.disabled = true;
-                select.classList.add(isCorrect ? 'bg-green-50' : 'bg-red-50');
-                select.classList.add(isCorrect ? 'border-green-500' : 'border-red-500');
-                select.classList.add(isCorrect ? 'text-green-900' : 'text-red-900');
-
-                if (isCorrect) state.score += 1;
-                showFeedback(isCorrect, q);
-                els.checkBtn.classList.add('hidden');
-                els.nextBtn.classList.remove('hidden');
-                updateStatus();
-            };
+            // If no placeholder, render as standard multiple choice buttons
+            q.options.forEach((opt) => {
+                const btn = createButton(opt, opt, () => handleAnswer(btn, q));
+                els.options.appendChild(btn);
+            });
         }
     }
 

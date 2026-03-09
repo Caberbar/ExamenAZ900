@@ -7,7 +7,7 @@
       "False"
     ],
     "answer": "False",
-    "explanation": "The state file can drift from reality if manual changes are made outside of Terraform. Use 'terraform plan' to detect drift.",
+    "explanation": "El archivo de estado puede desviarse de la realidad si se realizan cambios manuales fuera de Terraform. Utilice 'terraform plan' para detectar desviaciones.",
     "id": "1"
   },
   {
@@ -44,7 +44,7 @@
       "False"
     ],
     "answer": "True",
-    "explanation": "Even if it has a default, the variable must be declared (defined) in the configuration.",
+    "explanation": "Incluso si tiene un valor predeterminado, la variable debe declararse (definirse) en la configuración.",
     "id": "4"
   },
   {
@@ -57,7 +57,7 @@
       "A -var flag"
     ],
     "answer": "Mark the variable as sensitive",
-    "explanation": "Marking a variable as sensitive only hides it from output; it is still stored in the state file. It doesn't keep it out of the configuration if you hardcode it.",
+    "explanation": "Marcar una variable como sensible solo la oculta de la salida; todavía se almacena en el archivo de estado. No la mantiene fuera de la configuración si la codifica de forma rígida.",
     "id": "5"
   },
   {
@@ -70,7 +70,7 @@
       "value"
     ],
     "answer": "value",
-    "explanation": "The 'value' argument is the only required argument in an output block.",
+    "explanation": "El argumento 'value' es el único argumento requerido en un bloque de salida.",
     "id": "6"
   },
   {
@@ -83,7 +83,7 @@
       "Auditing cloud storage buckets with a vulnerability scanning tool"
     ],
     "answer": "With a Sentinel policy, which runs before every apply",
-    "explanation": "Sentinel is a policy-as-code framework that can enforce rules (like encryption requirements) before infrastructure is provisioned.",
+    "explanation": "Sentinel es un marco de política como código que puede hacer cumplir reglas (como requisitos de cifrado) antes de que se aprovisione la infraestructura.",
     "id": "7"
   },
   {
@@ -96,7 +96,7 @@
       "None of the above"
     ],
     "answer": "API",
-    "explanation": "Terraform providers interact with the cloud provider's API to manage resources.",
+    "explanation": "Los proveedores de Terraform interactúan con la API del proveedor de la nube para administrar los recursos.",
     "id": "8"
   },
   {
@@ -107,7 +107,7 @@
       "False"
     ],
     "answer": "False",
-    "explanation": "'terraform validate' only checks the syntax and internal consistency of the configuration. It does not access the state or remote infrastructure.",
+    "explanation": "'terraform validate' solo verifica la sintaxis y la consistencia interna de la configuración. No accede al estado ni a la infraestructura remota.",
     "id": "9"
   },
   {
@@ -120,7 +120,7 @@
       "Import an existing state file to a new Terraform workspace"
     ],
     "answer": "Import provisioned infrastructure to your state file",
-    "explanation": "'terraform import' is used to bring existing resources under Terraform management by adding them to the state file.",
+    "explanation": "'terraform import' se utiliza para poner los recursos existentes bajo la administración de Terraform agregándolos al archivo de estado.",
     "id": "10"
   },
   {
@@ -128,7 +128,7 @@
     "question": "FILL BLANK - In the below configuration, how would you reference the module output vpc_id? Question Type your answer in the field provided. The text field is not case sensitive and all variations of the correct answer are accepted.",
     "options": [],
     "answer": "module.vpc.vpc_id",
-    "explanation": "Module outputs are referenced as module.<MODULE_NAME>.<OUTPUT_NAME>.",
+    "explanation": "Las salidas del módulo se referencian como module.<NOMBRE_MODULO>.<NOMBRE_SALIDA>.",
     "id": "11"
   },
   {
@@ -141,7 +141,7 @@
       "aws_instance.example.ebs_block_device.*.volume_id"
     ],
     "answer": "aws_instance.example.ebs_block_device[*].volume_id",
-    "explanation": " The splat operator [*] allows you to access attributes of all items in a list.",
+    "explanation": "El operador splat [*] le permite acceder a atributos de todos los elementos de una lista.",
     "id": "12"
   },
   {
@@ -154,7 +154,7 @@
       "Self-describing infrastructure"
     ],
     "answer": "Golden images",
-    "explanation": "Golden images are an artifact pattern, not a core principle of IaC (like Idempotence, Versioning, and Self-describing infrastructure).",
+    "explanation": "Las imágenes doradas (Golden images) son un patrón de artefacto, no un principio central de IaC (como la idempotencia, el control de versiones y la infraestructura autodescriptiva).",
     "id": "13"
   },
   {
@@ -167,7 +167,7 @@
       "Prevents accidental deletion of the state file"
     ],
     "answer": "Blocks Terraform commands from modifying the state file",
-    "explanation": "State locking prevents concurrent operations from corrupting the state file.",
+    "explanation": "El bloqueo de estado evita que las operaciones concurrentes corrompan el archivo de estado.",
     "id": "14"
   },
   {
@@ -180,7 +180,7 @@
       "Upgrade your version of Terraform"
     ],
     "answer": "Run terraform init -upgrade",
-    "explanation": "You must run 'terraform init -upgrade' to install new provider versions.",
+    "explanation": "Debe ejecutar 'terraform init -upgrade' para instalar nuevas versiones del proveedor.",
     "id": "15"
   },
   {
@@ -191,7 +191,7 @@
       "False"
     ],
     "answer": "False",
-    "explanation": "Child modules cannot access parent variables automatically; they must be explicitly passed as input variables.",
+    "explanation": "Los módulos secundarios no pueden acceder a las variables principales automáticamente; deben pasarse explícitamente como variables de entrada.",
     "id": "16"
   },
   {
@@ -204,7 +204,7 @@
       "Keep the Terraform configuration files in a secret store"
     ],
     "answer": "Use partial configuration to load the authentication credentials outside of the Terraform code",
-    "explanation": "Partial configuration keeps sensitive credentials out of the main configuration files.",
+    "explanation": "La configuración parcial mantiene las credenciales confidenciales fuera de los archivos de configuración principales.",
     "id": "17"
   },
   {
@@ -217,7 +217,7 @@
       "Nothing"
     ],
     "answer": "Nothing",
-    "explanation": "Terraform is idempotent; applying the same configuration to an up-to-date state results in no changes.",
+    "explanation": "Terraform es idempotente; aplicar la misma configuración a un estado actualizado no produce cambios.",
     "id": "18"
   },
   {
@@ -230,7 +230,7 @@
       "Stop and generate an error message about the missing instances"
     ],
     "answer": "Build a completely brand new set of infrastructure",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "19"
   },
   {
@@ -244,7 +244,7 @@
       "Terraform will immediately destroy all the infrastructure"
     ],
     "answer": "Terraform will destroy the application server because it is listed first in the code",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "20"
   },
   {
@@ -257,7 +257,7 @@
       "data"
     ],
     "answer": "provider",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "21"
   },
   {
@@ -270,7 +270,7 @@
       "terraform init"
     ],
     "answer": "terraform apply",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "22"
   },
   {
@@ -281,7 +281,7 @@
       "False"
     ],
     "answer": "True",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "23"
   },
   {
@@ -292,7 +292,7 @@
       "False"
     ],
     "answer": "True",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "24"
   },
   {
@@ -303,7 +303,7 @@
       "False"
     ],
     "answer": "True",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "25"
   },
   {
@@ -317,7 +317,7 @@
       "Terraform code"
     ],
     "answer": "Cloud infrastructure",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "26"
   },
   {
@@ -331,7 +331,7 @@
       "None of the above"
     ],
     "answer": "apply",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "27"
   },
   {
@@ -344,7 +344,7 @@
       "Storing references to workspaces which are locked"
     ],
     "answer": "Tracking provider dependencies",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "28"
   },
   {
@@ -357,7 +357,7 @@
       "Delete the Terraform VM resources from your Terraform code then run terraform plan and terraform apply"
     ],
     "answer": "Use the terraform state rm command to remove the VM from state file",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "29"
   },
   {
@@ -370,7 +370,7 @@
       "The module's Terraform code"
     ],
     "answer": "The module's configuration page on the Terraform Module Registry",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "30"
   },
   {
@@ -381,7 +381,7 @@
       "False"
     ],
     "answer": "True",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "31"
   },
   {
@@ -394,7 +394,7 @@
       "terraform fmt -check -recursive"
     ],
     "answer": "terraform fmt -check",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "32"
   },
   {
@@ -407,7 +407,7 @@
       "file"
     ],
     "answer": "null-ex׀µׁ",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "33"
   },
   {
@@ -420,7 +420,7 @@
       "Change the referenced value to my_network.outputs.vnet_id"
     ],
     "answer": "Define the attribute vnet_id as a variable in the networking module",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "34"
   },
   {
@@ -433,7 +433,7 @@
       "test"
     ],
     "answer": "vpc",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "35"
   },
   {
@@ -444,7 +444,7 @@
       "![alt text](image-9.png) Question"
     ],
     "answer": "![alt text](image-8.png) Question",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "36"
   },
   {
@@ -457,7 +457,7 @@
       "A catalog of approved resources can be accessed from drop down lists in a request form"
     ],
     "answer": "A full audit trail of the request and fulfillment process is generated",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "37"
   },
   {
@@ -470,7 +470,7 @@
       "Modules can call other modules"
     ],
     "answer": "Modules must be publicly accessible",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "38"
   },
   {
@@ -483,7 +483,7 @@
       "list"
     ],
     "answer": "tuple",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "39"
   },
   {
@@ -496,7 +496,7 @@
       "Run terraform show -destroy"
     ],
     "answer": "Run terraform plan -destroy",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "40"
   },
   {
@@ -509,7 +509,7 @@
       "None of the above"
     ],
     "answer": "Before every terraform plan",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "41"
   },
   {
@@ -520,7 +520,7 @@
       "False"
     ],
     "answer": "True",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "42"
   },
   {
@@ -533,7 +533,7 @@
       "The ability to autoscale a group of servers"
     ],
     "answer": "The ability to delete infrastructure",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "43"
   },
   {
@@ -545,7 +545,7 @@
       "terraform refresh"
     ],
     "answer": "terraform mv aws_security_group.htp aws_security_group.http",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "44"
   },
   {
@@ -557,7 +557,7 @@
       "![alt text](image-10.png) Question"
     ],
     "answer": "![alt text](image-12.png) Question",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "45"
   },
   {
@@ -570,7 +570,7 @@
       "Run terraform import"
     ],
     "answer": "Run terraform refresh",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "46"
   },
   {
@@ -581,7 +581,7 @@
       "False"
     ],
     "answer": "True",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "47"
   },
   {
@@ -592,7 +592,7 @@
       "False"
     ],
     "answer": "True",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "48"
   },
   {
@@ -605,7 +605,7 @@
       "Delete the state file and run terraform apply"
     ],
     "answer": "Using the destroy command with auto-approve",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "49"
   },
   {
@@ -619,7 +619,7 @@
       "API driven workflows"
     ],
     "answer": "Self-service infrastructure deployment",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "50"
   },
   {
@@ -632,7 +632,7 @@
       "file(\"id_rsa.pub\")"
     ],
     "answer": "fileset(\"id_rsa.pub\")",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "51"
   },
   {
@@ -646,7 +646,7 @@
       "Group a collection of Terraform configuration files that map to a single state file"
     ],
     "answer": "Provision resources for on-premises infrastructure services",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "52"
   },
   {
@@ -657,7 +657,7 @@
       "False"
     ],
     "answer": "True",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "53"
   },
   {
@@ -670,7 +670,7 @@
       "Terraform requires resource dependencies to be defined as modules and sourced in order"
     ],
     "answer": "Terraform automatically builds a resource graph based on resources, provisioners, special meta-parameters, and the state file, if present.",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "54"
   },
   {
@@ -683,7 +683,7 @@
       "Resource address"
     ],
     "answer": "Path",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "55"
   },
   {
@@ -696,7 +696,7 @@
       "terraform init"
     ],
     "answer": "terraform apply",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "56"
   },
   {
@@ -709,7 +709,7 @@
       "Cloud provider"
     ],
     "answer": "State file",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "57"
   },
   {
@@ -722,7 +722,7 @@
       "Requires any version of the AWS provider > 3.0"
     ],
     "answer": "Requires any version of the AWS provider >= 3.0 and < 4.0",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "58"
   },
   {
@@ -735,7 +735,7 @@
       "Your Terraform configuration"
     ],
     "answer": "Your cloud infrastructure",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "59"
   },
   {
@@ -748,7 +748,7 @@
       "source = \"hashicorp/consul/aws\""
     ],
     "answer": "source = \"./modulelversion=v1.0.0\"",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "60"
   },
   {
@@ -762,7 +762,7 @@
       "You cannot target specific resources for the operation"
     ],
     "answer": "It only operates on infrastructure defined in the current working directory or workspace",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "61"
   },
   {
@@ -776,7 +776,7 @@
       "None of the above (all statements above are correct)"
     ],
     "answer": "Local modules are not cached by terraform init command",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "62"
   },
   {
@@ -790,7 +790,7 @@
       "It allows you to automate infrastructure provisioning"
     ],
     "answer": "It is only compatible with AWS infrastructure management",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "63"
   },
   {
@@ -803,7 +803,7 @@
       "A dynamic block"
     ],
     "answer": "A count loop",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "64"
   },
   {
@@ -816,7 +816,7 @@
       "Set the variable value on the command line with the -var flag"
     ],
     "answer": "Write the value to a file and specify the file with the -var-file flag",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "65"
   },
   {
@@ -827,7 +827,7 @@
       "False"
     ],
     "answer": "True",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "66"
   },
   {
@@ -841,7 +841,7 @@
       "None of the above"
     ],
     "answer": "resource.kubernetes_namespace.example.name",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "67"
   },
   {
@@ -855,7 +855,7 @@
       "None of the above"
     ],
     "answer": "Required input variables",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "68"
   },
   {
@@ -866,7 +866,7 @@
       "False"
     ],
     "answer": "True",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "69"
   },
   {
@@ -880,7 +880,7 @@
       "terraform plan F. terraform validate"
     ],
     "answer": "terraform destroy",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "70"
   },
   {
@@ -893,7 +893,7 @@
       "All of the above"
     ],
     "answer": "Plan",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "71"
   },
   {
@@ -906,7 +906,7 @@
       "After the apply phase"
     ],
     "answer": "Before the plan phase",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "72"
   },
   {
@@ -919,7 +919,7 @@
       "Provides limited access to a cloud environment"
     ],
     "answer": "Workspaces allow you to manage collections of infrastructure in state files",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "73"
   },
   {
@@ -932,7 +932,7 @@
       "Modules stored on GitHub do not support versioning"
     ],
     "answer": "Append ?ref=v1. 0. 0 argument to the source path",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "74"
   },
   {
@@ -945,7 +945,7 @@
       "Discouraged"
     ],
     "answer": "Mandatory",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "75"
   },
   {
@@ -956,7 +956,7 @@
       "False"
     ],
     "answer": "True",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "76"
   },
   {
@@ -969,7 +969,7 @@
       "Review /var/log/terraform.log for error messages"
     ],
     "answer": "Set TF_LOG=DEBUG",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "77"
   },
   {
@@ -983,7 +983,7 @@
       "Submit a pull request and wait for an approved merge of the proposed changes"
     ],
     "answer": "Clone the repository containing your infrastructure code and then run the code",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "78"
   },
   {
@@ -994,7 +994,7 @@
       "False"
     ],
     "answer": "True",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "79"
   },
   {
@@ -1007,7 +1007,7 @@
       "terraform output"
     ],
     "answer": "terraform refresh",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "80"
   },
   {
@@ -1020,7 +1020,7 @@
       "None of the above"
     ],
     "answer": "Using environment variables",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "81"
   },
   {
@@ -1031,7 +1031,7 @@
       "False"
     ],
     "answer": "True",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "82"
   },
   {
@@ -1042,7 +1042,7 @@
       "False"
     ],
     "answer": "True",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "83"
   },
   {
@@ -1055,7 +1055,7 @@
       "Terraform will remove the virtual machine from the state file, but the resource will still exist"
     ],
     "answer": "Nothing",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "84"
   },
   {
@@ -1068,7 +1068,7 @@
       "Declaring a resource identifier more than once"
     ],
     "answer": "A mix of spaces and tabs in configuration files",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "85"
   },
   {
@@ -1079,7 +1079,7 @@
       "Question"
     ],
     "answer": "Question",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "86"
   },
   {
@@ -1092,7 +1092,7 @@
       "Provider plugin cache"
     ],
     "answer": "Source code",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "87"
   },
   {
@@ -1105,7 +1105,7 @@
       "Public repository on GitHub"
     ],
     "answer": "Internally hosted SCM (Source Control Manager) platform",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "88"
   },
   {
@@ -1118,7 +1118,7 @@
       "All passwords should be rotated on a quarterly basis."
     ],
     "answer": "It makes the code less reusable.",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "89"
   },
   {
@@ -1129,7 +1129,7 @@
       "![alt text](image-18.png) False"
     ],
     "answer": "![alt text](image-17.png) True",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "90"
   },
   {
@@ -1142,7 +1142,7 @@
       "Nothing, provisioners will not show errors in the command line"
     ],
     "answer": "The resource will not be affected, but the provisioner will need to be applied again",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "91"
   },
   {
@@ -1155,7 +1155,7 @@
       "Terraform configuration should be written before terraform import is executed"
     ],
     "answer": "Infrastructure can be imported without corresponding Terraform code",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "92"
   },
   {
@@ -1168,7 +1168,7 @@
       "terraform validate"
     ],
     "answer": "terraform env",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "93"
   },
   {
@@ -1181,7 +1181,7 @@
       "The backend configuration should contain multiple credentials so that more than one user can execute terraform plan and terraform apply"
     ],
     "answer": "You should not store credentials in Terraform Configuration",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "94"
   },
   {
@@ -1192,7 +1192,7 @@
       "False"
     ],
     "answer": "True",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "95"
   },
   {
@@ -1205,7 +1205,7 @@
       "Destroy the Terraform state file while leaving infrastructure intact"
     ],
     "answer": "Destroy all infrastructure in the Terraform state file",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "96"
   },
   {
@@ -1218,7 +1218,7 @@
       "TP_LOG_PATH"
     ],
     "answer": "TF_LOG_LEVEL",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "97"
   },
   {
@@ -1231,7 +1231,7 @@
       "The DevOps team is tasked with automating a manual provisioning process"
     ],
     "answer": "The team is asked to build a reusable code base that can deploy resources into any AWS region",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "98"
   },
   {
@@ -1242,7 +1242,7 @@
       "False"
     ],
     "answer": "True",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "99"
   },
   {
@@ -1255,7 +1255,7 @@
       "Schedule Terraform to run at a planned time in the future"
     ],
     "answer": "Save a generated execution plan to apply later",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "100"
   },
   {
@@ -1268,7 +1268,7 @@
       "chomp"
     ],
     "answer": "split",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "101"
   },
   {
@@ -1281,7 +1281,7 @@
       "Docker files"
     ],
     "answer": "Cloned virtual machine images",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "102"
   },
   {
@@ -1289,7 +1289,7 @@
     "question": "FILL BLANK - You need to migrate a workspace to use a remote backend. After updating your configuration, what command do you run to perform the migration? Type your answer in the field provided. The text field is not case-sensitive and all variations of the correct answer are accepted.",
     "options": [],
     "answer": "Unknown",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "103"
   },
   {
@@ -1303,7 +1303,7 @@
       "The version of the module"
     ],
     "answer": "Each of the module’s required inputs",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "104"
   },
   {
@@ -1316,7 +1316,7 @@
       "terraform providers -upgrade"
     ],
     "answer": "terraform init -upgrade",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "105"
   },
   {
@@ -1327,7 +1327,7 @@
       "False"
     ],
     "answer": "True",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "106"
   },
   {
@@ -1340,7 +1340,7 @@
       "Terraform will change the port back to 80 in your code."
     ],
     "answer": "Terraform will fail with an error because the state file is no longer accurate.",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "107"
   },
   {
@@ -1351,7 +1351,7 @@
       "False"
     ],
     "answer": "True",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "108"
   },
   {
@@ -1365,7 +1365,7 @@
       "Add new Terraform code (*.tf files) for staging in the same directory"
     ],
     "answer": "Copy the existing terraform.tfstate file and save it as staging.terraform.tfstate",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "109"
   },
   {
@@ -1378,7 +1378,7 @@
       "Terraform provisioner"
     ],
     "answer": "Terraform configuration",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "110"
   },
   {
@@ -1389,7 +1389,7 @@
       "False"
     ],
     "answer": "True",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "111"
   },
   {
@@ -1400,7 +1400,7 @@
       "False"
     ],
     "answer": "True",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "112"
   },
   {
@@ -1413,7 +1413,7 @@
       "Run the terraform import-gcp command"
     ],
     "answer": "Provision new VMs using Terraform with the same VM names",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "113"
   },
   {
@@ -1426,7 +1426,7 @@
       "$(var.num_servers)"
     ],
     "answer": "servers - var.num_servers",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "114"
   },
   {
@@ -1439,7 +1439,7 @@
       "terraform state list"
     ],
     "answer": "terraform state list",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "115"
   },
   {
@@ -1452,7 +1452,7 @@
       "data.vsphere_datacenter.dc.id"
     ],
     "answer": "data.dc.id",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "116"
   },
   {
@@ -1465,7 +1465,7 @@
       "terraform push"
     ],
     "answer": "terraform state",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "117"
   },
   {
@@ -1478,7 +1478,7 @@
       "Outputs"
     ],
     "answer": "Local values",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "118"
   },
   {
@@ -1491,7 +1491,7 @@
       "Automation"
     ],
     "answer": "Interpolation",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "119"
   },
   {
@@ -1502,7 +1502,7 @@
       "False"
     ],
     "answer": "True",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "120"
   },
   {
@@ -1515,7 +1515,7 @@
       "Run terraform destroy then terraform apply"
     ],
     "answer": "Run terraform taint against the virtual machine’s resource name, then terraform apply",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "121"
   },
   {
@@ -1526,7 +1526,7 @@
       "False"
     ],
     "answer": "True",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "122"
   },
   {
@@ -1537,7 +1537,7 @@
       "False"
     ],
     "answer": "True",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "123"
   },
   {
@@ -1550,7 +1550,7 @@
       "Implement a provisioning pipeline that deploys infrastructure configurations committed to your version control system following code reviews"
     ],
     "answer": "Implement a ticketing workflow that makes engineers submit a ticket before manually provisioning and configuring a resource",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "124"
   },
   {
@@ -1563,7 +1563,7 @@
       "Count arguments"
     ],
     "answer": "Local values",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "125"
   },
   {
@@ -1576,7 +1576,7 @@
       "source = “hashicorp/consul/aws”"
     ],
     "answer": "source = “./modules/consul”",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "126"
   },
   {
@@ -1589,7 +1589,7 @@
       "high[numcpus]"
     ],
     "answer": "max(numcpus)",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "127"
   },
   {
@@ -1600,7 +1600,7 @@
       "False"
     ],
     "answer": "True",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "128"
   },
   {
@@ -1613,7 +1613,7 @@
       "string"
     ],
     "answer": "list",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "129"
   },
   {
@@ -1626,7 +1626,7 @@
       "A state file represents a source of truth for resources provisioned with Terraform"
     ],
     "answer": "A state file can be used to schedule recurring infrastructure tasks",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "130"
   },
   {
@@ -1639,7 +1639,7 @@
       "They have role-based access controls"
     ],
     "answer": "They can securely store cloud credentials",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "131"
   },
   {
@@ -1652,7 +1652,7 @@
       "State is used to store variables and quickly reuse existing code"
     ],
     "answer": "State is used to map real world resources to your configuration and keep track of metadata",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "132"
   },
   {
@@ -1666,7 +1666,7 @@
       "HTTP"
     ],
     "answer": "API",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "133"
   },
   {
@@ -1677,7 +1677,7 @@
       "False"
     ],
     "answer": "True",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "134"
   },
   {
@@ -1688,7 +1688,7 @@
       "False"
     ],
     "answer": "True",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "135"
   },
   {
@@ -1701,7 +1701,7 @@
       "Subfolder within a workspace"
     ],
     "answer": "Generic git repository",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "136"
   },
   {
@@ -1709,7 +1709,7 @@
     "question": "You are writing a child Terraform module which provisions an AWS instance. You want to make use of the IP address returned in the root configuration. You name the instance resource “main”. Which of these is the correct way to define the output value using HCL2?",
     "options": [],
     "answer": "Unknown",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "137"
   },
   {
@@ -1722,7 +1722,7 @@
       "aws_instance.web[“indexing”]"
     ],
     "answer": "aws_instance[“web”][“indexing”]",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "138"
   },
   {
@@ -1735,7 +1735,7 @@
       "Private module registry"
     ],
     "answer": "Workspace",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "139"
   },
   {
@@ -1748,7 +1748,7 @@
       "Before you start coding a new Terraform project"
     ],
     "answer": "After you run terraform apply for the first time in a new Terraform project and before you run terraform plan",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "140"
   },
   {
@@ -1759,7 +1759,7 @@
       "False"
     ],
     "answer": "True",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "141"
   },
   {
@@ -1772,7 +1772,7 @@
       "After you run terraform apply so you can validate that your infrastructure is reflected in your code"
     ],
     "answer": "After you run terraform plan so you can validate that your state file is consistent with your infrastructure",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "142"
   },
   {
@@ -1785,7 +1785,7 @@
       "Terraform will automatically manage most resource dependencies"
     ],
     "answer": "By defining dependencies as modules and including them in a particular order",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "143"
   },
   {
@@ -1798,7 +1798,7 @@
       "Compares your Terraform code and local state file to the remote state file in a cloud provider and determines if any changes need to be made"
     ],
     "answer": "Imports all of your existing cloud provider resources to the state file",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "144"
   },
   {
@@ -1812,7 +1812,7 @@
       "You can check out and check in cloud access keys"
     ],
     "answer": "Policy-as-code can enforce security best practices",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "145"
   },
   {
@@ -1826,7 +1826,7 @@
       "Validate"
     ],
     "answer": "Destroy",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "146"
   },
   {
@@ -1840,7 +1840,7 @@
       "Using the consul Terraform backend."
     ],
     "answer": "Using the remote Terraform backend with Terraform Cloud / Terraform Enterprise.",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "147"
   },
   {
@@ -1853,7 +1853,7 @@
       "All of the above"
     ],
     "answer": "Local path",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "148"
   },
   {
@@ -1866,7 +1866,7 @@
       "None of the above"
     ],
     "answer": "Declare the output in the root configuration",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "149"
   },
   {
@@ -1879,7 +1879,7 @@
       "It uses a different backend"
     ],
     "answer": "It has its own state file",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "150"
   },
   {
@@ -1890,7 +1890,7 @@
       "False"
     ],
     "answer": "True",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "151"
   },
   {
@@ -1903,7 +1903,7 @@
       "terraform fmt"
     ],
     "answer": "terraform validate",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "152"
   },
   {
@@ -1914,7 +1914,7 @@
       "False"
     ],
     "answer": "True",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "153"
   },
   {
@@ -1927,7 +1927,7 @@
       "terraform state list"
     ],
     "answer": "terraform apply",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "154"
   },
   {
@@ -1938,7 +1938,7 @@
       "False"
     ],
     "answer": "True",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "155"
   },
   {
@@ -1949,7 +1949,7 @@
       "False"
     ],
     "answer": "True",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "156"
   },
   {
@@ -1962,7 +1962,7 @@
       "When you want Terraform to destroy all the infrastructure in your workspace"
     ],
     "answer": "When you want to force Terraform to destroy a resource on the next apply",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "157"
   },
   {
@@ -1976,7 +1976,7 @@
       "Validate"
     ],
     "answer": "Plan",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "158"
   },
   {
@@ -1990,7 +1990,7 @@
       "None of the above"
     ],
     "answer": "Terraform data sources",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "159"
   },
   {
@@ -2003,7 +2003,7 @@
       "null-exec"
     ],
     "answer": "remote-exec",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "160"
   },
   {
@@ -2016,7 +2016,7 @@
       "All"
     ],
     "answer": "Some",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "161"
   },
   {
@@ -2029,7 +2029,7 @@
       "A series of commands you enter into a public cloud console"
     ],
     "answer": "curl commands manually run from a terminal",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "162"
   },
   {
@@ -2041,7 +2041,7 @@
       "version ~> 3.1"
     ],
     "answer": "version >= 3.1",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "163"
   },
   {
@@ -2054,7 +2054,7 @@
       "After you run terraform import"
     ],
     "answer": "Before you run terraform import",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "164"
   },
   {
@@ -2067,7 +2067,7 @@
       "terraform fmt -check"
     ],
     "answer": "terraform fmt -write=false",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "165"
   },
   {
@@ -2080,7 +2080,7 @@
       "Version control"
     ],
     "answer": "Provider constraints",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "166"
   },
   {
@@ -2088,7 +2088,7 @@
     "question": "You are creating a reusable Terraform configuration and want to include a billing_dept tag so your Finance team can track team-specific spending on resources. Which of the following billing_dept variable declarations will allow you to do this?",
     "options": [],
     "answer": "Unknown",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "167"
   },
   {
@@ -2099,7 +2099,7 @@
       "False"
     ],
     "answer": "True",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "168"
   },
   {
@@ -2112,7 +2112,7 @@
       "A variable file"
     ],
     "answer": "Inside the backend block within the Terraform configuration",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "169"
   },
   {
@@ -2125,7 +2125,7 @@
       "Terraform does not support complex input variables of different types"
     ],
     "answer": "List",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "170"
   },
   {
@@ -2138,7 +2138,7 @@
       "Cloud provider"
     ],
     "answer": "Credentials",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "171"
   },
   {
@@ -2150,7 +2150,7 @@
       "Run the terraform validate command prior to executing terraform plan or terraform apply"
     ],
     "answer": "Run the terraform fmt command during the code linting phase of your CI/CD process",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "172"
   },
   {
@@ -2163,7 +2163,7 @@
       "In the remote backend or Terraform Cloud"
     ],
     "answer": "On the disk",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "173"
   },
   {
@@ -2171,7 +2171,7 @@
     "question": "In Terraform HCL, an object type of object({ name=string, age=number }) would match this value:",
     "options": [],
     "answer": "Unknown",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "174"
   },
   {
@@ -2184,7 +2184,7 @@
       "Terraform will use the latest version of the provider available at the time you provision your new resource"
     ],
     "answer": "Terraform will use the latest version of the provider for the new resource and the version recorded in the lock file to manage existing resources",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "175"
   },
   {
@@ -2195,7 +2195,7 @@
       "False"
     ],
     "answer": "True",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "176"
   },
   {
@@ -2208,7 +2208,7 @@
       "State maps real world resources to your configuration and keeps track of metadata"
     ],
     "answer": "State stores variables and lets you quickly reuse existing code",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "177"
   },
   {
@@ -2221,7 +2221,7 @@
       "Run Terraform with parallelism set to 1"
     ],
     "answer": "Refresh the state after running Terraform",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "178"
   },
   {
@@ -2234,7 +2234,7 @@
       "You apply failed due to a state lock"
     ],
     "answer": "You see a status message that you cannot acquire the lock",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "179"
   },
   {
@@ -2247,7 +2247,7 @@
       "TF_VAR_log_path"
     ],
     "answer": "TF_LOG_PATH",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "180"
   },
   {
@@ -2258,7 +2258,7 @@
       "False"
     ],
     "answer": "True",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "181"
   },
   {
@@ -2269,7 +2269,7 @@
       "False"
     ],
     "answer": "True",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "182"
   },
   {
@@ -2280,7 +2280,7 @@
       "False"
     ],
     "answer": "True",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "183"
   },
   {
@@ -2293,7 +2293,7 @@
       "Delegate output to other teams"
     ],
     "answer": "Keeping unencrypted sensitive information off disk",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "184"
   },
   {
@@ -2306,7 +2306,7 @@
       "name"
     ],
     "answer": "depends_on",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "185"
   },
   {
@@ -2319,7 +2319,7 @@
       "Use terraform refresh/code to find out which IDs are already part of state"
     ],
     "answer": "Run terraform taint/code on all the VMs to recreate them",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "186"
   },
   {
@@ -2331,7 +2331,7 @@
       "Write the value to a file and specify the file with the -var-file flag"
     ],
     "answer": "Edit the state file directly just before running terraform apply",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "187"
   },
   {
@@ -2342,7 +2342,7 @@
       "False"
     ],
     "answer": "True",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "188"
   },
   {
@@ -2353,7 +2353,7 @@
       "False"
     ],
     "answer": "True",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "189"
   },
   {
@@ -2366,7 +2366,7 @@
       "Terraform Module Registry"
     ],
     "answer": "FTP server",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "190"
   },
   {
@@ -2379,7 +2379,7 @@
       "It will happen automatically"
     ],
     "answer": "Manually update the state fire",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "191"
   },
   {
@@ -2392,7 +2392,7 @@
       "terraform import"
     ],
     "answer": "terraform init",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "192"
   },
   {
@@ -2405,7 +2405,7 @@
       "Changing resources via the Azure Cloud Console does not update current state file"
     ],
     "answer": "When you change a Terraform-managed resource via the Azure Cloud Console, Terraform updates the state file to reflect the change during the next plan or apply",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "193"
   },
   {
@@ -2418,7 +2418,7 @@
       "The programmatic configuration of resources"
     ],
     "answer": "A pipeline process to test and deliver software",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "194"
   },
   {
@@ -2429,7 +2429,7 @@
       "False"
     ],
     "answer": "True",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "195"
   },
   {
@@ -2443,7 +2443,7 @@
       "All of these"
     ],
     "answer": "terraform init",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "196"
   },
   {
@@ -2454,7 +2454,7 @@
       "False"
     ],
     "answer": "True",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "197"
   },
   {
@@ -2467,7 +2467,7 @@
       "terraform state list"
     ],
     "answer": "terraform state list ‘provider_type.name’",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "198"
   },
   {
@@ -2478,7 +2478,7 @@
       "False"
     ],
     "answer": "True",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "199"
   },
   {
@@ -2491,7 +2491,7 @@
       "Stop and generate an error message about the missing instances"
     ],
     "answer": "Build a completely brand new set of infrastructure",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "200"
   },
   {
@@ -2504,7 +2504,7 @@
       "Using the workspace as a data source"
     ],
     "answer": "Secure variable storage",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "201"
   },
   {
@@ -2515,7 +2515,7 @@
       "False"
     ],
     "answer": "True",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "202"
   },
   {
@@ -2528,7 +2528,7 @@
       "lifecycle"
     ],
     "answer": "count",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "203"
   },
   {
@@ -2539,7 +2539,7 @@
       "False"
     ],
     "answer": "True",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "204"
   },
   {
@@ -2552,7 +2552,7 @@
       "None of the above"
     ],
     "answer": "Declare the output in the root configuration",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "205"
   },
   {
@@ -2565,7 +2565,7 @@
       "dev"
     ],
     "answer": "azurerm_resource_group",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "206"
   },
   {
@@ -2578,7 +2578,7 @@
       "None of the above"
     ],
     "answer": "Before every terraform plan",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "207"
   },
   {
@@ -2591,7 +2591,7 @@
       "All of the above"
     ],
     "answer": "It can execute Terraform runs on dedicated infrastructure in Terraform Cloud",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "208"
   },
   {
@@ -2605,7 +2605,7 @@
       "Prevents manual modifications to your resources"
     ],
     "answer": "Secures your credentials",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "209"
   },
   {
@@ -2616,7 +2616,7 @@
       "False"
     ],
     "answer": "True",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "210"
   },
   {
@@ -2629,7 +2629,7 @@
       "Use terraform fmt"
     ],
     "answer": "Replace all tabs with spaces",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "211"
   },
   {
@@ -2640,7 +2640,7 @@
       "False"
     ],
     "answer": "True",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "212"
   },
   {
@@ -2654,7 +2654,7 @@
       "HTTP"
     ],
     "answer": "Depends on the cloud provider configured",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "213"
   },
   {
@@ -2665,7 +2665,7 @@
       "False"
     ],
     "answer": "True",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "214"
   },
   {
@@ -2678,7 +2678,7 @@
       "Your state file"
     ],
     "answer": "Your cloud infrastructure",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "215"
   },
   {
@@ -2692,7 +2692,7 @@
       "None of the above"
     ],
     "answer": "Imports existing resources into the state file",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "216"
   },
   {
@@ -2705,7 +2705,7 @@
       "servers = var.num_servers"
     ],
     "answer": "servers = var(num_servers)",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "217"
   },
   {
@@ -2718,7 +2718,7 @@
       "terraform plan rm aws_instance.ubuntu[l]"
     ],
     "answer": "terraform destroy aws_instance.ubuntu[l]",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "218"
   },
   {
@@ -2729,7 +2729,7 @@
       "False"
     ],
     "answer": "True",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "219"
   },
   {
@@ -2742,7 +2742,7 @@
       "Compares the state file to your Terraform code and determines if any changes need to be made"
     ],
     "answer": "Compares your Terraform code and local state file to the remote state file in a cloud provider and determines if any changes need to be made",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "220"
   },
   {
@@ -2755,7 +2755,7 @@
       "Modules can call other modules"
     ],
     "answer": "Modules must be publicly accessible",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "221"
   },
   {
@@ -2768,7 +2768,7 @@
       "The more resources your organization needs, the more tickets your infrastructure team has to process"
     ],
     "answer": "End-users have to request infrastructure changes",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "222"
   },
   {
@@ -2781,7 +2781,7 @@
       "All of the above"
     ],
     "answer": "It can execute Terraform runs on dedicated infrastructure on premises or in Terraform Cloud",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "223"
   },
   {
@@ -2794,7 +2794,7 @@
       "Run terraform destroy and it will first output all the resources that will be deleted before prompting for approval."
     ],
     "answer": "Run terraform plan -destroy.",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "224"
   },
   {
@@ -2807,7 +2807,7 @@
       "Tag a release in the associated repo"
     ],
     "answer": "Configure it in the module's Terraform code",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "225"
   },
   {
@@ -2820,7 +2820,7 @@
       "terraform plan -target-state"
     ],
     "answer": "terraform plan -refresh-only",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "226"
   },
   {
@@ -2833,7 +2833,7 @@
       "terraform import"
     ],
     "answer": "terraform plan",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "227"
   },
   {
@@ -2846,7 +2846,7 @@
       "terraform test"
     ],
     "answer": "terraform console",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "228"
   },
   {
@@ -2859,7 +2859,7 @@
       "resource"
     ],
     "answer": "provider",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "229"
   },
   {
@@ -2872,7 +2872,7 @@
       "None of the above are correct"
     ],
     "answer": "After Terraform has updated the state file",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "230"
   },
   {
@@ -2885,7 +2885,7 @@
       "Write Terraform configuration, run terraform plan to initialize the working directory or workspace, and terraform apply to create the infrastructure"
     ],
     "answer": "Write Terraform configuration, run terraform init to initialize the working directory or workspace, and run terraform apply",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "231"
   },
   {
@@ -2898,7 +2898,7 @@
       "Automated infrastructure deployment visualization"
     ],
     "answer": "Remote state storage",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "232"
   },
   {
@@ -2911,7 +2911,7 @@
       "A -var flag"
     ],
     "answer": "A shared credential file",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "233"
   },
   {
@@ -2925,7 +2925,7 @@
       "None of the above"
     ],
     "answer": "An individual person can write a Terraform Provider",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "234"
   },
   {
@@ -2938,7 +2938,7 @@
       "servers = var.num_servers"
     ],
     "answer": "servers = num_servers",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "235"
   },
   {
@@ -2951,7 +2951,7 @@
       "terraform show"
     ],
     "answer": "terraform fmt",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "236"
   },
   {
@@ -2962,7 +2962,7 @@
       "False"
     ],
     "answer": "True",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "237"
   },
   {
@@ -2975,7 +2975,7 @@
       "Terraform needs to install the necessary plugins first"
     ],
     "answer": "Terraform needs you to format your code according to best practices first",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "238"
   },
   {
@@ -2988,7 +2988,7 @@
       "Plans and applies can be triggered via version control system integrations"
     ],
     "answer": "They can securely store cloud credentials",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "239"
   },
   {
@@ -3001,7 +3001,7 @@
       "The ability to share modules with public Terraform users and members of Terraform Cloud Organizations"
     ],
     "answer": "The ability to restrict modules to members of Terraform Cloud or Enterprise organizations",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "240"
   },
   {
@@ -3012,7 +3012,7 @@
       "False"
     ],
     "answer": "True",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "241"
   },
   {
@@ -3025,7 +3025,7 @@
       "Versioning"
     ],
     "answer": "Reusability of code",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "242"
   },
   {
@@ -3038,7 +3038,7 @@
       "In the .terraform.lock.hcl file"
     ],
     "answer": "In the terraform.tfstate file",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "243"
   },
   {
@@ -3051,7 +3051,7 @@
       "All providers are part of the Terraform core binary"
     ],
     "answer": "Terraform can only source providers from the internet",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "244"
   },
   {
@@ -3064,7 +3064,7 @@
       "By adding variables to each Terraform Cloud workspace to ensure these settings are always enabled"
     ],
     "answer": "With a Sentinel policy, which runs before every apply",
-    "explanation": "Sentinel is a policy-as-code framework that can enforce rules (like encryption requirements) before infrastructure is provisioned.",
+    "explanation": "Sentinel es un marco de política como código que puede hacer cumplir reglas (como requisitos de cifrado) antes de que se aprovisione la infraestructura.",
     "id": "245"
   },
   {
@@ -3075,7 +3075,7 @@
       "False"
     ],
     "answer": "True",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "246"
   },
   {
@@ -3088,7 +3088,7 @@
       "In an environment variable"
     ],
     "answer": "In the remote backend or Terraform Cloud",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "247"
   },
   {
@@ -3096,7 +3096,7 @@
     "question": "You are writing a child Terraform module that provisions an AWS instance. You want to reference the IP address returned by the child module in the root configuration. You name the instance resource \"main\". Which of these is the correct way to define the output value?",
     "options": [],
     "answer": "Unknown",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "248"
   },
   {
@@ -3109,7 +3109,7 @@
       "After the apply phase"
     ],
     "answer": "Before the plan phase",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "249"
   },
   {
@@ -3122,7 +3122,7 @@
       "State file drift"
     ],
     "answer": "Empty state files",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "250"
   },
   {
@@ -3133,7 +3133,7 @@
       "False"
     ],
     "answer": "True",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "251"
   },
   {
@@ -3146,7 +3146,7 @@
       "You want Terraform to destroy all the infrastructure in your workspace"
     ],
     "answer": "You want to force Terraform to destroy a resource on the next apply",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "252"
   },
   {
@@ -3157,7 +3157,7 @@
       "False"
     ],
     "answer": "True",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "253"
   },
   {
@@ -3170,7 +3170,7 @@
       "Whenever you enable state locking"
     ],
     "answer": "After your first terraform plan",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "254"
   },
   {
@@ -3183,7 +3183,7 @@
       "Terraform will recreate the load balancer."
     ],
     "answer": "Terraform will fail with an error because the state file is no longer accurate.",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "255"
   },
   {
@@ -3196,7 +3196,7 @@
       "Load required provider plugins"
     ],
     "answer": "Create template configuration files",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "256"
   },
   {
@@ -3207,7 +3207,7 @@
       "False"
     ],
     "answer": "True",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "257"
   },
   {
@@ -3218,7 +3218,7 @@
       "False"
     ],
     "answer": "True",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "258"
   },
   {
@@ -3229,7 +3229,7 @@
       "False"
     ],
     "answer": "True",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "259"
   },
   {
@@ -3242,7 +3242,7 @@
       "compute_instance"
     ],
     "answer": "test",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "260"
   },
   {
@@ -3255,7 +3255,7 @@
       "Append ?ref=v1.0.0 argument to the source path."
     ],
     "answer": "You cannot. Modules stored on the public Terraform Registry do not support versioning.",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "261"
   },
   {
@@ -3268,7 +3268,7 @@
       "None of the above."
     ],
     "answer": "The code contains tabs for indentation instead of spaces.",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "262"
   },
   {
@@ -3279,7 +3279,7 @@
       "False"
     ],
     "answer": "True",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "263"
   },
   {
@@ -3292,7 +3292,7 @@
       "Before you start coding a new Terraform project"
     ],
     "answer": "Every time you run terraform apply",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "264"
   },
   {
@@ -3305,7 +3305,7 @@
       "After you run terraform apply so you can validate your provider credentials"
     ],
     "answer": "After you run terraform plan so you can validate that your state file is consistent with your infrastructure",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "265"
   },
   {
@@ -3318,7 +3318,7 @@
       "terraform fmt"
     ],
     "answer": "terraform validate",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "266"
   },
   {
@@ -3329,7 +3329,7 @@
       "False"
     ],
     "answer": "True",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "267"
   },
   {
@@ -3342,7 +3342,7 @@
       "State file"
     ],
     "answer": "tfplan files",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "268"
   },
   {
@@ -3355,7 +3355,7 @@
       "compute_instance"
     ],
     "answer": "test",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "269"
   },
   {
@@ -3366,7 +3366,7 @@
       "False"
     ],
     "answer": "True",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "270"
   },
   {
@@ -3377,7 +3377,7 @@
       "False"
     ],
     "answer": "True",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "271"
   },
   {
@@ -3390,7 +3390,7 @@
       "kubernetes_namespace.example.name"
     ],
     "answer": "data.kubernetes_namespace.name",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "272"
   },
   {
@@ -3404,7 +3404,7 @@
       "In an HCP Terraform/Terraform Cloud variable, with the sensitive option checked."
     ],
     "answer": "In a terraform.tfvars file, securely managed and shared with your team.",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "273"
   },
   {
@@ -3417,7 +3417,7 @@
       "Refreshes your state, then compares your state file to your Terraform configuration and creates an execution plan if any changes need to be made."
     ],
     "answer": "Imports all of your existing cloud provider resources to the state.",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "274"
   },
   {
@@ -3430,7 +3430,7 @@
       "Destroys all infrastructure in the configured Terraform provider."
     ],
     "answer": "Destroys the Terraform state file, leaves the infrastructure intact.",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "275"
   },
   {
@@ -3441,7 +3441,7 @@
       "False"
     ],
     "answer": "True",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "276"
   },
   {
@@ -3454,7 +3454,7 @@
       "servers = var.num_servers"
     ],
     "answer": "${var.num.servers}",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "277"
   },
   {
@@ -3467,7 +3467,7 @@
       "State file"
     ],
     "answer": "Provider plugins",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "278"
   },
   {
@@ -3480,7 +3480,7 @@
       "Write a shell script to transform Terraform files using tools such as AWK, Python, and sed"
     ],
     "answer": "Run the terraform fmt command during the code linting phase of your CI/CD process",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "279"
   },
   {
@@ -3493,7 +3493,7 @@
       "After you run terraform plan, so you can validate that your state file is consistent with your infrastructure."
     ],
     "answer": "Before you run terraform apply, so you can validate your provider credentials.",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "280"
   },
   {
@@ -3506,7 +3506,7 @@
       "A Git repository containing your modules."
     ],
     "answer": "Public Terraform module registry.",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "281"
   },
   {
@@ -3519,7 +3519,7 @@
       "Configure it in the module’s Terraform code."
     ],
     "answer": "Terraform Registry does not support versioning modules.",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "282"
   },
   {
@@ -3533,7 +3533,7 @@
       "Enforce security and compliance policies."
     ],
     "answer": "Interact with cloud provider APIs.",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "283"
   },
   {
@@ -3547,7 +3547,7 @@
       "All of these"
     ],
     "answer": "terraform init",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "284"
   },
   {
@@ -3560,7 +3560,7 @@
       "discouraged"
     ],
     "answer": "mandatory",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "285"
   },
   {
@@ -3571,7 +3571,7 @@
       "False"
     ],
     "answer": "True",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "286"
   },
   {
@@ -3584,7 +3584,7 @@
       "Your cloud infrastructure."
     ],
     "answer": "Your Terraform configuration.",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "287"
   },
   {
@@ -3597,7 +3597,7 @@
       "Private repository on GitHub."
     ],
     "answer": "Public repository on GitHub.",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "288"
   },
   {
@@ -3610,7 +3610,7 @@
       "The ability to share modules publicly with any user of Terraform"
     ],
     "answer": "The ability to share modules with public Terraform users and members of Terraform Enterprise Organizations",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "289"
   },
   {
@@ -3623,7 +3623,7 @@
       "Validates all required variables are present"
     ],
     "answer": "Sources all providers present in the configuration and ensures they are downloaded and available locally",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "290"
   },
   {
@@ -3636,7 +3636,7 @@
       "[ for o in var.list : o.id ]"
     ],
     "answer": "{ for o in var.list : o => o.id }",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "291"
   },
   {
@@ -3650,7 +3650,7 @@
       "None of the above"
     ],
     "answer": "type",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "292"
   },
   {
@@ -3663,7 +3663,7 @@
       "Write a Terraform configuration, run terraform init, run terraform plan to view planned infrastructure changes, and terraform apply to create new infrastructure."
     ],
     "answer": "terraform plan to import the current infrastructure to the state file, make code changes, and terraform apply to update the infrastructure.",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "293"
   },
   {
@@ -3676,7 +3676,7 @@
       "Nothing ג€\" modules stored on the public Terraform Module Registry always default to version 1.0.0"
     ],
     "answer": "Modules stored on the public Terraform Module Registry do not support versioning",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "294"
   },
   {
@@ -3689,7 +3689,7 @@
       "A web-based user interface (UI)"
     ],
     "answer": "Automated infrastructure deployment visualization",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "295"
   },
   {
@@ -3702,7 +3702,7 @@
       "In the user's terraform.state file"
     ],
     "answer": "In the /tmp directory",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "296"
   },
   {
@@ -3715,7 +3715,7 @@
       "secure string"
     ],
     "answer": "A Terraform provider",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "297"
   },
   {
@@ -3728,7 +3728,7 @@
       "Terraform will run more slowly"
     ],
     "answer": "They cannot be used to loop through a list of values",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "298"
   },
   {
@@ -3739,7 +3739,7 @@
       "False"
     ],
     "answer": "True",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "299"
   },
   {
@@ -3752,7 +3752,7 @@
       "aws_ami.ubuntu.id ExamPrepper"
     ],
     "answer": "aws_ami.ubuntu",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "300"
   },
   {
@@ -3760,7 +3760,7 @@
     "question": "FILL BLANK - You need to specify a dependency manually. What resource meta-parameter can you use to make sure Terraform respects the dependency? Type your answer in the field provided. The text field is not case-sensitive and all variations of the correct answer are accepted.",
     "options": [],
     "answer": "Unknown",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "301"
   },
   {
@@ -3773,7 +3773,7 @@
       "Delete the VM using the cloud provider console and terraform apply to apply the changes to the Terraform state file."
     ],
     "answer": "The Terraform state file contains all 16 VMs in the team account. Execute terraform destroy and select the newly-created VM.",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "302"
   },
   {
@@ -3786,7 +3786,7 @@
       "test"
     ],
     "answer": "dev",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "303"
   },
   {
@@ -3797,7 +3797,7 @@
       "False"
     ],
     "answer": "True",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "304"
   },
   {
@@ -3808,7 +3808,7 @@
       "False ExamPrepper"
     ],
     "answer": "True",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "305"
   },
   {
@@ -3821,7 +3821,7 @@
       "The datasource block"
     ],
     "answer": "The terraform block",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "306"
   },
   {
@@ -3832,7 +3832,7 @@
       "False"
     ],
     "answer": "True",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "307"
   },
   {
@@ -3845,7 +3845,7 @@
       "terraform show workspace"
     ],
     "answer": "terraform workspace",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "308"
   },
   {
@@ -3856,7 +3856,7 @@
       "False"
     ],
     "answer": "True",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "309"
   },
   {
@@ -3869,7 +3869,7 @@
       "Signed Terraform providers"
     ],
     "answer": "Blockchain",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "310"
   },
   {
@@ -3883,7 +3883,7 @@
       "None of the above"
     ],
     "answer": "Immediately",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "311"
   },
   {
@@ -3897,7 +3897,7 @@
       "aws_instance.web.*.name"
     ],
     "answer": "element(aws_instance.web, 2)",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "312"
   },
   {
@@ -3910,7 +3910,7 @@
       "Managing actions to take based on resource differences"
     ],
     "answer": "Understanding API interactions with some service",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "313"
   },
   {
@@ -3921,7 +3921,7 @@
       "False"
     ],
     "answer": "True",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "314"
   },
   {
@@ -3934,7 +3934,7 @@
       "terraform plan -target=null_resource.run_script"
     ],
     "answer": "terraform taint null_resource.run_script",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "315"
   },
   {
@@ -3947,7 +3947,7 @@
       "Corrupt state files"
     ],
     "answer": "Terraform configuration code changes",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "316"
   },
   {
@@ -3955,7 +3955,7 @@
     "question": "FILL BLANK - Which flag would you add to terraform plan to save the execution plan to a file? Type your answer in the field provided. The text field is not case-sensitive and all variations of the correct answer are accepted.",
     "options": [],
     "answer": "Unknown",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "317"
   },
   {
@@ -3963,7 +3963,7 @@
     "question": "FILL BLANK - What is the name of the default file where Terraform stores the state? Type your answer in the field provided. The text field is not case-sensitive and all variations of the correct answer are accepted.",
     "options": [],
     "answer": "Unknown",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "318"
   },
   {
@@ -3974,7 +3974,7 @@
       "False"
     ],
     "answer": "True",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "319"
   },
   {
@@ -3987,7 +3987,7 @@
       "set"
     ],
     "answer": "list",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "320"
   },
   {
@@ -3998,7 +3998,7 @@
       "False"
     ],
     "answer": "True",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "321"
   },
   {
@@ -4009,7 +4009,7 @@
       "False"
     ],
     "answer": "True",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "322"
   },
   {
@@ -4022,7 +4022,7 @@
       "Reconciles Terraform's state against deployed resources and permanently modifies state using the current status of deployed resources"
     ],
     "answer": "Validates your expectations against the execution plan without permanently modifying state",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "323"
   },
   {
@@ -4035,7 +4035,7 @@
       "terraform init"
     ],
     "answer": "terraform import",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "324"
   },
   {
@@ -4048,7 +4048,7 @@
       "teat"
     ],
     "answer": "compute_instance",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "325"
   },
   {
@@ -4061,7 +4061,7 @@
       "file"
     ],
     "answer": "remote-exec",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "326"
   },
   {
@@ -4074,7 +4074,7 @@
       "Store the sensitive variables as plain text in a source code repository"
     ],
     "answer": "Pass variables to Terraform with a ג€\"var flag",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "327"
   },
   {
@@ -4087,7 +4087,7 @@
       "Always store your secrets in a secrets.tfvars file."
     ],
     "answer": "Delete the state file every time you run Terraform",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "328"
   },
   {
@@ -4098,7 +4098,7 @@
       "False"
     ],
     "answer": "True",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "329"
   },
   {
@@ -4111,7 +4111,7 @@
       "Set the environment variable TF_LOG_PATH"
     ],
     "answer": "Set the environment variable TF_LOG=TRACE",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "330"
   },
   {
@@ -4125,7 +4125,7 @@
       "All of the above"
     ],
     "answer": "As a part of terraform init",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "331"
   },
   {
@@ -4138,7 +4138,7 @@
       "Terraform will recreate the VM"
     ],
     "answer": "Terraform will remove the VM from state file",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "332"
   },
   {
@@ -4151,7 +4151,7 @@
       "None of above"
     ],
     "answer": "Defined in Environment variables",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "333"
   },
   {
@@ -4164,7 +4164,7 @@
       "Terraform Cloud"
     ],
     "answer": "Amazon S3",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "334"
   },
   {
@@ -4177,7 +4177,7 @@
       "Local"
     ],
     "answer": "Terraform Cloud",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "335"
   },
   {
@@ -4190,7 +4190,7 @@
       "They are not cached"
     ],
     "answer": "On disk in the /tmp directory",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "336"
   },
   {
@@ -4204,7 +4204,7 @@
       "None of the above"
     ],
     "answer": "Providers can be written by individuals",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "337"
   },
   {
@@ -4217,7 +4217,7 @@
       "Terraform requires you to manually run terraform plan first"
     ],
     "answer": "Terraform needs you to format your code according to best practices first",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "338"
   },
   {
@@ -4230,7 +4230,7 @@
       "State locking"
     ],
     "answer": "Version control",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "339"
   },
   {
@@ -4243,7 +4243,7 @@
       "terraform delete aws_instance.ubuntu[1]"
     ],
     "answer": "terraform apply rm aws_instance.ubuntu[1]",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "340"
   },
   {
@@ -4254,7 +4254,7 @@
       "False"
     ],
     "answer": "True",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "341"
   },
   {
@@ -4267,7 +4267,7 @@
       "import"
     ],
     "answer": "change",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "342"
   },
   {
@@ -4280,7 +4280,7 @@
       "version = ג€>= 2.1ג€"
     ],
     "answer": "version >= 2.1",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "343"
   },
   {
@@ -4293,7 +4293,7 @@
       "Inspect all Terraform outputs to make sure they are correct"
     ],
     "answer": "Run an apply and confirm the planned changes",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "344"
   },
   {
@@ -4306,7 +4306,7 @@
       "ssh"
     ],
     "answer": "connection",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "345"
   },
   {
@@ -4319,7 +4319,7 @@
       "None of the above"
     ],
     "answer": "Code contains tabs indentation instead of spaces",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "346"
   },
   {
@@ -4332,7 +4332,7 @@
       "version"
     ],
     "answer": "count",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "347"
   },
   {
@@ -4345,7 +4345,7 @@
       "terraform workspace"
     ],
     "answer": "terraform import",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "348"
   },
   {
@@ -4358,7 +4358,7 @@
       "dynamic"
     ],
     "answer": "for_each",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "349"
   },
   {
@@ -4369,7 +4369,7 @@
       "False"
     ],
     "answer": "True",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "350"
   },
   {
@@ -4382,7 +4382,7 @@
       "With two spaces"
     ],
     "answer": "With four spaces",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "351"
   },
   {
@@ -4395,7 +4395,7 @@
       "Load required provider plugins"
     ],
     "answer": "Create a sample main.tf file",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "352"
   },
   {
@@ -4406,7 +4406,7 @@
       "False"
     ],
     "answer": "True",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "353"
   },
   {
@@ -4419,7 +4419,7 @@
       "Only Terraform Cloud organization owners can approve plans in VCS connected workspaces"
     ],
     "answer": "Only Terraform Cloud organization owners can set workspace variables on VCS connected workspaces",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "354"
   },
   {
@@ -4430,7 +4430,7 @@
       "False"
     ],
     "answer": "True",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "355"
   },
   {
@@ -4443,7 +4443,7 @@
       "The programmatic configuration of resources"
     ],
     "answer": "An abstraction from vendor specific APIs",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "356"
   },
   {
@@ -4456,7 +4456,7 @@
       "When a change is made to the resources via the Azure Cloud Console, the changes are recorded in the current state file"
     ],
     "answer": "When a change is made to the resources via the Azure Cloud Console, the changes are recorded in a new state file",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "357"
   },
   {
@@ -4469,7 +4469,7 @@
       "alias = aws.west"
     ],
     "answer": "alias = west",
-    "explanation": "Explanation coming soon.",
+    "explanation": "Explicación próximamente.",
     "id": "358"
   }
 ]
