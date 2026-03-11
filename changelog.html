@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historial de Cambios - Certification Hub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#fff7ed',
+                            100: '#ffedd5',
+                            500: '#f97316',
+                            600: '#ea580c',
+                            900: '#7c2d12',
+                        },
+                        dark: {
+                            bg: '#0f172a',
+                            card: '#1e293b',
+                            border: '#334155',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        
+        .timeline-line {
+            position: absolute;
+            left: 24px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: #e2e8f0;
+            z-index: 0;
+        }
+        .dark .timeline-line {
+            background-color: #334155;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 dark:bg-dark-bg min-h-screen text-slate-900 dark:text-white transition-colors duration-300 font-sans">
+
+    <!-- Header -->
+    <header class="bg-white dark:bg-dark-card border-b border-slate-200 dark:border-slate-800 sticky top-0 z-50 shadow-sm backdrop-blur-md bg-white/90 dark:bg-dark-card/90">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <a href="./index.html" class="p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors text-slate-500 dark:text-slate-400">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </a>
+                <h1 class="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-brand-600 to-amber-500">
+                    Historial de Cambios
+                </h1>
+            </div>
+            <div class="flex items-center gap-2">
+                <span class="text-sm font-medium px-3 py-1 bg-green-100 text-green-700 rounded-full dark:bg-green-900/30 dark:text-green-400">v1.2.0</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        
+        <div class="relative space-y-12">
+            <div class="timeline-line"></div>
+
+            <!-- Version 1.2.0 -->
+            <div class="relative z-10 pl-16">
+                <div class="absolute left-0 top-1 w-12 h-12 rounded-full bg-brand-100 dark:bg-brand-900/20 text-brand-600 dark:text-brand-400 flex items-center justify-center border-4 border-white dark:border-dark-bg shadow-sm">
+                    <i class="fa-solid fa-globe text-xl"></i>
+                </div>
+                <div class="bg-white dark:bg-dark-card rounded-2xl p-6 border border-slate-200 dark:border-slate-700 shadow-sm">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-4 gap-2">
+                        <h2 class="text-2xl font-bold">Internacionalización y Mejoras Core</h2>
+                        <span class="text-sm text-slate-500 dark:text-slate-400 bg-slate-100 dark:bg-slate-800 px-3 py-1 rounded-full">11 de Marzo, 2026</span>
+                    </div>
+                    <ul class="space-y-3 text-slate-600 dark:text-slate-300">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-check mt-1.5 text-green-500"></i>
+                            <span><strong>Soporte Multi-idioma:</strong> Selector de idioma (Español/Inglés) en el dashboard y traducción completa de la interfaz de exámenes.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-check mt-1.5 text-green-500"></i>
+                            <span><strong>Refactorización Modular:</strong> Código base reestructurado en módulos ES6 para mejor mantenimiento.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-check mt-1.5 text-green-500"></i>
+                            <span><strong>Modo Examen vs Práctica:</strong> Diferenciación clara con temporizador, revisión final y feedback inmediato (práctica).</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Version 1.1.0 -->
+            <div class="relative z-10 pl-16">
+                <div class="absolute left-0 top-1 w-12 h-12 rounded-full bg-blue-100 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400 flex items-center justify-center border-4 border-white dark:border-dark-bg shadow-sm">
+                    <i class="fa-solid fa-layer-group text-xl"></i>
+                </div>
+                <div class="bg-white dark:bg-dark-card rounded-2xl p-6 border border-slate-200 dark:border-slate-700 shadow-sm">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-4 gap-2">
+                        <h2 class="text-2xl font-bold">Expansión de Certificaciones</h2>
+                        <span class="text-sm text-slate-500 dark:text-slate-400 bg-slate-100 dark:bg-slate-800 px-3 py-1 rounded-full">Febrero 2026</span>
+                    </div>
+                    <ul class="space-y-3 text-slate-600 dark:text-slate-300">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-check mt-1.5 text-green-500"></i>
+                            <span>Nuevas preguntas para <strong>AZ-104</strong> (Azure Administrator).</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-check mt-1.5 text-green-500"></i>
+                            <span>Corrección de la responsividad en menús desplegables y actualización de datos de preguntas.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-check mt-1.5 text-green-500"></i>
+                            <span><strong>Nuevos Exámenes:</strong> Agregados bancos de preguntas para AWS AI Practitioner, DP-900 (Azure Data) y AI-900 (Azure AI).</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Version 1.0.5 -->
+            <div class="relative z-10 pl-16">
+                <div class="absolute left-0 top-1 w-12 h-12 rounded-full bg-purple-100 dark:bg-purple-900/20 text-purple-600 dark:text-purple-400 flex items-center justify-center border-4 border-white dark:border-dark-bg shadow-sm">
+                    <i class="fa-solid fa-book-open text-xl"></i>
+                </div>
+                <div class="bg-white dark:bg-dark-card rounded-2xl p-6 border border-slate-200 dark:border-slate-700 shadow-sm">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-4 gap-2">
+                        <h2 class="text-2xl font-bold">Planes de Estudio</h2>
+                        <span class="text-sm text-slate-500 dark:text-slate-400 bg-slate-100 dark:bg-slate-800 px-3 py-1 rounded-full">6 de Febrero, 2026</span>
+                    </div>
+                    <ul class="space-y-3 text-slate-600 dark:text-slate-300">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-check mt-1.5 text-green-500"></i>
+                            <span>Integración del plan de estudios y documentación de <strong>Ka0s Training</strong>.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-check mt-1.5 text-green-500"></i>
+                            <span>Mejoras en el flujo de inicio de sesión con soporte de redirección.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Version 1.0.3 -->
+            <div class="relative z-10 pl-16">
+                <div class="absolute left-0 top-1 w-12 h-12 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 flex items-center justify-center border-4 border-white dark:border-dark-bg shadow-sm">
+                    <i class="fa-solid fa-wrench text-xl"></i>
+                </div>
+                <div class="bg-white dark:bg-dark-card rounded-2xl p-6 border border-slate-200 dark:border-slate-700 shadow-sm">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-4 gap-2">
+                        <h2 class="text-2xl font-bold">Mejoras de Infraestructura</h2>
+                        <span class="text-sm text-slate-500 dark:text-slate-400 bg-slate-100 dark:bg-slate-800 px-3 py-1 rounded-full">Enero 2026</span>
+                    </div>
+                    <ul class="space-y-3 text-slate-600 dark:text-slate-300">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-check mt-1.5 text-green-500"></i>
+                            <span>Actualización de dependencias y limpieza de archivos de prueba.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-check mt-1.5 text-green-500"></i>
+                            <span>Refactorización del encabezado para eliminar logos obsoletos.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Version 1.0.4 -->
+            <div class="relative z-10 pl-16">
+                <div class="absolute left-0 top-1 w-12 h-12 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 flex items-center justify-center border-4 border-white dark:border-dark-bg shadow-sm">
+                    <i class="fa-solid fa-moon text-xl"></i>
+                </div>
+                <div class="bg-white dark:bg-dark-card rounded-2xl p-6 border border-slate-200 dark:border-slate-700 shadow-sm">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-4 gap-2">
+                        <h2 class="text-2xl font-bold">Modo Oscuro y UX</h2>
+                        <span class="text-sm text-slate-500 dark:text-slate-400 bg-slate-100 dark:bg-slate-800 px-3 py-1 rounded-full">Diciembre 2025</span>
+                    </div>
+                    <ul class="space-y-3 text-slate-600 dark:text-slate-300">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-check mt-1.5 text-green-500"></i>
+                            <span>Implementación completa del <strong>Modo Oscuro</strong> en todas las páginas.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-check mt-1.5 text-green-500"></i>
+                            <span>Mejora del diseño responsive en cuestionarios y botones.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-check mt-1.5 text-green-500"></i>
+                            <span>Añadidas 40 nuevas preguntas tipo "dropdown" para Google Cloud Digital Leader.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Version 1.0.0 -->
+            <div class="relative z-10 pl-16">
+                <div class="absolute left-0 top-1 w-12 h-12 rounded-full bg-green-100 dark:bg-green-900/20 text-green-600 dark:text-green-400 flex items-center justify-center border-4 border-white dark:border-dark-bg shadow-sm">
+                    <i class="fa-solid fa-flag-checkered text-xl"></i>
+                </div>
+                <div class="bg-white dark:bg-dark-card rounded-2xl p-6 border border-slate-200 dark:border-slate-700 shadow-sm opacity-75 hover:opacity-100 transition-opacity">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-4 gap-2">
+                        <h2 class="text-2xl font-bold">Lanzamiento Inicial</h2>
+                        <span class="text-sm text-slate-500 dark:text-slate-400 bg-slate-100 dark:bg-slate-800 px-3 py-1 rounded-full">Noviembre 2025</span>
+                    </div>
+                    <ul class="space-y-3 text-slate-600 dark:text-slate-300">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-check mt-1.5 text-green-500"></i>
+                            <span>Soporte para preguntas de selección múltiple.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-check mt-1.5 text-green-500"></i>
+                            <span>Creación de la estructura base del proyecto y material de AWS Cloud Practitioner.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="bg-white dark:bg-dark-card border-t border-slate-200 dark:border-slate-800 py-8 mt-12">
+        <div class="max-w-7xl mx-auto px-4 text-center text-slate-500 text-sm">
+            <p>&copy; 2026 Certification Hub. Aprendizaje de Código Abierto.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Check dark mode preference
+        if (localStorage.getItem('theme:dark') === '1' || (!('theme:dark' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+    </script>
+</body>
+</html>

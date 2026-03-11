@@ -63,9 +63,15 @@
                         <i class="fa-solid fa-graduation-cap"></i>
                     </div>
                     <span class="font-bold text-xl tracking-tight">CertHub</span>
+                    <a href="./changelog.html" class="ml-4 text-xs font-medium px-2 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 hover:text-brand-600 dark:hover:text-brand-400 transition-colors">
+                        v1.2.0
+                    </a>
                 </div>
                 
                 <div class="flex items-center gap-4">
+                    <button id="langToggle" class="p-2 rounded-lg text-slate-500 hover:bg-slate-100 dark:text-slate-400 dark:hover:bg-slate-800 transition-colors font-medium text-sm flex items-center gap-1">
+                        <i class="fa-solid fa-globe"></i> <span>EN</span>
+                    </button>
                     <button id="themeToggle" class="p-2 rounded-lg text-slate-500 hover:bg-slate-100 dark:text-slate-400 dark:hover:bg-slate-800 transition-colors">
                         <i class="fa-solid fa-moon dark:hidden"></i>
                         <i class="fa-solid fa-sun hidden dark:block"></i>
@@ -146,6 +152,41 @@
     </div>
 
     <script>
+        // Language Logic
+        let currentLang = localStorage.getItem('lang') || 'en';
+        const langToggle = document.getElementById('langToggle');
+        
+        function updateLangUI() {
+            const span = langToggle.querySelector('span');
+            span.textContent = currentLang.toUpperCase();
+            document.documentElement.lang = currentLang;
+            
+            // Update text content
+            document.querySelector('h1').textContent = currentLang === 'es' ? 'Explora Certificaciones' : 'Explore Certifications';
+            document.querySelector('p.text-lg').textContent = currentLang === 'es' ? 'Exámenes de práctica y guías de estudio para ayudarte a triunfar.' : 'Practice exams and study guides to help you succeed.';
+            document.querySelector('#searchInput').placeholder = currentLang === 'es' ? 'Buscar...' : 'Search...';
+            document.querySelector('.filter-btn[data-filter="all"]').textContent = currentLang === 'es' ? 'Todos' : 'All';
+            
+            // Update section titles
+            const certsHeader = document.querySelector('#certsSection h2');
+            if(certsHeader) certsHeader.innerHTML = `<i class="fa-solid fa-certificate text-brand-500"></i> ${currentLang === 'es' ? 'Certificaciones' : 'Certifications'}`;
+            
+            const plansHeader = document.querySelector('#plansSection h2');
+            if(plansHeader) plansHeader.innerHTML = `<i class="fa-solid fa-book-open text-purple-500"></i> ${currentLang === 'es' ? 'Planes de Estudio' : 'Study Plans'}`;
+            
+            // Footer
+            document.querySelector('footer p').innerHTML = `&copy; 2024 Certification Hub. ${currentLang === 'es' ? 'Aprendizaje de Código Abierto.' : 'Open Source Learning.'}`;
+            
+            // Re-render cards to update their internal text
+            if(window.renderCards) window.renderCards();
+        }
+
+        langToggle.addEventListener('click', () => {
+            currentLang = currentLang === 'en' ? 'es' : 'en';
+            localStorage.setItem('lang', currentLang);
+            updateLangUI();
+        });
+
         // Theme Toggle Logic
         const toggleBtn = document.getElementById('themeToggle');
         toggleBtn.addEventListener('click', () => {
@@ -197,6 +238,10 @@
                 const ap = /^https?:\/\//i.test(exam.apuntes) ? exam.apuntes : `../${exam.apuntes}`;
                 baseUrl.searchParams.set('apuntes', ap);
             }
+            
+            // Pass language param
+            baseUrl.searchParams.set('lang', currentLang);
+            
             const examenUrl = new URL(baseUrl.href); examenUrl.searchParams.set('mode', 'examen');
             const practicaUrl = new URL(baseUrl.href); practicaUrl.searchParams.set('mode', 'practica');
             const apuntesUrl = exam.apuntes || '#';
@@ -211,8 +256,8 @@
                         <i class="fa-brands ${style.icon} fa-fw"></i>
                     </div>
                     ${isStudyPlan ? 
-                        `<span class="px-3 py-1 rounded-full text-xs font-semibold bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-300">Study Plan</span>` :
-                        `<span class="px-3 py-1 rounded-full text-xs font-semibold bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300">Certification</span>`
+                        `<span class="px-3 py-1 rounded-full text-xs font-semibold bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-300">${currentLang === 'es' ? 'Plan de Estudio' : 'Study Plan'}</span>` :
+                        `<span class="px-3 py-1 rounded-full text-xs font-semibold bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300">${currentLang === 'es' ? 'Certificación' : 'Certification'}</span>`
                     }
                 </div>
             `;
@@ -231,7 +276,7 @@
                 actionsHtml = `
                     <div class="relative z-10 mt-auto pt-4 border-t border-slate-100 dark:border-slate-800">
                         <a href="${apuntesUrl}" class="flex items-center justify-between w-full px-4 py-2.5 rounded-xl bg-slate-900 text-white hover:bg-slate-800 dark:bg-white dark:text-slate-900 dark:hover:bg-slate-100 font-medium transition-all group-hover:shadow-md">
-                            <span>Open Guide</span>
+                            <span>${currentLang === 'es' ? 'Abrir Guía' : 'Open Guide'}</span>
                             <i class="fa-solid fa-arrow-right text-sm opacity-50 group-hover:translate-x-1 transition-transform"></i>
                         </a>
                     </div>
@@ -240,15 +285,15 @@
                 actionsHtml = `
                     <div class="grid grid-cols-2 gap-3 relative z-10 mt-auto pt-4 border-t border-slate-100 dark:border-slate-800">
                         <a href="${practicaUrl.href}" class="flex items-center justify-center gap-2 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-700 font-medium transition-colors text-sm">
-                            <i class="fa-regular fa-compass"></i> Practice
+                            <i class="fa-regular fa-compass"></i> ${currentLang === 'es' ? 'Práctica' : 'Practice'}
                         </a>
                         <a href="${examenUrl.href}" class="flex items-center justify-center gap-2 py-2.5 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-medium transition-colors shadow-sm shadow-brand-500/20 text-sm">
-                            <i class="fa-solid fa-play"></i> Exam
+                            <i class="fa-solid fa-play"></i> ${currentLang === 'es' ? 'Examen' : 'Exam'}
                         </a>
                     </div>
                     ${exam.apuntes ? `
                     <div class="mt-3 text-center">
-                        <a href="${apuntesUrl}" class="text-xs text-slate-500 hover:text-brand-600 transition-colors">View Study Materials</a>
+                        <a href="${apuntesUrl}" class="text-xs text-slate-500 hover:text-brand-600 transition-colors">${currentLang === 'es' ? 'Ver Material de Estudio' : 'View Study Materials'}</a>
                     </div>` : ''}
                 `;
             }
@@ -267,6 +312,11 @@
             const filterBtns = document.querySelectorAll('.filter-btn');
             
             const allItems = await loadExams();
+            
+            // Expose render function for language toggle
+            window.renderCards = function() {
+                 render(document.querySelector('.filter-btn.active').dataset.filter, searchInput.value);
+            };
             
             function render(filterType = 'all', query = '') {
                 examGrid.innerHTML = '';
@@ -309,8 +359,8 @@
                             <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-400 mb-4">
                                 <i class="fa-solid fa-inbox text-2xl"></i>
                             </div>
-                            <h3 class="text-lg font-medium text-slate-900 dark:text-white">No results found</h3>
-                            <p class="text-slate-500">Try adjusting your search or filters.</p>
+                            <h3 class="text-lg font-medium text-slate-900 dark:text-white">${currentLang === 'es' ? 'Sin resultados' : 'No results found'}</h3>
+                            <p class="text-slate-500">${currentLang === 'es' ? 'Intenta ajustar tu búsqueda o filtros.' : 'Try adjusting your search or filters.'}</p>
                         </div>
                     `;
                 }
@@ -336,7 +386,7 @@
             });
 
             // Initial render
-            render();
+            updateLangUI(); // This calls renderCards() internally
         })();
     </script>
 </body>

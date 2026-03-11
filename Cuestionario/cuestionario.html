@@ -71,6 +71,11 @@
             border-color: #0ea5e9 !important;
         }
     </style>
+    <script>
+        // Apply Language
+        const lang = localStorage.getItem('lang') || 'en';
+        document.documentElement.lang = lang;
+    </script>
 </head>
 <body class="h-full bg-slate-50 text-slate-900 dark:bg-dark-bg dark:text-slate-100 transition-colors duration-200 flex flex-col">
 
@@ -181,17 +186,6 @@
 
     </main>
 
-    <!-- App Logic -->
-    <script src="../app.js"></script>
-    <script>
-        // Override UI helper functions in app.js context if needed
-        // Since app.js is generic, we just ensure CSS classes match what app.js expects or we update app.js to use these new classes.
-        // Actually, I should update app.js to use generic utility classes or just specific IDs. 
-        // The previous app.js edit added specific Tailwind classes. I should make sure those classes work or update app.js again.
-        // Let's check app.js...
-        // app.js uses 'option-btn' class. I defined it in <style> here but also added specific Tailwind classes in JS.
-        // I will need to update app.js to be cleaner and use the classes defined in <style> or consistently use the new design system.
-        // Re-writing app.js is safer to ensure visual consistency.
-    </script>
+    <script type="module" src="../app.js"></script>
 </body>
 </html>
