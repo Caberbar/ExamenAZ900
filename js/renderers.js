@@ -1,7 +1,7 @@
 
 // UI Renderers
 import { els, state } from './state.js';
-import { processText, linkify, getAutoExplanation, formatUserAnswer, formatCorrectAnswer, createButton, shuffle } from './utils.js';
+import { processText, linkify, getAutoExplanation, formatUserAnswer, formatCorrectAnswer, createButton, shuffle, getParams } from './utils.js';
 import { handleAnswer, updateStatus, showFinal } from './quiz.js';
 
 export function clearOptions() {

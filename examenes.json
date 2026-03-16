@@ -56,6 +56,13 @@
     "apuntes": "Apuntes/apuntesAWSAI.html"
   },
   {
+    "name": "AZ-104",
+    "title": "Microsoft Azure Administrator",
+    "desc": "Manage Azure identities and governance, implement and manage storage, deploy and manage Azure compute resources.",
+    "pregunta": "Preguntas/preguntasAZ104.json",
+    "apuntes": "https://learn.microsoft.com/en-us/credentials/certifications/azure-administrator/"
+  },
+  {
     "name": "Ka0s Training",
     "title": "Plan de Formación Ka0s",
     "desc": "Onboarding técnico: arquitectura, automatización y cultura operativa.",

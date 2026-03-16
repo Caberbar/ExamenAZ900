@@ -40,7 +40,15 @@ export function normalizeQuestion(q, lang = 'en') {
         // Optionally localize options if supported in data structure
     } else {
         if (n.question_en) n.question = n.question_en;
-        if (n.explanation_en) n.explanation = n.explanation_en;
+        
+        // Only use explanation_en if it is valid and not the placeholder
+        const placeholder = "Explanation available in Spanish";
+        if (n.explanation_en && !n.explanation_en.includes(placeholder)) {
+             n.explanation = n.explanation_en;
+        } else if (n.explanation_es) {
+             // Fallback to Spanish if English is missing or placeholder
+             n.explanation = `(ES) ${n.explanation_es}`;
+        }
     }
 
     return n;

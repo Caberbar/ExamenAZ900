@@ -10,8 +10,8 @@
       "Modify the settings of the virtual machines."
     ],
     "image": null,
-    "answer": null,
-    "explanation": null
+    "answer": "Assign tags to the virtual machines.",
+    "explanation": "Correct answer: Assign tags to the virtual machines."
   },
   {
     "id": "2",
@@ -22,8 +22,8 @@
       "No"
     ],
     "image": null,
-    "answer": null,
-    "explanation": null
+    "answer": "No",
+    "explanation": "Correct answer: No"
   },
   {
     "id": "3",
@@ -34,8 +34,8 @@
       "No"
     ],
     "image": null,
-    "answer": null,
-    "explanation": null
+    "answer": "No",
+    "explanation": "Correct answer: No"
   },
   {
     "id": "4",
@@ -48,8 +48,8 @@
       "Locally redundant storage"
     ],
     "image": null,
-    "answer": null,
-    "explanation": null
+    "answer": "Read-only geo-redundant storage",
+    "explanation": "Correct answer: Read-only geo-redundant storage"
   },
   {
     "id": "5",
@@ -279,8 +279,8 @@
       "No"
     ],
     "image": null,
-    "answer": null,
-    "explanation": null
+    "answer": "No",
+    "explanation": "Correct answer: No"
   },
   {
     "id": "23",
@@ -291,8 +291,8 @@
       "No"
     ],
     "image": null,
-    "answer": null,
-    "explanation": null
+    "answer": "No",
+    "explanation": "Correct answer: No"
   },
   {
     "id": "24",
@@ -303,8 +303,8 @@
       "No"
     ],
     "image": null,
-    "answer": null,
-    "explanation": null
+    "answer": "Yes",
+    "explanation": "Correct answer: Yes"
   },
   {
     "id": "25",
@@ -318,8 +318,8 @@
       "Run the Set-AzureStaticVNetIP PowerShell cmdlet."
     ],
     "image": null,
-    "answer": null,
-    "explanation": null
+    "answer": "Modify the VM properties in the Azure Management Portal.",
+    "explanation": "Correct answer: Modify the VM properties in the Azure Management Portal."
   },
   {
     "id": "26",
@@ -332,8 +332,8 @@
       "40"
     ],
     "image": null,
-    "answer": null,
-    "explanation": null
+    "answer": "5",
+    "explanation": "Correct answer: 5"
   },
   {
     "id": "27",
@@ -346,8 +346,8 @@
       "1"
     ],
     "image": null,
-    "answer": null,
-    "explanation": null
+    "answer": "1",
+    "explanation": "Correct answer: 1"
   },
   {
     "id": "28",
@@ -360,8 +360,8 @@
       "You will not be able to recover the files."
     ],
     "image": null,
-    "answer": null,
-    "explanation": null
+    "answer": "You can recover the files to any VM within the company's subscription.",
+    "explanation": "Correct answer: You can recover the files to any VM within the company's subscription."
   },
   {
     "id": "29",
@@ -374,8 +374,8 @@
       "You should restore the VM to an on-premise Windows device."
     ],
     "image": null,
-    "answer": null,
-    "explanation": null
+    "answer": "You should restore the VM to a new Azure VM.",
+    "explanation": "Correct answer: You should restore the VM to a new Azure VM."
   },
   {
     "id": "30",
@@ -388,8 +388,8 @@
       "Azure Advisor"
     ],
     "image": null,
-    "answer": null,
-    "explanation": null
+    "answer": "Azure Monitor",
+    "explanation": "Correct answer: Azure Monitor"
   },
   {
     "id": "31",
@@ -403,8 +403,13 @@
       "VMs that have been shut down."
     ],
     "image": null,
-    "answer": null,
-    "explanation": null
+    "answer": [
+      "VMs that run Windows 10.",
+      "VMs that run Windows Server 2012 or higher.",
+      "VMs that have NOT been shut down.",
+      "VMs that have been shut down."
+    ],
+    "explanation": "Correct answer: VMs that run Windows 10., VMs that run Windows Server 2012 or higher., VMs that have NOT been shut down., VMs that have been shut down."
   },
   {
     "id": "32",
@@ -415,8 +420,8 @@
       "No"
     ],
     "image": null,
-    "answer": null,
-    "explanation": null
+    "answer": "No",
+    "explanation": "Correct answer: No"
   },
   {
     "id": "33",
@@ -427,8 +432,8 @@
       "No"
     ],
     "image": null,
-    "answer": null,
-    "explanation": null
+    "answer": "No",
+    "explanation": "Correct answer: No"
   },
   {
     "id": "34",
@@ -439,8 +444,8 @@
       "No"
     ],
     "image": null,
-    "answer": null,
-    "explanation": null
+    "answer": "Yes",
+    "explanation": "Correct answer: Yes"
   },
   {
     "id": "35",
@@ -451,8 +456,8 @@
       "No"
     ],
     "image": null,
-    "answer": null,
-    "explanation": null
+    "answer": "Yes",
+    "explanation": "Correct answer: Yes"
   },
   {
     "id": "36",
@@ -465,8 +470,8 @@
       "The az vm create command."
     ],
     "image": null,
-    "answer": null,
-    "explanation": null
+    "answer": "The az vm create command.",
+    "explanation": "Correct answer: The az vm create command."
   },
   {
     "id": "37",
@@ -477,8 +482,8 @@
       "No"
     ],
     "image": null,
-    "answer": null,
-    "explanation": null
+    "answer": "Yes",
+    "explanation": "Correct answer: Yes"
   },
   {
     "id": "38",
@@ -489,8 +494,8 @@
       "No"
     ],
     "image": null,
-    "answer": null,
-    "explanation": null
+    "answer": "No",
+    "explanation": "Correct answer: No"
   },
   {
     "id": "39",
@@ -501,8 +506,8 @@
       "No"
     ],
     "image": null,
-    "answer": null,
-    "explanation": null
+    "answer": "No",
+    "explanation": "Correct answer: No"
   },
   {
     "id": "40",
@@ -513,8 +518,8 @@
       "No"
     ],
     "image": null,
-    "answer": null,
-    "explanation": null
+    "answer": "Yes",
+    "explanation": "Correct answer: Yes"
   },
   {
     "id": "41",
@@ -527,8 +532,8 @@
       "a Recovery Services vault"
     ],
     "image": null,
-    "answer": null,
-    "explanation": null
+    "answer": "a Recovery Services vault",
+    "explanation": "Correct answer: a Recovery Services vault"
   },
   {
     "id": "42",
@@ -541,8 +546,8 @@
       "Generate a shared access signature (SAS). Map a drive, and then copy the files by using File Explorer."
     ],
     "image": null,
-    "answer": null,
-    "explanation": null
+    "answer": "Use Azure Storage Explorer to copy the files.",
+    "explanation": "Correct answer: Use Azure Storage Explorer to copy the files."
   },
   {
     "id": "43",
@@ -550,8 +555,8 @@
     "question": "HOTSPOT -\nYou need to identify the storage requirements for Contoso.\nFor each of the following statements, select Yes if the statement is true. Otherwise, select No.\nNOTE: Each correct selection is worth one point.\nHot Area:\nQuestion",
     "options": [],
     "image": "../test az-104 azure/image-2.png",
-    "answer": null,
-    "explanation": null,
+    "answer": "See explanation",
+    "explanation": "This question requires selecting options in a visual interface (Hotspot/Drag-Drop). Please refer to standard AZ-104 study materials for the visual solution.",
     "statements": []
   },
   {
@@ -560,8 +565,8 @@
     "question": "HOTSPOT -\nYou need to create container1 and share1.\nWhich storage accounts should you use for each resource? To answer, select the appropriate options in the answer area.\nNOTE: Each correct selection is worth one point.\nHot Area:\nQuestion",
     "options": [],
     "image": "../test az-104 azure/image-3.png",
-    "answer": null,
-    "explanation": null,
+    "answer": "See explanation",
+    "explanation": "This question requires selecting options in a visual interface (Hotspot/Drag-Drop). Please refer to standard AZ-104 study materials for the visual solution.",
     "statements": []
   },
   {
@@ -570,8 +575,8 @@
     "question": "HOTSPOT -\nYou need to create storage5. The solution must support the planned changes.\nWhich type of storage account should you use, and which account should you configure as the destination storage account? To answer, select the appropriate options in the answer area.\nNOTE: Each correct selection is worth one point.\nHot Area:\nQuestion",
     "options": [],
     "image": "../test az-104 azure/image-4.png",
-    "answer": null,
-    "explanation": null,
+    "answer": "See explanation",
+    "explanation": "This question requires selecting options in a visual interface (Hotspot/Drag-Drop). Please refer to standard AZ-104 study materials for the visual solution.",
     "statements": []
   },
   {
@@ -585,8 +590,8 @@
       "storage4"
     ],
     "image": null,
-    "answer": null,
-    "explanation": null
+    "answer": "storage1",
+    "explanation": "Correct answer: storage1"
   },
   {
     "id": "47",
@@ -600,8 +605,8 @@
       "IP flow verify in Azure Network Watcher"
     ],
     "image": null,
-    "answer": null,
-    "explanation": null
+    "answer": "IP flow verify in Azure Network Watcher",
+    "explanation": "Correct answer: IP flow verify in Azure Network Watcher"
   },
   {
     "id": "48",
@@ -614,8 +619,8 @@
       "Create a user-defined route from VNET1 to VNET3."
     ],
     "image": null,
-    "answer": null,
-    "explanation": null
+    "answer": "Establish peering between VNET1 and VNET3.",
+    "explanation": "Correct answer: Establish peering between VNET1 and VNET3."
   },
   {
     "id": "49",
@@ -623,8 +628,8 @@
     "question": "HOTSPOT -\nYou need to meet the connection requirements for the New York office.\nWhat should you do? To answer, select the appropriate options in the answer area.\nNOTE: Each correct selection is worth one point.\nHot Area:\nQuestion",
     "options": [],
     "image": "../test az-104 azure/image-5.png",
-    "answer": null,
-    "explanation": null,
+    "answer": "See explanation",
+    "explanation": "This question requires selecting options in a visual interface (Hotspot/Drag-Drop). Please refer to standard AZ-104 study materials for the visual solution.",
     "statements": []
   },
   {
@@ -633,8 +638,8 @@
     "question": "HOTSPOT -\nYou need to recommend a solution for App1. The solution must meet the technical requirements.\nWhat should you include in the recommendation? To answer, select the appropriate options in the answer area.\nNOTE: Each correct selection is worth one point.\nHot Area:\nQuestion",
     "options": [],
     "image": "../test az-104 azure/image-6.png",
-    "answer": null,
-    "explanation": null,
+    "answer": "See explanation",
+    "explanation": "This question requires selecting options in a visual interface (Hotspot/Drag-Drop). Please refer to standard AZ-104 study materials for the visual solution.",
     "statements": []
   },
   {
@@ -648,8 +653,8 @@
       "Create an outgoing security rule for port 443 from the Internet. Associate the NSG to all the subnets."
     ],
     "image": null,
-    "answer": null,
-    "explanation": null
+    "answer": "See explanation",
+    "explanation": "This question requires selecting options in a visual interface (Hotspot/Drag-Drop). Please refer to standard AZ-104 study materials for the visual solution."
   },
   {
     "id": "52",
@@ -657,8 +662,8 @@
     "question": "HOTSPOT -\nYou implement the planned changes for NSG1 and NSG2.\nFor each of the following statements, select Yes if the statement is true. Otherwise, select No.\nNOTE: Each correct selection is worth one point.\nHot Area:\nQuestion",
     "options": [],
     "image": "../test az-104 azure/image-7.png",
-    "answer": null,
-    "explanation": null,
+    "answer": "See explanation",
+    "explanation": "This question requires selecting options in a visual interface (Hotspot/Drag-Drop). Please refer to standard AZ-104 study materials for the visual solution.",
     "statements": []
   },
   {
@@ -672,8 +677,8 @@
       "Create a new NSG and associate the NSG to VNET1/Subnet1."
     ],
     "image": null,
-    "answer": null,
-    "explanation": null
+    "answer": "See explanation",
+    "explanation": "This question requires selecting options in a visual interface (Hotspot/Drag-Drop). Please refer to standard AZ-104 study materials for the visual solution."
   },
   {
     "id": "54",
@@ -686,8 +691,8 @@
       "Establish peering between VNET1 and VNET3."
     ],
     "image": null,
-    "answer": null,
-    "explanation": null
+    "answer": "See explanation",
+    "explanation": "This question requires selecting options in a visual interface (Hotspot/Drag-Drop). Please refer to standard AZ-104 study materials for the visual solution."
   },
   {
     "id": "55",
@@ -695,8 +700,8 @@
     "question": "HOTSPOT -\nYou need to implement Role1.\nWhich command should you run before you create Role1? To answer, select the appropriate options in the answer area.\nNOTE: Each correct selection is worth one point.\nHot Area:\nQuestion",
     "options": [],
     "image": "../test az-104 azure/image-8.png",
-    "answer": null,
-    "explanation": null,
+    "answer": "See explanation",
+    "explanation": "This question requires selecting options in a visual interface (Hotspot/Drag-Drop). Please refer to standard AZ-104 study materials for the visual solution.",
     "statements": []
   },
   {
@@ -710,8 +715,8 @@
       "an Azure logic app and the Microsoft Identity Management (MIM) client"
     ],
     "image": null,
-    "answer": null,
-    "explanation": null
+    "answer": "Yes",
+    "explanation": "Correct answer: Yes"
   },
   {
     "id": "57",
@@ -719,8 +724,8 @@
     "question": "HOTSPOT -\nYou have an Azure subscription named Subscription1 that contains a resource group named RG1.\nIn RG1, you create an internal load balancer named LB1 and a public load balancer named LB2.\nYou need to ensure that an administrator named Admin1 can manage LB1 and LB2. The solution must follow the principle of least privilege.\nWhich role should you assign to Admin1 for each task? To answer, select the appropriate options in the answer area.\nNOTE: Each correct selection is worth one point.\nHot Area:\nQuestion",
     "options": [],
     "image": "../test az-104 azure/image-9.png",
-    "answer": null,
-    "explanation": null,
+    "answer": "No",
+    "explanation": "Correct answer: No",
     "statements": []
   },
   {
@@ -733,8 +738,8 @@
       "From the Groups blade, invite the user account to a new group"
     ],
     "image": null,
-    "answer": null,
-    "explanation": null
+    "answer": "Yes",
+    "explanation": "Correct answer: Yes"
   },
   {
     "id": "59",
@@ -742,8 +747,8 @@
     "question": "HOTSPOT -\nYou have a Microsoft Entra tenant that contains the groups shown in the following table.\nQuestion\nThe tenant contains the users shown in the following table.\nQuestion\nWhich users and groups can you delete? To answer, select the appropriate options in the answer area.\nNOTE: Each correct selection is worth one point.\nQuestion",
     "options": [],
     "image": "../test az-104 azure/image-10.png",
-    "answer": null,
-    "explanation": null,
+    "answer": "No",
+    "explanation": "Correct answer: No",
     "statements": []
   },
   {
@@ -757,8 +762,8 @@
       "a shared access signature (SAS)"
     ],
     "image": "../test az-104 azure/image-13.png",
-    "answer": null,
-    "explanation": null
+    "answer": "Yes",
+    "explanation": "Correct answer: Yes"
   },
   {
     "id": "61",
@@ -766,8 +771,8 @@
     "question": "HOTSPOT\n-\nYou have a Microsoft Entra tenant that is linked to the subscriptions shown in the following table.\nQuestion\nYou have the resource groups shown in the following table.\nQuestion\nYou assign roles to users as shown in the following table.\nQuestion\nFor each of the following statements, select Yes if the statement is true. Otherwise, select No.\nNOTE: Each correct selection is worth one point.\nQuestion",
     "options": [],
     "image": "../test az-104 azure/image-14.png",
-    "answer": null,
-    "explanation": null,
+    "answer": "No",
+    "explanation": "Correct answer: No",
     "statements": []
   },
   {
@@ -781,8 +786,8 @@
       "Azure Virtual WAN"
     ],
     "image": "../test az-104 azure/image-18.png",
-    "answer": null,
-    "explanation": null
+    "answer": "Yes",
+    "explanation": "Correct answer: Yes"
   },
   {
     "id": "63",
@@ -797,8 +802,8 @@
       "Create a CSV file that contains user information and the appropriate attributes."
     ],
     "image": null,
-    "answer": null,
-    "explanation": null
+    "answer": "No",
+    "explanation": "Correct answer: No"
   },
   {
     "id": "64",
@@ -812,8 +817,8 @@
       "a Recovery Services vault"
     ],
     "image": null,
-    "answer": null,
-    "explanation": null
+    "answer": "Yes",
+    "explanation": "Correct answer: Yes"
   },
   {
     "id": "65",
@@ -827,8 +832,8 @@
       "User1, Group1, and Group2"
     ],
     "image": "../test az-104 azure/image-19.png",
-    "answer": null,
-    "explanation": null
+    "answer": "No",
+    "explanation": "Correct answer: No"
   },
   {
     "id": "66",
@@ -836,8 +841,8 @@
     "question": "DRAG DROP -\nYou have a Microsoft Entra tenant.\nYou need to ensure that when a new Microsoft 365 group is created, the group name is automatically formatted as follows:\nQuestion\nWhich three actions should you perform in sequence in the Microsoft Entra admin center? To answer, move the appropriate actions from the list of actions to the answer area and arrange them in the correct order.\nQuestion",
     "options": [],
     "image": "../test az-104 azure/image-20.png",
-    "answer": null,
-    "explanation": null,
+    "answer": "No",
+    "explanation": "Correct answer: No",
     "left": [],
     "right": [],
     "correctMap": {}
@@ -848,8 +853,8 @@
     "question": "HOTSPOT\n-\nYou have a Microsoft Entra tenant that contains the users shown in the following table.\nQuestion\nThe tenant contains the groups shown in the following table.\nQuestion\nWhich users and groups can be deleted? To answer, select the appropriate options in the answer area.\nNOTE: Each correct selection is worth one point.\nQuestion",
     "options": [],
     "image": "../test az-104 azure/image-22.png",
-    "answer": null,
-    "explanation": null,
+    "answer": "Yes",
+    "explanation": "Correct answer: Yes",
     "statements": []
   },
   {
@@ -858,8 +863,8 @@
     "question": "HOTSPOT -\nYou have an Azure subscription that contains the resources shown in the following table.\nQuestion\nYou plan to use an Azure key vault to provide a secret to app1.\nWhat should you create for app1 to access the key vault, and from which key vault can the secret be used? To answer, select the appropriate options in the answer area.\nNOTE: Each correct selection is worth one point.\nQuestion",
     "options": [],
     "image": "../test az-104 azure/image-25.png",
-    "answer": null,
-    "explanation": null,
+    "answer": "No",
+    "explanation": "Correct answer: No",
     "statements": []
   },
   {
@@ -873,8 +878,8 @@
       "From the Directory role blade of each user, modify the directory role"
     ],
     "image": null,
-    "answer": null,
-    "explanation": null
+    "answer": "Yes",
+    "explanation": "Correct answer: Yes"
   },
   {
     "id": "70",
@@ -887,8 +892,8 @@
       "From External collaboration settings, configure the Collaboration restrictions settings."
     ],
     "image": null,
-    "answer": null,
-    "explanation": null
+    "answer": "No",
+    "explanation": "Correct answer: No"
   },
   {
     "id": "71",
@@ -903,8 +908,8 @@
       "Storage Blob Delegator"
     ],
     "image": null,
-    "answer": null,
-    "explanation": null
+    "answer": "Yes",
+    "explanation": "Correct answer: Yes"
   },
   {
     "id": "72",
@@ -912,8 +917,8 @@
     "question": "HOTSPOT -\nCase study -\nThis is a case study. Case studies are not timed separately. You can use as much exam time as you would like to complete each case. However, there may be additional case studies and sections on this exam. You must manage your time to ensure that you are able to complete all questions included on this exam in the time provided.\nTo answer the questions included in a case study, you will need to reference information that is provided in the case study. Case studies might contain exhibits and other resources that provide more information about the scenario that is described in the case study. Each question is independent of the other questions in this case study.\nAt the end of this case study, a review screen will appear. This screen allows you to review your answers and to make changes before you move to the next section of the exam. After you begin a new section, you cannot return to this section.\nTo start the case study -\nTo display the first question in this case study, click the Next button. Use the buttons in the left pane to explore the content of the case study before you answer the questions. Clicking these buttons displays information such as business requirements, existing environment, and problem statements. If the case study has an All Information tab, note that the information displayed is identical to the information displayed on the subsequent tabs. When you are ready to answer a question, click the Question button to return to the question.\nOverview -\nADatum Corporation is consulting firm that has a main office in Montreal and branch offices in Seattle and New York.\nExisting Environment -\nAzure Environment -\nADatum has an Azure subscription that contains three resource groups named RG1, RG2, and RG3.\nThe subscription contains the storage accounts shown in the following table.\nQuestion\nThe subscription contains the virtual machines shown in the following table.\nQuestion\nThe subscription has an Azure container registry that contains the images shown in the following table.\nQuestion\nThe subscription contains the resources shown in the following table.\nQuestion\nAzure Key Vault -\nThe subscription contains an Azure key vault named Vault1.\nVault1 contains the certificates shown in the following table.\nQuestion\nVault1 contains the keys shown in the following table.\nQuestion\nMicrosoft Entra Environment -\nADatum has a Microsoft Entra tenant named adatum.com that is linked to the Azure subscription and contains the users shown in the following table.\nQuestion\nThe tenant contains the groups shown in the following table.\nQuestion\nThe adatum.com tenant has a custom security attribute named Attribute1.\nPlanned Changes -\nADatum plans to implement the following changes:\n• Configure a data collection rule (DCR) named DCR1 to collect only system events that have an event ID of 4648 from VM2 and VM4.\n• In storage1, create a new container named cont2 that has the following access policies: o Three stored access policies named Stored1, Stored2, and Stored3 o A legal hold for immutable blob storage\n• Whenever possible, use directories to organize storage account content.\n• Grant User1 the permissions required to link Zone1 to VNet1.\n• Assign Attribute1 to supported adatum.com resources.\n• In storage2, create an encryption scope named Scope1.\n• Deploy new containers by using Image1 or Image2.\nTechnical Requirements -\nADatum must meet the following technical requirements:\n• Use TLS for WebApp1.\n• Follow the principle of least privilege.\n• Grant permissions at the required scope only.\n• Ensure that Scope1 is used to encrypt storage services.\n• Use Azure Backup to back up cont1 and share1 as frequently as possible.\n• Whenever possible, use Azure Disk Encryption and a key encryption key (KEK) to encrypt the virtual machines.\nYou need to implement the planned change for Attribute1.\nFor each of the following statements, select Yes if the statement is true. Otherwise, select No.\nNOTE: Each correct selection is worth one point.\nQuestion",
     "options": [],
     "image": "../test az-104 azure/image-27.png",
-    "answer": null,
-    "explanation": null,
+    "answer": "No",
+    "explanation": "Correct answer: No",
     "statements": []
   },
   {
@@ -927,8 +932,8 @@
       "User1, Group1, and Group2"
     ],
     "image": "../test az-104 azure/image-36.png",
-    "answer": null,
-    "explanation": null
+    "answer": "No",
+    "explanation": "Correct answer: No"
   },
   {
     "id": "74",
@@ -941,8 +946,8 @@
       "Set Allow recommended upper limit for shared access signature (SAS) expiry interval to Enabled."
     ],
     "image": null,
-    "answer": null,
-    "explanation": null
+    "answer": "No",
+    "explanation": "Correct answer: No"
   },
   {
     "id": "75",
@@ -955,8 +960,8 @@
       "Create a notification"
     ],
     "image": null,
-    "answer": null,
-    "explanation": null
+    "answer": "Create a notification",
+    "explanation": "Correct answer: Create a notification"
   },
   {
     "id": "76",
@@ -969,8 +974,8 @@
       "General settings from the Groups blade"
     ],
     "image": null,
-    "answer": null,
-    "explanation": null
+    "answer": "Device settings from the Devices blade",
+    "explanation": "Correct answer: Device settings from the Devices blade"
   },
   {
     "id": "77",
@@ -978,8 +983,8 @@
     "question": "HOTSPOT -\nYou have Azure Active Directory tenant named Contoso.com that includes following users:\nQuestion\nContoso.com includes following Windows 10 devices:\nQuestion\nYou create following security groups in Contoso.com:\nQuestion\nFor each of the following statements, select Yes if the statement is true. Otherwise, select No.\nNOTE: Each correct selection is worth one point.\nHot Area:\nQuestion",
     "options": [],
     "image": "../test az-104 azure/image-38.png",
-    "answer": null,
-    "explanation": null,
+    "answer": "See explanation",
+    "explanation": "This question requires selecting options in a visual interface (Hotspot/Drag-Drop). Please refer to standard AZ-104 study materials for the visual solution.",
     "statements": []
   },
   {
@@ -993,8 +998,8 @@
       "Delete sa001"
     ],
     "image": "../test az-104 azure/image-42.png",
-    "answer": null,
-    "explanation": null
+    "answer": "Stop the backup of SQLDB01",
+    "explanation": "Correct answer: Stop the backup of SQLDB01"
   },
   {
     "id": "79",
@@ -1007,8 +1012,8 @@
       "Assign User1 the Network Contributor role for RG1."
     ],
     "image": null,
-    "answer": null,
-    "explanation": null
+    "answer": "Assign User1 the User Access Administrator role for VNet1.",
+    "explanation": "Correct answer: Assign User1 the User Access Administrator role for VNet1."
   },
   {
     "id": "80",
@@ -1021,8 +1026,8 @@
       "RRSIG"
     ],
     "image": null,
-    "answer": null,
-    "explanation": null
+    "answer": "MX",
+    "explanation": "Correct answer: MX"
   },
   {
     "id": "81",
@@ -1033,8 +1038,8 @@
       "No"
     ],
     "image": null,
-    "answer": null,
-    "explanation": null
+    "answer": "Yes",
+    "explanation": "Correct answer: Yes"
   },
   {
     "id": "82",
@@ -1045,8 +1050,8 @@
       "No"
     ],
     "image": null,
-    "answer": null,
-    "explanation": null
+    "answer": "No",
+    "explanation": "Correct answer: No"
   },
   {
     "id": "83",
@@ -1059,8 +1064,8 @@
       "From AKS1, create a namespace."
     ],
     "image": null,
-    "answer": null,
-    "explanation": null
+    "answer": "From contoso.com, modify the Organization relationships settings.",
+    "explanation": "Correct answer: From contoso.com, modify the Organization relationships settings."
   },
   {
     "id": "84",
@@ -1071,8 +1076,8 @@
       "No"
     ],
     "image": null,
-    "answer": null,
-    "explanation": null
+    "answer": "Yes",
+    "explanation": "Correct answer: Yes"
   },
   {
     "id": "85",
@@ -1080,8 +1085,8 @@
     "question": "DRAG DROP -\nYou have an Azure subscription that is used by four departments in your company. The subscription contains 10 resource groups. Each department uses resources in several resource groups.\nYou need to send a report to the finance department. The report must detail the costs for each department.\nWhich three actions should you perform in sequence? To answer, move the appropriate actions from the list of actions to the answer area and arrange them in the correct order.\nSelect and Place:\nQuestion",
     "options": [],
     "image": "../test az-104 azure/image-43.png",
-    "answer": null,
-    "explanation": null,
+    "answer": "See explanation",
+    "explanation": "This question requires selecting options in a visual interface (Hotspot/Drag-Drop). Please refer to standard AZ-104 study materials for the visual solution.",
     "left": [],
     "right": [],
     "correctMap": {}
@@ -1097,8 +1102,8 @@
       "search in (Event) * | where EventType -eq \"error\""
     ],
     "image": null,
-    "answer": null,
-    "explanation": null
+    "answer": "search in (Event) \"error\"",
+    "explanation": "Correct answer: search in (Event) \"error\""
   },
   {
     "id": "87",
@@ -1106,8 +1111,8 @@
     "question": "HOTSPOT -\nYou have an Azure subscription that contains a virtual network named VNET1 in the East US 2 region. A network interface named VM1-NI is connected to\nVNET1.\nYou successfully deploy the following Azure Resource Manager template.\nQuestion\nFor each of the following statements, select Yes if the statement is true. Otherwise, select No.\nNOTE: Each correct selection is worth one point.\nHot Area:\nQuestion",
     "options": [],
     "image": "../test az-104 azure/image-44.png",
-    "answer": null,
-    "explanation": null,
+    "answer": "See explanation",
+    "explanation": "This question requires selecting options in a visual interface (Hotspot/Drag-Drop). Please refer to standard AZ-104 study materials for the visual solution.",
     "statements": []
   },
   {
@@ -1121,8 +1126,8 @@
       "The App Service plan for WebApp1 moves to North Europe. Policy1 applies to WebApp1."
     ],
     "image": "../test az-104 azure/image-46.png",
-    "answer": null,
-    "explanation": null
+    "answer": "The App Service plan for WebApp1 remains in West Europe. Policy2 applies to WebApp1.",
+    "explanation": "Correct answer: The App Service plan for WebApp1 remains in West Europe. Policy2 applies to WebApp1."
   },
   {
     "id": "89",
@@ -1130,8 +1135,8 @@
     "question": "HOTSPOT -\nYou have an Azure subscription named Subscription1 that has a subscription ID of c276fc76-9cd4-44c9-99a7-4fd71546436e.\nYou need to create a custom RBAC role named CR1 that meets the following requirements:\n✑ Can be assigned only to the resource groups in Subscription1\n✑ Prevents the management of the access permissions for the resource groups\n✑ Allows the viewing, creating, modifying, and deleting of resources within the resource groups\nWhat should you specify in the assignable scopes and the permission elements of the definition of CR1? To answer, select the appropriate options in the answer area.\nNOTE: Each correct selection is worth one point.\nHot Area:\nQuestion",
     "options": [],
     "image": "../test az-104 azure/image-47.png",
-    "answer": null,
-    "explanation": null,
+    "answer": "See explanation",
+    "explanation": "This question requires selecting options in a visual interface (Hotspot/Drag-Drop). Please refer to standard AZ-104 study materials for the visual solution.",
     "statements": []
   },
   {
@@ -1146,8 +1151,11 @@
       "an Azure Application Gateway"
     ],
     "image": null,
-    "answer": null,
-    "explanation": null
+    "answer": [
+      "an internal load balancer",
+      "Traffic Manager"
+    ],
+    "explanation": "Correct answer: an internal load balancer, Traffic Manager"
   },
   {
     "id": "91",
@@ -1160,8 +1168,8 @@
       "Customer insights"
     ],
     "image": null,
-    "answer": null,
-    "explanation": null
+    "answer": "Advisor",
+    "explanation": "Correct answer: Advisor"
   },
   {
     "id": "92",
@@ -1169,8 +1177,8 @@
     "question": "HOTSPOT -\nYou have an Azure Active Directory (Azure AD) tenant.\nYou need to create a conditional access policy that requires all users to use multi-factor authentication when they access the Azure portal.\nWhich three settings should you configure? To answer, select the appropriate settings in the answer area.\nNOTE: Each correct selection is worth one point.\nHot Area:\nQuestion",
     "options": [],
     "image": "../test az-104 azure/image-48.png",
-    "answer": null,
-    "explanation": null,
+    "answer": "See explanation",
+    "explanation": "This question requires selecting options in a visual interface (Hotspot/Drag-Drop). Please refer to standard AZ-104 study materials for the visual solution.",
     "statements": []
   },
   {
@@ -1184,8 +1192,8 @@
       "From the Roles and administrators blade, assign the Security administrator role to Admin1."
     ],
     "image": null,
-    "answer": null,
-    "explanation": null
+    "answer": "From the Users settings blade, modify the External collaboration settings.",
+    "explanation": "Correct answer: From the Users settings blade, modify the External collaboration settings."
   },
   {
     "id": "94",
@@ -1199,8 +1207,11 @@
       "a Security group that uses the Dynamic Device membership type"
     ],
     "image": null,
-    "answer": null,
-    "explanation": null
+    "answer": [
+      "a Microsoft 365 group that uses the Assigned membership type",
+      "a Security group that uses the Assigned membership type"
+    ],
+    "explanation": "Correct answer: a Microsoft 365 group that uses the Assigned membership type, a Security group that uses the Assigned membership type"
   },
   {
     "id": "95",
@@ -1213,8 +1224,8 @@
       "Create a new management group and delegate User1 as the owner of the new management group."
     ],
     "image": null,
-    "answer": null,
-    "explanation": null
+    "answer": "Assign the Owner role for the Azure subscription to User1, and then instruct User1 to configure access management for Azure resources.",
+    "explanation": "Correct answer: Assign the Owner role for the Azure subscription to User1, and then instruct User1 to configure access management for Azure resources."
   },
   {
     "id": "96",
@@ -1222,8 +1233,8 @@
     "question": "HOTSPOT -\nYou have an Azure Active Directory (Azure AD) tenant named adatum.com. Adatum.com contains the groups in the following table.\nQuestion\nYou create two user accounts that are configured as shown in the following table.\nQuestion\nOf which groups are User1 and User2 members? To answer, select the appropriate options in the answer area.\nNOTE: Each correct selection is worth one point.\nHot Area:\nQuestion",
     "options": [],
     "image": "../test az-104 azure/image-49.png",
-    "answer": null,
-    "explanation": null,
+    "answer": "See explanation",
+    "explanation": "This question requires selecting options in a visual interface (Hotspot/Drag-Drop). Please refer to standard AZ-104 study materials for the visual solution.",
     "statements": []
   },
   {
@@ -1232,8 +1243,8 @@
     "question": "HOTSPOT -\nYou have a hybrid deployment of Azure Active Directory (Azure AD) that contains the users shown in the following table.\nQuestion\nYou need to modify the JobTitle and UsageLocation attributes for the users.\nFor which users can you modify the attributes from Azure AD? To answer, select the appropriate options in the answer area.\nNOTE: Each correct selection is worth one point.\nHot Area:\nQuestion",
     "options": [],
     "image": "../test az-104 azure/image-52.png",
-    "answer": null,
-    "explanation": null,
+    "answer": "See explanation",
+    "explanation": "This question requires selecting options in a visual interface (Hotspot/Drag-Drop). Please refer to standard AZ-104 study materials for the visual solution.",
     "statements": []
   },
   {
@@ -1245,8 +1256,8 @@
       "No"
     ],
     "image": null,
-    "answer": null,
-    "explanation": null
+    "answer": "Yes",
+    "explanation": "Correct answer: Yes"
   },
   {
     "id": "99",
@@ -1257,8 +1268,8 @@
       "No"
     ],
     "image": null,
-    "answer": null,
-    "explanation": null
+    "answer": "Yes",
+    "explanation": "Correct answer: Yes"
   },
   {
     "id": "100",
@@ -1269,8 +1280,8 @@
       "No"
     ],
     "image": null,
-    "answer": null,
-    "explanation": null
+    "answer": "No",
+    "explanation": "Correct answer: No"
   },
   {
     "id": "101",
@@ -1283,8 +1294,8 @@
       "Virtual Machine Administrator Login"
     ],
     "image": null,
-    "answer": null,
-    "explanation": null
+    "answer": "See explanation",
+    "explanation": "This question requires selecting options in a visual interface (Hotspot/Drag-Drop). Please refer to standard AZ-104 study materials for the visual solution."
   },
   {
     "id": "102",
@@ -1292,8 +1303,8 @@
     "question": "HOTSPOT -\nYou have an Azure Active Directory (Azure AD) tenant that contains three global administrators named Admin1, Admin2, and Admin3.\nThe tenant is associated to an Azure subscription. Access control for the subscription is configured as shown in the Access control exhibit. (Click the Access\nControl tab.)\nQuestion\nYou sign in to the Azure portal as Admin1 and configure the tenant as shown in the Tenant exhibit. (Click the Tenant tab.)\nQuestion\nFor each of the following statements, select Yes if the statement is true. Otherwise, select No.\nNOTE: Each correct selection is worth one point.\nHot Area:\nQuestion",
     "options": [],
     "image": "../test az-104 azure/image-54.png",
-    "answer": null,
-    "explanation": null,
+    "answer": "Yes",
+    "explanation": "Correct answer: Yes",
     "statements": []
   },
   {
@@ -1307,8 +1318,8 @@
       "From the Azure portal, modify the Policies settings of RG1"
     ],
     "image": null,
-    "answer": null,
-    "explanation": null
+    "answer": "No",
+    "explanation": "Correct answer: No"
   },
   {
     "id": "104",
@@ -1321,8 +1332,8 @@
       "Turn off VM1 and delete all data in Vault1"
     ],
     "image": "../test az-104 azure/image-57.png",
-    "answer": null,
-    "explanation": null
+    "answer": "Yes",
+    "explanation": "Correct answer: Yes"
   },
   {
     "id": "105",
@@ -1330,8 +1341,8 @@
     "question": "HOTSPOT -\nYou have an Azure Active Directory (Azure AD) tenant named contoso.com that contains the users shown in the following table:\nQuestion\nUser3 is the owner of Group1.\nGroup2 is a member of Group1.\nYou configure an access review named Review1 as shown in the following exhibit:\nQuestion\nFor each of the following statements, select Yes if the statement is true. Otherwise, select No.\nNOTE: Each correct selection is worth one point.\nHot Area:\nQuestion",
     "options": [],
     "image": "../test az-104 azure/image-58.png",
-    "answer": null,
-    "explanation": null,
+    "answer": "No",
+    "explanation": "Correct answer: No",
     "statements": []
   },
   {
@@ -1345,8 +1356,8 @@
       "Create an A record named *.research in the adatum.com zone."
     ],
     "image": null,
-    "answer": null,
-    "explanation": null
+    "answer": "Yes",
+    "explanation": "Correct answer: Yes"
   },
   {
     "id": "107",
@@ -1354,8 +1365,8 @@
     "question": "DRAG DROP -\nYou have an Azure Active Directory (Azure AD) tenant that has the contoso.onmicrosoft.com domain name.\nYou have a domain name of contoso.com registered at a third-party registrar.\nYou need to ensure that you can create Azure AD users that have names containing a suffix of @contoso.com.\nWhich three actions should you perform in sequence? To answer, move the appropriate actions from the list of actions to the answer area and arrange them in the correct order.\nSelect and Place:\nQuestion",
     "options": [],
     "image": "../test az-104 azure/image-61.png",
-    "answer": null,
-    "explanation": null,
+    "answer": "No",
+    "explanation": "Correct answer: No",
     "left": [],
     "right": [],
     "correctMap": {}
@@ -1371,8 +1382,8 @@
       "search in (Event) * | where EventType ג€\"eq ג€errorג€"
     ],
     "image": null,
-    "answer": null,
-    "explanation": null
+    "answer": "See explanation",
+    "explanation": "This question requires selecting options in a visual interface (Hotspot/Drag-Drop). Please refer to standard AZ-104 study materials for the visual solution."
   },
   {
     "id": "109",
@@ -1385,8 +1396,8 @@
       "Modify the NS records in the DNS domain registrar."
     ],
     "image": null,
-    "answer": null,
-    "explanation": null
+    "answer": "See explanation",
+    "explanation": "This question requires selecting options in a visual interface (Hotspot/Drag-Drop). Please refer to standard AZ-104 study materials for the visual solution."
   },
   {
     "id": "110",
@@ -1394,8 +1405,8 @@
     "question": "HOTSPOT -\nYou have an Azure subscription that contains a storage account named storage1. The subscription is linked to an Azure Active Directory (Azure AD) tenant named contoso.com that syncs to an on-premises Active Directory domain.\nThe domain contains the security principals shown in the following table.\nQuestion\nIn Azure AD, you create a user named User2.\nThe storage1 account contains a file share named share1 and has the following configurations.\nQuestion\nFor each of the following statements, select Yes if the statement is true. Otherwise, select No.\nNOTE: Each correct selection is worth one point.\nHot Area:\nQuestion",
     "options": [],
     "image": "../test az-104 azure/image-62.png",
-    "answer": null,
-    "explanation": null,
+    "answer": "See explanation",
+    "explanation": "This question requires selecting options in a visual interface (Hotspot/Drag-Drop). Please refer to standard AZ-104 study materials for the visual solution.",
     "statements": []
   },
   {
@@ -1404,8 +1415,8 @@
     "question": "HOTSPOT -\nYou have an Azure subscription named Subscription1 that contains a virtual network VNet1.\nYou add the users in the following table.\nQuestion\nWhich user can perform each configuration? To answer, select the appropriate options in the answer area.\nNOTE: Each correct selection is worth one point.\nHot Area:\nQuestion",
     "options": [],
     "image": "../test az-104 azure/image-65.png",
-    "answer": null,
-    "explanation": null,
+    "answer": "See explanation",
+    "explanation": "This question requires selecting options in a visual interface (Hotspot/Drag-Drop). Please refer to standard AZ-104 study materials for the visual solution.",
     "statements": []
   },
   {
@@ -1414,8 +1425,8 @@
     "question": "HOTSPOT -\nYou have the Azure resources shown on the following exhibit.\nQuestion\nYou plan to track resource usage and prevent the deletion of resources.\nTo which resources can you apply locks and tags? To answer, select the appropriate options in the answer area.\nNOTE: Each correct selection is worth one point.\nHot Area:\nQuestion",
     "options": [],
     "image": "../test az-104 azure/image-67.png",
-    "answer": null,
-    "explanation": null,
+    "answer": "Assign a tag to the resource group.",
+    "explanation": "Correct answer: Assign a tag to the resource group.",
     "statements": []
   },
   {
@@ -1430,8 +1441,8 @@
       "The display name and user principal name of each user only"
     ],
     "image": null,
-    "answer": null,
-    "explanation": null
+    "answer": "Modify the Profile settings of User1.",
+    "explanation": "Correct answer: Modify the Profile settings of User1."
   },
   {
     "id": "114",
@@ -1439,8 +1450,8 @@
     "question": "HOTSPOT -\nYou have an Azure subscription named Sub1 that contains the Azure resources shown in the following table.\nQuestion\nYou assign an Azure policy that has the following settings:\n✑ Scope: Sub1\n✑ Exclusions: Sub1/RG1/VNET1\n✑ Policy definition: Append a tag and its value to resources\n✑ Policy enforcement: Enabled\n✑ Tag name: Tag4\n✑ Tag value: value4\nYou assign tags to the resources as shown in the following table.\nQuestion\nFor each of the following statements, select Yes if the statement is true. Otherwise, select No.\nNOTE: Each correct selection is worth one point.\nHot Area:\nQuestion",
     "options": [],
     "image": "../test az-104 azure/image-68.png",
-    "answer": null,
-    "explanation": null,
+    "answer": "From the Access control (IAM) blade of RG1, assign the Contributor role to User1.",
+    "explanation": "Correct answer: From the Access control (IAM) blade of RG1, assign the Contributor role to User1.",
     "statements": []
   },
   {
@@ -1452,8 +1463,8 @@
       "No"
     ],
     "image": null,
-    "answer": null,
-    "explanation": null
+    "answer": "Create a new user account for User1 in Tenant2.",
+    "explanation": "Correct answer: Create a new user account for User1 in Tenant2."
   },
   {
     "id": "116",
@@ -1461,8 +1472,8 @@
     "question": "HOTSPOT -\nYou have the Azure management groups shown in the following table:\nQuestion\nYou add Azure subscriptions to the management groups as shown in the following table:\nQuestion\nYou create the Azure policies shown in the following table:\nQuestion\nFor each of the following statements, select Yes if the statement is true. Otherwise, select No.\nNOTE: Each correct selection is worth one point.\nHot Area:\nQuestion",
     "options": [],
     "image": "../test az-104 azure/image-71.png",
-    "answer": null,
-    "explanation": null,
+    "answer": "See explanation",
+    "explanation": "This question requires selecting options in a visual interface (Hotspot/Drag-Drop). Please refer to standard AZ-104 study materials for the visual solution.",
     "statements": []
   },
   {
@@ -1476,8 +1487,8 @@
       "Azure roles"
     ],
     "image": null,
-    "answer": null,
-    "explanation": null
+    "answer": "See explanation",
+    "explanation": "This question requires selecting options in a visual interface (Hotspot/Drag-Drop). Please refer to standard AZ-104 study materials for the visual solution."
   },
   {
     "id": "118",
@@ -1488,8 +1499,8 @@
       "No"
     ],
     "image": null,
-    "answer": null,
-    "explanation": null
+    "answer": "See explanation",
+    "explanation": "This question requires selecting options in a visual interface (Hotspot/Drag-Drop). Please refer to standard AZ-104 study materials for the visual solution."
   },
   {
     "id": "119",
@@ -1497,8 +1508,8 @@
     "question": "HOTSPOT -\nYou have an Azure Load Balancer named LB1.\nYou assign a user named User1 the roles shown in the following exhibit.\nQuestion\nUse the drop-down menus to select the answer choice that completes each statement based on the information presented in the graphic.\nNOTE: Each correct selection is worth one point.\nHot Area:\nQuestion",
     "options": [],
     "image": "../test az-104 azure/image-75.png",
-    "answer": null,
-    "explanation": null,
+    "answer": "See explanation",
+    "explanation": "This question requires selecting options in a visual interface (Hotspot/Drag-Drop). Please refer to standard AZ-104 study materials for the visual solution.",
     "statements": []
   },
   {
@@ -1512,8 +1523,8 @@
       "Assign User1 the Network Contributor role for VNet1."
     ],
     "image": null,
-    "answer": null,
-    "explanation": null
+    "answer": "See explanation",
+    "explanation": "This question requires selecting options in a visual interface (Hotspot/Drag-Drop). Please refer to standard AZ-104 study materials for the visual solution."
   },
   {
     "id": "121",
@@ -1521,8 +1532,8 @@
     "question": "HOTSPOT -\nYou configure the custom role shown in the following exhibit.\nQuestion\nUse the drop-down menus to select the answer choice that completes each statement based on the information presented in the graphic.\nNOTE: Each correct selection is worth one point.\nHot Area:\nQuestion",
     "options": [],
     "image": "../test az-104 azure/image-77.png",
-    "answer": null,
-    "explanation": null,
+    "answer": "See explanation",
+    "explanation": "This question requires selecting options in a visual interface (Hotspot/Drag-Drop). Please refer to standard AZ-104 study materials for the visual solution.",
     "statements": []
   },
   {
@@ -1536,8 +1547,8 @@
       "Create a private endpoint."
     ],
     "image": null,
-    "answer": null,
-    "explanation": null
+    "answer": "See explanation",
+    "explanation": "This question requires selecting options in a visual interface (Hotspot/Drag-Drop). Please refer to standard AZ-104 study materials for the visual solution."
   },
   {
     "id": "123",
@@ -1550,8 +1561,8 @@
       "Create a new management group and assign Group1 the Owner role for the group."
     ],
     "image": null,
-    "answer": null,
-    "explanation": null
+    "answer": "From Azure AD, create a new user account for Admin1.",
+    "explanation": "Correct answer: From Azure AD, create a new user account for Admin1."
   },
   {
     "id": "124",
@@ -1559,8 +1570,8 @@
     "question": "HOTSPOT -\nYou have an Azure subscription that contains the hierarchy shown in the following exhibit.\nQuestion\nYou create an Azure Policy definition named Policy1.\nTo which Azure resources can you assign Policy1 and which Azure resources can you specify as exclusions from Policy1? To answer, select the appropriate options in the answer area.\nNOTE: Each correct selection is worth one point.\nHot Area:\nQuestion",
     "options": [],
     "image": "../test az-104 azure/image-79.png",
-    "answer": null,
-    "explanation": null,
+    "answer": "See explanation",
+    "explanation": "This question requires selecting options in a visual interface (Hotspot/Drag-Drop). Please refer to standard AZ-104 study materials for the visual solution.",
     "statements": []
   },
   {
@@ -1572,8 +1583,8 @@
       "No"
     ],
     "image": "../test az-104 azure/image-81.png",
-    "answer": null,
-    "explanation": null
+    "answer": "Yes",
+    "explanation": "Correct answer: Yes"
   },
   {
     "id": "126",
@@ -1584,8 +1595,8 @@
       "No"
     ],
     "image": "../test az-104 azure/image-82.png",
-    "answer": null,
-    "explanation": null
+    "answer": "No",
+    "explanation": "Correct answer: No"
   },
   {
     "id": "127",
@@ -1598,8 +1609,8 @@
       "You can create Azure SQL servers in any resource group within Subscription 1."
     ],
     "image": "../test az-104 azure/image-83.png",
-    "answer": null,
-    "explanation": null
+    "answer": "You are prevented from creating Azure SQL Servers in ContosoRG1 only.",
+    "explanation": "Correct answer: You are prevented from creating Azure SQL Servers in ContosoRG1 only."
   },
   {
     "id": "128",
@@ -1610,8 +1621,8 @@
       "No"
     ],
     "image": "../test az-104 azure/image-84.png",
-    "answer": null,
-    "explanation": null
+    "answer": "No",
+    "explanation": "Correct answer: No"
   },
   {
     "id": "129",
@@ -1624,8 +1635,8 @@
       "Select the custom role and add Sub1 to the assignable scopes. Remove RG1 from the assignable scopes. Create a new custom role for Sub2."
     ],
     "image": null,
-    "answer": null,
-    "explanation": null
+    "answer": "Select the custom role and add Sub1 and Sub2 to the assignable scopes. Remove RG1 from the assignable scopes.",
+    "explanation": "Correct answer: Select the custom role and add Sub1 and Sub2 to the assignable scopes. Remove RG1 from the assignable scopes."
   },
   {
     "id": "130",
@@ -1639,8 +1650,11 @@
       "View file shares in storageacct1234."
     ],
     "image": "../test az-104 azure/image-85.png",
-    "answer": null,
-    "explanation": null
+    "answer": [
+      "View blob data in storageacct1234.",
+      "View file shares in storageacct1234."
+    ],
+    "explanation": "Correct answer: View blob data in storageacct1234., View file shares in storageacct1234."
   },
   {
     "id": "131",
@@ -1653,8 +1667,8 @@
       "Get-Event Event | where {$_.EventType == \"error\"}"
     ],
     "image": null,
-    "answer": null,
-    "explanation": null
+    "answer": "search in (Event) \"error\"",
+    "explanation": "Correct answer: search in (Event) \"error\""
   },
   {
     "id": "132",
@@ -1667,8 +1681,8 @@
       "Configure user-level credentials for FTPS"
     ],
     "image": null,
-    "answer": null,
-    "explanation": null
+    "answer": "Configure user-level credentials for FTPS",
+    "explanation": "Correct answer: Configure user-level credentials for FTPS"
   },
   {
     "id": "133",
@@ -1679,8 +1693,8 @@
       "No"
     ],
     "image": null,
-    "answer": null,
-    "explanation": null
+    "answer": "Yes",
+    "explanation": "Correct answer: Yes"
   },
   {
     "id": "134",
@@ -1688,8 +1702,8 @@
     "question": "HOTSPOT -\nYou have an Azure subscription that is linked to an Azure AD tenant. The tenant contains the custom role-based access control (RBAC) roles shown in the following table.\nQuestion\nFrom the Azure portal, you need to create two custom roles named Role3 and Role4. Role3 will be an Azure subscription role. Role4 will be an Azure AD role.\nWhich roles can you clone to create the new roles? To answer, select the appropriate options in the answer area.\nNOTE: Each correct selection is worth one point.\nQuestion",
     "options": [],
     "image": "../test az-104 azure/image-86.png",
-    "answer": null,
-    "explanation": null,
+    "answer": "See explanation",
+    "explanation": "This question requires selecting options in a visual interface (Hotspot/Drag-Drop). Please refer to standard AZ-104 study materials for the visual solution.",
     "statements": []
   },
   {
@@ -1698,8 +1712,8 @@
     "question": "DRAG DROP\n-\nYou have an Azure subscription named Sub1 that contains two users named User1 and User2.\nYou need to assign role-based access control (RBAC) roles to User1 and User2. The users must be able to perform the following tasks in Sub1:\n• User1 must view the data in any storage account.\n• User2 must assign users the Contributor role for storage accounts.\nThe solution must use the principle of least privilege.\nWhich RBAC role should you assign to each user? To answer, drag the appropriate roles to the correct users. Each role may be used once, more than once, or not at all. You may need to drag the split bar between panes or scroll to view content.\nNOTE: Each correct selection is worth one point.\nQuestion",
     "options": [],
     "image": "../test az-104 azure/image-88.png",
-    "answer": null,
-    "explanation": null,
+    "answer": "See explanation",
+    "explanation": "This question requires selecting options in a visual interface (Hotspot/Drag-Drop). Please refer to standard AZ-104 study materials for the visual solution.",
     "left": [],
     "right": [],
     "correctMap": {}
@@ -1714,8 +1728,8 @@
       "an IP address range"
     ],
     "image": null,
-    "answer": null,
-    "explanation": null
+    "answer": "a service tag",
+    "explanation": "Correct answer: a service tag"
   },
   {
     "id": "137",
@@ -1728,8 +1742,8 @@
       "User1, User2, User3, and User4"
     ],
     "image": "../test az-104 azure/image-89.png",
-    "answer": null,
-    "explanation": null
+    "answer": "User1, User2, User3, and User4",
+    "explanation": "Correct answer: User1, User2, User3, and User4"
   },
   {
     "id": "138",
@@ -1737,8 +1751,8 @@
     "question": "HOTSPOT -\nYou have an Azure subscription that contains the resources shown in the following table:\nQuestion\nYou assign a policy to RG6 as shown in the following table:\nQuestion\nTo RG6, you apply the tag: RGroup: RG6.\nYou deploy a virtual network named VNET2 to RG6.\nWhich tags apply to VNET1 and VNET2? To answer, select the appropriate options in the answer area.\nNOTE: Each correct selection is worth one point.\nHot Area:\nQuestion",
     "options": [],
     "image": "../test az-104 azure/image-91.png",
-    "answer": null,
-    "explanation": null,
+    "answer": "See explanation",
+    "explanation": "This question requires selecting options in a visual interface (Hotspot/Drag-Drop). Please refer to standard AZ-104 study materials for the visual solution.",
     "statements": []
   },
   {
@@ -1747,8 +1761,8 @@
     "question": "HOTSPOT -\nYou have an Azure AD tenant named contoso.com.\nYou have two external partner organizations named fabrikam.com and litwareinc.com. Fabrikam.com is configured as a connected organization.\nYou create an access package as shown in the Access package exhibit. (Click the Access package tab.)\nQuestion\nYou configure the external user lifecycle settings as shown in the Lifecycle exhibit. (Click the Lifecycle tab.)\nQuestion\nFor each of the following statements, select Yes if the statement is true. Otherwise, select No.\nNOTE: Each correct selection is worth one point.\nQuestion",
     "options": [],
     "image": "../test az-104 azure/image-94.png",
-    "answer": null,
-    "explanation": null,
+    "answer": "See explanation",
+    "explanation": "This question requires selecting options in a visual interface (Hotspot/Drag-Drop). Please refer to standard AZ-104 study materials for the visual solution.",
     "statements": []
   },
   {
@@ -1762,8 +1776,8 @@
       "Assign User1 the Network Contributor role for RG1."
     ],
     "image": null,
-    "answer": null,
-    "explanation": null
+    "answer": "Assign User1 the Network Contributor role for VNet1.",
+    "explanation": "Correct answer: Assign User1 the Network Contributor role for VNet1."
   },
   {
     "id": "141",
@@ -1771,8 +1785,8 @@
     "question": "HOTSPOT\n-\nYou have an Azure subscription that contains the users shown in the following table.\nQuestion\nThe groups are configured as shown in the following table.\nQuestion\nYou have a resource group named RG1 as shown in the following exhibit.\nQuestion\nFor each of the following statements, select Yes if the statement is true. Otherwise, select No.\nNOTE: Each correct selection is worth one point.\nQuestion",
     "options": [],
     "image": "../test az-104 azure/image-97.png",
-    "answer": null,
-    "explanation": null,
+    "answer": "See explanation",
+    "explanation": "This question requires selecting options in a visual interface (Hotspot/Drag-Drop). Please refer to standard AZ-104 study materials for the visual solution.",
     "statements": []
   },
   {
@@ -1786,8 +1800,8 @@
       "Assign User1 the Contributor role for VNet1."
     ],
     "image": null,
-    "answer": null,
-    "explanation": null
+    "answer": "Assign User1 the Owner role for VNet1.",
+    "explanation": "Correct answer: Assign User1 the Owner role for VNet1."
   },
   {
     "id": "143",
@@ -1800,8 +1814,8 @@
       "Azure Virtual WAN"
     ],
     "image": "../test az-104 azure/image-101.png",
-    "answer": null,
-    "explanation": null
+    "answer": "private endpoints",
+    "explanation": "Correct answer: private endpoints"
   },
   {
     "id": "144",
@@ -1809,8 +1823,8 @@
     "question": "HOTSPOT\n-\nYou have an Azure subscription that contains a user named User1 and the resources shown in the following table.\nQuestion\nNSG1 is associated to networkinterface1.\nUser1 has role assignments for NSG1 as shown in the following table.\nQuestion\nFor each of the following statements, select Yes if the statement is true. Otherwise, select No.\nNOTE: Each correct selection is worth one point.\nQuestion",
     "options": [],
     "image": "../test az-104 azure/image-102.png",
-    "answer": null,
-    "explanation": null,
+    "answer": "See explanation",
+    "explanation": "This question requires selecting options in a visual interface (Hotspot/Drag-Drop). Please refer to standard AZ-104 study materials for the visual solution.",
     "statements": []
   },
   {
@@ -1824,8 +1838,8 @@
       "Assign User1 the Network Contributor role for RG1."
     ],
     "image": null,
-    "answer": null,
-    "explanation": null
+    "answer": "Assign User1 the Access Administrator role for VNet1.",
+    "explanation": "Correct answer: Assign User1 the Access Administrator role for VNet1."
   },
   {
     "id": "146",
@@ -1833,8 +1847,8 @@
     "question": "HOTSPOT\n-\nYou have three Azure subscriptions named Sub1, Sub2, and Sub3 that are linked to an Azure AD tenant.\nThe tenant contains a user named User1, a security group named Group1, and a management group named MG1. User is a member of Group1.\nSub1 and Sub2 are members of MG1. Sub1 contains a resource group named RG1. RG1 contains five Azure functions.\nYou create the following role assignments for MG1:\n• Group1: Reader\n• User1: User Access Administrator\nYou assign User the Virtual Machine Contributor role for Sub1 and Sub2.\nQuestion",
     "options": [],
     "image": "../test az-104 azure/image-105.png",
-    "answer": null,
-    "explanation": null,
+    "answer": "See explanation",
+    "explanation": "This question requires selecting options in a visual interface (Hotspot/Drag-Drop). Please refer to standard AZ-104 study materials for the visual solution.",
     "statements": []
   },
   {
@@ -1848,8 +1862,8 @@
       "Configure Access control (IAM) for share1."
     ],
     "image": "../test az-104 azure/image-106.png",
-    "answer": null,
-    "explanation": null
+    "answer": "Enable identity-based data access for the file shares in storage1.",
+    "explanation": "Correct answer: Enable identity-based data access for the file shares in storage1."
   },
   {
     "id": "148",
@@ -1862,8 +1876,8 @@
       "Assign User1 the Contributor role for VNet1."
     ],
     "image": null,
-    "answer": null,
-    "explanation": null
+    "answer": "Assign User1 the User Access Administrator role for VNet1.",
+    "explanation": "Correct answer: Assign User1 the User Access Administrator role for VNet1."
   },
   {
     "id": "149",
@@ -1876,8 +1890,8 @@
       "RVAULT1 only"
     ],
     "image": "../test az-104 azure/image-107.png",
-    "answer": null,
-    "explanation": null
+    "answer": "VM1, storage1, VNET1, VM1Managed, and RVAULT1",
+    "explanation": "Correct answer: VM1, storage1, VNET1, VM1Managed, and RVAULT1"
   },
   {
     "id": "150",
@@ -1885,8 +1899,8 @@
     "question": "HOTSPOT -\nYou have an Azure AD tenant named adatum.com that contains the groups shown in the following table.\nQuestion\nAdatum.com contains the users shown in the following table.\nQuestion\nYou assign an Azure Active Directory Premium P2 license to Group1 as shown in the following exhibit.\nQuestion\nGroup2 is NOT directly assigned a license.\nFor each of the following statements, select Yes if the statement is true. Otherwise, select No.\nNOTE: Each correct selection is worth one point.\nQuestion",
     "options": [],
     "image": "../test az-104 azure/image-108.png",
-    "answer": null,
-    "explanation": null,
+    "answer": "See explanation",
+    "explanation": "This question requires selecting options in a visual interface (Hotspot/Drag-Drop). Please refer to standard AZ-104 study materials for the visual solution.",
     "statements": []
   },
   {
