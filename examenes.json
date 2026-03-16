@@ -63,6 +63,13 @@
     "apuntes": "https://learn.microsoft.com/en-us/credentials/certifications/azure-administrator/"
   },
   {
+    "name": "KCNA",
+    "title": "Kubernetes and Cloud Native Associate",
+    "desc": "Certificación de nivel de entrada para el ecosistema Kubernetes.",
+    "pregunta": "Preguntas/preguntasKCNA.json",
+    "apuntes": "https://www.cncf.io/certification/kcna/"
+  },
+  {
     "name": "Ka0s Training",
     "title": "Plan de Formación Ka0s",
     "desc": "Onboarding técnico: arquitectura, automatización y cultura operativa.",
