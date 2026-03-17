@@ -37,7 +37,22 @@ export function normalizeQuestion(q, lang = 'en') {
     if (lang === 'es') {
         if (n.question_es) n.question = n.question_es;
         if (n.explanation_es) n.explanation = n.explanation_es;
-        if (n.options_es && Array.isArray(n.options_es)) n.options = n.options_es;
+        if (n.options_es && Array.isArray(n.options_es) && n.options && Array.isArray(n.options)) {
+            // Translate the answer(s) to Spanish based on index
+            if (Array.isArray(n.answer)) {
+                n.answer = n.answer.map(ans => {
+                    const idx = n.options.indexOf(ans);
+                    return idx !== -1 && n.options_es[idx] ? n.options_es[idx] : ans;
+                });
+            } else if (typeof n.answer === 'string') {
+                const idx = n.options.indexOf(n.answer);
+                if (idx !== -1 && n.options_es[idx]) {
+                    n.answer = n.options_es[idx];
+                }
+            }
+            // Finally swap the options array
+            n.options = n.options_es;
+        }
     } else {
         if (n.question_en) n.question = n.question_en;
         
