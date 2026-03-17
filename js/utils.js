@@ -37,7 +37,7 @@ export function normalizeQuestion(q, lang = 'en') {
     if (lang === 'es') {
         if (n.question_es) n.question = n.question_es;
         if (n.explanation_es) n.explanation = n.explanation_es;
-        // Optionally localize options if supported in data structure
+        if (n.options_es && Array.isArray(n.options_es)) n.options = n.options_es;
     } else {
         if (n.question_en) n.question = n.question_en;
         
